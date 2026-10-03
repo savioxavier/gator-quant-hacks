@@ -1,14 +1,18 @@
 """Walk-forward chronological hawkish/dovish stance model (fedspeak v2 Amendment 2, press-conference Deviation D1).
 
 Spec (fixed before any v2 or H1 return was computed):
-  research/fedspeak_v2/HYPOTHESIS_v2.md, Amendment 2
-  research/fed_presser_plan/DEVIATION_D1_stance_model.md
+  research/fedspeak_v2/HYPOTHESIS_v2.md, Amendment 2 (with its clarification) and Amendment 3
+  research/fed_presser_plan/DEVIATION_D1_stance_model.md, including Update D1a
 
-For each test year Y (2016..2026):
+For each test year Y (2015..2026; 2015 scores the v2 warm-up documents, per the clarification to Amendment 2):
   * base model   manelalab/chrono-bert-v1-<min(Y-1, 2024)>1231 (MIT; ModernBERT-base encoder pretrained only on
                  text up to the end of that year), loaded with a new 3-way sequence-classification head;
   * labels       gtfintechlab/fomc_communication (CC BY-NC 4.0, ungated), train + test splits combined, only rows
-                 with year <= Y-1 (labels end in 2022, so Y >= 2023 uses all rows);
+                 whose source document is dated before Y-01-01 (Amendment 3 / D1a: the date comes from
+                 data/text_corpus/label_dates.parquet, built by nlp/build_label_dates.py from the authors' per-document
+                 files; undatable rows are left out for Y <= 2022 and kept for Y >= 2023). Labels end in 2022, so
+                 Y >= 2023 uses all rows. The older rules `dataset` (dataset `year` <= Y-1) and `redated` stay
+                 available through --label-year / CHRONO_LABEL_YEAR;
   * validation   15% stratified split of those rows (seed 0, same split for every training seed), early stopping
                  on macro-F1;
   * settings     lr 2e-5, batch 16, max length 256, at most 8 epochs, patience 2, weight decay 0.01, 10% linear
@@ -32,7 +36,8 @@ Implementation choices not fixed by the spec (fixed here, before any scoring):
 
 Subcommands
   export   build data/text_corpus/docs_to_score.parquet from the local v2 corpus and press-conference text
-  prepare  download the labels (pinned revision), verify the label ids, print rows by year, fetch the base models
+  prepare  download the labels (pinned revision), verify the label ids, attach the source-document dates of
+           label_dates.parquet (checked against the dataset row by row), print rows by year, fetch the base models
            and the Punkt data so that training and scoring can run offline
   train    --year Y --seed S   fine-tune one model, save it to <root>/models/Y/seed_S/ with metrics.json
   score    --year Y            score every document dated in year Y -> <root>/scores/Y.parquet, Y_docs.parquet
@@ -60,32 +65,37 @@ import pandas as pd
 REPO = Path(__file__).resolve().parents[1]
 DOCS_PATH = REPO / "data" / "text_corpus" / "docs_to_score.parquet"
 PUBLISH_DIR = REPO / "data" / "text_corpus" / "chrono_scores"
+LABEL_DATES_PATH = REPO / "data" / "text_corpus" / "label_dates.parquet"
 
 DATASET_ID = "gtfintechlab/fomc_communication"
 DATASET_REV = "6b0283f55f0005a6d38d49f271d795c21fccc1a3"  # main on 2026-10-03
 LABELS = {0: "dove", 1: "hawk", 2: "neut"}
 CARD_EXPECTED = {0: "dovish", 1: "hawkish", 2: "neutral"}
 
-YEARS = list(range(2016, 2027))
-PREP_YEARS = list(range(2015, 2027))  # prepare also caches the base model for the optional 2015 extension
+YEARS = list(range(2015, 2027))  # 2015 = v2 warm-up year (Amendment 2 clarification); 2016-2026 = test years
+PREP_YEARS = YEARS
 SEEDS = [42, 43, 44]
 HP = {"lr": 2e-5, "batch_size": 16, "max_len": 256, "max_epochs": 8, "patience": 2, "weight_decay": 0.01,
       "warmup_ratio": 0.10, "val_frac": 0.15, "split_seed": 0, "max_grad_norm": 1.0}
 SOURCES = ["speech", "statement", "minutes", "presser_doc", "presser_answer", "presser_question",
            "presser_statement"]
 
-# Which year decides "year <= Y-1" for a labelled row.
-#   dataset  = the dataset's own `year` column (the registered rule, taken literally);
+# Which date decides whether a labelled row may train model Y.
+#   true     = (default; fedspeak v2 Amendment 3, press-conference D1a) the date of the row's source document, from
+#              data/text_corpus/label_dates.parquet (nlp/build_label_dates.py, the authors' per-document files in
+#              github.com/gtfintechlab/fomc-hawkish-dovish; earliest document when the sentence occurs in several;
+#              minutes dated by release). Model Y uses rows with source_date < Y-01-01; rows without a source date
+#              are excluded for Y <= 2022 and included for Y >= 2023 (every label predates 2023).
+#   dataset  = the dataset's own `year` column <= Y-1 (Amendment 2 taken literally; superseded);
 #   redated  = max(dataset year, year of the first document in docs_to_score.parquet that contains the sentence
-#              verbatim, 2020 if it mentions COVID/coronavirus).
-# Audit 2026-10-03: the dataset's `year` column is not the source-document year for most rows (COVID-19 sentences
-# carry years 1998-2014; 313 of 383 distinctive sentences found in a single 2016-2022 corpus document carry an
-# earlier year). Under `dataset`, model 2016 trains on 453 rows whose text first appears in documents dated 2016+,
-# including sentences of the very documents it scores. `prepare` writes the evidence to label_year_audit.json.
-# Choosing `redated` is a team decision that needs a deviation-log line; set CHRONO_LABEL_YEAR=redated.
-LABEL_YEAR_RULES = ("dataset", "redated")
-LABEL_YEAR_DEFAULT = os.environ.get("CHRONO_LABEL_YEAR", "dataset")
+#              verbatim, 2020 if it mentions COVID/coronavirus) <= Y-1 (interim audit rule; superseded).
+# Audit 2026-10-03: the dataset's `year` column is not the source-document year for most rows (2,336 of 2,480 rows
+# differ from the source document's year, by up to 26 years either way). `prepare` writes label_year_audit.json.
+LABEL_YEAR_RULES = ("true", "dataset", "redated")
+LABEL_YEAR_DEFAULT = os.environ.get("CHRONO_LABEL_YEAR", "true")
+UNDATED_FROM_YEAR = 2023  # rows without a source date train models Y >= this year only
 REDATE_MIN_WORDS = 8
+LEAK_MIN_WORDS = 4  # leakage audit: labelled sentences of 4+ words are looked up in docs_to_score.parquet
 COVID_RE = re.compile(r"\b(?:covid|coronavirus)", re.I)
 
 
@@ -247,10 +257,10 @@ def norm_text(s: str) -> str:
     return " ".join(re.sub(r"[^a-z0-9]+", " ", (s or "").lower()).split())
 
 
-def redate_labels(lab: pd.DataFrame, docs: pd.DataFrame) -> pd.DataFrame:
-    """Add year_redated / redate_first_doc: earliest dated corpus document containing the sentence verbatim."""
+def corpus_hits(sentences, docs: pd.DataFrame, min_words: int) -> list[list[int]]:
+    """For each sentence, the positions (into docs sorted by date, doc_id) of every document whose normalised text
+    contains the normalised sentence as a whole-word substring; sentences under min_words words get no hits."""
     import bisect
-    docs = docs.sort_values(["date", "doc_id"], kind="mergesort")
     parts, starts, pos = [], [], 0
     for t in docs.text:
         n = norm_text(t)
@@ -258,20 +268,38 @@ def redate_labels(lab: pd.DataFrame, docs: pd.DataFrame) -> pd.DataFrame:
         parts.append(n)
         pos += len(n) + 3
     big = " " + " # ".join(parts) + " "
-    years = docs.date.dt.year.to_numpy()
-    ids = docs.doc_id.to_numpy()
-    fy, fd = [], []
-    for s in lab.sentence:
+    out = []
+    for s in sentences:
         k = norm_text(s)
-        i = big.find(" " + k + " ") if len(k.split()) >= REDATE_MIN_WORDS else -1
-        if i < 0:
-            fy.append(np.nan)
-            fd.append(None)
-            continue
-        j = bisect.bisect_right(starts, i) - 1
-        fy.append(float(years[j]))
-        fd.append(str(ids[j]))
+        hits = []
+        if len(k.split()) >= min_words:
+            needle, i = " " + k + " ", 0
+            while (i := big.find(needle, i)) >= 0:
+                j = bisect.bisect_right(starts, i) - 1
+                if not hits or hits[-1] != j:
+                    hits.append(j)
+                i += 1
+        out.append(hits)
+    return out
+
+
+def redate_labels(lab: pd.DataFrame, docs: pd.DataFrame) -> pd.DataFrame:
+    """Add year_redated / redate_first_doc (earliest corpus document containing the sentence verbatim) and, for the
+    leakage audit, corpus_first_date / corpus_last_date / corpus_last_doc (earliest and latest such document,
+    sentences of LEAK_MIN_WORDS+ words)."""
+    docs = docs.sort_values(["date", "doc_id"], kind="mergesort").reset_index(drop=True)
+    years = docs.date.dt.year.to_numpy()
+    dates = docs.date.to_numpy()
+    ids = docs.doc_id.to_numpy()
+    hits = corpus_hits(lab.sentence, docs, min(REDATE_MIN_WORDS, LEAK_MIN_WORDS))
+    long_enough = [len(norm_text(s).split()) >= REDATE_MIN_WORDS for s in lab.sentence]
+    fy = [float(years[h[0]]) if h and ok else np.nan for h, ok in zip(hits, long_enough)]
+    fd = [str(ids[h[0]]) if h and ok else None for h, ok in zip(hits, long_enough)]
     lab = lab.copy()
+    lab["corpus_first_date"] = pd.to_datetime([dates[h[0]] if h else pd.NaT for h in hits])
+    lab["corpus_last_date"] = pd.to_datetime([dates[h[-1]] if h else pd.NaT for h in hits])
+    lab["corpus_last_doc"] = [str(ids[h[-1]]) if h else None for h in hits]
+    lab["corpus_n_docs"] = [len(h) for h in hits]
     lab["redate_first_year"] = fy
     lab["redate_first_doc"] = fd
     covid = np.where(lab.sentence.str.contains(COVID_RE), 2020.0, np.nan)
@@ -283,7 +311,46 @@ def redate_labels(lab: pd.DataFrame, docs: pd.DataFrame) -> pd.DataFrame:
 def label_year_col(rule: str) -> str:
     if rule not in LABEL_YEAR_RULES:
         raise SystemExit(f"label-year rule must be one of {LABEL_YEAR_RULES}, got {rule!r}")
-    return "year" if rule == "dataset" else "year_redated"
+    return {"dataset": "year", "redated": "year_redated", "true": "source_date"}[rule]
+
+
+LABEL_DATES_KEY = ["split", "index", "orig_index", "sentence"]
+
+
+def attach_label_dates(lab: pd.DataFrame, path: Path = LABEL_DATES_PATH) -> tuple[pd.DataFrame, dict]:
+    """Join label_dates.parquet onto the labelled rows; stop unless it covers every dataset row exactly once."""
+    if not path.exists():
+        raise SystemExit(f"{path} missing; build it with `python nlp/build_label_dates.py --tdw-repo <clone>` "
+                         f"(see nlp/README.md, Label years)")
+    ld = pd.read_parquet(path)
+    if len(ld) != len(lab):
+        raise SystemExit(f"{path.name} has {len(ld)} rows, the dataset has {len(lab)}; rebuild it")
+    if ld.duplicated(LABEL_DATES_KEY).any():
+        raise SystemExit(f"{path.name}: key {LABEL_DATES_KEY} is not unique")
+    cols = ["source_type", "source_doc_id", "source_date", "match_method", "n_source_docs"]
+    m = lab.merge(ld[LABEL_DATES_KEY + ["label", "dataset_year"] + cols], on=LABEL_DATES_KEY, how="left",
+                  suffixes=("", "_ld"), validate="one_to_one", indicator=True)
+    if (m._merge != "both").any():
+        raise SystemExit(f"{int((m._merge != 'both').sum())} dataset rows are missing from {path.name}; rebuild it")
+    if (m.label_ld != m.label).any() or (m.dataset_year != m.year).any():
+        raise SystemExit(f"{path.name} disagrees with the dataset on label or year; rebuild it")
+    m = m.drop(columns=["_merge", "label_ld", "dataset_year"])
+    m["source_date"] = pd.to_datetime(m.source_date)
+    info = {"path": str(path.name), "sha256": hashlib.sha256(path.read_bytes()).hexdigest(), "n_rows": int(len(ld)),
+            "n_dated": int(m.source_date.notna().sum()), "by_method": ld.match_method.value_counts().to_dict()}
+    return m, info
+
+
+def train_mask(lab: pd.DataFrame, rule: str, year: int) -> pd.Series:
+    """Rows that may train model `year` under `rule`."""
+    col = label_year_col(rule)
+    if col not in lab.columns:
+        raise SystemExit(f"labels have no {col} column; rerun `prepare` (rule {rule!r} needs "
+                         f"{'label_dates.parquet' if rule == 'true' else 'docs_to_score.parquet'})")
+    if rule == "true":
+        undated = lab.source_date.isna()
+        return (lab.source_date < pd.Timestamp(f"{year}-01-01")) | (undated & (year >= UNDATED_FROM_YEAR))
+    return lab[col] <= year - 1
 
 
 def cmd_prepare(a) -> None:
@@ -303,23 +370,46 @@ def cmd_prepare(a) -> None:
     lab["label"] = lab.label.astype(int)
     if set(lab.label) != {0, 1, 2}:
         raise SystemExit(f"unexpected label values {sorted(set(lab.label))}")
+    rule = a.label_year
+    label_year_col(rule)
+    ld_info = None
+    if LABEL_DATES_PATH.exists() or rule == "true":
+        lab, ld_info = attach_label_dates(lab)
+        print(f"label dates: {ld_info['path']} matches the dataset row for row ({ld_info['n_rows']} rows, "
+              f"{ld_info['n_dated']} with a source date; methods {ld_info['by_method']})")
+    test_years = sorted(set(YEARS) | set(getattr(a, "years", None) or []))
     if DOCS_PATH.exists():
         lab = redate_labels(lab, load_docs())
-        audit = {"rule_default": LABEL_YEAR_DEFAULT, "min_words": REDATE_MIN_WORDS, "docs": str(DOCS_PATH.name),
+        audit = {"rule_in_use": rule, "min_words": REDATE_MIN_WORDS, "leak_min_words": LEAK_MIN_WORDS,
+                 "docs": str(DOCS_PATH.name), "label_dates": ld_info,
                  "n_rows": int(len(lab)), "n_found_in_corpus": int(lab.redate_first_doc.notna().sum()),
-                 "n_year_moved": int((lab.year_redated != lab.year).sum()), "per_test_year": {}, "examples": []}
-        for y in sorted(set(YEARS) | set(getattr(a, "years", None) or [])):
-            nd, nr = int((lab.year <= y - 1).sum()), int((lab.year_redated <= y - 1).sum())
-            audit["per_test_year"][y] = {"rows_dataset_rule": nd, "rows_redated_rule": nr,
-                                         "rows_from_docs_dated_Y_or_later": nd - nr}
+                 "n_year_moved": int((lab.year_redated != lab.year).sum()), "per_test_year": {}, "leaks": {},
+                 "examples": []}
+        rules = [r for r in LABEL_YEAR_RULES if label_year_col(r) in lab.columns]
+        for y in test_years:
+            row = {}
+            for r in rules:
+                use = train_mask(lab, r, y)
+                leak = use & (lab.corpus_last_date >= pd.Timestamp(f"{y}-01-01"))
+                row[f"rows_{r}"] = int(use.sum())
+                row[f"leak_{r}"] = int(leak.sum())
+                row[f"first_{r}"] = int((use & (lab.corpus_first_date >= pd.Timestamp(f"{y}-01-01"))).sum())
+                if r == rule:
+                    audit["leaks"][y] = [{"sentence": s.sentence, "source_date": (str(s.source_date.date())
+                                          if "source_date" in lab.columns and pd.notna(s.source_date) else None),
+                                          "dataset_year": int(s.year), "corpus_last_doc": s.corpus_last_doc,
+                                          "corpus_n_docs": int(s.corpus_n_docs)}
+                                         for s in lab[leak].itertuples()]
+            audit["per_test_year"][y] = row
         mv = lab[(lab.year_redated - lab.year) >= 5].head(10)
         audit["examples"] = [{"dataset_year": int(r.year), "first_doc": r.redate_first_doc,
                               "year_redated": int(r.year_redated), "sentence": r.sentence[:200]}
                              for r in mv.itertuples()]
         (root / "data" / "label_year_audit.json").write_text(json.dumps(audit, indent=2), encoding="utf-8")
-        leak = {y: v["rows_from_docs_dated_Y_or_later"] for y, v in audit["per_test_year"].items()}
-        print(f"WARNING label years: rows with dataset year <= Y-1 whose text first appears in a document dated "
-              f"Y or later: {leak}. Rule in use: {LABEL_YEAR_DEFAULT} (CHRONO_LABEL_YEAR). See label_year_audit.json")
+        print(f"Label-year audit (rule in use: {rule}). rows_<rule> = training rows of model Y; leak_<rule> = those "
+              f"whose text (4+ words) also appears verbatim in a docs_to_score.parquet document dated Y or later; "
+              f"first_<rule> = those whose earliest such document is dated Y or later:")
+        print(pd.DataFrame(audit["per_test_year"]).T.to_string())
     else:
         print(f"note: {DOCS_PATH} missing, so the label-year audit and the `redated` rule are unavailable")
     lab.to_parquet(labels_path(root), index=False)
@@ -343,16 +433,14 @@ def cmd_prepare(a) -> None:
     by_year = pd.crosstab(lab.year, lab.label.map(LABELS))
     print("Labelled rows by year (train + test):")
     print(pd.crosstab(lab.year, lab.label.map(LABELS), margins=True).to_string())
-    rows_y = {}
-    for y in sorted(set(YEARS) | set(getattr(a, "years", None) or [])):
-        rows_y[y] = int((lab.year <= y - 1).sum())
-    print("Training rows (year <= Y-1) per test year:", rows_y)
+    rows_y = {y: int(train_mask(lab, rule, y).sum()) for y in test_years}
+    print(f"Training rows per test year (rule {rule}):", rows_y)
     print(f"Label ids verified: dataset card {card_map}; hawkish cue sentences {hc}; dovish cue sentences {dc}")
     check = {"dataset": DATASET_ID, "revision": DATASET_REV, "files": files, "n_rows": int(len(lab)),
              "card_mapping": card_map, "mapping_used": LABELS, "hawk_cue_counts": hc, "dove_cue_counts": dc,
              "hawk_cues": HAWK_CUES, "dove_cues": DOVE_CUES, "examples": examples,
              "rows_by_year_label": {int(y): {k: int(v) for k, v in r.items()} for y, r in by_year.iterrows()},
-             "train_rows_per_test_year": rows_y,
+             "label_year_rule": rule, "label_dates": ld_info, "train_rows_per_test_year": rows_y,
              "n_duplicate_sentences": int(lab.sentence.duplicated().sum())}
     (root / "data" / "label_check.json").write_text(json.dumps(check, indent=2), encoding="utf-8")
 
@@ -473,13 +561,32 @@ def cmd_train(a) -> None:
         log(f"model {Y}/seed_{S} already done; skipping (use --force to retrain)")
         return
     t0 = time.time()
-    lab = pd.read_parquet(labels_path(root))
-    if ycol not in lab.columns:
-        raise SystemExit(f"{labels_path(root)} has no {ycol} column; rerun `prepare` with docs_to_score.parquet present")
-    lab = lab[lab[ycol] <= Y - 1].sort_values(["year", "sentence", "label", "orig_index"], kind="mergesort")
+    lab_all = pd.read_parquet(labels_path(root))
+    if ycol not in lab_all.columns:
+        raise SystemExit(f"{labels_path(root)} has no {ycol} column; rerun `prepare` "
+                         f"({'label_dates.parquet' if a.label_year == 'true' else 'docs_to_score.parquet'} needed)")
+    use = train_mask(lab_all, a.label_year, Y)
+    lab = lab_all[use].sort_values(["year", "sentence", "label", "orig_index"], kind="mergesort")
     lab = lab.reset_index(drop=True)
     if len(lab) == 0:
-        raise SystemExit(f"no labelled rows with year <= {Y - 1}")
+        raise SystemExit(f"no labelled rows for model {Y} under rule {a.label_year}")
+    sel = {"rows_total": int(len(lab_all)), "rows_used": int(len(lab)),
+           "rows_dataset_rule": int((lab_all.year <= Y - 1).sum())}
+    if "source_date" in lab_all.columns:
+        undated = lab_all.source_date.isna()
+        sel.update({"rows_dated_used": int((use & ~undated).sum()), "rows_undated_used": int((use & undated).sum()),
+                    "rows_undated_excluded": int((~use & undated).sum()),
+                    "rows_dated_excluded": int((~use & ~undated).sum()),
+                    "source_date_max_used": (str(lab.source_date.max().date())
+                                             if lab.source_date.notna().any() else None)})
+    if "corpus_last_date" in lab_all.columns:
+        sel["rows_text_in_docs_dated_Y_or_later"] = int(
+            (use & (lab_all.corpus_last_date >= pd.Timestamp(f"{Y}-01-01"))).sum())
+    try:
+        sel["label_dates_sha256"] = (json.loads((root / "data" / "label_check.json").read_text(encoding="utf-8"))
+                                     .get("label_dates") or {}).get("sha256")
+    except (OSError, ValueError):
+        sel["label_dates_sha256"] = None
     fit_i, val_i = stratified_split(lab, hp["val_frac"], hp["split_seed"])
     base = base_model_id(Y)
     base_path, base_rev = resolve_base(base)
@@ -554,7 +661,9 @@ def cmd_train(a) -> None:
     metrics = {
         "done": True, "year": Y, "seed": S, "base_model": base, "base_revision": base_rev,
         "label_dataset": DATASET_ID, "label_revision": DATASET_REV, "label_year_rule": a.label_year,
-        "label_year_max_used": int(lab[ycol].max()),
+        "label_year_max_used": (int(lab[ycol].max()) if a.label_year != "true" else
+                                int(lab.source_date.dt.year.max()) if lab.source_date.notna().any() else None),
+        "label_selection": sel,
         "label_years": [int(lab.year.min()), int(lab.year.max())], "train_rows": int(len(lab)),
         "n_fit": int(len(fit_i)), "n_val": int(len(val_i)), "class_counts": cls,
         "n_truncated_at_max_len": n_trunc, "hp": hp, "val_macro_f1": round(best_f1, 5), "best_epoch": best_ep,
@@ -787,13 +896,17 @@ def main(argv=None) -> None:
     p = sub.add_parser("prepare")
     p.add_argument("--no-models", action="store_true", help="skip pre-downloading the base models")
     p.add_argument("--years", type=parse_years, default=PREP_YEARS)
+    p.add_argument("--label-year", choices=LABEL_YEAR_RULES, default=LABEL_YEAR_DEFAULT,
+                   help="rule reported and checked (default $CHRONO_LABEL_YEAR or true); `true` requires "
+                        "data/text_corpus/label_dates.parquet")
     t = sub.add_parser("train")
     t.add_argument("--year", type=int, required=True)
     t.add_argument("--seed", type=int, required=True)
     t.add_argument("--max-epochs", type=int, default=HP["max_epochs"], help="spec: 8 (lower only for smoke tests)")
     t.add_argument("--force", action="store_true")
     t.add_argument("--label-year", choices=LABEL_YEAR_RULES, default=LABEL_YEAR_DEFAULT,
-                   help="which year column defines year <= Y-1 (default $CHRONO_LABEL_YEAR or dataset)")
+                   help="true: source-document date < Y-01-01 (label_dates.parquet); dataset: dataset year <= Y-1; "
+                        "redated: corpus re-dating <= Y-1 (default $CHRONO_LABEL_YEAR or true)")
     s = sub.add_parser("score")
     s.add_argument("--year", type=int, required=True)
     s.add_argument("--seeds", type=int, nargs="+", default=SEEDS)

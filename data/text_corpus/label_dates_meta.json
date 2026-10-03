@@ -1,0 +1,206 @@
+{
+  "tdw_repo": "https://github.com/gtfintechlab/fomc-hawkish-dovish",
+  "tdw_commit": "98646987452b326507479cf641571b33814bb73f",
+  "label_dataset": "gtfintechlab/fomc_communication",
+  "label_revision": "6b0283f55f0005a6d38d49f271d795c21fccc1a3",
+  "n_documents": {
+    "sp": 1026,
+    "mm": 230,
+    "pc": 63
+  },
+  "substring_min_words": 6,
+  "document_notes": [
+    "sp:kohn20071004a master date 2007-10-05 differs from the file name; the later date 2007-10-05 is used",
+    "sp:kroszner2007116a has no 8-digit date in its name; master date 2007-11-16 used"
+  ],
+  "sha256": "16a54100d531e9ab933671f4c0e541b1c202be1630fd5f3aa6b4a5c26a558dfe",
+  "n_rows": 2480,
+  "n_dated": 2480,
+  "share_dated": 1.0,
+  "by_method": {
+    "exact": 2281,
+    "annotated-sheet join": 192,
+    "normalised-whitespace": 7
+  },
+  "by_source_type": {
+    "mm": {
+      "rows": 1132,
+      "dated": 1132
+    },
+    "pc": {
+      "rows": 322,
+      "dated": 322
+    },
+    "sp": {
+      "rows": 1026,
+      "dated": 1026
+    }
+  },
+  "by_dataset_year": {
+    "1996": {
+      "rows": 53,
+      "dated": 53
+    },
+    "1997": {
+      "rows": 92,
+      "dated": 92
+    },
+    "1998": {
+      "rows": 79,
+      "dated": 79
+    },
+    "1999": {
+      "rows": 104,
+      "dated": 104
+    },
+    "2000": {
+      "rows": 105,
+      "dated": 105
+    },
+    "2001": {
+      "rows": 82,
+      "dated": 82
+    },
+    "2002": {
+      "rows": 65,
+      "dated": 65
+    },
+    "2003": {
+      "rows": 103,
+      "dated": 103
+    },
+    "2004": {
+      "rows": 145,
+      "dated": 145
+    },
+    "2005": {
+      "rows": 141,
+      "dated": 141
+    },
+    "2006": {
+      "rows": 111,
+      "dated": 111
+    },
+    "2007": {
+      "rows": 115,
+      "dated": 115
+    },
+    "2008": {
+      "rows": 60,
+      "dated": 60
+    },
+    "2009": {
+      "rows": 41,
+      "dated": 41
+    },
+    "2010": {
+      "rows": 44,
+      "dated": 44
+    },
+    "2011": {
+      "rows": 57,
+      "dated": 57
+    },
+    "2012": {
+      "rows": 67,
+      "dated": 67
+    },
+    "2013": {
+      "rows": 80,
+      "dated": 80
+    },
+    "2014": {
+      "rows": 64,
+      "dated": 64
+    },
+    "2015": {
+      "rows": 64,
+      "dated": 64
+    },
+    "2016": {
+      "rows": 65,
+      "dated": 65
+    },
+    "2017": {
+      "rows": 99,
+      "dated": 99
+    },
+    "2018": {
+      "rows": 62,
+      "dated": 62
+    },
+    "2019": {
+      "rows": 116,
+      "dated": 116
+    },
+    "2020": {
+      "rows": 158,
+      "dated": 158
+    },
+    "2021": {
+      "rows": 170,
+      "dated": 170
+    },
+    "2022": {
+      "rows": 138,
+      "dated": 138
+    }
+  },
+  "n_year_differs": 2336,
+  "year_diff_counts": {
+    "-26": 3,
+    "-25": 12,
+    "-24": 16,
+    "-23": 17,
+    "-22": 23,
+    "-21": 22,
+    "-20": 20,
+    "-19": 35,
+    "-18": 27,
+    "-17": 45,
+    "-16": 32,
+    "-15": 56,
+    "-14": 32,
+    "-13": 33,
+    "-12": 36,
+    "-11": 30,
+    "-10": 28,
+    "-9": 51,
+    "-8": 49,
+    "-7": 66,
+    "-6": 68,
+    "-5": 74,
+    "-4": 68,
+    "-3": 102,
+    "-2": 98,
+    "-1": 103,
+    "0": 144,
+    "1": 125,
+    "2": 128,
+    "3": 92,
+    "4": 72,
+    "5": 67,
+    "6": 70,
+    "7": 65,
+    "8": 51,
+    "9": 50,
+    "10": 29,
+    "11": 22,
+    "12": 37,
+    "13": 42,
+    "14": 47,
+    "15": 38,
+    "16": 53,
+    "17": 37,
+    "18": 28,
+    "19": 17,
+    "20": 25,
+    "21": 21,
+    "22": 35,
+    "23": 16,
+    "24": 14,
+    "25": 5,
+    "26": 4
+  },
+  "n_earliest_other_type": 2
+}

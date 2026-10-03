@@ -66,6 +66,6 @@ sbatch --export=ALL,ONLY_STUDY=1 hpg/fetch_audio.sbatch
 
 ## Text stance model (hawkish / dovish)
 
-`bash hpg/submit_nlp.sh` trains the 33 walk-forward stance models and scores every document, as four chained jobs
+`bash hpg/submit_nlp.sh` trains the 36 walk-forward stance models (2015-2026, 3 seeds) and scores every document, as four chained jobs
 under account and QOS `ai-workshop` (outputs in `/blue/ai-workshop/$USER/chrono`). Details, options and the
 label-year choice: `nlp/README.md`.
