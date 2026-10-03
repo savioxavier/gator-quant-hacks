@@ -84,7 +84,7 @@ cd /blue/ai-workshop/$USER/gator-quant-hacks && git pull && sbatch hpg/run_every
    - Features: small files -> audio + frames -> speech (Whisper timing, chair voice) -> face. The steps are `hpg/fedpress_pkg/slurm/submit_all.sh --only fetch,av,speech,face`.
    - Text: 36 chrono-BERT fine-tunes -> 12 scoring tasks -> merge (`hpg/submit_nlp.sh`, corrected label dates).
 
-Options: `GPU_TYPE=b200 sbatch hpg/run_everything.sbatch`. The default is rtx6000, because the B200 queue is long.
+Options: the default GPU type is now b200 (rtx6000 was rejected with "Requested node configuration is not available"); `GPU_TYPE=rtx6000` switches back, and `SKIP_NLP=1` skips the text chain.
 
 ### When to run it
 
