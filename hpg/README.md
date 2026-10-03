@@ -63,3 +63,9 @@ sbatch --export=ALL,ONLY_STUDY=1 hpg/fetch_audio.sbatch
 - If the burst QOS `jie.xu-b` is busy, edit the sbatch file to use `--qos=jie.xu`.
 - The recordings are public-domain works of the US government (federalreserve.gov). They stay on /blue and are not committed to git.
 - The voice, face and text feature stages, which use the B200s with at most 2 GPUs, follow in this folder next. They read `audio/`, `video/`, `captions/` and `transcripts/` from the same root.
+
+## Text stance model (hawkish / dovish)
+
+`bash hpg/submit_nlp.sh` trains the 33 walk-forward stance models and scores every document, as four chained jobs
+under account and QOS `ai-workshop` (outputs in `/blue/ai-workshop/$USER/chrono`). Details, options and the
+label-year choice: `nlp/README.md`.
