@@ -69,3 +69,27 @@ sbatch --export=ALL,ONLY_STUDY=1 hpg/fetch_audio.sbatch
 `bash hpg/submit_nlp.sh` trains the 36 walk-forward stance models (2015-2026, 3 seeds) and scores every document, as four chained jobs
 under account and QOS `ai-workshop` (outputs in `/blue/ai-workshop/$USER/chrono`). Details, options and the
 label-year choice: `nlp/README.md`.
+
+## Everything at once: `sbatch hpg/run_everything.sbatch`
+
+One CPU job that starts the full feature build on HiPerGator, from the repo root:
+
+```bash
+cd /blue/ai-workshop/$USER/gator-quant-hacks && git pull && sbatch hpg/run_everything.sbatch
+```
+
+1. **Links the recordings** already downloaded by `fetch_audio.sbatch` into the feature package's layout, so nothing is downloaded twice (`hpg/link_fetched.py`).
+2. **Builds the feature package's environment** on /blue if it is missing (`hpg/fedpress_pkg/slurm/00_setup.sh env`).
+3. **Submits two chains, 2 GPUs each (4 at once):**
+   - Features: small files -> audio + frames -> speech (Whisper timing, chair voice) -> face. The steps are `hpg/fedpress_pkg/slurm/submit_all.sh --only fetch,av,speech,face`.
+   - Text: 36 chrono-BERT fine-tunes -> 12 scoring tasks -> merge (`hpg/submit_nlp.sh`, corrected label dates).
+
+Options: `GPU_TYPE=b200 sbatch hpg/run_everything.sbatch`. The default is rtx6000, because the B200 queue is long.
+
+### When to run it
+
+The press-conference text gate (G3, H1-primary on the registered 2023-2026 Powell sample) came out NO-GO on 2026-10-03. The team plan says voice and face (H2/H3) are not to be tested after a NO-GO. Use this build for a new, separately pre-registered forward test (for example, the 2026-10-28 press conference), not to mine the past sample.
+
+Before running it, two things are needed:
+- HiPerGator accounts are personal, and group allocations need the sponsor's approval (UF acceptable-use policy). Run it from the account holder's own login, with the `ai-workshop` sponsor's OK.
+- Read `hpg/fedpress_pkg/README.md` and `hpg/fedpress_pkg/REVIEW.md` first.

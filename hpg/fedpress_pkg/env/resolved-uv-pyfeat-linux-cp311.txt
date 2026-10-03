@@ -1,0 +1,306 @@
+# Reference resolution of the pip section of env/environment-pyfeat.yml for Linux x86_64 / CPython 3.11 (uv pip compile,
+# 2026-10-03, --extra-index-url https://download.pytorch.org/whl/cu128 --index-strategy unsafe-best-match).
+# It shows that the pins can co-exist. The CPU onnxruntime and the opencv 5 wheels listed here are replaced by
+# env/post_install.sh (onnxruntime-gpu 1.26.0, opencv-contrib-python-headless 4.12.0.88). Fallback install:
+#   pip install --extra-index-url https://download.pytorch.org/whl/cu128 -r env/resolved-uv-pyfeat-linux-cp311.txt
+absl-py==2.5.0
+    # via mediapipe
+celluloid==0.2.0
+    # via py-feat
+certifi==2026.7.22
+    # via
+    #   mediapipe
+    #   requests
+cffi==2.1.1
+    # via sounddevice
+charset-normalizer==3.5.2
+    # via requests
+cloudpickle==3.1.2
+    # via joblib
+contourpy==1.3.3
+    # via matplotlib
+cuda-bindings==12.9.9
+    # via torch
+cuda-pathfinder==1.8.3
+    # via cuda-bindings
+cuda-toolkit==12.8.1
+    # via torch
+cycler==0.12.1
+    # via matplotlib
+easing-functions==1.0.4
+    # via py-feat
+filelock==4.0.9
+    # via
+    #   huggingface-hub
+    #   torch
+flatbuffers==25.12.19
+    # via
+    #   mediapipe
+    #   onnxruntime
+fonttools==4.66.1
+    # via matplotlib
+fsspec==2026.9.0
+    # via
+    #   huggingface-hub
+    #   torch
+h5py==3.16.0
+    # via py-feat
+hf-xet==1.6.0
+    # via huggingface-hub
+huggingface-hub==0.36.2
+    # via
+    #   -r pyfeat_pip.in
+    #   py-feat
+    #   timm
+idna==3.20
+    # via requests
+imageio==2.38.0
+    # via scikit-image
+imageio-ffmpeg==0.6.0
+    # via -r pyfeat_pip.in
+iniconfig==2.3.0
+    # via pytest
+insightface==2.0
+    # via -r pyfeat_pip.in
+jinja2==3.1.6
+    # via torch
+joblib==1.6.0
+    # via
+    #   py-feat
+    #   scikit-learn
+kiwisolver==1.5.1
+    # via matplotlib
+lazy-loader==0.6
+    # via scikit-image
+markupsafe==3.0.4
+    # via jinja2
+matplotlib==3.11.2
+    # via
+    #   celluloid
+    #   mediapipe
+    #   seaborn
+mediapipe==1.0.1
+    # via -r pyfeat_pip.in
+ml-dtypes==0.6.0
+    # via onnx
+mpmath==1.3.0
+    # via sympy
+narwhals==2.26.0
+    # via
+    #   plotly
+    #   scikit-learn
+networkx==3.6.1
+    # via
+    #   scikit-image
+    #   torch
+numexpr==2.14.2
+    # via py-feat
+numpy==2.2.6
+    # via
+    #   -r pyfeat_pip.in
+    #   contourpy
+    #   h5py
+    #   imageio
+    #   insightface
+    #   matplotlib
+    #   mediapipe
+    #   ml-dtypes
+    #   numexpr
+    #   onnx
+    #   onnxruntime
+    #   opencv-contrib-python
+    #   opencv-python
+    #   pandas
+    #   py-feat
+    #   scikit-image
+    #   scikit-learn
+    #   scipy
+    #   seaborn
+    #   skops
+    #   tifffile
+    #   torchvision
+    #   xgboost
+nvidia-cublas-cu12==12.8.4.1
+    # via
+    #   cuda-toolkit
+    #   nvidia-cudnn-cu12
+    #   nvidia-cusolver-cu12
+nvidia-cuda-cupti-cu12==12.8.90
+    # via cuda-toolkit
+nvidia-cuda-nvrtc-cu12==12.8.93
+    # via cuda-toolkit
+nvidia-cuda-runtime-cu12==12.8.90
+    # via cuda-toolkit
+nvidia-cudnn-cu12==9.19.0.56
+    # via torch
+nvidia-cufft-cu12==11.3.3.83
+    # via cuda-toolkit
+nvidia-cufile-cu12==1.13.1.3
+    # via cuda-toolkit
+nvidia-curand-cu12==10.3.9.90
+    # via cuda-toolkit
+nvidia-cusolver-cu12==11.7.3.90
+    # via cuda-toolkit
+nvidia-cusparse-cu12==12.5.8.93
+    # via
+    #   cuda-toolkit
+    #   nvidia-cusolver-cu12
+nvidia-cusparselt-cu12==0.7.1
+    # via torch
+nvidia-nccl-cu12==2.28.9
+    # via
+    #   torch
+    #   xgboost
+nvidia-npp-cu12==12.3.3.100
+    # via -r pyfeat_pip.in
+nvidia-nvjitlink-cu12==12.8.93
+    # via
+    #   cuda-toolkit
+    #   nvidia-cufft-cu12
+    #   nvidia-cusolver-cu12
+    #   nvidia-cusparse-cu12
+nvidia-nvshmem-cu12==3.4.5
+    # via torch
+nvidia-nvtx-cu12==12.8.90
+    # via cuda-toolkit
+onnx==1.23.1
+    # via insightface
+onnxruntime==1.30.0
+    # via insightface
+opencv-contrib-python==5.0.0.93
+    # via mediapipe
+opencv-python==5.0.0.93
+    # via insightface
+packaging==26.3
+    # via
+    #   huggingface-hub
+    #   lazy-loader
+    #   matplotlib
+    #   onnxruntime
+    #   plotly
+    #   pytest
+    #   scikit-image
+    #   skops
+pandas==2.3.3
+    # via
+    #   -r pyfeat_pip.in
+    #   py-feat
+    #   seaborn
+pillow==12.3.0
+    # via
+    #   imageio
+    #   matplotlib
+    #   py-feat
+    #   scikit-image
+    #   torchvision
+plotly==7.1.0
+    # via py-feat
+pluggy==1.6.0
+    # via pytest
+prettytable==3.18.0
+    # via skops
+protobuf==7.36.2
+    # via
+    #   onnx
+    #   onnxruntime
+py-feat==2.1.3
+    # via -r pyfeat_pip.in
+pyarrow==21.0.0
+    # via -r pyfeat_pip.in
+pycparser==3.0
+    # via cffi
+pygments==2.21.0
+    # via pytest
+pyparsing==3.3.3
+    # via matplotlib
+pytest==8.4.2
+    # via -r pyfeat_pip.in
+python-dateutil==2.9.0.post0
+    # via
+    #   matplotlib
+    #   pandas
+pytz==2026.4
+    # via pandas
+pyyaml==6.0.3
+    # via
+    #   -r pyfeat_pip.in
+    #   huggingface-hub
+    #   timm
+requests==2.32.5
+    # via
+    #   -r pyfeat_pip.in
+    #   huggingface-hub
+    #   insightface
+safetensors==0.8.0
+    # via
+    #   py-feat
+    #   timm
+scikit-image==0.26.0
+    # via
+    #   insightface
+    #   py-feat
+scikit-learn==1.9.1
+    # via
+    #   py-feat
+    #   skops
+scipy==1.17.1
+    # via
+    #   insightface
+    #   py-feat
+    #   scikit-image
+    #   scikit-learn
+    #   skops
+    #   xgboost
+seaborn==0.13.2
+    # via py-feat
+setuptools==81.0.0
+    # via torch
+six==1.17.0
+    # via python-dateutil
+skops==0.16.0
+    # via py-feat
+sounddevice==0.5.6
+    # via mediapipe
+sympy==1.14.0
+    # via torch
+threadpoolctl==3.7.0
+    # via scikit-learn
+tifffile==2026.3.3
+    # via scikit-image
+timm==1.0.30
+    # via py-feat
+torch==2.11.0+cu128
+    # via
+    #   -r pyfeat_pip.in
+    #   py-feat
+    #   timm
+    #   torchvision
+torchcodec==0.11.1+cu128
+    # via
+    #   -r pyfeat_pip.in
+    #   py-feat
+torchvision==0.26.0+cu128
+    # via
+    #   -r pyfeat_pip.in
+    #   py-feat
+    #   timm
+tqdm==4.70.1
+    # via
+    #   huggingface-hub
+    #   insightface
+    #   py-feat
+triton==3.6.0
+    # via torch
+typing-extensions==4.16.0
+    # via
+    #   huggingface-hub
+    #   onnx
+    #   torch
+tzdata==2026.5
+    # via pandas
+urllib3==2.8.0
+    # via requests
+wcwidth==0.9.1
+    # via prettytable
+xgboost==3.2.0
+    # via py-feat

@@ -1,0 +1,59 @@
+Bootstrap: docker
+From: nvidia/cuda:12.8.1-cudnn-runtime-ubuntu22.04
+
+# Apptainer alternative to the conda env (same pins: env/environment.yml + env/post_install.sh).
+# Build from the package folder (needs --fakeroot or a remote builder; check `apptainer build --help` on HPG):
+#   module load apptainer
+#   apptainer build --fakeroot /blue/jie.xu/$USER/fedpress.sif env/fedpress.def
+# Run (always --nv; bind /blue and the node-local $TMPDIR; --bind the package to use edited code without rebuild):
+#   apptainer run --nv --bind /blue,$TMPDIR --bind $PWD:/opt/fedpress /blue/jie.xu/$USER/fedpress.sif doctor
+#   apptainer exec --nv --bind /blue,$TMPDIR fedpress.sif python -m fedpress.cli asr --all --claim
+# Ubuntu base: MediaPipe's GPU delegate is Ubuntu-only (CPU elsewhere); 1 fps does not need it.
+
+%files
+    pyproject.toml /opt/fedpress/pyproject.toml
+    config.yaml /opt/fedpress/config.yaml
+    fedpress /opt/fedpress/fedpress
+    manifest /opt/fedpress/manifest
+    env /opt/fedpress/env
+    docs/ARCHITECTURE.md /opt/fedpress/docs/ARCHITECTURE.md
+
+%post
+    set -eu
+    export DEBIAN_FRONTEND=noninteractive
+    apt-get update
+    apt-get install -y --no-install-recommends ca-certificates curl bzip2 git libgl1 libglib2.0-0 libegl1
+    rm -rf /var/lib/apt/lists/*
+    curl -Ls https://micro.mamba.pm/api/micromamba/linux-64/latest | tar -xj -C /usr/local bin/micromamba
+    export MAMBA_ROOT_PREFIX=/opt/mamba
+    /usr/local/bin/micromamba create -y -p /opt/env -f /opt/fedpress/env/environment.yml
+    bash /opt/fedpress/env/post_install.sh /opt/env
+    /usr/local/bin/micromamba clean -a -y
+    rm -rf /root/.cache/pip
+
+%environment
+    export PATH=/opt/env/bin:$PATH
+    export PYTHONNOUSERSITE=1
+    export FEDPRESS_ENV=/opt/env
+    export FEDPRESS_ROOT=${FEDPRESS_ROOT:-/blue/jie.xu/$USER/fedpress}
+    export HF_HOME=${HF_HOME:-$FEDPRESS_ROOT/cache/huggingface}
+    export HF_TOKEN_PATH=${HF_TOKEN_PATH:-$HOME/.cache/huggingface/token}
+    export TORCH_HOME=${TORCH_HOME:-$FEDPRESS_ROOT/cache/torch}
+    export CUDA_CACHE_PATH=${CUDA_CACHE_PATH:-$FEDPRESS_ROOT/cache/nv}
+    export CUDA_CACHE_MAXSIZE=4294967296
+    export LD_LIBRARY_PATH=$(ls -d /opt/env/lib/python3.11/site-packages/nvidia/*/lib 2>/dev/null | paste -sd:)${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
+    export TOKENIZERS_PARALLELISM=false
+
+%runscript
+    exec python -m fedpress.cli "$@"
+
+%test
+    python -c "import fedpress, torch; print('fedpress', fedpress.__version__, 'torch', torch.__version__)"
+
+%labels
+    name fedpress
+    cuda 12.8
+    torch 2.8.0+cu128
+
+%help
+    FOMC press-conference feature build. `apptainer run --nv IMAGE <command>` runs `python -m fedpress.cli <command>`.

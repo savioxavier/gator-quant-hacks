@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fedpress"
+version = "0.1.0"
+description = "FOMC press-conference chair voice, face and text features for HiPerGator, stamped with known_at"
+requires-python = ">=3.11"
+readme = "docs/ARCHITECTURE.md"
+license = { text = "Research code; model and library licences are listed in config.yaml (models:) and docs" }
+# Core: what the package skeleton itself needs. Stage stacks are extras; torch comes from the cu128 index.
+dependencies = [
+  "pyyaml>=6.0",
+  "numpy>=2.1,<2.3",
+  "pandas>=2.2.3,<3",
+  "pyarrow>=17",
+  "requests>=2.32",
+]
+
+[project.optional-dependencies]
+# Pinned to the same versions as env/environment.yml (the HiPerGator build). torch/torchaudio/torchvision
+# must come from https://download.pytorch.org/whl/cu128 (see [tool.uv.sources]).
+torch = ["torch==2.8.0", "torchaudio==2.8.0", "torchvision==0.23.0", "torchcodec==0.7.0", "nvidia-npp-cu12==12.3.3.100"]
+asr = ["faster-whisper==1.2.1", "ctranslate2==4.8.2"]
+turns = ["pdfplumber==0.11.7", "pypdf==6.0.0", "webvtt-py==0.5.1", "rapidfuzz>=3.9"]
+voice = ["transformers==4.57.6", "huggingface-hub==0.36.2", "accelerate==1.12.0", "praat-parselmouth==0.4.7",
+         "soundfile==0.13.1"]
+diarize = ["speechbrain==1.0.3", "pyannote.audio==4.0.7"]
+face = ["mediapipe==1.0.1", "emotiefflib==1.1.1", "onnxruntime-gpu==1.26.0", "opencv-contrib-python-headless==4.12.0.88"]
+text = ["transformers==4.57.6", "huggingface-hub==0.36.2", "sentence-transformers==5.2.0"]
+options = ["whisperx==3.8.6", "funasr==1.4.16", "opensmile==2.6.0", "insightface==2.0", "librosa==0.11.0",
+           "ffmpeg-python==0.2.0"]
+dev = ["pytest>=8"]
+
+[project.scripts]
+fedpress = "fedpress.cli:main"
+
+[tool.setuptools]
+packages = ["fedpress", "fedpress.stages", "fedpress.nlp", "fedpress.train"]
+
+# ---------------------------------------------------------------- uv (the team plan uses uv; conda is the alternative)
+# uv venv -p 3.11 && uv pip install -e ".[torch,asr,turns,voice,diarize,face,text,options,dev]"
+[tool.uv]
+# CPU onnxruntime (pulled by faster-whisper, emotiefflib, insightface) would shadow onnxruntime-gpu, and three
+# OpenCV wheels would overwrite each other's cv2: exclude them; the GPU / contrib-headless builds provide the modules.
+override-dependencies = [
+  "onnxruntime ; sys_platform == 'never'",
+  "opencv-python ; sys_platform == 'never'",
+  "opencv-python-headless ; sys_platform == 'never'",
+  "opencv-contrib-python ; sys_platform == 'never'",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+torchaudio = { index = "pytorch-cu128" }
+torchvision = { index = "pytorch-cu128" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
