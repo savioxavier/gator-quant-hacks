@@ -1,0 +1,176 @@
+{
+ "validation_random40": {
+  "set": "random40_2011_2024",
+  "n_compared": 40,
+  "H_and_D_exact": 40,
+  "kept_agree": 40,
+  "s_nan_pattern_agree": 40,
+  "s_max_abs_diff": 6.245004513516506e-17,
+  "s_corr": 1.0,
+  "chars_exact": 40,
+  "date_agree": 40,
+  "title_agree": null
+ },
+ "validation_random40_date_rules": {
+  "slug": 39,
+  "text_month_date": 1
+ },
+ "validation_all_2024": {
+  "set": "all_their_2024_rows",
+  "n_compared": 104,
+  "H_and_D_exact": 104,
+  "kept_agree": 104,
+  "s_nan_pattern_agree": 104,
+  "s_max_abs_diff": 1.1102230246251565e-16,
+  "s_corr": 1.0,
+  "chars_exact": 104,
+  "date_agree": 104,
+  "title_agree": 104
+ },
+ "index_counts": {
+  "2024": 104,
+  "2025": 117,
+  "2026": 70
+ },
+ "fetch_failed": [],
+ "combined_rows": 1012,
+ "combined_by_source": {
+  "their_speech_scores_csv": 809,
+  "rescored_federalreserve_gov_20261003": 203
+ },
+ "post_cut_window": [
+  "2024-10-03",
+  "2026-10-02"
+ ],
+ "feed_unparsed_dates": 0,
+ "feed_entries_without_link": [
+  {
+   "d": "2/11/2025 3:30:00 PM",
+   "t": "Bank Regulation in 2025 and Beyond",
+   "s": "Governor Michelle W. Bowman"
+  },
+  {
+   "d": "2/7/2025 9:25:00 AM",
+   "t": "Bank Regulation in 2025 and Beyond",
+   "s": "Governor Michelle W. Bowman"
+  },
+  {
+   "d": "2/13/2024 3:30:00 PM",
+   "t": "Accountability for Banks, Accountability for Regulators",
+   "s": "Governor Michelle W. Bowman"
+  }
+ ],
+ "feed_post_cut_n": 204,
+ "feed_post_cut_missing_from_ours": [
+  {
+   "d": "2/11/2025 3:30:00 PM",
+   "t": "Bank Regulation in 2025 and Beyond",
+   "s": "Governor Michelle W. Bowman",
+   "l": ""
+  },
+  {
+   "d": "2/7/2025 9:25:00 AM",
+   "t": "Bank Regulation in 2025 and Beyond",
+   "s": "Governor Michelle W. Bowman",
+   "l": ""
+  }
+ ],
+ "ours_post_cut_missing_from_feed": [
+  "bowman20260226a"
+ ],
+ "feed_2011_to_cut_n": 809,
+ "feed_2011_to_cut_missing_from_theirs": [
+  {
+   "d": "2/13/2024 3:30:00 PM",
+   "t": "Accountability for Banks, Accountability for Regulators",
+   "s": "Governor Michelle W. Bowman",
+   "l": ""
+  }
+ ],
+ "theirs_2011_to_cut_missing_from_feed": [
+  "yellen20161219a"
+ ],
+ "page_date_ne_slug_date": [],
+ "format_by_year": [
+  {
+   "year": 2024,
+   "n": 104,
+   "container_div_content": 104,
+   "has_div_article": 104,
+   "date_rule_text": 0,
+   "date_rule_slug": 104,
+   "date_ne_slug": 0,
+   "median_html_chars": 102730.5,
+   "median_body_chars": 17462.0,
+   "n_body_lt_3000": 0
+  },
+  {
+   "year": 2025,
+   "n": 117,
+   "container_div_content": 117,
+   "has_div_article": 117,
+   "date_rule_text": 0,
+   "date_rule_slug": 117,
+   "date_ne_slug": 0,
+   "median_html_chars": 101971.0,
+   "median_body_chars": 15951.0,
+   "n_body_lt_3000": 5
+  },
+  {
+   "year": 2026,
+   "n": 70,
+   "container_div_content": 70,
+   "has_div_article": 70,
+   "date_rule_text": 0,
+   "date_rule_slug": 70,
+   "date_ne_slug": 0,
+   "median_html_chars": 100110.0,
+   "median_body_chars": 14986.5,
+   "n_body_lt_3000": 2
+  }
+ ],
+ "short_bodies": [
+  {
+   "slug": "powell20251009a",
+   "title": "Welcoming Remarks",
+   "chars": 1980,
+   "HD": 1
+  },
+  {
+   "slug": "powell20250722a",
+   "title": "Opening Remarks",
+   "chars": 2852,
+   "HD": 1
+  },
+  {
+   "slug": "cook20250604a",
+   "title": "Welcoming Remarks",
+   "chars": 2765,
+   "HD": 0
+  },
+  {
+   "slug": "kugler20250407a",
+   "title": "Inflation Dynamics and the Phillips Curve",
+   "chars": 2060,
+   "HD": 0
+  },
+  {
+   "slug": "waller20250321a",
+   "title": "Statement by Governor Christopher J. Waller",
+   "chars": 2004,
+   "HD": 1
+  },
+  {
+   "slug": "waller20260130a",
+   "title": "Statement by Governor Christopher J. Waller",
+   "chars": 2451,
+   "HD": 5
+  },
+  {
+   "slug": "powell20260111a",
+   "title": "Statement from Federal Reserve Chair Jerome H. Powell",
+   "chars": 2326,
+   "HD": 1
+  }
+ ]
+}
