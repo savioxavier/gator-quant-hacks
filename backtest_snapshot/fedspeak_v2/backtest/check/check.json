@@ -1,0 +1,89 @@
+{
+  "prereg_sha256": "6083d3ef742ad67623b34337c8299ce4c7172fc1e1a786003eae4b4fb7ced910",
+  "prereg_sha_ok": true,
+  "doc_scores_exists": false,
+  "lexonly_rob_score_nonnull": 0,
+  "lexonly_rob_status_sample": "pending: gtfintechlab/FOMC-RoBERTa is gated (manual approval); run rob_score.py score",
+  "fomc_strat01_vs_corpus_2015_2024_symdiff": [],
+  "T0f_vs_replicate_max_abs_diff": {
+    "consensus": 0.0,
+    "z": 0.0,
+    "w_TLT": 6.439293542825908e-15,
+    "w_UUP": 2.1094237467877974e-15
+  },
+  "T0f_vs_replicate_n_dates": 3711,
+  "T0f_vs_replicate_z_nan_mismatch": 0,
+  "T0v2_vs_T0f_consensus_max_abs_diff_2016_IS": 0.2222222222479351,
+  "T0v2_vs_T0f_z_corr_2016_IS": 0.981982920191141,
+  "first_valid_z_T0v2": "2015-12-31",
+  "prefix_invariance_max_abs_diff": {
+    "z_T1": 0.0,
+    "w_T1xE1": 0.0,
+    "w_T1xE2": 0.0,
+    "z_T2": 0.0,
+    "w_T2xE1": 0.0,
+    "w_T2xE2": 0.0,
+    "z_T3": 0.0,
+    "w_T3xE1": 0.0,
+    "w_T3xE2": 0.0,
+    "z_T4": 0.0,
+    "w_T4xE1": 0.0,
+    "w_T4xE2": 0.0,
+    "z_T0f": 0.0,
+    "w_T0fxE1": 0.0,
+    "w_T0fxE2": 0.0,
+    "z_T0v2": 0.0,
+    "w_T0v2xE1": 0.0,
+    "w_T0v2xE2": 0.0
+  },
+  "T3_vs_statsmodels": {
+    "2016-06-30": {
+      "beta_diff": 1.887379141862766e-15,
+      "z_diff": 4.440892098500626e-16
+    },
+    "2019-12-31": {
+      "beta_diff": 2.220446049250313e-16,
+      "z_diff": 3.3306690738754696e-16
+    },
+    "2024-09-30": {
+      "beta_diff": 1.5543122344752192e-15,
+      "z_diff": 0.0
+    }
+  },
+  "timing_examples": [
+    {
+      "doc_date": "2016-03-16",
+      "first_session_with_C": "2016-03-17"
+    },
+    {
+      "doc_date": "2019-10-11",
+      "first_session_with_C": "2019-10-14"
+    },
+    {
+      "doc_date": "2020-03-15",
+      "first_session_with_C": "2020-03-16"
+    }
+  ],
+  "core_ER_6_rebuild": {
+    "core_first": "2011-04-04",
+    "rebuild_max_abs_diff_vs_PORT_core_ER_6": 0.0,
+    "rebuild_n_compared": 3397
+  },
+  "chairs": [
+    [
+      "Yellen",
+      "2014-02-03",
+      "2018-02-03"
+    ],
+    [
+      "Powell",
+      "2018-02-05",
+      "2026-05-21"
+    ],
+    [
+      "Warsh",
+      "2026-05-22",
+      "2099-12-31"
+    ]
+  ]
+}
