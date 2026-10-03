@@ -16,7 +16,8 @@ These files fix the hypotheses, rules and deviations before the results they gov
 | 21:50 | v2 Amendment 3 and D1a: label dates corrected from source documents | 464f8a5b...ebd79 (v2); 660d06a8...9ebd79 (D1) |
 | 22:40 | v2 DEVIATIONS.md (D-1 unscheduled de-risk dates; D-2 T3 scaling), before any v2 return | 48e6643d...e4796a |
 | about 23:10 | v2 in-sample backtest run; decision rule failed; out-of-sample not evaluated | |
-| about 23:15 | this commit | |
+| about 23:15 | first public commit of these records (537c483) | |
+| about 23:25 | Exploratory H2/H3/H4 pre-registration written (presser_H2H3H4_EXPLORATORY.md), POST-G3 (after the H1 NO-GO) and before any voice or face feature exists; committed in its own later commit | e030af98...dca6d0 |
 
 ## Files and current SHA-256
 
@@ -27,3 +28,4 @@ These files fix the hypotheses, rules and deviations before the results they gov
 | presser_team_FINAL_PLAN.md (the team's locked family) | 88cc54a869e7cf540d561a257a3203524392cd1cbe18d25560f397b926651846 |
 | presser_DEVIATION_D1.md (with D1a) | 660d06a85a434328a5ec28f0d45611457bb44e7fcd4c4a6fef28bb843d9ebd79 |
 | presser_ADDENDUM.md | 1921b2ca1dc6e646b95ee1d1bbc3e3ef7f6a864c06cd724956df7c6569de2dc4 |
+| presser_H2H3H4_EXPLORATORY.md (exploratory, post-G3; cannot overturn G3) | e030af98df6fb194532c236890986619341f6e14a457384cfc3ec4bba5dca6d0 |
