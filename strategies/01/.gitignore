@@ -1,0 +1,12 @@
+data/raw/
+*.html
+.env
+__pycache__/
+venv/
+.venv/
+*.pyc
+.Python
+*.egg-info/
+.idea/
+.vscode/
+*.log
