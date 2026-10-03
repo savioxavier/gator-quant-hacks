@@ -1,0 +1,696 @@
+{
+ "footnotes_removed": {
+  "20160615": [
+   "1 Chair Yellen intended to say, “You know, obviously, there is a lot of uncertainty about what will happen to productivity growth, but productivity growth could stay low for a prolonged time, and we have an aging—aging societies in many parts of the world that could depress this neutral rate.”"
+  ],
+  "20170920": [
+   "1 Chair Yellen intended to say that she met with President Trump early in his term."
+  ],
+  "20171213": [
+   "1 Chair Yellen intended to say that credit growth is not at excessive levels.",
+   "2 Chair Yellen intended to say that, beginning in mid-2014, there was a marked appreciation of the dollar."
+  ],
+  "20180321": [
+   "1 Chairman Powell intended to say that the Committee had raised the target “range” for the federal funds rate."
+  ],
+  "20180613": [
+   "1 Chairman Powell intended to say that there are pockets of people in the United States who have not yet experienced the economic recovery."
+  ],
+  "20181219": [
+   "1 Chairman Powell was referring to the Beige Book, not the Tealbook."
+  ],
+  "20190320": [
+   "1 Chair Powell intended to say that the unemployment rate is under 4 percent.",
+   "2 Chair Powell intended to point to the weak reading on retail sales for December 2018."
+  ],
+  "20190619": [
+   "1 Chair Powell intended to say that growth in business fixed investment slowed in the second quarter.",
+   "2 Chair Powell intended to say “business fixed investment.”",
+   "3 Chair Powell intended to say “stronger activity in the euro area.”"
+  ],
+  "20190918": [
+   "1 Chair Powell intended to say that the median projection is 1.9 percent next year."
+  ],
+  "20191211": [
+   "1 Chair Powell intended to say the repurchase operations were announced in October."
+  ],
+  "20200610": [
+   "1 Chair Powell intended to say “asset purchases” rather than “asset prices.”"
+  ]
+ },
+ "labels": {
+  "CHAIR POWELL": 1723,
+  "MICHELLE SMITH": 891,
+  "CHAIR YELLEN": 171,
+  "CHAIRMAN POWELL": 138,
+  "STEVE LIESMAN": 131,
+  "MICHAEL MCKEE": 129,
+  "HOWARD SCHNEIDER": 124,
+  "NICK TIMIRAOS": 120,
+  "EDWARD LAWRENCE": 117,
+  "VICTORIA GUIDA": 116,
+  "NANCY MARSHALL-GENZER": 77,
+  "JEANNA SMIALEK": 69,
+  "CHAIRMAN WARSH": 65,
+  "COLBY SMITH": 61,
+  "RACHEL SIEGEL": 57,
+  "GREG ROBB": 55,
+  "CHRISTOPHER RUGABER": 48,
+  "JENNIFER SCHONBERGER": 41,
+  "CHRIS RUGABER": 38,
+  "NEIL IRWIN": 37,
+  "BRIAN CHEUNG": 35,
+  "ANDREW ACKERMAN": 34,
+  "MICHAEL DERBY": 30,
+  "JEAN YUNG": 30,
+  "CLAIRE JONES": 30,
+  "HEATHER LONG": 26,
+  "CRAIG TORRES": 23,
+  "DON LEE": 23,
+  "COURTENAY BROWN": 23,
+  "SCOTT HORSLEY": 21,
+  "DONNA BORAK": 20,
+  "MARTIN CRUTSINGER": 19,
+  "SIMON RABINOVITCH": 19,
+  "SAM FLEMING": 18,
+  "MARK HAMRICK": 18,
+  "ELIZABETH SCHULZE": 18,
+  "JOHN HELTMAN": 17,
+  "MATT EGAN": 17,
+  "HANNAH LANG": 16,
+  "STEVE MATTHEWS": 15,
+  "CATARINA SARAIVA": 15,
+  "JONNELLE MARTE": 15,
+  "BINYAMIN APPELBAUM": 14,
+  "ANN SAPHIR": 14,
+  "PAUL KIERNAN": 14,
+  "JAMES POLITI": 14,
+  "MATTHEW BOESLER": 13,
+  "NICOLE GOODKIND": 13,
+  "JO LING KENT": 12,
+  "EVAN RYSER": 12,
+  "RICH MILLER": 11,
+  "JEFF COX": 11,
+  "KYLE CAMPBELL": 11,
+  "MEGAN CASSELLA": 10,
+  "JIM PUZZANGHERA": 9,
+  "RICHARD ESCOBEDO": 9,
+  "CHRISTOPHER CONDON": 8,
+  "BRENDAN GREELEY": 8,
+  "HEATHER SCOTT": 8,
+  "ANNEKEN TAPPE": 8,
+  "KELLY O’GRADY": 8,
+  "JIM TANKERSLEY": 7,
+  "DAVID GURA": 7,
+  "CHRISTINE ROMANS": 7,
+  "PETER BARNES": 6,
+  "VIRGINIE MONTET": 6,
+  "ARCHIE HALL": 6,
+  "ENDA CURRAN": 6,
+  "PATRICK GILLESPIE": 5,
+  "STEVEN BECKNER": 5,
+  "RICHARD MILLER": 5,
+  "JOE PAVEL": 5,
+  "AMARA OMEOKWE": 5,
+  "MARIA ELOISA CAPURRO": 5,
+  "YLAN MUI": 4,
+  "JUSTINE UNDERHILL": 4,
+  "ANA SWANSON": 4,
+  "MYLES UDLAND": 4,
+  "DANIEL AVIS": 4,
+  "KOSUKE TAKAMI": 4,
+  "KAREN MRACEK": 3,
+  "JON HILSENRATH": 3,
+  "STEVE BECKNER": 3,
+  "ADAM SHAPIRO": 3,
+  "TAKESHI KAWANAMI": 3,
+  "PAUL LAMONICA": 3,
+  "BRYAN MENA": 3,
+  "NICHOLAS JASINSKI": 3,
+  "SELINA WANG": 3,
+  "LINDSAY DUNSMUIR": 2,
+  "KATE DAVIDSON": 2,
+  "ERIK SCHATZKER": 2,
+  "JASON LANGE": 2,
+  "REBECCA JARVIS": 2,
+  "HARRIET TORRY": 2,
+  "BINYAMIN APPLEBAUM": 2,
+  "KATHLEEN HAYS": 2,
+  "DAVID HARRISON": 2,
+  "JONATHAN SPICER": 2,
+  "NAOATSU AOYAMA": 2,
+  "JAMES PUZZANGHERA": 2,
+  "VIVIENNE NUNIS": 2,
+  "UNIDENTIFIED SPEAKER": 2,
+  "OLIVIA ROCKEMAN": 2,
+  "KAYLA TAUSCHE": 2,
+  "BRENDAN PEDERSEN": 2,
+  "STEPHANIE RUHLE": 2,
+  "CHARIMAN WARSH": 2,
+  "PAUL WISEMAN": 2,
+  "MYRIAM LEMETAYER": 2,
+  "STEVEN MUFSON": 1,
+  "JEREMY TORDJMAN": 1,
+  "CHAIRIMAN POWELL": 1,
+  "CHAIMRAN POWELL": 1,
+  "MARTY CRUTSINGER": 1,
+  "MICHELLE FLEURY": 1,
+  "TREVOR HUNNICUTT": 1,
+  "SAMIRA HUSSAIN": 1,
+  "KATY O’DONNELL": 1,
+  "JONELLE MARTE": 1,
+  "PAUL LA MONICA": 1,
+  "MICHELLE SMTH": 1,
+  "GREGG ROBB": 1,
+  "STEVE DORSEY": 1,
+  "GRADY TRIMBLE": 1,
+  "SARAH EWALL-WICE": 1,
+  "JULIE CHABANAS": 1,
+  "MICHELE SMITH": 1,
+  "COLBY SMTH": 1,
+  "JAY O’BRIEN": 1,
+  "BEIYI SEOW": 1,
+  "ZACHARY HALASCHAK": 1
+ },
+ "per_meeting": {
+  "20160316": {
+   "chair": "CHAIR YELLEN",
+   "question": 17,
+   "answer": 17,
+   "opening": 1
+  },
+  "20160615": {
+   "chair": "CHAIR YELLEN",
+   "question": 18,
+   "answer": 17,
+   "opening": 1
+  },
+  "20160921": {
+   "chair": "CHAIR YELLEN",
+   "question": 21,
+   "answer": 21,
+   "opening": 1
+  },
+  "20161214": {
+   "chair": "CHAIR YELLEN",
+   "question": 22,
+   "answer": 22,
+   "opening": 1
+  },
+  "20170315": {
+   "chair": "CHAIR YELLEN",
+   "question": 21,
+   "answer": 21,
+   "opening": 1
+  },
+  "20170614": {
+   "chair": "CHAIR YELLEN",
+   "question": 21,
+   "answer": 21,
+   "opening": 1
+  },
+  "20170920": {
+   "chair": "CHAIR YELLEN",
+   "question": 16,
+   "answer": 16,
+   "opening": 1
+  },
+  "20171213": {
+   "chair": "CHAIR YELLEN",
+   "question": 28,
+   "answer": 28,
+   "opening": 1
+  },
+  "20180321": {
+   "chair": "CHAIRMAN POWELL",
+   "question": 26,
+   "answer": 26,
+   "opening": 1
+  },
+  "20180613": {
+   "chair": "CHAIRMAN POWELL",
+   "question": 24,
+   "answer": 24,
+   "opening": 1
+  },
+  "20180926": {
+   "chair": "CHAIRMAN POWELL",
+   "question": 32,
+   "answer": 32,
+   "opening": 1
+  },
+  "20181219": {
+   "chair": "CHAIRMAN POWELL",
+   "question": 23,
+   "answer": 23,
+   "opening": 1
+  },
+  "20190130": {
+   "chair": "CHAIRMAN POWELL",
+   "question": 30,
+   "answer": 30,
+   "opening": 1
+  },
+  "20190320": {
+   "chair": "CHAIR POWELL",
+   "question": 28,
+   "answer": 28,
+   "opening": 1
+  },
+  "20190501": {
+   "chair": "CHAIR POWELL",
+   "question": 25,
+   "answer": 25,
+   "opening": 1
+  },
+  "20190619": {
+   "chair": "CHAIR POWELL",
+   "question": 27,
+   "answer": 27,
+   "opening": 1
+  },
+  "20190731": {
+   "chair": "CHAIR POWELL",
+   "question": 28,
+   "answer": 28,
+   "opening": 1
+  },
+  "20190918": {
+   "chair": "CHAIR POWELL",
+   "question": 30,
+   "answer": 30,
+   "opening": 1
+  },
+  "20191030": {
+   "chair": "CHAIR POWELL",
+   "question": 34,
+   "answer": 33,
+   "opening": 1
+  },
+  "20191211": {
+   "chair": "CHAIR POWELL",
+   "question": 29,
+   "answer": 29,
+   "opening": 1
+  },
+  "20200129": {
+   "chair": "CHAIR POWELL",
+   "question": 27,
+   "answer": 25,
+   "opening": 1
+  },
+  "20200303": {
+   "chair": "CHAIR POWELL",
+   "question": 10,
+   "answer": 10,
+   "opening": 1
+  },
+  "20200315": {
+   "chair": "CHAIR POWELL",
+   "answer": 20,
+   "question": 19,
+   "moderator": 17,
+   "opening": 1
+  },
+  "20200429": {
+   "chair": "CHAIR POWELL",
+   "answer": 16,
+   "moderator": 15,
+   "question": 15,
+   "opening": 1
+  },
+  "20200610": {
+   "chair": "CHAIR POWELL",
+   "moderator": 15,
+   "question": 15,
+   "answer": 15,
+   "opening": 1
+  },
+  "20200729": {
+   "chair": "CHAIR POWELL",
+   "question": 23,
+   "answer": 22,
+   "moderator": 20,
+   "opening": 1
+  },
+  "20200916": {
+   "chair": "CHAIR POWELL",
+   "question": 26,
+   "answer": 25,
+   "moderator": 19,
+   "opening": 1
+  },
+  "20201105": {
+   "chair": "CHAIR POWELL",
+   "question": 19,
+   "answer": 19,
+   "moderator": 16,
+   "opening": 1
+  },
+  "20201216": {
+   "chair": "CHAIR POWELL",
+   "question": 29,
+   "answer": 23,
+   "moderator": 19,
+   "opening": 1
+  },
+  "20210127": {
+   "chair": "CHAIR POWELL",
+   "question": 21,
+   "answer": 19,
+   "moderator": 13,
+   "opening": 1
+  },
+  "20210317": {
+   "chair": "CHAIR POWELL",
+   "question": 29,
+   "answer": 27,
+   "moderator": 18,
+   "opening": 1
+  },
+  "20210428": {
+   "chair": "CHAIR POWELL",
+   "question": 30,
+   "answer": 25,
+   "moderator": 21,
+   "opening": 1
+  },
+  "20210616": {
+   "chair": "CHAIR POWELL",
+   "question": 26,
+   "answer": 23,
+   "moderator": 17,
+   "opening": 1
+  },
+  "20210728": {
+   "chair": "CHAIR POWELL",
+   "question": 24,
+   "answer": 22,
+   "moderator": 18,
+   "opening": 1
+  },
+  "20210922": {
+   "chair": "CHAIR POWELL",
+   "question": 33,
+   "answer": 28,
+   "moderator": 21,
+   "opening": 1
+  },
+  "20211103": {
+   "chair": "CHAIR POWELL",
+   "question": 35,
+   "answer": 25,
+   "moderator": 14,
+   "opening": 1
+  },
+  "20211215": {
+   "chair": "CHAIR POWELL",
+   "question": 31,
+   "answer": 28,
+   "moderator": 18,
+   "opening": 1
+  },
+  "20220126": {
+   "chair": "CHAIR POWELL",
+   "question": 26,
+   "answer": 21,
+   "moderator": 16,
+   "opening": 1
+  },
+  "20220316": {
+   "chair": "CHAIR POWELL",
+   "question": 28,
+   "answer": 27,
+   "moderator": 21,
+   "opening": 1
+  },
+  "20220504": {
+   "chair": "CHAIR POWELL",
+   "question": 20,
+   "answer": 20,
+   "moderator": 15,
+   "opening": 1
+  },
+  "20220615": {
+   "chair": "CHAIR POWELL",
+   "question": 27,
+   "answer": 27,
+   "moderator": 15,
+   "opening": 1
+  },
+  "20220727": {
+   "chair": "CHAIR POWELL",
+   "question": 30,
+   "answer": 28,
+   "moderator": 23,
+   "opening": 1
+  },
+  "20220921": {
+   "chair": "CHAIR POWELL",
+   "question": 23,
+   "answer": 23,
+   "moderator": 13,
+   "opening": 1
+  },
+  "20221102": {
+   "chair": "CHAIR POWELL",
+   "question": 25,
+   "answer": 24,
+   "moderator": 12,
+   "opening": 1
+  },
+  "20221214": {
+   "chair": "CHAIR POWELL",
+   "question": 22,
+   "answer": 22,
+   "moderator": 18,
+   "opening": 1
+  },
+  "20230201": {
+   "chair": "CHAIR POWELL",
+   "question": 29,
+   "answer": 29,
+   "moderator": 17,
+   "opening": 1
+  },
+  "20230322": {
+   "chair": "CHAIR POWELL",
+   "question": 33,
+   "answer": 33,
+   "moderator": 19,
+   "opening": 1
+  },
+  "20230503": {
+   "chair": "CHAIR POWELL",
+   "question": 32,
+   "answer": 32,
+   "moderator": 16,
+   "opening": 1
+  },
+  "20230614": {
+   "chair": "CHAIR POWELL",
+   "question": 28,
+   "answer": 28,
+   "moderator": 16,
+   "opening": 1
+  },
+  "20230726": {
+   "chair": "CHAIR POWELL",
+   "answer": 37,
+   "question": 36,
+   "moderator": 21,
+   "opening": 1
+  },
+  "20230920": {
+   "chair": "CHAIR POWELL",
+   "question": 31,
+   "answer": 31,
+   "moderator": 18,
+   "opening": 1
+  },
+  "20231101": {
+   "chair": "CHAIR POWELL",
+   "question": 31,
+   "answer": 31,
+   "moderator": 18,
+   "opening": 1
+  },
+  "20231213": {
+   "chair": "CHAIR POWELL",
+   "question": 30,
+   "answer": 30,
+   "moderator": 16,
+   "opening": 1
+  },
+  "20240131": {
+   "chair": "CHAIR POWELL",
+   "question": 37,
+   "answer": 36,
+   "moderator": 20,
+   "opening": 1
+  },
+  "20240320": {
+   "chair": "CHAIR POWELL",
+   "question": 34,
+   "answer": 34,
+   "moderator": 18,
+   "opening": 1
+  },
+  "20240501": {
+   "chair": "CHAIR POWELL",
+   "question": 37,
+   "answer": 35,
+   "moderator": 18,
+   "opening": 1
+  },
+  "20240612": {
+   "chair": "CHAIR POWELL",
+   "question": 29,
+   "answer": 29,
+   "moderator": 17,
+   "opening": 1
+  },
+  "20240731": {
+   "chair": "CHAIR POWELL",
+   "question": 32,
+   "answer": 32,
+   "moderator": 20,
+   "opening": 1
+  },
+  "20240918": {
+   "chair": "CHAIR POWELL",
+   "question": 35,
+   "answer": 34,
+   "moderator": 20,
+   "opening": 1
+  },
+  "20241107": {
+   "chair": "CHAIR POWELL",
+   "question": 31,
+   "answer": 30,
+   "moderator": 16,
+   "opening": 1
+  },
+  "20241218": {
+   "chair": "CHAIR POWELL",
+   "question": 31,
+   "answer": 31,
+   "moderator": 15,
+   "opening": 1
+  },
+  "20250129": {
+   "chair": "CHAIR POWELL",
+   "question": 39,
+   "answer": 38,
+   "moderator": 21,
+   "opening": 1
+  },
+  "20250319": {
+   "chair": "CHAIR POWELL",
+   "question": 38,
+   "answer": 37,
+   "moderator": 18,
+   "opening": 1
+  },
+  "20250507": {
+   "chair": "CHAIR POWELL",
+   "question": 39,
+   "answer": 37,
+   "moderator": 16,
+   "opening": 1
+  },
+  "20250618": {
+   "chair": "CHAIR POWELL",
+   "question": 33,
+   "answer": 32,
+   "moderator": 17,
+   "opening": 1
+  },
+  "20250730": {
+   "chair": "CHAIR POWELL",
+   "question": 34,
+   "answer": 33,
+   "moderator": 16,
+   "opening": 1
+  },
+  "20250917": {
+   "chair": "CHAIR POWELL",
+   "question": 35,
+   "answer": 35,
+   "opening": 1
+  },
+  "20251029": {
+   "chair": "CHAIR POWELL",
+   "question": 33,
+   "answer": 32,
+   "moderator": 16,
+   "opening": 1
+  },
+  "20251210": {
+   "chair": "CHAIR POWELL",
+   "question": 33,
+   "answer": 32,
+   "moderator": 16,
+   "opening": 1
+  },
+  "20260128": {
+   "chair": "CHAIR POWELL",
+   "answer": 42,
+   "question": 41,
+   "moderator": 21,
+   "opening": 1
+  },
+  "20260318": {
+   "chair": "CHAIR POWELL",
+   "question": 36,
+   "answer": 34,
+   "moderator": 15,
+   "opening": 1
+  },
+  "20260429": {
+   "chair": "CHAIR POWELL",
+   "question": 37,
+   "answer": 36,
+   "moderator": 16,
+   "opening": 1
+  },
+  "20260617": {
+   "chair": "CHAIRMAN WARSH",
+   "question": 25,
+   "answer": 25,
+   "moderator": 12,
+   "opening": 1
+  },
+  "20260729": {
+   "chair": "CHAIRMAN WARSH",
+   "question": 23,
+   "answer": 22,
+   "moderator": 12,
+   "opening": 1
+  },
+  "20260916": {
+   "chair": "CHAIRMAN WARSH",
+   "moderator": 18,
+   "question": 18,
+   "answer": 17,
+   "opening": 1
+  }
+ },
+ "chair_label_variants": [
+  [
+   "20180321",
+   "CHAIMRAN POWELL",
+   1
+  ],
+  [
+   "20180321",
+   "CHAIRIMAN POWELL",
+   1
+  ],
+  [
+   "20260617",
+   "CHARIMAN WARSH",
+   2
+  ]
+ ]
+}
