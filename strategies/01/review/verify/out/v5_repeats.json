@@ -1,0 +1,19 @@
+{
+ "n_repeat_docs_dropped": 7,
+ "n_dropped_post_cut": 1,
+ "dropped": [
+  "brainard20170713a",
+  "clarida20190411a",
+  "clarida20200109a",
+  "clarida20210224a",
+  "bowman20240926a",
+  "bowman20240930a",
+  "powell20250416a"
+ ],
+ "sharpe_ex_1x": {
+  "IS": 0.19962208179503385,
+  "HOLDOUT": 0.6823543145614688,
+  "OOS": -0.4338823653072749,
+  "FULL": 0.11697210040612348
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "rebuild_vs_saved_core_ER_6_maxabs": 0.0,
+ "sleeve_cost_bp": {
+  "V_asrun": 2.3859644689225057,
+  "V_strict_all": 2.385632519472
+ },
+ "analyse_daily_columns": [
+  "tone_ex_net1x",
+  "tone_ex_net2x",
+  "tone_ex_gross",
+  "tone_rf0_net1x",
+  "ctl_dgs2_ex_net1x",
+  "ctl_dgs2_ex_net2x",
+  "ctl_dgs2_ex_gross",
+  "ctl_dgs2_rf0_net1x",
+  "tone_orth_ex_net1x",
+  "tone_orth_ex_net2x",
+  "tone_orth_ex_gross",
+  "tone_orth_rf0_net1x",
+  "fut_F_ZN_ex_net1x",
+  "fut_F_ZN_ex_net2x",
+  "fut_F_ZN_ex_gross",
+  "fut_F_ZN_rf0_net1x",
+  "fut_F_ZB_ex_net1x",
+  "fut_F_ZB_ex_net2x",
+  "fut_F_ZB_ex_gross",
+  "fut_F_ZB_rf0_net1x"
+ ],
+ "maxabs_mine_vs_analyse_tone_ex_net1x": 8.500145032286355e-17,
+ "maxabs_mine_vs_analyse_tone_orth_ex_net1x": 0.061385383207734,
+ "maxabs_mine_vs_analyse_session_weights": {
+  "TLT": 8.548717289613705e-15,
+  "UUP": 2.831068712794149e-15
+ }
+}
