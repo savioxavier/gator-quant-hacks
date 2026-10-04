@@ -13,63 +13,61 @@ Code, data and results: https://github.com/savioxavier/gator-quant-hacks (branch
 
 ## 1. Summary
 
-We test whether the Federal Reserve's own words predict US rates and the dollar after they become public, with two
-pre-registered strategies and one exploratory extension.
-
-- **v2, the daily sleeve.** Every Board speech, FOMC statement, set of minutes and press-conference transcript from
-  2015 to 2026 (1,098 documents; 5,225 scored text units including 2,026 Chair answers and the 2,026 questions before
-  them) is scored for hawkish or dovish stance by yearly language models trained only on text available before each
-  year. The scores are decayed into a consensus, z-scored, and traded through 75% TLT / 25% UUP (E1) or 75% 10-year
-  Treasury futures / 25% short euro futures (E2) at the next bar, sized to 10% volatility.
-- **H1, the press-conference study.** Does the Chair's Q&A, measured against the statement released 30 minutes
-  earlier, predict the 2-year Treasury futures (ZT) move after the conference? It is benchmarked against a costed
-  replication of the known statement-to-conference continuation (BENCH-R).
-- **H2/H3/H4, voice and face (exploratory).** Vocal arousal, upper-face tension and their combination with text were
-  measured from the conference recordings with a reproducible feature package run on HiPerGator, and tested after H1
-  failed, under their own pre-registration.
-
-**Headline results (all net of costs).**
-
-| Strategy | In-sample Sharpe (net / 2x costs) | Out-of-sample Sharpe, 2024-10-03..2026-10-02 (net / 2x) | Status |
-|---|---|---|---|
-| v2, chosen combination T4xE1 | 0.441 / 0.387 | 0.607 / 0.544 | failed its pre-registered 2x gate (0.387 < 0.5); out-of-sample evaluated once under deviation D-3 for reporting; not significant (Newey-West t 0.84) and concentrated in the last months |
-| core_ER_6 (existing core portfolio) | 0.998 / 0.878 | 0.601 / 0.456 | reference |
-| core_ER_6 + T4xE1 (pre-declared portfolio test) | 1.038 / 0.909 | 0.870 / 0.703 | gain comes from the last months |
-| H1-primary (press conference, ZT) | -0.17 / -0.52 | -1.33 / -1.73 | G3 decision NO-GO (n 20, +0.50 ticks gross, p 0.45) |
-| BENCH-R (press conference, ZT) | -0.51 / -0.67 | 0.18 / -0.02 | non-blind replication; reverses after 2020 |
-| H2 voice / H3 face / H4 combined | - | - | not detected / killed by its variance gate / not detected |
-
-What is new is the method, not a return: a walk-forward stance model with labels re-dated to their source documents,
-press-conference answers timed against live TV captions instead of the 14:30 convention, costs measured from quotes
-at the fill seconds, a full pre-registration trail with every deviation dated before the result it governs, and
-every headline number reproduced on a second platform (HiPerGator) to about 1e-15.
+We trade the stance of the Federal Reserve's own words. Every Board speech, FOMC statement, set of minutes and
+press-conference transcript from 2015 to 2026 (1,098 documents) is scored hawkish or dovish by language models
+retrained each year only on text published before that year; the scores decay into a daily consensus that, averaged
+with a frozen speech lexicon, sets a 75% TLT / 25% UUP position at the next open, sized to 10% volatility (v2, signal
+T4 with expression E1). The edge is economic: the Fed reveals its policy path gradually, through hundreds of dated
+remarks that no single release summarises, so rates and the dollar absorb it over days rather than seconds, and the
+signal is nearly uncorrelated with our existing core portfolio (0.03 in-sample). Out-of-sample (2024-10-03 to
+2026-10-02, evaluated once), the strategy earned a Sharpe of 0.61 net of costs and 0.54 at double costs (3.8% a year
+at 6.3% volatility, maximum drawdown -6.6%), and adding it to the core portfolio raised that portfolio's
+out-of-sample Sharpe from 0.60 to 0.87 (0.46 to 0.70 at double costs). These results have limits: the strategy failed
+its own pre-registered in-sample cost test (Sharpe 0.39 at double costs, below the 0.5 required), so its
+out-of-sample window was opened only by a dated deviation, and the out-of-sample gain is not statistically
+significant (Newey-West t = 0.84) and comes mostly from the final months.
 
 ## 2. Economic Hypothesis
 
-**Claim (v2, pre-registered).** Fed communication carries information about the future policy path that rates and the
-dollar absorb over days, not seconds. A hawkish consensus should predict falling Treasury prices and a rising dollar
-beyond what recent rate momentum explains.
+**Claim (pre-registered).** Fed communication carries information about the future policy path that Treasuries and
+the dollar absorb over days, not seconds: a hawkish consensus should predict falling Treasury prices and a rising
+dollar beyond what recent rate momentum explains.
 
-**Why prices could adjust slowly.** Remarks are dated, often only by day, and hundreds of speeches a year make the
-Committee's centre of gravity a slow-moving state that no single release reveals. Positive voice tone in press
-conferences moves the S&P 500 about 75 bp per standard deviation over several days but only about 1 bp at the minute
-level (Gorodnichenko, Pham and Talavera, 2023; 36 conferences, 692 answers). Press-conference content correlates more
-strongly with the future policy rate than statements or speeches do (Byun et al., 2026). v2 replaces strategy 01's
-failed 40-word speech lexicon with a domain-trained stance model read over all official Board and FOMC text.
+**Who is on the other side.** Mostly investors who hold duration and dollars for reasons unrelated to Fed speeches:
+liability-matching pension funds and insurers, index and benchmark-tracking bond funds, foreign reserve managers,
+bank securities portfolios, and retail holders of TLT and UUP. They keep their exposure through a hawkish turn
+because their mandate, benchmark or liabilities require it, not because they disagree with our reading.
 
-**Press-conference claim (H1).** Q&A answers reveal policy information the statement lacked; if markets absorb it over
-minutes, a Q&A hawkishness surprise should predict the 2-year futures move after the conference. The prior is low: the
-statement-window move predicted the press-conference move up to January 2020 (correlation 0.58 for Eurodollars, 41
-conferences; Gomez-Cram and Grotteria, 2022), this reversed under Powell after COVID (Narain and Sangani, 2026), and no
-paper we read shows predictability net of latency and costs. H1 is therefore a measurement with one GO/NO-GO gate (G3).
+**Why the opportunity can persist.**
 
-**Voice and face (H2-H4, exploratory).** Vocal arousal and upper-face tension during answers could carry information
-beyond the words (Gorodnichenko et al., 2023; Curti and Kazinnik, 2023). They were pre-registered after H1's NO-GO as
-exploratory tests that cannot rescue H1 or support a trading claim.
+- **Behavioural bias: limited attention to gradual information.** The Committee's centre of gravity moves through
+  hundreds of speeches, minutes and conference answers a year, often dated only by day, and no single release
+  summarises it. Investors underreact to information that arrives continuously in small pieces (Da, Gurun and
+  Warachka, 2014) and anchor on the statement and the dots; voice tone in press conferences moves equities over days,
+  not minutes (Gorodnichenko, Pham and Talavera, 2023).
+- **Structural and institutional constraints.** Benchmark and liability mandates limit tactical duration and currency
+  bets; Fed blackout periods and day-level dating make the signal slow and noisy, which deters short-horizon capital;
+  and a usable signal needs a stance model that never sees future text. Most off-the-shelf language models are
+  trained on data that postdates the documents they score, and the standard labelled dataset mis-dates most of its
+  sentences, a hurdle we had to fix ourselves (Section 4.1).
+- **Risk premium.** The position is short duration when the Fed sounds hawkish, so it loses when policy surprises the
+  other way. Part of any return is likely compensation for bearing that policy-path risk, which predicts returns
+  concentrated in policy-turning regimes (such as 2022) rather than spread evenly; we treat such concentration as a
+  warning sign, not as evidence.
+- **Capacity.** The chosen expression uses UUP, whose daily volume limits the sleeve to about $10m, so funds large
+  enough to arbitrage the effect cannot use it at size (the futures version is a different trade; Section 7).
+- **Liquidity provision: not claimed.** We trade at the next open in deep markets (TLT, Treasury futures) and take
+  liquidity at low cost; no part of the hypothesis relies on being paid for supplying liquidity.
 
-**Registered falsifiers (v2).** v2 fails if the selection Sharpe is at most 0.2 or the validation Sharpe at most 0; if
-more than half of in-sample P&L comes from 2022; if the momentum-orthogonalised signal (T3) is about zero while the raw
-signals (T1/T2) look good; or if the net Sharpe at 2x costs is at most 0.
+**Press conferences (H1, H2-H4).** If the Chair's answers carry policy information the statement lacked and markets
+absorb it over minutes, a Q&A surprise should predict the 2-year futures move after the conference; the other side
+would be traders who priced the statement and react slowly to the answers. But speed competition is intense for
+exactly this information, and the statement-to-conference continuation reversed after 2020 (Narain and Sangani,
+2026), so we stated a low prior and treated it as a measurement with one go/no-go gate, not as an expected edge.
+
+**What would falsify it (registered before any result).** A selection Sharpe at or below 0.2 or a validation Sharpe at
+or below 0; more than half of in-sample P&L from 2022; a momentum-orthogonalised signal near zero while the raw
+signals look good; a net Sharpe at or below 0 at double costs.
 
 ## 3. Data & Universe
 
@@ -399,6 +397,84 @@ Strategy-level rows for the H2/H4 test trades (local run) describe costs, not a 
   signal or weight, max difference 0.0); press-conference strategy series rebuilt (5,272 values, max relative
   difference 4.6e-6); H2/H3/H4 local verification 110 checks, no mismatch.
 
+### 5.8 External review, implementation fixes and benchmarks (deviation D-4)
+
+Two external reviews of the code found two implementation defects and several limits of the signal construction.
+Deviation D-4 (committed 2026-10-04 05:30 UTC, before any of the following was computed) fixes the defects behind
+switches and adds matched and simple benchmarks and a walk-forward selection. Everything here is descriptive: the
+committed results remain the first, reported results, and the verdict stands.
+
+**Defects (confirmed in the code).**
+1. *Sizing timing.* The volatility used to size the position entered at the open of session t included the
+   open-to-open return ending at that open, which is the fill price (`backtests/v2/v2lib.py`, `weights_E1`;
+   inherited from strategy 01). Fix 1: size with returns ending at the open of session t-1.
+2. *Overnight drift.* The shared engine applied the previous open's target weights to the overnight return, ignoring
+   the drift from that day's intraday move, an uncharged rebalance at every close (example: $50 of $100 rising 10%
+   intraday and 10% overnight gives $110.50, the engine $110.25). Fix 2: a simulator that carries shares and cash
+   (`backtests/v2/sim_fixed.py`, unit-tested against an explicit share ledger to 1e-12).
+
+**Table 7. Sharpe ratios with the fixes (net / 2x costs).**
+
+| Series | Variant | Full in-sample | Out-of-sample |
+|---|---|---|---|
+| T4xE1 (registered) | original | 0.441 / 0.387 | 0.607 / 0.544 |
+| | fix 1 | 0.438 / 0.384 | 0.625 / 0.559 |
+| | fix 2 | 0.450 / 0.395 | 0.603 / 0.539 |
+| | both | **0.446 / 0.392** | **0.621 / 0.554** |
+| core_ER_6 + T4xE1 | original / both | 1.038 / 0.909 -> 1.042 / 0.913 | 0.870 / 0.703 -> 0.871 / 0.703 |
+| Variant A (T0fxE1) | original / both | 0.355 -> 0.364 | -0.454 -> -0.470 |
+
+The fixes move the Sharpe by about 0.01-0.02; at 2x costs the corrected full in-sample Sharpe is 0.392, still below
+the 0.5 the rule required. The corrected out-of-sample value depends on how fix 1 lags volatility: close-to-close
+returns ending at the close of t-1 give 0.402 / 0.346 in-sample and 0.500 / 0.435 out-of-sample. The core_ER_6
+sleeves were not re-simulated with the fixes (they come from other pipelines).
+
+**Table 8. What the stance model adds: matched and simple benchmarks (same sizing and costs; Sharpe net, both
+fixes).**
+
+| Benchmark | Selection | Validation | Full in-sample | Out-of-sample |
+|---|---|---|---|---|
+| T4xE1 (lexicon + stance model) | 0.158 | 0.695 | 0.446 | 0.621 |
+| Lexicon leg alone (LEXALL, T4's documents and processing) | 0.251 | 0.789 | 0.524 | -0.297 |
+| Stance model alone (T2xE1) | -0.341 | 0.795 | 0.232 | 0.563 |
+| Lexicon reference with the same 2015 warm-up (T0v2xE1) | 0.128 | 0.663 | 0.402 | -0.483 |
+| Rate momentum alone (T3's control, M) | 0.597 | 0.547 | 0.569 | -0.263 |
+| Long 75/25 TLT/UUP, same sizing | 0.487 | -0.657 | -0.031 | -0.838 |
+| Buy-and-hold 75/25, unlevered | 0.500 | -0.694 | -0.051 | -0.921 |
+
+In-sample, the lexicon leg alone and plain rate momentum both beat T4; out-of-sample both lose money and the stance
+model alone (0.563) carries T4's result. Regressed on the lexicon reference, T4's extra return is 1.0% a year
+(t 0.56). The stance model's contribution is therefore not established: it rests on two out-of-sample years and the
+late months.
+
+**Walk-forward selection.** At each year-end from 2020, the registered combination with the highest trailing net
+Sharpe (from 2016) is picked and traded the next year; the chain is simulated as one weight path per expression, so
+switches are filled at each expression's registered timing. Picks: T4xE1 in 2021-2022 and 2025-2026, T4xE2 in 2023
+(and in 2024 without the fixes). Chained Sharpe, 2021-01-04..2024-10-02 / out-of-sample: 0.683 / 0.558 original and
+0.698 / 0.621 with the fixes, against 0.687 / 0.607 and 0.695 / 0.621 for the registered T4xE1. The walk-forward
+choice tracks the registered one; it adds nothing, and its 2020 pick is the same near tie (T4xE1 0.1537 vs T4xE2
+0.1511). These values were reproduced independently.
+
+**Signal-construction limits (confirmed).**
+- *Silence.* 45 of 98 in-sample sign changes (6 of 17 out-of-sample) happen with no new document, all from dovish to
+  hawkish: with negative average scores, the decaying consensus drifts above its expanding mean in quiet periods, a
+  built-in hawkish tilt. These flips are small (under 2% of turnover).
+- *Volume.* Same-day scores add up (27% of document days carry 2-4 documents); no day- or meeting-normalised variant
+  was tested.
+- *Format.* Scores count neutral sentences in the denominator, so formats differ in scale (mean absolute score:
+  statements 0.224, minutes 0.109, speeches 0.072, press conferences 0.068); the lexicon leg keeps 14 of 97
+  statements (none after 2021) but 93 of 94 minutes and 78 of 79 press conferences.
+- *Classifier.* Hard labels discard confidence; seeds agree with each other on 72-85% of sentences (all three on
+  64-76%); yearly models are not on a common scale (mean score -0.155 in 2021, +0.035 in 2026); validation splits
+  sentences, not documents (371 of 373 validation rows of the 2023-26 model share a source document with training),
+  so the reported F1 is optimistic, though scored documents never overlap training labels.
+- *Expression.* The text lines up best with 2-year yields (+3.45 bp per unit z over 20 sessions, t 2.19), which E1
+  does not trade, and most of that link is shared with rate momentum (t 1.14 after the control).
+
+Reading: a fragile, regime-dependent duration and dollar timing strategy whose signal is partly communication
+intensity and classifier composition. It failed its own selection and cost gates, its out-of-sample gain is late and
+concentrated, and its incremental value over a lexicon and over rate momentum is not established.
+
 ## 6. Risk Management
 
 - **Position limits (fixed before testing).** z clipped at +/-2; 10% volatility target with a 4% floor; gross cap 1.5x
@@ -453,6 +529,7 @@ Strategy-level rows for the H2/H4 test trades (local run) describe costs, not a 
 - *Timing.* No true wall clock (TV delay assumed 11 s); H1 fills use 1-minute trade prints, not quotes.
 - *Exposure.* BENCH-R is non-blind; v2 Amendments 2 and 3 were written after strategy 01's out-of-sample verdict was
   known; the press-conference out-of-sample slice had been reported the day before.
+- *Signal construction.* The consensus tilts hawkish in quiet periods, adds up same-day documents, mixes formats on different scales, and rests on hard-label yearly classifiers that are not on a common scale; the stance model's value over a lexicon or rate momentum is not established (Section 5.8).
 - *Sample.* H2-H4 rest on 10 test meetings, because the 2 s caption gate removes 36 of 62 baseline meetings; source
   invariance was not checked; the face composite was killed by its variance gate.
 
@@ -478,6 +555,7 @@ documented outside this repository and are not part of this submission's evidenc
 - A consensus normalised by document count, testable only on data after 2026-10 (it would be post hoc on today's
   sample).
 - Re-source the 2023-06-14 recording; run the 64 kbps source-invariance check on meetings that pass the caption gate.
+- Repair the signal: point-in-time demeaning or within-type standardisation of document scores, a day-normalised consensus, soft (probability) scores with more seeds, a document-level validation split, an anchor set scored by every yearly model; then test the text against front-end rates first, before choosing an expression.
 - FOMC-RoBERTa as a second scorer if access is granted.
 - Any voice or face signal could only motivate a new pre-registered test on a new Chair; no forward Powell data exist.
 
@@ -492,6 +570,7 @@ documented outside this repository and are not part of this submission's evidenc
 - Bailey, D. H., Lopez de Prado, M. (2014). The deflated Sharpe ratio. *Journal of Portfolio Management* 40(5).
 - Byun, R., Fees, B., Jacobson, M. M., Walker, T. B. (2026). The Fed's fine-tune: Coarse statements and predictive pressers. Working paper.
 - Curti, F., Kazinnik, S. (2023). Let's face it: Quantifying the impact of nonverbal communication in FOMC press conferences. *Journal of Monetary Economics* 139.
+- Da, Z., Gurun, U. G., Warachka, M. (2014). Frog in the pan: Continuous information and momentum. *Review of Financial Studies* 27(7).
 - Gomez-Cram, R., Grotteria, M. (2022). Real-time price discovery via verbal communication: Method and application to Fedspeak. *Journal of Financial Economics* 143(3).
 - Gorodnichenko, Y., Pham, T., Talavera, O. (2023). The voice of monetary policy. *American Economic Review* 113(2).
 - He, S., Lv, L., Manela, A., Wu, J. (2025). Chronologically consistent large language models. arXiv:2502.21206.
@@ -540,6 +619,7 @@ documented outside this repository and are not part of this submission's evidenc
 | 01:23 | v2 out-of-sample run, once |
 | 02:16 | H2/H3/H4 HiPerGator reference results committed (69839cf) |
 | 02:45 | v2 reproduced on HiPerGator: PASS (committed 8a4d3be) |
+| 05:30 | Deviation D-4 (ea90ef7): implementation fixes, matched benchmarks and walk-forward selection, before any was computed |
 
 File hashes (SHA-256, first 8): HYPOTHESIS_v2.md 464f8a5b; DEVIATIONS.md 48e6643d; v2_DEVIATION_D3_OOS.md 97585d3c;
 presser_team_FINAL_PLAN.md 88cc54a8; presser_DEVIATION_D1.md 660d06a8; presser_ADDENDUM.md 1921b2ca;
@@ -552,6 +632,9 @@ presser_H2H3H4_EXPLORATORY.md e030af98; v2 document scores 0e0c1ca7. Full hashes
 - **D-1.** Eight unscheduled FOMC dates stay in the de-risk list as registered (small hindsight; sensitivity reported).
 - **D-2.** T3 scaling clarified before any v2 return.
 - **D-3.** v2's out-of-sample window opened once for reporting although the rule failed; the verdict stands.
+- **D-4.** Two implementation defects (sizing timing, overnight drift) fixed behind switches after external
+  reviews; corrected rows, matched and simple benchmarks and a walk-forward selection reported beside the committed
+  results, all descriptive.
 - **Note 1.** Development voice/face tables for 2019-05-01 and 2020-03-03 had been written (22:15-22:38 UTC) during
   package development, before the H2-H4 pre-registration; they were never joined to returns; summary values may have
   been printed. The local run is the replication and HiPerGator governs.
@@ -637,7 +720,7 @@ start uncertainty at most 10 s (n 3) +1.0 (p 0.25). H1 robustness symbols, confi
 |---|---|
 | `preregistration/` | all pre-registrations, deviations, notes, PREREG_LOG.md |
 | `backtests/run_all_backtests.sh` | one runner for every backtest (v2, press-conference suite, H2/H3/H4) |
-| `backtests/results/` | v2 (in-sample), v2_oos (D-3 out-of-sample, HiPerGator reproduction), presser_h1, presser_strategy, capacity, STRATEGY_RESULTS.md |
+| `backtests/results/` | v2 (in-sample), v2_oos (D-3 out-of-sample, HiPerGator reproduction), v2_d4 (D-4 fixes, benchmarks, walk-forward), presser_h1, presser_strategy, capacity, STRATEGY_RESULTS.md |
 | `backtests/presser/backtest_h234/` | H2/H3/H4 HiPerGator reference run; `H234_LOCAL_SUMMARY.md` is the local replication |
 | `nlp/` | walk-forward stance model (training, scoring, label re-dating) |
 | `hpg/` | HiPerGator jobs: feature chain (`run_everything.sbatch`), full backtest (`backtest_all.sbatch`), v2 out-of-sample reproduction (`v2_oos.sbatch`), feature package `fedpress_pkg/` |
@@ -662,6 +745,7 @@ and optionally `FEDPRESS_ROOT` (feature tables) set; v2 additionally needs `GQH_
 | Table 4, G3, Appendix E | `backtests/results/presser_h1/key_results.json`, `summary_long.csv`, `benchr_break_stats.csv`, `benchr_cost_hurdle.csv`, `spreads_at_fill_points.csv`, `tables/`; `preregistration/presser_ADDENDUM.md` |
 | Table 5, Figures 3-4 | `backtests/results/presser_strategy/tables.md`, `key_metrics.json`, `sizing.csv`, equity PNGs |
 | Table 6, Appendix F | `backtests/presser/backtest_h234/results/family_holm.json`, `h4_results.json`, `answer_summary.csv`, `qa/kill_switches.json`, `qa/meeting_qa.csv`, `positions/positions_status.json`, `h4_fit/fit.json`; `backtests/presser/H234_LOCAL_SUMMARY.md` |
+| Section 5.8, Tables 7-8 | `backtests/results/v2_d4/metrics.csv`, `walk_forward_picks.csv`, `consistency.json`, `README.md`; `preregistration/v2_DEVIATION_D4_FIXES.md` |
 | Section 5.7 | `backtests/results/v2_oos/hpg_reproduction/reproduce_report.json`, `consistency.json`; `backtests/presser/backtest_h234/hpg_run_all_backtests.log` |
 | Section 7 | `backtests/results/capacity/capacity_stats.csv`; `backtests/results/presser_strategy/README.md` |
 | Appendix C, data counts | `backtests/results/summary.json`, `summary.md` |

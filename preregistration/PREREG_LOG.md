@@ -22,6 +22,7 @@ These files fix the hypotheses, rules and deviations before the results they gov
 | 2026-10-04 about 00:58 | H2/H3/H4 note 2 (presser_H2H3H4_NOTE2.md), before the join: the 2023-06-14 video asset is the 2023-07-26 press conference; its voice/face tables are not used for June (already outside the timing-eligible sample under the frozen rules) | a33e74cd...285987 |
 | 2026-10-04 about 01:15 | v2 deviation D-3 (v2_DEVIATION_D3_OOS.md): v2's out-of-sample window and its portfolio test are evaluated once for reporting, as the competition requires, although the decision rule failed; the failed verdict stands. Written before any out-of-sample return | 97585d3c...af1c69 |
 | 2026-10-04 about 01:35 | H2/H3/H4 note 3 (presser_H2H3H4_NOTE3.md): stage-1 bug (WAV length read from the wrong key) found and fixed before any join; gate outcomes seen in a no-price diagnostic are disclosed; gates unchanged | ac607c22...aea23e |
+| 2026-10-04 about 05:30 | v2 deviation D-4 (v2_DEVIATION_D4_FIXES.md): two implementation fixes (sizing timing, overnight drift) and matched/simple benchmarks and walk-forward selection, all descriptive, written before any of them is computed; the committed results stay the first results | 0edbf189...71cd23 |
 
 ## Files and current SHA-256
 
@@ -37,3 +38,4 @@ These files fix the hypotheses, rules and deviations before the results they gov
 | presser_H2H3H4_NOTE2.md (2023-06-14 video is the July meeting, before the join) | a33e74cd43afa6f5bf1570984f1da019c59633a7f333d978afc8e66e50285987 |
 | v2_DEVIATION_D3_OOS.md (v2 out-of-sample evaluated once for reporting; verdict unchanged) | 97585d3ca3e7f5764d16e24787486c51ca298dd95ca57ad82d27e1ba30af1c69 |
 | presser_H2H3H4_NOTE3.md (stage-1 code fix before the join) | ac607c222f0235ec6ad780b1c75a75a476f30f9569b760d27603bafd5caea23e |
+| v2_DEVIATION_D4_FIXES.md (implementation fixes and benchmarks, descriptive) | 0edbf18962dac25534d49b47db8a7d02e08a1948217889e94b8ef9ae0371cd23 |

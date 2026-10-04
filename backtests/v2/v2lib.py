@@ -3,6 +3,8 @@
 Implements research/fedspeak_v2/HYPOTHESIS_v2.md (sha256 6083d3ef...d910, with Amendment 1).
 Variant A construction re-implemented from its published specification (strategies/01 HYPOTHESIS.md,
 config.py, backtest.py); nothing from that folder is imported or executed.
+Deviation D-4 (preregistration/v2_DEVIATION_D4_FIXES.md) adds one default-off argument, weights_E1(fix_sizing=...);
+with it off (the default) every function computes exactly what the committed runs computed.
 
 Index conventions
 -----------------
@@ -183,14 +185,20 @@ def size(pos_raw: np.ndarray, vol: np.ndarray, fomc_hold: np.ndarray, fomc_after
     return wr, wf, traded
 
 
-def weights_E1(z_s: pd.Series, opens: pd.DataFrame, fomc_s: pd.Series, ex: Expr) -> pd.DataFrame:
+def weights_E1(z_s: pd.Series, opens: pd.DataFrame, fomc_s: pd.Series, ex: Expr,
+               fix_sizing: bool = False) -> pd.DataFrame:
     """Variant A exactly: entry-session sizing with open-to-open vol (returns ending at open t), then shifted to
-    decision dates (w_dec[D] = w_s[D+1])."""
+    decision dates (w_dec[D] = w_s[D+1]).
+
+    fix_sizing (deviation D-4 fix 1; default off, passed explicitly by run_v2_d4.py only): the vol for the position
+    entered at the open of session t uses open-to-open returns ending at open t-1 (one more session of lag), so it
+    uses only prices known before the close of session t-1 and never the open-t fill price. Same returns, windows,
+    target, floor, clip, cap, band and FOMC rule. Off, the code path is the committed one, unchanged."""
     cal = z_s.index
     o = opens.reindex(cal)
     r = o.shift(-1) / o - 1.0                          # r[t] = open[t+1]/open[t] - 1
     mix = -W_RATE * r[ex.rate] + ex.fx_sign * W_FX * r[ex.fx]
-    vol = blended_vol(mix.shift(1))                    # returns ending at open t
+    vol = blended_vol(mix.shift(2 if fix_sizing else 1))  # off: returns ending at open t; fix 1: ending at open t-1
     fd = fomc_s.reindex(cal).fillna(False).to_numpy()
     fa = np.r_[False, fd[:-1]]                         # session after an FOMC session
     wr, wf, tr = size(z_s.to_numpy(), vol.to_numpy(), fd, fa, ex.fx_sign)

@@ -94,7 +94,8 @@ export PY="$ENV_DIR/bin/python"
 # 3. every backtest (the full output is also kept in backtests/rerun/run_all_backtests.log)
 mkdir -p backtests/rerun
 V2R=backtests/rerun/v2_reproduce
-V2R_PACK=("$V2R/reproduce_report.json" "$V2R/oos_reproduced.json" "$V2R/summary_is.json" "$V2R/portfolio_oos.csv")
+V2R_PACK=("$V2R/reproduce_report.json" "$V2R/oos_reproduced.json" "$V2R/summary_is.json" "$V2R/portfolio_oos.csv"
+          backtests/rerun/v2_d4.log backtests/rerun/v2_d4/metrics.csv backtests/rerun/v2_d4/walk_forward_picks.csv)
 rm -f "${V2R_PACK[@]}"   # packed below only when this job's v2 stage writes them
 set +e
 bash backtests/run_all_backtests.sh "${STAGE:-all}" 2>&1 | tee backtests/rerun/run_all_backtests.log

@@ -1,0 +1,100 @@
+{
+  "is_windows_all_10_series_vs_committed_windows_all_csv": 0.0,
+  "is_daily_excess_all_combos_vs_committed": 0.0,
+  "is_daily_T4xE1_vs_committed_daily_T4xE1_is": 0.0,
+  "fwd_daily_T4xE1_vs_committed_daily_T4xE1_full": 0.0,
+  "fwd_daily_T0fxE1_vs_committed_daily_VariantA_frozen_T0fxE1_full": 0.0,
+  "oos_T4xE1_vs_committed_oos_chosen_json": 0.0,
+  "portfolio_original_vs_committed_portfolio_csv_and_portfolio_oos_csv": 0.0,
+  "switches_off_max_abs_diff_vs_committed": 0.0,
+  "fwd_vs_is_run_on_is_dates_max_abs_diff_by_series": {
+    "T4xE1|original": 0.0,
+    "T4xE1|fix1": 0.0,
+    "T4xE1|fix2": 0.0,
+    "T4xE1|both": 0.0,
+    "T0fxE1|original": 0.0,
+    "T0fxE1|fix1": 0.0,
+    "T0fxE1|fix2": 0.0,
+    "T0fxE1|both": 0.0,
+    "LEXALLxE1|original": 0.0,
+    "LEXALLxE1|fix1": 0.0,
+    "LEXALLxE1|fix2": 0.0,
+    "LEXALLxE1|both": 0.0,
+    "T2xE1|original": 0.0,
+    "T2xE1|fix1": 0.0,
+    "T2xE1|fix2": 0.0,
+    "T2xE1|both": 0.0,
+    "T0v2xE1|original": 0.0,
+    "T0v2xE1|fix1": 0.0,
+    "T0v2xE1|fix2": 0.0,
+    "T0v2xE1|both": 0.0,
+    "MxE1|original": 0.0,
+    "MxE1|fix1": 0.0,
+    "MxE1|fix2": 0.0,
+    "MxE1|both": 0.0,
+    "BH7525volxE1|original": 0.0,
+    "BH7525volxE1|fix1": 0.0,
+    "BH7525volxE1|fix2": 0.0,
+    "BH7525volxE1|both": 0.0,
+    "T1xE1|original": 0.0,
+    "T1xE1|both": 0.0,
+    "T1xE2|original": 0.0,
+    "T2xE2|original": 0.0,
+    "T3xE1|original": 0.0,
+    "T3xE1|both": 0.0,
+    "T3xE2|original": 0.0,
+    "T4xE2|original": 0.0,
+    "BH7525hold|hold": 0.0
+  },
+  "fwd_vs_is_run_on_is_dates_max_abs_diff": 0.0,
+  "portfolio_info": {
+    "original|IS": {
+      "core_first": "2011-04-04",
+      "rebuild_max_abs_diff_vs_PORT_core_ER_6": 0.0,
+      "rebuild_n_compared": 3397,
+      "fed_sleeve_first_live_multiplier": "2016-07-05"
+    },
+    "original|FWD": {
+      "core_first": "2011-04-04",
+      "rebuild_max_abs_diff_vs_PORT_core_ER_6": 0.0,
+      "rebuild_n_compared": 3898,
+      "fed_sleeve_first_live_multiplier": "2016-07-05"
+    },
+    "fix1|IS": {
+      "core_first": "2011-04-04",
+      "rebuild_max_abs_diff_vs_PORT_core_ER_6": 0.0,
+      "rebuild_n_compared": 3397,
+      "fed_sleeve_first_live_multiplier": "2016-07-05"
+    },
+    "fix1|FWD": {
+      "core_first": "2011-04-04",
+      "rebuild_max_abs_diff_vs_PORT_core_ER_6": 0.0,
+      "rebuild_n_compared": 3898,
+      "fed_sleeve_first_live_multiplier": "2016-07-05"
+    },
+    "fix2|IS": {
+      "core_first": "2011-04-04",
+      "rebuild_max_abs_diff_vs_PORT_core_ER_6": 0.0,
+      "rebuild_n_compared": 3397,
+      "fed_sleeve_first_live_multiplier": "2016-07-05"
+    },
+    "fix2|FWD": {
+      "core_first": "2011-04-04",
+      "rebuild_max_abs_diff_vs_PORT_core_ER_6": 0.0,
+      "rebuild_n_compared": 3898,
+      "fed_sleeve_first_live_multiplier": "2016-07-05"
+    },
+    "both|IS": {
+      "core_first": "2011-04-04",
+      "rebuild_max_abs_diff_vs_PORT_core_ER_6": 0.0,
+      "rebuild_n_compared": 3397,
+      "fed_sleeve_first_live_multiplier": "2016-07-05"
+    },
+    "both|FWD": {
+      "core_first": "2011-04-04",
+      "rebuild_max_abs_diff_vs_PORT_core_ER_6": 0.0,
+      "rebuild_n_compared": 3898,
+      "fed_sleeve_first_live_multiplier": "2016-07-05"
+    }
+  }
+}
