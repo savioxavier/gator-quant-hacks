@@ -1,0 +1,25 @@
+backtests: /blue/ai-workshop/hd.nguyen/gator-quant-hacks/backtests
+re-run outputs: /blue/ai-workshop/hd.nguyen/gator-quant-hacks/backtests/rerun
+
+== Fed communication v2
+v2: reproducing the committed in-sample run and its one D-3 out-of-sample evaluation (/blue/ai-workshop/hd.nguyen/gator-quant-hacks/backtests/results/v2_oos/run/oos_chosen.json).
+    It recomputes; it evaluates nothing, chooses nothing and writes no decision record.
+    v2 reproduce: PASS
+      committed D-3 record backtests/results/v2_oos/run/oos_chosen.json: T4xE1 2024-10-03..2026-10-02, evaluated once 2026-10-04T01:22:57.194710+00:00
+      in-sample selection: T4xE1 (committed T4xE1); decision rule passed False (committed False); the failed verdict stands
+      in-sample vs backtests/results/v2: 7/7 files agree, max abs diff 4.440892098500626e-16
+      failed-rule record vs backtests/results/v2: 1/1 files agree, max abs diff 0.0
+      out-of-sample run (D-3) vs backtests/results/v2_oos/run: 18/18 files agree, max abs diff 5.93275428784068e-16
+      out-of-sample report (D-3) vs backtests/results/v2_oos: 2/2 files agree, max abs diff 1.7763568394002505e-15
+      headline, T4xE1 (reproduced | committed):
+        in-sample Sharpe net 1x: selection 0.1537 | 0.1537, validation 0.6868 | 0.6868, full IS 0.4409 | 0.4409
+        in-sample Sharpe net 2x: selection 0.0533 | 0.0533, validation 0.6640 | 0.6640, full IS 0.3872 | 0.3872 (decision rule: full IS net 2x > 0.5)
+        out-of-sample 2024-10-03..2026-10-02 Sharpe: net 1x 0.6073 | 0.6073, net 2x 0.5435 | 0.5435, gross 0.6866 | 0.6866
+        out-of-sample ann. return (arith, net 1x) 3.82% | 3.82%, vol 6.30% | 6.30%, max drawdown -6.65% | -6.65%
+        portfolio out-of-sample Sharpe net 1x / net 2x: core_ER_6 0.6007 | 0.6007 / 0.4556 | 0.4556; core_ER_6+T4xE1 0.8701 | 0.8701 / 0.7025 | 0.7025
+      code and inputs vs RUN_LOG.md (code as committed at 6a61ef9): 17/19 sha256 equal; differ: backtests/v2/run_v2.py, backtests/v2/run_v2_chrono.py
+      report: /blue/ai-workshop/hd.nguyen/gator-quant-hacks/backtests/rerun/v2_reproduce/reproduce_report.json (no decision record written; nothing evaluated or chosen)
+-> v2: reproduces the committed in-sample and D-3 out-of-sample results (report: /blue/ai-workshop/hd.nguyen/gator-quant-hacks/backtests/rerun/v2_reproduce/reproduce_report.json)
+
+== summary
+  v2: reproduces the committed in-sample and D-3 out-of-sample results (report: /blue/ai-workshop/hd.nguyen/gator-quant-hacks/backtests/rerun/v2_reproduce/reproduce_report.json)
