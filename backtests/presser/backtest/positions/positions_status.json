@@ -1,0 +1,41 @@
+{
+  "H1": {
+    "n_signal": 75,
+    "n_positions": 65,
+    "n_pos_conf_eligible": 20
+  },
+  "H1Q": {
+    "n_signal": 75,
+    "n_positions": 65,
+    "n_pos_conf_eligible": 20
+  },
+  "lexH1raw": {
+    "n_signal": 75,
+    "n_positions": 65,
+    "n_pos_conf_eligible": 20
+  },
+  "lexH1": {
+    "n_signal": 4,
+    "n_positions": 0,
+    "n_pos_conf_eligible": 0
+  },
+  "first_position_date_lexH1raw": "2018-03-21",
+  "answers_H1": {
+    "eligible": 1366,
+    "h1": 1292,
+    "h5": 431,
+    "h15": 170
+  },
+  "answers_lexH1raw": {
+    "eligible": 1366,
+    "h1": 1292,
+    "h5": 431,
+    "h15": 170
+  },
+  "answers_lexH1": {
+    "eligible": 0,
+    "h1": 0,
+    "h5": 0,
+    "h15": 0
+  }
+}
