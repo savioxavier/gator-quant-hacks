@@ -14,7 +14,7 @@ and the new H2/H3/H4 stage.
 
 | Test | Pre-registration | Verdict | Code | Results |
 |---|---|---|---|---|
-| Fed communication v2: daily stance strategy, 8 combinations (T1-T4 x E1/E2) | `../preregistration/HYPOTHESIS_v2.md` (Amendments 1-3), `../preregistration/DEVIATIONS.md` | **Decision rule FAILED** (full in-sample Sharpe at 2x costs 0.387 <= 0.5; validation 0.687). **Out-of-sample not evaluated**, and locked so it never will be | `v2/` | `results/v2/`, `results/summary.md` |
+| Fed communication v2: daily stance strategy, 8 combinations (T1-T4 x E1/E2) | `../preregistration/HYPOTHESIS_v2.md` (Amendments 1-3), `../preregistration/DEVIATIONS.md` | **Decision rule FAILED** (full in-sample Sharpe at 2x costs 0.387 <= 0.5; validation 0.687), and the verdict stands. **Out-of-sample evaluated once, for reporting only**, under deviation D-3 (`../preregistration/v2_DEVIATION_D3_OOS.md`): T4xE1 Sharpe 0.607 net 1x, 0.544 net 2x; it cannot reverse the verdict and is never evaluated again | `v2/` | `results/v2/`, `results/v2_oos/`, `results/summary.md` |
 | Press conference BENCH-R: 13:50-14:20 ZT move, continuation into the press conference | `../preregistration/presser_ADDENDUM.md` section 5 (non-blind descriptive replication) | Continuation before 2020, reversal after; neither significant | `presser/backtest/code/` | `results/presser_h1/` |
 | Press conference H1-primary: Q&A tone minus statement tone (point-in-time residual), ZT from the end of the press conference to 16:00 | `presser_ADDENDUM.md` section 3, gate G3 in 8.2; `../preregistration/presser_team_FINAL_PLAN.md`; `../preregistration/presser_DEVIATION_D1.md` (stance model) | **G3 NO-GO**: Powell 2023-2026, n = 20, mean +0.50 ticks gross (USD 3.91), one-sided p = 0.45, 90% block-bootstrap CI [-4.06, 5.30] ticks | `presser/backtest/code/` | `results/presser_h1/key_results.json`, `results/summary.md` |
 | H1-Q: H1 with question tone added to the residual regression | ADDENDUM section 6 (robustness only, not gated) | Not detected (confirmation sample mean USD 4.69, p = 0.44) | same | `results/presser_h1/summary_long.csv` |
@@ -46,6 +46,7 @@ backtests/
   results/
     summary.md, summary.json  the combined results of v2 and H1 (chrono stance scores)
     v2/                       selection, windows, portfolio, by-chair, sensitivity, decision record
+    v2_oos/                   the one out-of-sample evaluation under D-3: metrics, daily returns, run/ (its record)
     presser_h1/               key results, summary tables, G3 trades and per-meeting tables (no price levels)
   rerun/                      re-run outputs (git-ignored)
 ```
@@ -58,7 +59,7 @@ backtests/
 |---|---|---|
 | `PY` | all | Python with pandas, numpy, scipy, pyarrow (statsmodels for v2). Default `python` |
 | `GQH_MARKET_DIR` | presser, h234 | folder holding the licensed Databento files `ohlcv-1m__all_2016_2026.parquet`, `ohlcv-1s__all_2016_2026.parquet`, `bbo-1s__all_2016_2026.parquet` (ZT/ZF/ZN/ES `.v.0`, 13:30-16:30 ET on the 75 press-conference days). Default `$GQH_DATA_DIR/presser` |
-| `GQH_DATA_DIR` | v2 (if it were not locked) | the gqh data cache |
+| `GQH_DATA_DIR` | v2 reproduction | the gqh data cache (`v2/data` of the v2 input bundle) |
 | `CHRONO_ROOT` | chrono (optional) | chrono walk-forward work root (`../nlp/run_local.py`); rebuilds and checks the frozen stance inputs |
 | `CHRONO_PY` | chrono (optional) | Python for `nlp/chrono_stance.py merge`, used only if the merge is missing |
 | `FEDPRESS_ROOT` | h234 | fedpress output tree `<root>/meetings/<presser_id>/` (`../hpg/fedpress_pkg`) |
@@ -66,14 +67,22 @@ backtests/
 | `H234_OUT_DIR` | h234 (optional) | output folder; default `presser/backtest_h234` |
 | `FEDPRESS_PKG` | h234 (optional) | the fedpress package; default `../hpg/fedpress_pkg` |
 | `BACKTEST_RERUN_DIR` | all (optional) | re-run outputs; default `backtests/rerun` |
-| `GQH_REPO`, `V2_WORK_ROOT` | v2 only if unlocked | see `v2/README.md` |
+| `GQH_REPO`, `V2_WORK_ROOT` | v2 reproduction | gqh-flow-clock and the v2 work-root inputs (`v2/gqh-flow-clock`, `v2/work` of the v2 input bundle); see `v2/README.md` |
 
 ### What the command does
 
 1. **chrono** (only with `CHRONO_ROOT`): checks that the chrono run finished, rebuilds the v2 document scores and
    `text_chrono/` into `rerun/chrono_inputs/`, and compares them with the committed frozen inputs.
-2. **v2**: refuses to re-run and says so. The decision record `results/v2/oos_not_evaluated.json` exists, so the
-   one-shot out-of-sample lock is in force. `run_v2_chrono.py` and `run_v2.py run` refuse on their own too.
+2. **v2**: never evaluates the out-of-sample window again. The decision rule failed
+   (`results/v2/oos_not_evaluated.json`) and that verdict stands; under deviation D-3 the window was evaluated once,
+   for reporting (`results/v2_oos/`, record `results/v2_oos/run/oos_chosen.json`).
+   - With `GQH_REPO`, `GQH_DATA_DIR` and `V2_WORK_ROOT` set (the v2 input bundle), it runs
+     `v2/run_v2_chrono.py --reproduce`. That recomputes the committed in-sample run and the D-3 evaluation into
+     `rerun/v2_reproduce/` and compares them with `results/v2/` and `results/v2_oos/` (numbers to 1e-9 relative). It
+     writes no decision record and chooses nothing; it prints PASS or FAIL and writes
+     `rerun/v2_reproduce/reproduce_report.json`.
+   - Without them it says so, prints both records and skips. `run_v2_chrono.py` and `run_v2.py run` refuse a new run
+     on their own too.
 3. **presser**: runs the ADDENDUM suite (BENCH-R, H1-primary, H1-Q, H1-answer with the 1 s sweep, lexicon control,
    spreads) on `presser/text_chrono/` into `rerun/presser_h1/`. It then compares the re-run with
    `results/presser_h1/` and the frozen positions (numbers to 1e-9 relative). With `CHRONO_ROOT` it also writes a
@@ -93,7 +102,7 @@ backtests/
    Every table carries the label "exploratory, post-NO-GO; cannot rescue G3; no trading claim".
 
 The exit status is non-zero if a stage failed, was refused, or did not reproduce the committed results. A skipped
-h234 stage (no features yet) and the v2 lock are not failures. One stage can be run alone:
+h234 stage (no features yet) and a skipped v2 stage (v2 inputs not set) are not failures. One stage can be run alone:
 `bash backtests/run_all_backtests.sh presser`.
 
 ### Locally (Git Bash on Windows, or any bash)
@@ -105,6 +114,10 @@ GQH_MARKET_DIR=<folder with the three licensed parquet files> \
 CHRONO_ROOT=<chrono work root, optional> \
 bash backtests/run_all_backtests.sh
 ```
+
+For the v2 reproduction, unpack the v2 input bundle (`tar -xzf gqh_v2_bundle.tgz -C <root>`) and add
+`GQH_REPO=<root>/v2/gqh-flow-clock GQH_DATA_DIR=<root>/v2/data V2_WORK_ROOT=<root>/v2/work`. On Windows, clone this
+repository with `git clone -c core.autocrlf=false`, or the pre-registration hash check fails.
 
 Once the fedpress tables are copied back from HiPerGator, add `FEDPRESS_ROOT=<copied fedpress root>` and, if
 available, `H234_SI_ROOT=<64 kbps re-run tree>`.
@@ -138,7 +151,9 @@ Notes for the HiPerGator run:
 - The stage stops if the model revisions stamped in the parquet metadata differ from the pre-registration (audeering
   6eba34a2, ECAPA 0f99f2d0, MediaPipe 64184e22, SFace 0ba9fbfa, emotiefflib==1.1.1). A difference needs a dated
   deviation note first.
-- The fedpress env has no statsmodels. The v2 stage does not need it while it is locked.
+- The fedpress env has no statsmodels, which the v2 reproduction needs. Run that stage with
+  `../hpg/backtest_all.sbatch` (its environment, `../hpg/backtest_requirements.txt`, has it). The job unpacks the v2
+  input bundle when `~/gqh_v2_bundle.tgz` (or its parts) is in your home directory; see its header.
 - The fedpress env's pandas (2.3) is older than the one used for the committed results. The reproduction check
   reports any numeric difference above 1e-9 relative.
 - Write nothing derived from the market files into a group-readable folder. `rerun/` (git-ignored) holds trade logs
@@ -177,6 +192,10 @@ Notes for the HiPerGator run:
 - **v2.**
   - The one-shot lock is checked against the committed decision record whatever output folder is given, before
     gqh-flow-clock is imported, and again inside `stage_oos`.
+  - `run_v2_chrono.py --reproduce` (added after the D-3 run) recomputes that run through the same `pipeline_is` and
+    `stage_oos`. It refuses unless the committed D-3 record exists, writes only to `rerun/v2_reproduce/`, writes no
+    decision record (`oos_reproduced.json` instead) and stops before the out-of-sample stage unless the in-sample
+    selection gives the committed combination.
   - `run_v2.py` accepts the current pre-registration hash as well as the Amendment-1 hash it pinned.
   - check and smoke outputs go to `rerun/`.
 - **Statistics.** No rule, parameter or test was changed. The re-run is compared with the committed results file by
