@@ -45,7 +45,8 @@ BTS = HERE.parent
 TEAM = BTS.parent
 D4_NOTE = TEAM / "preregistration" / "v2_DEVIATION_D4_FIXES.md"
 D4_SHA = "0edbf18962dac25534d49b47db8a7d02e08a1948217889e94b8ef9ae0371cd23"
-OUT = BTS / "results" / "v2_d4"
+_ENV_OUT = os.environ.get("V2_D4_OUT")                 # reproductions (run_all_backtests.sh v2) write elsewhere
+OUT = Path(_ENV_OUT).resolve() if _ENV_OUT else BTS / "results" / "v2_d4"
 COMMITTED_IS = BTS / "results" / "v2"
 COMMITTED_RUN = BTS / "results" / "v2_oos" / "run"
 DECISION_RECORDS = {"oos_chosen.json", "oos_not_evaluated.json", "oos_reproduced.json",
@@ -70,6 +71,10 @@ def gate() -> None:
         if var in os.environ:
             raise SystemExit(f"refusing: unset {var} (D-4 never uses the D-3 unlock or the engine's OOS unlock, and "
                              "sets fix 1 explicitly per row). Nothing computed.")
+    if _ENV_OUT:
+        res, repo = (BTS / "results").resolve(), TEAM.resolve()
+        if OUT == res or res in OUT.parents or OUT == repo or OUT in repo.parents:
+            raise SystemExit(f"refusing: V2_D4_OUT={OUT} is inside the committed results or at/above the repository")
 
 
 def out_path(name: str) -> Path:
