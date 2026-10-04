@@ -1,0 +1,53 @@
+{
+ "whisper_turbo_ct2": {
+  "source": "hf",
+  "repo": "mobiuslabsgmbh/faster-whisper-large-v3-turbo",
+  "requested": "0a363e9161cbc7ed1431c9597a8ceaf0c4f78fcf",
+  "resolved": "0a363e9161cbc7ed1431c9597a8ceaf0c4f78fcf",
+  "path": "<cache>/huggingface/hub/models--mobiuslabsgmbh--faster-whisper-large-v3-turbo/snapshots/0a363e9161cbc7ed1431c9597a8ceaf0c4f78fcf",
+  "license": "MIT",
+  "fetched_utc": "2026-10-03T23:32:00+00:00"
+ },
+ "ecapa_voxceleb": {
+  "source": "hf",
+  "repo": "speechbrain/spkrec-ecapa-voxceleb",
+  "requested": "0f99f2d0ebe89ac095bcc5903c4dd8f72b367286",
+  "resolved": "0f99f2d0ebe89ac095bcc5903c4dd8f72b367286",
+  "path": "<cache>/huggingface/hub/models--speechbrain--spkrec-ecapa-voxceleb/snapshots/0f99f2d0ebe89ac095bcc5903c4dd8f72b367286",
+  "license": "Apache-2.0",
+  "fetched_utc": "2026-10-03T23:32:03+00:00"
+ },
+ "audeering_msp_dim": {
+  "source": "hf",
+  "repo": "audeering/wav2vec2-large-robust-12-ft-emotion-msp-dim",
+  "requested": "6eba34a2485ea31cb03600241787c3a5edab8626",
+  "resolved": "6eba34a2485ea31cb03600241787c3a5edab8626",
+  "path": "<cache>/huggingface/hub/models--audeering--wav2vec2-large-robust-12-ft-emotion-msp-dim/snapshots/6eba34a2485ea31cb03600241787c3a5edab8626",
+  "license": "CC-BY-NC-SA-4.0",
+  "fetched_utc": "2026-10-03T23:32:19+00:00"
+ },
+ "mediapipe_face_landmarker": {
+  "source": "url",
+  "url": "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task",
+  "sha256": "64184e229b263107bc2b804c6625db1341ff2bb731874b0bcc2fe6544e0bc9ff",
+  "path": "<cache>/models/mediapipe_face_landmarker/face_landmarker.task",
+  "license": "Apache-2.0",
+  "fetched_utc": "2026-10-03T23:32:20+00:00"
+ },
+ "emotiefflib_enet_b0_8_va_mtl": {
+  "source": "url",
+  "url": "https://github.com/sb-ai-lab/EmotiEffLib/raw/9f62dbb76f933a55fcebdb5fab9e76492c435187/models/affectnet_emotions/enet_b0_8_va_mtl.pt",
+  "sha256": "b7b9522ec6062d94919ef5cf620b561bc0320c8d03c88a807b95accb0da3d600",
+  "path": "<cache>/models/emotiefflib_enet_b0_8_va_mtl/enet_b0_8_va_mtl.pt",
+  "license": "code Apache-2.0; weights trained on AffectNet (non-commercial research licence)",
+  "fetched_utc": "2026-10-03T23:32:21+00:00"
+ },
+ "sface_opencv": {
+  "source": "url",
+  "url": "https://huggingface.co/opencv/face_recognition_sface/resolve/3d7082438a6e4551e840c9b2bb60b71e8da4b524/face_recognition_sface_2021dec.onnx",
+  "sha256": "0ba9fbfa01b5270c96627c4ef784da859931e02f04419c829e83484087c34e79",
+  "path": "<cache>/models/sface_opencv/face_recognition_sface_2021dec.onnx",
+  "license": "Apache-2.0",
+  "fetched_utc": "2026-10-03T23:32:23+00:00"
+ }
+}

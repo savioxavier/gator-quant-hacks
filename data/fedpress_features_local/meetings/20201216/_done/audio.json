@@ -1,0 +1,51 @@
+{
+  "stage": "audio",
+  "presser_id": "20201216",
+  "status": "ok",
+  "outputs": [
+    "audio/audio_16k.wav",
+    "audio/audio.json"
+  ],
+  "outputs_detail": [
+    {
+      "path": "audio/audio_16k.wav",
+      "bytes": 111310926,
+      "mtime": 1791073519.6983154,
+      "sha256": "52d3f7a856b851914e25bb8d2a3b4edec319e131aa614de7a2271a5bc5b36966"
+    },
+    {
+      "path": "audio/audio.json",
+      "bytes": 1201,
+      "mtime": 1791073544.9859724,
+      "sha256": "f8a3efcfe54a7041e96062c90285307be24239569c698ba4860a799dced1401e"
+    }
+  ],
+  "rows": {},
+  "models": {},
+  "notes": {
+    "input_codec": "aac",
+    "input_bitrate": 127000,
+    "input_sample_rate": 48000,
+    "duration_s": 3478.464,
+    "duration_gap_s": 0.0,
+    "integrated_lufs": -28.27,
+    "peak_dbfs": -1.02,
+    "rms_dbfs": -28.93,
+    "clipped_frac": 0.0
+  },
+  "stage_fingerprint": "96ab4e642160",
+  "config_hash": "d98baf794bb9",
+  "overrides": [
+    "compute.gpu_type=local5090",
+    "asr.batch_size=4",
+    "voice.batch_size=4",
+    "diarize.ecapa.batch_size=16",
+    "face.batch_size=8"
+  ],
+  "code_version": "0.1.0+src.df22a2d52e78",
+  "run_id": "20261003T202517-BLADEMASTER",
+  "started_utc": "2026-10-04T00:25:17+00:00",
+  "finished_utc": "2026-10-04T00:25:45+00:00",
+  "elapsed_s": 26.992,
+  "host": "BLADEMASTER"
+}

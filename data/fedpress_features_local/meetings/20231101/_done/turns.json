@@ -1,0 +1,80 @@
+{
+  "stage": "turns",
+  "presser_id": "20231101",
+  "status": "ok",
+  "outputs": [
+    "turns/anchor.json",
+    "turns/turns.parquet",
+    "turns/words.parquet"
+  ],
+  "outputs_detail": [
+    {
+      "path": "turns/anchor.json",
+      "bytes": 156,
+      "mtime": 1791072118.3385265,
+      "sha256": "c32528538ad6c7e69de8890011b058892ebca80ebc4c63caab771a3bbba1a6f6"
+    },
+    {
+      "path": "turns/turns.parquet",
+      "bytes": 39669,
+      "mtime": 1791072118.3485272,
+      "sha256": "ed4faa4dc61151ab10bf6d033d9ad61347aa5142d78a5fa4dcddf4a9cd2859c4"
+    },
+    {
+      "path": "turns/words.parquet",
+      "bytes": 227176,
+      "mtime": 1791072118.3665285,
+      "sha256": "e0df21cfa3965d6b00ba17628938cfe3ba3409f4490e63a27b840cdfdab71fa0"
+    }
+  ],
+  "rows": {
+    "turns": 81,
+    "words": 8708
+  },
+  "models": {
+    "whisper_turbo_ct2": "0a363e9161cbc7ed1431c9597a8ceaf0c4f78fcf"
+  },
+  "notes": {
+    "clock_source": "asr",
+    "base_clock": "asr",
+    "align_method": "text_match",
+    "text_source": "transcript_pdf",
+    "wer_proxy": 0.0761,
+    "match_frac": 0.948,
+    "timed_frac": 0.9684,
+    "n_ref_words": 8708,
+    "n_hyp_tokens": 8704,
+    "timing_ok": true,
+    "greeting_media_s": 6.06,
+    "greeting_word": "Good",
+    "greeting_timed_by": "match",
+    "anchor": {
+      "media_s": 6.06,
+      "wall_utc": "2023-11-01T18:30:00+00:00",
+      "source": "scheduled_start",
+      "uncertainty_s": null,
+      "rule": "greeting_at_scheduled"
+    },
+    "n_turns": 81,
+    "n_answers": 31,
+    "n_questions": 31,
+    "chair_labels": [
+      "CHAIR POWELL"
+    ]
+  },
+  "stage_fingerprint": "17e9e5bb04a9",
+  "config_hash": "911ef7fb0565",
+  "overrides": [
+    "compute.gpu_type=local5090",
+    "asr.batch_size=4",
+    "voice.batch_size=4",
+    "diarize.ecapa.batch_size=16",
+    "face.batch_size=8"
+  ],
+  "code_version": "0.1.0+src.df22a2d52e78",
+  "run_id": "20261003T200157-BLADEMASTER",
+  "started_utc": "2026-10-04T00:01:57+00:00",
+  "finished_utc": "2026-10-04T00:01:58+00:00",
+  "elapsed_s": 1.229,
+  "host": "BLADEMASTER"
+}

@@ -1,0 +1,7 @@
+{
+  "media_s": 5.42,
+  "wall_utc": "2024-07-31T18:30:00+00:00",
+  "source": "scheduled_start",
+  "uncertainty_s": null,
+  "rule": "greeting_at_scheduled"
+}
