@@ -1,0 +1,5 @@
+doc_type,n_docs,first,last,release_time_missing,released_after_1600_et,docs_in_checked_signal_window,docs_after_committed_signal_file,dated_on_non_session_day_in_window,entry_session_strictly_after_date_in_window,id_date_equals_date,minutes_release_lag_days_min,minutes_release_lag_days_median,minutes_release_lag_days_max
+minutes,94,2015-01-07,2026-08-19,0,0,78,16,0,78/78,n/a (id = meeting date),19.0,21.0,24.0
+presser,79,2015-03-18,2026-09-16,2,0,63,16,1,63/63,79/79,,,
+speech,828,2015-01-20,2026-10-01,2,128,624,204,25,624/624,827/828,,,
+statement,97,2015-01-28,2026-09-16,0,1,81,16,1,81/81,97/97,,,
