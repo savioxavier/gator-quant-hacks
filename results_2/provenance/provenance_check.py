@@ -24,7 +24,7 @@ Committed alignment outputs are read and reported beside the recomputation: back
 align_meetings.parquet and turn_times.parquet (transcript vs captions, 75 conferences) and the feature package's
 turns done-markers (wer_proxy, match_frac, timed_frac, vtt_check) and turns tables (64 conferences).
 
-Rules (PROVENANCE.md says which were fixed before any table was computed and which were added after a first look):
+Rules (docs/results/transcript-provenance.md says which were fixed before any table was computed and which were added after a first look):
   * tokens: the feature package's normaliser (hpg/fedpress_pkg/fedpress/stages/_align.py `norm_tokens`), applied
     word by word, with curly double quotes treated as straight ones; speaker labels are not transcript tokens;
     stage directions ([Laughter] etc.) are removed from the scored text, as the stance scorer does
@@ -130,7 +130,10 @@ def check_inputs() -> dict[str, Path]:
     if missing:
         die("missing input(s): " + ", ".join(missing))
     for k in ("hawk", "dove"):
-        if sha256(paths[k]) != FROZEN_LEXICON_SHA256[k]:
+        # the frozen hash is of the CRLF original; git stores the file with LF, so restore CRLF before comparing
+        raw = paths[k].read_bytes()
+        crlf = raw.replace(b"\r\n", b"\n").replace(b"\n", b"\r\n")
+        if FROZEN_LEXICON_SHA256[k] not in (sha256(paths[k]), hashlib.sha256(crlf).hexdigest()):
             die(f"{INPUTS[k]} does not match the frozen lexicon hash")
     return paths
 

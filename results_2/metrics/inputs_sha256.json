@@ -1,8 +1,8 @@
 {
  "backtests/results/v2_oos/daily_returns.parquet": "1916396573f12bc15b0198b49223dca5a2e600057e58c1bed790b2ccd5a7eda9",
  "backtests/results/v2_oos/run/daily_portfolio_full.parquet": "70e7c6eac94db045c9fe7af68fb9b2ee2b34b5e2d1db5d81e13208a426188537",
- "backtests/results/v2_oos/metrics.csv": "c1674d60c6a725128a9cd6abcdab3744e43c933bab76d8043fc1b8b78545fe6d",
+ "backtests/results/v2_oos/metrics.csv": "acc4a24dfd95c525c38c57f4712a26a7758ee9575d4ada0543b7bc68afa25b30",
  "backtests/results/v2_d4/daily_returns.parquet": "b55dd50d3bb2d5089a7e57ce243c8a12690fc1036ed292a3679b231c165429e5",
- "backtests/results/v2_d4/metrics.csv": "d78f2d57296195cd62a16a667112fd0aa231e622a28c9ff0d323e4bab513e8b1",
+ "backtests/results/v2_d4/metrics.csv": "a9ce5671fe7ecc8b46f88463353fd1dd64d831a7569dc006a5fa489668b733da",
  "backtests/v2/inputs/data/rf_daily.parquet": "03877682a85f32cce9cf8a1764aa01d51491fd77e051487501189d1b8a8bc515"
 }

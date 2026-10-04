@@ -79,7 +79,7 @@ F = {
     "h234_h4": "backtests/presser/backtest_h234/results/h4_results.json",
     "h234_answers": "backtests/presser/backtest_h234/results/answer_summary.csv",
     "h234_slopes": "backtests/presser/backtest_h234/results/companion_slopes.csv",
-    "h234_local": "backtests/presser/H234_LOCAL_SUMMARY.md",
+    "h234_local": "docs/results/h234-local-summary.md",
     "s01_log": "strategies/01/trials/log.csv",
     "s01_log_v2": "backtests/v2/inputs/work/savio_gqh/strategies/01/trials/log.csv",
     "s01_hyp": "strategies/01/HYPOTHESIS.md",
@@ -109,7 +109,7 @@ F = {
     "intraday": "archive/session_outputs/intraday_study",
     "kit_native": "archive/session_outputs/kit_native",
     "placebo": "archive/session_outputs/placebo_chain",
-    "report": "report/REPORT.md",
+    "report": "docs/report/REPORT.md",
 }
 
 # solo repository results/trials.csv at commit 1587f25 (counted on 2026-10-04 from the public repository)
@@ -200,7 +200,8 @@ def main() -> None:
     h2a = pd.read_csv(P["h234_answers"])
     slopes = pd.read_csv(P["h234_slopes"])
     s01 = pd.read_csv(P["s01_log"])
-    if P["s01_log"].read_bytes() != P["s01_log_v2"].read_bytes():
+    # compared ignoring line endings: git stores strategies/01 with LF and the v2 inputs byte-identical (CRLF)
+    if P["s01_log"].read_bytes().replace(b"\r\n", b"\n") != P["s01_log_v2"].read_bytes().replace(b"\r\n", b"\n"):
         die("strategy 01 trial log differs between strategies/01 and the v2 inputs")
     t1 = pd.read_csv(P["s01_t1"])
     carry = pd.read_csv(P["e_carry"])
