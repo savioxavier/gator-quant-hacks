@@ -1,0 +1,4 @@
+{
+  "oos_evaluated": false,
+  "reason": "decision rule failed (validation net Sharpe <= 0 or full-IS 2x Sharpe <= 0.5)"
+}
