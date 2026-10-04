@@ -1,0 +1,92 @@
+{
+  "deviation": "preregistration/v2_DEVIATION_D4_FIXES.md sha256 0edbf18962dac25534d49b47db8a7d02e08a1948217889e94b8ef9ae0371cd23",
+  "start_utc": "2026-10-04T06:12:22.862509+00:00",
+  "end_utc": "2026-10-04T06:12:32.118555+00:00",
+  "code_sha256": {
+    "run_v2_d4.py": "3c4618f192d98e7d02d030667388626ba81c7253b1a9d3c3ff185e15aba2cec7",
+    "sim_fixed.py": "5b2ccab283fd7ae8f1c17e124ba0099f6df087fa0f725f81a6bc4a81695534e6",
+    "v2lib.py": "28c8537c077581ecc0a6b9be7567c0122103f2928560ebe17dee4219f47c77ce",
+    "run_v2.py": "8bbf613faa8b64277528c1a8189814080b0c22ae4645d00944a4c3a786a10254",
+    "test_sim_fixed.py": "d2115f7ae22a7bb9d1199444f5a04a5335298a408748647b5523b355099aa331",
+    "gqh-flow-clock src/engine.py": "74ac9fdb27243e228a9069f1edc7fb37d0bfbd16afdb8a728fe7d9ae14b785e6"
+  },
+  "inputs_sha256": {
+    "backtests/v2/score/doc_scores.parquet": "0e0c1ca7c0fd5ed0b229db2ae745039c383e8e50f64ba524ad3c688d59873ba0",
+    "data cache etf_daily.parquet": "7086babddd0e22b1538e3f7cf79340e5923c4256456cdca9b3e3c54874a0712b",
+    "data cache futures_daily.parquet": "71db580de202e9288788f16257e73154fdc6407073ffdacd0f83478c676eb17d",
+    "data cache futures_1600.parquet": "aef98c9982406dc7cc0c5d552a4f6b03121ab41df20f96c4ac202d0fe6d28ebc",
+    "data cache fred_daily.parquet": "8efeca56f3f1950642237ab826ee0d745e9d60ece978289fb50f0ba75cf8b02d",
+    "data cache rf_daily.parquet": "03877682a85f32cce9cf8a1764aa01d51491fd77e051487501189d1b8a8bc515",
+    "<v2 work root>/fedspeak_v2/corpus/fomc_dates_variantA_style.csv": "5670a1e765ee7b0f1402558f350fe9deee8ee7cb86412b4a9154a906433e8ffb",
+    "<v2 work root>/savio_gqh/strategies/01/data/processed/fomc_dates.csv": "5555f7f41d95db6680421f03dc86bdeadb2c6b1f24ee01e0207d1924daac9b6a",
+    "<v2 work root>/fedspeak/extend/speech_scores_2011_2026.csv": "523b8594756cbb1f5e07dee3405ff69166bc07d822cc54a753b611f5a0200e8a",
+    "<v2 work root>/edges/combine/combine.py": "5150cb8a7d0bbb463ee6ba9f4a82f3205101578bf417f988cd304175d92f42e7",
+    "<v2 work root>/edges/series/PORT_core_ER_6.parquet": "9bfd6882d3361d5fa81a49ea5d4a170296a510cd43fe3e2f99ca3ba275237816"
+  },
+  "first_e1_position": "2015-12-31",
+  "first_valid_z_M": "2015-12-31",
+  "windows": {
+    "selection": [
+      "2016-01-04",
+      "2020-12-31"
+    ],
+    "validation": [
+      "2021-01-01",
+      "2024-10-02"
+    ],
+    "full_is": [
+      "2016-01-04",
+      "2024-10-02"
+    ],
+    "oos": [
+      "2024-10-03",
+      "2026-10-02"
+    ]
+  },
+  "decision_records_written": [],
+  "reproduce_check": {
+    "given": true,
+    "verdict": "PASS",
+    "reproduced_utc": "2026-10-04T06:12:19.944375+00:00",
+    "v2lib_sha256_in_that_run": "28c8537c077581ecc0a6b9be7567c0122103f2928560ebe17dee4219f47c77ce",
+    "same_v2lib_as_this_run": true,
+    "comparisons": [
+      {
+        "label": "in-sample",
+        "n_agree": 7,
+        "n_files": 7,
+        "max_abs_diff": 0.0
+      },
+      {
+        "label": "failed-rule record",
+        "n_agree": 1,
+        "n_files": 1,
+        "max_abs_diff": 0.0
+      },
+      {
+        "label": "out-of-sample run (D-3)",
+        "n_agree": 18,
+        "n_files": 18,
+        "max_abs_diff": 0.0
+      },
+      {
+        "label": "out-of-sample report (D-3)",
+        "n_agree": 2,
+        "n_files": 2,
+        "max_abs_diff": 0.0
+      }
+    ],
+    "failures": []
+  },
+  "outputs": [
+    "README.md",
+    "consistency.json",
+    "daily_returns.parquet",
+    "daily_returns_net1x.csv",
+    "metrics.csv",
+    "metrics.md",
+    "run_info.json",
+    "sim_fixed_unit_test.json",
+    "walk_forward_picks.csv"
+  ]
+}
