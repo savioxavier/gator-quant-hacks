@@ -19,6 +19,7 @@ These files fix the hypotheses, rules and deviations before the results they gov
 | about 23:15 | first public commit of these records (537c483) | |
 | about 23:25 | Exploratory H2/H3/H4 pre-registration written (presser_H2H3H4_EXPLORATORY.md), POST-G3 (after the H1 NO-GO) and before any voice or face feature exists; committed in its own later commit | e030af98...dca6d0 |
 | 2026-10-04 about 00:50 | H2/H3/H4 note 1 (presser_H2H3H4_NOTE1.md), before any voice or face feature is joined to returns. Discloses Powell voice/face tables for 20190501 and 20200303 written at 22:15-22:38 UTC by a package-development run, before the pre-registration commit; fixes the run order (local replication first, HiPerGator governs) and the handling of weak-alignment meetings | b3a3af33...dba23d |
+| 2026-10-04 about 00:58 | H2/H3/H4 note 2 (presser_H2H3H4_NOTE2.md), before the join: the 2023-06-14 video asset is the 2023-07-26 press conference; its voice/face tables are not used for June (already outside the timing-eligible sample under the frozen rules) | a33e74cd...285987 |
 
 ## Files and current SHA-256
 
@@ -31,3 +32,4 @@ These files fix the hypotheses, rules and deviations before the results they gov
 | presser_ADDENDUM.md | 1921b2ca1dc6e646b95ee1d1bbc3e3ef7f6a864c06cd724956df7c6569de2dc4 |
 | presser_H2H3H4_EXPLORATORY.md (exploratory, post-G3; cannot overturn G3) | e030af98df6fb194532c236890986619341f6e14a457384cfc3ec4bba5dca6d0 |
 | presser_H2H3H4_NOTE1.md (disclosure and open choices, before the join) | b3a3af3396b4db51fa74957ae468c60bcad8aed704828f4ffcd40dc4aadba23d |
+| presser_H2H3H4_NOTE2.md (2023-06-14 video is the July meeting, before the join) | a33e74cd43afa6f5bf1570984f1da019c59633a7f333d978afc8e66e50285987 |
