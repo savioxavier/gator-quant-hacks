@@ -47,4 +47,4 @@ bash hpg/fedpress_pkg/slurm/submit_all.sh --only "${STEPS:-fetch,av,speech,face}
 if [ "${SKIP_NLP:-0}" != 1 ]; then CONC=2 bash hpg/submit_nlp.sh; else echo "text chain skipped (SKIP_NLP=1)"; fi
 
 echo "[$(date)] all chains submitted; watch with: squeue -u $USER"
-echo "feature status: $FEDPRESS_ROOT  (python hpg/fedpress_pkg/slurm/status.py)"
+echo "feature status: $FEDPRESS_ROOT  (python hpg/fedpress_pkg/slurm/status.py); when face is done: sbatch hpg/pack_features.sbatch"
