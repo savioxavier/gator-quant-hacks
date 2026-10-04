@@ -24,3 +24,7 @@ The repository includes the maintained code, frozen signal inputs, result tables
 ## Reading historical records
 
 [`backtest_snapshot/`](../backtest_snapshot/) is a frozen provenance record. [`backtests/`](../backtests/) is the maintained runner and result layout. A snapshot may predate later permitted reporting steps, so use the dates, preregistration, deviation record, and current report to understand which results were available at each point. The v2 out-of-sample window was evaluated once under deviation D-3 for reporting; the failed in-sample decision rule still stands.
+
+## Data sources
+
+Where every dataset comes from, its licence, what is committed, and how to obtain the private inputs (with the SHA-256 of the copies used): [`data/README.md`](../data/README.md). The public part of the v2 input bundle is in [`backtests/v2/inputs/`](../backtests/v2/inputs/).
