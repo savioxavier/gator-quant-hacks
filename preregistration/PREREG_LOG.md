@@ -18,6 +18,7 @@ These files fix the hypotheses, rules and deviations before the results they gov
 | about 23:10 | v2 in-sample backtest run; decision rule failed; out-of-sample not evaluated | |
 | about 23:15 | first public commit of these records (537c483) | |
 | about 23:25 | Exploratory H2/H3/H4 pre-registration written (presser_H2H3H4_EXPLORATORY.md), POST-G3 (after the H1 NO-GO) and before any voice or face feature exists; committed in its own later commit | e030af98...dca6d0 |
+| 2026-10-04 about 00:50 | H2/H3/H4 note 1 (presser_H2H3H4_NOTE1.md), before any voice or face feature is joined to returns. Discloses Powell voice/face tables for 20190501 and 20200303 written at 22:15-22:38 UTC by a package-development run, before the pre-registration commit; fixes the run order (local replication first, HiPerGator governs) and the handling of weak-alignment meetings | b3a3af33...dba23d |
 
 ## Files and current SHA-256
 
@@ -29,3 +30,4 @@ These files fix the hypotheses, rules and deviations before the results they gov
 | presser_DEVIATION_D1.md (with D1a) | 660d06a85a434328a5ec28f0d45611457bb44e7fcd4c4a6fef28bb843d9ebd79 |
 | presser_ADDENDUM.md | 1921b2ca1dc6e646b95ee1d1bbc3e3ef7f6a864c06cd724956df7c6569de2dc4 |
 | presser_H2H3H4_EXPLORATORY.md (exploratory, post-G3; cannot overturn G3) | e030af98df6fb194532c236890986619341f6e14a457384cfc3ec4bba5dca6d0 |
+| presser_H2H3H4_NOTE1.md (disclosure and open choices, before the join) | b3a3af3396b4db51fa74957ae468c60bcad8aed704828f4ffcd40dc4aadba23d |
