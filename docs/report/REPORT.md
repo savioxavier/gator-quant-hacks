@@ -4,8 +4,8 @@
 Code, data and results: https://github.com/savioxavier/gator-quant-hacks (branch `review/strategy-01`, merged into `main`).
 
 > **For the team (how to compile).** This file is the long version; cut it to the 5-page quant note (11pt) for the
-> submission. Figures are relative links to committed PNGs. From the `report/` folder:
-> `pandoc REPORT.md -o report.pdf --resource-path=.:.. -V fontsize=11pt -V geometry:margin=1in --toc`
+> submission. Figures are relative links to committed PNGs. From the `docs/report/` folder:
+> `pandoc REPORT.md -o report.pdf --resource-path=.:../.. -V fontsize=11pt -V geometry:margin=1in --toc`
 > (add `--pdf-engine=xelatex` if a font is missing). Every number below is in a committed file; Appendix H maps
 > each table to its source. Sections 1-8 follow the competition blueprint; References and Appendices come after.
 
@@ -256,7 +256,7 @@ close).**
 Max drawdown measured from the starting NAV instead (so that a loss on a window's first day counts): out-of-sample
 -7.4% net, -7.5% at 2x, -7.2% gross (T4xE1 lost 0.78% on 2024-10-03).
 
-![Figure 1. T4xE1 growth of 1 (excess of T-bill), net, 2x and gross; selection, validation and out-of-sample shaded.](../backtests/results/v2_oos/equity_T4xE1.png)
+![Figure 1. T4xE1 growth of 1 (excess of T-bill), net, 2x and gross; selection, validation and out-of-sample shaded.](../../backtests/results/v2_oos/equity_T4xE1.png)
 
 *Figure 1. v2 T4xE1. The decision rule failed; the out-of-sample segment is reported under D-3.*
 
@@ -278,7 +278,7 @@ Q4 2024 -6.5% (Sharpe -3.32), 2025 +2.0% (0.58), 2026 to date +12.7% (2.02). A s
 | Full in-sample | 0.998 / 0.878 / 1.118 | 1.038 / 0.909 / 1.173 | 6.14% / 6.16% / -7.5% | 6.42% / 6.19% / -7.7% |
 | **Out-of-sample** | **0.601 / 0.456** / 0.746 | **0.870 / 0.703** / 1.043 | 3.45% / 5.74% / -4.7% | 4.97% / 5.72% / -5.3% |
 
-![Figure 2. core_ER_6 alone and with T4xE1, in-sample and out-of-sample shaded.](../backtests/results/v2_oos/equity_portfolio.png)
+![Figure 2. core_ER_6 alone and with T4xE1, in-sample and out-of-sample shaded.](../../backtests/results/v2_oos/equity_portfolio.png)
 
 *Figure 2. Portfolio test.*
 
@@ -348,11 +348,11 @@ turned into daily return series on $10m, with N contracts per trade chosen so th
 | BENCH-R | IS era 2020..2024-10-02 | 35 | -8.5% / -10.2% / -11.8% | -0.69 / -0.81 / -0.93 | -51.2% / -56.4% / -61.6% |
 | BENCH-R | out-of-sample | 15 | 3.2% / 1.5% / -0.2% | 0.38 / **0.18** / -0.02 | -10.7% / -11.7% / -12.7% |
 
-![Figure 3. BENCH-R ZT cumulative P&L, % of $10m, gross / net / 2x; out-of-sample shaded.](../backtests/results/presser_strategy/equity_benchr_ZT.png)
+![Figure 3. BENCH-R ZT cumulative P&L, % of $10m, gross / net / 2x; out-of-sample shaded.](../../backtests/results/presser_strategy/equity_benchr_ZT.png)
 
 *Figure 3. BENCH-R on ZT. Presentation of pre-registered trades; G3 stays NO-GO.*
 
-![Figure 4. H1-primary ZT cumulative P&L, same layout.](../backtests/results/presser_strategy/equity_h1primary_ZT.png)
+![Figure 4. H1-primary ZT cumulative P&L, same layout.](../../backtests/results/presser_strategy/equity_h1primary_ZT.png)
 
 *Figure 4. H1-primary on ZT.*
 
@@ -718,20 +718,21 @@ start uncertainty at most 10 s (n 3) +1.0 (p 0.25). H1 robustness symbols, confi
 
 | Path | Content |
 |---|---|
+| `docs/` | all documentation: this report (`docs/report/`), submission texts (`docs/submission/`), guides (`docs/guides/`: data, running the backtests, reproduction, HiPerGator, stance model, v2, replay), results write-ups (`docs/results/`) and research notes (`docs/research/`) |
 | `preregistration/` | all pre-registrations, deviations, notes, PREREG_LOG.md |
 | `backtests/run_all_backtests.sh` | one runner for every backtest (v2, press-conference suite, H2/H3/H4) |
-| `backtests/results/` | v2 (in-sample), v2_oos (D-3 out-of-sample, HiPerGator reproduction), v2_d4 (D-4 fixes, benchmarks, walk-forward), presser_h1, presser_strategy, capacity, STRATEGY_RESULTS.md |
-| `backtests/presser/backtest_h234/` | H2/H3/H4 HiPerGator reference run; `H234_LOCAL_SUMMARY.md` is the local replication |
+| `backtests/results/` | v2 (in-sample), v2_oos (D-3 out-of-sample, HiPerGator reproduction), v2_d4 (D-4 fixes, benchmarks, walk-forward), presser_h1, presser_strategy, capacity |
+| `results_2/` | reviewer-gap analyses from committed outputs only: metrics and drawdown convention, factor attribution and paired bootstrap, turnover and capacity labels, transcript provenance, variant ledger, saved-result replay |
+| `backtests/presser/backtest_h234/` | H2/H3/H4 HiPerGator reference run; `docs/results/h234-local-summary.md` is the local replication |
 | `nlp/` | walk-forward stance model (training, scoring, label re-dating) |
 | `hpg/` | HiPerGator jobs: feature chain (`run_everything.sbatch`), full backtest (`backtest_all.sbatch`), v2 out-of-sample reproduction (`v2_oos.sbatch`), feature package `fedpress_pkg/` |
 | `data/` | transcripts, captions, text corpus, voice/face feature tables |
 | `strategies/01/` | strategy 01 review (the lexicon predecessor) |
-| `docs/research/` | planning, review and research notes |
 | `archive/` | every other shareable working output of the project (exploratory, superseded and failed work; see its README) |
 
-Reproduce: `bash backtests/run_all_backtests.sh` with `PY`, `GQH_MARKET_DIR` (licensed Databento files, not in git)
+Replay the published tables without licensed data: `python results_2/replay/replay.py`. Reproduce: `bash backtests/run_all_backtests.sh` with `PY`, `GQH_MARKET_DIR` (licensed Databento files, not in git)
 and optionally `FEDPRESS_ROOT` (feature tables) set; v2 additionally needs `GQH_REPO`, `GQH_DATA_DIR` and
-`V2_WORK_ROOT` (see `backtests/v2/README.md`). On HiPerGator: `sbatch hpg/backtest_all.sbatch` and
+`V2_WORK_ROOT` (see `docs/guides/v2-strategy.md`). On HiPerGator: `sbatch hpg/backtest_all.sbatch` and
 `sbatch hpg/v2_oos.sbatch`.
 
 ## Appendix H. Sources of the numbers
@@ -739,12 +740,12 @@ and optionally `FEDPRESS_ROOT` (feature tables) set; v2 additionally needs `GQH_
 | Report item | Committed source |
 |---|---|
 | Table 1, falsifiers, Deflated Sharpe | `backtests/results/v2/windows_all.csv`, `summary_is.json` |
-| Table 2, out-of-sample facts, Figure 1 | `backtests/results/v2_oos/metrics.csv`, `oos_concentration.csv`, `run/oos_chosen.json`, `run/by_chair_oos.csv`, `equity_T4xE1.png`; `backtests/results/STRATEGY_RESULTS.md` (start-NAV drawdowns) |
+| Table 2, out-of-sample facts, Figure 1 | `backtests/results/v2_oos/metrics.csv`, `oos_concentration.csv`, `run/oos_chosen.json`, `run/by_chair_oos.csv`, `equity_T4xE1.png`; `docs/results/strategy-results.md` (start-NAV drawdowns) |
 | Table 3, Figure 2 | `backtests/results/v2_oos/metrics.csv`, `run/portfolio_oos.csv`, `v2/portfolio.csv`, `equity_portfolio.png` |
 | Section 5.4 | `backtests/results/v2_oos/metrics.csv`; `strategies/01/review/VERDICT.md`, `strategies/01/review/analyse/t1_results_all.csv` |
 | Table 4, G3, Appendix E | `backtests/results/presser_h1/key_results.json`, `summary_long.csv`, `benchr_break_stats.csv`, `benchr_cost_hurdle.csv`, `spreads_at_fill_points.csv`, `tables/`; `preregistration/presser_ADDENDUM.md` |
 | Table 5, Figures 3-4 | `backtests/results/presser_strategy/tables.md`, `key_metrics.json`, `sizing.csv`, equity PNGs |
-| Table 6, Appendix F | `backtests/presser/backtest_h234/results/family_holm.json`, `h4_results.json`, `answer_summary.csv`, `qa/kill_switches.json`, `qa/meeting_qa.csv`, `positions/positions_status.json`, `h4_fit/fit.json`; `backtests/presser/H234_LOCAL_SUMMARY.md` |
+| Table 6, Appendix F | `backtests/presser/backtest_h234/results/family_holm.json`, `h4_results.json`, `answer_summary.csv`, `qa/kill_switches.json`, `qa/meeting_qa.csv`, `positions/positions_status.json`, `h4_fit/fit.json`; `docs/results/h234-local-summary.md` |
 | Section 5.8, Tables 7-8 | `backtests/results/v2_d4/metrics.csv`, `walk_forward_picks.csv`, `consistency.json`, `README.md`; `preregistration/v2_DEVIATION_D4_FIXES.md` |
 | Section 5.7 | `backtests/results/v2_oos/hpg_reproduction/reproduce_report.json`, `consistency.json`; `backtests/presser/backtest_h234/hpg_run_all_backtests.log` |
 | Section 7 | `backtests/results/capacity/capacity_stats.csv`; `backtests/results/presser_strategy/README.md` |

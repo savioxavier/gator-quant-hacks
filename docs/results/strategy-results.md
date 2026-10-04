@@ -1,20 +1,20 @@
 # Strategy results: in-sample and out-of-sample
 
-> One-page Sharpe summary (with the D-4 corrections and benchmarks): `SHARPE_SUMMARY.md`.
+> One-page Sharpe summary (with the D-4 corrections and benchmarks): `docs/results/sharpe-summary.md`.
 
 This page collects the competition-format results (Gator Quant Hacks, Systematic Trading) for every strategy series
 the team has backtested. In-sample (IS) and out-of-sample (OOS) are reported separately, net of costs at 1x and at
 2x, and gross.
 
 - In-sample runs to 2024-10-02. Out of sample is 2024-10-03 .. 2026-10-02.
-- Nothing on this page is new computation. Every number comes from `v2_oos/` and `presser_strategy/`. The one
-  exception is the v2 drawdown convention (section 6), recomputed from `v2_oos/daily_returns.csv`.
+- Nothing on this page is new computation. Every number comes from `backtests/results/v2_oos/` and `backtests/results/presser_strategy/`. The one
+  exception is the v2 drawdown convention (section 6), recomputed from `backtests/results/v2_oos/daily_returns.csv`.
 - Written 2026-10-04 (UTC). No price level appears on this page or in the files it cites.
 
 ## 1. Standing labels (read these before any number)
 
 - **v2 (T4xE1) FAILED its pre-registered decision rule. The verdict stands.**
-  - The rule (`../../preregistration/HYPOTHESIS_v2.md`, sha256 464f8a5b...) needs a validation net Sharpe above 0
+  - The rule (`preregistration/HYPOTHESIS_v2.md`, sha256 464f8a5b...) needs a validation net Sharpe above 0
     AND a full in-sample Sharpe at 2x costs above 0.5.
   - T4xE1 passed validation (0.687) and failed the 2x gate (**0.387 <= 0.5**).
   - Two pre-registered falsifiers also tripped:
@@ -22,9 +22,9 @@ the team has backtested. In-sample (IS) and out-of-sample (OOS) are reported sep
     - 73.9% of full in-sample P&L came from 2022, more than half.
   - The Deflated Sharpe over 11 trials is 0.223 on the selection window and 0.436 on full IS.
 - **Deviation D-3 opened v2's out-of-sample window once, for reporting only**
-  (`../../preregistration/v2_DEVIATION_D3_OOS.md`, sha256 97585d3c...af1c69).
+  (`preregistration/v2_DEVIATION_D3_OOS.md`, sha256 97585d3c...af1c69).
   - D-3 was committed and pushed at 01:10 UTC on 2026-10-04, before any OOS return was computed.
-  - The run took place once, from 01:22:55 to 01:22:57 UTC, exit 0. Its lock record (`v2_oos/run/oos_chosen.json`)
+  - The run took place once, from 01:22:55 to 01:22:57 UTC, exit 0. Its lock record (`backtests/results/v2_oos/run/oos_chosen.json`)
     refuses any further run.
   - Code, signals, parameters, costs and windows were frozen, and nothing was re-chosen. The OOS result cannot
     reverse the failed verdict, whatever it shows.
@@ -44,7 +44,7 @@ the team has backtested. In-sample (IS) and out-of-sample (OOS) are reported sep
   - Its eras are never pooled into one Sharpe for inference. The pooled IS row is shown only because the
     competition format asks for it, with the two eras next to it.
 - **H2 / H3 / H4 (voice, face, combined): exploratory, post-NO-GO, pending.**
-  - They were pre-registered after G3 (`../../preregistration/presser_H2H3H4_EXPLORATORY.md`). In the locked
+  - They were pre-registered after G3 (`preregistration/presser_H2H3H4_EXPLORATORY.md`). In the locked
     family they stay at p = 1. They cannot overturn G3, rescue H1 or support a trading claim.
   - No voice or face feature has been joined to returns yet. Note 3 records a stage-1 bug that was fixed before any
     join, with the gates unchanged.
@@ -78,7 +78,7 @@ None of these series is a pre-registered success.
 **v2 rows (3.1-3.4):**
 - Daily returns in excess of the 3-month T-bill.
 - Max drawdown is measured from the window's starting NAV (section 6). † marks a value that differs from
-  `v2_oos/metrics.csv`, which measures from the first day's close; that value is given under the table.
+  `backtests/results/v2_oos/metrics.csv`, which measures from the first day's close; that value is given under the table.
 
 **Press-conference rows (3.5-3.6):**
 - Daily returns on $10m capital, with a constant N contracts per trade, sized so that in-sample gross vol is 10%.
@@ -97,7 +97,7 @@ TLT / 25% UUP at the next session's open.
 | **IS: full** | 2016-01-04..2024-10-02 | 2202 | 5.00% / 4.39% / 5.74% | 11.33% | 0.441 / **0.387** / 0.507 | -18.8% / -21.7% | 26.8 | 1.41 |
 | **OOS** | 2024-10-03..2026-10-02 | 501 | 3.82% / 3.42% / 4.32% | 6.30% | **0.607 / 0.544** / 0.687 | -7.4%† / -7.5%† | 17.7 | 0.84 |
 
-- † In `v2_oos/metrics.csv` the OOS drawdowns are -6.6% / -6.8%, and gross is -6.5% there against -7.2% here.
+- † In `backtests/results/v2_oos/metrics.csv` the OOS drawdowns are -6.6% / -6.8%, and gross is -6.5% there against -7.2% here.
 - Turnover is the one-way fraction of NAV traded per year, roll trades included.
 - OOS total return including the T-bill is 7.9% a year (geometric). OOS compounded excess return is +7.5%.
 - The validation window's first trading day is 2021-01-04.
@@ -109,10 +109,10 @@ TLT / 25% UUP at the next session's open.
 | IS: full | 2016-01-04..2024-10-02 | 2202 | 4.18% / 3.68% / 4.84% | 11.77% | 0.355 / 0.312 / 0.411 | -20.7% / -21.4%† | 23.2 | 1.12 |
 | OOS | 2024-10-03..2026-10-02 | 501 | -4.95% / -5.47% / -4.34% | 10.90% | **-0.454 / -0.502** / -0.399 | -16.6%† / -16.9%† | 23.7 | -0.66 |
 
-† In `v2_oos/metrics.csv`: IS at 2x -21.3%; OOS -15.6% / -15.9%.
+† In `backtests/results/v2_oos/metrics.csv`: IS at 2x -21.3%; OOS -15.6% / -15.9%.
 
 Only the frozen form (z clock from 2011) was evaluated out of sample, because it is the only form the frozen OOS
-stage computes. The 2015 warm-up form exists in sample only (`v2/`).
+stage computes. The 2015 warm-up form exists in sample only (`backtests/results/v2/`).
 
 ### 3.3 core_ER_6 alone — existing portfolio, the base of the portfolio test
 
@@ -128,7 +128,7 @@ stage computes. The 2015 warm-up form exists in sample only (`v2/`).
 | IS: full | 2016-01-04..2024-10-02 | 2202 | 6.42% / 5.62% / 7.26% | 6.19% | 1.038 / 0.909 / 1.173 | -7.7% / -7.9% | 0.6; 7.7 | 3.39 |
 | OOS | 2024-10-03..2026-10-02 | 501 | 4.97% / 4.02% / 5.96% | 5.72% | **0.870 / 0.703** / 1.043 | -5.9%† / -6.4%† | 0.3; 5.8 | 1.32 |
 
-† In `v2_oos/metrics.csv`: -5.3% / -5.7%. Adding T4xE1 therefore deepens the OOS drawdown from -4.7% to -5.9%
+† In `backtests/results/v2_oos/metrics.csv`: -5.3% / -5.7%. Adding T4xE1 therefore deepens the OOS drawdown from -4.7% to -5.9%
 (net 1x), which is more than the -5.3% that file implies.
 
 - The correlation of T4xE1 with core_ER_6 is 0.025 in sample and -0.16 out of sample.
@@ -176,7 +176,7 @@ carries no inferential weight.
 | BENCH-R | ES | 265 | 0.14 | 0.12 | 0.09 | 0.75 | 0.71 | 0.68 | 1.05 |
 
 BENCH-R ES is the only series that is positive at net 1x both in and out of sample. Full detail for every symbol,
-window and cost row is in `presser_strategy/tables.md`.
+window and cost row is in `backtests/results/presser_strategy/tables.md`.
 
 ## 4. How the T4xE1 out-of-sample result is distributed (descriptive, written after it was seen)
 
@@ -194,7 +194,7 @@ window and cost row is in `presser_strategy/tables.md`.
   - Powell months: adding T4xE1 moved core_ER_6's Sharpe from 0.97 to 0.94.
   - Warsh months: it moved it from -1.34 to 0.53.
 - The in-sample record has the same shape: 74% of full in-sample P&L came from 2022.
-- Sources: `v2_oos/oos_concentration.csv` and the pre-declared `v2_oos/run/by_chair_oos.csv`.
+- Sources: `backtests/results/v2_oos/oos_concentration.csv` and the pre-declared `backtests/results/v2_oos/run/by_chair_oos.csv`.
 
 ## 5. Cost assumptions, and why
 
@@ -229,7 +229,7 @@ window and cost row is in `presser_strategy/tables.md`.
 - **Why:** measuring the spread at the actual fill seconds is the most direct cost estimate available, and it was
   fixed in the ADDENDUM before any return was computed. The fee is an **unverified** broker estimate (A-04).
 - **2x** doubles the whole net 1x cost. Fixed-tick rows (2 ticks per side + fee, and twice that) are harsher and are
-  reported in `presser_strategy/tables.md`. At fixed 1x, the H1 ZT in-sample net Sharpe is -0.85.
+  reported in `backtests/results/presser_strategy/tables.md`. At fixed 1x, the H1 ZT in-sample net Sharpe is -0.85.
 - **Limitation:** these are top-of-book costs for a small order. At the stated N they leave out market impact
   (section 9), so the net rows are optimistic.
 
@@ -238,10 +238,10 @@ window and cost row is in `presser_strategy/tables.md`.
 | metric | v2 series | press-conference series |
 |---|---|---|
 | return basis | daily return in excess of the 3-month T-bill | daily P&L / $10m; futures P&L is already an excess return, and collateral interest is not included |
-| annualised return | mean x 252 (arithmetic); geometric versions are in `v2_oos/metrics.csv` | mean x 252 (arithmetic, constant N, no reinvestment) |
+| annualised return | mean x 252 (arithmetic); geometric versions are in `backtests/results/v2_oos/metrics.csv` | mean x 252 (arithmetic, constant N, no reinvestment) |
 | annualised vol | sd (ddof 1) x sqrt(252) | sd (ddof 1) x sqrt(252) |
 | Sharpe | annualised return / annualised vol | the same |
-| max drawdown | compounded equity. **Here: from the window's starting NAV of 1.0**, so a loss on the first day counts. `v2_oos/metrics.csv` and the committed `v2/` results start from the first day's close; the values differ only where marked † | additive equity 1 + cumulative return, peak including the window start. Below -100% would mean the constant N lost more than the capital (fixed 2x rows and H1 ZF net 2x only) |
+| max drawdown | compounded equity. **Here: from the window's starting NAV of 1.0**, so a loss on the first day counts. `backtests/results/v2_oos/metrics.csv` and the committed `backtests/results/v2/` results start from the first day's close; the values differ only where marked † | additive equity 1 + cumulative return, peak including the window start. Below -100% would mean the constant N lost more than the capital (fixed 2x rows and H1 ZF net 2x only) |
 | turnover | one-way fraction of NAV traded per year; portfolios: overlay only | contracts per year (entry and exit), and face notional per year as a multiple of capital |
 | NW t | Newey-West (Bartlett kernel, automatic lag) t of the mean daily return | per-trade t = per-trade Sharpe x sqrt(n) |
 
@@ -249,40 +249,40 @@ window and cost row is in `presser_strategy/tables.md`.
 
 v2 (in sample and out of sample shaded; net 1x, net 2x and gross; the lower panel is OOS rebased to 1):
 
-![T4xE1 equity curve](v2_oos/equity_T4xE1.png)
+![T4xE1 equity curve](../../backtests/results/v2_oos/equity_T4xE1.png)
 
-![Portfolio test equity curve](v2_oos/equity_portfolio.png)
+![Portfolio test equity curve](../../backtests/results/v2_oos/equity_portfolio.png)
 
-- Variant A: [`v2_oos/equity_VariantA_T0fxE1.png`](v2_oos/equity_VariantA_T0fxE1.png)
+- Variant A: [`backtests/results/v2_oos/equity_VariantA_T0fxE1.png`](../../backtests/results/v2_oos/equity_VariantA_T0fxE1.png)
 
 Press conference (cumulative P&L in % of $10m; the shaded area is out of sample):
 
-![BENCH-R ZT equity curve](presser_strategy/equity_benchr_ZT.png)
+![BENCH-R ZT equity curve](../../backtests/results/presser_strategy/equity_benchr_ZT.png)
 
-![H1-primary ZT equity curve](presser_strategy/equity_h1primary_ZT.png)
+![H1-primary ZT equity curve](../../backtests/results/presser_strategy/equity_h1primary_ZT.png)
 
-- All four symbols: [`presser_strategy/equity_benchr_all_symbols.png`](presser_strategy/equity_benchr_all_symbols.png),
-  [`presser_strategy/equity_h1primary_all_symbols.png`](presser_strategy/equity_h1primary_all_symbols.png)
+- All four symbols: [`backtests/results/presser_strategy/equity_benchr_all_symbols.png`](../../backtests/results/presser_strategy/equity_benchr_all_symbols.png),
+  [`backtests/results/presser_strategy/equity_h1primary_all_symbols.png`](../../backtests/results/presser_strategy/equity_h1primary_all_symbols.png)
 
 ## 8. Verification
 
 **v2 out of sample:**
 - **In-sample reproduction came first, before any OOS computation.**
   - The reported code path was re-run with all loaders stopped at 2024-10-02.
-  - It matched the committed `v2/` results bit for bit: max abs difference 0 on all 7 files, on the 3 frozen daily
+  - It matched the committed `backtests/results/v2/` results bit for bit: max abs difference 0 on all 7 files, on the 3 frozen daily
     series and on every number of `summary_is.json`. That covers T4xE1 chosen, 0.154 / 0.687 / 0.387, and DSR
     0.2225 / 0.4361.
-  - The D-3 run's own in-sample files agree with `v2/` (7/7) and with the frozen snapshot (10/10). The full-period
-    series reproduce every committed in-sample number to 1e-16 (`v2_oos/consistency.json`).
+  - The D-3 run's own in-sample files agree with `backtests/results/v2/` (7/7) and with the frozen snapshot (10/10). The full-period
+    series reproduce every committed in-sample number to 1e-16 (`backtests/results/v2_oos/consistency.json`).
 - **The unlock is narrow.**
   - The change is two files, `backtests/v2/run_v2.py` and `run_v2_chrono.py`, +52/-3 lines.
   - The unlock opens only when the D-3 file's sha256 matches the pinned hash and the output folder is
-    `v2_oos/run`.
+    `backtests/results/v2_oos/run`.
   - No signal, parameter, window or cost line changed. `v2lib.py`, `wirelib.py`, the pre-registrations and the
     document scores equal HEAD.
   - A second run is refused (tested after the run: exit 1).
 - **Provenance:**
-  - `v2_oos/RUN_LOG.md` was written before launch, with the command and the code and input hashes. Every hash
+  - `backtests/results/v2_oos/RUN_LOG.md` was written before launch, with the command and the code and input hashes. Every hash
     re-verifies against the current files.
   - Every data cache predates D-3, and nothing was downloaded at run time.
   - The only earlier OOS-shaped outputs are a synthetic report test and a placebo code-path test. Neither loaded
@@ -295,7 +295,7 @@ Press conference (cumulative P&L in % of $10m; the shaded area is out of sample)
 - **Two independent integrity audits** passed on order, single evaluation, hashes and the unlock diff.
 
 **Press-conference series:**
-- **Inputs:** every trade is a row of the committed suite output (`presser_h1/`), and every position equals the
+- **Inputs:** every trade is a row of the committed suite output (`backtests/results/presser_h1/`), and every position equals the
   frozen position file.
 - **Samples:**
   - H1-primary: 216 rows, 54 meetings x 4 symbols. The 11 untraded nonzero frozen meetings are all drop_timing = 1.
@@ -314,16 +314,16 @@ Press conference (cumulative P&L in % of $10m; the shaded area is out of sample)
 - No session or scratch paths.
 - PNG metadata holds only the plotting library's version.
 
-**For this page:** every v2 Sharpe, annualised return and vol was recomputed from `v2_oos/daily_returns.csv` and
+**For this page:** every v2 Sharpe, annualised return and vol was recomputed from `backtests/results/v2_oos/daily_returns.csv` and
 matches `metrics.csv`. The start-NAV drawdowns in section 3 come from the same series. The press-conference figures
-are copied from `presser_strategy/tables.md`.
+are copied from `backtests/results/presser_strategy/tables.md`.
 
 ## 9. Problems and open items
 
 **About the results:**
 1. **The T4xE1 OOS result is fragile** (section 4). The NW t is 0.84. The Sharpe without the last 20 sessions is
    -0.01, and five days carry 108% of the P&L. The portfolio gain is a Warsh-months effect.
-2. **Drawdown convention.** `v2_oos/metrics.csv` and the committed v2 results measure drawdown from the window's
+2. **Drawdown convention.** `backtests/results/v2_oos/metrics.csv` and the committed v2 results measure drawdown from the window's
    first-day close, so a first-day loss is not counted. T4xE1 lost 0.78% on 2024-10-03. This page uses the starting
    NAV instead. The values differ only where marked †: T4xE1 OOS -7.4% against -6.6%, Variant A OOS -16.6%
    against -15.6%, and core_ER_6 + T4xE1 OOS -5.9% against -5.3%.
@@ -339,20 +339,20 @@ are copied from `presser_strategy/tables.md`.
 
 **Labelling and housekeeping:**
 
-6. **`fixed2x` label.** In `presser_strategy/`, `fixed2x` is 4 ticks per side + $4 per side, which is twice C2+F.
+6. **`fixed2x` label.** In `backtests/results/presser_strategy/`, `fixed2x` is 4 ticks per side + $4 per side, which is twice C2+F.
    It is not the suite's C4F row (4 ticks + $2 per side). The label is correct, but the row sits $4 a round trip off
    C4F.
 7. **README wording:**
-   - `presser_strategy/README.md` gives the ZT $19.63 round trip as "in 2018". That holds for H1 only: for BENCH-R
+   - `backtests/results/presser_strategy/README.md` gives the ZT $19.63 round trip as "in 2018". That holds for H1 only: for BENCH-R
      it applies to 2016-2018.
-   - `presser_strategy/per_trade.csv` stores rounded position-level dollars, off by up to about $5. The metrics use
+   - `backtests/results/presser_strategy/per_trade.csv` stores rounded position-level dollars, off by up to about $5. The metrics use
      full precision.
 8. **Line endings break the positions manifest.** The frozen positions manifest was hashed on Windows (CRLF), but
    git stores LF, so a raw byte hash fails on every checkout. The presser builder accepts either form. Other stages
    that hash the committed copies raw (for example on Linux) will refuse.
-9. **Stale documents.** `backtests/v2/README.md`, `backtests/README.md` and the committed `summary.md` still say the
-   v2 out-of-sample window was "not evaluated, and never will be". They should point to `v2_oos/` once D-3 is
-   committed. `summary.md` is a committed result and was left unchanged.
+9. **Stale documents.** `docs/guides/v2-strategy.md`, `docs/guides/running-backtests.md` and the committed `backtests/results/summary.md` still say the
+   v2 out-of-sample window was "not evaluated, and never will be". They should point to `backtests/results/v2_oos/` once D-3 is
+   committed. `backtests/results/summary.md` is a committed result and was left unchanged.
 
 **Before committing (team decisions):**
 
@@ -361,10 +361,10 @@ are copied from `presser_strategy/tables.md`.
       `describe_v2_oos.py` exist only as uncommitted changes. Their provenance rests on the hashes in `RUN_LOG.md`.
     - Another process kept committing to the same clone during this work. HEAD moved ee28b16 -> 1c8c9e1 -> ead6630
       -> b0fc565 (H2/H3/H4 and HiPerGator files only; none touches v2 or these results).
-    - Commit the scripts together with `v2_oos/`, so a stash or checkout cannot lose them.
-11. **Licensed-data aggregates.** `presser_strategy/capacity_top_of_book.csv` holds displayed-size percentiles (in
+    - Commit the scripts together with `backtests/results/v2_oos/`, so a stash or checkout cannot lose them.
+11. **Licensed-data aggregates.** `backtests/results/presser_strategy/capacity_top_of_book.csv` holds displayed-size percentiles (in
     contracts, not prices) derived from the licensed quote file. The team should decide whether it goes to git.
-12. **Local paths in `v2_oos/RUN_LOG.md`.** It contains three local home-directory paths (interpreter, data cache,
+12. **Local paths in `backtests/results/v2_oos/RUN_LOG.md`.** It contains three local home-directory paths (interpreter, data cache,
     solo repo); the team may want placeholders there. Also, `run/run_stdout.log` was written after the run and is
     not in RUN_LOG's hash list (RUN_LOG says so).
 13. **Minor timing note.** D-3 says it was written "at about 01:15 UTC". Its file time is 01:09:57 and it was
@@ -374,12 +374,12 @@ are copied from `presser_strategy/tables.md`.
 
 | what | file |
 |---|---|
-| v2 metrics, every series x window x cost | `v2_oos/metrics.csv`, `v2_oos/metrics.md` |
-| v2 daily series (returns only) | `v2_oos/daily_returns.csv`, `v2_oos/daily_returns.parquet` |
-| v2 run record and lock | `v2_oos/RUN_LOG.md`, `v2_oos/run/oos_chosen.json` |
-| v2 OOS write-up and concentration | `v2_oos/README.md`, `v2_oos/oos_concentration.csv`, `v2_oos/consistency.json` |
-| v2 in-sample (committed) | `v2/summary_is.json`, `summary.md` |
-| press-conference metrics and tables | `presser_strategy/metrics.csv`, `presser_strategy/tables.md`, `presser_strategy/key_metrics.json` |
-| press-conference daily series, trades, sizing, checks | `presser_strategy/daily_returns.csv`, `presser_strategy/per_trade.csv`, `presser_strategy/sizing.csv`, `presser_strategy/qa.json` |
-| press-conference write-up and conventions | `presser_strategy/README.md` |
-| pre-registrations | `../../preregistration/` (HYPOTHESIS_v2, DEVIATIONS, v2_DEVIATION_D3_OOS, presser_ADDENDUM, presser_team_FINAL_PLAN, presser_DEVIATION_D1, presser_H2H3H4_EXPLORATORY and notes 1-3, PREREG_LOG) |
+| v2 metrics, every series x window x cost | `backtests/results/v2_oos/metrics.csv`, `backtests/results/v2_oos/metrics.md` |
+| v2 daily series (returns only) | `backtests/results/v2_oos/daily_returns.csv`, `backtests/results/v2_oos/daily_returns.parquet` |
+| v2 run record and lock | `backtests/results/v2_oos/RUN_LOG.md`, `backtests/results/v2_oos/run/oos_chosen.json` |
+| v2 OOS write-up and concentration | `backtests/results/v2_oos/README.md`, `backtests/results/v2_oos/oos_concentration.csv`, `backtests/results/v2_oos/consistency.json` |
+| v2 in-sample (committed) | `backtests/results/v2/summary_is.json`, `backtests/results/summary.md` |
+| press-conference metrics and tables | `backtests/results/presser_strategy/metrics.csv`, `backtests/results/presser_strategy/tables.md`, `backtests/results/presser_strategy/key_metrics.json` |
+| press-conference daily series, trades, sizing, checks | `backtests/results/presser_strategy/daily_returns.csv`, `backtests/results/presser_strategy/per_trade.csv`, `backtests/results/presser_strategy/sizing.csv`, `backtests/results/presser_strategy/qa.json` |
+| press-conference write-up and conventions | `backtests/results/presser_strategy/README.md` |
+| pre-registrations | `preregistration/` (HYPOTHESIS_v2, DEVIATIONS, v2_DEVIATION_D3_OOS, presser_ADDENDUM, presser_team_FINAL_PLAN, presser_DEVIATION_D1, presser_H2H3H4_EXPLORATORY and notes 1-3, PREREG_LOG) |

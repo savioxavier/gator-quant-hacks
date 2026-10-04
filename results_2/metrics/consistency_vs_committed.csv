@@ -1,0 +1,427 @@
+row,metric,ours,committed,abs_diff,committed_file
+T4xE1|original_D3|selection,start (net_1x),2016-01-04,2016-01-04,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|selection,end (net_1x),2020-12-31,2020-12-31,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|selection,n_days (net_1x),1259,1259,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|selection,ann_return_arith (net_1x),0.01246453377970179,0.0124645337797017,9.02056e-17,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|selection,ann_return_geo (net_1x),0.00922389261932155,0.0092238926193215,5.0307e-17,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|selection,ann_total_return_geo (net_1x),0.020581526621529234,0.0205815266215292,3.46945e-17,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|selection,ann_vol (net_1x),0.08108047309851503,0.081080473098515,2.77556e-17,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|selection,sharpe (net_1x),0.15373040268964683,0.1537304026896468,2.77556e-17,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|selection,max_drawdown (net_1x),-0.1614290162838925,-0.1614290162838925,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|selection,hit_rate (net_1x),0.49404289118347894,0.4940428911834789,5.55112e-17,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|selection,nw_t (net_1x),0.3729875079730859,0.3729875079730859,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|selection,sharpe (net_2x),0.0532859271269235,0.0532859271269235,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|selection,sharpe (gross),0.2690563825384741,0.2690563825384741,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|selection,turnover_per_year,35.04671243551755,35.04671243551755,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|selection,start,2016-01-04,2016-01-04,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|selection,end,2020-12-31,2020-12-31,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|selection,n_days,1259,1259,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|selection,ann_excess_arith,0.01246453377970179,0.0124645337797017,9.02056e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|selection,ann_excess_geo,0.00922389261932155,0.0092238926193215,5.0307e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|selection,vol,0.08108047309851503,0.081080473098515,2.77556e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|selection,sharpe_net1x,0.15373040268964683,0.1537304026896468,2.77556e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|selection,sharpe_net2x,0.0532859271269235,0.0532859271269235,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|selection,sharpe_gross,0.2690563825384741,0.2690563825384741,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|selection,max_dd_excess,-0.1614290162838925,-0.1614290162838925,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|selection,turnover_per_year,35.04671243551755,35.04671243551755,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|selection,nw_t,0.3729875079730859,0.3729875079730859,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|validation,start (net_1x),2021-01-04,2021-01-04,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|validation,end (net_1x),2024-10-02,2024-10-02,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|validation,n_days (net_1x),943,943,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|validation,ann_return_arith (net_1x),0.10000979917335238,0.1000097991733523,8.32667e-17,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|validation,ann_return_geo (net_1x),0.09352455119698155,0.0935245511969815,5.55112e-17,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|validation,ann_total_return_geo (net_1x),0.12610839608547053,0.1261083960854705,2.77556e-17,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|validation,ann_vol (net_1x),0.14561144314463287,0.1456114431446328,5.55112e-17,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|validation,sharpe (net_1x),0.6868265090540633,0.6868265090540633,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|validation,max_drawdown (net_1x),-0.1775111808257892,-0.1775111808257892,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|validation,hit_rate (net_1x),0.503711558854719,0.503711558854719,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|validation,nw_t (net_1x),1.4468393682074723,1.4468393682074725,2.22045e-16,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|validation,sharpe (net_2x),0.663974303823573,0.663974303823573,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|validation,sharpe (gross),0.7213013499041809,0.7213013499041809,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|validation,turnover_per_year,15.876856556816284,15.876856556816284,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|validation,start,2021-01-04,2021-01-04,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|validation,end,2024-10-02,2024-10-02,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|validation,n_days,943,943,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|validation,ann_excess_arith,0.10000979917335238,0.1000097991733523,8.32667e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|validation,ann_excess_geo,0.09352455119698155,0.0935245511969815,5.55112e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|validation,vol,0.14561144314463287,0.1456114431446328,5.55112e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|validation,sharpe_net1x,0.6868265090540633,0.6868265090540633,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|validation,sharpe_net2x,0.663974303823573,0.663974303823573,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|validation,sharpe_gross,0.7213013499041809,0.7213013499041809,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|validation,max_dd_excess,-0.1775111808257892,-0.1775111808257892,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|validation,turnover_per_year,15.876856556816284,15.876856556816284,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|validation,nw_t,1.4468393682074723,1.4468393682074725,2.22045e-16,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|full_is,start (net_1x),2016-01-04,2016-01-04,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|full_is,end (net_1x),2024-10-02,2024-10-02,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|full_is,n_days (net_1x),2202,2202,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|full_is,ann_return_arith (net_1x),0.0499555352629954,0.0499555352629954,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|full_is,ann_return_geo (net_1x),0.04449913620629875,0.0444991362062987,4.85723e-17,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|full_is,ann_total_return_geo (net_1x),0.06450515080319397,0.0645051508031939,6.93889e-17,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|full_is,ann_vol (net_1x),0.11331099772297948,0.1133109977229794,8.32667e-17,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|full_is,sharpe (net_1x),0.4408710210559237,0.4408710210559237,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|full_is,max_drawdown (net_1x),-0.1875248771690362,-0.1875248771690362,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|full_is,hit_rate (net_1x),0.4981834695731153,0.4981834695731153,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|full_is,nw_t (net_1x),1.407431533834917,1.407431533834917,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|full_is,sharpe (net_2x),0.38717212451165833,0.3871721245116583,5.55112e-17,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|full_is,sharpe (gross),0.507045155875183,0.507045155875183,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|full_is,turnover_per_year,26.837278242231765,26.837278242231765,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|full_is,start,2016-01-04,2016-01-04,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|full_is,end,2024-10-02,2024-10-02,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|full_is,n_days,2202,2202,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|full_is,ann_excess_arith,0.0499555352629954,0.0499555352629954,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|full_is,ann_excess_geo,0.04449913620629875,0.0444991362062987,4.85723e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|full_is,vol,0.11331099772297948,0.1133109977229794,8.32667e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|full_is,sharpe_net1x,0.4408710210559237,0.4408710210559237,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|full_is,sharpe_net2x,0.38717212451165833,0.3871721245116583,5.55112e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|full_is,sharpe_gross,0.507045155875183,0.507045155875183,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|full_is,max_dd_excess,-0.1875248771690362,-0.1875248771690362,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|full_is,turnover_per_year,26.837278242231765,26.837278242231765,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|full_is,nw_t,1.407431533834917,1.407431533834917,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|oos,start (net_1x),2024-10-03,2024-10-03,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|oos,end (net_1x),2026-10-02,2026-10-02,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|oos,n_days (net_1x),501,501,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|oos,ann_return_arith (net_1x),0.03824334967367566,0.0382433496736756,6.245e-17,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|oos,ann_return_geo (net_1x),0.036929613895262836,0.0369296138952628,3.46945e-17,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|oos,ann_total_return_geo (net_1x),0.07879867577897492,0.0787986757789749,2.77556e-17,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|oos,ann_vol (net_1x),0.06296895709975048,0.0629689570997504,8.32667e-17,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|oos,sharpe (net_1x),0.6073365581248797,0.6073365581248797,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|oos,max_drawdown (net_1x),-0.06647745134678906,-0.066477451346789,6.93889e-17,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|oos,hit_rate (net_1x),0.499001996007984,0.499001996007984,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|oos,nw_t (net_1x),0.8418206935738645,0.8418206935738645,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|oos,sharpe (net_2x),0.5435449927490899,0.5435449927490899,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|oos,sharpe (gross),0.6865896933635945,0.6865896933635945,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|oos,turnover_per_year,17.661913591053864,17.661913591053864,0,backtests/results/v2_oos/metrics.csv
+T4xE1|original_D3|oos,start,2024-10-03,2024-10-03,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|oos,end,2026-10-02,2026-10-02,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|oos,n_days,501,501,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|oos,ann_excess_arith,0.03824334967367566,0.0382433496736756,6.245e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|oos,ann_excess_geo,0.036929613895262836,0.0369296138952628,3.46945e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|oos,vol,0.06296895709975048,0.0629689570997504,8.32667e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|oos,sharpe_net1x,0.6073365581248797,0.6073365581248797,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|oos,sharpe_net2x,0.5435449927490899,0.5435449927490899,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|oos,sharpe_gross,0.6865896933635945,0.6865896933635945,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|oos,max_dd_excess,-0.06647745134678906,-0.066477451346789,6.93889e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|oos,turnover_per_year,17.661913591053864,17.661913591053864,0,backtests/results/v2_d4/metrics.csv
+T4xE1|original_D3|oos,nw_t,0.8418206935738645,0.8418206935738645,0,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|selection,start,2016-01-04,2016-01-04,0,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|selection,end,2020-12-31,2020-12-31,0,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|selection,n_days,1259,1259,0,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|selection,ann_excess_arith,0.012914925413065588,0.0129149254130655,8.84709e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|selection,ann_excess_geo,0.009617141754539649,0.0096171417545396,4.85723e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|selection,vol,0.08182457864307187,0.0818245786430718,6.93889e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|selection,sharpe_net1x,0.15783674816587767,0.1578367481658776,8.32667e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|selection,sharpe_net2x,0.057915652283035274,0.0579156522830352,7.63278e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|selection,sharpe_gross,0.27246074235697404,0.272460742356974,5.55112e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|selection,max_dd_excess,-0.16753451704598488,-0.1675345170459848,8.32667e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|selection,turnover_per_year,35.19328458120466,35.19328458120466,0,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|selection,nw_t,0.3793081537623261,0.3793081537623261,0,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|validation,start,2021-01-04,2021-01-04,0,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|validation,end,2024-10-02,2024-10-02,0,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|validation,n_days,943,943,0,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|validation,ann_excess_arith,0.10105721866137671,0.1010572186613767,1.38778e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|validation,ann_excess_geo,0.09469442518213422,0.0946944251821342,2.77556e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|validation,vol,0.14544371905649228,0.1454437190564922,8.32667e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|validation,sharpe_net1x,0.6948200947895505,0.6948200947895505,0,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|validation,sharpe_net2x,0.6708525740952173,0.6708525740952173,0,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|validation,sharpe_gross,0.7303986468265835,0.7303986468265835,0,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|validation,max_dd_excess,-0.17978755857510098,-0.1797875585751009,8.32667e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|validation,turnover_per_year,16.618483896477784,16.618483896477784,0,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|validation,nw_t,1.4599938112346822,1.4599938112346822,0,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|full_is,start,2016-01-04,2016-01-04,0,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|full_is,end,2024-10-02,2024-10-02,0,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|full_is,n_days,2202,2202,0,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|full_is,ann_excess_arith,0.05066160231277376,0.0506616023127737,5.55112e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|full_is,ann_excess_geo,0.045210311521361124,0.0452103115213611,2.08167e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|full_is,vol,0.11352477530169121,0.1135247753016912,1.38778e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|full_is,sharpe_net1x,0.4462603178745868,0.4462603178745868,0,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|full_is,sharpe_net2x,0.39191397310961745,0.3919139731096174,5.55112e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|full_is,sharpe_gross,0.5130322187598507,0.5130322187598507,0,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|full_is,max_dd_excess,-0.18505514322748673,-0.1850551432274867,2.77556e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|full_is,turnover_per_year,27.238681018217626,27.238681018217623,3.55271e-15,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|full_is,nw_t,1.418115425321829,1.418115425321829,0,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|oos,start,2024-10-03,2024-10-03,0,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|oos,end,2026-10-02,2026-10-02,0,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|oos,n_days,501,501,0,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|oos,ann_excess_arith,0.038981367340582884,0.0389813673405828,8.32667e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|oos,ann_excess_geo,0.037705293443198284,0.0377052934431982,8.32667e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|oos,vol,0.06281303536108165,0.0628130353610816,5.55112e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|oos,sharpe_net1x,0.6205935936147319,0.6205935936147319,0,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|oos,sharpe_net2x,0.5538164909107913,0.5538164909107913,0,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|oos,sharpe_gross,0.7028173883005048,0.7028173883005048,0,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|oos,max_dd_excess,-0.06433268239198542,-0.0643326823919854,1.38778e-17,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|oos,turnover_per_year,18.464515183012352,18.464515183012352,0,backtests/results/v2_d4/metrics.csv
+T4xE1|D4_both_fixes|oos,nw_t,0.8635175789556042,0.8635175789556042,0,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|selection,start (net_1x),2016-01-04,2016-01-04,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|selection,end (net_1x),2020-12-31,2020-12-31,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|selection,n_days (net_1x),1259,1259,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|selection,ann_return_arith (net_1x),0.06524512815293702,0.065245128152937,2.77556e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|selection,ann_return_geo (net_1x),0.06539546997624268,0.0653954699762426,8.32667e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|selection,ann_total_return_geo (net_1x),0.07738384077137295,0.0773838407713729,4.16334e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|selection,ann_vol (net_1x),0.06146489340646745,0.0614648934064674,4.85723e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|selection,sharpe (net_1x),1.0615023395789671,1.0615023395789671,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|selection,max_drawdown (net_1x),-0.0734997652050744,-0.0734997652050744,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|selection,hit_rate (net_1x),0.5480540111199365,0.5480540111199365,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|selection,nw_t (net_1x),2.4835009329404523,2.4835009329404523,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|selection,sharpe (net_2x),0.9396020906966858,0.9396020906966858,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|selection,sharpe (gross),1.1829498215110852,1.1829498215110852,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|selection,turnover_per_year,0.5966431926844836,0.5966431926844836,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|selection,start,2016-01-04,2016-01-04,0,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|selection,end,2020-12-31,2020-12-31,0,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|selection,n_days,1259,1259,0,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|selection,ann_excess_arith,0.06524512815293702,0.065245128152937,2.77556e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|selection,ann_excess_geo,0.06539546997624268,0.0653954699762426,8.32667e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|selection,vol,0.06146489340646745,0.0614648934064674,4.85723e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|selection,sharpe_net1x,1.0615023395789671,1.0615023395789671,0,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|selection,sharpe_net2x,0.9396020906966858,0.9396020906966858,0,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|selection,sharpe_gross,1.1829498215110852,1.1829498215110852,0,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|selection,max_dd_excess,-0.0734997652050744,-0.0734997652050744,0,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|selection,turnover_per_year,0.5966431926844836,0.5966431926844836,0,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|selection,nw_t,2.4835009329404523,2.4835009329404523,0,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|validation,start (net_1x),2021-01-04,2021-01-04,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|validation,end (net_1x),2024-10-02,2024-10-02,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|validation,n_days (net_1x),943,943,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|validation,ann_return_arith (net_1x),0.05632510655141425,0.0563251065514142,4.85723e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|validation,ann_return_geo (net_1x),0.055923169028542,0.055923169028542,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|validation,ann_total_return_geo (net_1x),0.08739134844414864,0.0873913484441486,4.16334e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|validation,ann_vol (net_1x),0.061726864277961035,0.061726864277961,3.46945e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|validation,sharpe (net_1x),0.9124893546799618,0.9124893546799618,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|validation,max_drawdown (net_1x),-0.07509132914903671,-0.0750913291490367,1.38778e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|validation,hit_rate (net_1x),0.5461293743372216,0.5461293743372216,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|validation,nw_t (net_1x),1.8775997972753533,1.8775997972753533,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|validation,sharpe (net_2x),0.7947003304107401,0.7947003304107401,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|validation,sharpe (gross),1.03012222748769,1.03012222748769,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|validation,turnover_per_year,0.39051685657818186,0.3905168565781818,5.55112e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|validation,start,2021-01-04,2021-01-04,0,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|validation,end,2024-10-02,2024-10-02,0,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|validation,n_days,943,943,0,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|validation,ann_excess_arith,0.05632510655141425,0.0563251065514142,4.85723e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|validation,ann_excess_geo,0.055923169028542,0.055923169028542,0,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|validation,vol,0.061726864277961035,0.061726864277961,3.46945e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|validation,sharpe_net1x,0.9124893546799618,0.9124893546799618,0,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|validation,sharpe_net2x,0.7947003304107401,0.7947003304107401,0,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|validation,sharpe_gross,1.03012222748769,1.03012222748769,0,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|validation,max_dd_excess,-0.07509132914903671,-0.0750913291490367,1.38778e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|validation,turnover_per_year,0.39051685657818186,0.3905168565781818,5.55112e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|validation,nw_t,1.8775997972753533,1.8775997972753533,0,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|full_is,start (net_1x),2016-01-04,2016-01-04,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|full_is,end (net_1x),2024-10-02,2024-10-02,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|full_is,n_days (net_1x),2202,2202,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|full_is,ann_return_arith (net_1x),0.06142515523275719,0.0614251552327571,9.02056e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|full_is,ann_return_geo (net_1x),0.06132862641497816,0.0613286264149781,6.245e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|full_is,ann_total_return_geo (net_1x),0.08165820113248556,0.0816582011324855,6.93889e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|full_is,ann_vol (net_1x),0.061563839132568535,0.0615638391325685,3.46945e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|full_is,sharpe (net_1x),0.9977473156033575,0.9977473156033576,1.11022e-16,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|full_is,max_drawdown (net_1x),-0.07509132914903693,-0.0750913291490369,2.77556e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|full_is,hit_rate (net_1x),0.5472297910990009,0.5472297910990009,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|full_is,nw_t (net_1x),3.1201461355255162,3.120146135525516,4.44089e-16,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|full_is,sharpe (net_2x),0.8775538163390822,0.8775538163390822,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|full_is,sharpe (gross),1.1176183755837044,1.1176183755837044,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|full_is,turnover_per_year,0.508370197703447,0.508370197703447,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|full_is,start,2016-01-04,2016-01-04,0,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|full_is,end,2024-10-02,2024-10-02,0,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|full_is,n_days,2202,2202,0,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|full_is,ann_excess_arith,0.06142515523275719,0.0614251552327571,9.02056e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|full_is,ann_excess_geo,0.06132862641497816,0.0613286264149781,6.245e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|full_is,vol,0.061563839132568535,0.0615638391325685,3.46945e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|full_is,sharpe_net1x,0.9977473156033575,0.9977473156033576,1.11022e-16,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|full_is,sharpe_net2x,0.8775538163390822,0.8775538163390822,0,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|full_is,sharpe_gross,1.1176183755837044,1.1176183755837044,0,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|full_is,max_dd_excess,-0.07509132914903693,-0.0750913291490369,2.77556e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|full_is,turnover_per_year,0.508370197703447,0.508370197703447,0,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|full_is,nw_t,3.1201461355255162,3.120146135525516,4.44089e-16,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|oos,start (net_1x),2024-10-03,2024-10-03,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|oos,end (net_1x),2026-10-02,2026-10-02,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|oos,n_days (net_1x),501,501,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|oos,ann_return_arith (net_1x),0.034480996222839885,0.0344809962228398,8.32667e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|oos,ann_return_geo (net_1x),0.03337865157511488,0.0333786515751148,8.32667e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|oos,ann_total_return_geo (net_1x),0.07510415897116474,0.0751041589711647,4.16334e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|oos,ann_vol (net_1x),0.05740050870332594,0.0574005087033259,4.16334e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|oos,sharpe (net_1x),0.600708896171193,0.600708896171193,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|oos,max_drawdown (net_1x),-0.04747585746409466,-0.0474758574640946,6.245e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|oos,hit_rate (net_1x),0.5389221556886228,0.5389221556886228,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|oos,nw_t (net_1x),0.9494519425181207,0.9494519425181208,1.11022e-16,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|oos,sharpe (net_2x),0.4556214425383669,0.4556214425383669,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|oos,sharpe (gross),0.7455360259358799,0.7455360259358799,0,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|oos,turnover_per_year,0.31082163879008906,0.310821638790089,5.55112e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6|as_committed|oos,start,2024-10-03,2024-10-03,0,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|oos,end,2026-10-02,2026-10-02,0,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|oos,n_days,501,501,0,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|oos,ann_excess_arith,0.034480996222839885,0.0344809962228398,8.32667e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|oos,ann_excess_geo,0.03337865157511488,0.0333786515751148,8.32667e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|oos,vol,0.05740050870332594,0.0574005087033259,4.16334e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|oos,sharpe_net1x,0.600708896171193,0.600708896171193,0,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|oos,sharpe_net2x,0.4556214425383669,0.4556214425383669,0,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|oos,sharpe_gross,0.7455360259358799,0.7455360259358799,0,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|oos,max_dd_excess,-0.04747585746409466,-0.0474758574640946,6.245e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|oos,turnover_per_year,0.31082163879008906,0.310821638790089,5.55112e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6|as_committed|oos,nw_t,0.9494519425181207,0.9494519425181208,1.11022e-16,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|selection,start (net_1x),2016-01-04,2016-01-04,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|selection,end (net_1x),2020-12-31,2020-12-31,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|selection,n_days (net_1x),1259,1259,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|selection,ann_return_arith (net_1x),0.05758270993151224,0.0575827099315122,3.46945e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|selection,ann_return_geo (net_1x),0.057228785802078574,0.0572287858020785,7.63278e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|selection,ann_total_return_geo (net_1x),0.0691252885375615,0.0691252885375615,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|selection,ann_vol (net_1x),0.06204969871657016,0.0620496987165701,5.55112e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|selection,sharpe (net_1x),0.9280095008122091,0.9280095008122092,1.11022e-16,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|selection,max_drawdown (net_1x),-0.062436388963052036,-0.062436388963052,3.46945e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|selection,hit_rate (net_1x),0.5377283558379666,0.5377283558379666,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|selection,nw_t (net_1x),2.336776816169778,2.336776816169778,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|selection,sharpe (net_2x),0.7782119749101133,0.7782119749101133,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|selection,sharpe (gross),1.0836573244775263,1.0836573244775265,2.22045e-16,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|selection,turnover_per_year,0.7674960651463797,0.7674960651463797,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|selection,fed_sleeve_turnover_per_year,10.302774378297718,10.302774378297718,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|selection,start,2016-01-04,2016-01-04,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|selection,end,2020-12-31,2020-12-31,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|selection,n_days,1259,1259,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|selection,ann_excess_arith,0.05758270993151224,0.0575827099315122,3.46945e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|selection,ann_excess_geo,0.057228785802078574,0.0572287858020785,7.63278e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|selection,vol,0.06204969871657016,0.0620496987165701,5.55112e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|selection,sharpe_net1x,0.9280095008122091,0.9280095008122092,1.11022e-16,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|selection,sharpe_net2x,0.7782119749101133,0.7782119749101133,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|selection,sharpe_gross,1.0836573244775263,1.0836573244775265,2.22045e-16,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|selection,max_dd_excess,-0.062436388963052036,-0.062436388963052,3.46945e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|selection,turnover_per_year,0.7674960651463797,0.7674960651463797,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|selection,nw_t,2.336776816169778,2.336776816169778,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|selection,fed_sleeve_turnover_per_year,10.302774378297718,10.302774378297718,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|validation,start (net_1x),2021-01-04,2021-01-04,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|validation,end (net_1x),2024-10-02,2024-10-02,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|validation,n_days (net_1x),943,943,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|validation,ann_return_arith (net_1x),0.07310675621688367,0.0731067562168836,6.93889e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|validation,ann_return_geo (net_1x),0.07378947369709499,0.0737894736970949,8.32667e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|validation,ann_total_return_geo (net_1x),0.10578795140664932,0.1057879514066493,1.38778e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|validation,ann_vol (net_1x),0.06170721623429811,0.0617072162342981,1.38778e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|validation,sharpe (net_1x),1.18473593006209,1.18473593006209,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|validation,max_drawdown (net_1x),-0.07719460214866036,-0.0771946021486603,6.93889e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|validation,hit_rate (net_1x),0.5418875927889714,0.5418875927889714,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|validation,nw_t (net_1x),2.480745307064193,2.480745307064193,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|validation,sharpe (net_2x),1.0833776178678092,1.0833776178678092,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|validation,sharpe (gross),1.2932165217059983,1.2932165217059983,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|validation,turnover_per_year,0.46420922709307005,0.46420922709307,5.55112e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|validation,fed_sleeve_turnover_per_year,4.240308431392421,4.240308431392421,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|validation,start,2021-01-04,2021-01-04,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|validation,end,2024-10-02,2024-10-02,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|validation,n_days,943,943,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|validation,ann_excess_arith,0.07310675621688367,0.0731067562168836,6.93889e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|validation,ann_excess_geo,0.07378947369709499,0.0737894736970949,8.32667e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|validation,vol,0.06170721623429811,0.0617072162342981,1.38778e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|validation,sharpe_net1x,1.18473593006209,1.18473593006209,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|validation,sharpe_net2x,1.0833776178678092,1.0833776178678092,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|validation,sharpe_gross,1.2932165217059983,1.2932165217059983,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|validation,max_dd_excess,-0.07719460214866036,-0.0771946021486603,6.93889e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|validation,turnover_per_year,0.46420922709307005,0.46420922709307,5.55112e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|validation,nw_t,2.480745307064193,2.480745307064193,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|validation,fed_sleeve_turnover_per_year,4.240308431392421,4.240308431392421,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|full_is,start (net_1x),2016-01-04,2016-01-04,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|full_is,end (net_1x),2024-10-02,2024-10-02,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|full_is,n_days (net_1x),2202,2202,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|full_is,ann_return_arith (net_1x),0.06423083692838112,0.0642308369283811,2.77556e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|full_is,ann_return_geo (net_1x),0.06428935100501065,0.0642893510050106,5.55112e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|full_is,ann_total_return_geo (net_1x),0.08467475253674506,0.084674752536745,5.55112e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|full_is,ann_vol (net_1x),0.06189111436926656,0.0618911143692665,5.55112e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|full_is,sharpe (net_1x),1.0378038525070798,1.0378038525070798,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|full_is,max_drawdown (net_1x),-0.07719460214866125,-0.0771946021486612,5.55112e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|full_is,hit_rate (net_1x),0.5395095367847411,0.5395095367847411,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|full_is,nw_t (net_1x),3.3900355228500922,3.390035522850092,4.44089e-16,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|full_is,sharpe (net_2x),0.9087113208084324,0.9087113208084324,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|full_is,sharpe (gross),1.1733067253653262,1.1733067253653262,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|full_is,turnover_per_year,0.6376143720109251,0.6376143720109251,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|full_is,fed_sleeve_turnover_per_year,7.706541232098039,7.706541232098039,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|full_is,start,2016-01-04,2016-01-04,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|full_is,end,2024-10-02,2024-10-02,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|full_is,n_days,2202,2202,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|full_is,ann_excess_arith,0.06423083692838112,0.0642308369283811,2.77556e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|full_is,ann_excess_geo,0.06428935100501065,0.0642893510050106,5.55112e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|full_is,vol,0.06189111436926656,0.0618911143692665,5.55112e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|full_is,sharpe_net1x,1.0378038525070798,1.0378038525070798,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|full_is,sharpe_net2x,0.9087113208084324,0.9087113208084324,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|full_is,sharpe_gross,1.1733067253653262,1.1733067253653262,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|full_is,max_dd_excess,-0.07719460214866125,-0.0771946021486612,5.55112e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|full_is,turnover_per_year,0.6376143720109251,0.6376143720109251,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|full_is,nw_t,3.3900355228500922,3.390035522850092,4.44089e-16,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|full_is,fed_sleeve_turnover_per_year,7.706541232098039,7.706541232098039,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|oos,start (net_1x),2024-10-03,2024-10-03,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|oos,end (net_1x),2026-10-02,2026-10-02,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|oos,n_days (net_1x),501,501,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|oos,ann_return_arith (net_1x),0.049740104329565715,0.0497401043295657,1.38778e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|oos,ann_return_geo (net_1x),0.04927998539535294,0.0492799853953529,4.16334e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|oos,ann_total_return_geo (net_1x),0.0916451717724811,0.0916451717724811,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|oos,ann_vol (net_1x),0.0571691513809197,0.0571691513809197,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|oos,sharpe (net_1x),0.8700514723079581,0.8700514723079581,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|oos,max_drawdown (net_1x),-0.053176970928366485,-0.0531769709283664,8.32667e-17,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|oos,hit_rate (net_1x),0.5389221556886228,0.5389221556886228,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|oos,nw_t (net_1x),1.3227432497269587,1.322743249726959,2.22045e-16,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|oos,sharpe (net_2x),0.7025224644259817,0.7025224644259817,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|oos,sharpe (gross),1.043033587377564,1.043033587377564,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|oos,turnover_per_year,0.3112991954793225,0.3112991954793225,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|oos,fed_sleeve_turnover_per_year,5.767237974142541,5.767237974142541,0,backtests/results/v2_oos/metrics.csv
+core_ER_6+T4xE1|original_D3|oos,start,2024-10-03,2024-10-03,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|oos,end,2026-10-02,2026-10-02,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|oos,n_days,501,501,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|oos,ann_excess_arith,0.049740104329565715,0.0497401043295657,1.38778e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|oos,ann_excess_geo,0.04927998539535294,0.0492799853953529,4.16334e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|oos,vol,0.0571691513809197,0.0571691513809197,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|oos,sharpe_net1x,0.8700514723079581,0.8700514723079581,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|oos,sharpe_net2x,0.7025224644259817,0.7025224644259817,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|oos,sharpe_gross,1.043033587377564,1.043033587377564,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|oos,max_dd_excess,-0.053176970928366485,-0.0531769709283664,8.32667e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|oos,turnover_per_year,0.3112991954793225,0.3112991954793225,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|oos,nw_t,1.3227432497269587,1.322743249726959,2.22045e-16,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|original_D3|oos,fed_sleeve_turnover_per_year,5.767237974142541,5.767237974142541,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|selection,start,2016-01-04,2016-01-04,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|selection,end,2020-12-31,2020-12-31,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|selection,n_days,1259,1259,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|selection,ann_excess_arith,0.057663238806943934,0.0576632388069439,3.46945e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|selection,ann_excess_geo,0.057310668943818754,0.0573106689438187,5.55112e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|selection,vol,0.06210203676106955,0.0621020367610695,4.85723e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|selection,sharpe_net1x,0.9285241163473691,0.9285241163473692,1.11022e-16,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|selection,sharpe_net2x,0.7790703083026379,0.7790703083026379,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|selection,sharpe_gross,1.0837860041933904,1.0837860041933904,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|selection,max_dd_excess,-0.0624863977361757,-0.0624863977361757,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|selection,turnover_per_year,0.7603893477789009,0.7603893477789009,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|selection,nw_t,2.326891847029025,2.326891847029025,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|validation,start,2021-01-04,2021-01-04,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|validation,end,2024-10-02,2024-10-02,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|validation,n_days,943,943,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|validation,ann_excess_arith,0.07357282396501132,0.0735728239650113,1.38778e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|validation,ann_excess_geo,0.07429499857248612,0.0742949985724861,1.38778e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|validation,vol,0.06163106242876796,0.0616310624287679,6.245e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|validation,sharpe_net1x,1.193762058702873,1.193762058702873,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|validation,sharpe_net2x,1.0915955122378167,1.0915955122378167,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|validation,sharpe_gross,1.3030301425651178,1.3030301425651178,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|validation,max_dd_excess,-0.07796869755262492,-0.0779686975526249,2.77556e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|validation,turnover_per_year,0.47516096195396246,0.4751609619539624,5.55112e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|validation,nw_t,2.4950728859408824,2.4950728859408824,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|full_is,start,2016-01-04,2016-01-04,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|full_is,end,2024-10-02,2024-10-02,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|full_is,n_days,2202,2202,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|full_is,ann_excess_arith,0.06447647168798734,0.0644764716879873,4.16334e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|full_is,ann_excess_geo,0.06455103463179657,0.0645510346317965,6.93889e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|full_is,vol,0.06188873707627008,0.06188873707627,7.63278e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|full_is,sharpe_net1x,1.041812690547041,1.041812690547041,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|full_is,sharpe_net2x,0.9125521695358416,0.9125521695358416,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|full_is,sharpe_gross,1.1774496378699764,1.1774496378699764,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|full_is,max_dd_excess,-0.07796869755262548,-0.0779686975526254,8.32667e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|full_is,turnover_per_year,0.6382411335041884,0.6382411335041884,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|full_is,nw_t,3.3911656282019687,3.3911656282019687,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|oos,start,2024-10-03,2024-10-03,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|oos,end,2026-10-02,2026-10-02,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|oos,n_days,501,501,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|oos,ann_excess_arith,0.04982580710439118,0.0498258071043911,8.32667e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|oos,ann_excess_geo,0.049369501988129505,0.0493695019881295,6.93889e-18,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|oos,vol,0.05717525511000708,0.057175255110007,8.32667e-17,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|oos,sharpe_net1x,0.871457538904281,0.871457538904281,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|oos,sharpe_net2x,0.702915899655393,0.702915899655393,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|oos,sharpe_gross,1.045439125749594,1.045439125749594,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|oos,max_dd_excess,-0.0528238624988181,-0.0528238624988181,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|oos,turnover_per_year,0.3067144599572579,0.3067144599572579,0,backtests/results/v2_d4/metrics.csv
+core_ER_6+T4xE1|D4_both_fixes|oos,nw_t,1.3249633005538362,1.3249633005538362,0,backtests/results/v2_d4/metrics.csv
+daily T4xE1|original|net_1x vs T4xE1|net_1x,max abs diff over 2015-12-31..2026-10-02,0.0,0.0,0,backtests/results/v2_oos/daily_returns.parquet
+daily T4xE1|original|net_2x vs T4xE1|net_2x,max abs diff over 2015-12-31..2026-10-02,0.0,0.0,0,backtests/results/v2_oos/daily_returns.parquet
+daily T4xE1|original|gross vs T4xE1|gross,max abs diff over 2015-12-31..2026-10-02,0.0,0.0,0,backtests/results/v2_oos/daily_returns.parquet
+daily T4xE1|original|turnover vs T4xE1|turnover,max abs diff over 2015-12-31..2026-10-02,0.0,0.0,0,backtests/results/v2_oos/daily_returns.parquet
+daily core_ER_6|as_committed|net_1x vs core_ER_6|net_1x,max abs diff over 2015-12-31..2026-10-02,0.0,0.0,0,backtests/results/v2_oos/daily_returns.parquet
+daily core_ER_6|as_committed|net_2x vs core_ER_6|net_2x,max abs diff over 2015-12-31..2026-10-02,0.0,0.0,0,backtests/results/v2_oos/daily_returns.parquet
+daily core_ER_6|as_committed|gross vs core_ER_6|gross,max abs diff over 2015-12-31..2026-10-02,0.0,0.0,0,backtests/results/v2_oos/daily_returns.parquet
+daily core_ER_6+T4xE1|original|net_1x vs core_ER_6+T4xE1|net_1x,max abs diff over 2015-12-31..2026-10-02,0.0,0.0,0,backtests/results/v2_oos/daily_returns.parquet
+daily core_ER_6+T4xE1|original|net_2x vs core_ER_6+T4xE1|net_2x,max abs diff over 2015-12-31..2026-10-02,0.0,0.0,0,backtests/results/v2_oos/daily_returns.parquet
+daily core_ER_6+T4xE1|original|gross vs core_ER_6+T4xE1|gross,max abs diff over 2015-12-31..2026-10-02,0.0,0.0,0,backtests/results/v2_oos/daily_returns.parquet

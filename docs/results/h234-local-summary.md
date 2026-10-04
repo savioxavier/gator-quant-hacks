@@ -2,10 +2,10 @@
 
 > **Exploratory, post-G3 (post-NO-GO); cannot rescue G3; no trading claim.** G3 stays NO-GO. In the locked
 > register H2, H3 and H4 stay at p = 1 (R2-26). This is the **local replication** of note 1, section 2. The
-> **HiPerGator reference run** (`backtest_h234/`, which governs) agrees: H2 p 0.439 (local 0.438), H3 killed by G4
+> **HiPerGator reference run** (`backtests/presser/backtest_h234/`, which governs) agrees: H2 p 0.439 (local 0.438), H3 killed by G4
 > in both, H4 p 0.243 (local 0.244); the reference run has 269 answers where this run has 268.
 
-Written 2026-10-04 (UTC). Pre-registration: `../../preregistration/presser_H2H3H4_EXPLORATORY.md` (sha256
+Written 2026-10-04 (UTC). Pre-registration: `preregistration/presser_H2H3H4_EXPLORATORY.md` (sha256
 `e030af98...dca6d0`), with notes 1-3 (`presser_H2H3H4_NOTE1.md`, `NOTE2.md`, `NOTE3.md`). This file holds no
 price levels. It reports only ticks, log returns in bp and statistics.
 
@@ -213,7 +213,7 @@ main row.
 ## 6. Strategy-level metrics of the H2 and H4 test trades
 
 This section presents trades that are already fixed. It follows deviation D-3's last section and uses the same
-conventions as `../results/presser_strategy/` (see its README). No position, sample or rule changes. G3 stays NO-GO.
+conventions as `backtests/results/presser_strategy/` (see its README). No position, sample or rule changes. G3 stays NO-GO.
 
 **Method:**
 - **Trades.** The stage's own trades: ZT, +1 min, positions sign(z_A) for H2 and sign(ŷC) for H4, with sign(ŷT) as

@@ -1,20 +1,20 @@
 # Stance-score wiring
 
-Scripts that feed the walk-forward chrono stance scores (`../../nlp/`) into the two text backtests.
+Scripts that feed the walk-forward chrono stance scores (`nlp/`) into the two text backtests.
 
 | script | where | what |
 |---|---|---|
-| `check_chrono.py` | here | gate: the chrono run finished cleanly (36/36 models, 12/12 years scored with full-spec metadata, the scored documents are `data/text_corpus/docs_to_score.parquet`, model Y scores year Y only, `run.log` ends cleanly) |
-| `adapt_v2.py` | `../v2/` | chrono document scores -> v2 `score/doc_scores.parquet` |
-| `adapt_presser.py` | `../presser/` | chrono sentence labels -> press-conference text label (`text_chrono/`: answers, meetings, build_meta, scorer) |
-| `run_v2_chrono.py` | `../v2/` | the v2 run on chrono scores (one-shot OOS lock) |
-| `summarize.py` | here | combined `summary.json` / `summary.md` from what the two backtests wrote |
-| `wirelib.py` | here | shared paths and helpers |
+| `backtests/wire/check_chrono.py` | `backtests/wire/` | gate: the chrono run finished cleanly (36/36 models, 12/12 years scored with full-spec metadata, the scored documents are `data/text_corpus/docs_to_score.parquet`, model Y scores year Y only, `run.log` ends cleanly) |
+| `adapt_v2.py` | `backtests/v2/` | chrono document scores -> v2 `score/doc_scores.parquet` |
+| `adapt_presser.py` | `backtests/presser/` | chrono sentence labels -> press-conference text label (`backtests/presser/text_chrono/`: answers, meetings, build_meta, scorer) |
+| `run_v2_chrono.py` | `backtests/v2/` | the v2 run on chrono scores (one-shot OOS lock) |
+| `backtests/wire/summarize.py` | `backtests/wire/` | combined `summary.json` / `summary.md` from what the two backtests wrote |
+| `backtests/wire/wirelib.py` | `backtests/wire/` | shared paths and helpers |
 
-`../run_all_backtests.sh chrono` (with `CHRONO_ROOT` set) runs the gate and both adapters into
-`../rerun/chrono_inputs/` and compares the rebuilt tables with the committed frozen inputs. If the merged scores
+`bash backtests/run_all_backtests.sh chrono` (with `CHRONO_ROOT` set) runs the gate and both adapters into
+`backtests/rerun/chrono_inputs/` and compares the rebuilt tables with the committed frozen inputs. If the merged scores
 are missing it first runs `nlp/chrono_stance.py --root $CHRONO_ROOT merge --years 2015-2026 --no-publish`.
-The history of these scripts (placebo chain test, audit changes) is in `../../backtest_snapshot/wire/README.md`.
+The history of these scripts (placebo chain test, audit changes) is in `backtest_snapshot/wire/README.md`.
 
 ## Column mapping
 

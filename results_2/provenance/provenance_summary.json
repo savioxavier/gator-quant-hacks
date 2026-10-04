@@ -1,0 +1,225 @@
+{
+ "files_identical_to_manifest": {
+  "transcript_pdfs": "95/95",
+  "captions_vtt": "83/83"
+ },
+ "segmentation_reproduces_committed_turns": "75/75",
+ "v2_scored_conferences": 79,
+ "v2_scored_tokens_total": 505294,
+ "scored_share_in_chair_turns_pooled": 0.997297,
+ "chair_transcript_share_in_scored_pooled": 0.993146,
+ "conferences_with_footnote_scored": 10,
+ "footnotes_scored": 11,
+ "footnotes_in_transcripts_of_scored_conferences": 16,
+ "conferences_with_nonchair_text_scored": 28,
+ "nonchair_tokens_scored": 721,
+ "speaker_labels_in_scored_text": 40,
+ "bracket_insertions_scored": 282,
+ "conferences_with_bracket_insertions": 53,
+ "footnotes_in_captions_all_conferences": "4 of 16 footnotes of captioned conferences",
+ "with_captions": 72,
+ "without_captions": [
+  "20221214",
+  "20230614",
+  "20230726",
+  "20231101",
+  "20231213",
+  "20240320",
+  "20251210"
+ ],
+ "caption_cov_scored_median": 0.999125,
+ "caption_cov_scored_min": 0.989122,
+ "with_asr": 64,
+ "without_asr": [
+  "20150318",
+  "20150617",
+  "20150917",
+  "20151216",
+  "20160316",
+  "20160615",
+  "20160921",
+  "20161214",
+  "20170315",
+  "20170614",
+  "20170920",
+  "20171213",
+  "20260617",
+  "20260729",
+  "20260916"
+ ],
+ "asr_mismatch_or_partial": [
+  "20200315",
+  "20230614"
+ ],
+ "asr_cov_scored_median_matching_recordings": 0.943163,
+ "asr_cov_scored_range_matching_recordings": [
+  0.887534,
+  0.972663
+ ],
+ "asr_cov_transcript_chair_median_matching": 0.943391,
+ "pkg_match_frac_median_matching": 0.93775,
+ "pkg_wer_proxy_median_matching": 0.07785,
+ "matching_recordings": {
+  "n": 62,
+  "chair_unheard_passages": 212,
+  "chair_unheard_tokens": 3517,
+  "chair_unheard_elsewhere_in_asr": 4,
+  "chair_unheard_audio_gap": 174,
+  "chair_unheard_no_audio_gap": 34,
+  "chair_unheard_no_audio_gap_tokens": 484,
+  "chair_unheard_edge": 0,
+  "chair_extra_speech_passages": 32,
+  "chair_extra_speech_tokens": 555,
+  "chair_extra_elsewhere_in_transcript": 13,
+  "chair_extra_repetition_loop": 7,
+  "chair_extra_other": 12,
+  "chair_extra_other_tokens": 118,
+  "scored_unheard_passages": 212,
+  "scored_unheard_tokens": 3477,
+  "scored_unheard_lexicon_hits": 12,
+  "scored_unheard_elsewhere_in_asr": 5,
+  "scored_unheard_audio_gap": 168,
+  "scored_unheard_edge": 0,
+  "scored_no_audio_gap_passages": 39,
+  "scored_no_audio_gap_tokens": 555,
+  "scored_no_audio_gap_lexicon_hits": 0,
+  "scored_no_audio_gap_numeric_tokens": 10,
+  "conferences_with_scored_no_audio_gap_passage": 26,
+  "scored_tokens": 407828,
+  "scored_no_audio_gap_passages_by_overlap": {
+   "footnote": 6,
+   "none": 29,
+   "editor brackets": 3,
+   "non-chair turn": 1
+  },
+  "scored_no_audio_gap_tokens_by_overlap": {
+   "footnote": 100,
+   "none": 418,
+   "editor brackets": 29,
+   "non-chair turn": 8
+  }
+ },
+ "conferences_with_footnote_or_nonchair_sentence": 30,
+ "affected_sentences_footnote_or_nonchair_total": 61,
+ "conferences_with_chair_text_missing": 8,
+ "chair_tokens_missing_total": 2569,
+ "score_bound_text_defects": {
+  "median": 0.0,
+  "max": 0.328267,
+  "max_meeting": "20180926",
+  "n_above_0.05": 6
+ },
+ "score_bound_footnote_or_nonchair": {
+  "median": 0.0,
+  "max": 0.074074,
+  "max_meeting": "20191030"
+ },
+ "score_bound_incl_brackets": {
+  "median": 0.01626,
+  "max": 0.127877,
+  "max_meeting": "20211215"
+ },
+ "score_bound_incl_possible_edits_matching_recordings": {
+  "n": 62,
+  "median": 0.022298,
+  "max": 0.175141,
+  "max_meeting": "20220615"
+ },
+ "score_bound_incl_all_unheard_matching_recordings": {
+  "n": 62,
+  "median": 0.039724,
+  "max": 0.298507,
+  "max_meeting": "20220615"
+ },
+ "v2_presser_stance_score_sd": 0.067876,
+ "h1_answers_with_speaker_labels": 0,
+ "h1_answer_and_question_rows_footnote_texts": 0,
+ "footnotes_removed_by_text_study_segmentation": 15,
+ "classes": {
+  "checked against independent ASR": 62,
+  "captions only (not independent of the transcript)": 15,
+  "ASR does not match this transcript (wrong or partial recording)": 2
+ },
+ "document_timing": {
+  "consensus_injection_check": {
+   "C_T2": {
+    "sessions_checked": 2453,
+    "max_abs_diff": 2.220446049250313e-16,
+    "sessions_with_diff_gt_1e-9": 0
+   },
+   "C_LEXALL": {
+    "sessions_checked": 2453,
+    "max_abs_diff": 4.440892098500626e-16,
+    "sessions_with_diff_gt_1e-9": 0
+   }
+  },
+  "presser_statement_identical_to_v2_statement": "75/75",
+  "by_type": [
+   {
+    "doc_type": "minutes",
+    "n_docs": 94,
+    "first": "2015-01-07",
+    "last": "2026-08-19",
+    "release_time_missing": 0,
+    "released_after_1600_et": 0,
+    "docs_in_checked_signal_window": 78,
+    "docs_after_committed_signal_file": 16,
+    "dated_on_non_session_day_in_window": 0,
+    "entry_session_strictly_after_date_in_window": "78/78",
+    "id_date_equals_date": "n/a (id = meeting date)",
+    "minutes_release_lag_days_min": 19.0,
+    "minutes_release_lag_days_median": 21.0,
+    "minutes_release_lag_days_max": 24.0
+   },
+   {
+    "doc_type": "presser",
+    "n_docs": 79,
+    "first": "2015-03-18",
+    "last": "2026-09-16",
+    "release_time_missing": 2,
+    "released_after_1600_et": 0,
+    "docs_in_checked_signal_window": 63,
+    "docs_after_committed_signal_file": 16,
+    "dated_on_non_session_day_in_window": 1,
+    "entry_session_strictly_after_date_in_window": "63/63",
+    "id_date_equals_date": "79/79",
+    "minutes_release_lag_days_min": NaN,
+    "minutes_release_lag_days_median": NaN,
+    "minutes_release_lag_days_max": NaN
+   },
+   {
+    "doc_type": "speech",
+    "n_docs": 828,
+    "first": "2015-01-20",
+    "last": "2026-10-01",
+    "release_time_missing": 2,
+    "released_after_1600_et": 128,
+    "docs_in_checked_signal_window": 624,
+    "docs_after_committed_signal_file": 204,
+    "dated_on_non_session_day_in_window": 25,
+    "entry_session_strictly_after_date_in_window": "624/624",
+    "id_date_equals_date": "827/828",
+    "minutes_release_lag_days_min": NaN,
+    "minutes_release_lag_days_median": NaN,
+    "minutes_release_lag_days_max": NaN
+   },
+   {
+    "doc_type": "statement",
+    "n_docs": 97,
+    "first": "2015-01-28",
+    "last": "2026-09-16",
+    "release_time_missing": 0,
+    "released_after_1600_et": 1,
+    "docs_in_checked_signal_window": 81,
+    "docs_after_committed_signal_file": 16,
+    "dated_on_non_session_day_in_window": 1,
+    "entry_session_strictly_after_date_in_window": "81/81",
+    "id_date_equals_date": "97/97",
+    "minutes_release_lag_days_min": NaN,
+    "minutes_release_lag_days_median": NaN,
+    "minutes_release_lag_days_max": NaN
+   }
+  ],
+  "signal_file_last_session": "2024-10-02"
+ }
+}

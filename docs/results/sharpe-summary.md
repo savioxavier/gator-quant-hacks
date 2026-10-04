@@ -9,12 +9,12 @@ below was computed on the local PC and reproduced on HiPerGator (`backtests/resu
 
 | Strategy | In-sample, net / 2x costs | Out-of-sample, net / 2x costs | Source |
 |---|---|---|---|
-| v2 T4xE1, as committed | 0.441 / 0.387 | **0.607 / 0.544** | `v2_oos/metrics.csv` |
-| v2 T4xE1, both D-4 fixes | 0.446 / 0.392 | **0.621 / 0.554** | `v2_d4/metrics.csv` |
-| core_ER_6 alone | 0.998 / 0.878 | 0.601 / 0.456 | `v2_oos/metrics.csv` |
-| core_ER_6 + v2 T4xE1 | 1.038 / 0.909 | **0.870 / 0.703** | `v2_oos/metrics.csv` |
-| core_ER_6 + v2 T4xE1, both D-4 fixes | 1.042 / 0.913 | 0.871 / 0.703 | `v2_d4/metrics.csv` |
-| Walk-forward re-selection, both fixes | 0.698 / 0.670 (2021-01-04..2024-10-02) | 0.621 / 0.554 | `v2_d4/metrics.csv` |
+| v2 T4xE1, as committed | 0.441 / 0.387 | **0.607 / 0.544** | `backtests/results/v2_oos/metrics.csv` |
+| v2 T4xE1, both D-4 fixes | 0.446 / 0.392 | **0.621 / 0.554** | `backtests/results/v2_d4/metrics.csv` |
+| core_ER_6 alone | 0.998 / 0.878 | 0.601 / 0.456 | `backtests/results/v2_oos/metrics.csv` |
+| core_ER_6 + v2 T4xE1 | 1.038 / 0.909 | **0.870 / 0.703** | `backtests/results/v2_oos/metrics.csv` |
+| core_ER_6 + v2 T4xE1, both D-4 fixes | 1.042 / 0.913 | 0.871 / 0.703 | `backtests/results/v2_d4/metrics.csv` |
+| Walk-forward re-selection, both fixes | 0.698 / 0.670 (2021-01-04..2024-10-02) | 0.621 / 0.554 | `backtests/results/v2_d4/metrics.csv` |
 
 ## What the stance model adds (D-4, both fixes, net)
 
@@ -26,14 +26,14 @@ below was computed on the local PC and reproduced on HiPerGator (`backtests/resu
 | Long 75/25 TLT/UUP, same sizing | -0.031 | -0.838 |
 | Variant A, frozen lexicon (T0fxE1) | 0.364 | -0.470 |
 
-Source: `v2_d4/metrics.csv`.
+Source: `backtests/results/v2_d4/metrics.csv`.
 
 ## Press conference (ZT, net; D-3 presentation of pre-registered trades)
 
 | Strategy | In-sample | Out-of-sample | Source |
 |---|---|---|---|
-| H1-primary | -0.17 | -1.33 | `presser_strategy/tables.md` |
-| BENCH-R | -0.51 | 0.18 | `presser_strategy/tables.md` |
+| H1-primary | -0.17 | -1.33 | `backtests/results/presser_strategy/tables.md` |
+| BENCH-R | -0.51 | 0.18 | `backtests/results/presser_strategy/tables.md` |
 
 ## Read the headline with these facts
 
@@ -45,4 +45,4 @@ Source: `v2_d4/metrics.csv`.
   model leg carries T4's result. The stance model's incremental value is not established.
 - The press-conference strategies do not cover their costs in-sample; G3 for H1 is NO-GO.
 
-Full detail: `STRATEGY_RESULTS.md`, `v2_d4/README.md`, and `report/REPORT.md` sections 5.2-5.8.
+Full detail: `docs/results/strategy-results.md`, `backtests/results/v2_d4/README.md`, and `docs/report/REPORT.md` sections 5.2-5.8.

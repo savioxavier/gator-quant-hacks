@@ -49,7 +49,7 @@ Code: https://github.com/savioxavier/gator-quant-hacks [[PENDING: final branch/t
 > | Devpost: PDF + repo link by Sun 2026-10-04 10:00 ET; code pushes until 11:00 ET | PENDING |
 >
 > **Team notes on inconsistencies (resolve, then delete):**
-> - Audio size: measured 9.7 GB, not the 2-3 GB in hpg/README.md.
+> - Audio size: measured 9.7 GB, not the 2-3 GB in the HiPerGator guide (`docs/guides/hipergator.md`).
 > - Video size: team/data/fomc_pressers/README.md says about 65 GB; fetch_report.json says 67.4 GB (62.8 GiB in fed_presser_hpg/manifest/README.md). The note cites hours only; align the READMEs.
 > - Databento cost: the re-priced pull cost **$8.53**. Do not cite the earlier GAP_REPORT quotes.
 > - Stale text: strategies/01/review/README.md ("Next on this branch" still says FOMC-RoBERTa) and the fedspeak_v2 backtest/score READMEs (RoBERTa-blocked state, Amendment-1 hash).

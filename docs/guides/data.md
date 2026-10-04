@@ -99,7 +99,92 @@ checksum exactly; small differences in v2's numbers can come from that alone.
 | `GQH_DATA_DIR` | a folder with `etf_daily.parquet`, `futures_daily.parquet`, `futures_1600.parquet` (private) and `fred_daily.parquet`, `rf_daily.parquet` (from `backtests/v2/inputs/data/`) |
 | `V2_WORK_ROOT` | `backtests/v2/inputs/work/` in this repository |
 | `GQH_MARKET_DIR` | a folder with the three Databento intraday files (press-conference stages) |
-| `FEDPRESS_ROOT` | the feature tables (H2/H3/H4), e.g. `data/fedpress_features_local/` |
+| `FEDPRESS_ROOT` | the feature tables (H2/H3/H4), e.g. `$PWD/data/fedpress_features_local` |
+| `H234_OUT_DIR` | with the local feature tables, `$PWD/backtests/presser/backtest_h234_local` (git-ignored), so the committed HiPerGator reference run in `backtests/presser/backtest_h234/` is not overwritten |
 
-Then `bash backtests/run_all_backtests.sh` (see `backtests/README.md` and `docs/reproduction.md`), or on HiPerGator
+Then `bash backtests/run_all_backtests.sh` (see [running-backtests.md](running-backtests.md), [reproduction.md](reproduction.md) and the exact commands in [reproduction_commands.md](../submission/reproduction_commands.md)), or on HiPerGator
 `sbatch hpg/backtest_all.sbatch`. A stage whose inputs are absent is reported as skipped or refused in the summary at the end of the run; count a run as a reproduction only when every stage you need reports that it reproduces the committed results (v2, D-4, presser) or completed (h234).
+
+## What is in the data folders
+
+These sections describe the committed data in place; the files themselves stay in their folders.
+
+### Press-conference transcripts and captions (`data/fomc_pressers/`)
+
+All 95 FOMC press conferences from 2011-04-27 to 2026-09-16 (Bernanke 12, Yellen 16, Powell 64, Warsh 3).
+
+| Folder | Contents |
+|---|---|
+| `data/fomc_pressers/transcripts/` | `FOMCpresconfYYYYMMDD.pdf`: the official transcript PDFs, with speaker labels for the chair and reporters. `.txt` holds the extracted text of each PDF. |
+| `data/fomc_pressers/captions/` | `YYYYMMDD.vtt`: the official WebVTT caption files from the Board's video player. There are 83 of them, and cue times are relative to the start of the video. `data/fomc_pressers/missing_captions.txt` lists the 12 meetings without a caption file. |
+
+**Source:** federalreserve.gov, from the press-conference pages linked from the FOMC calendars. These are works of the US federal government and are in the public domain. Retrieved 2026-10-03.
+
+**Timing convention:** published work treats video time zero as 14:30:00 ET. The real start varies, because the greeting falls 0.6-144 s into the video. Estimate a per-meeting offset before any timing-sensitive test, and drop meetings whose start is uncertain by more than 30 s (see the team plan).
+
+#### Not in this repository
+
+- **Video and audio recordings** (95 MP4s, about 65 GB). They are too large for GitHub, whose limit is 100 MB per file. The HiPerGator pipeline downloads them from federalreserve.gov using a manifest of the video URLs. Derived chair-only voice and face features (small parquet files) can be added here after that run.
+- **Futures market data** (Databento). It is licensed and must not be redistributed, so it stays in each user's local cache.
+
+### Local feature tables (`data/fedpress_features_local/`)
+
+Per-meeting tables written by the feature package `hpg/fedpress_pkg` (code version 0.1.0+src.df22a2d52e78) for
+every Powell press conference from 2018-03-21 to 2026-04-29. They were computed on one local RTX 5090 between
+2026-10-03 23:45:57 and 2026-10-04 00:44:44 UTC, after the exploratory H2/H3/H4 pre-registration was public (see
+`preregistration/presser_H2H3H4_NOTE1.md`). They feed the **local replication** of H2/H3/H4
+(`docs/results/h234-local-summary.md`). The HiPerGator tables, which feed the reference run
+(`backtests/presser/backtest_h234/`), were produced by the same code and model revisions and stay on HiPerGator; the
+two runs agree (H2 p 0.438 vs 0.439, H4 p 0.244 vs 0.243).
+
+#### Layout
+
+`data/fedpress_features_local/meetings/<presser_id>/` holds, per meeting:
+
+| Folder | Tables | What |
+|---|---|---|
+| `asr/` | `words.parquet`, `segments.parquet`, `asr.json` | Whisper large-v3-turbo transcript with word times |
+| `turns/` | `turns.parquet`, `words.parquet`, `anchor.json` | speaker turns aligned to the transcript PDF; clock anchor; `known_at` |
+| `diarize/` | `chair_check.parquet` | ECAPA check that a window is the chair's voice |
+| `voice/` | `voice_chunks.parquet` | 8 s chunks of the chair's answers: arousal, dominance, valence, prosody, identity flags |
+| `face/` | `face_frames.parquet`, `face_turns.parquet`, `enroll.json` | 1 fps chair frames: blendshapes, expression scores, identity and quality gates |
+| `_done/` | one JSON per stage | status, outputs with sha256, code version, config hash, overrides |
+
+`MANIFEST.sha256` lists every file; `data/fedpress_features_local/models_lock.json` lists the model revisions (Whisper 0a363e91, ECAPA 0f99f2d0,
+audeering 6eba34a2, MediaPipe face landmarker 64184e22, EmotiEffLib enet_b0_8_va_mtl b7b9522e, SFace 0ba9fbfa).
+Settings: the package's default config (voice and face for Powell only, face at 1 fps); the only overrides were the
+compute type and batch sizes (see each `_done/*.json`). Every table carries `known_at`, the time the row could have
+been known live.
+
+#### Known issues
+
+- **2023-06-14:** the recording the Federal Reserve publishes for this meeting is the 2023-07-26 press conference,
+  so these tables describe the July meeting (`preregistration/presser_H2H3H4_NOTE2.md`). Do not use them for June.
+- **2020-03-03 and 2020-03-15** are unscheduled meetings; on 2020-03-15 face enrolment failed (no usable frames).
+- Fifteen meetings, mostly 2018-2020, have lower voice identity (0.81-0.90) and face gate (0.75-0.89) rates; use the
+  tables' own gate columns.
+
+#### Sources and licences
+
+The videos, captions and transcripts are works of the US federal government (public domain). The features come from
+these models: Whisper (MIT), SpeechBrain ECAPA (Apache-2.0), audeering wav2vec2 MSP-dim (CC BY-NC-SA 4.0, so these
+voice features are for non-commercial use), MediaPipe (Apache-2.0), EmotiEffLib (Apache-2.0) and OpenCV SFace
+(Apache-2.0). No market data are in `data/fedpress_features_local/`.
+
+### Public v2 inputs (`backtests/v2/inputs/`)
+
+The public part of the v2 input bundle. Point `V2_WORK_ROOT` at `backtests/v2/inputs/work/` and copy `backtests/v2/inputs/data/fred_daily.parquet` and
+`backtests/v2/inputs/data/rf_daily.parquet` into your `GQH_DATA_DIR` next to the private price files (see `docs/guides/data.md` for how to
+obtain those and their checksums). `backtests/v2/inputs/MANIFEST.sha256` lists every file there.
+
+| Path | What it is |
+|---|---|
+| `backtests/v2/inputs/work/edges/series/*.parquet` | daily net 1x / net 2x / gross return series of the edge sleeves, including `PORT_core_ER_6` (returns only) |
+| `backtests/v2/inputs/work/edges/combine/combine.py` | the portfolio builder used for the core_ER_6 portfolio test (`combine.build`); its line `REPO = Path(...)` is a local default from the original machine and is not used when `GQH_REPO` is set; kept byte-identical so its SHA-256 matches `backtests/results/v2_oos/RUN_LOG.md` |
+| `backtests/v2/inputs/work/edges/combine/existing*.parquet`, `comparators_native.parquet`, `existing_meta.json` | return series of the reference strategies the builder reads |
+| `backtests/v2/inputs/work/fedspeak/extend/speech_scores_2011_2026.csv` | strategy 01's lexicon scores of Board speeches (Variant A input) |
+| `backtests/v2/inputs/work/fedspeak/replicate/signal.parquet` | strategy 01's replicated signal and weights (cross-check) |
+| `backtests/v2/inputs/work/fedspeak_v2/corpus/fomc_dates*.csv`, `backtests/v2/inputs/work/savio_gqh/strategies/01/data/processed/fomc_dates.csv` | FOMC announcement date lists used for the de-risk rule |
+| `backtests/v2/inputs/work/savio_gqh/strategies/01/trials/log.csv` | strategy 01's logged trials (used in the Deflated Sharpe) |
+| `backtests/v2/inputs/data/fred_daily.parquet` | FRED DTB3, DGS10, DGS2, DGS30, T10Y2Y (the restricted VIXCLS and BAMLH0A0HYM2 columns of the original file are removed; v2 does not use them) |
+| `backtests/v2/inputs/data/rf_daily.parquet` | daily cash rate from DTB3 |

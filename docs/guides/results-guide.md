@@ -29,9 +29,9 @@ The report gives T4xE1 an OOS Sharpe of 0.607 net of standard costs and 0.544 at
 
 ## Where to verify
 
-- Combined outcome tables: [`backtests/results/summary.md`](../backtests/results/summary.md)
-- Detailed v2 tables and decision record: [`backtests/results/v2/`](../backtests/results/v2/)
-- One-time OOS result and run record: [`backtests/results/v2_oos/`](../backtests/results/v2_oos/)
-- H1 tables: [`backtests/results/presser_h1/`](../backtests/results/presser_h1/)
-- Protocol and amendments: [`preregistration/`](../preregistration/)
-- Full methods, interpretation, and limitations: [`report/REPORT.md`](../report/REPORT.md)
+- Combined outcome tables: [`backtests/results/summary.md`](../../backtests/results/summary.md)
+- Detailed v2 tables and decision record: [`backtests/results/v2/`](../../backtests/results/v2/)
+- One-time OOS result and run record: [`backtests/results/v2_oos/`](../../backtests/results/v2_oos/)
+- H1 tables: [`backtests/results/presser_h1/`](../../backtests/results/presser_h1/)
+- Protocol and amendments: [`preregistration/`](../../preregistration/)
+- Full methods, interpretation, and limitations: [`docs/report/REPORT.md`](../report/REPORT.md)
