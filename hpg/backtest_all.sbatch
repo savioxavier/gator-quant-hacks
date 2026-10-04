@@ -26,8 +26,17 @@ ENV_DIR="${ENV_DIR:-/blue/ai-workshop/$USER/envs/gqh-backtests}"
 export FEDPRESS_ROOT="${FEDPRESS_ROOT:-/blue/ai-workshop/$USER/fedpress}"
 echo "[$(date)] repo=$PWD data=$GQH_DATA env=$ENV_DIR features=$FEDPRESS_ROOT"
 
-# 1. market files: move any just copied to the home directory into place
+# 1. market files: move any just copied to the home directory into place. Files that arrived split (e-mail
+#    attachments <name>.part01, .part02, ...) are joined first; SHA256SUMS_market, if present, is checked.
 mkdir -p "$GQH_DATA/market"
+for f in ohlcv-1m__all_2016_2026.parquet ohlcv-1s__all_2016_2026.parquet bbo-1s__all_2016_2026.parquet; do
+  if compgen -G "$HOME/$f.part*" > /dev/null; then
+    cat $(ls "$HOME/$f".part* | sort) > "$HOME/$f.joined" && mv -f "$HOME/$f.joined" "$HOME/$f" && rm -f "$HOME/$f".part*
+  fi
+done
+if [ -f "$HOME/SHA256SUMS_market" ]; then
+  (cd "$HOME" && sha256sum -c --ignore-missing SHA256SUMS_market) || { echo "market files damaged (checksum)" >&2; exit 2; }
+fi
 for f in ohlcv-1m__all_2016_2026.parquet ohlcv-1s__all_2016_2026.parquet bbo-1s__all_2016_2026.parquet; do
   [ -f "$HOME/$f" ] && mv -f "$HOME/$f" "$GQH_DATA/market/$f"
   [ -f "$GQH_DATA/market/$f" ] || { echo "missing $GQH_DATA/market/$f: copy it first (see the header)" >&2; exit 2; }
