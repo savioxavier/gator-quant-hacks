@@ -4,7 +4,7 @@ Pre-registration: `../../preregistration/HYPOTHESIS_v2.md` (Amendments 1-3 and t
 464f8a5b...8a2e; the Amendment-1 version the runner originally pinned was 6083d3ef...d910). Deviations:
 `../../preregistration/DEVIATIONS.md` (D-1, D-2), written before any return on real stance scores.
 
-## Verdict: decision rule FAILED, out-of-sample not evaluated
+## Verdict: decision rule FAILED; out-of-sample evaluated once, for reporting only (deviation D-3)
 
 | | value |
 |---|---|
@@ -12,21 +12,65 @@ Pre-registration: `../../preregistration/HYPOTHESIS_v2.md` (Amendments 1-3 and t
 | Selection Sharpe, net 1x | 0.154 |
 | Validation Sharpe, net 1x (2021-01-01..2024-10-02) | 0.687 (target 0.7) |
 | Full in-sample Sharpe at 2x costs (rule: > 0.5) | 0.387 |
-| Decision rule (validation > 0 and full-IS 2x > 0.5) | **FAILED** |
-| Out-of-sample (2024-10-03..2026-10-02) | **not evaluated**, and never will be |
+| Decision rule (validation > 0 and full-IS 2x > 0.5) | **FAILED**; the verdict stands |
+| Out-of-sample (2024-10-03..2026-10-02) | evaluated **once**, for reporting only, under deviation D-3 (2026-10-04 01:22:57 UTC): Sharpe 0.607 net 1x, 0.544 net 2x. It cannot reverse the verdict and is never evaluated again |
 
-The decision record is `../results/v2/oos_not_evaluated.json`. Full tables: `../results/v2/` and
-`../results/summary.md`.
+The decision record of the rule is `../results/v2/oos_not_evaluated.json`. Deviation D-3
+(`../../preregistration/v2_DEVIATION_D3_OOS.md`) allowed one out-of-sample evaluation for reporting, with nothing
+re-chosen; its record is `../results/v2_oos/run/oos_chosen.json`, and its results and run log are in
+`../results/v2_oos/`. Full in-sample tables: `../results/v2/` and `../results/summary.md`.
 
 ## One-shot out-of-sample lock
 
-The out-of-sample window is evaluated at most once. While `../results/v2/oos_chosen.json` or
+The out-of-sample window is evaluated at most once, and it was, under D-3. Every new run is refused; the one
+exception is `run_v2_chrono.py --reproduce` (below), which recomputes the committed D-3 run, compares it with the
+committed files and evaluates nothing new. While `../results/v2/oos_chosen.json` or
 `../results/v2/oos_not_evaluated.json` exists:
 - `run_v2_chrono.py` refuses to run (with `--skip-if-complete` it exits 0 after checking that the document scores
   are the file the completed run used), whatever `--out` is given;
 - `run_v2.py run` refuses before gqh-flow-clock or any data is loaded;
 - `stage_oos` refuses as well (defence in depth);
-- `../run_all_backtests.sh` prints the record and skips the stage.
+- the D-3 unlock (`V2_OOS_DEVIATION`) wrote only to `../results/v2_oos/run`, and the record there refuses any further
+  D-3 run;
+- `../run_all_backtests.sh` reproduces the D-3 run (below) when the v2 inputs are set; otherwise it prints the records
+  and skips the stage.
+
+## Reproducing the committed run
+
+```
+cd <GQH_REPO>
+GQH_REPO=<root>/v2/gqh-flow-clock GQH_DATA_DIR=<root>/v2/data V2_WORK_ROOT=<root>/v2/work PYTHONIOENCODING=utf-8 \
+  python <team repo>/backtests/v2/run_v2_chrono.py --reproduce
+```
+
+On HiPerGator, `sbatch hpg/v2_oos.sbatch` from the repo root does the same (a small CPU job; it needs the v2 input
+bundle in the home directory and no market files; see its header).
+
+`--reproduce` recomputes the committed in-sample run and the one D-3 out-of-sample evaluation with the same code
+path (`pipeline_is`, `stage_oos`), the same inputs, the committed combination T4xE1 and the same windows. It never
+evaluates the window:
+- it refuses unless `../results/v2_oos/run/oos_chosen.json` and the failed-rule record
+  `../results/v2/oos_not_evaluated.json` (`oos_evaluated` false) exist, and refuses `V2_OOS_DEVIATION`;
+- it clears and writes only `$BACKTEST_RERUN_DIR/v2_reproduce` (default `../rerun/v2_reproduce`, git-ignored). It
+  refuses a folder not named `v2_reproduce`, one that is or contains `../results`, `..` or the repo root, one below
+  `../results`, and an explicit `BACKTEST_RERUN_DIR` inside this repository (other than `../rerun`) or above it. It
+  writes no decision record (the out-of-sample record is `oos_reproduced.json`, the failed-rule record
+  `oos_not_evaluated_reproduced.json`);
+- it chooses nothing: the in-sample selection must give T4xE1, the decision rule must fail, as committed, and the
+  in-sample files must agree with `../results/v2/` before the out-of-sample stage runs. If they differ, the verdict is
+  FAIL and nothing is computed on the out-of-sample window.
+
+It compares every number with fixed file sets of the committed tree (commit 6a61ef9, listed in `RUN_LOG.md`; a
+missing file is a difference): the 7 in-sample files of `../results/v2/` and its failed-rule record, the 18 files of
+`../results/v2_oos/run/` (out-of-sample, portfolio, Variant A; `run_stdout.log` left out) and
+`../results/v2_oos/metrics.csv` and `daily_returns.parquet` (rebuilt with `report_v2_oos.py`'s functions). The
+tolerance is rtol 1e-9 / atol 1e-12 (`../tools/compare_results.py`). It prints PASS or FAIL and a headline block
+(reproduced next to committed: T4xE1's selection, validation and full in-sample Sharpe at net 1x and 2x; its
+out-of-sample Sharpe net 1x, net 2x and gross, annualised return, vol and maximum drawdown; the out-of-sample Sharpe of
+core_ER_6 and core_ER_6+T4xE1). It writes `reproduce_report.json` (verdict, headline, comparisons, chosen combination,
+code and input sha256 against `RUN_LOG.md`) and exits 1 on any difference. The code hashes in `RUN_LOG.md` are those
+of the files committed at 6a61ef9; only `run_v2.py` and `run_v2_chrono.py` are expected to differ (this mode was added
+after the D-3 run).
 
 ## Files
 
@@ -34,7 +78,8 @@ The out-of-sample window is evaluated at most once. While `../results/v2/oos_cho
 |---|---|
 | `run_v2.py` | the runner (modes `check`, `smoke`, `run`); paths come from environment variables |
 | `v2lib.py` | signals, weights, simulation and statistics helpers |
-| `run_v2_chrono.py` | the entry point of the reported run: run_v2's own pipeline on the chrono stance scores, with the current pre-registration hash and the D-1 scheduled-only sensitivity |
+| `run_v2_chrono.py` | the entry point of the reported run: run_v2's own pipeline on the chrono stance scores, with the current pre-registration hash and the D-1 scheduled-only sensitivity; `--reproduce` recomputes the committed D-3 run |
+| `report_v2_oos.py`, `describe_v2_oos.py` | the D-3 report (metrics, daily returns, equity curves) and its descriptive split, from `../results/v2_oos/run` |
 | `adapt_v2.py` | chrono walk-forward document scores -> `score/doc_scores.parquet` |
 | `score/doc_scores.parquet` | the document scores the reported run used (sha256 0e0c1ca7...3ba0, recorded in `summary_is.json`) |
 | `score/doc_scores_lexonly.parquet` | the same 1,098 documents with the lexicon columns only (adapter input) |
@@ -47,8 +92,11 @@ Shared wiring (`check_chrono.py`, `wirelib.py`, `summarize.py`) is in `../wire/`
 `fedspeak_v2/corpus/fomc_dates.csv` and `fomc_dates_variantA_style.csv`, the strategy-01 FOMC dates and trial log
 (`savio_gqh/strategies/01/...`), `fedspeak/extend/speech_scores_2011_2026.csv`, `fedspeak/replicate/signal.parquet`,
 and `edges/combine/combine.py` with `edges/series/PORT_core_ER_6.parquet`. It also needs a clone of
-gqh-flow-clock (`GQH_REPO`, for `src.engine`) and its data cache (`GQH_DATA_DIR`). None of this is needed while the
-lock is in force.
+gqh-flow-clock (`GQH_REPO`, for `src.engine`) and its data cache (`GQH_DATA_DIR`). They are needed only for
+`check`, `smoke` and `--reproduce`. The v2 input bundle `gqh_v2_bundle.tgz` holds all of them (`v2/gqh-flow-clock`,
+`v2/data`, `v2/work`, checked by `v2/MANIFEST.sha256`; its `v2/README.txt` explains the layout);
+`../../hpg/backtest_all.sbatch` (and `../../hpg/v2_oos.sbatch`, which runs only this stage) unpacks it on
+HiPerGator.
 
 ## Implementation choices (fixed before any return was computed)
 1. **Timing.**

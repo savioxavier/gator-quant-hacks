@@ -8,6 +8,9 @@ Modes
   run    the pre-registered run. Refuses to start once an out-of-sample decision record exists
          (backtests/results/v2/oos_chosen.json or oos_not_evaluated.json): the out-of-sample window is evaluated
          once. The reported run went through run_v2_chrono.py, which applies the same lock.
+The out-of-sample window was evaluated once, under deviation D-3 (backtests/results/v2_oos/run/oos_chosen.json).
+run_v2_chrono.py --reproduce recomputes that run with stage_oos(..., reproduce_of=<that record>): the same
+computation, into the re-run folder, with no decision record written (refused if the record does not exist).
 
 Environment (no machine-specific defaults):
   GQH_REPO      clone of github.com/minh-stakc/gqh-flow-clock (src.engine); default ../gqh-flow-clock beside this repo
@@ -415,12 +418,34 @@ def pipeline_is(mode: str, out: Path) -> dict:
     return {"summary": summary, "sims": sims, "chosen": chosen, "passed": passed, "fomc": fomc}
 
 
-def stage_oos(res: dict, out: Path):
-    """Evaluate the chosen combination ONCE on 2024-10-03..2026-10-02 (engine period FWD)."""
-    d3 = d3_unlocked()
-    if d3 and Path(out).resolve() != D3_OUT.resolve():
-        raise SystemExit(f"refusing: the D-3 out-of-sample evaluation writes only to {D3_OUT}")
-    refuse_if_locked(out, d3=d3)                         # never a second out-of-sample evaluation
+def refuse_unless_reproducible(res: dict, out: Path, record: Path) -> None:
+    """A reproduction recomputes the committed D-3 evaluation; it is never a first or a new one. The committed record
+    must exist and name this combination and window, and nothing is written below backtests/results."""
+    d3_rec = (D3_OUT / "oos_chosen.json").resolve()
+    if Path(record).resolve() != d3_rec or not d3_rec.is_file():
+        raise SystemExit(f"refusing to reproduce: the committed D-3 record {d3_rec} does not exist; a reproduction "
+                         "never evaluates the out-of-sample window")
+    rec = json.loads(d3_rec.read_text(encoding="utf-8"))
+    if rec.get("chosen") != res["chosen"] or list(rec.get("window") or []) != list(OOS):
+        raise SystemExit(f"refusing to reproduce: {res['chosen']} {list(OOS)} is not the committed D-3 evaluation "
+                         f"({rec.get('chosen')} {rec.get('window')})")
+    o, results = Path(out).resolve(), (BTS / "results").resolve()
+    if o == results or results in o.parents:
+        raise SystemExit(f"refusing: a reproduction never writes below {results}")
+
+
+def stage_oos(res: dict, out: Path, reproduce_of: Path | None = None):
+    """Evaluate the chosen combination ONCE on 2024-10-03..2026-10-02 (engine period FWD).
+    reproduce_of (run_v2_chrono.py --reproduce): the committed D-3 record; the same computation re-runs that evaluation
+    outside backtests/results and writes oos_reproduced.json, never a decision record."""
+    if reproduce_of:
+        d3 = False
+        refuse_unless_reproducible(res, out, reproduce_of)
+    else:
+        d3 = d3_unlocked()
+        if d3 and Path(out).resolve() != D3_OUT.resolve():
+            raise SystemExit(f"refusing: the D-3 out-of-sample evaluation writes only to {D3_OUT}")
+        refuse_if_locked(out, d3=d3)                     # never a second out-of-sample evaluation
     chosen = res["chosen"]
     t, e = chosen[:2], chosen[3:]
     docs = load_docs("run")
@@ -437,7 +462,12 @@ def stage_oos(res: dict, out: Path):
     if d3:
         rec["authorised_by"] = (f"deviation D-3 ({D3_DEVIATION.name}, sha256 {D3_SHA}): reported once although the "
                                 "decision rule failed; the failed verdict stands")
-    jdump(rec, out / "oos_chosen.json")                  # written before anything else is computed on OOS
+    if reproduce_of:                                     # a recomputation of the committed record, not a decision record
+        rec["reproduced_utc"] = rec.pop("evaluated_once_utc")
+        rec["reproduction_of"] = (D3_OUT / "oos_chosen.json").relative_to(TEAM_REPO).as_posix()
+        jdump(rec, out / "oos_reproduced.json")
+    else:
+        jdump(rec, out / "oos_chosen.json")              # written before anything else is computed on OOS
     sim.to_parquet(out / f"daily_{chosen}_full.parquet")
     # portfolio OOS
     cbp = 0.75 * 1.5 + 0.25 * 5.0 if e == "E1" else 1.0

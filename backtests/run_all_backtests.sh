@@ -8,9 +8,12 @@
 #            press-conference text label from it into $BACKTEST_RERUN_DIR/chrono_inputs, and compare them with the
 #            committed frozen inputs (v2/score/doc_scores.parquet, presser/text_chrono/). The committed inputs are
 #            the ones used below.
-#   v2       Fed communication v2. One-shot out-of-sample lock: once results/v2/oos_chosen.json or
-#            results/v2/oos_not_evaluated.json exists the run is refused (and the script says so). The record exists:
-#            the decision rule FAILED and the out-of-sample window was not evaluated.
+#   v2       Fed communication v2. One-shot out-of-sample rule: the decision rule FAILED (results/v2/oos_not_evaluated.json)
+#            and that verdict stands; under deviation D-3 the out-of-sample window was evaluated once, for reporting
+#            (results/v2_oos, record results/v2_oos/run/oos_chosen.json), and is never evaluated again. With GQH_REPO,
+#            GQH_DATA_DIR and V2_WORK_ROOT set (the v2 input bundle) the stage runs v2/run_v2_chrono.py --reproduce:
+#            it recomputes that run into $BACKTEST_RERUN_DIR/v2_reproduce and compares it with results/v2 and
+#            results/v2_oos to 1e-9 (no decision record written, nothing chosen). Without them it says so and skips.
 #   presser  press-conference ADDENDUM suite (BENCH-R, H1-primary, H1-Q, H1-answer and its 1 s sweep, lexicon
 #            control, spreads) on presser/text_chrono, written to $BACKTEST_RERUN_DIR/presser_h1, then compared with
 #            the committed results (results/presser_h1, presser/backtest/positions). Needs the licensed market data.
@@ -28,7 +31,8 @@
 #   H234_SI_ROOT        64 kbps source-invariance re-run tree; optional
 #   H234_OUT_DIR        H2/H3/H4 output folder (default: backtests/presser/backtest_h234)
 #   FEDPRESS_PKG        fedpress package (default: hpg/fedpress_pkg in this repo)
-#   GQH_REPO, V2_WORK_ROOT  only needed if the v2 run were not locked (see v2/run_v2.py)
+#   GQH_REPO, V2_WORK_ROOT  with GQH_DATA_DIR: the v2 inputs not in git (v2 input bundle, v2/README.md); needed only
+#                       for the v2 reproduction
 #   BACKTEST_RERUN_DIR  re-run outputs (default: backtests/rerun, ignored by git)
 set -euo pipefail
 
@@ -40,7 +44,7 @@ RERUN="${BACKTEST_RERUN_DIR:-$HERE/rerun}"
 STAGE="${1:-all}"
 export PYTHONIOENCODING=utf-8
 export PYTHONDONTWRITEBYTECODE=1
-unset GQH_OOS_UNLOCK PRESSER_OUT_DIR PRESSER_TEXT_DIR PRESSER_BT_DIR || true
+unset GQH_OOS_UNLOCK V2_OOS_DEVIATION PRESSER_OUT_DIR PRESSER_TEXT_DIR PRESSER_BT_DIR || true
 
 case "$STAGE" in
   all | chrono | v2 | presser | h234) ;;
@@ -69,6 +73,7 @@ market_ok() {
 }
 
 mkdir -p "$RERUN"
+RERUN="$(cd "$RERUN" && pwd)"   # absolute: the v2 reproduction runs from $GQH_REPO
 echo "backtests: $HERE"
 echo "re-run outputs: $RERUN"
 
@@ -113,7 +118,7 @@ if want chrono; then
   fi
 fi
 
-# ------------------------------------------------------------------ v2 (one-shot OOS lock)
+# ------------------------------------------------------------------ v2 (one-shot OOS rule; reproduction of D-3)
 if want v2; then
   echo
   echo "== Fed communication v2"
@@ -121,24 +126,54 @@ if want v2; then
   for f in oos_chosen.json oos_not_evaluated.json; do
     if [ -f "$HERE/results/v2/$f" ]; then REC="$HERE/results/v2/$f"; break; fi
   done
-  if [ -n "$REC" ]; then
-    echo "v2: REFUSED to re-run: one-shot out-of-sample lock."
+  D3REC="$HERE/results/v2_oos/run/oos_chosen.json"   # the one out-of-sample evaluation (deviation D-3)
+  if [ -f "$D3REC" ] && [ -n "${GQH_REPO:-}" ] && [ -n "${GQH_DATA_DIR:-}" ] && [ -n "${V2_WORK_ROOT:-}" ]; then
+    echo "v2: reproducing the committed in-sample run and its one D-3 out-of-sample evaluation ($D3REC)."
+    echo "    It recomputes; it evaluates nothing, chooses nothing and writes no decision record."
+    V_LOG="$RERUN/v2_reproduce.log"
+    if (cd "$GQH_REPO" && BACKTEST_RERUN_DIR="$RERUN" "$PY" "$HERE/v2/run_v2_chrono.py" --reproduce \
+        --doc-scores "$HERE/v2/score/doc_scores.parquet") > "$V_LOG" 2>&1; then
+      sed -n '/^v2 reproduce: /,$p' "$V_LOG" | sed 's/^/    /'
+      record "v2: reproduces the committed in-sample and D-3 out-of-sample results (report: $RERUN/v2_reproduce/reproduce_report.json)"
+    else
+      if grep -q '^v2 reproduce: ' "$V_LOG"; then sed -n '/^v2 reproduce: /,$p' "$V_LOG"; else tail -n 30 "$V_LOG"; fi \
+        | sed 's/^/    /'
+      record "v2: FAIL: the reproduction differs from the committed results or did not run (see $V_LOG)"; FAIL=1
+    fi
+  elif [ -n "$REC" ]; then
+    echo "v2: not re-run: one-shot out-of-sample rule (HYPOTHESIS_v2.md; deviation D-3)."
     echo "    Decision record: $REC"
     sed 's/^/    /' "$REC"
     echo
-    echo "    The pre-registered rule failed (full in-sample Sharpe at 2x costs 0.387 <= 0.5), so the out-of-sample"
-    echo "    window was never evaluated and never will be. Committed results: results/v2/, results/summary.md."
+    echo "    The pre-registered rule failed (full in-sample Sharpe at 2x costs 0.387 <= 0.5); that verdict stands."
+    if [ -f "$D3REC" ]; then
+      echo "    Under deviation D-3 the out-of-sample window 2024-10-03..2026-10-02 was evaluated once, for reporting"
+      echo "    only (results/v2_oos/), and is never evaluated again. Record of that evaluation: $D3REC"
+      sed 's/^/      /' "$D3REC"
+      echo
+      echo "    To reproduce it (recomputes the committed numbers and compares them to 1e-9; evaluates nothing): set"
+      echo "    GQH_REPO, GQH_DATA_DIR and V2_WORK_ROOT to the v2 input bundle (v2/README.md) and run this stage again."
+      why="rule FAILED; OOS evaluated once under D-3 (results/v2_oos); set GQH_REPO, GQH_DATA_DIR, V2_WORK_ROOT to reproduce it"
+    else
+      echo "    The D-3 record results/v2_oos/run/oos_chosen.json is missing, so there is nothing to reproduce."
+      why="rule FAILED; D-3 record missing, nothing to reproduce"
+      # a reproduction was asked for (v2 inputs set) and cannot run: a failure, not a skip
+      if [ -n "${GQH_REPO:-}" ] && [ -n "${GQH_DATA_DIR:-}" ] && [ -n "${V2_WORK_ROOT:-}" ]; then FAIL=1; fi
+    fi
     # the runner applies the same lock itself (checked before gqh-flow-clock is imported)
     if "$PY" "$HERE/v2/run_v2_chrono.py" --doc-scores "$HERE/v2/score/doc_scores.parquet" --out "$HERE/results/v2" \
         --skip-if-complete > "$RERUN/v2_lock_check.log" 2>&1; then
       sed 's/^/    runner: /' "$RERUN/v2_lock_check.log"
-      record "v2: refused (one-shot OOS lock; decision record $(basename "$REC") exists: rule FAILED, OOS not evaluated)"
+      record "v2: refused (one-shot out-of-sample rule: $why)"
     else
       sed 's/^/    runner: /' "$RERUN/v2_lock_check.log"
       record "v2: refused by the lock, but the runner's own lock check failed (see $RERUN/v2_lock_check.log)"; FAIL=1
     fi
+  elif [ -f "$D3REC" ]; then
+    # results/v2's decision record is gone but the D-3 record exists: never a fresh run
+    record "v2: REFUSED (results/v2 has no decision record although $D3REC exists; restore the committed results)"; FAIL=1
   else
-    # only reachable if the committed decision record were removed
+    # only reachable if the committed decision records (results/v2 and the D-3 one) were removed
     : "${GQH_REPO:?set GQH_REPO (gqh-flow-clock clone) for a v2 run}"
     : "${GQH_DATA_DIR:?set GQH_DATA_DIR for a v2 run}"
     : "${V2_WORK_ROOT:?set V2_WORK_ROOT (v2 inputs not in git) for a v2 run}"
