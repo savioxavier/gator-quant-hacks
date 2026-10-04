@@ -1,0 +1,71 @@
+{
+  "stage": "fetch",
+  "presser_id": "20211103",
+  "status": "ok",
+  "outputs": [
+    "raw/video.mp4",
+    "raw/transcript.pdf",
+    "raw/statement.html",
+    "raw/captions.vtt",
+    "raw/fetch.json"
+  ],
+  "outputs_detail": [
+    {
+      "path": "raw/video.mp4",
+      "bytes": 764129720,
+      "mtime": 1791062067.0029075,
+      "sha256": null
+    },
+    {
+      "path": "raw/transcript.pdf",
+      "bytes": 230233,
+      "mtime": 1791061964.7858927,
+      "sha256": "68ed5586fb071d7d32129bc51a24105ac68295328afec75304d3521ee42e59d0"
+    },
+    {
+      "path": "raw/statement.html",
+      "bytes": 83986,
+      "mtime": 1791073020.4863548,
+      "sha256": "c9899aab05463ef02fb543fc9894b81fa679e2aa5d1240fbf2ca80c9a1fb3607"
+    },
+    {
+      "path": "raw/captions.vtt",
+      "bytes": 101648,
+      "mtime": 1791061964.3523307,
+      "sha256": "221ff85b71d823f9f0416d8b4ea3a08de34b307d45bdca72512b4da0d2396924"
+    },
+    {
+      "path": "raw/fetch.json",
+      "bytes": 1031,
+      "mtime": 1791073020.641397,
+      "sha256": "c1f0bef7442b2a013666190700692182622d984cddb4df9de812ebbcd3ac4194"
+    }
+  ],
+  "rows": {},
+  "models": {},
+  "notes": {
+    "sources": {
+      "video": "existing",
+      "transcript_pdf": "existing",
+      "statement_html": "download",
+      "captions_vtt": "existing"
+    },
+    "video_bytes": 764129720,
+    "warnings": {}
+  },
+  "stage_fingerprint": "e5149cbe7e1b",
+  "config_hash": "911ef7fb0565",
+  "overrides": [
+    "compute.gpu_type=local5090",
+    "asr.batch_size=4",
+    "voice.batch_size=4",
+    "diarize.ecapa.batch_size=16",
+    "face.batch_size=8"
+  ],
+  "code_version": "0.1.0+src.df22a2d52e78",
+  "run_id": "20261003T201700-BLADEMASTER",
+  "started_utc": "2026-10-04T00:17:00+00:00",
+  "finished_utc": "2026-10-04T00:17:00+00:00",
+  "elapsed_s": 0.524,
+  "host": "BLADEMASTER"
+}

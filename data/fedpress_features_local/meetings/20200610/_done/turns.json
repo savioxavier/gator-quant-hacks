@@ -1,0 +1,86 @@
+{
+  "stage": "turns",
+  "presser_id": "20200610",
+  "status": "ok",
+  "outputs": [
+    "turns/anchor.json",
+    "turns/turns.parquet",
+    "turns/words.parquet"
+  ],
+  "outputs_detail": [
+    {
+      "path": "turns/anchor.json",
+      "bytes": 156,
+      "mtime": 1791073748.0428934,
+      "sha256": "a510bcde1014a65687f5383727ce1bf763a90842f94b71611dcdeb54f820a778"
+    },
+    {
+      "path": "turns/turns.parquet",
+      "bytes": 40425,
+      "mtime": 1791073748.0518918,
+      "sha256": "f2b4111b8cdce84b3587544bf87e81db260a963189aa5169220a64413f98610b"
+    },
+    {
+      "path": "turns/words.parquet",
+      "bytes": 257665,
+      "mtime": 1791073748.069893,
+      "sha256": "918a2293e1a175014eb125645c8048ce7b51cf30505e98e93969faf7fbb0453e"
+    }
+  ],
+  "rows": {
+    "turns": 46,
+    "words": 9992
+  },
+  "models": {
+    "whisper_turbo_ct2": "0a363e9161cbc7ed1431c9597a8ceaf0c4f78fcf"
+  },
+  "notes": {
+    "clock_source": "asr",
+    "base_clock": "asr",
+    "align_method": "text_match",
+    "text_source": "transcript_pdf",
+    "wer_proxy": 0.0994,
+    "match_frac": 0.9141,
+    "timed_frac": 0.9471,
+    "n_ref_words": 9992,
+    "n_hyp_tokens": 9669,
+    "timing_ok": true,
+    "greeting_media_s": 0.94,
+    "greeting_word": "Good",
+    "greeting_timed_by": "match",
+    "anchor": {
+      "media_s": 0.94,
+      "wall_utc": "2020-06-10T18:30:00+00:00",
+      "source": "scheduled_start",
+      "uncertainty_s": null,
+      "rule": "greeting_at_scheduled"
+    },
+    "n_turns": 46,
+    "n_answers": 15,
+    "n_questions": 15,
+    "chair_labels": [
+      "CHAIR POWELL"
+    ],
+    "vtt_check": {
+      "n_words": 9126,
+      "median_offset_s": -35.486,
+      "median_abs_s": 35.486,
+      "p90_abs_s": 35.785
+    }
+  },
+  "stage_fingerprint": "17e9e5bb04a9",
+  "config_hash": "911ef7fb0565",
+  "overrides": [
+    "compute.gpu_type=local5090",
+    "asr.batch_size=4",
+    "voice.batch_size=4",
+    "diarize.ecapa.batch_size=16",
+    "face.batch_size=8"
+  ],
+  "code_version": "0.1.0+src.df22a2d52e78",
+  "run_id": "20261003T202906-BLADEMASTER",
+  "started_utc": "2026-10-04T00:29:06+00:00",
+  "finished_utc": "2026-10-04T00:29:08+00:00",
+  "elapsed_s": 1.275,
+  "host": "BLADEMASTER"
+}

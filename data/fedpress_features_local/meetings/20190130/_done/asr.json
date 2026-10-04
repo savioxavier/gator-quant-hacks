@@ -1,0 +1,76 @@
+{
+  "stage": "asr",
+  "presser_id": "20190130",
+  "status": "ok",
+  "outputs": [
+    "asr/words.parquet",
+    "asr/segments.parquet",
+    "asr/asr.json"
+  ],
+  "outputs_detail": [
+    {
+      "path": "asr/words.parquet",
+      "bytes": 121921,
+      "mtime": 1791074275.022403,
+      "sha256": "2004445f438df337f5554abf84fe3a36726909023765a4b2368734d69ee9b7eb"
+    },
+    {
+      "path": "asr/segments.parquet",
+      "bytes": 29686,
+      "mtime": 1791074275.0294023,
+      "sha256": "51dd27276081e39a02707ebc241433006a137c4f1ab2d2300894714bc2de9edf"
+    },
+    {
+      "path": "asr/asr.json",
+      "bytes": 1028,
+      "mtime": 1791074275.0464056,
+      "sha256": "92b55ac587ad5756d51ba2c25ac9a96a8e336c0af3eabd05e1e948a4c2b4d3b8"
+    }
+  ],
+  "rows": {
+    "asr_words": 7577,
+    "asr_segments": 98
+  },
+  "models": {
+    "whisper_turbo_ct2": "0a363e9161cbc7ed1431c9597a8ceaf0c4f78fcf"
+  },
+  "notes": {
+    "n_words": 7577,
+    "rtf": 0.0046,
+    "device": "cuda",
+    "compute_type": "float16",
+    "mean_word_prob": 0.9652
+  },
+  "stage_fingerprint": "86d18e840b15",
+  "config_hash": "911ef7fb0565",
+  "overrides": [
+    "compute.gpu_type=local5090",
+    "asr.batch_size=4",
+    "voice.batch_size=4",
+    "diarize.ecapa.batch_size=16",
+    "face.batch_size=8"
+  ],
+  "code_version": "0.1.0+src.df22a2d52e78",
+  "run_id": "20261003T203737-BLADEMASTER",
+  "started_utc": "2026-10-04T00:37:37+00:00",
+  "finished_utc": "2026-10-04T00:37:55+00:00",
+  "elapsed_s": 17.862,
+  "host": "BLADEMASTER",
+  "device": {
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "cc": "12.0",
+    "vram_gb": 34.2,
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8",
+    "arch_list": [
+      "sm_61",
+      "sm_70",
+      "sm_75",
+      "sm_80",
+      "sm_86",
+      "sm_90",
+      "sm_100",
+      "sm_120"
+    ]
+  }
+}

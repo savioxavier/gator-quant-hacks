@@ -1,0 +1,20 @@
+{
+  "method": "sface",
+  "threshold": 0.363,
+  "enroll_frames": 180,
+  "faces": 0,
+  "ok": false,
+  "enroll_ranges": [
+    [
+      129.34799999999663,
+      309.34799999999666
+    ]
+  ],
+  "fps": 1.0,
+  "source": "zip",
+  "models": [
+    "mediapipe_face_landmarker",
+    "sface_opencv",
+    "emotiefflib_enet_b0_8_va_mtl"
+  ]
+}

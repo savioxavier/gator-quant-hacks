@@ -1,0 +1,74 @@
+{
+  "stage": "diarize",
+  "presser_id": "20230503",
+  "status": "ok",
+  "outputs": [
+    "diarize/chair_check.parquet"
+  ],
+  "outputs_detail": [
+    {
+      "path": "diarize/chair_check.parquet",
+      "bytes": 37368,
+      "mtime": 1791072523.1881635,
+      "sha256": "da5fc3f1945ac9c567606b24d0de900df8cc8aa4db5536cdcfbc30e637a67f7f"
+    }
+  ],
+  "rows": {
+    "chair_check": 813
+  },
+  "models": {
+    "ecapa_voxceleb": "0f99f2d0ebe89ac095bcc5903c4dd8f72b367286"
+  },
+  "notes": {
+    "method": "ecapa_verify",
+    "enroll_end_s": 442.61,
+    "n_chunks": 813,
+    "threshold": 0.5873,
+    "threshold_source": "opening_loo",
+    "enroll_s": 432.0,
+    "n_enroll": 144,
+    "enroll_loo_q": {
+      "0.02": 0.6873,
+      "0.1": 0.7398,
+      "0.5": 0.8162
+    },
+    "answer_verified_frac": 0.9562,
+    "n_unscored": 0,
+    "answer_score_median": 0.7558,
+    "reporter_score_median": 0.025,
+    "reporter_accept_frac": 0.0,
+    "label_disagree_frac": 0.0332
+  },
+  "stage_fingerprint": "4203e990b8b0",
+  "config_hash": "d98baf794bb9",
+  "overrides": [
+    "compute.gpu_type=local5090",
+    "asr.batch_size=4",
+    "voice.batch_size=4",
+    "diarize.ecapa.batch_size=16",
+    "face.batch_size=8"
+  ],
+  "code_version": "0.1.0+src.df22a2d52e78",
+  "run_id": "20261003T200837-BLADEMASTER",
+  "started_utc": "2026-10-04T00:08:37+00:00",
+  "finished_utc": "2026-10-04T00:08:43+00:00",
+  "elapsed_s": 6.002,
+  "host": "BLADEMASTER",
+  "device": {
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "cc": "12.0",
+    "vram_gb": 34.2,
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8",
+    "arch_list": [
+      "sm_61",
+      "sm_70",
+      "sm_75",
+      "sm_80",
+      "sm_86",
+      "sm_90",
+      "sm_100",
+      "sm_120"
+    ]
+  }
+}

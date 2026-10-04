@@ -1,0 +1,64 @@
+{
+  "stage": "fetch",
+  "presser_id": "20230614",
+  "status": "ok",
+  "outputs": [
+    "raw/video.mp4",
+    "raw/transcript.pdf",
+    "raw/statement.html",
+    "raw/fetch.json"
+  ],
+  "outputs_detail": [
+    {
+      "path": "raw/video.mp4",
+      "bytes": 674644353,
+      "mtime": 1791062178.0330412,
+      "sha256": null
+    },
+    {
+      "path": "raw/transcript.pdf",
+      "bytes": 226975,
+      "mtime": 1791062129.711872,
+      "sha256": "03d00fbe4d848494d5805876bd48853396fbc033662a26d7a2659f0dbf66a71c"
+    },
+    {
+      "path": "raw/statement.html",
+      "bytes": 82483,
+      "mtime": 1791072207.7670393,
+      "sha256": "8a1986caaf10ad13ec009d026d4a5af99bd1533349914261fd065f010040f649"
+    },
+    {
+      "path": "raw/fetch.json",
+      "bytes": 894,
+      "mtime": 1791072207.8965652,
+      "sha256": "3c488deb30c95baa12b0bcd6f0d99cb0be7b8c66c625dfb74cc8c5ad6cf0e366"
+    }
+  ],
+  "rows": {},
+  "models": {},
+  "notes": {
+    "sources": {
+      "video": "existing",
+      "transcript_pdf": "existing",
+      "statement_html": "download",
+      "captions_vtt": "absent"
+    },
+    "video_bytes": 674644353,
+    "warnings": {}
+  },
+  "stage_fingerprint": "e5149cbe7e1b",
+  "config_hash": "911ef7fb0565",
+  "overrides": [
+    "compute.gpu_type=local5090",
+    "asr.batch_size=4",
+    "voice.batch_size=4",
+    "diarize.ecapa.batch_size=16",
+    "face.batch_size=8"
+  ],
+  "code_version": "0.1.0+src.df22a2d52e78",
+  "run_id": "20261003T200327-BLADEMASTER",
+  "started_utc": "2026-10-04T00:03:27+00:00",
+  "finished_utc": "2026-10-04T00:03:27+00:00",
+  "elapsed_s": 0.463,
+  "host": "BLADEMASTER"
+}

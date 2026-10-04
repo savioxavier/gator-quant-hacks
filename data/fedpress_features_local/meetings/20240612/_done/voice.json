@@ -1,0 +1,62 @@
+{
+  "stage": "voice",
+  "presser_id": "20240612",
+  "status": "ok",
+  "outputs": [
+    "voice/voice_chunks.parquet"
+  ],
+  "outputs_detail": [
+    {
+      "path": "voice/voice_chunks.parquet",
+      "bytes": 45957,
+      "mtime": 1791072050.013362,
+      "sha256": "00d12f72e251f0a3c6ac064978479da67349cfb1101bc84f2002e9b23608e7ca"
+    }
+  ],
+  "rows": {
+    "voice_chunks": 236
+  },
+  "models": {
+    "audeering_msp_dim": "6eba34a2485ea31cb03600241787c3a5edab8626"
+  },
+  "notes": {
+    "n_chunks": 236,
+    "n_identity_ok": 218,
+    "chunk_s_median": 8.0,
+    "arousal_median": 0.4101,
+    "dominance_median": 0.5093,
+    "valence_median": 0.5025
+  },
+  "stage_fingerprint": "30e0e615d1e3",
+  "config_hash": "d98baf794bb9",
+  "overrides": [
+    "compute.gpu_type=local5090",
+    "asr.batch_size=4",
+    "voice.batch_size=4",
+    "diarize.ecapa.batch_size=16",
+    "face.batch_size=8"
+  ],
+  "code_version": "0.1.0+src.df22a2d52e78",
+  "run_id": "20261003T200034-BLADEMASTER",
+  "started_utc": "2026-10-04T00:00:34+00:00",
+  "finished_utc": "2026-10-04T00:00:50+00:00",
+  "elapsed_s": 15.67,
+  "host": "BLADEMASTER",
+  "device": {
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "cc": "12.0",
+    "vram_gb": 34.2,
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8",
+    "arch_list": [
+      "sm_61",
+      "sm_70",
+      "sm_75",
+      "sm_80",
+      "sm_86",
+      "sm_90",
+      "sm_100",
+      "sm_120"
+    ]
+  }
+}
