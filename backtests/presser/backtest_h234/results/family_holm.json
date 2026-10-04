@@ -1,0 +1,58 @@
+{
+  "H2": {
+    "status": "run",
+    "p_raw": 0.4389,
+    "p_used": 0.4389,
+    "n_answers": 269,
+    "n_meetings": 10,
+    "mean_ticks": -0.08550185873605948,
+    "bb_ci90": [
+      -0.26153846153846155,
+      0.06785714285714285
+    ],
+    "reasons": [],
+    "labels": [
+      "exploratory, post-NO-GO; cannot rescue G3; no trading claim",
+      "source invariance not checked"
+    ],
+    "p_holm": 0.8778,
+    "holm_significant_at_0.05": false,
+    "wording": "not detected (see the 90% CI upper bound)"
+  },
+  "H3": {
+    "status": "killed",
+    "p_raw": null,
+    "p_used": 1.0,
+    "n_answers": 272,
+    "n_meetings": 10,
+    "mean_ticks": 0.011029411764705883,
+    "bb_ci90": [
+      -0.176056338028169,
+      0.21673003802281368
+    ],
+    "reasons": [
+      "G4: floor binds for BI in 100% of post-burn-in meetings"
+    ],
+    "labels": [
+      "exploratory, post-NO-GO; cannot rescue G3; no trading claim"
+    ],
+    "p_holm": 1.0,
+    "holm_significant_at_0.05": false,
+    "wording": "not detected (see the 90% CI upper bound)"
+  },
+  "H4": {
+    "status": "run",
+    "p_raw": 0.24274052331658058,
+    "p_used": 0.24274052331658058,
+    "n_answers": 269,
+    "n_meetings": 10,
+    "labels": [
+      "exploratory, post-NO-GO; cannot rescue G3; no trading claim"
+    ],
+    "p_holm": 0.7282215699497417,
+    "holm_significant_at_0.05": false,
+    "wording": "not detected (see the 90% CI upper bound)"
+  },
+  "note": "Holm m = 3 across H2, H3, H4 (new exploratory family; the locked register keeps them at p = 1, R2-26). A killed or unrunnable primary enters with p = 1.",
+  "features": "real features"
+}

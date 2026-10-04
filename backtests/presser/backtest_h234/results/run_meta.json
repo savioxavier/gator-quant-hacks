@@ -1,0 +1,14 @@
+{
+  "label": "exploratory, post-NO-GO; cannot rescue G3; no trading claim",
+  "features": "real features",
+  "placebo_tree": false,
+  "fedpress_root": "/blue/ai-workshop/hd.nguyen/fedpress",
+  "seed": 20261003,
+  "draws": 9999,
+  "prereg_sha256": "e030af98df6fb194532c236890986619341f6e14a457384cfc3ec4bba5dca6d0",
+  "addendum_code": "lib.py (ADDENDUM 1, 7, 8)",
+  "features_manifest": "d39fcd58e40ec09a2100f87572b9f4f50492fca4b85ce2f3264fa10e5d403e27  answers_h234.parquet\nd1c7e2657c4c9ebf60eccf50615adcd91761db084d3409884b86c82111710ba8  meetings_h234.parquet\n73642b7260b14dc66744fa5ca3d9f2368e50539221eeac36cb4214068d7c2640  voice_chunks_assigned.parquet\n",
+  "positions_manifest": "6b939e47c64703beac746e3f13ad77cc6de34072aa836cbecfff7e3c64ed24ab  answer_sel_H2D_h1.csv\n9a711e9ed6385e31076b798042615ed73f8c8825bbdb7b113e62427633c8db7f  answer_sel_H2D_h15.csv\n445a3dae7f1f4a2a6e508bc33e29e0ed7b4d502ce48e7525d3e77e82decc6287  answer_sel_H2D_h5.csv\nbd79c2ced1fd5abd779535d27c86b15e0d7b5c0d1a2b6cb973410541766f59bb  answer_sel_H2V_h1.csv\nbd79c2ced1fd5abd779535d27c86b15e0d7b5c0d1a2b6cb973410541766f59bb  answer_sel_H2V_h15.csv\nbd79c2ced1fd5abd779535d27c86b15e0d7b5c0d1a2b6cb973410541766f59bb  answer_sel_H2V_h5.csv\n72cdeb3799f6ef904c53ac6aa13d61d939efe86e26211929a8ea1b9af38ee3ec  answer_sel_H2_h1.csv\nbe72512e93f3c7f9f2cdffd231cc087991b9ffa90e07735a9a5e135a89b96fdc  answer_sel_H2_h15.csv\n830bfda59884824cb0a09aaf9df5cca49518966f694f279a352e0f7408d03845  answer_sel_H2_h5.csv\n54d1a7a44af5b53abfcb77ffe18eed11573fce8cc4046e3069ab306c91bbb9dd  answer_sel_H3_h1.csv\n9936072d8f407628fcbd7a5120bc925df873a7675c891362faa65b9297eda713  answer_sel_H3_h15.csv\n8c85a8807d2a4d246f1fb47664f1bf1670a3040035f4fbab74a7ef7ee378177a  answer_sel_H3_h5.csv\nde728697c516f2f06e7fabe93fad8035cf063b7ca74a2ca1b9b3556194ff2bb0  answer_sel_H4_h1.csv\nb4715d9f3b9cb2a8af064519af39b50e76b4cc42361deb49add972458ccfafc1  answers_h234_positions.csv\n6a54ba293280837f99f05501fa239c37cc6cb2f63ede887fe510b784aeb49116  known_at_comparison.csv\n1af7e2773b13b59d8623e7e23ee2e1e9d0fc9ac25c0e0be068374d6f414273f5  meetings_h234_positions.csv\n498ce365cdacd4d6c8a09cedf0c3abf1873fd6d643d79d928542145b82201d2f  positions_status.json\n",
+  "fit_sha256": "7f69ec0560850be254c101d80e9fdc63560dc7b37371fc4a117a4513b4a0d5ac",
+  "bad_quote_records_skipped": 1593
+}
