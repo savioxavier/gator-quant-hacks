@@ -1,0 +1,26 @@
+{
+ "addendum_sha256_ok": true,
+ "d3_sha256_ok": true,
+ "frozen_positions_manifest_ok": true,
+ "frozen_positions_hash_form": [
+  "after LF->CRLF (manifest written on Windows)"
+ ],
+ "h1_positions_match_frozen": true,
+ "benchr_ZT_positions_match_frozen": true,
+ "benchr_ZF_positions_match_frozen": true,
+ "benchr_ZN_positions_match_frozen": true,
+ "benchr_ES_positions_match_frozen": true,
+ "gross_usd_matches_suite_C0": true,
+ "net1x_matches_suite_CM_plus_fee": true,
+ "fixed1x_matches_suite_C2F": true,
+ "g3_reproduced": {
+  "n": 20,
+  "mean_gross_ticks": 0.5,
+  "committed_n": 20,
+  "committed_mean": 0.5,
+  "ok": true
+ },
+ "benchr_era_means_reproduced": true,
+ "trade_dates_in_calendar": true,
+ "calendar_last_date": "2026-10-02"
+}

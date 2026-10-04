@@ -17,6 +17,9 @@ backtests/results/v2 (the committed decision record) or the output folder holds 
 (oos_chosen.json or oos_not_evaluated.json; the OOS is evaluated once); with --skip-if-complete it instead exits 0
 without computing anything, after checking that --doc-scores is the file that run used (sha256). The lock is checked
 before run_v2 (and gqh-flow-clock) is imported.
+Deviation D-3 (preregistration/v2_DEVIATION_D3_OOS.md): with V2_OOS_DEVIATION naming that file at its pinned sha256
+and --out backtests/results/v2_oos/run, the committed failed-rule record does not refuse, and the frozen pipeline runs
+stage_oos ONCE although the rule failed (the verdict stands). Any other record, a D-3 one included, still refuses.
 """
 from __future__ import annotations
 
@@ -36,6 +39,15 @@ LOCK_DIR = HERE.parent / "results" / "v2"               # the committed decision
 LOCK_FILES = ("oos_chosen.json", "oos_not_evaluated.json")
 PREREG_SHA_NOW = "464f8a5bad37e6466ccde42e8941fa1836323600324792d4d53dcc0c50eb8a2e"  # Amendments 1-3 + clarification
 R = None                                                # run_v2, imported after the lock check (needs gqh-flow-clock)
+D3_DEVIATION = HERE.parents[1] / "preregistration" / "v2_DEVIATION_D3_OOS.md"
+D3_SHA = "97585d3ca3e7f5764d16e24787486c51ca298dd95ca57ad82d27e1ba30af1c69"  # D-3: OOS once for reporting, rule failed
+D3_OUT = HERE.parent / "results" / "v2_oos" / "run"     # the only output folder of the D-3 evaluation
+
+
+def d3_unlocked() -> bool:
+    p = os.environ.get("V2_OOS_DEVIATION")
+    return bool(p) and Path(p).resolve() == D3_DEVIATION.resolve() and D3_DEVIATION.is_file() \
+        and sha256(D3_DEVIATION) == D3_SHA
 
 
 def lock_records(out: Path) -> list:
@@ -92,6 +104,12 @@ def main() -> None:
     if a.placebo and out.resolve() == LOCK_DIR.resolve():
         raise SystemExit("refusing: a placebo run may not write to the committed v2 results folder")
     rec = [] if a.placebo else lock_records(out)
+    d3 = bool(rec) and not a.placebo and not a.skip_if_complete and d3_unlocked()
+    if d3:
+        # deviation D-3: one out-of-sample evaluation beside the committed failed-rule record, never a second one
+        if out.resolve() != D3_OUT.resolve():
+            raise SystemExit(f"refusing: the D-3 out-of-sample evaluation writes only to {D3_OUT}")
+        rec = [r for r in rec if r != (LOCK_DIR / "oos_not_evaluated.json").resolve()]
     if rec:
         # one-shot out-of-sample lock: the committed decision record (or one in --out) ends the v2 run for good
         summ_dir = rec[0].parent
@@ -130,11 +148,13 @@ def main() -> None:
     is_w = [("selection", R.SEL), ("validation", R.VAL), ("full_is", R.FULL_IS)]
     pd.DataFrame(scheduled_only(chosen, "IS", is_w, R.IS_END)).to_csv(out / "sens_scheduled_only_is.csv", index=False)
 
-    if not res["passed"]:
+    if not res["passed"] and not d3:
         jdump({"oos_evaluated": False, "reason": "decision rule failed (validation net Sharpe <= 0 or full-IS 2x "
                "Sharpe <= 0.5)"}, out / "oos_not_evaluated.json")
         print("Decision rule failed: out-of-sample NOT evaluated.")
         return
+    if not res["passed"]:
+        print("Decision rule failed (verdict stands); deviation D-3: out-of-sample evaluated once for reporting.")
     if a.placebo:
         jdump({"oos_evaluated": False, "reason": "PLACEBO chain test: the out-of-sample stage is never run on "
                "placebo scores (rule passed on random scores)"}, out / "oos_not_evaluated_placebo.json")
