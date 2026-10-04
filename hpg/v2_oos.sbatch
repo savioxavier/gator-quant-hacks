@@ -15,7 +15,8 @@
 # headline numbers (in-sample and out-of-sample Sharpe at 1x and 2x costs, return, vol, drawdown, portfolio test),
 # reproduced next to committed. The decision rule failed (full in-sample Sharpe at 2x costs 0.387 <= 0.5) and that
 # verdict stands; this job chooses nothing, changes no parameter and writes no decision record. The out-of-sample stage
-# runs only after the in-sample files agree with backtests/results/v2.
+# runs only after the in-sample files agree with backtests/results/v2. It then recomputes deviation D-4 (the two
+# implementation fixes, matched benchmarks and walk-forward selection) and compares it with backtests/results/v2_d4.
 # Needs the v2 input bundle and no market files. Before the first run, copy gqh_v2_bundle.tgz (or its parts
 # gqh_v2_bundle.tgz.part01, .part02, ...) and gqh_v2_bundle.tgz.sha256 to your home directory:
 #   scp gqh_v2_bundle.tgz* $USER@hpg.rc.ufl.edu:

@@ -20,6 +20,20 @@ The decision record of the rule is `../results/v2/oos_not_evaluated.json`. Devia
 re-chosen; its record is `../results/v2_oos/run/oos_chosen.json`, and its results and run log are in
 `../results/v2_oos/`. Full in-sample tables: `../results/v2/` and `../results/summary.md`.
 
+## Deviation D-4: implementation fixes and benchmarks (descriptive)
+
+`../../preregistration/v2_DEVIATION_D4_FIXES.md` (sha256 0edbf189...cd23, committed before anything it authorises was
+computed) names two implementation defects and asks for corrected and benchmark rows beside the committed results,
+which stay the first, reported results; the failed verdict stands and nothing is re-chosen.
+- Fix 1 (sizing timing): `v2lib.weights_E1(..., fix_sizing=True)` (default off) sizes the position
+  entered at open t with open-to-open returns ending at open t-1 instead of open t (the fill price).
+- Fix 2 (overnight drift): `sim_fixed.py`, a next-open simulator that carries shares and cash through the intraday and
+  overnight moves (the shared engine re-applies the previous open's target overnight). `test_sim_fixed.py` checks it
+  (the reviewer's $110.50 example, where the engine gives $110.25, and an explicit share-and-cash ledger).
+- `run_v2_d4.py` runs only with `V2_D4_NOTE` naming that note at its pinned sha256, writes only `../results/v2_d4/`
+  and no decision record; results, conventions and the switch-off reproduction (max abs diff 0) are in
+  `../results/v2_d4/README.md`.
+
 ## One-shot out-of-sample lock
 
 The out-of-sample window is evaluated at most once, and it was, under D-3. Every new run is refused; the one
@@ -81,6 +95,8 @@ after the D-3 run).
 | `run_v2_chrono.py` | the entry point of the reported run: run_v2's own pipeline on the chrono stance scores, with the current pre-registration hash and the D-1 scheduled-only sensitivity; `--reproduce` recomputes the committed D-3 run |
 | `report_v2_oos.py`, `describe_v2_oos.py` | the D-3 report (metrics, daily returns, equity curves) and its descriptive split, from `../results/v2_oos/run` |
 | `adapt_v2.py` | chrono walk-forward document scores -> `score/doc_scores.parquet` |
+| `sim_fixed.py`, `test_sim_fixed.py` | deviation D-4 fix 2: next-open simulator with holdings carried as shares and cash, and its tests |
+| `run_v2_d4.py` | deviation D-4: fixed rows, matched and simple benchmarks, walk-forward selection -> `../results/v2_d4/` |
 | `score/doc_scores.parquet` | the document scores the reported run used (sha256 0e0c1ca7...3ba0, recorded in `summary_is.json`) |
 | `score/doc_scores_lexonly.parquet` | the same 1,098 documents with the lexicon columns only (adapter input) |
 

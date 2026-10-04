@@ -135,6 +135,17 @@ if want v2; then
         --doc-scores "$HERE/v2/score/doc_scores.parquet") > "$V_LOG" 2>&1; then
       sed -n '/^v2 reproduce: /,$p' "$V_LOG" | sed 's/^/    /'
       record "v2: reproduces the committed in-sample and D-3 out-of-sample results (report: $RERUN/v2_reproduce/reproduce_report.json)"
+      D4_NOTE="$REPO_ROOT/preregistration/v2_DEVIATION_D4_FIXES.md"   # deviation D-4: fixes, benchmarks, walk-forward
+      if [ -f "$D4_NOTE" ] && [ -f "$HERE/results/v2_d4/metrics.csv" ]; then
+        D4_OUT="$RERUN/v2_d4"; D_LOG="$RERUN/v2_d4.log"; rm -rf "$D4_OUT"
+        if (cd "$GQH_REPO" && V2_D4_NOTE="$D4_NOTE" V2_D4_OUT="$D4_OUT"               V2_D4_REPRODUCE_REPORT="$RERUN/v2_reproduce/reproduce_report.json" "$PY" "$HERE/v2/run_v2_d4.py")               > "$D_LOG" 2>&1             && "$PY" "$HERE/tools/compare_results.py" --label "D-4 fixes, benchmarks and walk-forward"               --ref "$HERE/results/v2_d4" --new "$D4_OUT" --skip run_info.json consistency.json >> "$D_LOG" 2>&1; then
+          tail -n 2 "$D_LOG" | sed 's/^/    /'
+          record "v2 D-4: the fixed rows, benchmarks and walk-forward selection reproduce results/v2_d4 (log: $D_LOG)"
+        else
+          tail -n 20 "$D_LOG" | sed 's/^/    /'
+          record "v2 D-4: FAIL: the D-4 rows differ from results/v2_d4 or did not run (see $D_LOG)"; FAIL=1
+        fi
+      fi
     else
       if grep -q '^v2 reproduce: ' "$V_LOG"; then sed -n '/^v2 reproduce: /,$p' "$V_LOG"; else tail -n 30 "$V_LOG"; fi \
         | sed 's/^/    /'

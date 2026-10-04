@@ -1,0 +1,20 @@
+{
+  "reviewer_example": {
+    "engine": {
+      "value_at_session2": 110.25,
+      "turnover_open2": 0.023809523809523836
+    },
+    "fixed": {
+      "value_at_session2": 110.5,
+      "turnover_open2": 0.04751131221719462
+    },
+    "by_hand_value_at_open2": 110.5
+  },
+  "unit_tests": {
+    "test_reviewer_example": "PASS",
+    "test_equals_engine_without_intraday_moves_rates_or_costs": "PASS",
+    "test_equals_explicit_share_ledger": "PASS",
+    "test_fix1_switch": "PASS"
+  },
+  "note": "$100, $50 in an asset, +10% open to close, then +10% close to open: held as shares the account is worth $110.50 at the next open (corrected simulator); the shared engine gives $110.25"
+}
