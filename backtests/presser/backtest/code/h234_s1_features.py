@@ -42,7 +42,7 @@ ex_labels_seen: dict[str, list] = {}
 def note_input(root, pid, rel):
     p = mdir(root, pid) / rel
     if p.exists():
-        input_hashes[f"{pid}/{rel}"] = sha256(p)
+        input_hashes[f"{pid}/{rel}" if root == ROOT else f"si/{pid}/{rel}"] = sha256(p)  # SI re-runs keyed apart (note 3)
         for k, v in (table_meta(root, pid, rel).get("models") or {}).items():
             model_revs.setdefault(k, set()).add(str(v))
 
@@ -203,7 +203,9 @@ for r in base.itertuples():
     q["vtt_n_words"] = vtt.get("n_words")
     q["vtt_ok"] = q["vtt_median_offset_s"] is not None and abs(float(q["vtt_median_offset_s"])) <= MAX_VTT_OFFSET_S
     am = mdir(ROOT, pid) / "audio" / "audio.json"
-    wav = json.loads(am.read_text(encoding="utf-8")).get("duration_s") if am.exists() else \
+    ameta = json.loads(am.read_text(encoding="utf-8")) if am.exists() else {}
+    # fedpress 436a351 writes the WAV length at output.duration_s (note 3); the done marker's notes are the fallback
+    wav = (ameta.get("output") or {}).get("duration_s") or ameta.get("duration_s") or \
         ((read_done(ROOT, pid, "audio") or {}).get("notes", {}) or {}).get("duration_s")
     q["wav_duration_s"], q["label_video_duration_s"] = wav, video_dur.get(pid)
     q["wav_gap_s"] = abs(float(wav) - float(q["label_video_duration_s"])) if (wav is not None and pd.notna(
