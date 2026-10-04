@@ -12,6 +12,7 @@ This repository contains research, preregistered tests, and backtests for a syst
 - [Backtest overview](backtests/v2/README.md) — v2 decision rule, results, and reproduction notes.
 - [Backtest results](backtests/results/summary.md) — summary of committed results.
 - [Frozen backtest snapshot](backtest_snapshot/README.md) — provenance and reproduction information for the archived snapshot.
+- [Massive 8-K challenge](massive-8k/README.md) — separate sponsor challenge (notebook + write-up). Not part of the Fed study.
 
 ## Repository layout
 
@@ -26,5 +27,6 @@ This repository contains research, preregistered tests, and backtests for a syst
 | `preregistration/` | Hypotheses, amendments, deviations, and the preregistration log. |
 | `report/` | The full report and supporting material. |
 | `strategies/` | Initial strategy hypothesis and review. |
+| `massive-8k/` | Massive 8-K options challenge. Independent of the Fed study. |
 
 Some reproduction workflows require licensed market data or local input bundles that are not committed. See the relevant backtest README before attempting a run.

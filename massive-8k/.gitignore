@@ -1,0 +1,4 @@
+.env
+.massive_cache/
+.venv/
+.ipynb_checkpoints/
