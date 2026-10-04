@@ -1,4 +1,5 @@
 # Strategy results: in-sample and out-of-sample
+n> One-page Sharpe summary (with the D-4 corrections and benchmarks): `SHARPE_SUMMARY.md`.
 
 This page collects the competition-format results (Gator Quant Hacks, Systematic Trading) for every strategy series
 the team has backtested. In-sample (IS) and out-of-sample (OOS) are reported separately, net of costs at 1x and at
