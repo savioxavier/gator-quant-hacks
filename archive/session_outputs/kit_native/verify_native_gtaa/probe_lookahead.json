@@ -1,0 +1,168 @@
+{
+ "S3_project_margin": [
+  {
+   "cut": "2006-09-29",
+   "orders_before": 758,
+   "orders_same": true,
+   "positions_same": true,
+   "decisions_before": 21,
+   "decisions_same": true,
+   "orders_differing_after": 11802,
+   "decisions_differing_after": 233
+  },
+  {
+   "cut": "2008-10-15",
+   "orders_before": 2586,
+   "orders_same": true,
+   "positions_same": true,
+   "decisions_before": 45,
+   "decisions_same": true,
+   "orders_differing_after": 10416,
+   "decisions_differing_after": 202
+  },
+  {
+   "cut": "2012-10-31",
+   "orders_before": 6015,
+   "orders_same": true,
+   "positions_same": true,
+   "decisions_before": 94,
+   "decisions_same": true,
+   "orders_differing_after": 9829,
+   "decisions_differing_after": 150
+  },
+  {
+   "cut": "2016-06-23",
+   "orders_before": 9063,
+   "orders_same": true,
+   "positions_same": true,
+   "decisions_before": 137,
+   "decisions_same": true,
+   "orders_differing_after": 7550,
+   "decisions_differing_after": 116
+  },
+  {
+   "cut": "2020-03-31",
+   "orders_before": 12361,
+   "orders_same": true,
+   "positions_same": true,
+   "decisions_before": 183,
+   "decisions_same": true,
+   "orders_differing_after": 4374,
+   "decisions_differing_after": 76
+  },
+  {
+   "cut": "2024-10-02",
+   "orders_before": 15843,
+   "orders_same": true,
+   "positions_same": true,
+   "decisions_before": 237,
+   "decisions_same": true,
+   "orders_differing_after": 1283,
+   "decisions_differing_after": 24
+  },
+  {
+   "cut": "2025-06-30",
+   "orders_before": 16461,
+   "orders_same": true,
+   "positions_same": true,
+   "decisions_before": 246,
+   "decisions_same": true,
+   "orders_differing_after": 973,
+   "decisions_differing_after": 14
+  }
+ ],
+ "BH5_guide_cash100k": [
+  {
+   "cut": "2006-09-29",
+   "orders_before": 705,
+   "orders_same": true,
+   "positions_same": true,
+   "decisions_before": 21,
+   "decisions_same": true,
+   "orders_differing_after": 21099,
+   "decisions_differing_after": 0
+  },
+  {
+   "cut": "2008-10-15",
+   "orders_before": 2904,
+   "orders_same": true,
+   "positions_same": true,
+   "decisions_before": 45,
+   "decisions_same": true,
+   "orders_differing_after": 18899,
+   "decisions_differing_after": 0
+  },
+  {
+   "cut": "2012-10-31",
+   "orders_before": 7407,
+   "orders_same": true,
+   "positions_same": true,
+   "decisions_before": 94,
+   "decisions_same": true,
+   "orders_differing_after": 14397,
+   "decisions_differing_after": 0
+  },
+  {
+   "cut": "2016-06-23",
+   "orders_before": 11191,
+   "orders_same": true,
+   "positions_same": true,
+   "decisions_before": 137,
+   "decisions_same": true,
+   "orders_differing_after": 10613,
+   "decisions_differing_after": 0
+  }
+ ],
+ "S3_guide_cash100k": [
+  {
+   "cut": "2012-10-31",
+   "orders_before": 5106,
+   "orders_same": true,
+   "positions_same": true,
+   "decisions_before": 94,
+   "decisions_same": true,
+   "orders_differing_after": 8859,
+   "decisions_differing_after": 161
+  },
+  {
+   "cut": "2016-06-23",
+   "orders_before": 7459,
+   "orders_same": true,
+   "positions_same": true,
+   "decisions_before": 137,
+   "decisions_same": true,
+   "orders_differing_after": 6078,
+   "decisions_differing_after": 120
+  },
+  {
+   "cut": "2020-03-31",
+   "orders_before": 9901,
+   "orders_same": true,
+   "positions_same": true,
+   "decisions_before": 183,
+   "decisions_same": true,
+   "orders_differing_after": 3588,
+   "decisions_differing_after": 75
+  },
+  {
+   "cut": "2024-10-02",
+   "orders_before": 12580,
+   "orders_same": true,
+   "positions_same": true,
+   "decisions_before": 237,
+   "decisions_same": true,
+   "orders_differing_after": 1108,
+   "decisions_differing_after": 24
+  },
+  {
+   "cut": "2025-06-30",
+   "orders_before": 13053,
+   "orders_same": true,
+   "positions_same": true,
+   "decisions_before": 246,
+   "decisions_same": true,
+   "orders_differing_after": 682,
+   "decisions_differing_after": 15
+  }
+ ]
+}

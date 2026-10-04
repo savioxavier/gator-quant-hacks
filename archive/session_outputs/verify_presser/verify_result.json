@@ -1,0 +1,115 @@
+{
+ "n_metric_rows": 200,
+ "n_values_compared_metrics_csv": 5272,
+ "n_values_compared_key_metrics": 528,
+ "worst_rel_diff_vs_metrics_csv": {
+  "rel": 4.649865154587181e-06,
+  "key": [
+   "H1-primary",
+   "ES",
+   "all",
+   "IS: 2016-2022 sample (D1 clean)",
+   "fixed1x",
+   "total_pnl_usd",
+   "107530.0",
+   "107530.50000000007"
+  ]
+ },
+ "checks_trade_reconstruction": {
+  "gross_vs_C0_usd": 0.0,
+  "fixed1x_vs_C2F_usd": 1.1368683772161603e-13,
+  "net1x_vs_CM(F)_usd_measured": 1.1368683772161603e-13
+ },
+ "claims": {
+  "G3 n=20 mean +0.50 ticks": [
+   "True",
+   "20",
+   "0.5"
+  ],
+  "G3 date window == confirmation sample": [
+   "True",
+   "20",
+   "20"
+  ],
+  "IS vol with N in [9.98%,10.01%]": [
+   "True",
+   "0.09982651887271529",
+   "0.10007692404821342"
+  ],
+  "ZT measured spread = 1 tick on every trade": [
+   "True",
+   "[1.0]"
+  ],
+  "ZN measured spread = 1 tick on every trade": [
+   "True",
+   "[1.0]"
+  ],
+  "ES spread 1..2.5 ticks": [
+   "True",
+   "[1.0, 1.5, 2.5]"
+  ],
+  "ZT cost per contract RT values": [
+   "None",
+   "[11.8125, 19.625]"
+  ],
+  "H1 ZT face notional per trade x capital = 95.76": [
+   "True",
+   "95.76"
+  ],
+  "Warsh meetings in OOS (per strategy/sym)": [
+   "None",
+   "{('BENCH-R', 'ES'): 3, ('BENCH-R', 'ZF'): 3, ('BENCH-R', 'ZN'): 3, ('BENCH-R', 'ZT'): 3, ('H1-primary', 'ES'): 3, ('H1-primary', 'ZF'): 3, ('H1-primary', 'ZN'): 3, ('H1-primary', 'ZT'): 3}"
+  ],
+  "capacity H1 ZT median entry size 518": [
+   "True",
+   "518.0"
+  ],
+  "capacity H1 ES median entry ~22": [
+   "True",
+   "21.5"
+  ],
+  "capacity N_contracts == sizing N": [
+   "True",
+   "None"
+  ],
+  "capacity N_over_median == N/median": [
+   "True",
+   "None"
+  ],
+  "capacity n_trades consistent with trade logs": [
+   "True",
+   "None"
+  ]
+ },
+ "saved_daily_vs_full_rebuild_max_rel": [
+  5.395905455585774e-07,
+  [
+   "BENCH-R",
+   "ZF",
+   "IS: era 2016-2019",
+   "net1x",
+   "sharpe"
+  ]
+ ],
+ "rounding_boundary_cases": [
+  "H1-primary ZT G3 confirmation sample 2023-02-01..2026-04-29 gross total_return: stored 0.0374062, from saved daily 0.037406255, full-precision rebuild 0.03740625",
+  "H1-primary ZT G3 confirmation sample 2023-02-01..2026-04-29 gross total_pnl_usd: stored 374062.0, from saved daily 374062.55, full-precision rebuild 374062.5",
+  "BENCH-R ZF IS gross ann_return: stored -0.00367713, from saved daily -0.003677135029, full-precision rebuild -0.00367713464219"
+ ],
+ "notes": [
+  "daily_returns.csv vs own rebuild: max abs diff 5e-09, max rel diff 4.99e-08 (file stored at 8 significant digits)",
+  "tables.md detail rows checked: 120, not found: 0",
+  "README.md table lines: 34, not present in tables.md: 12",
+  "README-only table line: | file | content |",
+  "README-only table line: | `build_presser_strategy.py` | builds everything below, except the capacity table, from committed files plus the free Yahoo calendar; reads no licensed data |",
+  "README-only table line: | `capacity_top_of_book.py` | optional; reads displayed sizes (not prices) from the licensed bbo-1s file and writes `capacity_top_of_book.csv` |",
+  "README-only table line: | `per_trade.csv` | one row per trade: window, sample, chair, position, entry and exit time (ET), hold, tick era, $ per tick, gross ticks, half-spreads in ticks, cost basis, net ticks, gross/net 1x/net 2x/fixed $ per contract, N, position P&L |",
+  "README-only table line: | `daily_returns.csv` | daily return series (fraction of $10m), gross/net 1x/net 2x, per strategy and symbol |",
+  "README-only table line: | `metrics.csv` | every metric for every strategy x symbol x variant (all, ex_warsh) x window x cost |",
+  "README-only table line: | `tables.md` | the same, as markdown tables |",
+  "README-only table line: | `key_metrics.json` | IS/OOS x gross/net 1x/net 2x headline metrics per strategy and symbol |",
+  "README-only table line: | `sizing.csv` | N per strategy and symbol, with the in-sample vol at one contract and at N |",
+  "README-only table line: | `equity_*.png` | equity curves (cumulative P&L in % of $10m; the shaded area is out of sample) |"
+ ],
+ "problems": []
+}

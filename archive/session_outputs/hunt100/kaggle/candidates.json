@@ -1,0 +1,211 @@
+[
+ {
+  "id": "kaggle_hull4_str_es",
+  "name": "Hull Tactical 4th place: sparse short-term reversal on ES + inverse-vol blend with base long + long-window vol target",
+  "family": "equity timing / short-term mean reversion",
+  "sources": [
+   "https://www.kaggle.com/competitions/hull-tactical-market-prediction/writeups/4th-place-technical-model-no-learning-short-te",
+   "https://www.kaggle.com/competitions/hull-tactical-market-prediction/leaderboard",
+   "https://www.kaggle.com/competitions/hull-tactical-market-prediction/overview"
+  ],
+  "source_types": ["kaggle_competition_writeup", "kaggle_private_leaderboard"],
+  "exact_rule": "Instrument F_ES total-return index; cash earns T-bill. All signals on F_ES closes at close d. Sparse reversal stream s_t in {0,1}, three pre-declared variants (report all, choose on in-sample only): V1 RSI2 = Wilder RSI over 2 sessions of close-to-close changes; enter when RSI2 < 10, exit when RSI2 > 70 or after 10 sessions. V2 5DLOW = close_d is the minimum of the last 5 closes and close_d < close_{d-1}; hold 5 sessions (a new trigger restarts the clock). V3 Z3 = 3-day log return < -1.5*sigma_d*sqrt(3), sigma_d = EWMA (half-life 32 sessions) daily vol; hold 5 sessions. Base stream b_t = 1 (always long). Inverse-vol blend recomputed on the last session of each month: sigma_A = std(s*r_ES), sigma_B = std(r_ES), both over the trailing 252 sessions; w_A = (1/sigma_A)/(1/sigma_A + 1/sigma_B), w_B = 1 - w_A; exposure e_t = w_A*s_t + w_B. Vol target updated monthly: L = 0.10/(sqrt(252)*std(e*r_ES) over trailing 252 sessions); final weight = clip(L*e_t, 0, 2). Execution exec='next_open' (primary, trade at the open after the signal close) and 'next_close' (robustness). Costs ES 1 bp one way (2 bp stress) plus roll round trip. Also report stream A alone scaled to 10% ex-ante vol (63-session trailing) as the pure-alpha diagnostic.",
+  "instruments": "F_ES (futures_daily), cash",
+  "data_needed": "futures_daily F_ES OHLC + roll flags, rf_daily (all local)",
+  "external_evidence": "Private leaderboard (forecast window ~2025-12-16..2026-06-24, ~130 sessions): adjusted Sharpe 3.347, 4th of 3,294 teams; over the same window ES buy-and-hold excess Sharpe was 0.97 (our calc; Q1 2026 -1.09 then Mar-Jun +1.43), so the edge vs B&H is ~1.7 SE of a 130-day Sharpe (SE ~1.4) and selected from 3,294 teams. Author's long backtest (sample not stated, includes 2008): vanilla signal 5.2%/yr, 7.7% vol, Sharpe 0.68, MDD -13.6%, hit 59.6%; with vol targeting 9.4%/yr, 14.3% vol, Sharpe 0.66, MDD -25.8%; buy-and-hold 6.3%/yr, 19.2% vol, Sharpe 0.33, MDD -63.8%. ~16 trades/yr. Alpha researched before the competition, no tuning, no costs in metric.",
+  "evidence_score": 2,
+  "implementable": true,
+  "adaptation_note": "The exact alpha was withheld; V1-V3 are canonical short-horizon index reversal rules standing in for it (pre-declared, not tuned). The competition clip [0,2] and 1.2x market-vol cap are replaced by our 10% ex-ante vol standard. Red flags: 6-month scoring window, dip-then-rally regime favoured reversal; next_close fills may kill a 1-5 day signal, so next_open is primary. Base-stream-only version ~ edges rpm_ES_CV (IS 0.772 / later 0.502), so the value-add to measure is the reversal overlay.",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "kaggle_hull_microalpha_enet",
+  "name": "Hull 'Micro Alphas' elastic-net equity-premium timing on free features",
+  "family": "equity timing / ML ERP forecasting",
+  "sources": [
+   "https://www.kaggle.com/competitions/hull-tactical-market-prediction/discussion/614618",
+   "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5035294",
+   "https://www.hulltactical.com/approach/",
+   "https://www.kaggle.com/competitions/hull-tactical-market-prediction/discussion/608088"
+  ],
+  "source_types": ["kaggle_discussion", "host_paper", "live_fund_record"],
+  "exact_rule": "Target: next-day S&P 500 excess return; training target = Ken French daily Mkt-RF before 2010-06 and F_ES excess return afterwards; traded P&L on F_ES. Features at close d, each z-scored with expanding mean/std and winsorised at +/-3 (missing before start -> 0): log VIX; VIX minus 21-day realised S&P vol (annualised); VIX/VIX3M (2006-07+); S&P returns over 1, 5, 21, 252 sessions; close/200-day SMA - 1; 21- and 63-day realised vol; DGS10 21-day change; T10Y2Y; DTB3 and its 63-day change; HY OAS level and 21-day change; Shiller CAPE earnings yield minus DGS10 (monthly, usable from the first business day of the second month after the observation month); CPI yoy (usable from the BLS release date); unemployment-rate 3-month change (usable from the first Friday of the next month); dummies for turn-of-month (last day to 3rd day), pre-holiday, Monday. Model: sklearn ElasticNet; at each month end select alpha on a 20-point log grid and l1_ratio in {0.1,0.5,0.9} by TimeSeriesSplit(5) MSE on training data only; expanding window from 1997-01 (HY OAS start), first forecasts 2007-01; forecasts yhat for all days of the next month. Allocation a_t = clip(1 + 0.5*yhat_t/sd(yhat, trailing 252 sessions), 0, 2). Variants: V1 daily target (above); V2 21-session-ahead cumulative excess return target, same mapping; V3 sign rule a = 1.5 if yhat > 0 else 0.5. Report the natural allocation and the 10% ex-ante vol version (scale = 0.10/(sqrt(252)*std(a*r_ES) over trailing 63 sessions)). Execution next_close; ES 1 bp one way, 2x stress.",
+  "instruments": "F_ES (P&L), S&P/FF market data for training",
+  "data_needed": "index_daily (^GSPC, ^VIX, ^VIX3M), fred_daily (DGS10, T10Y2Y, DTB3, HY OAS), ff_daily, Shiller ie_data.xls (free), FRED CPIAUCSL and UNRATE with release dates (free), futures_daily",
+  "external_evidence": "Hull Tactical 'Micro Alphas' (SSRN 5035294, host paper surfaced in the Kaggle forum): elastic net, monthly expanding refit, claimed out-of-sample daily R2 ~1.33% and use in a public fund. A Kaggle participant reports the host's ElasticNet starter at ~0.55 Sharpe over 35 years (unverified). Live check (yfinance adjusted, our calc): HTUS, the host's timing ETF, 2015-06-25..2026-10-02 excess Sharpe 0.56, MDD -47.5% vs SPY 0.71, -33.8%; IR vs SPY -0.07, beta 0.71; 2015-06..2024-10-02 0.52 vs 0.69. AmbrosM (Kaggle) found high-LB notebooks had negative CV R2.",
+  "evidence_score": 2,
+  "implementable": true,
+  "adaptation_note": "Hull's feature set is anonymised/proprietary; replaced by a free, release-lagged feature list fixed here before any fit. The 0.5 mapping coefficient is pre-declared, not tuned. Red flags: the host's live fund lagged buy-and-hold for 11 years; daily R2 of 1% is within data-mining noise; many correlated features; 2010-2024 bull market rewards allocations > 1 regardless of skill, so compare against a constant-allocation benchmark with the same average exposure.",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "kaggle_hull_cs_practitioner",
+  "name": "Hull & Qiao correlation-screening 6-month equity-premium model",
+  "family": "equity timing / predictive regression",
+  "sources": [
+   "https://www.hulltactical.com/wp-content/uploads/2016/08/Hull-Exec-Summary-160112.pdf",
+   "https://www.hulltactical.com/wp-content/uploads/2016/08/How-to-replicate-A-Practitioners-Defense.pdf",
+   "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2609814",
+   "https://www.hulltactical.com/approach/"
+  ],
+  "source_types": ["host_paper", "live_fund_record"],
+  "exact_rule": "Every 20 sessions, starting once 10 years of predictor history exist: (1) predictors at the decision date with release lags: Shiller D/P, trailing P/E and CAPE (monthly, usable from the second month after observation); log(S&P/commodity basket) using ^GSPC over an equal-weight basket of F_CL, F_GC, F_HG, F_ZC (DBC before 2010 if futures absent); DGS10; DBAA-DAAA; DGS10-DTB3; durable goods new orders/shipments (FRED, usable one month after the reference month + 5 days); CPI yoy (from BLS release date); close/200-day SMA; Sell-in-May dummy (Nov-Apr = 1); VRP = VIX^2 - (21-day realised vol)^2; oil shock = 21-session log change of the CL front; PCA-price = first PC of the valuation ratios and PCA-tech = first PC of {close/50d SMA, close/200d SMA, 12-1 month return}, both fitted in the window. (2) y = cumulative S&P excess return over the next 130 sessions; in the trailing 10-year window use only rows whose 130-session target ends on or before the decision date. (3) keep predictors with |corr(x,y)| >= 0.10; if none, forecast = window mean of y. (4) OLS of y on kept predictors; forecast yhat. (5) position = clip(yhat/mean(y in window), -0.5, 1.5) held 20 sessions. Variants: V1 as above; V2 long-only clip [0, 1.5]; V3 same pipeline with a 21-session target and screening threshold 0.10. Report natural positions and 10% ex-ante vol scaled. Training uses ^GSPC/FF market excess returns; traded P&L F_ES from 2010-06. Execution next_close, ES 1 bp, 2x stress.",
+  "instruments": "F_ES (P&L); S&P index history for training",
+  "data_needed": "Shiller ie_data.xls, FRED (DGS10, DTB3, DBAA, DAAA, durable goods orders/shipments, CPI) with release dates, index_daily, futures_daily; book-to-market, BDI, short interest, implied correlation and cay are dropped (not free or too lagged)",
+  "external_evidence": "Hull & Qiao (JPM 43(3), 2017) via host exec summary: 20 predictors, |corr| >= 0.10 screening, 130-day horizon, 10-year window refit every 20 days, SPY position capped +150%/-50%; simulated 2001-2015 12.11%/yr vs 5.79% buy-and-hold, Sharpe 0.85 vs 0.21, MDD 21.1% vs 55.2%. Live: HTUS (host ETF, from June 2015) excess Sharpe 0.56 vs SPY 0.71 to 2026-10-02 (our calc).",
+  "evidence_score": 2,
+  "implementable": true,
+  "adaptation_note": "About 14 of 20 inputs have free proxies; the rest are dropped (fixed list above). Position scaling relative to the window-mean forecast is our pre-declared reading of 'proportional to forecast'. Red flags: overlapping 130-day targets give ~1 independent observation per 6 months, so 10-year windows hold ~20; the 2001-2015 backtest included two bear markets that timing models catch, while 2010-2024 is mostly bull; live record lags SPY.",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "kaggle_hull_seasonal_combo",
+  "name": "Hull seasonal/anomaly composite: Sell in May + turn of month + FOMC day + state momentum",
+  "family": "calendar / equity timing",
+  "sources": [
+   "https://www.hulltactical.com/approach/",
+   "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3165669",
+   "https://www.kaggle.com/competitions/hull-tactical-market-prediction/discussion/608260"
+  ],
+  "source_types": ["host_paper", "kaggle_discussion", "academic_literature"],
+  "exact_rule": "F_ES daily allocation = 0.5 x (SIM + TOM + FOMC + SDM), each 0/1 for the close-to-close return of session d: SIM = 1 if d falls in November-April; TOM = 1 if d is the last session of a month or one of the first 3 sessions of the next; FOMC = 1 if d is a scheduled FOMC statement day (federalreserve.gov calendars, same file as the edges calendar study); SDM = 1 if the F_ES excess total return over the 252 sessions ending d-1 is > 0. Calendar components are known in advance, so w_dec is set one session earlier such that the position is held over session d; SDM uses data through d-1 only. Variants: V1 equal-vote composite (natural exposure 0..2); V2 SIM only (allocation 1 Nov-Apr, 0 May-Oct); V3 exact pre-FOMC drift on the ES hourly file: long 1x ES front from the 14:00 New York bar the session before each scheduled statement to the 14:00 New York bar on statement day (UTC via DST table), flat otherwise. Report V1/V2 natural and 10% ex-ante vol scaled (trailing 63-session vol of the allocated stream). Costs ES 1 bp one way (2x stress); V3 1 bp per side.",
+  "instruments": "F_ES daily; ES hourly (glbx_ohlcv1h) for V3",
+  "data_needed": "futures_daily, databento_raw/glbx_ohlcv1h_v01_es_zn.parquet, FOMC calendar already fetched by the edges calendar study",
+  "external_evidence": "Host paper 'Seasonal Effects and Other Anomalies' (Hull Tactical; SSRN page behind a bot check, numbers not read). Literature: Sell in May in 36 of 37 markets (Bouman & Jacobsen 2002) and over 300 years of UK data (Jacobsen & Zhang); pre-FOMC drift ~49 bp per window 1994-2011 (Lucca & Moench 2015) but reported to vanish after 2015 (Kurov, Wolfe & Gilbert 2021); our edges study: TOM on ES IS Sharpe 0.35 with zero timing alpha, FF TOM ~0 after 2008. Kaggle: Hull training data shows weekday/seasonal patterns of borderline significance.",
+  "evidence_score": 2,
+  "implementable": true,
+  "adaptation_note": "Equal-vote weights and the SDM definition are our pre-declared proxies because the host paper could not be read; flag as a reconstruction. The TOM leg duplicates edges CAL_TOM_ES (reuse that series for the TOM component diagnostic); SIM and the hourly pre-FOMC window are the untested pieces. Red flags: SIM keeps ~50% exposure in bull years, so judge on timing alpha vs ES, not raw Sharpe.",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "kaggle_jpmaqs_macro_pressure_ust",
+  "name": "Macrosynergy macro trend pressure (excess growth + excess inflation) timing US Treasury futures",
+  "family": "rates timing / macro quantamental",
+  "sources": [
+   "https://www.kaggle.com/code/macrosynergy/macro-pressure-and-rates-returns",
+   "https://www.kaggle.com/code/macrosynergy/trading-strategies-with-jpmaqs",
+   "https://www.kaggle.com/datasets/macrosynergy/fixed-income-returns-and-macro-trends"
+  ],
+  "source_types": ["kaggle_notebook", "kaggle_dataset", "vendor_research"],
+  "exact_rule": "Monthly signal from point-in-time US data (FRED-MD monthly vintage files; each vintage usable from its release date, data through the previous month). Excess inflation EI = mean(CPI yoy, CPI 6m/6m saar, CPI 3m/3m saar; CPIAUCSL SA) - 2.0. Excess growth EG = mean(INDPRO yoy - median of INDPRO yoy over the prior 60 months, PAYEMS yoy - median of PAYEMS yoy over the prior 60 months). Excess credit EC (V3 only) = yoy growth of (BUSLOANS + REALLN + NONREVSL) - (60-month mean of INDPRO yoy + 2.0). XGHI = (EG + EI)/2; XGHIPC = (EG + EI + EC)/3. Score z = -X / mean(|X|) over the expanding history (zero-neutral zn-score as in the notebook), capped at +/-2. On the last business day of each month set the duration basket risk weight to z: basket = equal ex-ante risk in F_ZT, F_ZF, F_ZN (63-session EWMA vol per leg), scaled so |z| = 1 means 10% ex-ante vol; hold the month. Execution next_close (the notebook's 1-day slippage). Variants: V1 XGHI proportional; V2 XGHI binary (sign only, 10% vol); V3 XGHIPC proportional. Costs ZT 0.5, ZF 0.7, ZN 1 bp one way + roll round trip; 2x stress.",
+  "instruments": "F_ZT, F_ZF, F_ZN",
+  "data_needed": "FRED-MD vintage CSVs (free, St. Louis Fed), futures_daily; optional cross-check with the Kaggle JPMaQS file (user must download with a Kaggle login; USD_DU02YXR/DU05YXR, INTRGDPv5Y, CPIC/CPIH trends, INFTEFF, 2000-2023-05)",
+  "external_evidence": "Macrosynergy Kaggle notebooks on JPMaQS point-in-time data (published 2023-2024): USD 2y IRS receiver, monthly 2000-2023-05: accuracy 0.55, Pearson 0.18 (p < 0.01); 24-area panel Pearson 0.14. Naive PnL for USD+EUR, monthly, 1-day slip, zn-score cap 2, 10% vol, no costs, 288 months 2000-2024: XGHI Sharpe 0.78, XGHIPC 0.75 vs long-only 0.31; peak-to-trough -23% / -32% vs -62%. Authors: value strongest in the 2000s and 2020s, very faint in the 2010s (zero lower bound).",
+  "evidence_score": 3,
+  "implementable": true,
+  "adaptation_note": "JPMaQS growth nowcasts are proprietary; replaced by IP and payroll excess growth from FRED-MD vintages; IRS receivers replaced by Treasury futures (similar duration exposure, adds swap-spread noise). Red flags: our in-sample window (2010-2024) is mostly the period the authors call faint; 2022 (inflation >> target, short duration) will dominate in-sample P&L; vendor-published research; costs ignored in the source.",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "kaggle_optiver_har_voltarget_es",
+  "name": "HAR realised-vol forecast from hourly ES for daily vol targeting (Optiver RV lesson)",
+  "family": "risk management / volatility targeting",
+  "sources": [
+   "https://www.kaggle.com/competitions/optiver-realized-volatility-prediction/writeups/nyanp-1st-place-solution-nearest-neighbors",
+   "https://www.kaggle.com/competitions/optiver-realized-volatility-prediction/discussion/267096",
+   "https://www.kaggle.com/competitions/hull-tactical-market-prediction/writeups/4th-place-technical-model-no-learning-short-te"
+  ],
+  "source_types": ["kaggle_competition_writeup", "academic_literature"],
+  "exact_rule": "Realised variance RV_d = sum of squared log returns between consecutive hourly closes of the ES front contract (glbx_ohlcv1h, ES.v.0, same instrument_id only; hours spanning a contract switch are dropped) from 22:00 UTC of d-1 to the last bar of session d, so overnight trading is included. HAR on logs: log mean(RV_{d+1..d+5}) = b0 + b1 log RV_d + b2 log mean(RV_{d-4..d}) + b3 log mean(RV_{d-21..d}); OLS on the trailing 1,000 sessions, refit on the last session of each month; sigma_hat_d = sqrt(252*exp(fitted + 0.5*residual variance)). Weight w_d = min(0.10/sigma_hat_d, 3), changed only when |w_d/w_held - 1| > 10%. Variants: V1 HAR (above); V2 sigma = sqrt(252*mean RV over 22 sessions); V3 22-session Garman-Klass from F_ES daily OHLC (no hourly data). Decisions at close d, exec next_close; ES 1 bp one way, 2x stress. Benchmarks: edges rpm_ES_STATIC, rpm_ES_CV, rpm_ES_MM.",
+  "instruments": "F_ES",
+  "data_needed": "databento_raw/glbx_ohlcv1h_v01_es_zn.parquet (2010-06-07..2026-10-02), futures_daily",
+  "external_evidence": "Optiver RV (2021) 1st place: the strongest predictors were recent realised vol and neighbouring-period RV (RMSPE 0.21 -> 0.19), obtained partly by recovering time order from tick sizes (leak-like). Academic: HAR-RV (Corsi 2009) is the standard out-of-sample RV forecaster; vol targeting improves equity Sharpe and left tails (Harvey et al. 2018; Moreira & Muir 2017). Our edges study: constant-vol EWMA adds +0.02 to +0.06 Sharpe on ES, Moreira-Muir +0.11 (p 0.4-0.5); Hull 4th place credited its long-window vol overlay with more score than any alpha change.",
+  "evidence_score": 3,
+  "implementable": true,
+  "adaptation_note": "Transfers only the forecasting lesson, not the leaky competition features. Expect a small gain; the question is whether a better vol forecast beats EWMA after turnover. Red flags: hourly RV misses the 21:00-22:00 UTC break and roll hours; a 3x cap may lever into low-vol melt-ups before shocks (2018-02, 2020-02).",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "kaggle_jpx_xs_1d_mom_sectors",
+  "name": "JPX 4th place: 1-day cross-sectional momentum (and its mirror) on sector ETFs",
+  "family": "cross-sectional short-term momentum/reversal",
+  "sources": [
+   "https://www.kaggle.com/competitions/jpx-tokyo-stock-exchange-prediction/writeups/ddm-4th-place-solution",
+   "https://www.kaggle.com/competitions/jpx-tokyo-stock-exchange-prediction/leaderboard",
+   "https://www.kaggle.com/competitions/jpx-tokyo-stock-exchange-prediction/discussion/320323"
+  ],
+  "source_types": ["kaggle_competition_writeup", "kaggle_private_leaderboard"],
+  "exact_rule": "Universe: XLB XLE XLF XLI XLK XLP XLU XLV XLY (etf_daily adjusted OHLC). At close d rank the 1-day return (close d-1 to close d). Weights: linear rank weights centred at zero (rank minus mean rank, scaled to gross 2), i.e. long the top half, short the bottom half; daily rebalance. Variants: V1 momentum (long recent winners, the JPX 4th place model 2); V2 reversal (sign flipped, the JPX model 1); V3 5-day return, weekly rebalance on Friday closes, momentum sign. Scale each to 10% ex-ante vol (63-session trailing). Execution next_open (primary), next_close (stress). Costs: config ETF bps one way + 30 bp/yr borrow on shorts; 2x stress.",
+  "instruments": "9 Select Sector SPDR ETFs",
+  "data_needed": "etf_daily (local)",
+  "external_evidence": "JPX Tokyo Stock Exchange Prediction private leaderboard (~Jul-Oct 2022, ~2,000 Japanese stocks, daily Sharpe of top-200 minus bottom-200 spread): rank by 1-day return descending scored 0.347 (4th place); the ascending mirror scored -0.196; random submissions ~N(0, 0.138); authors call the result mostly luck. 1st place scored 0.381.",
+  "evidence_score": 1,
+  "implementable": true,
+  "adaptation_note": "Japanese single stocks replaced by 9 US sector ETFs (much less idiosyncratic noise). Treat as a negative control; daily turnover near 200x NAV a year makes costs decisive. Red flag: the authors submitted both signs, guaranteeing one positive score.",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "kaggle_mitsui_xs_shortmom_comm",
+  "name": "Mitsui commodity challenge: 4-day cross-sectional persistence among commodity futures",
+  "family": "cross-sectional short-term momentum (commodities)",
+  "sources": [
+   "https://www.kaggle.com/competitions/mitsui-commodity-prediction-challenge/writeups/zlf-solution-of-the-mitsui-commodity-predict",
+   "https://www.kaggle.com/competitions/mitsui-commodity-prediction-challenge/writeups/artem777-in-mitsui-6th-Place",
+   "https://www.kaggle.com/competitions/mitsui-commodity-prediction-challenge/discussion/668589",
+   "https://www.kaggle.com/competitions/mitsui-commodity-prediction-challenge/discussion/650534",
+   "https://www.kaggle.com/competitions/mitsui-commodity-prediction-challenge/leaderboard"
+  ],
+  "source_types": ["kaggle_competition_writeup", "kaggle_discussion", "kaggle_private_leaderboard"],
+  "exact_rule": "Universe: 15 commodity futures F_CL F_HO F_RB F_NG F_GC F_SI F_PL F_HG F_ZC F_ZS F_ZW F_ZL F_ZM F_LE F_HE (total-return indices). Score_i = 4-session log return / 63-session EWMA daily vol. Each day go long the top 5 and short the bottom 5, inverse-vol weights within each side, book scaled to 10% ex-ante vol (63-session covariance-free: sum of leg variances); daily rebalance. Variants: V1 momentum sign (persistence, as in the 5th/6th place findings); V2 reversal sign; V3 static mean-rank tilt (10th place): rank by expanding mean of daily vol-normalised excess returns (minimum 3 years), long top 5 / short bottom 5, monthly rebalance. Execution next_close; costs per map (CL/GC/SI/HG 2, NG/HO/RB/PL 3, grains/livestock 4 bp one way) + roll round trips; 2x stress.",
+  "instruments": "15 CME commodity futures",
+  "data_needed": "futures_daily (local)",
+  "external_evidence": "Mitsui Commodity Prediction (Kaggle, Jul 2025-Jan 16 2026, ~3-month scored window, 1,126 teams, metric = mean/std of daily Spearman across ~424 spread targets): 5th place 0.532 found 4-day windows best and longer windows noisier; 6th place 0.514 said a persistence model (mean of recent label lags) captures much of the score; 10th place 0.479 used a static mean-rank ordering and saw ~0.4 on late validation. A random-number submission sat at 57th at one leaderboard update (later -0.17).",
+  "evidence_score": 1,
+  "implementable": true,
+  "adaptation_note": "Competition targets were return spreads of LME/JPX/US/FX pairs over 1-4 days; mapped to our 15 CME commodities. Red flags: 3-month window, luck dominated, overlapping multi-day labels may create artificial persistence; turnover high (daily rebalance of a 4-day signal).",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "kaggle_hull_dow_es",
+  "name": "Weekday seasonality in S&P 500 (Hull training data observation)",
+  "family": "calendar",
+  "sources": [
+   "https://www.kaggle.com/competitions/hull-tactical-market-prediction/discussion/608260"
+  ],
+  "source_types": ["kaggle_discussion"],
+  "exact_rule": "F_ES long 1x for the close-to-close returns of Monday, Tuesday and Friday sessions, flat (cash) on Wednesday and Thursday; positions are calendar-known so w_dec is set one session earlier. Variants: V1 Mon/Tue/Fri long; V2 mirror (Wed/Thu long only) to show symmetry. Scale to 10% ex-ante vol using trailing 63-session vol of the always-long stream times average exposure. Costs ES 1 bp one way + roll; 2x stress.",
+  "instruments": "F_ES",
+  "data_needed": "futures_daily (local)",
+  "external_evidence": "AmbrosM (Kaggle, Hull competition): mean S&P forward returns per weekday over the Hull training history are much lower on Wednesday and Thursday; a reply estimates SE ~0.00025 per weekday mean vs overall mean ~0.0005, i.e. borderline. No held-out test.",
+  "evidence_score": 1,
+  "implementable": true,
+  "adaptation_note": "Cheap negative control; two round trips a week cost ~2%/yr at 1 bp. Low prior.",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "kaggle_optiver_close_imbalance",
+  "name": "Optiver Trading at the Close: closing-auction imbalance features (screened out)",
+  "family": "intraday / auction microstructure",
+  "sources": [
+   "https://www.kaggle.com/competitions/optiver-trading-at-the-close/writeups/hyd-1st-place-solution",
+   "https://www.kaggle.com/competitions/optiver-trading-at-the-close/leaderboard"
+  ],
+  "source_types": ["kaggle_competition_writeup", "kaggle_private_leaderboard"],
+  "exact_rule": "Not specified for our framework: winners predicted 60-second Nasdaq stock moves in the last 10 minutes from closing-auction imbalance, near/far price and book features with online-retrained GBDT/NN ensembles.",
+  "instruments": "Nasdaq single stocks (not in our universe)",
+  "data_needed": "Nasdaq closing-auction imbalance feed (not available free)",
+  "external_evidence": "Private leaderboard 2024 (forward window): 1st hyd MAE 5.4030 vs 15th 5.4465; differences tiny; online retraining was the common winning element.",
+  "evidence_score": 1,
+  "implementable": false,
+  "adaptation_note": "No transferable signal for daily CME futures/ETFs; only the operational idea of periodic refits carries over.",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "kaggle_janestreet_online_anon",
+  "name": "Jane Street Real-Time Market Data Forecasting: anonymised responder forecasting (screened out)",
+  "family": "anonymised ML",
+  "sources": [
+   "https://www.kaggle.com/competitions/jane-street-real-time-market-data-forecasting/leaderboard",
+   "https://www.kaggle.com/competitions/jane-street-real-time-market-data-forecasting/writeups/evgeniia-grigoreva-private-lb-8th-solution"
+  ],
+  "source_types": ["kaggle_private_leaderboard", "kaggle_competition_writeup"],
+  "exact_rule": "Not specified: features and instruments are anonymised; winners used online-updated GBDT/NN on lagged responders.",
+  "instruments": "anonymised",
+  "data_needed": "n/a",
+  "external_evidence": "Private leaderboard 2025: 1st ms capital weighted R2 0.01389, 10th 0.01029.",
+  "evidence_score": 1,
+  "implementable": false,
+  "adaptation_note": "Nothing transferable to named futures/ETFs. Same applies to Jane Street 2020, Two Sigma 2016/2018, Ubiquant 2022, G-Research crypto 2021, DRW crypto 2025, Winton 2016.",
+  "reuse_existing_series": ""
+ }
+]

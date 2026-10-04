@@ -1,0 +1,7 @@
+{
+  "placebo": true,
+  "fedpress_root": "<scratch>\\placebo_features\\tree_posctrl",
+  "si_root": null,
+  "out": "<scratch>\\placebo_features\\out\\positive_control",
+  "label": "exploratory, post-NO-GO; cannot rescue G3; no trading claim"
+}

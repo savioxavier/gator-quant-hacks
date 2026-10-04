@@ -1,0 +1,1148 @@
+
+=== PAGE 1 ===
+Pacific-Basin Finance Journal 80 (2023) 102086
+Available online 4 July 2023
+0927-538X/© 2023 The Authors. Published by Elsevier B.V. This is an open access article under the CC BY-NC-ND license
+(http://creativecommons.org/licenses/by-nc-nd/4.0/).
+Market intraday momentum: APAC evidence 
+Manapon Limkriangkrai
+a , *
+, Daniel Chai
+b
+, Gaoping Zheng
+b 
+a
+Department of Banking & Finance, Monash University, Melbourne, VIC, Australia 
+b
+School of Economics, Finance & Marketing, RMIT University, Melbourne, VIC, Australia   
+ARTICLE INFO  
+JEL classification: 
+G11 
+G14 
+G17 
+Keywords: 
+Intraday momentum 
+Return predictability 
+Asia-Pacific (APAC) markets 
+COVID crisis 
+ABSTRACT  
+This study examines the market intraday momentum, where the first half-hour return predicts the 
+last half-hour return, in exchange-traded funds (ETFs) from the selected Asia-Pacific (APAC) 
+markets including China, Hong Kong SAR, Japan, Singapore and South Korea. Intraday mo -
+mentum is mainly evident in China and Japan. There is weak evidence of the momentum effect in 
+South Korea, while Hong Kong SAR and Singapore appear to have no intraday momentum. When 
+both volatility and trading volume are considered, it is found that volatility has a stronger in -
+fluence on intraday momentum than trading volume in the APAC markets. Finally, we show that 
+the intraday momentum effect is weaker in the COVID-19 crisis period for the APAC markets that 
+exhibit intraday momentum. Overall, the intraday momentum effect is not as pervasive in the 
+APAC markets when compared to the US evidence.   
+1. Introduction 
+The efficient market hypothesis ( Fama, 1970 ) advocates that an efficient market is one whereby current security prices fully reflect 
+all available information. In particular, the market is expected to be at least weak form efficient, since past (price) information is 
+readily available. However, a recent study by Gao et al. (2018) documents market intraday momentum (IMOM) in the US market over 
+the period 1993 – 2013, based on the Standard & Poor ’ s (S & P) 500 exchange-traded fund (ETF). Specifically, the IMOM effect indicates 
+that the market ’ s first half-hour return (from the close of the previous trading day) predicts the last half-hour return in the current 
+trading day. Furthermore, the authors find that the effect is stronger when the market is more volatile, when the trading volume is 
+high, and on recession days. 
+The IMOM effect is another evidence of the well-documented price momentum and consequently motivates us to carry out the 
+analysis for the Asia-Pacific (APAC) markets. Earlier studies have found that the price momentum of Jegadeesh and Titman (1993) is 
+weaker in Asian markets than in the United States and Europe (e.g., Hameed and Kusnadi, 2002 ; Brown et al., 2008 ; Chui et al., 2010 ). 
+Most recent studies find that momentum exists in different formats in Asian equity markets (e.g., Pan et al., 2013 ; Chiao et al., 2020 ). 
+Accordingly, in this replication study, we conduct the analysis in five of the largest APAC markets, including China, Hong Kong SAR, 
+Japan, Singapore, and South Korea. Evidence from these APAC markets provides a validation test on samples that have been previously 
+documented to have a weaker momentum effect. Gao et al. (2018) point out that a financial crisis is an outlier in the time series of 
+market returns, which could affect price momentum. We therefore include the COVID-19 crisis period in our analysis to provide further 
+* Corresponding author. 
+E-mail address: manapon.limkriangkrai@monash.edu (M. Limkriangkrai).  
+Contents lists available at ScienceDirect 
+Pacific-Basin Finance Journal 
+journal homepage: www.else vier.com/loc ate/pacfin 
+https://doi.org/10.1016/j.pacfin.2023.102086 
+Received 30 December 2021; Received in revised form 30 June 2023; Accepted 2 July 2023   
+=== PAGE 2 ===
+Pacific-Basin Finance Journal 80 (2023) 102086
+2
+insights on the IMOM effect. This study complements and extends the recent international study on intraday momentum by Li et al. 
+(2021), who show that intraday momentum is prevalent in 16 developed markets.
+1 
+We first utilise the US data to replicate and validate our empirical methods, and our results are largely consistent with those of Gao 
+et al. (2018). We also confirm the role volatility and trading volume play in IMOM. Finally, the IMOM effect remains robust during the 
+COVID-19 crisis period in the US market. Having confirmed the validity of our approach based on the US market, we then examine the 
+ETFs from the selected APAC markets. We document the IMOM effect in China, Japan, and South Korea. Both the first half-hour and the 
+second-to-last half-hour returns significantly predict the last half-hour return in China and Japan, which is similar to the US evidence. 
+In South Korea, the IMOM effect is relatively weak, since the first half-hour return only marginally predicts the last half-hour return. 
+The IMOM effect is not observed in Hong Kong SAR or Singapore over the whole sample. 
+When the first half-hour trading volume is controlled for, there is no evidence that the IMOM effect increases with the first half-hour 
+trading volume in the APAC markets. The IMOM effect is found to be stronger in the medium-volume group in China, and in high- and 
+low-volume groups in Japan. The remaining markets show no to weak signs of the IMOM effect across volume groups. The results for 
+the first half-hour volatility are more consistent with the US evidence, where the IMOM effect increases with first-hour volatility in 
+Japan and South Korea. Over the COVID-19 crisis period, among the APAC markets exhibiting intraday momentum, the IMOM effect 
+only persists in Japan. The IMOM effect becomes significant in Singapore, whereas China does not show any IMOM effect in this 
+period. These results differ from the main findings, suggesting that the COVID-19 crisis may have significantly affected intraday 
+momentum in the APAC markets. Overall, we document that the IMOM effect is not as pervasive in the APAC markets when compared 
+to the US evidence. The predictive power of the first half-hour return on the last half-hour return is mainly observed in China and Japan 
+in our sample. 
+2. Data and summary statistics 
+Our results include both replicating the main analysis of Gao et al. (2018) and conducting similar analyses with data obtained for 
+China, Hong Kong SAR, Japan, South Korea, and Singapore.
+2 
+The ETF data are obtained from DataScope. Starting with the US market, 
+we obtain S&P 500 ETF data over the period January 1996 to December 2013 to establish the baseline results.
+3 
+As Gao et al. (2018) 
+indicate, the US intraday trading hours are from 9:30 a.m. to 4:00 p.m. Eastern Time, and the trading hours can thus be divided into 13 
+half-hour intervals. The returns used in the analysis are from three intervals: from the previous day’s close at 4:00 p.m. to 10:00 a.m. on 
+day t (denoted as r
+1
+), from 3:00 p.m. to 3:30 p.m. (denoted as r
+12
+), and from 3:30 p.m. and 4:00 p.m. (denoted as r
+13
+). 
+For each APAC market in our study, we select the ETF that tracks the major market index in each market and spans an extended 
+period ending in April 2021. Table 1 shows the information of different markets, including the ETFs analyzed, their trading hours, and 
+the summary statistics of the trading volume, trade size, and volatility in the first-half trading hour, as well as the number of trades 
+throughout the day for the ETFs. As shown in Panel A, the trading hours vary across the APAC markets. Among the markets selected, 
+China has a total of four trading hours, the shortest period among the selected markets, while Singapore has a total of seven trading 
+hours, the longest among the selected markets. Except for South Korea, all the Asian equity markets examined in this study have a 
+lunch break. For example, in China, the market has two trading sessions. The morning session starts at 9:30 a.m. local time and finishes 
+at 11:30 a.m. The afternoon session then resumes at 1:00 p.m. and closes at 3:00 p.m. In Singapore, the market runs from 9:00 a.m. to 
+5:00 p.m., with a one-hour break in between (i.e., 12:00 p.m. to 1:00 p.m.). For consistency, we follow Gao et al. (2018) and calculate 
+returns every 30 min. Accordingly, the number of half-hour intervals varies across the markets in our sample. For instance, in China, 
+the market has eight 30-min intervals, and in Singapore, the market has 14 30-min intervals.
+4 
+Panel B of Table 1 shows the descriptive statistics of the trading volume in the first-half trading hour for all the ETFs over their 
+respective sample periods. The results from the US market are similar to those reported by Ho et al. (2021). The ETF in China has the 
+largest trading volume in the first half hour in our sample and undoubtedly dominates the ETFs in the other APAC markets. To gain 
+further understanding of the trading of the APAC markets, we present in Panel C the trade size in the first half hour for all the ETFs. 
+Considering both the trading volume and trade size, the S&P 500 ETF is the most actively traded, as evident from its relatively smaller 
+trade size given the trading volume.
+5 
+For the APAC markets, the ETF in China is the most actively traded market, given its trading 
+volume and average trade size. Each trade in Hong Kong SAR’s ETF is considerably large in quantity, but the trading frequency is lower 
+1 
+The markets investigated include Australia, Austria, Canada, France, Germany, Ireland, Japan, the Netherlands, New Zealand, Norway, Portugal, 
+Spain, Sweden, Switzerland, the United Kingdom, and the United States.  
+2 
+The markets selected in this paper are slightly different from those in the pitch. The main reason why we dropped Malaysia, Thailand, and 
+Taiwan is because their intraday data are very illiquid and include mostly stale prices, especially when compared to the selected markets.  
+3 
+It is important to note that Gao et al. (2018) obtained their data from the Trade and Quote database, which starts in February 1993. The 
+DataScope data start in January 1996.  
+4 
+The trading hours in Hong Kong SAR exhibit a change during our sample period. The market opens at 10:00 a.m. prior to 2011 and opens at 9: 
+30 a.m. after 2011. There are also changes in the duration of the lunch break. The closing time of the market remains at 4 p.m. throughout the 
+sample period. Our calculation for the first half-hour return in Hong Kong SAR reflects the opening time throughout the period.  
+5 
+The frequency of trading is determined by both the trading volume and trade size (i.e., the number of trades equals the trading volume divided 
+by the trade size). For example, in Panels B and C, China has an average trading volume of 110.54 million and an average trade size of 363.76 (in 
+hundreds) in the first half hour. China’s trading volume is the largest of all the markets. However, considering the trade size, China’s ETF has a lower 
+number of trades in the first half hour when compared to the S&P 500 ETF. This also suggests that there are a few large block trades in the first half 
+hour (i.e., larger trade size) in China’s ETF. We thank an anonymous referee for this comment. 
+M. Limkriangkrai et al.                                                                                                                                                                                               
+=== PAGE 3 ===
+Pacific-Basin Finance Journal 80 (2023) 102086
+3
+when compared to China. There is a big gap between China’s ETF and the ETFs in the other APAC markets in relation to trading 
+activities. Based on trading volume and trade size, the ETFs for Hong Kong SAR and Singapore have the smallest number of trades in 
+their first half hour in our sample. Overall, the results from both Panels B and C indicate that, except for China, the trading frequency is 
+relatively low among the ETFs in the APAC markets when compared to that of the United States. 
+Panel D of Table 1 shows the descriptive statistics for the first half-hour volatility computed based on one-minute returns. The ETFs 
+of the United States and China are observed to have a lower first half-hour volatility than the other markets. Although this result seems 
+to contradict the trading volume findings, it is driven by infrequent trading within the half-hour interval, as evident in Panels B and C.
+6 
+Finally, Panel E shows the descriptive statistics for the daily number of trades in the ETFs. The results confirm that China’s ETF is the 
+most actively traded in our APAC sample. Singapore’s ETF has the least trading during the day in our sample, consistent with the 
+Table 1 
+Summary statistics.  
+Panel A: Market statistics 
+Market ETF Ticker Sample Period Trading Hours Market CAP (in US $Billion) 
+US S&P500 ETF SPY JAN1996-DEC2013 9:30 AM-4:00 PM $40,720.00 
+China Huatai-PB CSI 300 510300.SS MAY2012-APR2021 9:30–11:30 AM & 1:00–3:00 PM $12,214.00 
+Japan Nikko ET 225 1330 SEP2001-APR2021 9:00–11:30 AM & 12:30–3:00 PM $6718.00 
+Hong Kong SAR HK Hang Seng HSI 2800.HK JAN2000-APR2021 9:30–12:00 PM & 1:00–4:00 PM $6130.00 
+South Korea KOSEF 200 102110 APR2008-APR2021 9:00 AM-3:30 PM $2176.00 
+Singapore PDR Straits Time ES3.SI APR2002-APR2021 9:00 AM-12:00 PM & 1:00–5:00 PM $652.60 
+Panel B: Summary statistics on first half-hour trading volume 
+Market N MIN MAX MEAN STD 
+US 4485 0.01 175.58 15.91 17.77 
+China 2157 7.64 1310.20 110.54 117.51 
+Japan 4005 0.00 0.82 0.05 0.06 
+Hong Kong SAR 5216 0.00 122.83 6.30 9.38 
+South Korea 3098 0.00 3.47 0.14 0.18 
+Singapore 3547 0.00 11.67 0.08 0.27 
+Panel C: Summary statistics on first half-hour average trade size 
+Market N MIN MAX MEAN STD 
+US 4485 2.33 877.56 23.35 32.43 
+China 2157 36.45 1463.41 363.76 266.25 
+Japan 4005 0.40 37.27 5.09 3.69 
+Hong Kong SAR 5216 5.83 3487.32 280.43 296.36 
+South Korea 3098 0.01 166.68 6.98 5.75 
+Singapore 3547 1.00 6676.67 48.49 156.81 
+Panel D: Summary statistics on first half-hour volatility 
+Market N MIN MAX MEAN STD 
+US 4485 0.00 82.43 0.21 1.66 
+China 2157 0.00 10.29 0.22 0.62 
+Japan 4005 0.00 50.18 0.35 1.56 
+Hong Kong SAR 5216 0.00 222.18 0.55 3.22 
+South Korea 3098 0.00 56.70 0.24 1.66 
+Singapore 3547 0.00 802.30 0.40 13.49 
+Panel E: Summary statistics on the average daily number of trades 
+Market N MIN MAX MEAN STD 
+US 4485 0.07 2293.26 185.59 262.97 
+China 2157 2.13 133.65 14.98 14.44 
+Japan 4005 0.05 4.57 0.50 0.32 
+Hong Kong SAR 5216 0.04 19.97 1.03 1.26 
+South Korea 3098 0.00 41.66 2.10 2.45 
+Singapore 3547 0.00 4.10 0.13 0.25 
+This table reports the basic information of the selected APAC markets, including the specific ETFs and their sample periods, trading hours, and the 
+total market capitalisation (in US $Billion, as of April 2021). The ETF data is obtained from DataScope. Panels B, C, D and E report the summary 
+statistics on trading volume (in millions), trade size (in hundreds) and volatility (multiplied by 1000) of the first half trading hour, and daily number 
+of trades (in thousands) for all the ETFs, respectively. N is the number of valid trading days over the sample period. 
+6 
+The realized volatility is calculated based on valid one-minute returns within the first half-hour interval. In our sample, it is possible for a market 
+to have only a few valid one-minute returns due to infrequent trading. 
+M. Limkriangkrai et al.                                                                                                                                                                                               
+=== PAGE 4 ===
+Pacific-Basin Finance Journal 80 (2023) 102086
+4
+results from the first half hour. Overall, in our samples, the ETFs in China and the United States are the most actively traded, while the 
+ETF trading activities of the other APAC markets are relatively low. For brevity, in the subsequent sections, we use the respective 
+markets to refer to the ETFs in our sample. 
+3. Methods 
+Following Gao et al. (2018) , on each trading day t , we calculate the first half-hour return based on the period from the previous 
+day ’ s ETF close price to the price at the end of the first 30-min interval after the market opens. Subsequently, we calculate the returns 
+for day t at every 30-min interval from the market open to the market close. This process results in the following return for a total of n 
+half-hour observations per trading day: 
+r
+j , t
+=
+p
+j , t
+p
+j   1 , t
+  1 , j = 1 , … , n  
+where n is the number of 30-min intervals in the specific market.  
+A. IMOM Main Regression Analysis 
+Following Gao et al. (2018) , we run three predictive regressions to investigate whether intraday momentum exists. The following 
+model is used to examine the relation between the first half-hour return ( r
+1
+) and the last half-hour return ( r
+n
+): 
+r
+n , t
+= α + β
+r
+1
+r
+1 , t
++ ε
+t
+, t = 1 , … , T (1)  
+where r
+1,t 
+and r
+n,t 
+are the first and last half-hour returns on day t , and T is the total number of trading days in the sample. We exclude 
+trading days with fewer than 500 trades, as specified by Gao et al. (2018) for the US sample. Similar to Gao et al. (2018) , who use a 
+trade cutoff to exclude infrequent trading days, we apply a trade cutoff of the fifth percentile for all the APAC markets.
+7 
+Gao et al. (2018) also document that the second-to-last half hour (in this paper denoted as r
+n-1
+) can potentially affect the last half- 
+hour return ( r
+n
+), provided strong momentum during the day. Hence, we replace r
+1 
+with the return of the second-to-last half hour ( r
+n-1
+) 
+in the following model: 
+r
+n , t
+= α + β
+r
+n   1
+r
+n   1 , t
++ ε
+t
+, t = 1 , … , T (2) 
+Finally, we combine the two predictors to examine whether the first and second-to-last half-hour returns ( r
+1 
+and r
+n-1
+) have inde -
+pendent and separate explanatory power on the last half-hour return ( r
+n
+): 
+r
+n , t
+= α + β
+r
+1
+r
+1 , t
++ β
+r
+n   1
+r
+n   1 , t
++ ε
+t
+, t = 1 , … , T (3)    
+B. Out-of-Sample Predictability 
+Following Gao et al. (2018) , we calculate out-of-sample R
+2 
+values to assess whether the return predictability persists out-of-sample. 
+Gao et al. run recursive regressions to forecast returns at time t, using data only up to time t – 1. The initial estimation period is five 
+years, and we progressively add one month of returns at a time to calculate the out-of-sample R
+2
+. The window of the estimation initially 
+uses observations up to December 2000. It is important to note that the selected ETFs for the APAC markets have shorter sample 
+periods and are traded less frequently than the US market. Thus, we require at least 500 trading days in the initial estimation window 
+to run recursive regressions to calculate out-of-sample R
+2 
+values. The out-of-sample R
+2 
+is specified as 
+R
+2
+OS
+= 1  
+∑
+T
+t = 1
+ 
+r
+n , t
+  ̂r
+n , t
+)
+2
+∑
+T
+t = 1
+ 
+r
+n , t
+  ¯r
+n , t
+)
+2
+(4)  
+where ̂r
+n , t 
+is the forecasted last half-hour return from the predictive regressions estimated through period t – 1, and ¯r
+n , t 
+is the historical 
+average forecast estimated from the sample mean through period t – 1. The numerator is the variation between actual returns and the 
+predicted returns generated from the regressions, and the denominator is the variation between actual returns and the historical 
+sample means. Since the out-of-sample R
+2 
+is one minus the ratio, a positive R
+2
+OS 
+value indicates that the out-of-sample predictability 
+from the regression is superior to the estimation from the historical average. 
+7 
+In the US market, the 500-trade cutoff is approximately the fifth percentile, and we therefore apply the fifth percentile cutoff to our APAC 
+markets. The number of trades at fifth percentile is 3597 for China, 116 for Hong Kong SAR, 182 for Japan, 53 for South Korea and 8 for Singapore. 
+We also applied a 10th percentile cutoff as a robustness check, given that the APAC markets are not as active as the US market. Our results, which 
+are available upon request from the authors, are robust to the alternative cutoff rule. 
+M. Limkriangkrai et al.                                                                                                                                                                                               
+=== PAGE 5 ===
+Pacific-Basin Finance Journal 80 (2023) 102086
+5
+4. Empirical results  
+A. US Market Replication 
+We first replicate Table 1 of Gao et al. (2018) over the period 1996 to 2013. Panel A of Table 2 shows the results based on Models (1) 
+to (3). The results show that the first half-hour return, r
+1
+, positively predicts the last half-hour return, r
+n
+. The coefficient is 7.15, 
+statistically significant at the 1% level, and the model has an R
+2 
+of 1.7%. The 12th half-hour return, r
+n-1
+, is also able to predict the last 
+half-hour return, r
+n
+, statistically significant at the 5% level, but with a lower R
+2 
+of 0.9%. When both r
+1 
+and r
+n-1 
+are included in the 
+regression (Model (3)), they are significant at least at the 5% level with an R
+2 
+of 2.6%, and the r
+n-1 
+coefficient is larger than the r
+1 
+coefficient. Finally, we compute the out-of-sample R
+2
+, as described in Eq. (4), following Gao et al. (2018), to assess the out-of-sample 
+predictive power of Eq. (3). The R
+2
+OS 
+value is 1.7% when we use the r
+1 
+return alone. When we use r
+n-1
+, R
+2
+OS 
+is 0.5%. When both r
+1 
+and r
+n-1 
+are included in the regression, the R
+2
+OS 
+value is the highest, at 2.3%. In general, the R
+2
+OS 
+values are close to but lower than the in-sample 
+R
+2
+, and the magnitudes are similar to those reported by Gao et al. (2018). Overall, our results indicate successful replication of the 
+results of Gao et al. (2018).  
+B. APAC Markets: Main Regressions 
+Panels B to F of Table 2 display the results for the APAC markets. Column (1) in each panel tabulates the results of Model (1). The 
+results suggest that the first half-hour return, r
+1
+, significantly predicts the last half-hour return in China and Japan, which are the 
+largest markets in our APAC sample.
+8 
+The second-to-last half-hour return, r
+n-1
+, also exhibits predictive power in these two markets. 
+When both r
+1 
+and r
+n-1 
+are included in the regression, the magnitude and significance of the regression slopes are similar to their in -
+dividual regression counterparts. The in-sample R
+2 
+values range from 2.3% to 5.5% in China and from 0.6% to 1.5% in Japan. The R
+2 
+value from Model (3) is approximately equal to the sum of the individual R
+2 
+values from Models (1) and (2), indicating that r
+1 
+and r
+n-1 
+are independent and complementary in forecasting r
+n
+. This finding is consistent with that reported by Gao et al. (2018). 
+The coefficients of r
+1 
+are marginally significant at the 10% level when r
+1 
+is used as a sole variable and in the combined model for 
+South Korea. While these results suggest some predictive power of the first-half hour return, the evidence is much weaker when 
+compared to China and Japan. Both Hong Kong SAR and Singapore show no intraday momentum and r
+n-1 
+is also found to be negative in 
+these two markets. Avramov et al. (2006) suggest that less liquid stocks tend to undergo substantially greater reversals than liquid 
+stocks. We postulate that this result may be due to stale prices and the infrequent trading of the ETFs in these markets, as evident in 
+Table 1. The in-sample R
+2 
+values for these two markets range from close to 0% (no predictive power) to approximately 15.7%. 
+However, these results should be interpreted with caution, due to the issue of illiquidity. 
+The regression results provide two main takeaways. First, the relation between r
+1 
+and r
+n 
+is not pervasive across the APAC markets. 
+However, this relation in China is found to be comparable to the US result. Second, r
+n-1 
+also predicts r
+n 
+across the APAC markets, except 
+for South Korea. The effect is independent and remains robust when r
+1 
+is included. Since the IMOM effect is the predictability of the 
+first half-hour return on the last half-hour return, our results suggest that IMOM exists only in China and Japan in our sample. 
+We next examine whether the models are useful for generating out-of-sample forecasts. The R
+2
+OS 
+values are displayed at the bottom 
+of each panel. The values of the R
+2
+OS 
+are lower than the in-sample R
+2 
+values across the APAC markets, similar to the US finding. The 
+differences are smaller for China, Japan, and South Korea. These R
+2
+OS 
+values suggest that the predictive power of r
+1 
+or both r
+1 
+and r
+n-1 
+in 
+the combined model is significant not only in sample but also out of sample. It is worth noting that some R
+2
+OS 
+values are negative, 
+especially in Singapore, where the IMOM effect is absent.  
+C. Trading Volume Subsample Analysis 
+Table 3 shows the results from Model (3) for the subsamples based on the first half-hour trading volume partitions. Following Gao 
+et al. (2018), we split the trading days into low, medium, and high terciles based on the first half-hour trading volume year by year, to 
+form three volume groups. Panel A shows the results for the US market. Similar to Table 3 of Gao et al. (2018), Model (3) performs best 
+in the high tercile, with both r
+1 
+and r
+n-1 
+being significant, and with the highest R
+2 
+value. For the APAC markets, the signs of the co -
+efficients are largely consistent with the main results across the trading volume groups. However, except for Japan, there is no evidence 
+that the predictive power of r
+1 
+on r
+n 
+is stronger in the high-volume group for the APAC markets. For the Chinese market, the effect is 
+found to be strongest in the medium tercile. This also seems to be the case for South Korea. The result also suggests that there is no 
+relation between intraday momentum and the first half-hour trading volume in Hong Kong SAR, and Singapore.  
+D. Volatility Subsample Analysis 
+Table 4 shows the results from Model (3) in the subsamples based on the first half-hour volatility partitions. Following Gao et al. 
+(2018), all the trading days in the sample are sorted based on the first half-hour volatility and subsequently divided into three groups 
+(terciles). Panel A shows that Model (3) performs best in the high group, with both r
+1 
+and r
+n-1 
+being significant, and with the highest R
+2 
+8 
+The finding for the Japanese market is similar to that of Li et al. (2021). 
+M. Limkriangkrai et al.                                                                                                                                                                                               
+=== PAGE 6 ===
+Pacific-Basin Finance Journal 80 (2023) 102086
+6
+Table 2 
+Main regression results.  
+Panel A: US  Panel B: China  Panel C: Hong Kong SAR  
+[1] [2] [3]   [1] [2] [3]   [1] [2] [3] 
+Intercept   1.143   1.020   1.415  Intercept   3.969*   4.185*   4.448**  Intercept   1.735   0.648   0.698  
+[0.402] [0.459] [0.318]   [0.070] [0.056] [0.040]   [0.250] [0.657] [0.637] 
+r
+1 
+7.150***  7.090***  r
+1 
+7.740***  7.160***  r
+1 
+0.704  0.287  
+[0.000]  [0.000]   [0.000]  [0.000]   [0.412]  [0.736] 
+r
+n-1  
+9.480** 9.330**  r
+n-1  
+18.990** 18.140***  r
+n-1  
+  18.230***   18.200***   
+[0.024] [0.024]    [0.040] [0.002]    [0.000] [0.000]               
+R
+2 
+0.017 0.009 0.026  R
+2 
+0.023 0.036 0.055  R
+2 
+0.000 0.039 0.040 
+R
+2
+OS 
+0.017 0.005 0.023  R
+2
+OS 
+0.020 0.028 0.045  R
+2
+OS 
+  0.002 0.029 0.027 
+N 4094 4094 4094  N 2049 2049 2049  N 4959 4959 4959 
+5% PCT 500 500 500  5% PCT 3597 3597 3597  5% PCT 116 116 116 
+Panel D: Japan  Panel E: South Korea  Panel F: Singapore  
+[1] [2] [3]   [1] [2] [3]   [1] [2] [3] 
+Intercept 0.720 1.167 0.876  Intercept   0.449   0.300   0.424  Intercept 0.657 0.592 0.569  
+[0.519] [0.295] [0.434]   [0.484] [0.637] [0.499]   [0.584] [0.611] [0.623] 
+r
+1 
+2.170***  2.080***  r
+1 
+2.090*  2.060*  r
+1 
+  0.714    0.648  
+[0.000]  [0.001]   [0.092]  [0.084]   [0.248]  [0.258] 
+r
+n-1  
+8.510** 7.960**  r
+n-1  
+5.600 5.570  r
+n-1  
+  32.570***   32.450***   
+[0.024] [0.031]    [0.114] [0.110]    [0.000] [0.000]               
+R
+2 
+0.010 0.006 0.015  R
+2 
+0.006 0.013 0.019  R
+2 
+0.157   0.032 0.152 
+R
+2
+OS 
+0.010   0.002 0.007  R
+2
+OS 
+0.001 0.008 0.009  R
+2
+OS 
+  0.002 0.000   0.001 
+N 3804 3804 3804  N 2944 2944 2944  N 3261 3261 3261 
+5% PCT 182 182 182  5% PCT 53 53 53  5% PCT 8 8 8 
+This table reports the main regression results of the three models for the US market, and the selected APAC markets. In all models, r
+n 
+is the dependent variable. r
+1 
+is the first half-hour return and r
+n-1 
+is the 
+second-to-last half-hour return. The intercepts are annualized and in percentage, and the slope coefficients are scaled by 100. The p-values are in parentheses, with ***, **, and * indicating the statistical 
+significance at the 1%, 5%, and 10% levels, respectively. The sample period for each market is as indicated in Table 1 . N is the number of observations after the application of the 5% percentile trade cut- 
+off. 5% PCT is the daily number of trades at the 5% percentile. The p -values are generated after correcting for Newey and West (1987) standard errors. 
+M. Limkriangkrai et al.                                                                                                                                                                                               
+=== PAGE 7 ===
+Pacific-Basin Finance Journal 80 (2023) 102086
+7
+Table 3 
+IMOM and volume.  
+Panel A: US  Panel B: China  Panel C: Hong Kong SAR  
+Low Medium High   Low Medium High   Low Medium High 
+Intercept   3.319*   2.029 0.967  Intercept   2.542   8.859**   2.201  Intercept 2.583   0.822   3.897  
+[0.054] [0.305] [0.775]   [0.351] [0.022] [0.633]   [0.289] [0.778] [0.172] 
+r
+1 
+6.090*** 6.030*** 7.570***  r
+1 
+6.080 9.630*** 6.840***  r
+1 
+  0.194   0.948 1.170  
+[0.004] [0.000] [0.003]   [0.149] [0.007] [0.003]   [0.871] [0.443] [0.373] 
+r
+n-1 
+2.750 2.180 15.740**  r
+n-1 
+22.240* 26.590*** 9.870  r
+n-1 
+  23.870***   17.630***   13.830***  
+[0.163] [0.618] [0.017]   [0.068] [0.010] [0.188]   [0.000] [0.000] [0.003]               
+R
+2 
+0.011 0.016 0.039  R
+2 
+0.060 0.096 0.038  R
+2 
+0.075 0.039 0.022 
+Panel D: Japan  Panel E: South Korea  Panel F: Singapore  
+Low Medium High   Low Medium High   Low Medium High 
+Intercept 2.120   1.366 2.155  Intercept 0.071   1.538 0.768  Intercept   0.871 0.816 0.718  
+[0.207] [0.419] [0.351]   [0.946] [0.145] [0.532]   [0.511] [0.704] [0.750] 
+r
+1 
+1.740** 0.947 2.490***  r
+1 
+  0.737 3.260* 2.350  r
+1 
+  0.051 0.116   3.770  
+[0.047] [0.264] [0.005]   [0.702] [0.058] [0.121]   [0.403] [0.934] [0.064] 
+r
+n-1 
+  0.1877 1.330 14.460**  r
+n-1 
+  4.510 2.700 19.280***  r
+n-1 
+  17.020*   54.670***   22.820***  
+[0.974] [0.748] [0.028]   [0.192] [0.272] [0.009]   [0.054] [0.002] [0.002]               
+R
+2 
+0.004 0.002 0.035  R
+2 
+0.004 0.021 0.091  R
+2 
+0.020 0.145 0.046 
+This table reports the regression results of Model [3] in the trading volume groups based on the first-half hour trading volume for all the markets. All trading days in the sample are sorted into terciles based 
+on the first half-hour trading volume year by year, and we then combine each volume tercile across all years to form three volume groups. In all models, r
+n 
+is the dependent variable. r
+1 
+is the first half-hour 
+return and r
+n-1 
+is the second-to-last half-hour return. The intercepts are annualized and in percentage, and the slope coefficients are scaled by 100. The p-values are in parentheses, with ***, **, and * 
+indicating the statistical significance at the 1%, 5%, and 10% levels, respectively. The sample period for each market is as indicated in Table 1 . The p -values are generated after correcting for Newey and 
+West (1987) standard errors. 
+M. Limkriangkrai et al.                                                                                                                                                                                               
+=== PAGE 8 ===
+Pacific-Basin Finance Journal 80 (2023) 102086
+8
+Table 4 
+IMOM and volatility.  
+Panel A: US  Panel B: China  Panel C: Hong Kong SAR  
+Low Medium High   Low Medium High   Low Medium High 
+Intercept   2.859*   2.396 0.501  Intercept   0.573   5.091   7.319  Intercept 3.665**   0.275   4.544  
+[0.052] [0.244] [0.890]   [0.816] [0.104] [0.162]   [0.023] [0.914] [0.171] 
+r
+1 
+6.090*** 5.440** 7.830***  r
+1 
+8.240*** 6.160*** 7.090***  r
+1 
+  2.890*   1.760* 1.290  
+[0.000] [0.015] [0.001]   [0.000] [0.004] [0.006]   [0.099] [0.098] [0.251] 
+r
+n-1 
+3.450   0.926 16.490**  r
+n-1 
+1.740 14.540** 25.410***  r
+n-1 
+  16.530***   14.490***   20.630***  
+[0.156] [0.842] [0.011]   [0.722] [0.013] [0.008]   [0.000] [0.000] [0.000]               
+R
+2 
+0.017 0.01 0.041  R
+2 
+0.027 0.048 0.073  R
+2 
+0.042 0.029 0.048 
+Panel D: Japan  Panel E: South Korea  Panel F: Singapore  
+Low Medium High   Low Medium High   Low Medium High 
+Intercept   0.573 2.737 0.791  Intercept 0.393   0.995   0.072  Intercept 1.015   0.598 1.167  
+[0.690] [0.130] [0.753]   [0.631] [0.362] [0.960]   [0.469] [0.660] [0.672] 
+r
+1 
+1.590 1.610 2.200***  r
+1 
+0.568 0.707 2.630*  r
+1 
+  1.430   1.840   0.595  
+[0.182] [0.102] [0.003]   [0.747] [0.705] [0.074]   [0.344] [0.110] [0.290] 
+r
+n-1 
+0.746 5.630 10.740*  r
+n-1 
+4.270 0.423 14.740**  r
+n-1 
+  14.350***   41.440**   33.020***  
+[0.889] [0.262] [0.059]   [0.101] [0.484] [0.017]   [0.005] [0.045] [0.000]               
+R
+2 
+0.002 0.007 0.024  R
+2 
+0.005 0.001 0.062  R
+2 
+0.011 0.115 0.055 
+This table reports the regression results of Model [3] in the volatility groups based on the first-half hour volatility for all the markets. The first half   hour volatility is estimated using one-minute returns, 
+and then all the trading days are divided into terciles (low, medium, and high) by their first half-hour volatility. In all models, r
+n 
+is the dependent variable. r
+1 
+is the first half-hour return and r
+n-1 
+is the 
+second-to-last half-hour return. The intercepts are annualized and in percentage, and the slope coefficients are scaled by 100. The p-values are in parentheses, with ***, **, and * indicating the statistical 
+significance at the 1%, 5%, and 10% levels, respectively. The sample period for each market is as indicated in Table 1 . The p -values are generated after correcting for Newey and West (1987) standard 
+errors. 
+M. Limkriangkrai et al.                                                                                                                                                                                               
+=== PAGE 9 ===
+Pacific-Basin Finance Journal 80 (2023) 102086
+9
+for the US market. These results, together with the results from the trading volume partitions, confirm the success of our replication. 
+For the APAC markets, as with the results in Table 4, the signs of the coefficients are largely consistent with the main results across 
+the volatility groups. In China, both r
+1 
+and r
+n-1 
+remain important in predicting r
+n 
+in the medium- and high-volatility groups. Given that 
+R
+2 
+is the highest in the high-volatility group, this result suggests that the IMOM effect is associated with the first half-hour volatility in 
+the Chinese market. For the other markets, r
+1 
+and r
+n-1 
+are observed to be significant in different volatility groups. For example, in both 
+Japan and South Korea, both r
+1 
+and r
+n-1 
+are significantly positive in the high-volatility group. Except where r
+1 
+is positive in Hong Kong 
+SAR in the high-volatility group, negative coefficients are observed in Hong Kong SAR and Singapore across all the volatility groups. 
+Overall, the results suggest that the first half-hour volatility tend to have a stronger influence on IMOM than the first half-hour trading 
+volume in the APAC markets. The results also suggest that intraday momentum is stronger with higher first half-hour volatility in the 
+APAC markets.  
+E. COVID-19 Crisis Analysis 
+To complete the analysis, we rerun Models (1) to (3) during the COVID-19 crisis period. It is important to note that there is no exact 
+and universal definition for the period of the crisis. In this paper, the COVID-19 crisis is defined as when the majority of the markets 
+crashed soon after the COVID-19 outbreak, from February 14 to March 31, 2020. Table 5 show the first half-hour summary statistics 
+and the average numbers of daily trades over this period. The summary statistics over the COVID-19 period indicate that the mean first 
+half-hour trading volume is higher than for the whole period across all the markets, except for Japan. The average trade size and 
+volatility tend to be lower, and the daily number of trades is considerably higher across the markets during the COVID-19 period. 
+However, these results should be interpreted with caution, since we are comparing a very short sample period to a much longer one. 
+Table 5 
+Summary statistics during the COVID-19 crisis.  
+Panel A: Summary statistics on first half-hour trading volume 
+Market N MIN MAX MEAN STD 
+US 32 4.96 60.01 30.10 13.96 
+China 33 39.21 386.02 147.65 92.97 
+Japan 31 0.01 0.08 0.03 0.02 
+Hong Kong SAR 33 4.57 28.31 14.11 6.13 
+South Korea 33 0.11 2.10 0.74 0.49 
+Singapore 33 0.02 2.34 0.67 0.54 
+Panel B: Summary statistics on first half-hour average trade size 
+Market N MIN MAX MEAN STD 
+US 32 1.79 2.78 2.20 0.26 
+China 33 93.17 330.67 167.47 58.40 
+Japan 31 0.70 4.98 1.83 0.95 
+Hong Kong SAR 33 38.08 1154.76 306.35 259.16 
+South Korea 33 1.85 8.15 4.48 1.69 
+Singapore 33 14.29 66.94 32.88 12.37 
+Panel C: Summary statistics on first half-hour volatility 
+Market N MIN MAX MEAN STD 
+US 32 0.00 8.02 1.22 1.67 
+China 33 0.01 2.30 0.36 0.48 
+Japan 31 0.00 9.73 1.26 1.95 
+Hong Kong SAR 33 0.03 2.67 0.49 0.62 
+South Korea 33 0.00 7.49 1.15 1.77 
+Singapore 33 0.00 2.88 0.65 0.79 
+Panel D: Summary statistics on the average daily number of trades 
+Market N MIN MAX MEAN STD 
+US 32 134.54 1667.87 873.49 384.00 
+China 33 16.17 95.38 38.91 17.75 
+Japan 31 0.25 2.08 0.84 0.40 
+Hong Kong SAR 33 0.91 13.20 4.84 3.75 
+South Korea 33 3.03 20.64 9.77 5.45 
+Singapore 33 0.08 4.10 1.45 1.05 
+This table reports the summary statistics of the ETFs during the COVID-19 crisis period. Panels A, B, C, and D report the summary statistics on trading 
+volume (in millions), trade size (in hundreds) and volatility (multiplied by 1000) of the first half trading hour, and daily number of trades (in 
+thousands) for all the ETFs, respectively. 
+M. Limkriangkrai et al.                                                                                                                                                                                               
+=== PAGE 10 ===
+Pacific-Basin Finance Journal 80 (2023) 102086
+10
+Table 6 
+IMOM during the COVID-19 crisis.  
+Panel A: US  Panel B: China  Panel C: Hong Kong SAR  
+[1] [2] [3]   [1] [2] [3]   [1] [2] [3] 
+Intercept 221.561 74.914 225.749  Intercept   15.173   17.020   15.807  Intercept 47.138** 47.616** 45.567***  
+[0.181] [0.344] [0.219]   [0.225] [0.201] [0.245]   [0.012] [0.036] [0.010] 
+r
+1 
+21.050**  29.310***  r
+1 
+3.490  2.930  r
+1 
+  0.879    1.320  
+[0.033]  [0.010]   [0.367]  [0.472]   [0.851]  [0.820] 
+r
+n-1  
+  27.190   83.640*  r
+n-1  
+9.440 6.120  r
+n-1  
+  30.520   30.910   
+[0.628] [0.095]    [0.308] [0.563]    [0.208] [0.194]               
+R
+2 
+0.126 0.011 0.209  R
+2 
+0.023 0.014 0.028  R
+2 
+0.001 0.086 0.090 
+Panel D: Japan  Panel E: South Korea  Panel F: Singapore  
+[1] [2] [3]   [1] [2] [3]   [1] [2] [3] 
+Intercept 10.598   5.636 10.129  Intercept 5.311   2.615 0.536  Intercept   5.423   13.068   5.612  
+[0.629] [0.853] [0.636]   [0.829] [0.904] [0.978]   [0.777] [0.533] [0.763] 
+r
+1 
+12.120**  12.040**  r
+1 
+8.140*  3.050  r
+1 
+8.900***  8.860***  
+[0.030]  [0.039]   [0.054]  [0.510]   [0.000]  [0.000] 
+r
+n-1  
+  10.170   2.460  r
+n-1  
+64.730*** 61.750***  r
+n-1  
+11.480 2.150   
+[0.718] [0.930]    [0.000] [0.001]    [0.708] [0.933]               
+R
+2 
+0.200 0.007 0.200  R
+2 
+0.065 0.327 0.314  R
+2 
+0.166 0.005 0.166 
+This table reports the regression results of Model [3] during the COVID-19 crisis, defined as the period from 14FEB2020 to 31MAR2020, for all the markets. In all models, r
+n 
+is the dependent variable. r
+1 
+is 
+the first half-hour return and r
+n-1 
+is the second-to-last half-hour return. The intercepts are annualized and in percentage, and the slope coefficients are scaled by 100. The p-values are in parentheses, with 
+***, **, and * indicating the statistical significance at the 1%, 5%, and 10% levels, respectively. The p -values are generated after correcting for Newey and West (1987) standard errors. 
+M. Limkriangkrai et al.                                                                                                                                                                                               
+=== PAGE 11 ===
+Pacific-Basin Finance Journal 80 (2023) 102086
+11
+Table 6 shows the performance of Model (3) during the COVID-19 crisis.
+9 
+While the IMOM effect in the US market persists in the 
+crisis period, r
+n-1 
+becomes negative in the combined model. The magnitudes of r
+1 
+and r
+n-1 
+and the levels of their significance change 
+considerably in the APAC markets. For example, both r
+1 
+and r
+n-1 
+completely lose their predictive power in China, indicating the 
+absence of the IMOM effect during the crisis. The predictive power holds in Japan for the first half-hour return, and in South Korea only 
+for the model where r
+1 
+is the sole variable. Interestingly, the first half-hour return positively predicts the last half-hour return in 
+Singapore in the crisis period. Since the crisis first started in China and then spread to other markets, this could explain why the Chinese 
+market exhibits a significant change. In summary, for the APAC markets that exhibit intraday momentum, the effect tends to be weaker 
+in the COVID-19 crisis period, especially for the Chinese market. The results should be interpreted with caution, since the COVID-19 
+crisis period is rather short, with the markets rebounding quickly in the second quarter of 2020.
+10 
+5. Conclusions 
+This study examines the IMOM effect in the selected APAC markets. The study first confirms the IMOM effect in the US market, as 
+documented by Gao et al. (2018). This validates our empirical methodology, which is then carried out for other markets. The main 
+results show that the IMOM effect exists mainly in China and Japan, while a week IMOM effect is observed in South Korea. There is no 
+evidence of the IMOM effect in Hong Kong SAR and Singapore. Generally, the first half-hour volatility is found to have a stronger 
+influence on the IMOM effect than the first half-hour trading volume in the APAC markets. Finally, for the APAC markets that exhibit 
+intraday momentum, the effect is weaker during the COVID-19 crisis period. The absence of the IMOM effect in Hong Kong SAR and 
+Singapore could be explained by the low levels of trading in ETFs and deserves future research. 
+Author statement 
+Manapon Limkriangkrai: Conceptualization; Methodology; Software; Major empirical analysis; Investigation; Data Cleansing; 
+Writing - Original Draft, Review & Editing; Visualization; Project administration 
+Daniel Chai: Conceptualization; Methodology; Additional Analysis; Writing - Original Draft, Review & Editing 
+Gaoping Zheng: Methodology; Writing - Review & Editing  
+Acknowledgement 
+We would to specifically thank an anonymous referee who has put in time and effort in the review – the insightful comments 
+subsequently have helped us to significantly improve the paper. 
+Appendix A  
+Pre-Registration Study (Pitch)  
+PBFJ Replication Study Master Pitch Template (with Cues) 
+Pitcher Team Name JEL code G1, G11, G12 Date Completed 7 May 2021 
+(A) Working Title Market Intraday Momentum: Asia-Pacific Markets Evidence 
+(B) Basic Research Question Does the intraday momentum exist in the Asia-Pacific markets? 
+(C) Key paper(s) Target replication paper: 
+Gao, L, Han Y., Li, S.Z. and Zhou, G., 2018, Market Intraday Momentum, Journal of Financial Economics, 129, 394–414. 
+Other key papers 
+Li, Z, A Sakkas, A., and Urquhart, A., 2021, Intraday Time Series Momentum: Global Evidence and Links to Market Characteristics, 
+Journal of Financial Markets 57, 100,619. 
+Ho, T., J.R. Lv, & E. Schultz, 2021, Market Intraday Momentum in Australia, Pacific-Basin Finance Journal 65, 101,499. 
+(D) Motivation/Puzzle Motivation: 
+The Efficient Market Hypothesis (EMH, Fama, 1970) advocates that an efficient market is one whereby current security prices fully 
+reflect all available information. In particular, the market is expected to be at least weak-form efficient as the past (price) 
+information is readily available. However, a recent study by Gao et al. (2018) documents that there is a market intraday momentum 
+(IMOM) in the US market from 1993 to 2013 based on the S&P500 exchange-traded fund (ETF) data. Specifically, the market IMOM 
+effect indicates that the market’s first half-hour return from the close of the previous trading day predicts the last half-hour return in 
+the current trading day – and that this predictability is significant both statistically and economically. Furthermore, they find that 
+the effect is stronger when the market is more volatile, when the trading volume is high, and when financial crisis is excluded. 
+Hence, the IMOM effect is another evidence of the well documented price momentum, and consequently motivates us to carry out 
+the analyses for the major Asia-Pacific (APAC) markets. We choose APAC markets because the majority are categorized as emerging 
+(continued on next page) 
+9 
+It should be noted that we do not examine the globe financial crisis, given that not all market index data started before 2008.  
+10 
+The mostly likely explanation to our findings of the weakened IMOM effect in the APAC markets is the short sample period employed. This is 
+because we do not observe that the trading is noticeably weakened in the defined COVID-19 period (see Table 5). 
+M. Limkriangkrai et al.                                                                                                                                                                                               
+=== PAGE 12 ===
+Pacific-Basin Finance Journal 80 (2023) 102086
+12
+( continued ) 
+PBFJ Replication Study Master Pitch Template (with Cues) 
+Pitcher Team Name JEL code G1, G11, G12 Date Completed 7 May 2021 
+markets and prior research show that emerging markets are characterized by low correlations with returns on other emerging 
+markets and with developed markets (Harvey, 1995). Thus, evidence from APAC markets provides a validation test on a sample 
+that is not highly correlated with data used in prior research. In addition, a number of recent studies show that the Covid-19 crisis 
+has a negative impact on stock returns and a positive impact on market volatility. As momentum strategies are known to have 
+performed poorly during the crisis period, the inclusion of the Covid-19 crisis period in our analysis will provide further insights to 
+the IMOM effect. 
+Puzzle: Does the market intraday momentum (IMOM) exist in the Asia-Pacific (APAC) markets? 
+Chosen Asian-Pacific markets: This project is a cross-market study on intraday momentum based on selected APAC markets. Most 
+APAC markets are smaller in size and are categorized as emerging markets. Thus, we only consider APAC markets that are 
+representative of the region and also have the required data available. The markets considered in this study include: China, Hong 
+Kong SAR, South Korea, Singapore, Taiwan, Thailand and Malaysia. [Note: In certain classifications, Hong Kong SAR and Singapore 
+are considered to be the ‘top ’ emerging markets in the region.] 
+Expected outcome: There are possibilities that the IMOM may only exist in specific markets. Regardless of what the finding is, it 
+will contribute to the evidence related to the Market IMOM. 
+THREE Three core aspects of any empirical research project i.e. the “ ID io T s ” guide 
+(E) Idea? Core idea: The central purpose of the replication study is to examine whether the IMOM also exist in the APAC markets. In 
+addition, we have a timely 2020 data to examine how the IMOM effect might be different during the COVID crisis. 
+Central hypothesis: The IMOM effect exists in APAC markets. 
+(F) Data? Data source: The ETFs intraday data for the selected APAC markets are sourced from Datascope. The starting years of the different 
+ETFs for the selected markets vary between 1999 and 2001, hence we will choose a uniform starting year of 2000, while the ending 
+year for all ETFs is 2020. 
+Sample size: We will select one ETF that tracks the major market index for each market over the sample period. Intraday data for 
+the ETFs are used in the analysis. 
+Data issues: The data issue is minimum as the members in this project have experience with this type of data. 
+Quality of the data: The data sources are reliable and have been used extensively in prior studies. 
+(G) Tools? Empirical framework: 
+Following Gao et al. (2018) , in the examination of the intraday return predictability, on a trading day t , the first half-hour returns 
+based on the previous day ’ s ETF close price, and then the price every 30-min from the market open to market close. These result in 
+the total of 13 half-hour observations per trading day: 
+r
+j , t
+=
+p
+j , t
+p
+j   1 , t
+  1 , j = 1 , … , 13 [1] 
+IMOM Predictive Regression Analysis 
+The first predictive regression of the last half-hour return on the first half-hour return is specified as: 
+r
+13 , t
+= α + β r
+1 , t
++ ε
+t
+, t = 1 , … , T [2] 
+Where r
+1 , t 
+and r
+13 , t 
+are the first and last half-hour returns on day t , and T is the total trading days. 
+Gao et al. (2018) also document that the 12th half-hour (i.e. the second-to-last half hour), r
+12
+, potentially can affect the last half 
+hour return provided there is a strong momentum during the day. Hence, we will also rerun [2] with r
+12 
+replacing r
+1
+. We will also 
+combine the two predictors and specify the regression as: 
+r
+13 , t
+= α + β
+r 1
+r
+1 , t
++ β
+r 12
+r
+12 , t
++ ε
+t
+, t = 1 , … , T [3] 
+Out-of-Sample Predictability 
+The out-of-sample R
+2 
+is specified as: 
+R
+2
+OS
+= 1  
+∑
+T
+t = 1
+ 
+r
+13 , t
+  ̂r
+13 , t
+)
+2
+∑
+T
+t = 1
+ 
+r
+13 , t
+  ¯r
+13 , t
+)
+2
+[4] 
+As defined in Gao et al. (2018 , p.397) “ where ̂r
+13 , t 
+is the forecasted last half-hour return from the predictive regression estimated 
+through period t – 1 and ¯r
+13 , t 
+is the historical average forecast estimated from the sample mean through period t – 1. A positive R
+2
+OS 
+indicates that the predictive regression forecast beast the simple historical average. ” 
+The additional analyses will also include 
+Crisis Periods: the GFC crisis and the COVID crisis – with the main analyse re-run during and outside the crisis, and before and after 
+the crisis. 
+Volatility and Volume: We will examine the predictability in the sub-samples in Low / Medium / High volatility and trading 
+volume. 
+Software for research: Our analysis will be mainly based on SAS. The team members have experiences in using the programs to 
+perform statistical/econometric tests in this study. 
+TWO Two key questions 
+(H) What ’ s New? In this replication study, we offer out-of-sample evidence on the IMOM effect. We do so by examining ETFs in a group of emerging 
+Asia-Pacific stock markets. We choose these markets because, although there are relevant studies that uses data from developed 
+markets, little is known about the predictability of intraday returns in emerging markets. In addition, our extended sample period 
+covers the recent COVID crisis in 2020. We are able to compare whether the COVID crisis and the 2008 financial crisis have the 
+same effect on IMOM. 
+(I) So What? As implied by the EMH, the market should at least be weak-form efficient, the simple past return data should not have any 
+predictive power even at the intraday level. If momentum profits really are due to the slow reaction of prices to information 
+contained in past returns, we should be able to find similar evidence in other markets. As emerging markets are more volatile than 
+developed markets and also have low correlations with returns on other emerging markets and with developed markets, our 
+analysis provides valid out-of-sample test on the IMOM effect. 
+ONE One bottom line 
+(J) Contribution? Our study will provide the strong out-of-sample IMOM evidence using seven emerging APAC markets, and also a timely 
+examination of the impact of the COVID crisis on the IMOM effect. In contrast to the voluminous research in the U.S. and Japan 
+( continued on next page ) 
+M. Limkriangkrai et al.                                                                                                                                                                                               
+=== PAGE 13 ===
+Pacific-Basin Finance Journal 80 (2023) 102086
+13
+(continued ) 
+PBFJ Replication Study Master Pitch Template (with Cues) 
+Pitcher Team Name JEL code G1, G11, G12 Date Completed 7 May 2021 
+relating to the cross-sectional behavior of stock returns to market risk and firm characteristics, there has been very limited research 
+relating to the emerging markets. However, the extraordinary growth of the emerging stock markets, especially in the APAC region, 
+during the last decade has already attracted a lot of attention from investors around the world. Research on the emerging stock 
+markets in the APAC region will definitely provide academics and practitioners a better understanding on the cross-sectional 
+behavior of stock returns in this region. 
+(K) Other Considerations The research team is familiar with the anomalies / asset-pricing work and the 
+relevant AUS literature. The risk of this project is low.  
+References 
+Avramov, D., Chordia, T., Goyal, A., 2006. Liquidity and autocorrelations in individual stock returns. J. Financ. 61, 2365–2394. 
+Brown, S., Du, D.Y., Rhee, S.G., Zhang, L., 2008. The returns to value and momentum in Asian markets. Emerg. Mark. Rev. 9, 79–88. 
+Chiao, C.S., Hsiao, Y.J., Chen, J.C., An, N.M., 2020. Residual momentum versus price momentum: evidence from four Asian markets. Asia-Pacif. J. Account. Econom. 
+27, 717–726. 
+Chui, A.C., Titman, S., Wei, K.J., 2010. Individualism and momentum around the world. J. Financ. 65, 361–392. 
+Fama, E., 1970. Efficient capital markets: a review of theory and empirical work. J. Financ. 25, 383–417. 
+Gao, L., Han, Y., Li, S.Z., Zhou, G., 2018. Market intraday momentum. J. Financ. Econ. 129, 394–414. 
+Hameed, A., Kusnadi, Y., 2002. Momentum strategies: evidence from Pacific Basin stock markets. J. Financ. Res. 25, 383–397. 
+Ho, T., Lv, J.R., Schultz, E., 2021. Market intraday momentum in Australia. Pac. Basin Financ. J. 65, 101499. 
+Jegadeesh, N., Titman, S., 1993. Returns to buying winners and selling losers: implications for stock market efficiency. J. Financ. 48, 65–91. 
+Li, Z., Sakkas, A., Urquhart, A., 2021. Intraday time series momentum: global evidence and links to market characteristics. J. Financ. Mark. 57, 100619. 
+Newey, W., West, K., 1987. Hypothesis testing with efficient method of moments estimation. Int. Econ. Rev. 28, 777–787. 
+Pan, L., Tang, Y., Xu, J., 2013. Weekly momentum by return interval ranking. Pac. Basin Financ. J. 21, 1191–1208. 
+M. Limkriangkrai et al.                                                                                                                                                                                               

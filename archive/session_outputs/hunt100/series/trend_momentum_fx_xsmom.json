@@ -1,0 +1,45 @@
+{
+  "rule": "Month-end, 6 FX futures: rank on cumulative excess return over 21 (V1) / 63 (V2) / 252 (V3) sessions; long top 2, short bottom 2, equal risk 1/sigma; book to 10% (252d cov, gross<=3); next_close.",
+  "sources": [
+    "https://www.bis.org/publ/work366.pdf",
+    "https://www.cxoadvisory.com/momentum-investing/momentum-investing-for-currencies",
+    "https://www.aqr.com/-/media/AQR/Documents/Insights/Data-Sets/Value-and-Momentum-Everywhere-Factors-Monthly.xlsx"
+  ],
+  "universe": [
+    "F_6E",
+    "F_6J",
+    "F_6B",
+    "F_6A",
+    "F_6C",
+    "F_6S"
+  ],
+  "cost_bps_one_way": {
+    "F_6E": 1.0,
+    "F_6J": 1.0,
+    "F_6B": 1.0,
+    "F_6A": 1.0,
+    "F_6C": 1.0,
+    "F_6S": 1.0
+  },
+  "vol_scaling": "10% annualised ex-ante, trailing 252-session sample covariance (min 60), gross cap 3",
+  "id": "trend_momentum_fx_xsmom",
+  "headline_variant": "V1_1m",
+  "selection": "highest in-sample (start..2024-10-02) net Sharpe at realistic costs among the 3 pre-declared variants; all variants reported in variants.csv",
+  "columns": {
+    "net_1x": "daily return minus T-bill, net of the realistic cost map",
+    "net_2x": "same at 2x costs",
+    "gross": "daily return minus T-bill before costs"
+  },
+  "window": {
+    "start": "2011-07-05",
+    "in_sample_end": "2024-10-02",
+    "later_window": "2024-10-03..2026-10-02 (descriptive only)"
+  },
+  "spec": "<scratch>\\hunt100\\bt_3\\trend_momentum_fx_xsmom\\SPEC.md",
+  "variant_is_sharpe_net_1x": {
+    "V1_1m": -0.029,
+    "V2_3m": -0.279,
+    "V3_12m": -0.039
+  },
+  "source_reported": "Menkhoff-Sarno-Schmeling-Schrimpf 2012 (up to 48 currencies, 1976-2010): winner-loser up to ~10%/yr gross, best ~4%/yr after costs, weakest in developed currencies; AQR VME FX momentum Sharpe 0.33 (1972-2011) vs -0.04 post-publication; Century currencies momentum -0.14 (2012-2026)."
+}

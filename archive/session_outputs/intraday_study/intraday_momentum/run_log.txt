@@ -1,0 +1,18 @@
+[ES_1600] session-day key reproduces ret_date_1600 on 100.0000% of bars
+[ES_1600] point-in-time check (last predictor bar end == traded bar start == 15:00 ET): True
+[ES_1600] max |(1+ONFH)(1+M)(1+SLH)-(1+ROD)| = 4.44e-16
+[ES_1600] session days 4104, eligible 4059 (IS 3563, later 496); ineligible: no LH bar/gap 37, vendor-hole days 8, roll on LH bar 0
+[ES_1600] IS std: LH 38.4 bp, ONFH 72.0 bp, ROD 98.9 bp; corr(ONFH,ROD) IS 0.769
+[ZN_1600] session-day key reproduces ret_date_1600 on 100.0000% of bars
+[ZN_1600] point-in-time check (last predictor bar end == traded bar start == 15:00 ET): True
+[ZN_1600] max |(1+ONFH)(1+M)(1+SLH)-(1+ROD)| = 4.44e-16
+[ZN_1600] session days 4107, eligible 4071 (IS 3574, later 497); ineligible: no LH bar/gap 30, vendor-hole days 8, roll on LH bar 0
+[ZN_1600] IS std: LH 6.2 bp, ONFH 26.7 bp, ROD 33.6 bp; corr(ONFH,ROD) IS 0.805
+[ZN_1500] point-in-time check (last predictor bar end == traded bar start == 14:00 ET): True
+[ZN_1500] max |(1+ONFH)(1+M)(1+SLH)-(1+ROD)| = 4.44e-16
+[ZN_1500] session days 4107, eligible 4070 (IS 3573, later 497); ineligible: no LH bar/gap 30, vendor-hole days 9, roll on LH bar 0
+[ZN_1500] IS std: LH 9.4 bp, ONFH 25.1 bp, ROD 32.3 bp; corr(ONFH,ROD) IS 0.767
+[ES_1600] in-sample median thresholds: |ONFH| 31.16 bp, |ROD| 43.91 bp
+[ZN_1600] in-sample median thresholds: |ONFH| 15.30 bp, |ROD| 19.73 bp
+[ZN_1500] in-sample median thresholds: |ONFH| 14.28 bp, |ROD| 18.99 bp
+variant definitions: regressions 12, strategies 40, vol interactions 18; total 70; table rows 648

@@ -1,0 +1,92 @@
+{
+  "ex_labels_realised": [
+    [
+      "anger",
+      "contempt",
+      "disgust",
+      "fear",
+      "happiness",
+      "neutral",
+      "sadness",
+      "surprise"
+    ]
+  ],
+  "ex_labels_expected": [
+    "anger",
+    "contempt",
+    "disgust",
+    "fear",
+    "happiness",
+    "neutral",
+    "sadness",
+    "surprise"
+  ],
+  "ex_labels_match": true,
+  "model_revisions_seen": {
+    "ecapa_voxceleb": [
+      "0f99f2d0ebe89ac095bcc5903c4dd8f72b367286"
+    ],
+    "whisper_turbo_ct2": [
+      "0a363e9161cbc7ed1431c9597a8ceaf0c4f78fcf"
+    ],
+    "audeering_msp_dim": [
+      "6eba34a2485ea31cb03600241787c3a5edab8626"
+    ],
+    "mediapipe_face_landmarker": [
+      "64184e229b263107bc2b804c6625db1341ff2bb731874b0bcc2fe6544e0bc9ff"
+    ],
+    "emotiefflib_enet_b0_8_va_mtl": [
+      "emotiefflib==1.1.1"
+    ],
+    "sface_opencv": [
+      "0ba9fbfa01b5270c96627c4ef784da859931e02f04419c829e83484087c34e79"
+    ]
+  },
+  "model_check": {
+    "audeering_msp_dim": {
+      "expected_prefix": "6eba34a2",
+      "seen": [
+        "6eba34a2485ea31cb03600241787c3a5edab8626"
+      ],
+      "ok": true
+    },
+    "ecapa_voxceleb": {
+      "expected_prefix": "0f99f2d0",
+      "seen": [
+        "0f99f2d0ebe89ac095bcc5903c4dd8f72b367286"
+      ],
+      "ok": true
+    },
+    "mediapipe_face_landmarker": {
+      "expected_prefix": "64184e22",
+      "seen": [
+        "64184e229b263107bc2b804c6625db1341ff2bb731874b0bcc2fe6544e0bc9ff"
+      ],
+      "ok": true
+    },
+    "sface_opencv": {
+      "expected_prefix": "0ba9fbfa",
+      "seen": [
+        "0ba9fbfa01b5270c96627c4ef784da859931e02f04419c829e83484087c34e79"
+      ],
+      "ok": true
+    },
+    "emotiefflib_enet_b0_8_va_mtl": {
+      "expected_prefix": "emotiefflib==1.1.1",
+      "seen": [
+        "emotiefflib==1.1.1"
+      ],
+      "ok": true
+    }
+  },
+  "fedpress_root": "<scratch>\\placebo_features\\tree",
+  "placebo_tree": true,
+  "face_gates_frozen": {
+    "min_face_h_px": 80.0,
+    "max_abs_yaw_deg": 40.0,
+    "max_abs_pitch_deg": 30.0,
+    "min_blur": 20.0,
+    "min_det_score": 0.5
+  },
+  "sface_threshold": 0.363
+}

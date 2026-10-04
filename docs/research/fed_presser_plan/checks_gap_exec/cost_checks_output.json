@@ -1,0 +1,93 @@
+[
+ {
+  "window": "2026-09-16 13:30-16:30",
+  "schema": "ohlcv-1s",
+  "symbols": "ES.v.0 ZT.v.0 ZN.v.0 ZF.v.0",
+  "usd": 0.0814,
+  "records": 22307
+ },
+ {
+  "window": "2026-09-16 13:30-16:30",
+  "schema": "bbo-1s",
+  "symbols": "ES.v.0 ZT.v.0 ZN.v.0 ZF.v.0",
+  "usd": 0.0584,
+  "records": 43534
+ },
+ {
+  "window": "2026-09-16 13:30-16:30",
+  "schema": "tbbo",
+  "symbols": "ES.v.0 ZT.v.0",
+  "usd": 0.5862,
+  "records": 280999
+ },
+ {
+  "window": "2026-09-16 13:30-16:30",
+  "schema": "trades",
+  "symbols": "ZT.v.0",
+  "usd": 0.0437,
+  "records": 34903
+ },
+ {
+  "window": "2026-09-16 13:30-16:30",
+  "schema": "mbp-1",
+  "symbols": "ZT.v.0",
+  "usd": 0.1435,
+  "records": 1069877
+ },
+ {
+  "window": "2026-09-16 13:30-16:30",
+  "schema": "bbo-1s",
+  "symbols": "ZT.v.0",
+  "usd": 0.0144,
+  "records": 10707
+ },
+ {
+  "window": "2026-09-16 13:30-16:30",
+  "schema": "ohlcv-1s",
+  "symbols": "ZT.v.0",
+  "usd": 0.0143,
+  "records": 3915
+ },
+ {
+  "window": "2011-06-22 12:00-16:15",
+  "schema": "bbo-1s",
+  "symbols": "ZT.v.0",
+  "usd": 0.0123,
+  "records": 9136
+ },
+ {
+  "window": "2011-06-22 12:00-16:15",
+  "schema": "ohlcv-1s",
+  "symbols": "ZT.v.0",
+  "usd": 0.0032,
+  "records": 870
+ },
+ {
+  "window": "2016-03-16 13:30-16:30",
+  "schema": "bbo-1s",
+  "symbols": "ZT.v.0",
+  "usd": 0.0085,
+  "records": 6364
+ },
+ {
+  "window": "2016-03-16 13:30-16:30",
+  "schema": "ohlcv-1s",
+  "symbols": "ZT.v.0",
+  "usd": 0.0058,
+  "records": 1583
+ },
+ {
+  "window": "2018-12-19 13:30-16:30",
+  "schema": "bbo-1s",
+  "symbols": "ZT.v.0",
+  "usd": 0.0128,
+  "records": 9535
+ },
+ {
+  "window": "2018-12-19 13:30-16:30",
+  "schema": "ohlcv-1s",
+  "symbols": "ZT.v.0",
+  "usd": 0.0074,
+  "records": 2020
+ }
+]

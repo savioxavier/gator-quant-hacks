@@ -1,0 +1,13 @@
+{
+  "id": "trend_momentum_index_mac5_reversal",
+  "sources": [
+    "https://www3.nd.edu/~zda/Indexing.pdf"
+  ],
+  "variant": "V1",
+  "rule": "daily: x=-(4r_t+3r_t-1+2r_t-2+r_t-3)/(10 sigma_d); w=clip(x,-2,2)*0.10/sigma/N on ES NQ RTY YM futures; book 10% (252d cov), gross<=3; next_close",
+  "is_window": "2011-06-20..2024-10-02",
+  "series_start": "2011-06-20",
+  "series_end": "2026-10-02",
+  "columns": "daily excess returns over T-bill: net_1x (realistic costs), net_2x (2x costs), gross",
+  "in_sample_end": "2024-10-02"
+}

@@ -1,0 +1,40 @@
+rows 190 failed 5fronts 0 failed sr3 0
+          days     usd_5   usd_sr3    rec_5  rec_sr3  usd_total
+schema                                                         
+ohlcv-1m    95  0.304881  0.025753    83511     7054   0.330633
+ohlcv-1s    95  8.369044  0.227918  2292396    62430   8.596962
+2011-2012 rows (8 days): their 13:30-16:30 window cost {'ohlcv-1m': 0.0246, 'ohlcv-1s': 0.4967} -> era window 12:00-16:15 is 4.25h, x1.42 = {'ohlcv-1m': 0.0349, 'ohlcv-1s': 0.7036}
+      usd_5fronts  usd_sr3
+year                      
+2011        0.193    0.000
+2012        0.304    0.000
+2013        0.336    0.000
+2014        0.345    0.000
+2015        0.376    0.000
+2016        0.331    0.000
+2017        0.303    0.000
+2018        0.327    0.000
+2019        0.651    0.000
+2020        0.653    0.001
+2021        0.665    0.004
+2022        0.907    0.046
+2023        0.852    0.055
+2024        0.824    0.047
+2025        0.738    0.039
+2026        0.565    0.036
+per-day ohlcv-1s 5 fronts: median $0.0875 max $0.1295
+                                                                             sample_days  mean_usd_per_day  max_usd  mean_records  applicable_days  extrap_all_days
+dataset    schema   symbols                                                                                                                                        
+GLBX.MDP3  bbo-1s   ES.v.0 ZN.v.0 ZT.v.0                                              12            0.0382   0.0440  2.851658e+04               95           3.6332
+           mbp-1    ES.v.0 ZN.v.0 ZT.v.0                                              12            0.4468   0.9865  3.331942e+06               95          42.4506
+           mbp-10   ES.v.0                                                            12            0.5583   1.1727  3.258168e+06               95          53.0414
+           ohlcv-1s GE.v.0 GE.v.1 GE.v.2 GE.v.3 GE.v.4 GE.v.5 GE.v.6 GE.v.7            9            0.0416   0.0743  1.138878e+04               67           2.7857
+                    NQ.v.0 6J.v.0 GC.v.0                                              12            0.0677   0.0807  1.853317e+04               95           6.4278
+                    SR3.v.1 SR3.v.2 SR3.v.3 SR3.v.4 SR3.v.5 SR3.v.6 SR3.v.7            7            0.0225   0.0473  6.164429e+03               66           1.4853
+                    ZQ.v.0 ZQ.v.1 ZQ.v.2 ZQ.v.3                                       12            0.0050   0.0111  1.378500e+03               95           0.4781
+           tbbo     ES.v.0 ZN.v.0 ZT.v.0                                              12            0.6547   1.3576  3.138397e+05               95          62.1985
+XCBF.PITCH ohlcv-1m VX.v.0 VX.v.1                                                      6            0.0861   0.0907  6.603333e+02               64           5.5103
+           ohlcv-1s VX.v.0 VX.v.1                                                      6            0.7779   1.1712  5.966000e+03               64          49.7842
+Empty DataFrame
+Columns: [date, dataset, schema, symbols, usd, records]
+Index: []

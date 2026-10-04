@@ -1,0 +1,1 @@
+max abs difference of daily net returns, FWD vs IS run, over IS: 0.000e+00

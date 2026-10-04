@@ -1,0 +1,99 @@
+{
+  "inputs": {
+    "kept_docs_total": 461,
+    "kept_docs_post_cut": 93,
+    "last_doc": "2026-10-01",
+    "fomc_post_cut": [
+      "2024-11-07",
+      "2024-12-18",
+      "2025-01-29",
+      "2025-03-19",
+      "2025-05-07",
+      "2025-06-18",
+      "2025-07-30",
+      "2025-09-17",
+      "2025-10-29",
+      "2025-12-10",
+      "2026-01-28",
+      "2026-03-18",
+      "2026-04-29",
+      "2026-06-17",
+      "2026-07-29",
+      "2026-09-16"
+    ]
+  },
+  "check_is_weights_vs_replicate_max_abs": 0.0,
+  "check_held_eq_session_weight_tone": 0.0,
+  "check_held_eq_session_weight_ctl_dgs2": 0.0,
+  "check_held_eq_session_weight_tone_orth": 0.0,
+  "check_futures_held_eq_F_ZN": 0.0,
+  "futures_F_ZN_diag": {
+    "mean_gross_IS": 1.1825537820986896,
+    "mean_gross_OOS": 1.3482537041659752,
+    "share_days_gross_at_cap_IS": 0.5369273917108134,
+    "share_days_vol_at_floor_IS": 0.48737924587098785,
+    "median_vol_mix_IS": 0.040554567394187946,
+    "corr_daily_ex_with_etf_tone": 0.7625622374072277
+  },
+  "check_futures_held_eq_F_ZB": 0.0,
+  "futures_F_ZB_diag": {
+    "mean_gross_IS": 1.0277809013431485,
+    "mean_gross_OOS": 1.1865629445922072,
+    "share_days_gross_at_cap_IS": 0.37737612963540046,
+    "share_days_vol_at_floor_IS": 0.0012464942349641633,
+    "median_vol_mix_IS": 0.06975814538268466,
+    "corr_daily_ex_with_etf_tone": 0.9109384883887245
+  },
+  "etf_tone_diag": {
+    "mean_gross_IS": 0.8896045501103356,
+    "mean_gross_OOS": 1.0864322196895326,
+    "share_days_gross_at_cap_IS": 0.22779682143970084
+  },
+  "signal_behaviour": {
+    "OOS": {
+      "mean_z_tone": -1.102083512667723,
+      "share_z_pos": 0.12375249500998003,
+      "mean_w_TLT": 0.7121199837036282,
+      "mean_abs_w_TLT": 0.811726984647834,
+      "mean_C_tone": -2.530437246217137
+    },
+    "IS": {
+      "mean_z_tone": 0.3029356441926382,
+      "share_z_pos": 0.6413212838890621,
+      "mean_w_TLT": -0.20398366528866688,
+      "mean_abs_w_TLT": 0.6644165435990352,
+      "mean_C_tone": -0.980185235218557
+    }
+  },
+  "signal_correlations": {
+    "IS": {
+      "corr_Ctone_DGS2level_t-2": 0.527581148017954,
+      "corr_Ctone_Cctl": 0.24080369706373841,
+      "corr_ztone_zctl": 0.20481477150776656,
+      "corr_ztone_zorth": 0.9723907701413069,
+      "corr_wTLT_tone_ctl": 0.1875863695788068,
+      "corr_daily_ret_tone_ctl": 0.30134296417578116
+    },
+    "OOS": {
+      "corr_Ctone_DGS2level_t-2": 0.4317395778805127,
+      "corr_Ctone_Cctl": 0.33900737196841185,
+      "corr_ztone_zctl": 0.3498404536987956,
+      "corr_ztone_zorth": 0.974506448098472,
+      "corr_wTLT_tone_ctl": 0.4238004273571443,
+      "corr_daily_ret_tone_ctl": 0.1606694374686181
+    },
+    "FULL": {
+      "corr_Ctone_DGS2level_t-2": 0.20975368783672677,
+      "corr_Ctone_Cctl": 0.2317434096953751,
+      "corr_ztone_zctl": 0.21619893692383854,
+      "corr_ztone_zorth": 0.9759267467431708,
+      "corr_wTLT_tone_ctl": 0.22106482521347268,
+      "corr_daily_ret_tone_ctl": 0.2862416547929667
+    }
+  },
+  "check_core_ER_6_rebuild_max_abs": 0.0,
+  "portfolio_sleeve_cost_bp": {
+    "FED": 2.3859644689225052,
+    "FEDF": 1.0
+  }
+}

@@ -1,0 +1,80 @@
+### 01 Introduction.html
+The WTI-Brent spread is the difference between the prices of two types of crude oil: West Texas Intermediate (WTI) on the long side and Brent Crude (Brent) on the short side.
+ For years, the price difference between the two has only been a few dollars on average. As both oils are very similar, their spread shows signs of strong predictability and usually oscillates around some average value.
+ Therefore, it is possible to use deviations from the fair spread value to bet on convergence back to fair value. Here we present a trading strategy based on the price deviations of the spread.
+### 02 Method.html
+We download the WTI and Brent crude oil price from Macrotrends and import the csv file with the custom data downloader.
+ The unit is dollars per barrel.
+ class WTI(PythonData):
+ "Class to import WTI Spot Price(Dollars per Barrel) data from Dropbox"
+ def GetSource(self, config, date, isLiveMode):
+ return SubscriptionDataSource("https://www.dropbox.com/s/jpie3z6j0stp97d/wti-crude-oil-prices-10-year-daily.csv?dl=1", SubscriptionTransportMedium.RemoteFile)
+ def Reader(self, config, line, date, isLiveMode):
+ if not (line.strip() and line[1].isdigit()): return None
+ index = WTI()
+ index.Symbol = config.Symbol
+ try:
+ data = line.split(',')
+ index.Time = datetime.strptime(data[0], "%Y-%m-%d")
+ index.Value = Decimal(data[1])
+ except:
+ return None
+ return index
+ class BRENT(PythonData):
+ "Class to import BRENT Spot Price(Dollars per Barrel) data from Dropbox"
+ def GetSource(self, config, date, isLiveMode):
+ return SubscriptionDataSource("https://www.dropbox.com/s/w380c4n7xjmdqxl/brent-crude-oil-prices-10-year-daily.csv?dl=1", SubscriptionTransportMedium.RemoteFile)
+ def Reader(self, config, line, date, isLiveMode):
+ if not (line.strip() and line[1].isdigit()): return None
+ index = BRENT()
+ index.Symbol = config.Symbol
+ try:
+ data = line.split(',')
+ index.Time = datetime.strptime(data[0], "%Y-%m-%d")
+ index.Value = Decimal(data[1])
+ except:
+ return None
+ return index
+ The spread is defined as the difference between WTI price and Brent price. Next, we need to calculate the moving average of the spread series.
+ using the the indicator SimpleMovingAverage . As the indicator uses the price difference instead of the price series,
+ we need to manually initialize the indicator with the history request.
+self.SpreadSMA = SimpleMovingAverage(20)
+hist = self.History(["WTI", "BRENT"], 400, Resolution.Daily)["value"].unstack(level=0).dropna()
+hist_20days = hist[-20:]
+spread = (hist_20days["WTI"] - hist_20days["BRENT"]).dropna()
+for index, value in spread.items():
+ self.SpreadSMA.Update(index, value)
+ To get the fair value of the spread, we perform the linear regression between WTI and Brent price over the last one year history price.
+ \[P_{Brent}=\beta \cdot P_{WTI}+\alpha\]
+ Then the fair value of the spread is
+\[Fair \ Spread =(1-\beta)\cdot CurrentPrice_{WTI}-\alpha\]
+hist_one_year = hist[-252:]
+X = hist_one_year["WTI"][:, np.newaxis]
+y = hist_one_year["BRENT"]
+self.regr = linear_model.LinearRegression()
+self.regr.fit(X, y)
+ The fair value is calculated every day. If the current spread value is above SMA 20 then we enter a short position in the spread on close (betting that the spread will decrease to fair value represented by SMA 20).
+ The trade is closed at the close of the trading day when the spread crosses below fair value. If the current spread value is below SMA 20 then we enter a long position betting that the spread will increase and the trade is closed at the close of the trading day when the spread crosses above fair value.
+def OnData(self, data):
+ if not (data.ContainsKey("WTI") and data.ContainsKey("BRENT")): return
+ self.Plot("Spread Plot", "Spread", data["WTI"].Price - data["BRENT"].Price)
+ self.SpreadSMA.Update(self.Time, data["WTI"].Price - data["BRENT"].Price)
+ if not self.SpreadSMA.IsReady: return
+ spread = self.Securities["WTI"].Price - self.Securities["BRENT"].Price
+ fair_value =self.Securities["WTI"].Price - Decimal(self.regr.predict([[self.Securities["WTI"].Price]])[0])
+ if spread > self.SpreadSMA.Current.Value and not (self.Portfolio["WTI"].IsShort and self.Portfolio["BRENT"].IsLong):
+ self.SetHoldings("WTI", -0.5)
+ self.SetHoldings("BRENT", 0.5) 
+ self.Plot("Spread Plot", "Long Spread Trade", data["WTI"].Price - data["BRENT"].Price)
+ elif spread fair_value:
+ self.Liquidate()
+ To demonstrate the trend of the spread series, we add the spread plot and mark the spread long/short point on the spread curve.
+spreadPlot = Chart("Spread Plot")
+spreadPlot.AddSeries(Series("Spread", SeriesType.Line, 0))
+spreadPlot.AddSeries(Series("Long Spread Trade", SeriesType.Scatter, 0))
+spreadPlot.AddSeries(Series("Short Spread Trade", SeriesType.Scatter, 0))
+self.AddChart(spreadPlot)
+### 03 Algorithm.html
+
+### 04 Source.html
+Quantpedia - Trading WTI/BRENT Spread

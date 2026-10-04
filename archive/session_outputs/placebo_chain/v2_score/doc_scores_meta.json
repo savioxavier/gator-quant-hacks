@@ -1,0 +1,83 @@
+{
+  "placebo": true,
+  "stance_scorer": "PLACEBO random scores (wiring test only)",
+  "out": "<scratch>\\placebo_chain\\v2_score\\doc_scores.parquet",
+  "out_sha256": "59cd511ac0fa9593a5f3c9bd0f23fcd23246fb4fec95d224b879f6a2cb5e00f0",
+  "chrono_doc_scores": "<scratch>\\placebo_chain\\chrono\\scores\\doc_scores_chrono.parquet",
+  "chrono_doc_scores_sha256": "f35a488bb10c83acb5878f44e2a95b77cc92c30d64981e346f54dec3bd31905f",
+  "lexonly": "<scratch>\\fedspeak_v2\\score\\doc_scores_lexonly.parquet",
+  "lexonly_sha256": "0998aaa12663c1679df89845c855dcd366b6f0d8430522377e996301c1dc9be3",
+  "merge_meta": {
+    "years_merged": [
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "years_absent": [],
+    "n_docs": 5225,
+    "docs_by_source": {
+      "presser_answer": 2026,
+      "presser_question": 2026,
+      "speech": 828,
+      "statement": 97,
+      "minutes": 94,
+      "presser_doc": 79,
+      "presser_statement": 75
+    },
+    "n_answers": 2026,
+    "n_meetings": 75,
+    "label_year_rule": "true",
+    "seeds_by_year": {
+      "2015": "42,43,44",
+      "2016": "42,43,44",
+      "2017": "42,43,44",
+      "2018": "42,43,44",
+      "2019": "42,43,44",
+      "2020": "42,43,44",
+      "2021": "42,43,44",
+      "2022": "42,43,44",
+      "2023": "42,43,44",
+      "2024": "42,43,44",
+      "2025": "42,43,44",
+      "2026": "42,43,44"
+    },
+    "nonspec_years": {}
+  },
+  "n_docs": 1098,
+  "docs_by_type": {
+    "speech": 828,
+    "statement": 97,
+    "minutes": 94,
+    "presser": 79
+  },
+  "lex_columns_unchanged": [
+    "lex_H",
+    "lex_D",
+    "lex_score",
+    "lex_kept",
+    "lex_H_full",
+    "lex_D_full",
+    "lex_score_full",
+    "lex_kept_full",
+    "lex_H_varA_html",
+    "lex_D_varA_html",
+    "lex_score_varA_html",
+    "lex_kept_varA_html"
+  ],
+  "n_sentences_chrono_vs_v2split_equal_share": 0.03825136612021858,
+  "rob_score_mean_by_type": {
+    "minutes": -2.1605306421818075e-05,
+    "presser": -0.0075985382190194755,
+    "speech": -0.00157474359031768,
+    "statement": -0.024444070600022107
+  }
+}

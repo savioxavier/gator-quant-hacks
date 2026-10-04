@@ -1,0 +1,771 @@
+{
+  "variants": {
+    "CAL_TOM_ES|base_T-1..T+3": {
+      "instrument": "ES16",
+      "start": "2010-09-29",
+      "IS": {
+        "alpha_vs_ES16": {
+          "alpha_ann": 0.0015825308475799263,
+          "alpha_t": 0.05545368324913492,
+          "beta_ES16": 0.274889772094769,
+          "t_ES16": 6.783529596442611,
+          "n": 3526
+        },
+        "boot_timed_minus_bh_sharpe": {
+          "obs_diff": -0.2262343276564901,
+          "p_one_sided": 0.812,
+          "ci90": [
+            -0.713250124877052,
+            0.19475637989612882
+          ]
+        },
+        "mean_bp_per_invested_day": 7.418541720343578,
+        "bh_mean_bp_per_day": 5.255525781861218,
+        "bh_sharpe": 0.7686730901162762,
+        "bh_ann_ret": 0.1324392497029027,
+        "timed_ann_ret_1unit": 0.04374202655670397,
+        "bh_ann_ret_at_same_exposure": 0.03162616229434035,
+        "bh_max_dd_at_same_exposure": -0.08922060018897537
+      },
+      "later": {
+        "alpha_vs_ES16": {
+          "alpha_ann": 0.026900833244104794,
+          "alpha_t": 0.43631328431659505,
+          "beta_ES16": 0.26873794123358,
+          "t_ES16": 3.4996389219904223,
+          "n": 501
+        },
+        "boot_timed_minus_bh_sharpe": {
+          "obs_diff": -0.06692584250834888,
+          "p_one_sided": 0.563,
+          "ci90": [
+            -0.9794027604077894,
+            0.9792685166993867
+          ]
+        },
+        "mean_bp_per_invested_day": 8.59685698236464,
+        "bh_mean_bp_per_day": 5.0618016732373805,
+        "bh_sharpe": 0.795430293816088,
+        "bh_ann_ret": 0.12755740216558198,
+        "timed_ann_ret_1unit": 0.0509846217857698,
+        "bh_ann_ret_at_same_exposure": 0.030552671177384905,
+        "bh_max_dd_at_same_exposure": -0.04927801017611422
+      }
+    },
+    "CAL_TOM_ES|V1_T..T+3": {
+      "instrument": "ES16",
+      "start": "2010-09-30",
+      "IS": {
+        "alpha_vs_ES16": {
+          "alpha_ann": -0.013598926669872054,
+          "alpha_t": -0.4557062797409474,
+          "beta_ES16": 0.2575994088416147,
+          "t_ES16": 6.631729728882754,
+          "n": 3525
+        },
+        "boot_timed_minus_bh_sharpe": {
+          "obs_diff": -0.4677955770605763,
+          "p_one_sided": 0.9505,
+          "ci90": [
+            -0.9472219905220902,
+            -0.0008952111015369194
+          ]
+        },
+        "mean_bp_per_invested_day": 4.8090029029426,
+        "bh_mean_bp_per_day": 5.265084843434962,
+        "bh_sharpe": 0.7699724901460163,
+        "bh_ann_ret": 0.13268013805456103,
+        "timed_ann_ret_1unit": 0.022270851774723252,
+        "bh_ann_ret_at_same_exposure": 0.025369195191141596,
+        "bh_max_dd_at_same_exposure": -0.07182217149542713
+      },
+      "later": {
+        "alpha_vs_ES16": {
+          "alpha_ann": 0.05336103718260859,
+          "alpha_t": 0.9298509436301976,
+          "beta_ES16": 0.2461220754920465,
+          "t_ES16": 3.3558318898937056,
+          "n": 501
+        },
+        "boot_timed_minus_bh_sharpe": {
+          "obs_diff": 0.1134821704891873,
+          "p_one_sided": 0.4305,
+          "ci90": [
+            -0.7719137639251251,
+            1.046516340526683
+          ]
+        },
+        "mean_bp_per_invested_day": 12.14017016431968,
+        "bh_mean_bp_per_day": 5.0618016732373805,
+        "bh_sharpe": 0.795430293816088,
+        "bh_ann_ret": 0.12755740216558198,
+        "timed_ann_ret_1unit": 0.05771636658986462,
+        "bh_ann_ret_at_same_exposure": 0.024442136941907926,
+        "bh_max_dd_at_same_exposure": -0.0395584837110079
+      }
+    },
+    "CAL_TOM_ES|V2_T..T+4": {
+      "instrument": "ES16",
+      "start": "2010-09-30",
+      "IS": {
+        "alpha_vs_ES16": {
+          "alpha_ann": 0.0013293254611931385,
+          "alpha_t": 0.050055939649667494,
+          "beta_ES16": 0.28594223383966905,
+          "t_ES16": 6.9751293893367095,
+          "n": 3525
+        },
+        "boot_timed_minus_bh_sharpe": {
+          "obs_diff": -0.31644972871445254,
+          "p_one_sided": 0.8885,
+          "ci90": [
+            -0.7236433819556769,
+            0.08759259140548735
+          ]
+        },
+        "mean_bp_per_invested_day": 6.435506359360248,
+        "bh_mean_bp_per_day": 5.265084843434962,
+        "bh_sharpe": 0.7699724901460163,
+        "bh_ann_ret": 0.13268013805456103,
+        "timed_ann_ret_1unit": 0.037791141383033654,
+        "bh_ann_ret_at_same_exposure": 0.03165503435571229,
+        "bh_max_dd_at_same_exposure": -0.08914209116296945
+      },
+      "later": {
+        "alpha_vs_ES16": {
+          "alpha_ann": -0.03204787890913358,
+          "alpha_t": -0.39396860812729806,
+          "beta_ES16": 0.3747201220046379,
+          "t_ES16": 3.2964846675431447,
+          "n": 501
+        },
+        "boot_timed_minus_bh_sharpe": {
+          "obs_diff": -0.6606029240894897,
+          "p_one_sided": 0.824,
+          "ci90": [
+            -1.5372700700005373,
+            0.47443701655340603
+          ]
+        },
+        "mean_bp_per_invested_day": 1.9999792175674218,
+        "bh_mean_bp_per_day": 5.0618016732373805,
+        "bh_sharpe": 0.795430293816088,
+        "bh_ann_ret": 0.12755740216558198,
+        "timed_ann_ret_1unit": 0.011166341624598569,
+        "bh_ann_ret_at_same_exposure": 0.030552671177384905,
+        "bh_max_dd_at_same_exposure": -0.04927801017611422
+      }
+    },
+    "CAL_TSY_ME_ZN|base_T-2..T": {
+      "instrument": "ZN16",
+      "start": "2010-09-28",
+      "IS": {
+        "alpha_vs_ES16": {
+          "alpha_ann": 0.08257180328412352,
+          "alpha_t": 3.7631987823511515,
+          "beta_ES16": -0.0238171932358145,
+          "t_ES16": -2.0941111391735627,
+          "n": 3527
+        },
+        "boot_timed_minus_bh_sharpe": {
+          "obs_diff": 0.7901271693055276,
+          "p_one_sided": 0.005,
+          "ci90": [
+            0.2846183264348721,
+            1.283722570706578
+          ]
+        },
+        "mean_bp_per_invested_day": 5.22066482069585,
+        "bh_mean_bp_per_day": 0.28147065290893997,
+        "bh_sharpe": 0.13139052811568414,
+        "bh_ann_ret": 0.0070930604533052865,
+        "timed_ann_ret_1unit": 0.017629537994946244,
+        "bh_ann_ret_at_same_exposure": 0.001015592721553493,
+        "bh_max_dd_at_same_exposure": -0.03745770165800599
+      },
+      "later": {
+        "alpha_vs_ES16": {
+          "alpha_ann": 0.021057684290599465,
+          "alpha_t": 0.3753981546544101,
+          "beta_ES16": 0.014613381330251998,
+          "t_ES16": 0.7722825175022153,
+          "n": 501
+        },
+        "boot_timed_minus_bh_sharpe": {
+          "obs_diff": 1.2558518228320203,
+          "p_one_sided": 0.0425,
+          "ci90": [
+            0.057164030001052434,
+            2.428411982410309
+          ]
+        },
+        "mean_bp_per_invested_day": 1.8227059586743346,
+        "bh_mean_bp_per_day": -1.7449320524597676,
+        "bh_sharpe": -0.9090629588864173,
+        "bh_ann_ret": -0.04397228772198614,
+        "timed_ann_ret_1unit": 0.005393847687462503,
+        "bh_ann_ret_at_same_exposure": -0.0063193706905848345,
+        "bh_max_dd_at_same_exposure": -0.011895688556997075
+      }
+    },
+    "CAL_TSY_ME_ZN|V1_issuance_q": {
+      "instrument": "ZN16",
+      "start": "2010-09-28",
+      "IS": {
+        "alpha_vs_ES16": {
+          "alpha_ann": 0.07333356887640743,
+          "alpha_t": 3.6836749334547787,
+          "beta_ES16": -0.02293920521381554,
+          "t_ES16": -2.1287998142884303,
+          "n": 3527
+        },
+        "boot_timed_minus_bh_sharpe": {
+          "obs_diff": 0.8090222637753532,
+          "p_one_sided": 0.004,
+          "ci90": [
+            0.31065293374201336,
+            1.321206060180124
+          ]
+        },
+        "mean_bp_per_invested_day": 5.538316914061367,
+        "bh_mean_bp_per_day": 0.28147065290893997,
+        "bh_sharpe": 0.13139052811568414,
+        "bh_ann_ret": 0.0070930604533052865,
+        "timed_ann_ret_1unit": 0.018731871526036906,
+        "bh_ann_ret_at_same_exposure": 0.001015592721553493,
+        "bh_max_dd_at_same_exposure": -0.03745770165800599
+      },
+      "later": {
+        "alpha_vs_ES16": {
+          "alpha_ann": 0.009219687228026349,
+          "alpha_t": 0.17103926882362588,
+          "beta_ES16": 0.013056182415289642,
+          "t_ES16": 0.7081328325485021,
+          "n": 501
+        },
+        "boot_timed_minus_bh_sharpe": {
+          "obs_diff": 1.1930767308488617,
+          "p_one_sided": 0.0545,
+          "ci90": [
+            -0.034659321807906415,
+            2.3718371091096
+          ]
+        },
+        "mean_bp_per_invested_day": 1.7214211026659292,
+        "bh_mean_bp_per_day": -1.7449320524597676,
+        "bh_sharpe": -0.9090629588864173,
+        "bh_ann_ret": -0.04397228772198614,
+        "timed_ann_ret_1unit": 0.005003457636394234,
+        "bh_ann_ret_at_same_exposure": -0.0063193706905848345,
+        "bh_max_dd_at_same_exposure": -0.011895688556997075
+      }
+    },
+    "CAL_TSY_ME_ZN|V2_T-1..T": {
+      "instrument": "ZN16",
+      "start": "2010-09-29",
+      "IS": {
+        "alpha_vs_ES16": {
+          "alpha_ann": 0.03891893323065514,
+          "alpha_t": 2.0338353868625245,
+          "beta_ES16": -0.013421589329098321,
+          "t_ES16": -1.578930184866072,
+          "n": 3526
+        },
+        "boot_timed_minus_bh_sharpe": {
+          "obs_diff": 0.3972042459984167,
+          "p_one_sided": 0.091,
+          "ci90": [
+            -0.09360261321949487,
+            0.8955426150031904
+          ]
+        },
+        "mean_bp_per_invested_day": 3.717725847480455,
+        "bh_mean_bp_per_day": 0.2734614768613184,
+        "bh_sharpe": 0.12764622769408424,
+        "bh_ann_ret": 0.0068912292169052225,
+        "timed_ann_ret_1unit": 0.007726922375435766,
+        "bh_ann_ret_at_same_exposure": 0.000656679811934247,
+        "bh_max_dd_at_same_exposure": -0.025057954898076606
+      },
+      "later": {
+        "alpha_vs_ES16": {
+          "alpha_ann": 0.03731734295337924,
+          "alpha_t": 0.7656777617366494,
+          "beta_ES16": 0.0033271623421827906,
+          "t_ES16": 0.1940438110845872,
+          "n": 501
+        },
+        "boot_timed_minus_bh_sharpe": {
+          "obs_diff": 1.5007620575235856,
+          "p_one_sided": 0.044,
+          "ci90": [
+            0.08178774982226633,
+            2.798647571167304
+          ]
+        },
+        "mean_bp_per_invested_day": 3.630610221674155,
+        "bh_mean_bp_per_day": -1.7449320524597676,
+        "bh_sharpe": -0.9090629588864173,
+        "bh_ann_ret": -0.04397228772198614,
+        "timed_ann_ret_1unit": 0.00755845533759892,
+        "bh_ann_ret_at_same_exposure": -0.004212913793723224,
+        "bh_max_dd_at_same_exposure": -0.007935753536696288
+      }
+    },
+    "CAL_PREHOL_ES|base_H-1": {
+      "instrument": "ES16",
+      "start": "2010-09-03",
+      "IS": {
+        "alpha_vs_ES16": {
+          "alpha_ann": 0.041030904183161666,
+          "alpha_t": 2.1882304952219225,
+          "beta_ES16": 0.055147646705271516,
+          "t_ES16": 4.4075879013215005,
+          "n": 3543
+        },
+        "boot_timed_minus_bh_sharpe": {
+          "obs_diff": -0.25764708379737167,
+          "p_one_sided": 0.793,
+          "ci90": [
+            -0.7816384614161025,
+            0.24838087242858242
+          ]
+        },
+        "mean_bp_per_invested_day": 14.600359407962037,
+        "bh_mean_bp_per_day": 5.380282799398374,
+        "bh_sharpe": 0.7875817962418776,
+        "bh_ann_ret": 0.13558312654483903,
+        "timed_ann_ret_1unit": 0.012609573611719545,
+        "bh_ann_ret_at_same_exposure": 0.004898289640908664,
+        "bh_max_dd_at_same_exposure": -0.013804203843921559
+      },
+      "later": {
+        "alpha_vs_ES16": {
+          "alpha_ann": 0.016140137386783774,
+          "alpha_t": 0.4020618599128389,
+          "beta_ES16": 0.0403315240800689,
+          "t_ES16": 2.3165984811595184,
+          "n": 501
+        },
+        "boot_timed_minus_bh_sharpe": {
+          "obs_diff": -0.47149714144735067,
+          "p_one_sided": 0.745,
+          "ci90": [
+            -2.113017633001304,
+            0.8140119786216865
+          ]
+        },
+        "mean_bp_per_invested_day": 6.409078784310529,
+        "bh_mean_bp_per_day": 5.0618016732373805,
+        "bh_sharpe": 0.795430293816088,
+        "bh_ann_ret": 0.12755740216558198,
+        "timed_ann_ret_1unit": 0.005692965483617774,
+        "bh_ann_ret_at_same_exposure": 0.005092111862897484,
+        "bh_max_dd_at_same_exposure": -0.008332111268288034
+      }
+    },
+    "CAL_PREHOL_ES|V1_ex_TOM": {
+      "instrument": "ES16",
+      "start": "2010-11-24",
+      "IS": {
+        "alpha_vs_ES16": {
+          "alpha_ann": 0.008405045583572385,
+          "alpha_t": 0.4374458302701933,
+          "beta_ES16": 0.04139959559995583,
+          "t_ES16": 3.3024501672995283,
+          "n": 3486
+        },
+        "boot_timed_minus_bh_sharpe": {
+          "obs_diff": -0.5949351651311267,
+          "p_one_sided": 0.9665,
+          "ci90": [
+            -1.0781773402417443,
+            -0.06295871542436746
+          ]
+        },
+        "mean_bp_per_invested_day": 6.235384022678972,
+        "bh_mean_bp_per_day": 5.222747981611789,
+        "bh_sharpe": 0.7617565341588091,
+        "bh_ann_ret": 0.1316132491366171,
+        "timed_ann_ret_1unit": 0.003053310142744199,
+        "bh_ann_ret_at_same_exposure": 0.002907119960848972,
+        "bh_max_dd_at_same_exposure": -0.008452698680378457
+      },
+      "later": {
+        "alpha_vs_ES16": {
+          "alpha_ann": 0.057564169764747174,
+          "alpha_t": 1.3228447415043498,
+          "beta_ES16": 0.033176291545949414,
+          "t_ES16": 1.8676917876868193,
+          "n": 501
+        },
+        "boot_timed_minus_bh_sharpe": {
+          "obs_diff": -0.019913056460730383,
+          "p_one_sided": 0.5525,
+          "ci90": [
+            -1.9362044107504843,
+            1.3527911326436166
+          ]
+        },
+        "mean_bp_per_invested_day": 18.419866113847597,
+        "bh_mean_bp_per_day": 5.0618016732373805,
+        "bh_sharpe": 0.795430293816088,
+        "bh_ann_ret": 0.12755740216558198,
+        "timed_ann_ret_1unit": 0.010665404217220587,
+        "bh_ann_ret_at_same_exposure": 0.003055267117738491,
+        "bh_max_dd_at_same_exposure": -0.005005632772082991
+      }
+    },
+    "CAL_FOMC_EVEN_ES|base_even_weeks": {
+      "instrument": "ES16",
+      "start": "2010-09-07",
+      "IS": {
+        "alpha_vs_ES16": {
+          "alpha_ann": -0.0014622252360079566,
+          "alpha_t": -0.06602896271550081,
+          "beta_ES16": 0.45200904018180527,
+          "t_ES16": 16.048179565936632,
+          "n": 3542
+        },
+        "boot_timed_minus_bh_sharpe": {
+          "obs_diff": -0.3128011098336792,
+          "p_one_sided": 0.926,
+          "ci90": [
+            -0.6536298809614993,
+            0.033659394819348334
+          ]
+        },
+        "mean_bp_per_invested_day": 4.745871690004337,
+        "bh_mean_bp_per_day": 5.344218757653533,
+        "bh_sharpe": 0.782345483675738,
+        "bh_ann_ret": 0.13467431269286903,
+        "timed_ann_ret_1unit": 0.06189691838462744,
+        "bh_ann_ret_at_same_exposure": 0.07178574318580935,
+        "bh_max_dd_at_same_exposure": -0.19247014386877426
+      },
+      "later": {
+        "alpha_vs_ES16": {
+          "alpha_ann": -0.028223250214598247,
+          "alpha_t": -0.5456316917026667,
+          "beta_ES16": 0.42406828904095756,
+          "t_ES16": 5.055715543331638,
+          "n": 501
+        },
+        "boot_timed_minus_bh_sharpe": {
+          "obs_diff": -0.4374389466877029,
+          "p_one_sided": 0.8405,
+          "ci90": [
+            -1.1453852061773424,
+            0.29691004569893187
+          ]
+        },
+        "mean_bp_per_invested_day": 3.045589333066203,
+        "bh_mean_bp_per_day": 5.0618016732373805,
+        "bh_sharpe": 0.795430293816088,
+        "bh_ann_ret": 0.12755740216558198,
+        "timed_ann_ret_1unit": 0.039972727296930625,
+        "bh_ann_ret_at_same_exposure": 0.06950732692855066,
+        "bh_max_dd_at_same_exposure": -0.10965359823105125
+      }
+    },
+    "CAL_TOM_ES|timing_F_ES": {
+      "instrument": "F_ES",
+      "start": "2010-09-29",
+      "IS": {
+        "alpha_vs_ES16": {
+          "alpha_ann": -0.00042364704993970003,
+          "alpha_t": -0.014171087386709268,
+          "beta_ES16": 0.26250798697639094,
+          "t_ES16": 6.649229325732472,
+          "n": 3526
+        },
+        "boot_timed_minus_bh_sharpe": {
+          "obs_diff": -0.2707329582509652,
+          "p_one_sided": 0.844,
+          "ci90": [
+            -0.7537131605770847,
+            0.17525717031537663
+          ]
+        },
+        "mean_bp_per_invested_day": 6.978479613132912,
+        "bh_mean_bp_per_day": 5.232165288028179,
+        "bh_sharpe": 0.781201606364434,
+        "bh_ann_ret": 0.1318505652583101,
+        "timed_ann_ret_1unit": 0.041093866087152396,
+        "bh_ann_ret_at_same_exposure": 0.03148558591817842,
+        "bh_max_dd_at_same_exposure": -0.08814922608014009
+      },
+      "later": {
+        "alpha_vs_ES16": {
+          "alpha_ann": 0.018241415768150797,
+          "alpha_t": 0.3050843267794494,
+          "beta_ES16": 0.2086659298756598,
+          "t_ES16": 3.2378551680343617,
+          "n": 501
+        },
+        "boot_timed_minus_bh_sharpe": {
+          "obs_diff": -0.173473748552729,
+          "p_one_sided": 0.6505,
+          "ci90": [
+            -1.1383226102671966,
+            0.8454102717971714
+          ]
+        },
+        "mean_bp_per_invested_day": 6.7199059164323645,
+        "bh_mean_bp_per_day": 5.089230436381396,
+        "bh_sharpe": 0.7516964864301098,
+        "bh_ann_ret": 0.12824860699681118,
+        "timed_ann_ret_1unit": 0.03965548002253786,
+        "bh_ann_ret_at_same_exposure": 0.030718229220793095,
+        "bh_max_dd_at_same_exposure": -0.05200246250114471
+      }
+    },
+    "CAL_TSY_ME_ZN|timing_F_ZN": {
+      "instrument": "F_ZN",
+      "start": "2010-09-28",
+      "IS": {
+        "alpha_vs_ES16": {
+          "alpha_ann": 0.07512519468446072,
+          "alpha_t": 3.381892672355395,
+          "beta_ES16": -0.025346973484394467,
+          "t_ES16": -2.1332519015966134,
+          "n": 3527
+        },
+        "boot_timed_minus_bh_sharpe": {
+          "obs_diff": 0.695924214457448,
+          "p_one_sided": 0.014,
+          "ci90": [
+            0.189805633630318,
+            1.187969004062767
+          ]
+        },
+        "mean_bp_per_invested_day": 4.694722140146891,
+        "bh_mean_bp_per_day": 0.28602786304785355,
+        "bh_sharpe": 0.13437223642682128,
+        "bh_ann_ret": 0.007207902148805909,
+        "timed_ann_ret_1unit": 0.015731849718034967,
+        "bh_ann_ret_at_same_exposure": 0.0010320358903166953,
+        "bh_max_dd_at_same_exposure": -0.03733633512791301
+      },
+      "later": {
+        "alpha_vs_ES16": {
+          "alpha_ann": 0.0039445198480754845,
+          "alpha_t": 0.0693481454522293,
+          "beta_ES16": 0.01504928066666243,
+          "t_ES16": 0.7624112391164468,
+          "n": 501
+        },
+        "boot_timed_minus_bh_sharpe": {
+          "obs_diff": 1.0010176329608942,
+          "p_one_sided": 0.0685,
+          "ci90": [
+            -0.10257867223089648,
+            2.129097798316501
+          ]
+        },
+        "mean_bp_per_invested_day": 0.85412457809354,
+        "bh_mean_bp_per_day": -1.72429582195901,
+        "bh_sharpe": -0.8886515101757897,
+        "bh_ann_ret": -0.043452254713367056,
+        "timed_ann_ret_1unit": 0.0018860751187483459,
+        "bh_ann_ret_at_same_exposure": -0.006244635407909037,
+        "bh_max_dd_at_same_exposure": -0.01205515471641061
+      }
+    },
+    "CAL_PREHOL_ES|timing_F_ES": {
+      "instrument": "F_ES",
+      "start": "2010-09-03",
+      "IS": {
+        "alpha_vs_ES16": {
+          "alpha_ann": 0.043600697532299205,
+          "alpha_t": 2.1288966659331,
+          "beta_ES16": 0.057458010523675926,
+          "t_ES16": 4.216646859319361,
+          "n": 3543
+        },
+        "boot_timed_minus_bh_sharpe": {
+          "obs_diff": -0.23232035370863413,
+          "p_one_sided": 0.7805,
+          "ci90": [
+            -0.7515312773003353,
+            0.2747747822324274
+          ]
+        },
+        "mean_bp_per_invested_day": 16.382184555183358,
+        "bh_mean_bp_per_day": 5.358676427816671,
+        "bh_sharpe": 0.8005170344438967,
+        "bh_ann_ret": 0.1350386459809801,
+        "timed_ann_ret_1unit": 0.014231773779621634,
+        "bh_ann_ret_at_same_exposure": 0.00487861887822903,
+        "bh_max_dd_at_same_exposure": -0.013708467076732456
+      },
+      "later": {
+        "alpha_vs_ES16": {
+          "alpha_ann": 0.009472591904357845,
+          "alpha_t": 0.2644133123189793,
+          "beta_ES16": 0.03353308626646507,
+          "t_ES16": 2.2202759868333,
+          "n": 501
+        },
+        "boot_timed_minus_bh_sharpe": {
+          "obs_diff": -0.5008879751773277,
+          "p_one_sided": 0.7535,
+          "ci90": [
+            -2.1065193927289045,
+            0.8269608427889041
+          ]
+        },
+        "mean_bp_per_invested_day": 4.775991680547995,
+        "bh_mean_bp_per_day": 5.089230436381396,
+        "bh_sharpe": 0.7516964864301098,
+        "bh_ann_ret": 0.12824860699681118,
+        "timed_ann_ret_1unit": 0.004050099415162054,
+        "bh_ann_ret_at_same_exposure": 0.0051197048701321825,
+        "bh_max_dd_at_same_exposure": -0.008807636366853555
+      }
+    },
+    "CAL_FOMC_EVEN_ES|timing_F_ES": {
+      "instrument": "F_ES",
+      "start": "2010-09-07",
+      "IS": {
+        "alpha_vs_ES16": {
+          "alpha_ann": -0.004403646075746822,
+          "alpha_t": -0.194295955454277,
+          "beta_ES16": 0.42910749566291095,
+          "t_ES16": 13.933149280092437,
+          "n": 3542
+        },
+        "boot_timed_minus_bh_sharpe": {
+          "obs_diff": -0.32420494164304225,
+          "p_one_sided": 0.945,
+          "ci90": [
+            -0.6607466194714032,
+            0.014087515063005382
+          ]
+        },
+        "mean_bp_per_invested_day": 4.662774986438097,
+        "bh_mean_bp_per_day": 5.32061692337041,
+        "bh_sharpe": 0.7948998842602123,
+        "bh_ann_ret": 0.13407954646893433,
+        "timed_ann_ret_1unit": 0.06078072930399697,
+        "bh_ann_ret_at_same_exposure": 0.07146871364577867,
+        "bh_max_dd_at_same_exposure": -0.18892663677573973
+      },
+      "later": {
+        "alpha_vs_ES16": {
+          "alpha_ann": 0.003071085816527636,
+          "alpha_t": 0.06311737636098752,
+          "beta_ES16": 0.36260569344827126,
+          "t_ES16": 5.134398888044839,
+          "n": 501
+        },
+        "boot_timed_minus_bh_sharpe": {
+          "obs_diff": -0.07327580579407711,
+          "p_one_sided": 0.615,
+          "ci90": [
+            -0.7246068005907103,
+            0.557405075003579
+          ]
+        },
+        "mean_bp_per_invested_day": 5.59268133543437,
+        "bh_mean_bp_per_day": 5.089230436381396,
+        "bh_sharpe": 0.7516964864301098,
+        "bh_ann_ret": 0.12824860699681118,
+        "timed_ann_ret_1unit": 0.07494872358334187,
+        "bh_ann_ret_at_same_exposure": 0.06988397147730428,
+        "bh_max_dd_at_same_exposure": -0.11540838097470496
+      }
+    }
+  },
+  "notes": [],
+  "is_equivalence_check_tom_base_max_abs_diff": 0.0,
+  "treasury_etf_comparator": {
+    "ETF_C_issuance_IEF_3bp": {
+      "IS_2010-09_on": {
+        "sharpe": 0.7894641225110568,
+        "nw_t": 3.105254053144035,
+        "max_dd": -0.05416075041068069,
+        "ann_vol": 0.033085602251810176
+      },
+      "IS_2005_on": {
+        "sharpe": 0.7708517688977392,
+        "nw_t": 3.5554901605433025,
+        "max_dd": -0.07903586063980395,
+        "ann_vol": 0.0362118354786389
+      },
+      "later": {
+        "sharpe": -0.09192322340847961,
+        "nw_t": -0.1297174694487641,
+        "max_dd": -0.060248706900870586,
+        "ann_vol": 0.03241241132954824
+      }
+    },
+    "ETF_C_q1_IEF_3bp": {
+      "IS_2010-09_on": {
+        "sharpe": 0.8045391608613675,
+        "nw_t": 3.152677383606499,
+        "max_dd": -0.05783664770986052,
+        "ann_vol": 0.034837311077233465
+      },
+      "IS_2005_on": {
+        "sharpe": 0.7808182733074507,
+        "nw_t": 3.629596565514031,
+        "max_dd": -0.05783664770986041,
+        "ann_vol": 0.035163768101505885
+      },
+      "later": {
+        "sharpe": 0.013626906110958457,
+        "nw_t": 0.018937033457359597,
+        "max_dd": -0.0585614302444033,
+        "ann_vol": 0.03273601821519209
+      }
+    }
+  },
+  "ff_unscheduled_closures_excluded": [
+    "1963-11-25",
+    "1968-04-09",
+    "1968-06-12",
+    "1968-06-19",
+    "1968-06-26",
+    "1968-07-05",
+    "1968-07-10",
+    "1968-07-17",
+    "1968-07-24",
+    "1968-07-31",
+    "1968-08-07",
+    "1968-08-14",
+    "1968-08-21",
+    "1968-08-28",
+    "1968-09-11",
+    "1968-09-18",
+    "1968-09-25",
+    "1968-10-02",
+    "1968-10-09",
+    "1968-10-16",
+    "1968-10-23",
+    "1968-10-30",
+    "1968-11-20",
+    "1968-12-04",
+    "1968-12-11",
+    "1968-12-18",
+    "1969-02-10",
+    "1969-03-31",
+    "1969-07-21",
+    "1972-12-28",
+    "1973-01-25",
+    "1977-07-14",
+    "1985-09-27",
+    "1994-04-27",
+    "2001-09-11",
+    "2001-09-12",
+    "2001-09-13",
+    "2001-09-14",
+    "2004-06-11",
+    "2007-01-02",
+    "2012-10-29",
+    "2012-10-30",
+    "2018-12-05",
+    "2025-01-09"
+  ],
+  "ff_scheduled_holidays_count": 540
+}

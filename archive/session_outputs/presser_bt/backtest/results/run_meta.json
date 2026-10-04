@@ -1,0 +1,12 @@
+{
+  "addendum_sha256": "1921b2ca1dc6e646b95ee1d1bbc3e3ef7f6a864c06cd724956df7c6569de2dc4",
+  "seed": 20261003,
+  "draws": 9999,
+  "bad_quote_records_skipped": 1593,
+  "positions_manifest": "94e8037a533e8f6245673cf4ceff6d23d6fa2acda5c120b05a5faca573d0c5b9  answer_sel_H1_h1.csv\n5e03f9c749b37672ac242d4113199f746071033677442ade6a6579815746f108  answer_sel_H1_h15.csv\n3093e4e827570971d443021029fd606844f5197e03d324c1886951b80b179a50  answer_sel_H1_h5.csv\n6f16e173a21c0caad0762d8110a97d2b19dcc9c2c04593a6494c579f7e523129  answer_sel_lexH1_h1.csv\n6f16e173a21c0caad0762d8110a97d2b19dcc9c2c04593a6494c579f7e523129  answer_sel_lexH1_h15.csv\n6f16e173a21c0caad0762d8110a97d2b19dcc9c2c04593a6494c579f7e523129  answer_sel_lexH1_h5.csv\nf840eb8dd5dc8252f2f0fe8e9bd539d4acb97dafd21d07040aa087fbcefb8cf1  answer_sel_lexH1raw_h1.csv\n77bf753ba8f721490e5900af8e7b7ea97774fd161371cac86df38c922040c03a  answer_sel_lexH1raw_h15.csv\nd24891fe41e3c7f7a55784ec5901f2c7806f9d2f042ba84c996acb35711e07bf  answer_sel_lexH1raw_h5.csv\n2fa724b05832d85f68e19d5b9b9fd4baea2746c9d3f612759eb7866ef42361d3  answers_positions.csv\nb482b30d176913133c96d07f0d4dc3f637327d139f2517b1cd4ba0ae201e593a  bar_log_positions.csv\n2c6d06e12cc0b221253dc0c4044f9c42b44096a5193db7fb93269347fd7e3fa2  meetings_positions.csv\n41400e57bde40c7bbf90579e68bcbc1802876633bd677ef0917ddfc9eb450d85  positions_status.json\n",
+  "stance_scorer": "chrono walk-forward stance model (DEVIATION_D1 + D1a = HYPOTHESIS_v2 Amendments 2-3; model Y scores year Y; 3-seed mean probabilities, argmax; label-year rule true)",
+  "text_dir": "<scratch>\\presser_bt\\text_chrono",
+  "out_dir": "<scratch>\\presser_bt\\backtest",
+  "text_meetings_sha256": "c9196464e066b025f153f7e7e32eb275e7d6eb691dc8332c8b6ee86733bdd028",
+  "text_answers_sha256": "146f281ad82b6478f0955d01b6913bbc4eb7149770264b269dbb1f0a3111afd6"
+}

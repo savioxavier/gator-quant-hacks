@@ -1,0 +1,76 @@
+{
+  "id": "trend_momentum_carver_ewmac_breakout",
+  "headline_variant": "V2",
+  "rule": "Breakout 20/40/80/160/320 (scalars 0.67/0.70/0.73/0.74/0.74), equal weights, trailing FDM; as V1",
+  "all_variants": {
+    "V1": "EWMAC 8/32,16/64,32/128,64/256 (scalars 5.3/3.75/2.65/1.87), equal weights, trailing pooled FDM; w=(F/10)*0.10/sigma/N, book to 10% daily, 10% buffer, next_close",
+    "V2": "Breakout 20/40/80/160/320 (scalars 0.67/0.70/0.73/0.74/0.74), equal weights, trailing FDM; as V1",
+    "V3": "All nine rules equal weights, trailing FDM; as V1"
+  },
+  "selection": "headline = highest in-sample net Sharpe (1x) of 3 pre-declared variants",
+  "sources": [
+    "https://raw.githubusercontent.com/robcarver17/pysystemtrade/master/systems/provided/futures_chapter15/futuresconfig.yaml",
+    "https://github.com/robcarver17/pysystemtrade",
+    "https://qoppac.blogspot.com/2025/04/annual-performance-update-returneth.html"
+  ],
+  "source_reported": "Carver live futures account net 2014/15-2024/25: mean 12.9%, sd 16.8%, Sharpe 0.76 (rf=0), CAGR 12.0% vs SG CTA 6.4%; live system also has carry/relative-value rules on 100+ instruments",
+  "window": {
+    "is_start": "2012-04-04",
+    "is_end": "2024-10-02",
+    "later": "2024-10-03..2026-10-02 (descriptive)"
+  },
+  "columns": {
+    "net_1x": "daily excess return over T-bill, realistic cost map",
+    "net_2x": "same at 2x costs",
+    "gross": "before costs"
+  },
+  "cost_bps_one_way": {
+    "ES": 1.0,
+    "NQ": 1.0,
+    "YM": 1.0,
+    "RTY": 2.0,
+    "ZT": 0.5,
+    "ZF": 0.7,
+    "ZN": 1.0,
+    "ZB": 1.5,
+    "UB": 1.5,
+    "6E": 1.0,
+    "6J": 1.0,
+    "6B": 1.0,
+    "6A": 1.0,
+    "6C": 1.0,
+    "6S": 1.0,
+    "CL": 2.0,
+    "GC": 2.0,
+    "SI": 2.0,
+    "HG": 2.0,
+    "NG": 3.0,
+    "HO": 3.0,
+    "RB": 3.0,
+    "PL": 3.0,
+    "ZC": 4.0,
+    "ZS": 4.0,
+    "ZW": 4.0,
+    "ZL": 4.0,
+    "ZM": 4.0,
+    "LE": 4.0,
+    "HE": 4.0
+  },
+  "exec": "next_close, daily decisions with 10% buffer",
+  "vol": "book scaled to 10% ex-ante daily (trailing 252d cov), gross<=3",
+  "spec": "<scratch>\\hunt100\\bt_0\\trend_momentum_carver_ewmac_breakout\\SPEC.md",
+  "script": "<scratch>\\hunt100\\bt_0\\run_carver.py",
+  "carver_live_tax_years": {
+    "2014/15": 0.595,
+    "2015/16": 0.281,
+    "2016/17": 0.024,
+    "2017/18": 0.02,
+    "2018/19": 0.045,
+    "2019/20": 0.338,
+    "2020/21": -0.017,
+    "2021/22": 0.258,
+    "2022/23": -0.076,
+    "2023/24": 0.206,
+    "2024/25": -0.147
+  }
+}

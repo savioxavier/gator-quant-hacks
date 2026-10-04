@@ -1,0 +1,15 @@
+backtests: <scratch>/team_push/backtests
+re-run outputs: <scratch>/team_push/backtests/rerun
+
+== exploratory H2/H3/H4 (voice, face, combined)
+Traceback (most recent call last):
+  File "<scratch>\team_push\backtests\presser\backtest\code\h234_s1_features.py", line 340, in <module>
+    A["zA_burnin_k"] = A.presser_id.map(stats[stats.feature == "A"].set_index("presser_id").baseline_k)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<home>\.venvs\gqh-systematic\Lib\site-packages\pandas\core\frame.py", line 6991, in set_index
+    raise KeyError(f"None of {missing} are in the columns")
+KeyError: "None of ['presser_id'] are in the columns"
+-> h234: FAILED or refused (see <scratch>/team_push/backtests/rerun/h234_run_all_stdout.log)
+
+== summary
+  h234: FAILED or refused (see <scratch>/team_push/backtests/rerun/h234_run_all_stdout.log)

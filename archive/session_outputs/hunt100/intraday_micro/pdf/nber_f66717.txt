@@ -1,0 +1,1982 @@
+
+=== PAGE 1 ===
+The Pre-FOMC Announcement Drift
+David O. Lucca and Emanuel Moench ∗
+Federal Reserve Bank of New York
+First Draft: September 2011
+This Draft: February 28, 2013
+Abstract
+We document large excess returns on U.S. equities in anticipation of monetary
+policy decisions made at scheduled meetings of the Federal Open Market Committee
+(FOMC) in the past few decades. The abnormal pre-FOMC returns have increased
+over time and account for large fractions of total annual realized stock returns. While
+other major international equity indices experienced similar pre-FOMC returns, we
+ﬁnd no such eﬀect in U.S. Treasury securities and other ﬁxed income instruments.
+Other U.S. macroeconomic news announcements also do not give rise to analogous
+pre-announcement equity returns. The pre-FOMC return is higher in periods when
+the slope of the Treasury yield curve is low, implied equity market volatility is high,
+and when past pre-FOMC returns have been high. We discuss a few possible sources of
+the pre-FOMC announcement drift, none of which appears to be fully consistent with
+the vast empirical evidence that we assemble.
+Keywords: FOMC announcements, equity premium, information choice
+JEL classiﬁcation: G10, G12, G15
+∗We are grateful to Tobias Adrian, Yakov Amihud, Nina Boyarchenko, John Cochrane, Richard Crump,
+Itamar Drechsler, Darrell Duﬃe, Fernando Duarte, Thomas Eisenbach, Arvind Krishnamurthy, Ken Kut-
+tner(discussant), Michael Fleming, Charles Jones, Thomas Mertens, Lubos Pastor, Simon Potter, Asani
+Sarkar, Ernst Schaumburg, Pietro Veronesi, Annette Vissing-Jorgensen (discussant) Jonathan Wright and
+seminar participants at the New York Fed, NYU Stern Finance, Deutsche Bundesbank, Banque de France,
+the Swiss National Bank, NBER Asset Pricing Meeting, as well as the Boston University/Fed Conference
+on Macro-Finance Linkages for useful comments. Steve Kang and Kirby Fears provided valuable research
+assistance. Emails: david.lucca@ny.frb.gov, emanuel.moench@ny.frb.gov. The views expressed in the paper
+are those of the authors and do not necessarily reﬂect views at the Federal Reserve Bank of New York or
+the Federal Reserve System.
+=== PAGE 2 ===
+1 Introduction
+In the past few decades stocks in the U.S. and several other major economies have experienced
+large excess returns in anticipation of U.S. monetary policy decisions made at scheduled
+meetings. These returns are puzzling and diﬃcult to explain with standard asset pricing
+models.
+Members of the FOMC—the Federal Reserve’s (Fed) monetary policy-making body—convene
+at pre-scheduled meetings to make monetary policy decisions. These meetings have occurred
+eight times per year since the early 1980s, while before then, meetings were scheduled much
+more frequently. Starting in 1994 the decisions of these meetings have been announced to
+the public at known times, while before 1994, investors had to glean the outcomes indi-
+rectly through the size of the open market operations conducted in the days following each
+meeting.
+We document that since 1994, the S&P500 index has on average increased 49 basis points
+in the 24 hours prior to the FOMC announcements. The abnormal returns do not revert in
+subsequent trading days and are orders of magnitude larger than those outside the 24-hour
+pre-FOMC window. As a result, about 80 percent of the annual realized excess stock returns
+since 1994 is accounted for by the 24 hours before FOMC announcements. The statistical
+signiﬁcance of the pre-FOMC return is very high: a simple trading strategy of holding the
+index only in the 24 hours leading up to an FOMC announcement would have yielded an
+annualized Sharpe ratio of above 1.1. Other major foreign stock markets exhibit similarly
+large pre-FOMC returns.
+Before 1994 we study excess returns on days of scheduled FOMC meetings, which mark
+the last trading session before investors could observe signals about the likely policy action.
+Between 1980 and 1993, we ﬁnd results that are comparable to the post-1994 sample. For
+example, pre-FOMC returns on the S&P500 index averaged to a statically signiﬁcant 20
+basis points, while returns on other days were an order of magnitude smaller. We ﬁnd no
+evidence of pre-FOMC announcement returns before 1980.
+We show that the pre-FOMC returns since 1980 are not explained by outliers and that they
+remain highly statistically signiﬁcant even when we account for data-snooping or small-
+sample eﬀects. We ﬁnd pre-FOMC returns to be broad-based across U.S. industry and
+size portfolios. Indeed, a single market factor model captures a signiﬁcant fraction of the
+cross-sectional variation of these returns. Fixed income assets do not feature pre-FOMC
+eﬀects, and other major U.S. macroeconomic news announcements do not give rise to pre-
+announcement equity returns.
+1
+=== PAGE 3 ===
+Based on one-year rolling averages, we ﬁnd the pre-FOMC drift to be positive for the vast
+majority of the 1980-2011 sample. Pre-FOMC returns are somewhat countercyclical and
+tend to be higher in periods when the slope of the Treasury yield curve is low, and when the
+implied equity market volatility as measured by the VIX is higher. Even after accounting for
+these factors pre-FOMC returns feature substantial serial correlation. Pre-FOMC returns
+are not signiﬁcantly diﬀerent in easing versus tightening monetary policy cycles, and are
+uncorrelated with the unexpected component of the yet-to-be-realized policy decision as
+measured by the surprise component of federal funds rate futures (Kuttner [2001]) or the
+stock market.
+What explains these ﬁndings? The federal funds rate has trended down since the early 1980s,
+reaching historically low levels at the end of the sample. In addition, interest rate policy
+has sometimes been characterized as having an asymmetric impact on riskier asset values
+through implicit ﬂoors, or so called “government puts” (for example, Diamond and Rajan
+[2011]). Consistently, we ﬁnd that pre-FOMC returns are higher when the slope of the yield
+curve implies future rate cuts and when the VIX is higher. If these were the true sources
+of the drift, however, it is not clear why they would have impacted stock prices only in the
+24 hours before the meetings, rather than on all days in the sample. Indeed, while FOMC
+members regularly discuss monetary policy in speeches and interviews, they typically refrain
+from any such discussion ahead of FOMC meetings (a time interval known as the purdah
+period). In fact, we ﬁnd that realized stock market volatility and trading volumes are low
+before and then jump at the time of the announcement.
+One could argue that investors may be slow at updating their information sets on the basis
+of theories featuring informational frictions such as Sims [2003]. In the paper we discuss how
+a model with rationally inattentive investors (Kacperczyk, Nieuwerburgh, and Veldkamp
+[2009]) can potentially generate price drifts ahead of scheduled announcements. However,
+to quantitatively match the pre-FOMC returns, such a model would require agents to have
+biased priors for long periods of time, which would be inconsistent with rational expecta-
+tions. In addition, the learning process would likely result in higher trading volumes and
+volatility in the hours before the announcement, contrary to what we observe in the data.
+Similar arguments can be made regarding the model of political risk by Pastor and Veronesi
+[2011], which, as we discuss in the paper, can also generate price drifts ahead of scheduled
+announcements under certain conditions.
+We consider several other candidate explanations. First, jumps are unlikely to be the source
+of the drift as the pre-FOMC return accrues prior to the announcement when volatility is
+low. Second, an explanation based on a purely consumption-based pricing kernel would
+2
+=== PAGE 4 ===
+either require high-frequency movements in consumption or new information about future
+consumption right before the FOMC. Third, previous work ﬁnds that negative innovations
+in liquidity and volatility are associated with higher contemporaneous excess returns (Camp-
+bell and Hentschel [1992] and Amihud [2002]). While we ﬁnd that the lower liquidity and
+volatility ahead of the FOMC announcement can account for some of the pre-FOMC re-
+turns, a large and signiﬁcant fraction remains unexplained. In addition, it is unclear to what
+extent the declines in volatility and liquidity have been unexpected. Moreover, one would
+need to rationalize these declines. In the paper, we discuss one such theory by Duﬃe [2010]
+featuring time-varying stock market participation which is also capable of generating price
+drifts ahead of scheduled announcements. However, this model appears to be at odds with
+the absence of a return reversal on subsequent days, as well as with the absence of similar
+drifts ahead of other macroeconomic announcements. Finally, we discuss that our empirical
+evidence is at odds with an information leakage story along several dimensions.
+In addition to the work cited thus far, our paper is related to diﬀerent strands of the lit-
+erature. A vast literature has tried to explain the equity premium puzzle (see for example
+Campbell [2003] for a review). Our paper documents that since the 1980s a large fraction
+of realized excess returns on equities can be accounted for by returns in the 24 hours before
+FOMC policy decisions become known, a ﬁnding that may help shed light on alternative
+theories. A large literature has also studied asset price responses to monetary policy rate
+decisions (e.g. Kuttner [2001]). 1 For U.S. equities, Bernanke and Kuttner [2005] document
+large stock market responses to unexpected federal funds rate shocks. We see our results
+as complementary to these studies as we document the existence of an unconditional excess
+return that is earned ahead of the FOMC announcement. These returns are thus likely
+driven by an anticipation rather than the realization of policy decisions. A related literature
+has documented a sizeable conditional response of various asset classes to other economic
+news announcements (Jones, Lamont, and Lumsdaine [1998], Fleming and Remolona [1999],
+Andersen, Bollerslev, Diebold, and Vega [2003]). More recently, Savor and Wilson [2010]
+ﬁnd positive excess equity returns on days of scheduled macroeconomic data releases, in-
+cluding FOMC announcements, from 1958 through 2009. Our paper diﬀers from Savor and
+Wilson [2010] as we study returns ahead of scheduled announcements while they look at
+unconditional returns on announcement days. For the post-1994 sample, when FOMC an-
+nouncements have been made at or a few minutes around 2:15PM, our results indicate that
+the FOMC announcement day returns are driven by the pre-FOMC drift. Lamont and Frazz-
+ini [2007] have recently documented a qualitatively similar upward drift of individual stock
+1A more recent literature has also focused on ﬁnancial asset responses to communication about future,
+rather than the actual realization of current, monetary policy actions (G¨ urkaynak, Sack, and Swanson [2005],
+Lucca and Trebbi [2009])
+3
+=== PAGE 5 ===
+prices prior to scheduled earnings announcements. While these authors focus on a behavioral
+“attention grabbing” eﬀect as a potential explanation, we mainly consider theories based on
+rational expectations. Nonetheless we stress in the paper that, due to the absence of new
+public information ahead of scheduled FOMC announcements, informational frictions may
+play an important role in explaining the drift. Recently, for example, Tetlock [2011] shows
+that stale news can aﬀect stock prices. We discuss additional relevant literature along the
+way.
+The remainder of the paper is organized as follows. Section 2 provides a brief discussion of
+the monetary policy decision process in the U.S. and reviews the data used in this paper.
+In Section 3, we present the main empirical ﬁndings. Section 4 discusses a list of potential
+explanations for our ﬁndings, and Section 5 concludes.
+2 Federal Reserve Policy, FOMC meetings, and Data
+2.1 Federal Reserve Policy and FOMC meetings
+The Federal Open Market Committee (FOMC, or Committee) is the monetary policy-making
+body of the U.S. Federal Reserve System. The FOMC makes policy decisions under the
+statutory dual mandate of maximum employment and stable prices. 2 Policy decisions are
+made under a majority rule at FOMC meetings, which from 1981 through today have been
+scheduled to occur eight times per year (or about once every six to eight weeks). Before
+1981, scheduled FOMC meetings occurred much more often, ranging from a frequency of
+about every three weeks in the 1960s to about every ﬁve weeks in 1980. 3
+In this paper, we focus on those scheduled FOMC meetings. A list of the meeting dates
+and announcement times since 1994 is reported in Table A.1. The FOMC can also meet at
+other times in unscheduled meetings or conference calls. These meetings have been rather
+infrequent, especially in the past two decades, and their occurrence is unknown to investors in
+2The Committee is composed of twelve members: the seven members of the Board of Governors and
+ﬁve of the twelve Reserve Bank presidents. The Federal Reserve Board Chairman also serves as the FOMC
+Chairman. With the exception of the president of the Federal Reserve Bank of New York, who is a permanent
+voting member and FOMC vice-Chair, presidents of all other Banks take voting positions on a rotating basis
+that last one year.
+3The calendar of past FOMC meetings and those already scheduled for the next year can be found at
+http://www.federalreserve.gov/monetarypolicy/fomccalendars.htm. Before Sep 11, 2001, the Public
+Aﬀairs Division at the Board of Governors provided information sheets with the dates of scheduled meetings
+to the public.
+4
+=== PAGE 6 ===
+advance.4 Figure A.1 in the Appendix plots the evolution of the number of scheduled as well
+as the total number of scheduled and unscheduled FOMC meetings since 1960. This chart
+shows that monetary policy decisions in the U.S. have been made about twice as frequently
+in the 1960s and 1970s compared to the 1980s.
+Starting in February 1994 the FOMC began to announce its decisions and accompanying
+statements (FOMC statements) after pre-scheduled meetings only when a change to the
+current policy was made. Starting in May 1999, statements have been released after ev-
+ery pre-scheduled meeting irrespective of whether a policy change occurred or not. From
+September 1994 to March 2011, FOMC statements were regularly released at, or a few min-
+utes after, 2:15pm ET following each scheduled meeting. 5 Since April 2011, the time of
+the release has been 12:30pm on days of FOMC meetings, after which a press conference
+by the FOMC Chairman is held at 2:15pm. Our intraday analysis focuses on the sample
+from September 1994 through March 2011 over which FOMC releases were known to be
+consistently made at, or within a few minutes of, 2:15pm, as reported in Table A.1.
+Prior to 1994, the FOMC did not disclose its policy decisions and market participants gen-
+erally inferred the target federal funds rate from the size of open market operations on the
+days following the FOMC meeting. This often left investors with considerable uncertainty
+as to what the actual decision had been for a few days (Kuttner [2003]). On the other hand,
+on a few occasions before 1994, the Board of Governors of the Federal Reserve coincidentally
+released statements about a decision to change the discount rate on days of scheduled FOMC
+meetings. From these announcements market participants could have correctly inferred a
+change in the federal funds rate or non-borrowed reserve target (see e.g. Kuttner [2001] and
+G¨ urkaynak, Sack, and Swanson [2005] for a set of these dates in the post-1989 sample). We
+obtained the full history of discount rate press releases from the Federal Reserve;s historical
+records and identiﬁed a total of four FOMC meeting days in the 1960-2011 period when dis-
+count rate announcements occurred on the day of a scheduled FOMC meeting. We exclude
+those days from our analysis in order to ensure that the pre-FOMC windows do not include
+any policy announcements. 6
+4Unscheduled meetings typically occur via teleconference and are known to investors right after the
+meeting only when a target rate change occurs. Since 1994, such meetings have occurred on the following
+dates: April 18, 1994, October 15, 1998, January 3, 2001, September 17, 2001, January 21, 2008, and October
+7, 2008. In addition intermeeting statements related to “liquidity facilities” were released on: August 10/16,
+2008 and May 9, 2010. Over the same sample period, 24 other unscheduled meetings took place without any
+immediate release of a statement. These meetings were made public only with the release of the minutes of
+the subsequent scheduled meeting (about one to two months after the original meeting took place).
+5The only exception to this rule is the statement of March 26, 1996 which was released in the morning
+because the Chairman was scheduled to testify in Congress later that day. The timing of the release was
+pre-announced to investors.
+6The meeting dates that we exclude are Dec 17 1968, Sep 18 1979, Oct 6 1979, and Dec 18 1990.
+5
+=== PAGE 7 ===
+Changes in the frequency of monetary policy decisions and in the communication of those
+decisions are only some of the many policy changes since the 1960s ranging from policy
+instruments to operating procedures. Clarida, Gali, and Gertler [2000] study parameter
+shifts in monetary policy reaction functions between 1960 and 1996, and consider two main
+subperiods. The ﬁrst, from 1960:Q1 through 1979:Q2, encompasses the tenures of Chairmen
+Martin, Burns, and Miller and the following one that spans the terms of Chairmen Volcker
+and Greenspan. They ﬁnd evidence that interest rate policy in the post-Volcker period has
+been much more sensitive to changes in expected inﬂation than in the pre-Volcker period.
+While other researchers have questioned the importance of policy changes relative to exoge-
+nous changes in the volatility of shocks (see e.g. Sims and Zha [2006]), the appointment of
+Volcker as Chairman in 1979 is generally considered to be a key shift in the Fed’s policy
+vis-a-vis inﬂation (see e.g. Bernanke, Blinder, and McCallum [2005]).
+To enhance transparency in communicating their policy decisions over the past 30 years,
+members of the FOMC have increasingly employed speeches, testimonies to Congress and
+other means to communicate to market participants the likely path of monetary policy.
+While this communication is today considered a key policy instrument in its own regard (e.g.
+Blinder, Ehrmann, Fratzscher, Haan, and Jansen [2008]), importantly FOMC participants
+refrain from any policy discussion in the week leading up to each FOMC meeting (the purdah
+period, see Ehrmann and Fratzscher [2009]). Hence, no such information about the likely
+outcome of the policy decision is released in the days before FOMC meetings. This is an
+important fact to bear in mind when interpreting the evidence presented in this paper.
+2.2 Data
+Our analysis focuses on ﬁnancial asset returns around scheduled FOMC meetings between
+January 1960 and March 2011 with a special emphasis on the post-1980 and 1994 samples.
+Most of the evidence on the latter subsample is based on intraday data and focuses on the
+24-hour period from 2pm on the day before a scheduled FOMC announcement until 2pm
+on the day of a scheduled FOMC announcement, which is about ﬁfteen minutes before the
+announcement release time. Hence, by construction, returns computed over this time interval
+do not contain meeting outcomes and therefore allow us to exclusively study anticipatory
+eﬀects associated with FOMC announcements. 7
+The evidence prior to 1994 is based on daily data. Over that period we consider as pre-
+FOMC returns those earned on days of scheduled FOMC meetings, which mark the last
+7Due to limited availability of intraday data the cross-sectional analysis of pre-FOMC returns is based
+on daily data.
+6
+=== PAGE 8 ===
+trading session before investors could observe signals about the likely policy action.
+We use several data sources: Thomson Reuters TickHistory and Tickdata.com for intraday
+data, Bloomberg for dividend data as well as international stock returns and foreign central
+bank announcements, and Ken French’s website for daily returns on size and industry sorted
+U.S. stock portfolios. We use information on the number of articles published in the ﬁnancial
+press from Factiva and also obtain historical Wall Street Journal coverage from ProQuest.
+Table 1 provides summary statistics on FOMC days and non-FOMC days for the main
+variables used in our empirical analysis. Since most of our analysis refers to mean returns in
+these two subsamples, we omit a detailed discussion here and instead refer interested readers
+to the table.
+3 Empirical Results
+In this section we present the empirical ﬁndings of the paper. We ﬁrst document excess
+returns on the S&P500 index in anticipation of U.S. monetary policy decisions. We then look
+at the persistence of these returns and show the robustness of their statistical signiﬁcance.
+We then report some cross-sectional and international evidence. Finally we study returns
+on other asset classes and of the S&P500 index before other major macroeconomic data
+releases.
+3.1 The Pre-FOMC Announcement Drift since 1994
+Figure 1 shows a striking pattern of U.S. stock returns around FOMC announcements. The
+black solid line in the chart represents the mean point-wise cumulative intraday percent
+return of the S&P500 index (SPX henceforth) over a three-day window from the market
+open on the day ahead of scheduled FOMC meetings to the day after. The mean is taken
+over the 131 scheduled FOMC meetings from September 1994 to March 2011. 8
+As seen in the ﬁgure, the SPX index displays a strong upward drift in the hours ahead of
+FOMC announcements. First, the SPX index rises slightly on the afternoon of the day before
+the FOMC (left panel). It then drifts sharply higher in the morning of scheduled FOMC
+announcements. Right before the time of the announcement (vertical red dashed line) it
+reaches a level about 50 basis points above that of the previous day’s open. Following
+8Relative to the dates reported in Table A.1 we lose one observation (Jul 1, 1998) because of missing
+intraday data. The close-to-close return on that day was 1.3 percent.
+7
+=== PAGE 9 ===
+the announcement at 2:15pm the SPX is on average essentially ﬂat, both in the hours
+immediately after the announcement and on the following day (right panel). As evidenced by
+the point-wise 95% conﬁdence interval for the mean return (light grey area), the cumulative
+return earned prior to scheduled FOMC announcements is strongly signiﬁcantly diﬀerent
+from zero.
+To put the economic magnitude of this pre-FOMC drift in perspective, the dashed black
+line in Figure 1 shows the average cumulative returns on all other three-day windows in
+the sample excluding day triplets centered around FOMC announcements, along with the
+point-wise 95% conﬁdence bands (dark gray shaded area). 9 On average cumulative returns
+on these days have essentially been zero over our sample period.
+The mean intraday returns in the chart do not include dividend payments, and do not account
+for the level of the risk-free rate. To assess the magnitudes of excess stock market returns
+prior to scheduled FOMC announcements more formally we run the simple dummy-variable
+regression model:
+rxt =β0 +β11t(pre-FOMC) +βxXt +ϵt, (1)
+where rxt denotes the cum-dividend log excess return on the SPX over the risk-free rate in
+percentage points.10 In the main speciﬁcation, the explanatory variable is a dummy variable,
+which is equal to one on scheduled pre-FOMC announcement windows and zero otherwise.
+In alternative speciﬁcations in Section 4 we also include additional control variablesXt.
+In the regression excluding other controls Xt, the coeﬃcient β1 is the mean return on pre-
+FOMC windows when the constantβ0 is omitted, and the mean excess return diﬀerential on
+pre-FOMC windows versus other days when the constant is present. The constant measures
+the unconditional mean excess return earned on all time periods outside of the pre-FOMC
+window.
+Table 2 reports coeﬃcient estimates for these two parameters over diﬀerent return windows.
+The dependent variable in the ﬁrst two columns is the 2pm-to-2pm SPX excess return. By
+construction, this 24-hour return ending on 2pm on the day of scheduled FOMC announce-
+ments does the realized policy decision, which is yet to be announced. As seen in the ﬁrst
+column, for the 131 FOMC observations in the sample, the 24-hour window return right
+before the FOMC meeting has on average been 49 basis points, with a t-statistic of more
+than 4.5 based on the Huber-White standard errors (squared brackets). As shown in the
+9These intervals account for the serial correlation due to the overlapping window structure of these returns
+using Newey-West standard errors. Truncation lags are wider than the actual daily overlap because of the
+kernel down-weighting: three-day window on the second day, and a ﬁve-day window on the third day.
+10We use as risk-free rate the daily rate on a one-month T-Bill locked in the month before.
+8
+=== PAGE 10 ===
+second column, this excess return has been orders of magnitude larger than the mean excess
+return on all other 2pm-to-2pm windows in the sample (less than .5 basis points). Yet, there
+are only eight scheduled FOMC meetings each year. To gauge the impact of this return
+diﬀerence on the total annual realized stock returns in the sample, the middle panel of Table
+2 presents annualized returns on FOMC and non-FOMC days. While the excess return on
+the SPX over the 24 hours prior to the FOMC announcement has on average been 3.89
+percent per year, it has only been 0.88 percent on all remaining trading days. These point
+estimates imply that since 1994 about 80 percent of realized excess stock returns in the U.S.
+have been earned in the 24 hours before scheduled monetary policy announcements. The
+simple strategy that consists in buying the SPX at 2pm the day before a scheduled FOMC
+announcement and selling ﬁfteen minutes before the announcement while holding cash on
+all other days would have earned a large annualized Sharpe ratio of 1.14 as reported in the
+Table.
+Consistent with Figure 1, the excess SPX return between 2pm and market close on the day
+of the announcement has instead been zero (column 3). In other words, while the SPX
+has displayed a large positive drift in the 24 hours leading up to the announcement, stock
+returns have on average been zero at or following the announcement. This implies that while
+equity market investors have at times been surprised by the FOMC decision (Bernanke and
+Kuttner [2005]), these surprises averaged out to zero in our sample period.
+Looking at the close-to-close excess returns on the SPX (column 4), which include the af-
+ternoon following the announcement, rather than the afternoon before, the FOMC return
+diﬀerential has been somewhat lower at about 33 basis points in the sample period. How-
+ever, the average close-to-close return on all other days is less than a basis point, and the
+annualized FOMC day return on a close-to-close basis still accounts for more than half of
+realized excess stock returns (2.7 percent compared to 2.08 percent on all other days) in the
+sample. Moreover, the close-to-close FOMC day return still remains highly signiﬁcant and
+yields a considerable annualized Sharpe Ratio of 0.84 as reported in the Table.
+One may worry that the properties of the pre-FOMC returns crucially depend on the exact
+24-hour time window that we consider. This is not the case. Indeed in the last two columns
+we consider a close-to-2pm and a close of two day prior to 2pm window. In both cases the
+pre-FOMC return remains highly signiﬁcant, with a Sharpe Ratio of 1.43 for the close-to-
+2pm window and a pre-FOMC drift of 54 basis point in the close of the two day prior to
+2pm window.
+Moreover, one might be concerned about potential outliers. Table 5 provides summary
+statistics of the 2pm-to-2pm return on the SPX on FOMC days versus all other days in
+9
+=== PAGE 11 ===
+the post-1994 sample. The mean excess return and its standard error (ﬁrst two rows) are
+the same as in Table 2. The standard deviation of excess returns is 1.2 per cent both on
+FOMC days and on other days, implying that, in terms of variance, stocks are not more
+risky on FOMC days (we discuss the relation between volatility and returns in Section
+4.1). The skewness of the two return distributions, however, displays a notable diﬀerence.
+While equity returns exhibit a strong positive skew ahead of FOMC announcements, they are
+slightly negatively skewed on all other days. Indeed, 98 of the 131 pre-FOMC announcement
+returns are positive in our sample—or three quarters of the total—but only 33 are negative
+(not reported in the table). On the other hand, positive and negative excess returns are
+roughly equally split on non-FOMC days in the sample.
+The distributional diﬀerences in the empirical densities are shown in Figure A.2. The 2pm-
+2pm FOMC return density (black line) is similar to that on non-FOMC days (grey), but
+importantly omits a left tail, with most of the corresponding density mass instead concen-
+trated in positive returns. While at this point it is clear that outliers do not dominate the
+results we have seen so far, Table 5 shows that the kurtosis of pre-FOMC returns is slightly
+higher than on regular days suggesting a somewhat more fat-tailed distribution on FOMC
+days. As a ﬁnal check we thus drop the top and bottom percentile and compare the result-
+ing moments of the FOMC and non-FOMC day distributions (last two columns in Table
+5).11 None of the summary measures are qualitatively aﬀected when we exclude outliers.
+Dropping the top and bottom 1% of all observations, the mean pre-FOMC announcement
+return is still very large at 45 basis points while the mean return on all other days is 1 basis
+point (as evidenced in the second row, the statistical signiﬁcance increases). The standard
+deviation of returns remains very similar in both samples. While the skewness of pre-FOMC
+announcement returns somewhat falls without the tail observations, it is still positive while
+that on all other days remains negative. Finally, the kurtosis is now similar in both trimmed
+samples.
+3.2 Pre-FOMC Returns Before 1994
+We have focused thus far on the 1994-2011 sample when FOMC decisions have been explicitly
+announced to investors at known times. As discussed in Section 2, prior to 1994 market
+11The top and bottom 1% of pre-FOMC returns amount to only two observations. The largest positive
+outlier is a 9.5% return on October 29, 2008. News reports on that day partly attributed the surge in
+equity prices to speculation that the FOMC may cut interest rates the next day. Moreover, talk of a federal
+rescue for General Motors and Chrysler also may have contributed to the price action. The largest negative
+outlier is a -2.9 % return on June 26, 2002, driven mainly by news of an accounting fraud at phone company
+WorldCom.
+10
+=== PAGE 12 ===
+participants inferred policy decision on the days after the FOMC meeting through open
+market operations of the New York Fed’s trading desk. Following the convention in Kuttner
+[2001] and Bernanke and Kuttner [2005] we set the pre-announcement window to be the day
+of scheduled FOMC meetings. 12
+Table 3 presents the estimation results for the dummy variable regression (1) of pre-FOMC
+returns for diﬀerent samples including data before 1994. In these regressions, we splice
+together the daily excess return on the SPX before 1994 and the 2pm-to-2pm excess return
+after 1994. The ﬁrst column provides the regression results for the sample from 1960-2011,
+covering more than 50 years of daily data and a total of 524 scheduled FOMC meetings.
+Over that sample, the average excess return earned on non-FOMC days is estimated to be
+statistically insigniﬁcant 0.9 basis points. In contrast, the return diﬀerential earned in the
+pre-FOMC window is estimated to be 16.7 basis points which is statistically signiﬁcant at
+the 1 percent level.
+While highly statistically signiﬁcant, this average pre-FOMC return is considerably smaller
+than the 49 basis points that we found in the post-1994 sample. It is therefore interesting
+to ask how much of the average pre-FOMC return from 1960-2011 is accounted for by the
+latter part of the sample. To do so, we split the period prior to 1994 into two subperiods.
+Columns 2 and 3 in Table 3 show the regression outputs for the period from 1960-1979 and
+1980-1993, respectively. These results show that prior to 1980, pre-FOMC returns have been
+essentially zero while between 1980 and 1993 they have averaged a statistically signiﬁcant
+20 basis points in excess of the 2 basis points earned on all non-FOMC days. Column 4 in
+Table 3 provides the regression results for the sample from 1980-2011. According to these,
+the excess pre-FOMC return on the SPX has averaged a highly signiﬁcant 36 basis points
+over the last 30 years. Moreover, pre-FOMC returns have accounted for more than half of the
+realized excess stock returns over that period and the simple strategy of holding stocks only
+right ahead of FOMC announcements and cash otherwise would have delivered an annualized
+Sharpe ratio of 0.92.
+In sum, the results in this section show that pre-FOMC returns have started to be prevalent
+in the 1980s, have increased in magnitude and signiﬁcance over time and account for a large
+fraction of U.S. realized excess stock returns over the past few decades.
+12As discussed before, we exclude from the sample four days on which the Federal Reserve Board of
+Governors released discount rate decisions on days of scheduled FOMC meetings. The average excess return
+on the SPX on those ﬁve days is -0.5 basis points.
+11
+=== PAGE 13 ===
+3.3 Persistence
+We have argued thus far that the pre-FOMC returns account for large fractions of total
+realized excess stock returns over the last few decades. Such a decomposition relies on the
+presumption that pre-FOMC returns are not reversed on subsequent days and are not asso-
+ciated with oﬀsetting negative returns in the days prior. We assess this issue by estimating
+regression (1) for the ﬁve days before and after FOMC announcements. Table 4 summarizes
+results from these regressions for the two sample periods from 1994-2011 and 1980-2011,
+respectively. In both samples, we ﬁnd that only the pre-FOMC dummy is signiﬁcant. While
+the SPX features a few small negative returns in the ﬁve-day windows before and after the
+pre-FOMC window, none of which is statistically signiﬁcant. Moreover, the cumulative re-
+turns on the ﬁve days before and on the ﬁve days after pre-FOMC news windows is essentially
+zero in the 1994-2011 sample. Interestingly, in the 1980-2011 sample we see an economically
+meaningful (15 basis points ) but statistically insigniﬁcant additional positive cumulative
+return over the ﬁve days following the pre-FOMC trading session. Most importantly, in
+either sample we do not ﬁnd evidence of pre-FOMC return reversals.
+3.4 Inference
+In the regression tables above, we have relied on asymptotic normality in gauging the sta-
+tistical signiﬁcance of the estimated coeﬃcients. However, one may be concerned that the
+relatively small number of observations and the relatively fat tails of the empirical distri-
+bution of pre-FOMC returns may invalidate standard asymptotics. In order to address this
+concern, we carry out three diﬀerent bootstrap exercises and conﬁrm that the statistical sig-
+niﬁcance is not due to small sample issues. Moreover, we carry out a reality-check exercise
+which shows that the large signiﬁcance of the pre-FOMC returns that we document is highly
+unlikely to explained by data-snooping across diﬀerent macroeconomic news releases.
+Bootstrapped standard errors for dummy variable regression In the ﬁrst exercise,
+we assess the statistical signiﬁcance of the estimated constant and dummy variable coeﬃcient
+in regression (1) using a simple bootstrapping approach. Precisely, we draw with replacement
+a return series of length 131 from the observed distribution of pre-FOMC returns in our 1994-
+2011 sample. We also draw with replacement from the observed distribution of non-FOMC
+returns a series of the same length as the total number of non-FOMC days (4010) in our
+sample. With the two artiﬁcial series at hand, we then reestimate the dummy variable
+regression (1) and record the estimated coeﬃcients. We repeat this process 100,000 times.
+12
+=== PAGE 14 ===
+The empirical distribution of the estimated coeﬃcient on the FOMC dummy variable is
+shown in the upper left panel of Figure A.3 in the Appendix. It is centered around a mean
+of 48.5 basis points with a standard deviation of 10.8 basis points. The empirical distribution
+of the regression constant which measures the excess return on the SPX on all other days
+which we do not report to conserve space is centered around a mean of 0.4 basis points with
+a standard deviation of 1.9 basis points. These numbers are very close to the OLS regression
+results in Table 2 and show that the asymptotic standard errors do not understate the
+sampling variability of the estimated means.
+Our conclusion is not altered when we repeat this exercise for the 1980-2011 sample. Indeed,
+as shown in Figure A.4, for that sample period the bootstrap distribution of dummy variable
+coeﬃcients has a mean of 35.5 basis points with a standard deviation of 7.3 basis points,
+which is again very similar to our OLS regression results in Table 3. Hence, the strong
+signiﬁcance of average pre-FOMC returns clearly survives when we use bootstrapped rather
+than asymptotically normal standard errors.
+Random Sampling from Non-FOMC Return Distribution One might worry that
+the large observed average pre-FOMC return is simply due to luck. To address that concern
+we use another simple bootstrapping exercise to answer the question “how likely is it that one
+would observe a sample average of 49 basis points in a short random sample of non-FOMC
+day returns”? In particular, we sample with replacement from the observed distribution of
+non-FOMC returns in our 1994-2011 sample a time series of length 131, the total number
+of scheduled FOMC dates in the 1994-2011 period. We then record the sample average
+of that bootstrapped return series. We repeat this process 100,000 times. The bootstrap
+distribution of sample averages for the 1994-2011 sample (upper-right panel of Figure A.3)
+is centered around a mean of 0.7 basis points with a standard deviation of 10.5 basis. More
+interestingly, thep-value of observing a mean greater than the sample average of pre-FOMC
+returns of 48.8 basis points is one. Repeating this exercise for the 1980-2011 period (upper-
+right panel of Figure A.4), we ﬁnd the same result. In summary, for both samples it is
+extremely unlikely to have observed a time series of pre-FOMC returns with such a high
+sample mean by pure luck.
+Random Sampling from Pseudo Pre-FOMC Return Distribution with Zero Mean
+In light of the relatively small number of FOMC meetings and the high kurtosis of pre-
+FOMC day returns, one might be concerned that it is not unlikely to observe a sample mean
+as large as the pre-FOMC return that we document in a short sample that is drawn from
+13
+=== PAGE 15 ===
+a distribution which has a population mean of zero. 13 We assess that probability in the
+following simple way. First, we construct a pseudo zero-mean pre-FOMC return distribution
+by subtracting the sample mean of 48.8 basis from all 131 observations in the 1994-2011
+sample. Hence, this pseudo distribution by construction has a sample mean of zero but
+an identical sample standard deviation, skewness, and kurtosis as the observed distribution
+of pre-FOMC returns. We then randomly draw with replacement from the pseudo pre-
+FOMC distribution 100,000 samples of length 131 and record the empirical distribution of
+sample means from those draws. The resulting histogram of sample means is given in the
+lower-left panel of Figure A.3. As expected, the distribution is tightly centered around zero.
+More importantly, we can reject with a probability of 99.99 percent that we could have
+observed pre-FOMC returns with an average of 48.8 basis points if the true distribution had
+a population mean of zero. Repeating this exercise for the 1980-2011 sample period (lower-
+left panel of Figure A.4), we ﬁnd that not a single draw out of 100,000 has a sample mean
+greater than the 36.6 basis points that we observe for the pre-FOMC return over this period.
+Hence, we can safely rule out that the distribution of pre-FOMC returns has a population
+mean of zero.
+Data-Snooping As previously discussed, we ﬁnd the pre-FOMC returns to be highly
+statistically signiﬁcant while the SPX does not display excess returns ahead of other major
+U.S. macroeconomic announcements in our sample. A skeptical reader may worry that the
+signiﬁcance of our ﬁnding (and thus the Sharpe-ratios) could be the artiﬁcial outcome of
+an extensive search across the universe of economic news announcements for the highest
+t-statistic. Of course, such a search would not bias the size of the return.
+We address this concern by carrying out a reality check in the spirit of White [2000]. In par-
+ticular, we simulate the snooping bias by resampling 100,000 times the 2pm-to-2pm excess
+return on the SPX and collecting the largest absolute t-statistic among the ten economic
+announcements considered in Table 8 (including the FOMC) for each replication. The boot-
+strap distribution of maximum absolute t-statistics is provided in the lower-right panel of
+Figure A.3. It shows that 99.98 percent of the empirical density of maximum absolute t-
+statistics are smaller than the value of 4.51 that we ﬁnd for the pre-FOMC announcement
+return in the SPX for the 1994-2011 sample (Table 2, column 1). Repeating this exercise for
+the 1980-2011 sample (lower-right panel of Figure A.4), we ﬁnd an even smaller probability
+of having snooped a t-statistic larger than 4.86, which is the asymptotic t-statistic of the
+pre-FOMC dummy that we estimate for the 1980-2011 sample (Table 3, last column). In
+other words, the statistical signiﬁcance of our ﬁnding is extremely unlikely to be the result
+13We thank an anonymous referee for raising that point.
+14
+=== PAGE 16 ===
+of a data-snooping exercise.
+3.5 Cross-sectional Evidence
+Having established that aggregate U.S. stock market exhibits economically large and statisti-
+cally highly signiﬁcant pre-FOMC returns, this section shows that U.S. equity excess returns
+around FOMC announcements have been broad based across industry- and size-sorted port-
+folios. We also characterize the cross-section of these returns and show that a single market
+factor model captures a signiﬁcant fraction of the portfolio variation on FOMC announce-
+ment days. Because of limited availability of intraday data at the disaggregated level, this
+evidence is based on daily close-to-close returns. We start by discussing the evidence for the
+1994-2011 sample.
+Table A.5 summarizes results of the dummy variable regression (1) including a constant, a
+FOMC dummy for excess returns on the CRSP value/equal weighted, and ten value weighted
+portfolios sorted by ﬁrm size. Not surprisingly, the return pattern for the value-weighted
+portfolio (column 1) is very similar to that for the close-to-close return on the S&P500
+index (Table 2). Indeed, the return diﬀerential has been a highly signiﬁcant 36 basis points,
+FOMC announcement days have accounted for the majority of the annual excess returns in
+the sample, and the Sharpe ratio of an FOMC-only investment strategy has been equal to
+0.92.
+The daily excess return diﬀerential on the CRSP equal weighted market portfolio (column
+2) on FOMC days has been somewhat smaller at 25 basis points, but still highly statisti-
+cally signiﬁcant. Since the equal weighted portfolio attributes a large weight to small ﬁrms
+relative to their share of total market capitalization, this ﬁnding suggests the FOMC return
+diﬀerential may be somewhat lower for small ﬁrms. This conjecture is conﬁrmed by the re-
+sults for the size decile portfolios shown in the remaining columns of Table A.5. Indeed, the
+portfolio containing the smallest ﬁrms earned an average excess return of 20 basis points on
+FOMC announcement days.14 All remaining decile portfolios, instead, displayed diﬀerential
+returns ranging between 31 to 46 basis points, with Sharpe ratios between 0.8 to 1.07.
+Table A.3 provides estimates for the dummy variable regressions for the 49 industry sorted
+portfolios from Ken French’s website. While there is some cross-sectional dispersion of
+FOMC announcement day returns across industries, the excess return diﬀerential is broad-
+based. Indeed, 36 out of 49 industry portfolios feature excess returns on FOMC announce-
+ment days that are signiﬁcantly diﬀerent from zero at least at the 5 percent level. Among
+14This smallest market cap portfolio contains on average about 50 percent of all ﬁrms in the CRSP universe.
+15
+=== PAGE 17 ===
+these, the dummy variable coeﬃcients range from 23 basis points for the consumer goods
+industry (HSHLD) to 69 basis points for trading ﬁrms (FIN). A group of only ten industries
+as diverse as Agriculture (AGRIC), Food products (FOOD), Utilities (UTIL), and Telecom-
+munication (TELCM) do not feature statistically signiﬁcant excess returns on scheduled
+FOMC announcement days.
+It is natural to ask whether the average FOMC announcement day returns in diﬀerent
+industries are in line with their typical comovement with the market portfolio, as would be
+implied by the Capital Asset Pricing Model (CAPM). To answer this question, we estimate
+industry betas from a regression of the excess return in each industry on the excess return
+of the CRSP value-weighted market portfolios. 15 We then estimate a regression of average
+excess returns on the 59 industry and size portfolios on the estimated betas. Figure 4 shows
+a scatter plot of observed average FOMC announcement day returns against the ﬁtted values
+from this regression. We superimpose the estimated regression line (dashed) as well as the
+45 degree line (solid). The chart shows that the single market factor model provides a fairly
+good description of the cross-section of FOMC announcement day returns. Indeed, the slope
+coeﬃcient λ, which represents the price of market risk, is estimated to be 49 basis points
+and highly statistically signiﬁcant. By contrast, the constant α in the regression is not
+statistically diﬀerent from zero. Moreover, the adjusted R-squared of the CAPM regression
+on FOMC announcement days is 64 percent. In sharp contrast to the poor ﬁt of the CAPM
+on all daily returns (Fama and French [1993]), these results suggest that the observed cross-
+sectional variation of FOMC announcement day returns is well captured by exposure to
+aggregate market risk. 16
+The cross-sectional distribution of pre-FOMC returns is qualitatively very similar in the
+longer sample from 1980-2011, as shown in Tables A.6 and A.4 in the appendix. Indeed,
+while the point estimates are somewhat lower over the longer sample, a larger total number
+of portfolios is shown to have pre-FOMC returns that are statistically signiﬁcant at least at
+the 5% level. Moreover, also in the longer sample the CAPM does a reasonable job explaining
+the cross-sectional dispersion of pre-FOMC returns.
+15We run this regression using daily data including FOMC announcement days. Dropping these days from
+the sample barely aﬀects the β estimates.
+16At announcement, Bernanke and Kuttner [2005] also ﬁnd that the CAPM does a good job at explain-
+ing the cross-sectional variation of the response of diﬀerent industry portfolio returns to monetary policy
+shocks. Moreover, in a recent paper Savor and Wilson [2012] ﬁnd that on days when news about inﬂation,
+unemployment, or FOMC decisions is scheduled to be announced, stock market beta is signiﬁcantly related
+to returns on individual stocks, equity portfolios, as well as other asset classes.
+16
+=== PAGE 18 ===
+3.6 International Evidence
+Previous research has documented ample evidence of international stock return comovement
+(e.g. Karolyi and Stulz [1996], Forbes and Rigobon [2002], and Bekaert, Hodrick, and Zhang
+[2009]). This evidence suggests that international equity indices may also feature an FOMC
+equity return diﬀerential.
+To assess this question, we ﬁrst reestimate model (1) with a constant and a FOMC dummy on
+daily close-to-close returns of major OECD stock indices for the sample period from Septem-
+ber 1994 to March 2011. The results of these regressions are documented in Table 6. 17 The
+ﬁrst ﬁve columns report estimates based on returns on the German DAX, the British FTSE
+100, the French CAC40, the Spanish IBEX, as well as the Swiss SMI. Importantly, because
+of the time oﬀset the close-to-close returns on these European stock indices never include
+scheduled FOMC announcements and thus provide estimates of pre-FOMC announcement
+returns. The FOMC dummy variables in all ﬁve countries are highly statistically signiﬁcant
+and economically large, with estimates ranging from 29 basis points in Switzerland to 52
+basis points in France. In all ﬁve countries the Sharpe ratios of an FOMC only investment
+strategy range between 0.75 and 1.04. Results for the Canadian TSX index and the Japanese
+NIKKEI 225 are reported in the last two columns of Table 6. The TSX shows a statistically
+signiﬁcant albeit lower FOMC announcement day return than the European indices. 18 In-
+terestingly, the NIKKEI index is the only major stock market index that does not feature a
+signiﬁcant FOMC announcement day return.
+In the bottom panel of the Table we repeat the same regressions in the post-1980 sample, and
+also ﬁnd evidence of large pre-FOMC returns on major international stock indexes.
+Figure 5 visualizes these results. It displays cumulative returns over the trading hours of
+the respective exchange on the international stock indices on three days around scheduled
+FOMC announcements, and the SPX cumulative return is superimposed for reference (it
+is the same as in Figure 1). The international pattern of intraday stock returns is very
+similar to that of the U.S. In other words, the large pre-FOMC return appears to be a
+global phenomenon. In unreported results, we also investigated whether European, UK
+and Japan stock indices feature similar return patterns around its corresponding central
+bank’s monetary policy announcement days, but we failed to ﬁnd such eﬀects. While a
+global phenomenon, the pre-announcement return is thus speciﬁc to U.S. monetary policy
+17For lack of comparable dividend and risk-free rate data, these regressions are based on ex-dividend raw
+returns rathern than cum-dividend excess returns as in the case of the U.S.
+18Note that the TSX is computed from close prices taken after the FOMC announcement and therefore
+contains both a pre-announcement and a post-announcement component.
+17
+=== PAGE 19 ===
+decisions. In the next section, we show that this eﬀect is also absent for other major U.S.
+macroeconomic announcements.
+3.7 Other Macroeconomic Announcements and Other Assets
+In this Section, we ﬁrst document that the SPX does not feature abnormal excess returns
+ahead of other major macroeconomic announcements. We then show that ﬁxed income assets
+do not exhibit abnormal pre-FOMC announcement returns.
+We consider a set of nine major economic releases: total nonfarm payroll employment (NF-
+PAY) published monthly by the Bureau of Labor Statistics (BLS), weekly initial claims for
+unemployment insurance (INCLM) released by the U.S. Department of Labor, the advance
+GDP (GDPADV) estimate released quarterly by the Bureau of Economic Analysis (BEA),
+the monthly Institute for Supply Management’s (ISM) manufacturing index, Industrial Pro-
+duction (IP) released monthly by the Board of Governors of the Federal Reserve, Housing
+Starts (HS) published monthly by the Census Bureau, Producer Price Index (PPI) and Con-
+sumer Price Index (CPI) data published monthly by the BLS, as well as Personal Income
+(PI) released monthly by the BEA. Except for IP, which is released at 9:15 am ET, and
+the ISM, which is released at 10:00 am ET, all these data releases occur at 8:30 am ET. To
+assess whether there are pre-announcement returns for these macroeconomic data releases,
+we run a dummy variable regression where the dummy variable equals one on the day prior
+to the release.
+As shown in the upper panel of Table 8, none of the other macroeconomic releases feature
+statistically signiﬁcant pre-announcement returns in the 1994-2011 sample. The largest
+coeﬃcient is the one for housing starts which implies a 15 basis points excess return on
+the SPX on days prior to that announcement. However, the standard deviation of that
+return is also quite large at 9 basis points. We repeat these regressions for the 1980-2011
+sample and report the results in the lower panel of Table 8. The results are qualitatively
+similar. In this longer sample, the PPI release is the only macroeconomic news that exhibits
+a pre-announcement return that is slightly signiﬁcant (and negative). As documented in the
+reality check exercise in Section 3, one is bound to ﬁnd coeﬃcients that are signiﬁcant at
+some given level if one is running enough dummy variable regressions. We thus conclude
+that no other major macroeconomic announcement is associated with large and statistically
+signiﬁcant pre-announcement returns.
+We next study the pre-FOMC announcement eﬀects on Treasury securities of diﬀerent ma-
+18
+=== PAGE 20 ===
+turities and interest rate futures. 19 The short-term rate derivatives that we consider are
+standard market implied measures of policy rate expectations: the front month fed funds
+futures contract and the fourth Eurodollar contract, which measure policy expectations one
+month and one year out, respectively. FOMC dummy regression results for these securities
+for the sample periods 1994-2011 and 1980-2011 are provided in Table 7. For the 1994-2011
+sample none of the coeﬃcients is statistically signiﬁcant at conventional conﬁdence levels.
+For the 1980-2011 sample the on-the-run ten-year Treasury is signiﬁcant at the ten percent
+level with a coeﬃcient of less than a basis point. 20 In sum, the results in this section show
+that the pre-announcement drift that we report is speciﬁc to equities ahead of FOMC an-
+nouncements. It does not exist ahead of other macroeconomic announcements and in ﬁxed
+income securities ahead of FOMC announcements. We now turn to potential explanations
+of the empirical ﬁndings documented thus far.
+4 Potential Explanations
+In this section, we attempt to rationalize the pre-FOMC drift with a number of alternative
+explanations. We start by discussing a few standard risk-based explanations. We then try
+to reconcile our ﬁndings with models of political risk, investor inattention, and time varying
+stock market participation.
+4.1 Standard Risk-Based Explanations
+Recent speciﬁcations of the canonical consumption-based asset pricing model, for example
+featuring habit preferences (Campbell and Cochrane [1999]) or long-run risks (Bansal and
+Yaron [2004]) have been shown to be consistent with the magnitude of U.S. equity risk
+premium in the post-war period. In consumption based models, investors demand compen-
+sation for holding assets whose payoﬀs are positively correlated with their marginal utility of
+consumption. While, of course, it is hard to measure consumption at intraday frequencies,
+it seems unlikely that its covariance with stock returns would be signiﬁcantly diﬀerent in the
+24-hour window ahead of FOMC announcements. Similarly, it is not clear why new informa-
+19See Kuttner [2001] and Bernanke and Kuttner [2005], for asset responses to policy rate decisions, and
+G¨ urkaynak, Sack, and Swanson [2005] and Lucca and Trebbi [2009] for responses to the content of the
+statements.
+20A closer inspection of this result reveals that it is entirely driven by a few outlier observations in 1980, a
+year when the bond market was in turmoil and in which money supply numbers were coincidentally released
+on days of FOMC meetings. When we start the sample in 1981, the FOMC dummy becomes insigniﬁcant
+for the ten-year Treasury.
+19
+=== PAGE 21 ===
+tion about future consumption would be released right before FOMC announcements. While
+this leaves the door open for potential shifts in risk aversion over the 24-hour windows, as a
+source of the change in the covariance, such shifts would still require an explanation.
+Financial asset prices may jump in response to large unexpected realizations of economic
+news announcements. As the direction of the surprise is not predetermined, holding ﬁnancial
+assets around economic announcements is a risk that investors need to be compensated for.
+Previous research has found that this risk is priced in equities (e.g., Pan [2002]). Figure 6
+plots the ﬁve-minute moving sums of squared tick-by-tick returns on the SPX in the three-day
+window around the FOMC announcement. As one may suspect, realized volatility jumps at
+2:15pm on scheduled FOMC days. Yet, as we documented before, the FOMC announcement
+return is earned before the actual release. Because of the timing diﬀerence, it is therefore
+diﬃcult to reconcile the pre-FOMC drift with pure jump risk at the announcement. That
+being said, we will discuss alternative models below in which informational frictions or limited
+market participation can give rise to smooth asset price adjustments in anticipation of events
+that represent jump risks.
+We turn next to volatility and liquidity risk. First we note from Figure 6 that realized
+volatility is somewhat lower ahead of the FOMC announcement, and, as discussed below,
+the same holds for implied volatility (as measured by the VIX). Starting with Black [1976],
+a number of papers have shown a negative contemporaneous correlation between volatility
+and returns. Campbell and Hentschel [1992], in particular, discuss a “volatility feedback
+eﬀect” where causality runs from volatility to returns. In that explanation, because of
+its persistence, an unexpected decline in volatility leads to a downward revision of future
+expected volatility, and thus to lower risk.
+A large literature has also documented a negative correlation between equity returns and
+trading liquidity (Amihud and Mendelson [1986], Campbell, Grossman, and Wang [1993],
+Pastor and Stambaugh [2003] and Acharya and Pedersen [2005] among others). While most
+of the literature focuses on the cross-section of returns, a few papers have also studied the
+impact of liquidity on market-wide returns. 21
+While we do not observe trades or bid-ask spreads for all SPX constituents on an intraday
+basis, we proxy liquidity measures for the cash-index basket with measures on tick-by-tick
+trades and quotes on the SP500 E-mini futures, which started trading in 1997, and the
+21Amihud [2002], for instance, constructs an simple measure of illiquidity and documents a positive rela-
+tionship between illiquidity and future excess returns, and a negative relationship between contemporaneous
+unexpected illiquidity and excess returns in U.S. equities. He rationalizes the latter result with the notion
+that higher realized illiquidity increases expected illiquidity which in turn raises expected stock returns and
+lowers contemporaneous stock prices.
+20
+=== PAGE 22 ===
+SPDR S&P500 exchange-traded fund (SPY, available to us since 1996). Both track the SPX
+very closely and exhibit almost identical pre-FOMC announcement returns as the cash index
+itself.
+Figure 7 shows ﬁve minute average trading volumes on the most traded (either ﬁrst- or next-
+to-front) E-mini SP500 futures contract over the same three-day window as above. Because
+trading volume has a low-frequency trend in our sample period, we display volume levels
+relative to their prior 21-day mean. For comparison, we also superimpose intraday average
+relative volumes on non-FOMC days. Trading volumes on the day prior to an FOMC
+announcement follow the typical U-shaped pattern on other days. Not surprisingly, on days
+of scheduled FOMC meetings volumes spike at the time of the FOMC announcement. Earlier
+in the day, trading volumes slowly decline from the high opening levels, as on other days,
+but bottom out at about a 15% lower level than on regular days.
+In sum, realized volatility and liquidity are both lower in the pre-FOMC drift time window.
+This is consistent with the fact that no new FOMC information is consistently being released
+during the purdah period. We assess whether the reduction in these two factors can explain
+the pre-FOMC return by including volatility and liquidity proxies as controlsXt in our main
+regression (1). Since their expected and unexpected components may play diﬀerent roles in
+explaining stock returns, we ﬁrst decompose all measures of volatility and liquidity into an
+innovation and a component known at time t − 1 using a simple AR(1) model.
+Table 11 provides estimation results for the dummy variable regression (1) where the depen-
+dent variable is the 2pm-2pm excess return on the SPX. We use liquidity measures deﬁned
+on the SPY which are available on a longer sample than the E-mini futures. The sample
+in this regression only starts in January 1996. We ﬁrst re-estimate the pre-FOMC dummy
+regression without controls. Over the shorter sample the pre-FOMC drift is 53 basis points
+for the SPY with a t-statistic well above 4 (column 1). When we include the 24-hour lagged
+trading volume and its contemporaneous innovation, the coeﬃcients on lagged liquidity and
+its innovation have the expected signs and are both strongly statistically signiﬁcant. In par-
+ticular, innovations to liquidity are negatively correlated with stock returns suggesting that
+investors demand compensation for being exposed to liquidity risk. The pre-FOMC dummy
+coeﬃcient drops to 43 basis points, but remains highly statistically signiﬁcant. This could
+potentially suggest that the pre-FOMC return is partially compensation for lower aggregate
+market liquidity ahead of scheduled FOMC announcements. 22
+22We run the same regression using the bid-ask spread and the Amihud price impact measure for the SPY
+as measures of liquidity. While they provide qualitatively similar results, these indicators are less signiﬁcant
+and the coeﬃcient on the FOMC dummy drops by a smaller amount compared to the regression based on
+trading volume.
+21
+=== PAGE 23 ===
+We next study the impact of stock market volatility on pre-FOMC returns. We control for
+the lagged (2pm on the previous day) level and the daily innovation of the VIX index, which
+measures the option-implied volatility of the SPX. Column 2 in Table 11 provides these
+results. While the lagged level of the VIX has virtually no impact on contemporaneous
+returns, the innovation is very strongly negatively correlated with returns. As previously
+discussed, this result is consistent with Campbell and Hentschel [1992]. More importantly,
+adding the VIX innovation as a control variable reduces the point estimate on the pre-
+FOMC dummy by 20 basis points, or about a third of the average pre-FOMC return in this
+sample. However, the estimated dummy coeﬃcient of 33 basis points is still economically and
+statistically very signiﬁcant. The results of this regression therefore suggest that a sizeable
+fraction of the pre-FOMC drift might be explained by the fact that implied equity market
+volatility drops ahead of scheduled FOMC announcements.
+In order to understand whether liquidity and volatility provide independent information
+about pre-FOMC returns, we control for both in a joint regression, reported in column 4 of
+the Table. These results show that while the innovation to the VIX retains its signiﬁcance,
+both the lagged level and the innovation of SPY trading volume essentially become unin-
+formative. Moreover, the pre-FOMC dummy coeﬃcient remains strongly signiﬁcant at 32
+basis points.
+So far, the analysis in this section shows that a reduction in implied volatility, and to some
+extent also a reduction in trading volume, on days of scheduled FOMC announcements
+appear to account for some fraction of the average pre-FOMC returns. Moreover, it should
+be kept in mind that the volatility feedback eﬀect predicts a negative causal eﬀect from
+innovations to volatility and returns. Hence, we can only attribute a share of the pre-
+FOMC return to volatility if the estimated innovations from the AR(1) regression of the
+VIX on its lagged level represent actual surprises to market participants. Indeed, these
+surprises might be overstated on days of scheduled FOMC announcements if volatility were
+predictably lower on those days. In the last column of the table, we reestimate the joint
+regression using as regressors the innovations from an AR(1) of the VIX and volume on
+their own lags and the pre-FOMC dummy. While the coeﬃcient on the VIX innovation is
+unaﬀected, the pre-FOMC dummy is now again equal to 52 basis points.
+In sum, a fraction of the pre-FOMC returns may be accounted for by the lower market
+volatility and trading volume ahead of FOMC announcements, to the extent that these
+declines had been unexpected. Moreover one would still need to rationalize the declines in
+volatility and liquidity. We discuss one such theory in the next section along with others
+that can give rise to a drift in stock prices ahead of scheduled announcements.
+22
+=== PAGE 24 ===
+4.2 Other Explanations
+In the previous section, we found it hard to rationalize the pre-FOMC announcement return
+with standard risk-based explanations. In this section, we consider several other candidate
+explanations. We then discuss diﬀerent models which may give rise to price drifts ahead
+of scheduled announcements. Where these theories imply predictions that are testable with
+the available data, we perform the relevant tests.
+Before turning to that discussion, we argue next that information leakages as a potential
+source of the pre-FOMC drift is inconsistent with our empirical ﬁndings. As discussed
+in Section 2, there is no oﬃcial communication by Federal Reserve oﬃcials in the pre-
+FOMC window due to the purdah period, a self-imposed guideline to refrain from any
+discussion of policy issues in the days ahead of FOMC meetings. Consistently, the volatility
+of equity returns as well as the trading volume are extremely low before and jump at the
+announcement. Further, as discussed in the next section, we ﬁnd that the pre-announcement
+returns do not predict the post-announcement reaction. Finally, while the pre-FOMC returns
+are a phenomenon common to equities worldwide, there is no such drift in U.S. ﬁxed income
+assets which arguably are the most sensitive to monetary policy.
+We next build some intuition about the source of the pre-FOMC return by correlating the
+time-series of these returns with a few explanatory variables.
+4.2.1 The Time Series of Pre-FOMC Announcement Returns
+Figure 3 shows the time series of pre-FOMC announcement returns (green line) along with
+the one-year moving average of these returns (black line) and on non-FOMC days (red line)
+from 1980-2011.23 As seen from the black line, one-year average pre-FOMC returns remained
+positive for the majority of the sample, and turned negative only for brief periods of time.
+Moreover, eye-balling the pre-FOMC return series it appears that they are somewhat higher
+around recessions and in periods of ﬁnancial turbulence such as the 1987 stock market
+crash or the 1998 LTCM crisis. We study the potential determinants of the pre-FOMC
+returns by regressing the time series of returns on explanatory variables capturing business
+cycles, monetary policy cycles, market participants’ expectations of future Fed policy, market
+uncertainty, and the surprise component of monetary policy decisions.
+The results of these regressions are provided in Table 9 for the 1994-2011 sample and in
+23The large right-tailed observation (October 29, 2008) that we exclude in Table 5 is excluded from the
+pre-FOMC moving average and marked with an “X”. We also exclude this observation from the regressions
+discussed next.
+23
+=== PAGE 25 ===
+10 for the 1980-2011 sample. All explanatory variables except for dummy regressors are
+standardized to have a zero mean and unit variance in order to facilitate interpretation of
+the coeﬃcients. The ﬁrst column in the tables shows a regression of the pre-FOMC returns
+on a NBER recession dummy. In the 1994-2011 sample the point estimate on the dummy is
+positive and signiﬁcant at the 10% level. However, while still positive the coeﬃcient is not
+statistically diﬀerent from zero in the longer 1980-2011 sample. Based on this evidence the
+counter-cyclicality of pre-FOMC returns has been rather weak. Yet, a recession dummy is
+only a coarse measure of economic activity and furthermore only known to market partici-
+pants ex-post. To address these issues, in the next column we consider annual growth rates
+of industrial production (IP) as well as annual CPI inﬂation as regressors. Both measures
+are computed from real-time data. The two coeﬃcients are slightly negative but statistically
+insigniﬁcant in the two samples, suggesting indeed that pre-FOMC returns are not strongly
+countercyclical.24 The next column of Table 9 shows a regression on dummy variables for
+periods of monetary policy easing and tightening. 25 The results show that the pre-FOMC
+returns are considerably larger in periods of monetary policy easing (which to a good extent
+overlap with recessions) in the shorter 1994-2011 sample, but the coeﬃcient is not signif-
+icant. The coeﬃcients on both the easing and tightening dummies are economically and
+statistically zero in the full sample from 1980-2011.
+We next assess whether pre-FOMC equity returns are related to market participants’ ex-
+pectations about the future path of monetary policy, as measured by the ﬁrst two principal
+components (level and slope) from the cross-section of daily one through ﬁve year zero-
+coupon Treasury yields from Gurkaynak, Sack, and Wright [2007]. As we do not access
+intraday yield curve data, we lag the principal components by two days with respect to the
+FOMC announcement day to get an ex-ante snapshot of the information in the yield curve
+available to market participants right before the trading window over which we observe the
+pre-FOMC returns. As shown in the fourth column of Table 9, the slope enters with a neg-
+ative coeﬃcient that is signiﬁcant at the 10% level. The point estimates imply that a one
+standard deviation increase in the slope, lowers the pre-FOMC drift by about 19 (15) basis
+points in the post-1994 (post-1980) sample. Thus up to term premia, the pre-FOMC drift
+is lower when investors expect the Fed to tighten policy.
+We next assess whether the pre-FOMC returns are related to equity market uncertainty
+24In unreported results we also do not ﬁnd a signiﬁcant link with the annual growth of nonfarm payroll
+employment as well as a simple measure of the output gap constructed from detrended IP as in ?
+25We deﬁne tightening cycles as periods between local troughs and peaks of the target federal funds rate
+and easing cycles as periods between local peaks and troughs of the target rate or during which the Federal
+Reserve conducted large-scale asset purchase programs. The chronology that we obtain at is very similar to
+the one in Adrian and Estrella [2008]. A third regime in which the Federal Reserve is neither tightening nor
+easing is not included in the regression.
+24
+=== PAGE 26 ===
+as measured by the VIX at the market close two days before the scheduled meetings. As
+shown in Column 5, the VIX is strongly signiﬁcant with a coeﬃcient of 0.31 in the 1994-
+2011 sample. Hence, a one-standard deviation change in the VIX would have increased the
+pre-FOMC return by 31 basis points over that sample. Moreover, the adjusted R2 of the
+regression is an impressive 10%. In the longer sample (the VIX is only available starting
+in 1990), the coeﬃcient on the two-day lagged level of the VIX drops slightly, but remains
+strongly statistically signiﬁcant, and the adjusted R2 of the regression still remains high at
+8%.
+We next assess whether pre-FOMC returns are related to ex-post monetary policy surprises
+as measured by federal funds rate futures and stock market responses (column 6). Fed
+funds surprises are constructed as in Bernanke and Kuttner [2005] and G¨ urkaynak, Sack,
+and Swanson [2005] over short windows around FOMC announcements from 2pm to 3pm.
+For the SPX we use announcement returns over the same window. 26 The coeﬃcients on the
+futures-implied policy surprise are statistically and economically zero in both samples. The
+coeﬃcient on the stock market surprise is estimated to be negative 12 basis points in the
+post-1994 sample, but is also statistically insigniﬁcant.
+As evidenced by the one-year moving average of pre-FOMC returns in Figure 3 there seems
+to be some persistence in the pre-FOMC return. To assess whether there is time series
+predictability of the pre-FOMC returns at low frequencies we regress them on their average
+over the past eight FOMC meetings (a variable that we label MA8). We ﬁnd that the
+backward-looking moving average is a highly statistically signiﬁcant explanatory variable of
+future pre-FOMC returns with a large positive sign for both samples (column 7). Above, we
+have found that the slope of the Treasury yield curve and the level of the VIX also predict
+some of the time series variation in pre-FOMC returns. In order to assess whether there
+is serial correlation in the returns that is not captured by these two variables, we run a
+regression that includes the slope, the VIX as well as the past moving average of pre-FOMC
+returns as regressors. The results show that all three variables retain their signiﬁcance in the
+joint regression in both samples, and explain a sizable fraction of the time series variation
+in pre-FOMC returns (column 8).
+In sum, pre-FOMC returns tend to be higher when investors expect the Fed to ease its
+stance of monetary policy, when implied equity market volatility is high, and when past
+pre-FOMC returns have been positive. Below, we attempt to square some of these facts
+26From 1994-2011 we follow G¨ urkaynak, Sack, and Swanson [2005] and take the change from 2 pm to 3
+pm as the surprise measure. Before 1994, we follow Bernanke and Kuttner [2005] and use the daily change
+in the contract instead. The return in the SPX is from 2 pm to 3 pm on FOMC announcement days from
+1994 onwards and the daily return of the SPX on the day after the FOMC meeting before 1994 as our
+equity-based measure of monetary policy surprises.
+25
+=== PAGE 27 ===
+with the predictions of models that feature political risk, investor inattention, learning, or
+limited participation in the stock market.
+4.2.2 Political Risk, Investor Inattention, and Limited Participation
+Pastor and Veronesi [2011] proposed a general equilibrium model in which the public sector
+aﬀects stock returns through a policy decision that occurs at speciﬁed dates. In their model,
+investors demand a risk premium for being exposed to political uncertainty regarding the
+ex-ante unknown policy action. As a result, expected stock returns are higher in periods
+when investors receive more signals about likely policy changes. Without these signals, stock
+prices in the political risk model would follow a martingale prior to the announcement and
+jump at the announcement (driven by a reduction of uncertainty). Hence, learning about
+the likely outcome of the announcement distinguishes the political risk story from the pure
+jump risk explanation that we dismissed above.
+As discussed before, Federal Reserve oﬃcials are subject to a one week purdah period prior
+to scheduled FOMC announcements. It is therefore implausible to assume that substantial
+new information about the upcoming policy decision is being released in the 24 hours prior to
+FOMC announcements. However, media coverage of the Federal Reserve generally picks up
+markedly before the meeting as illustrated in Figure A.5 in the Appendix. This chart plots
+the time series average of the combined number of articles about the Federal Reserve that
+appeared each day in the print issues of the Wall Street Journal and the Financial Times
+over a ten day window around FOMC announcements. While typically the largest number of
+articles was published the day after FOMC meetings, the ﬁgure shows that media coverage
+increased signiﬁcantly on the day of the announcement (meaning that the articles have been
+published before the announcement). Thus, to the extent that investors use media reports
+to update their beliefs (rather than, for example, speeches by Fed oﬃcials occurring in the
+prior weeks), they may indeed receive signals about future Fed policy right ahead of FOMC
+announcements and consequently political uncertainty might indeed increase. 27
+The model by Pastor and Veronesi [2011] has at least three testable implications that are rel-
+evant in our context. First, the political risk premium is larger in weak economic conditions.
+Second, stock returns should be more volatile in times of higher political uncertainty. Third,
+stock returns should be more cross-correlated prior to policy changes. As we have seen in
+Section 4.2.1, the pre-FOMC announcement return is indeed economically slightly larger in
+27Related to this interpretation, Tetlock [2011] provides evidence that stale ﬁrm-speciﬁc news predict future
+returns, indicating that investors trade based on media articles which contain old information. Huberman
+and Regev [2001] and Carvalho, Klagge, and Moench [2011] discuss speciﬁc examples of the large eﬀects of
+media reports on individual companies’ stock prices.
+26
+=== PAGE 28 ===
+recessions than in expansions, consistent with the political uncertainty model. However, that
+eﬀect is only marginally statistically signiﬁcant in the 1994-2011 sample and is not signiﬁcant
+at common levels over the full sample from 1980-2011. The model’s prediction that stock
+returns are more volatile in periods of political uncertainty is easily dismissed in our data,
+see Figure 6. However, our ﬁnding that a single market factor appears to be able to explain
+the cross-sectional variation of industry returns on FOMC announcement days appears to
+be in line with the implication of the political risk model that the cross correlation of stocks
+should be larger on days of higher political uncertainty.
+In sum, the political risk premium model of Pastor and Veronesi—or some slight modiﬁcation
+that allows for media as issuers of public signals—qualitatively captures some of our empirical
+ﬁndings but appears inconsistent with the pre-FOMC volatility pattern.
+Lamont and Frazzini [2007] have recently documented an upward drift in individual stock
+prices prior to scheduled earnings announcements. The authors discuss “attention grab-
+bing” as a potential behavioral explanation of their ﬁnding. According to this explanation,
+investors are more likely to buy stocks which have attracted their attention through me-
+dia coverage of forthcoming earnings announcements. Since individual investors are often
+short selling constrained, their decision to sell stocks is likely less aﬀected by such events
+than their decision to buy stocks. Consequently, information-grabbing events may induce
+predictable trading behavior of individual investors. While the pre-earnings announcement
+drift is qualitatively similar to the pre-FOMC announcement drift, and we cannot exclude
+that such an eﬀect may be at play, it seems unlikely that a bias of small investors could itself
+generate such large abnormal returns for the aggregate U.S. and other international stock
+markets.
+However, investor inattention is not necessarily an irrational phenomenon and even more
+sophisticated investors may exhibit some form of inattention. Indeed, as ﬁrst discussed by
+Sims [2003], economic agents may face practical constraints as to how much relevant in-
+formation they can process in real time. Consequently, they may choose to rationally pay
+attention to some signals with higher precision than others. Such a framework of rationally
+inattentive investors has recently been employed for example in Kacperczyk, Nieuwerburgh,
+and Veldkamp [2009] to explain the business cycle variation in the relative performance of
+mutual fund managers in picking stocks and timing the market. In their model, investors
+allocate their attention between a signal about the aggregate and a signal about the idiosyn-
+cratic component of cash ﬂows, subject to a constraint. At each point in time, investors
+optimally focus on shocks that have the largest impact on returns.
+Such a model might qualitatively explain some of our empirical ﬁndings. Indeed, stock
+27
+=== PAGE 29 ===
+market investors may decide to process information about the likely outcome of the FOMC
+decision only shortly before the announcement when equity returns are more responsive to
+news about monetary policy. At other times, instead, equity investors may focus on some
+of the many other factors that aﬀect equity cashﬂows. The increased media coverage of
+the Fed right before FOMC announcements documented above is potentially in line with
+increased investor attention ahead of the announcement. Hence, provided that the FOMC
+announcement, on average, has a positive impact on stock returns, the information process-
+ing constraint may result in a drift prior to the announcement, as investors focus on the
+announcement only at that time. 28
+But why should equity prices react positively to FOMC announcements? In a model with
+Bayesian mean-variance investors as in Kacperczyk, Nieuwerburgh, and Veldkamp [2009],
+stock prices may rise because, after learning the signals, posterior expected mean returns are
+higher and/or the posterior variance of payoﬀs is lower. That is, positive signals (relative to
+investors’ prior) about a likely policy easing may push equity prices higher. Alternatively,
+as investors learn more about the likely policy action, posterior uncertainty is reduced and
+stock prices increase. The time-series evidence in Section 4.2.1 suggests that both eﬀects
+may be at work. Indeed, we ﬁnd that the pre-FOMC announcement returns are high when
+market participants expect the Fed to loosen monetary policy and when the uncertainty
+about future Fed policy (as measured by the disagreement among professional forecasters) is
+low. Hence, if investors only update their expectations about monetary policy shortly before
+the FOMC announcement, then these two eﬀects could well be consistent with the drift that
+we observe.
+But even if consistent with the time-series pattern, how likely is it that rational inattention
+could explain the large unconditional return in our sample? While there may indeed be a
+reduction of posterior variance ahead of FOMC meetings as investors become better informed
+about monetary policy, the magnitude of this eﬀect would likely be limited. In addition, it is
+not clear why a similar eﬀect would not be at play on days of important macroeconomic news
+announcements, such as the employment report, when investors observe other informative
+signals about the state of the economy. Indeed, as we saw before, these other announcements
+do not feature abnormal returns in our sample.
+Can higher posterior mean returns explain the large magnitude of the pre-FOMC announce-
+ment drift? Our sample from the early 1980s through 2011 featured a secular decline of
+policy rates. It is precisely in this sample period that some commentators and academic
+papers have thought of central bank policy as having an asymmetric impact on the ﬁnancial
+28Fixed income investors, instead, may pay attention to the Fed at all times, as the future path of short
+term interest rates is arguably the most important determinant of ﬁxed income returns.
+28
+=== PAGE 30 ===
+sector, with limited negative impact in booms and support in busts (see, for example, Dia-
+mond and Rajan [2011]). Even if one might be inclined to argue that this period has been
+characterized by such an asymmetry, in a rational expectations equilibrium these investors
+should not have been consistently surprised. In other words, unless one is willing to assume
+that the Fed systematically surprised equity investors over this period, the higher poste-
+rior means channel in the investor inattention model is unlikely to explain the pre-FOMC
+announcement drift.
+Investor inattention may also give rise to risk premia through time varying stock market
+participation. Duﬃe [2010] presents a model where inattentive investors trade only infre-
+quently and where frequent investors (specialists) earn a premium for bearing a larger share
+of overall market risk around certain events. The original model studies price dynamics
+ahead of anticipated supply and demand shocks. In our setup, we consider a slight modiﬁ-
+cation and assume that inattentive investors are less likely to trade shortly ahead of FOMC
+announcements because of the risk of being at an informational disadvantage over special-
+ists. A larger share of the market risk would then be borne by the specialists, and in the
+mean-variance setup of Duﬃe [2010], they will demand compensation in the form of higher
+expected returns ahead of the announcement. In contrast with the political risk premium
+model or the rational inattention setup discussed earlier, in this framework no additional
+information or increase in overall uncertainty would be required to boost pre-announcement
+returns. Instead, the positive excess return would be exclusively driven by a temporary
+reduction of stock market participation.
+Qualitatively, such an explanation is appealing as we ﬁnd that both instantaneous volatil-
+ity as well as trading volume are somewhat lower just before FOMC announcements, see
+Section 4.1. However, the limited participation model would also predict lower returns on
+days surrounding FOMC announcements when inattentive investors are still in, or return-
+ing to, the market. Yet, as we have shown in Section 3.3, the pre-FOMC returns are very
+persistent and not reversed in previous or subsequent trading sessions. Thus, we ﬁnd the lim-
+ited participation model to be counterfactual with respect to the persistence of pre-FOMC
+returns.
+In sum, although we see each of the three theories as somewhat appealing, they appear
+counterfactual in some dimensions.
+29
+=== PAGE 31 ===
+5 Conclusion
+We have documented that excess returns on U.S. and international equities have been sig-
+niﬁcantly higher in anticipation of monetary policy actions taken at scheduled meetings of
+the Federal Open Market Committee (FOMC) over the past few decades. The pre-FOMC
+returns are not reversed in subsequent trading sessions, are robust to outliers, and their sta-
+tistical signiﬁcance is not driven by small sample issues or data-snooping. Since the 1980s,
+pre-FOMC returns have increased over time, especially after 1994 when FOMC decisions
+became public signals. In both samples, pre-FOMC returns account for large fractions of
+realized stock returns. We do not ﬁnd pre-FOMC eﬀects in U.S. Treasuries and in eurodol-
+lar or federal funds rate futures, instruments that are highly sensitive to monetary policy.
+Other major U.S. macroeconomic news announcements also do not feature abnormal pre-
+announcement returns in U.S. stocks. The time series of pre-FOMC returns is somewhat
+countercyclical. They also tend to be higher in periods when market participants expect
+the Fed to ease policy, as implied by the slope of the Treasury curve, when implied equity
+market volatility is higher, and when past pre-FOMC returns have been higher. Combined,
+these three factors explain a signiﬁcant fraction of the time series variation of pre-FOMC
+returns.
+The evidence in this paper suggests that jump risk, and standard consumption-based as-
+set pricing models, and an information leakage story do not explain the pre-FOMC drift.
+However, we ﬁnd that a share of the pre-FOMC returns may be accounted for by lower trad-
+ing volumes and, especially, lower market volatility ahead of FOMC announcements. The
+“volatility feedback eﬀect” of Campbell and Hentschel [1992] would be consistent with our
+evidence, but only to the extent that the pre-FOMC volatility declines in volatility had been
+unexpected. Moreover one would still need to explain the sources of these declines.
+We ﬁnally discussed three pricing models that could yield a smooth drift ahead of announce-
+ments featuring political risk (Pastor and Veronesi [2011]), rationally inattentive investors
+(Kacperczyk, Nieuwerburgh, and Veldkamp [2009]), and limited stock market participation
+(Duﬃe [2010]). None of these models are fully consistent with all our ﬁndings. The political
+risk explanation, with agents learning ahead of the announcement, appears at odds with
+the lower volatility of stock returns in the hours before the FOMC announcement, among
+other things. Rationally inattentive investors that optimally focus on FOMC-relevant in-
+formation only shortly ahead of the announcement may generate a drift either because of
+lower posterior variance, as agents update their beliefs, or because of higher posterior mean
+returns following positive signal realizations (that is, when signals point to accommodative
+policy). Consistent with this theory, we ﬁnd that pre-FOMC returns are higher when the
+30
+=== PAGE 32 ===
+slope of the yield curve implies future rate cuts. However, investors would have had to be
+consistently surprised about monetary policy for long periods of time, and signiﬁcantly so,
+to quantitatively explain the magnitude of the pre-FOMC return. Finally the time-varying
+limited market participation model, which is consistent with the observed liquidity patterns,
+would predict that the abnormal returns ahead of the announcement are reversed after the
+event. Instead, we ﬁnd the pre-FOMC returns to be persistent. In sum, as of this paper’s
+writing, the pre-FOMC announcement drift is a puzzle.
+31
+=== PAGE 33 ===
+References
+Acharya, V. V., and L. H. Pedersen (2005): “Asset pricing with liquidity risk,” Journal
+of Financial Economics , 77(2), 375–410.
+Adrian, T., and A. Estrella (2008): “Monetary tightening cycles and the predictability
+of economic activity,” Economics Letters, 99(2), 260–264.
+Amihud, Y. (2002): “Illiquidity and stock returns: cross-section and time-series eﬀects,”
+Journal of Financial Markets , 5(1), 31–56.
+Amihud, Y., and H. Mendelson (1986): “Asset pricing and the bid-ask spread,” Journal
+of Financial Economics , 17(2), 223–249.
+Andersen, T. G., T. Bollerslev, F. X. Diebold, and C. Vega (2003): “Micro Ef-
+fects of Macro Announcements: Real-Time Price Discovery in Foreign Exchange,” Amer-
+ican Economic Review, 93(1), 38–62.
+Bansal, R., and A. Yaron (2004): “Risks for the Long Run: A Potential Resolution of
+Asset Pricing Puzzles,” The Journal of Finance , 59(4), 1481–1509.
+Bekaert, G., R. J. Hodrick, and X. Zhang (2009): “International Stock Return
+Comovements,” The Journal of Finance , 64(6), 2591–2626.
+Bernanke, B. S., A. S. Blinder, and B. T. McCallum (2005): “Panel discussion I:
+What Have We Learned Since October 1979?,” Federal Reserve Bank of St. Louis Review,
+pp. 277–292.
+Bernanke, B. S., and K. N. Kuttner (2005): “What Explains the Stock Market’s
+Reaction to Federal Reserve Policy?,” The Journal of Finance , 60(3), 1221–1257.
+Black, F. (1976): “Studies of stock price volatility changes,” in Proceedings of the 1976
+Meetings of the American Statistical Association, Business and Economics Statistics Sec-
+tion, pp. 177–181.
+Blinder, A. S., M. Ehrmann, M. Fratzscher, J. D. Haan, and D.-J. Jansen
+(2008): “Central bank communication and monetary policy: A survey of theory and
+evidence,” Journal of Economic Literature , 46(4), 910–945.
+Campbell, J. Y. (2003): “Consumption-based asset pricing,” in Handbook of the Eco-
+nomics of Finance, ed. by G. Constantinides, M. Harris, and R. M. Stulz, vol. 1 of Hand-
+book of the Economics of Finance , chap. 13, pp. 803–887. Elsevier.
+Campbell, J. Y., and J. H. Cochrane (1999): “By Force of Habit: A Consumption-
+Based Explanation of Aggregate Stock Market Behavior,” Journal of Political Economy ,
+107(2), 205.
+Campbell, J. Y., S. J. Grossman, and J. W ang (1993): “Trading Volume and Serial
+Correlation in Stock Returns,” The Quarterly Journal of Economics , 108(4), 905–39.
+Campbell, J. Y., and L. Hentschel (1992): “No news is good news: An asymmetric
+32
+=== PAGE 34 ===
+model of changing volatility in stock returns,” Journal of Financial Economics , 31(3),
+281–318.
+Carvalho, C., N. Klagge, and E. Moench (2011): “The persistent eﬀects of a false
+news shock,” Journal of Empirical Finance , 18(4), 597–615.
+Clarida, R., J. Gali, and M. Gertler (2000): “Monetary Policy Rules And Macroe-
+conomic Stability: Evidence And Some Theory,” The Quarterly Journal of Economics ,
+115(1), 147–180.
+Diamond, D. W., and R. Rajan (2011): “Illiquid Banks, Financial Stability, and Interest
+Rate Policy,” Working Paper 16994, National Bureau of Economic Research.
+Duffie, D. (2010): “Presidential Address: Asset Price Dynamics with Slow-Moving Capi-
+tal,” Journal of Finance , 65(4), 1237–1267.
+Ehrmann, M., and M. Fratzscher (2009): “Purdah—On the Rationale for Central
+Bank Silence around Policy Meetings,” Journal of Money, Credit and Banking , 41(23),
+517–528.
+F ama, E., and K. French (1993): “Common risk factors in the returns on stocks and
+bonds,” Journal of ﬁnancial economics , 33(1), 3–56.
+Fleming, M., and M. Piazzesi (2005): “Monetary Policy Tick-by-Tick,” Discussion pa-
+per, University of Chicago, mimeo.
+Fleming, M. J., and E. M. Remolona (1999): “Price Formation and Liquidity in the
+U.S. Treasury Market: The Response to Public Information,” The Journal of Finance ,
+54(5), 1901–1915.
+Forbes, K. J., and R. Rigobon (2002): “No Contagion, Only Interdependence: Measur-
+ing Stock Market Comovements,” Journal of Finance , 57(5), 2223–2261.
+G¨urkaynak, R. S., B. Sack, and E. Swanson (2005): “Do Actions Speak Louder
+Than Words? The Response of Asset Prices to Monetary Policy Actions and Statements,”
+International Journal of Central Banking .
+Gurkaynak, R. S., B. Sack, and J. H. Wright (2007): “The U.S. Treasury yield
+curve: 1961 to the present,” Journal of Monetary Economics , 54(8), 2291–2304.
+Huberman, G., and T. Regev (2001): “Contagious Speculation and a Cure for Cancer:
+A Nonevent that Made Stock Prices Soar,” Journal of Finance , 56(1), 387–396.
+Jones, C. M., O. Lamont, and R. L. Lumsdaine (1998): “Macroeconomic news and
+bond market volatility,” Journal of Financial Economics , 47(3), 315 – 337.
+Kacperczyk, M., S. V. Nieuwerburgh, and L. Veldkamp (2009): “Rational Atten-
+tion Allocation Over the Business Cycle,” NBER Working Papers 15450, National Bureau
+of Economic Research, Inc.
+Karolyi, G. A., and R. M. Stulz (1996): “Why Do Markets Move Together? An
+33
+=== PAGE 35 ===
+Investigation of U.S.-Japan Stock Return Comovements,” The Journal of Finance , 51(3),
+pp. 951–986.
+Kuttner, K. N. (2001): “Monetary policy surprises and interest rates: Evidence from the
+Fed funds futures market,” Journal of Monetary Economics , 47(3), 523–544.
+(2003): “The Revelation of Funds Rate Changes, 1989-92: What Did the Markets
+Know, and When Did They Know It?,” unpublished manuscript, Federal Reserve Bank
+of New York.
+Lamont, O., and A. Frazzini (2007): “The Earnings Announcement Premium and Trad-
+ing Volume,” NBER Working Papers 13090, National Bureau of Economic Research, Inc.
+Lucca, D. O., and F. Trebbi (2009): “Measuring Central Bank Communication: An
+Automated Approach with Application to FOMC Statements,” NBER Working Papers
+15367, National Bureau of Economic Research, Inc.
+Pan, J. (2002): “The jump-risk premia implicit in options: evidence from an integrated
+time-series study,” Journal of Financial Economics , 63(1), 3–50.
+Pastor, L., and R. F. Stambaugh (2003): “Liquidity Risk and Expected Stock Returns,”
+Journal of Political Economy , 111(3), 642–685.
+Pastor, L., and P. Veronesi (2011): “Political Uncertainty and Risk Premia,” NBER
+Working Papers 17464, National Bureau of Economic Research, Inc.
+Savor, P., and M. Wilson (2010): “How Much Do Investors Care About Macroeconomic
+Risk? Evidence From Scheduled Economic Announcements,” Journal of Financial and
+Quantitative Analysis, forthcoming.
+(2012): “Asset Pricing: A Tale of Two Days,” Working paper, The University of
+Pennsylvania.
+Shanken, J. (1992): “On the Estimation of Beta-Pricing Models,” Review of Financial
+Studies, 5(1), 1–33.
+Sims, C. (2003): “Implications of rational inattention,” Journal of Monetary Economics ,
+50(3), 665–690.
+Sims, C. A., and T. Zha (2006): “Were There Regime Switches in U.S. Monetary Policy?,”
+American Economic Review, 96(1), 54–81.
+Tetlock, P. C. (2011): “All the News That’s Fit to Reprint: Do Investors React to Stale
+Information?,” Review of Financial Studies , 24(5), 1481–1512.
+White, H. (2000): “A Reality Check for Data Snooping,” Econometrica, 68(5), 1097–1126.
+34
+=== PAGE 36 ===
+Figure 1: Cumulative Returns on the SPX
+0.51Percent09:3010:3011:3012:3013:3014:3015:30FOMC Statement09:3010:3011:3012:3013:3014:3015:3009:3010:3011:3012:3013:3014:3015:30FOMCnon-FOMC
+Notes: This chart plots the average cumulative one-minute return on the S&P500 index (SPX) over a
+three day window. The solid black line shows the average cumulative return on the SPX from 9:30 a.m.
+EST on the days before scheduled FOMC announcements until 4:00 p.m. EST on days after scheduled
+FOMC announcements. The dashed black line shows the cumulative return on the SPX over all other three
+day windows. The gray shaded areas denote the pointwise 95% conﬁdence bands around the two means,
+respectively. The sample period is from September 1994 through March 2011. The dashed vertical red line
+is set at 2:15 p.m. EST, the time when FOMC announcements were typically released during that period.
+35
+=== PAGE 37 ===
+Figure 2: Empirical Densities of 2pm-to-2pm SPX Returns: 1994-2011
+0.2.4.6Density-15-10-505102pm-to-2pm %log-return on the SPX FOMCnonFOMC
+Notes: This chart plots empirical densities of the 2pm-to-2pm return on the SPX. The solid black line
+shows the return on days ahead of scheduled FOMC announcements and the gray line shows the return on
+average cumulative return all other days. The sample period is from September 1994 through March 2011.
+36
+=== PAGE 38 ===
+Figure 3: Time Series of pre-FOMC Announcement Returns on the SPX
+10/29/0805101520Rates in percent-50510Returns in percent19801981198219831984198519861987198819891990199119921993199419951996199719981999200020012002200320042005200620072008200920102011pre-FOMCpre-FOMC (12m MA)Other days (12m MA)Fed funds rate (monthly, right-axis)
+Notes: This chart plots the time series of pre-FOMC announcement returns (post-1994: cum dividend log
+excess return on the S&P500 from 2pm on the day before a scheduled FOMC announcement to 2 pm on that
+day, pre-1994 daily close-to-close cum dividend log excess return on the SPX on days of scheduled FOMC
+meetings) from Jan 1980 through Mar 2011. The solid black line shows the one-year moving average of these
+returns. The red line is the one-year moving average of 24 hour returns on all non pre-FOMC days. The
+grey line is the monthly average of the eﬀective federal funds rate.
+37
+=== PAGE 39 ===
+Figure 4: CAPM for Industry and Size Portfolios on FOMC Announcement Days
+AEROAGRICAUTOSBANKSBEERBLDMTBOOKSBOXESBUSSVCHEMSCHIPSCLTHSCNSTRCOALDRUGSELCEQFABPRFINFOODFUNGOLDGUNSHARDWHLTHHSHLDINSURLABEQMACHMEALSMEDEQMINESOILOTHERPAPERPERSVRLESTRTAILRUBBRSHIPSSMOKESODASOFTWSTEELTELCMTOYSTRANSTXTLSUTILWHLSLDEC1DEC10DEC2DEC3DEC4DEC5DEC6DEC7DEC8DEC9-.20.2.4.6.8Predicted Excess Return-.20.2.4.6.8Actual Excess Return
+Notes: This chart documents the ﬁt of the CAPM for the 49 Fama-French industry portfolios and the ten
+size decile portfolios on FOMC announcement days. For each portfolio, the horizontal axis shows the average
+excess return earned on scheduled FOMC announcement days (in percent) whereas the vertical axis shows
+the excess return implied by the CAPM. The sample period is from September 1994 through December
+2010. The betas are estimated from a regression of the portfolio’s excess return on the excess return of the
+market portfolio at the daily frequency (using all days in the sample). The result from the second stage
+cross sectional regression is
+¯RF OM C = −.099[0.10] + 0.468[0.149] ˆβ
+where the standard errors are adjusted for the estimation error in betas following Shanken [1992]. The R2
+of the regression is 65%. The dashed line shows the estimated regression line and the solid black line shows
+the 45 degree line.
+38
+=== PAGE 40 ===
+Figure 5: Cumulative Returns on International Stock Market Indexes Around FOMC
+Announcements
+0.2.4.6.8Percent09:3010:3011:3012:3013:3014:3015:30FOMC Statement09:3010:3011:3012:3013:3014:3015:3009:3010:3011:3012:3013:3014:3015:30SPXFTSEDAXCAC40SMIIBEXTSX
+Notes: This chart plots the average cumulative one-minute return on the SPX and other major international
+equity market indexes over the three day window around scheduled FOMC announcements. The solid black
+line shows the average cumulative return on the SPX from 9:30 a.m. EST on the days before scheduled
+FOMC announcements until 4:00 p.m. on days after scheduled FOMC announcements. The colored dashed
+lines show the cumulative returns on the German DAX, the U.K.’s FTSE100, the French CAC40, the Spanish
+IBEX, the Swiss SMI, and the Canadian TSX over the same three day window. All stock indexes are only
+shown during hours of trading on the respective exchanges. The sample period is from January 1996 through
+March 2011. The dashed vertical red line is set at 2:15 p.m. EST, the time when FOMC announcements
+were typically released during that period.
+39
+=== PAGE 41 ===
+Figure 6: Intraday Realized V olatility of SPX Returns
+05.00e-071.00e-061.50e-062.00e-06Returns squared09:3010:3011:3012:3013:3014:3015:30FOMC Statement09:3010:3011:3012:3013:3014:3015:3009:3010:3011:3012:3013:3014:3015:30FOMCnon-FOMC
+Notes: This chart documents the pattern of intraday realized volatility over the three day window around
+scheduled FOMC announcements. The solid black line shows the ﬁve minute rolling sum of squared tick-
+by-tick returns on the SPX from 9:30 a.m. EST on the days before scheduled FOMC announcements until
+4:00 p.m. on EST days after scheduled FOMC announcements. The sample period is from September 1994
+through March 2011. The dashed black line shows the same object over all other three day windows. Shaded
+areas represent pointwise 95% conﬁdence bands around the mean.
+40
+=== PAGE 42 ===
+Figure 7: Intraday T rading V olumes for the E-mini SP500 F uture
+012345Relative Trading Volumes09:3010:3011:3012:3013:3014:3015:30FOMC Statement09:3010:3011:3012:3013:3014:3015:3009:3010:3011:3012:3013:3014:3015:30FOMCnon-FOMC
+Notes: This chart documents the pattern of intraday trading volume of E-mini SP500 futures over the
+three day window around scheduled FOMC announcements. The solid black line shows the ﬁve minute
+rolling average of the number of contracts traded from 9:30 a.m. EST on the days before scheduled FOMC
+announcements until 4:00 p.m. EST on days after scheduled FOMC announcements. The sample period is
+from January 1996 through March 2011. The dashed black line shows the same object over all other three
+day windows. Shaded areas represent pointwise 95% conﬁdence bands around the mean.
+41
+=== PAGE 43 ===
+T able 1: Summary Statistics
+FOMC non-FOMC
+Mean St.Dev. Max Min N.Obs. Mean St.Dev. Max Min N.Obs.
+Post-1994 sample
+SPX-2pm .488 1.215 9.531 -2.927 131 .004 1.218 12.064 -13.962 4010
+SPX .338 1.144 5.006 -2.571 132 .009 1.261 10.953 -9.464 4043
+DAX .449 1.222 4.418 -3.241 131 .014 1.571 10.797 -9.791 3965
+FTSE100 .347 1.204 7.744 -3.492 132 .004 1.222 9.384 -9.266 3968
+CAC40 .517 1.422 8.833 -2.538 132 -.001 1.49 10.595 -9.472 3970
+IBEX .491 1.369 9.002 -3.449 132 .013 1.489 13.484 -9.586 3939
+SMI .301 1.141 5.992 -3.016 132 .012 1.258 10.788 -8.108 3942
+TSX .231 .981 3.752 -2.06 131 .022 1.156 9.37 -9.788 3956
+NKY .006 1.806 7.456 -11.153 125 -.02 1.579 13.235 -12.111 3818
+FF -.005 .034 .125 -.155 132 -.001 .026 .355 -.52 4032
+ED4 .006 .07 .37 -.26 132 -.001 .08 .83 -.435 4193
+TSY-3M .000 .043 .144 -.15 132 -.001 .06 .84 -.78 4078
+TSY-2Y .005 .047 .185 -.192 132 -.002 .064 .585 -.607 4193
+TSY-5Y -.001 .047 .142 -.166 132 -.001 .067 .517 -.382 4193
+TSY-10Y -.003 .044 .124 -.175 132 -.001 .062 .349 -.37 4193
+VOLUME .825 .351 2.675 .294 120 1.041 .419 5.283 .129 3686
+lVIX-2pm 23.612 9.501 75.52 11.04 121 23.108 9.092 80.69 9.69 3855
+Post-1980 sample
+SPX-pre .366 1.124 9.531 -2.927 244 .011 1.123 12.064 -22.911 7598
+FF -.004 .031 .125 -.155 171 -.002 .03 .38 -.52 5431
+ED4 .007 .082 .46 -.26 193 -.001 .085 .83 -1.18 6261
+TSY-3M -.011 .106 .54 -.68 245 -.001 .109 1.69 -1.13 7622
+TSY-2Y -.005 .08 .37 -.52 245 -.001 .092 .89 -.84 7741
+TSY-5Y -.006 .074 .42 -.37 245 -.001 .086 .72 -.77 7741
+TSY-10Y -.009 .07 .33 -.33 245 -.001 .08 .65 -.75 7741
+Notes: This table reports summary statistics for the variables used in this paper on FOMC days and non-
+FOMC days. The sample period is 1994:09-2011:03 in the top panel and 1980:01-2011:03 in the bottom panel.
+SPX-2pm denotes the cum-dividend log excess return on the S&P500 index from 2pm the previous day to 2pm
+the current day. SPX denotes the close-to-close log excess return on the S&P500 index. DAX, FTSE100,
+CAC40, IBEX, SMI, TSX and NIKKEI denote the close-to-close cum-dividend log excess returns on the
+German, British, French, Spanish, Swiss, Canadian, and Japanese benchmark stock indexes, respectively.
+FF and ED4 are the daily rate changes implied by the ﬁrst (and second) Federal funds futures contract in
+the ﬁrst two-thirds (last third) of the month as well as the fourth Eurodollar contract. Tsy3M,...,Tsy10y
+are the daily rate changes for the respective on-the-run Treasury bills and notes for the 2-year and 10-year
+maturity. VOLUME denotes the trading volume (number of shares traded) for the SPY relative to its past
+21-day moving average. lVIX is the level of the VIX at 2 pm on the previous day. SPX-pre and all other
+rate changes in the post-1980 sample are based on 2pm-to-2pm in the post-1994 sample and close-to-close
+on the day of the FOMC meeting (day before FOMC news) in the 1980-1993 sample.
+=== PAGE 44 ===
+T able 2: Main Regression Table: Daily SP500 excess returns
+Dependent V ariable: %Log-return on SP500 stock market index
+Type of return: 2pm-to-2pm 2pm-to-close close-to-close close-to-2pm close(t-2)-to-2pm
+pre-FOMC dummy 0 .488 0 .485 0.335 0 .544
+[0.11]∗∗∗ [0.11]∗∗∗ [0.06]∗∗∗ [0.14]∗∗∗
+FOMC dummy 0.002 0 .330
+[0.09] [0 .10]∗∗∗
+Const. 0 .004 0.009
+[0.02] [0.02]
+Annual ex-return FOMC 3 .89 2.70
+Annual ex-return non-FOMC 0 .88 2.08
+Sharpe Ratio 1 .14 1 .14 0.01 0 .84 1 .43 0 .98
+Obs. 131 4141 131 4175 131 131
+N. of FOMC 131 131 131 132 131 131
+Notes: This table summarized results for the (pre-)FOMC dummy variable regression 1 using cum dividend log excess returns
+on the S&P500 over diﬀerent windows as the dependent variables. Corresponding to the columns, the dependent variables are:
+(1&2) the cum dividend log excess return on the S&P500 from 2pm on the day before a scheduled FOMC announcement to 2 pm
+on that day, (3) the cum dividend log excess return on the S&P500 from 2pm on days of scheduled FOMC announcements until
+the market close on those days, (4) the excess return on the S&P500 from the market close the day before until the market close
+on the day of scheduled FOMC announcements, (5) the excess return on the S&P500 from the market close the day before until
+2 pm on the day of scheduled FOMC announcements, and (6) the excess return on the S&P500 from the market close two days
+before scheduled FOMC announcements until 2 pm on the day of scheduled FOMC announcements. “pre-FOMC dummy” is a
+variable that takes on the value of one when a scheduled FOMC announcement has been released in the following 24 hour interval
+and zero otherwise. “FOMC dummy” is a variable that takes on the value of one when a scheduled FOMC announcement has been
+released in the return window studied. “Annual ex-return FOMC” is the cumulative annual excess return earned in the 24 hours
+pre-FOMC trading window and “Annual ex-return non-FOMC” is the cumulative annual excess return earned on all other days in
+the year. “FOMC Sharpe Ratio” is the annualized Sharpe-ratio on pre-FOMC returns. The sample period is from Sep 1, 1994 to
+Mar 30, 2011. *** signiﬁcant at 1%, ** signiﬁcant at 5%, *signiﬁcant at 10%. Robust standard error shown in brackets.
+43
+=== PAGE 45 ===
+T able 3: Daily SP500 excess returns: Alternative samples
+Dependent V ariable: %Log-excess-return on SP500 stock market index
+pre-FOMC dummy 0 .167 0 .005 0 .204 0 .355
+[0.04]∗∗∗ [0.04] [0 .09]∗∗ [0.07]∗∗∗
+Const. 0 .009 0 .006 0 .020 0 .011
+[0.01] [0 .01] [0 .02] [0 .01]
+Annual ex-return FOMC 1 .81 0 .16 1 .81 2 .87
+Annual ex-return non-FOMC 2 .27 1 .45 4 .98 2 .80
+Sharpe Ratio 0 .53 0 .04 0 .64 0 .92
+Obs. 12854 5012 3539 7842
+N. of FOMC 524 280 113 244
+Samples 196001 .201103 196001.197912 198001.199312 198001.201103
+Notes: This table reports pre-FOMC dummy variable regression results for diﬀerent subsamples, as given
+in the row labeled “Sample”. From Sep 1994 onwards, the dependent variable is the cum dividend log excess
+return on the S&P500 from 2pm on the day before a scheduled FOMC announcement to 2 pm on that day.
+Before 1994, the dependent variable is the excess return on the S&P500 from the market close the day before
+until the market close on the day of scheduled FOMC meetings. “pre-FOMC dummy” is a variable that takes
+on the value of one when a scheduled FOMC announcement has been released in the following 24 hour interval
+from 1994 onwards, on days of scheduled FOMC meetings (before the policy decision could have been known
+to market participants) before 1994, and zero otherwise. “Annual ex-return FOMC” is the cumulative annual
+excess return earned in the 24 hours pre-FOMC trading window and “Annual ex-return non-FOMC” is the
+cumulative annual excess return earned on all other days in the year. “FOMC Sharpe Ratio” is the annualized
+Sharpe-ratio on pre-FOMC returns.*** signiﬁcant at 1%, ** signiﬁcant at 5%, *signiﬁcant at 10%. Robust
+standard error shown in brackets.
+44
+=== PAGE 46 ===
+T able 4: SP500 returns before, at, or after the FOMC news
+FOMC news at: Post-1994 sample Post-1980 sample
+t + 6 -0.02 [0.09] 0.04 [0.06]
+t + 5 -0.10 [0.10] -0.07 [0.06]
+t + 4 0.09 [0.09] 0.03 [0.06]
+t + 3 -0.06 [0.09] 0.04 [0.07]
+t + 2 0.06 [0.08] -0.02 [0.06]
+t + 1 (pre-FOMC) 0.49*** [0.11] 0.37*** [0.07]
+t 0.04 [0.12] 0.06 [0.07]
+t − 1 -0.02 [0.10] 0.05 [0.07]
+t − 2 0.08 [0.11] 0.09 [0.07]
+t − 3 -0.03 [0.10] -0.08 [0.07]
+t − 4 -0.08 [0.08] 0.03 [0.06]
+∑6
+i=2 (FOMC at t +i) -0.041 0.027
+P-value 0.842 0.853∑4
+i=0 (FOMC at t −i) -0.018 0.147
+P-value 0.939 0.335
+Notes: This table reports results for dummy variable regressions analyzing
+average excess returns in the S&P500 before, on, and after days of scheduled
+FOMC meetings. The sample in the left panel starts on Sep 1, 1994 and ends
+on Mar 30, 2011. The dependent variable in that panel is the cum dividend log
+excess return on the S&P500 from 2pm on the day before a scheduled FOMC
+announcement to 2 pm on that day. The sample in the right panel starts on
+Jan 2, 1980 and ends on Mar 30, 2011. The dependent variable in that panel
+is the cum dividend log excess return on the S&P500 on the day of a scheduled
+FOMC meeting. FOMC news at t +i (t −i) denotes a dummy that takes on
+the value of 1 i trading sessions before (after) the scheduled FOMC meeting
+day. ∑6
+i=2 1(FOMC t+i) denotes the sum of the coeﬃcients on the dummy
+variables for the ﬁve days before while ∑4
+i=0 1(FOMC t−i) denotes the sum of
+coeﬃcients on the dummy variables for the ﬁve days after FOMC news became
+available. Standard errors in brackets. *** signiﬁcant at 1%, ** signiﬁcant at
+5%, *signiﬁcant at 10%. Robust standard error shown in brackets.
+45
+=== PAGE 47 ===
+T able 5: Summary Statistics: 2pm-to-2pm SP500 excess returns
+All Observations Excl. top/bottom 1
+FOMC nonFOMC FOMC nonFOMC
+Mean .488 .004 .445 .008
+[.11] [.02] [.08] [.02]
+St. Dev. 1.22 1.22 .88 .99
+Skew 3.18 -.24 .61 -.16
+Kurtosis 25.61 15.91 5.22 3.71
+Max 9.53 12.06 3.69 3.08
+Min -2.93 -13.96 -2.18 -3.25
+Obs. 131 4010 129 3930
+Notes: This table reports summary statistics for the 2pm-2pm
+log excess returns on the SPX on FOMC days and non-FOMC
+days. Standard errors for the mean are reported in square brack-
+ets. “Obs.” is the number of observations in each subset of days.
+The sample period is Sep, 1 1994 to Mar 31, 2011.
+46
+=== PAGE 48 ===
+T able 6: International Stock Market Index Regressions
+Dependent V ariable: %Log-return of stock market indexes
+Stock Market Index: DAX FTSE100 CAC40 IBEX SMI TSX NIKKEI
+Post-1994 sample
+pre-FOMC Dummy 0 .43 0 .34 0 .52 0 .48 0 .29 0 .21 0 .03
+[0.11]∗∗∗ [0.11]∗∗∗ [0.13]∗∗∗ [0.12]∗∗∗ [0.10]∗∗∗ [0.09]∗∗ [0.16]
+Const. 0 .01 0 .00 −0.00 0 .01 0 .01 0 .02 −0.02
+[0.02] [0 .02] [0 .02] [0 .02] [0 .02] [0 .02] [0 .03]
+FOMC Sharpe Ratio 1 .04 0 .81 1 .03 1 .01 0 .75 0 .67 0 .01
+Obs. 4096 4100 4102 4071 4074 4087 3943
+N. of FOMC 131 132 132 132 132 131 125
+Post-1980 sample
+pre-FOMC dummy 0 .16 0 .21 0 .38 0 .38 0 .20 0 .14 0 .03
+[0.08]∗∗ [0.08]∗∗∗ [0.10]∗∗∗ [0.10]∗∗∗ [0.09]∗∗ [0.06]∗∗ [0.11]
+Const. 0 .03 0 .02 0 .01 0 .01 0 .02 0 .02 0 .00
+[0.02]∗ [0.01] [0 .02] [0 .02] [0 .02] [0 .01]∗ [0.02]
+FOMC Sharpe Ratio 0 .44 0 .57 0 .78 0 .79 0 .55 0 .54 0 .05
+Observations 7686 6753 5842 5930 5585 7716 7453
+N. of FOMC 244 211 182 185 175 241 235
+Sample 198001 .201103 198401.201103 198707.201103 198701.201103 198807.201103 198001.201103 198001.201103
+Notes: This table reports estimates of pre-FOMC dummy coeﬃcients for daily close-to-close returns on the German DAX, the British FTSE 100,
+the French CAC40, the Spanish IBEX, the Swiss SMI, the Canadian TSX index, and the Japanese NIKKEI 225. The sample in the upper panel
+starts on Sep 1, 1994 and ends on Mar 31, 2011. Samples in the lower panel diﬀer across indexes depending on data availability and are given in
+the row labeled “Sample”. “Observations” denotes the total number of trading days in each sample. “N. of FOMC” denotes the total number of
+scheduled FOMC meeting days in each sample. *** signiﬁcant at 1%, ** signiﬁcant at 5%, *signiﬁcant at 10%. Robust standard error shown in
+brackets.
+47
+=== PAGE 49 ===
+T able 7: Fixed Income
+Instrument: FF ED-4 TREAS-3M TREAS-2Y TREAS-5Y TREAS-10Y
+Post-1994 sample
+pre-FOMC dummy 0 .001 0 .007 0 .001 0 .006 0 .001 −0.002
+[0.00] [0 .01] [0 .00] [0 .00] [0 .00] [0 .00]
+Const. −0.002 −0.001 −0.001 −0.002 −0.001 −0.001
+[0.00]∗∗∗ [0.00] [0 .00] [0 .00] [0 .00] [0 .00]
+Obs. 4322 4325 4210 4325 4325 4325
+N. of FOMC 131 132 132 132 132 132
+Post-1980 sample
+pre-FOMC dummy 0 .002 0 .008 −0.010 −0.004 −0.006 −0.009
+[0.00] [0 .01] [0 .01] [0 .01] [0 .00] [0 .00]∗
+Const. −0.002 −0.001 −0.001 −0.001 −0.001 −0.001
+[0.00]∗∗∗ [0.00] [0 .00] [0 .00] [0 .00] [0 .00]
+Obs. 5765 6454 7867 7986 7986 7986
+N. of FOMC 170 193 245 245 245 245
+Dates 198812 .201103 198604.201103 198001.201103 198001.201103 198001.201103 198001.201103
+Notes: This table reports pre-FOMC announcement dummy variable regressions for some U.S. ﬁxed income assets, discussed
+in Section 3.7. “pre-FOMC dummy” is a variable that takes on the value of one if the next 24 hour trading interval comprises
+a scheduled FOMC announcement, and zero otherwise. The sample in the top panel starts on Sep 1, 1994 and ends on Mar 30,
+2011. The dependent variables over that sample are yield changes in percent from 2pm on the day before a scheduled FOMC
+announcement to 2 pm on the announcement day. The samples in the bottom panel diﬀer depending on the data availability but
+start no earlier than Jan 2, 1980 and all end on Mar 30, 2011. The dependent variables in this sample are close-to-close yield
+changes in percent on the day prior to the announcement prior to 1994, and yield changes in percent from 2pm on the day before a
+scheduled FOMC announcement to 2 pm on the announcement day after 1994. “FF” are rates implied by the front (next month)
+in the ﬁrst two-thirds (last-third) of each month. “ED-4” is the 4th eurodollar implied rate. Variables denoted “TREAS” refer to
+yields on the 3m, 2y, 5y and 10y benchmark Treasury issues.*** signiﬁcant at 1%, ** signiﬁcant at 5%, *signiﬁcant at 10%. Robust
+standard error shown in brackets.
+48
+=== PAGE 50 ===
+T able 8: ENI Regressions
+Dependent V ariable: %Log-return of SP500 stock market index
+Event: NFPAY INCLM GDPADV ISM IP HSTART PPI CPI PI ALL
+Post-1994 sample
+pre-News Dummy −0.08 −0.01 0 .07 −0.09 0 .01 0 .13 −0.10 −0.09 −0.01 −0.04
+[0.09] [0 .05] [0 .14] [0 .08] [0 .09] [0 .09] [0 .08] [0 .10] [0 .08] [0 .04]
+No. of events 198 861 66 199 211 197 204 206 201 1866
+Post-1980 sample
+pre-News Dummy −0.08 0 .04 0 .02 0 .04 0 .01 −0.02 −0.11 −0.08 0 .04 −0.00
+[0.06] [0 .03] [0 .10] [0 .05] [0 .06] [0 .08] [0 .06]∗ [0.07] [0 .05] [0 .03]
+No. of events 369 1627 125 375 386 372 375 381 374 3561
+Notes: This table reports pre-announcement dummy variable regressions for various macroeconomic news announcements as discussed in
+Section 3.7. The dependent variable is the daily close-to-close cum dividend log excess return on the S&P500. The sample in the top panel
+starts on Sep 1, 1994 and ends on Mar 30, 2011. The sample in the bottom panel start on Jan 2, 1980 and ends on Mar 30, 2011. The
+table does not report the coeﬃcient on a constant, which is included in each regression. The macroeconomic releases are: Employment Report
+(NFPAY), Initial Claims (INCLM), Advance GDP (GDPADV), ISM manufacturing index (ISM), Industrial Production (IP), Housing Starts
+(HS), Producer Price Index (PPI), Consumer Price Index (CPI), Personal Income (PI), and All economic releases (ALL).*** signiﬁcant at 1%,
+** signiﬁcant at 5%, *signiﬁcant at 10%. Robust standard error shown in brackets.
+49
+=== PAGE 51 ===
+T able 9: Time series regressions (post-1994)
+(1) (2) (3) (4) (5) (6) (7) (8)
+NBER Dummy 0 .62
+[0.33]∗
+∆12Log(IP) −0.13
+[0.12]
+∆12Log(CPI) −0.03
+[0.13]
+Tight. Cycle 0 .06
+[0.14]
+Ease Cycle 0 .48
+[0.32]
+Level −0.04
+[0.11]
+Slope −0.19 −0.23
+[0.10]∗ [0.08]∗∗∗
+VIX 0 .31 0 .26
+[0.08]∗∗∗ [0.10]∗∗∗
+SPX surprise −0.12
+[0.10]
+Kuttner Surprise 0 .04
+[0.10]
+pre-FOMC(MA8) 0.28 0 .17
+[0.08]∗∗∗ [0.08] ∗ ∗
+Const. 0 .33 0 .42 0 .33 0 .42 0 .42 0 .42 0 .42 0 .42
+[0.08]∗∗∗ [0.08]∗∗∗ [0.10]∗∗∗ [0.08]∗∗∗ [0.08]∗∗∗ [0.08]∗∗∗ [0.08]∗∗∗ [0.07]∗∗∗
+Adjusted R2 0 .05 0 .01 0 .02 0 .02 0 .10 0 .01 0 .08 0 .18
+Obs. 130 130 130 130 130 130 130 130
+Notes: This table reports results for regressions of the time series of pre-FOMC announcement returns on various explanatory variables,
+discussed in Section 4.2.1. The sample starts on Sep 1, 1994 and ends on Mar 30, 2011. The dependent variable is a time series of cum
+dividend log excess returns on the S&P500 from 2pm on days before to 2 pm on days of scheduled FOMC announcements. “NBER
+Dummy” is a variable that takes on the value of one when the corresponding FOMC day falls into a recession as deﬁned by the NBER
+and zero otherwise. “∆ 12Log(IP)” denotes the 12-month log change of the real-time Industrial Production Index, “∆ 12Log(CPI)” is the
+12-month log change of the real-time Consumer Price Index. “Ease Cycle” and “Tight. Cycle” are dummy variables that take on the value
+of one if the corresponding observation can be classiﬁed as falling into a period of monetary loosening or tightening, respectively. “Level”
+and “Slope” are the ﬁrst two principal components from the cross-section of daily one through ﬁve year zero-coupon Treasury yields from
+Gurkaynak, Sack, and Wright [2007], lagged by two days with respect to the FOMC announcement day. “VIX” is the level of the VIX
+index at the market close two days before the scheduled meeting. “Kuttner Surprise” is a monetary policy surprise measure constructed
+as in Bernanke and Kuttner [2005] and G¨ urkaynak, Sack, and Swanson [2005] over short windows around FOMC announcements from
+2pm to 3pm. “SPX surprise” is the 2pm-to-3pm FOMC announcement return on the SPX. “pre-FOMC(MA8)” is the moving average of
+pre-FOMC returns over the past eight meetings. Standard errors in brackets. *** signiﬁcant at 1%, ** signiﬁcant at 5%, *signiﬁcant at
+10%. Robust standard error shown in brackets.
+50
+=== PAGE 52 ===
+T able 10: Time series regressions (post-1980)
+(1) (2) (3) (4) (5) (6) (7) (8)
+NBER Dummy 0 .20
+[0.21]
+∆12Log(IP) −0.05
+[0.07]
+∆12Log(CPI) −0.01
+[0.08]
+Tight. Cycle Dummy 0 .00
+[0.14]
+Easing Cycle Dummy 0 .02
+[0.15]
+Level −0.05
+[0.07]
+Slope −0.15 −0.17
+[0.06] ∗ ∗ [0.07] ∗ ∗
+VIX 0.26 0 .19
+[0.08]∗∗∗ [0.09] ∗ ∗
+SPX surprise −0.06
+[0.09]
+Kuttner Surprise 0.02
+[0.07]
+pre-FOMC(MA8) 0.18 0 .13
+[0.06]∗∗∗ [0.07] ∗ ∗
+Const. 0 .29 0 .33 0 .32 0 .33 0 .37 0 .35 0 .33 0 .33
+[0.06]∗∗∗ [0.06]∗∗∗ [0.09]∗∗∗ [0.06]∗∗∗ [0.07]∗∗∗ [0.07]∗∗∗ [0.06]∗∗∗ [0.07]∗∗∗
+Adjusted R2 0 .00 −0.01 −0.01 0 .02 0 .08 −0.01 0 .03 0 .12
+Obs. 243 243 243 243 161 169 243 161
+N. of FOMC 243 243 243 243 161 169 243 161
+Sample 198001 .201103 198001 .201103 198001 .201103 198001 .201103 199002 .201103 198811 .201103 198001 .201103 199002 .201103
+Notes: This table reports results for regressions of the time series of pre-FOMC announcement returns on various explanatory variables for the sample
+period 1980-2011, discussed in Section 4.2.1. The dependent variable is a time series of cum dividend log excess returns on the S&P500 from 2pm on days
+before to 2 pm on days of scheduled FOMC announcements starting in 1994, and of close-to-close cum dividend log excess returns on the S&P500 on days
+of scheduled FOMC meetings before 1994. “NBER Dummy” is a variable that takes on the value of one when the corresponding FOMC day falls into
+a recession as deﬁned by the NBER and zero otherwise. “∆ 12Log(IP)” denotes the 12-month log change of the real-time Industrial Production Index,
+“∆12Log(CPI)” is the 12-month log change of the real-time Consumer Price Index. “Ease Cycle” and “Tight. Cycle” are dummy variables that take on
+the value of one if the corresponding observation can be classiﬁed as falling into a period of monetary loosening or tightening, respectively. “Level” and
+“Slope” are the ﬁrst two principal components from the cross-section of daily one through ﬁve year zero-coupon Treasury yields from Gurkaynak, Sack,
+and Wright [2007], lagged by two days with respect to the FOMC announcement day. “VIX” is the level of the VIX index at the market close two days
+before the scheduled meeting. “Kuttner Surprise” is a monetary policy surprise measure constructed as in Bernanke and Kuttner [2005] and G¨ urkaynak,
+Sack, and Swanson [2005] over short windows around FOMC announcements from 2pm to 3pm. “SPX surprise” is the 2pm-to-3pm FOMC announcement
+return on the SPX. “pre-FOMC(MA8)” is the moving average of pre-FOMC returns over the past eight meetings. Depending on data availability, the
+sample periods may diﬀer across the various explanatory variables, as indicated by the row labeled “Sample”. *** signiﬁcant at 1%, ** signiﬁcant at 5%,
+*signiﬁcant at 10%. Robust standard error shown in brackets.
+51
+=== PAGE 53 ===
+T able 11: Liquidity and Volatility Risk
+(1) (2) (3) (4) (5)
+pre-FOMC dummy 0 .53 0 .43 0 .33 0 .32 0 .52
+[0.12]∗∗∗ [0.12]∗∗∗ [0.07]∗∗∗ [0.07]∗∗∗ [0.07]∗∗∗
+Trade Vol (innov.) −0.69 −0.05
+[0.06]∗∗∗ [0.04]
+Trade Vols (lag) 0 .15 −0.03 −0.03
+[0.06]∗∗∗ [0.03] [0 .03]
+VIX (innov.) −0.60 −0.60
+[0.02]∗∗∗ [0.02]∗∗∗
+VIX (lag) 0 .00 0 .00 0 .00
+[0.00] [0 .00] [0 .00]
+Trade Vols. (FOMC-innov.) −0.05
+[0.04]
+VIX (FOMC-innov.) −0.60
+[0.02]∗∗∗
+Const. −0.00 −0.15 −0.07 −0.04 −0.05
+[0.02] [0 .06]∗∗∗ [0.06] [0 .07] [0 .07]
+Adjusted R2 0 .01 0 .05 0 .68 0 .68 0 .68
+Obs. 3771
+N. of FOMC 119
+Notes: This table reports results for regression 1 controlling for measures of liquidity and volatility. The
+dependent variable is the cum dividend 2pm-to-2pm log excess return on the S&P500. The sample period
+starts at Jan 2, 1996 and ends at Mar 30, 2011. “pre-FOMC dummy” is a dummy variable that takes on
+the value of one if there is a scheduled FOMC announcement in the next 24 hour trading interval. “Trade
+Vol (innov.)” denotes the residual from an AR(1) regression of the relative trading volume on the SPDR
+S&P500 exchange-traded fund (SPY) as of 2 pm on a constant and its previous 2 pm level. “Trade Vols
+(lag)” denotes the prior day 2 pm level. “VIX (innov.)” denotes the residual from an AR(1) regression of
+the VIX index at 2 pm on a constant and its previous day 2 pm level. “VIX (lag)” denotes day 2 pm level
+of the VIX index on the previous trading day. “Trade Vols. (FOMC-innov.)” and “VIX (FOMC-innov.)”
+denote residuals from the same AR(1) regressions augmented with the pre-FOMC dummy. *** signiﬁcant
+at 1%, ** signiﬁcant at 5%, *signiﬁcant at 10%. Robust standard error shown in brackets.
+52
+=== PAGE 54 ===
+A Additional Figures and Tables
+Figure A.1: Number of FOMC Meetings Per Y ear
+5101520Number of meetings per year196019701980199020002010All meetingsScheduled only
+Notes: This chart plots time series of the number of scheduled and the total number of scheduled and
+unscheduled FOMC meetings per year from 1960 - 2011.
+53
+=== PAGE 55 ===
+Figure A.2: Empirical Densities of pre-FOMC Returns: 1980-2011
+0.1.2.3.4.5Density-20-10010%log-return on the SPX FOMCnonFOMC
+Notes: This chart plots empirical densities of the 2pm-to-2pm return on the SPX. The solid black line
+shows the return on days ahead of scheduled FOMC announcements and the gray line shows the return on
+average cumulative return all other days. The sample period is from January 1980 through March 2011.
+54
+=== PAGE 56 ===
+Figure A.3: Bootstrap Analysis 1994-2011
+Bootstrapped standard errors for FOMC dummy Sampling from non-FOMC Returns
+0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1
+0
+2000
+4000
+6000
+8000
+10000
+12000
+Mean: 0.485, StDev: 0.108
+−0.5 −0.4 −0.3 −0.2 −0.1 0 0.1 0.2 0.3 0.4 0.5
+0
+2000
+4000
+6000
+8000
+10000
+12000
+p−value of Mean > average pre−FOMC return (0.488): 1
+Zero-Mean Pseudo Pre-FOMC Return Distribution Data-Snooping
+−0.4 −0.3 −0.2 −0.1 0 0.1 0.2 0.3 0.4 0.5 0.6
+0
+2000
+4000
+6000
+8000
+10000
+12000
+14000
+p−value of Mean > average pre−FOMC return (0.488): 0.9999
+0 1 2 3 4 5 6
+0
+2000
+4000
+6000
+8000
+10000
+12000
+14000
+p−value of max(abs(t−stat)) > 4.51:  0.9998
+Notes: This Figure provides histograms of the bootstrap distributions discussed in Section 3.4 for the
+sample period Sep 1994 - Mar 2011.
+55
+=== PAGE 57 ===
+Figure A.4: Bootstrap Analysis 1980-2011
+Bootstrapped standard errors for FOMC dummy Sampling from non-FOMC Returns
+0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8
+0
+2000
+4000
+6000
+8000
+10000
+12000
+Mean: 0.355, StDev: 0.0731
+−0.4 −0.3 −0.2 −0.1 0 0.1 0.2 0.3 0.4
+0
+2000
+4000
+6000
+8000
+10000
+12000
+p−value of Mean > average pre−FOMC return (0.366): 1
+Zero-Mean Pseudo Pre-FOMC Return Distribution Data-Snooping
+−0.3 −0.2 −0.1 0 0.1 0.2 0.3 0.4
+0
+2000
+4000
+6000
+8000
+10000
+12000
+p−value of Mean > average pre−FOMC return (0.366): 1
+0 1 2 3 4 5 6
+0
+2000
+4000
+6000
+8000
+10000
+12000
+14000
+p−value of max(abs(t−stat)) > 4.86:  0.9999
+Notes: This Figure provides histograms of the bootstrap distributions discussed in Section 3.4 for the
+sample period Jan 1980 - Mar 2011.
+56
+=== PAGE 58 ===
+Figure A.5: Number of Fed-related articles in WSJ&FT around FOMC Announcement Days
+01234Number of articles-6-5-4-3-2-10123456Days
+Notes: This chart plots the average number of articles that appear in the print issues of the Wall Street
+Journal and the Financial Times around days of scheduled FOMC announcements. The gray shaded area
+shows the two standard error deviation bands around the average. The sample period is from February 1994
+through March 2011.
+57
+=== PAGE 59 ===
+T able A.1: Scheduled FOMC meeting dates and times 1994-2011
+year 1st 2nd 3rd 4th 5th 6th 7th 8th
+1994 4-Feb-94 e 22-Mar-94e 17-May-94e 6-Jul-94e 16-Aug-94e 27-Sep-94 15-Nov-94 20-Dec-94
+[11:05] [14:20] [14:26] [14:18] [13:17] [14:18] [14:20] [14:17]
+1995 1-Feb-95 28-Mar-95 23-May-95 6-Jul-95 22-Aug-95 26-Sep-95 15-Nov-95 19-Dec-95
+[14:14] [14:13] [14:13] [14:15] [14:13] [14:14] [14:16] [14:15]
+1996 31-Jan-96 26-Mar-96 e 21-May-96 3-Jul-96 20-Aug-96 24-Sep-96 13-Nov-96 17-Dec-96
+[14:16] [11:39] [14:16] [14:14] [14:17] [14:14] [14:17] [14:16]
+1997 5-Feb-97 25-Mar-97 20-May-97 2-Jul-97 19-Aug-97 30-Sep-97 12-Nov-97 16-Dec-97
+[14:13] [14:14] [14:15] [14:15] [14:15] [14:13] [14:12] [14:15]
+1998 4-Feb-98 31-Mar-98 19-May-98 1-Jul-98 18-Aug-98 29-Sep-98 17-Nov-98 22-Dec-98
+[14:12] [14:14] [14:13] [14:14] [14:12] [14:17] [14:19] [14:13]
+1999 3-Feb-99 30-Mar-99 18-May-99 30-Jun-99 24-Aug-99 5-Oct-99 16-Nov-99 21-Dec-99
+[14:12] [14:12] [14:11] [14:15] [14:14] [14:12] [14:16] [14:13]
+2000 2-Feb-00 21-Mar-00 16-May-00 28-Jun-00 22-Aug-00 3-Oct-00 15-Nov-00 19-Dec-00
+[14:14] [14:15] [14:13] [14:15] [14:14] [14:12] [14:12] [14:16]
+2001 31-Jan-01 20-Mar-01 15-May-01 27-Jun-01 21-Aug-01 2-Oct-01 6-Nov-01 11-Dec-01
+[14:15] [14:13] [14:15] [14:12] [14:13] [14:15] [14:20] [14:14]
+2002 30-Jan-02 19-Mar-02 7-May-02 26-Jun-02 13-Aug-02 24-Sep-02 6-Nov-02 10-Dec-02
+[14:16] [14:19] [14:14] [14:13] [14:14] [14:12] [14:14] [14:13]
+2003 29-Jan-03 18-Mar-03 6-May-03 25-Jun-03 12-Aug-03 16-Sep-03 28-Oct-03 9-Dec-03
+[14:16] [14:15] [14:13] [14:16] [14:15] [14:19] [14:14] [14:14]
+2004 28-Jan-04 16-Mar-04 4-May-04 30-Jun-04 10-Aug-04 21-Sep-04 10-Nov-04 14-Dec-04
+[14:14] [14:15] [14:16] [14:18] [14:15] [14:15] [14:15] [14:15]
+2005 2-Feb-05 22-Mar-05 3-May-05 30-Jun-05 9-Aug-05 20-Sep-05 1-Nov-05 13-Dec-05
+[14:17] [14:17] [14:16] [14:15] [14:17] [14:17] [14:18] [14:13]
+2006 31-Jan-06 28-Mar-06 10-May-06 29-Jun-06 8-Aug-06 20-Sep-06 25-Oct-06 12-Dec-06
+[14:14] [14:17] [14:17] [14:16] [14:14] [14:13] [14:13] [14:14]
+2007 31-Jan-07 21-Mar-07 9-May-07 28-Jun-07 7-Aug-07 18-Sep-07 31-Oct-07 11-Dec-07
+[14:14] [14:15] [14:15] [14:14] [14:14] [14:15] [14:15] [14:15]
+2008 30-Jan-08 18-Mar-08 30-Apr-08 25-Jun-08 5-Aug-08 16-Sep-08 29-Oct-08 16-Dec-08
+[14:14] [14:14] [14:15] [14:19] [14:13] [14:14] [14:17] [14:11]
+2009 28-Jan-09 18-Mar-09 29-Apr-09 24-Jun-09 12-Aug-09 23-Sep-09 4-Nov-09 16-Dec-09
+[14:14] [14:17] [14:16] [14:18] [14:16] [14:16] [14:18] [14:15]
+2010 27-Jan-10 16-Mar-10 28-Apr-10 23-Jun-10 10-Aug-10 21-Sep-10 3-Nov-10 14-Dec-10
+[14:17] [14:14] [14:14] [14:16] [14:15] [14:15] [14:16] [14:15]
+2011 26-Jan-11 15-Mar-11
+[14:16] [14:13]
+Notes: This table reports dates of scheduled FOMC meetings. The marker “ e” denotes meetings that
+are excluded from our sample. The time of the announcements, reported in square brackets, from 1994 to
+2004 are from Fleming and Piazzesi [2005] and are based on the time-stamp of Bloomberg or Dow Jones
+newswires. We update this list for the remaining sample using the same method.
+58
+=== PAGE 60 ===
+T able A.2: Summary Statistics in 1980 sample: SP500 excess returns
+All Observations Excl. top/bottom 1
+FOMC nonFOMC FOMC nonFOMC
+Mean .366 .011 .34 .018
+[.07] [.01] [.06] [.01]
+St. Dev. 1.12 1.12 .9 .9
+Skew 2.31 -1.34 .37 -.11
+Kurtosis 20.7 36.87 4.19 3.63
+Max 9.53 12.06 3.54 2.77
+Min -2.93 -22.91 -2.18 -2.97
+Obs. 244 7598 240 7448
+Notes: This table reports summary statistics for the daily log
+excess returns on the SPX on FOMC days and non-FOMC days.
+Standard errors for the mean reported in square brackets. The
+sample period is Jan 2, 1980 to Mar 31, 2011.
+=== PAGE 61 ===
+T able A.3: CRSP Value-Weighted Industry Portfolio Regressions: 1994-2011
+Dependent V ariable: %log-excess-return of CRSP Industry portfolio
+Industry Portfolio: AGRIC FOOD SODA BEER SMOKE TOYS FUN
+FOMC dummy 0 .24 0 .10 −0.14 0 .01 −0.07 0 .32 0 .50
+[0.17] [0 .08] [0 .22] [0 .09] [0 .15] [0 .12]∗∗ [0.19]∗∗∗
+FOMC Sharpe Ratio 0 .39 0 .38 −0.10 0 .09 −0.06 0 .61 0 .66
+Industry Portfolio: BOOKS HSHLD CLTHS HLTH MEDEQ DRUGS CHEMS
+FOMC dummy 0 .37 0 .23 0 .38 0 .24 0 .19 0 .25 0 .44
+[0.12]∗∗∗ [0.09]∗∗ [0.13]∗∗∗ [0.11]∗∗ [0.10]∗ [0.10]∗∗∗ [0.12]∗∗∗
+FOMC Sharpe Ratio 0 .73 0 .67 0 .77 0 .57 0 .54 0 .72 0 .98
+Industry Portfolio: RUBBR TXTLS BLDMT CNSTR STEEL FABPR MACH
+FOMC dummy 0 .39 0 .51 0 .38 0 .44 0 .50 0 .51 0 .49
+[0.12]∗∗∗ [0.16]∗∗∗ [0.13]∗∗∗ [0.18]∗∗ [0.16]∗∗∗ [0.19]∗∗∗ [0.13]∗∗∗
+FOMC Sharpe Ratio 0 .80 0 .77 0 .70 0 .63 0 .78 0 .63 0 .97
+Industry Portfolio: ELCEQ AUTOS AERO SHIPS GUNS GOLD MINES
+FOMC dummy 0 .53 0 .51 0 .45 0 .25 0 .13 0 .26 0 .56
+[0.14]∗∗∗ [0.14]∗∗∗ [0.15]∗∗∗ [0.14]∗ [0.13] [0 .22] [0 .16]∗∗∗
+FOMC Sharpe Ratio 0 .98 0 .86 0 .79 0 .49 0 .29 0 .28 0 .89
+Industry Portfolio: COAL OIL UTIL TELCM PERSV BUSSV HARDW
+FOMC dummy 0 .40 0 .29 0 .10 0 .13 0 .42 0 .37 0 .40
+[0.27] [0 .12]∗∗ [0.09] [0 .12] [0 .13]∗∗∗ [0.10]∗∗∗ [0.17]∗∗
+FOMC Sharpe Ratio 0 .43 0 .67 0 .34 0 .28 0 .82 0 .93 0 .63
+Industry Portfolio: SOFTW CHIPS LABEQ PAPER BOXES TRANS WHLSL
+FOMC dummy 0 .48 0 .54 0 .44 0 .18 0 .27 0 .45 0 .30
+[0.15]∗∗∗ [0.16]∗∗∗ [0.14]∗∗∗ [0.10]∗ [0.12]∗∗ [0.11]∗∗∗ [0.10]∗∗∗
+FOMC Sharpe Ratio 0 .80 0 .82 0 .83 0 .46 0 .57 0 .99 0 .76
+Industry Portfolio: RTAIL MEALS BANKS INSUR RLEST FIN OTHER
+FOMC dummy 0 .33 0 .27 0 .56 0 .42 0 .35 0 .70 0 .30
+[0.12]∗∗∗ [0.11]∗∗ [0.19]∗∗∗ [0.14]∗∗∗ [0.16]∗∗ [0.19]∗∗∗ [0.12]∗∗∗
+FOMC Sharpe Ratio 0 .74 0 .64 0 .72 0 .77 0 .53 0 .92 0 .61
+Notes: This table provides results for FOMC dummy variable regressions for diﬀerent U.S. equity portfolios
+for the sample period from Sep 1, 1994 through Mar 30, 2011. The dependent variables are the daily excess
+returns on the 49 Industry portfolios provided on Ken French’s website. “FOMC dummy” denotes a variable that
+takes on the value of one on days of scheduled FOMC announcements and 0 otherwise. “FOMC Sharpe Ratio”
+is the annualized Sharpe-ratio on pre-FOMC returns.*** signiﬁcant at 1%, ** signiﬁcant at 5%, *signiﬁcant at
+10%. Robust standard error shown in brackets.
+60
+=== PAGE 62 ===
+T able A.4: CRSP Value-Weighted Industry Portfolio Regressions: 1980-2011
+Dependent V ariable: %log-excess-return of CRSP Industry portfolio
+Industry Portfolio: AGRIC FOOD SODA BEER SMOKE TOYS FUN
+FOMC dummy 0 .12 0 .14 −0.02 0 .08 0 .09 0 .25 0 .33
+[0.10] [0 .06]∗∗ [0.13] [0 .08] [0 .10] [0 .09]∗∗∗ [0.12]∗∗∗
+FOMC Sharpe Ratio 0 .26 0 .53 0 .02 0 .29 0 .24 0 .49 0 .55
+Industry Portfolio: BOOKS HSHLD CLTHS HLTH MEDEQ DRUGS CHEMS
+FOMC dummy 0 .27 0 .20 0 .28 0 .25 0 .17 0 .30 0 .30
+[0.08]∗∗∗ [0.07]∗∗∗ [0.08]∗∗∗ [0.08]∗∗∗ [0.07]∗∗ [0.07]∗∗∗ [0.08]∗∗∗
+FOMC Sharpe Ratio 0 .65 0 .60 0 .65 0 .62 0 .48 0 .82 0 .75
+Industry Portfolio: RUBBR TXTLS BLDMT CNSTR STEEL FABPR MACH
+FOMC dummy 0 .22 0 .37 0 .25 0 .28 0 .31 0 .40 0 .30
+[0.08]∗∗∗ [0.09]∗∗∗ [0.08]∗∗∗ [0.11]∗∗ [0.10]∗∗∗ [0.11]∗∗∗ [0.08]∗∗∗
+FOMC Sharpe Ratio 0 .53 0 .73 0 .58 0 .48 0 .58 0 .63 0 .69
+Industry Portfolio: ELCEQ AUTOS AERO SHIPS GUNS GOLD MINES
+FOMC dummy 0 .39 0 .35 0 .32 0 .21 0 .18 0 .29 0 .33
+[0.09]∗∗∗ [0.10]∗∗∗ [0.10]∗∗∗ [0.10]∗∗ [0.09]∗∗ [0.15]∗ [0.10]∗∗∗
+FOMC Sharpe Ratio 0 .81 0 .67 0 .66 0 .38 0 .39 0 .34 0 .59
+Industry Portfolio: COAL OIL UTIL TELCM PERSV BUSSV HARDW
+FOMC dummy 0 .33 0 .22 0 .11 0 .10 0 .26 0 .25 0 .30
+[0.16]∗∗ [0.09]∗∗ [0.06]∗∗ [0.08] [0 .08]∗∗∗ [0.07]∗∗∗ [0.11]∗∗∗
+FOMC Sharpe Ratio 0 .40 0 .51 0 .43 0 .28 0 .57 0 .72 0 .52
+Industry Portfolio: SOFTW CHIPS LABEQ PAPER BOXES TRANS WHLSL
+FOMC dummy 0 .33 0 .38 0 .30 0 .16 0 .23 0 .34 0 .24
+[0.11]∗∗∗ [0.10]∗∗∗ [0.10]∗∗∗ [0.07]∗∗ [0.08]∗∗∗ [0.08]∗∗∗ [0.07]∗∗∗
+FOMC Sharpe Ratio 0 .56 0 .71 0 .60 0 .47 0 .55 0 .80 0 .68
+Industry Portfolio: RTAIL MEALS BANKS INSUR RLEST FIN OTHER
+FOMC dummy 0 .24 0 .22 0 .32 0 .28 0 .15 0 .47 0 .25
+[0.08]∗∗∗ [0.07]∗∗∗ [0.11]∗∗∗ [0.08]∗∗∗ [0.10] [0 .11]∗∗∗ [0.08]∗∗∗
+FOMC Sharpe Ratio 0 .62 0 .60 0 .54 0 .63 0 .25 0 .80 0 .56
+Notes: This table provides results for FOMC dummy variable regressions for diﬀerent U.S. equity portfolios
+for the sample period from Jan 2, 1980 through Mar 30, 2011. The dependent variables are the daily excess
+returns on the 49 Industry portfolios provided on Ken French’s website. “FOMC dummy” denotes a variable that
+takes on the value of one on days of scheduled FOMC announcements and 0 otherwise. “FOMC Sharpe Ratio”
+is the annualized Sharpe-ratio on pre-FOMC returns.*** signiﬁcant at 1%, ** signiﬁcant at 5%, *signiﬁcant at
+10%. Robust standard error shown in brackets.
+61
+=== PAGE 63 ===
+T able A.5: CRSP Size Portfolio Regressions: 1994-2011
+Dependent V ariable: %Log-excess-return of CRSP portfolio index
+Portfolio: Value Weighted Equal Weighted 1st Decile 2nd Decile 3rd Decile 4th Decile
+FOMC dummy 0 .35 0 .25 0 .20 0 .40 0 .42 0 .44
+[0.10]∗∗∗ [0.08]∗∗∗ [0.08]∗∗ [0.12]∗∗∗ [0.12]∗∗∗ [0.11]∗∗∗
+Const. 0 .01 0 .06 0 .02 0 .02 0 .02 0 .01
+[0.02] [0 .02]∗∗∗ [0.02] [0 .02] [0 .02] [0 .02]
+Annual ex-return FOMC 2 .90 2 .45 1 .79 3 .32 3 .47 3 .56
+Annual ex-return non-FOMC 2 .34 14 .66 5 .77 3 .92 3 .69 2 .20
+FOMC Sharpe Ratio 0 .92 0 .93 0 .71 0 .86 0 .93 0 .98
+Portfolio: 5th Decile 6th Decile 7th Decile 8th Decile 9th Decile 10th Decile
+FOMC dummy 0 .46 0 .40 0 .39 0 .39 0 .37 0 .31
+[0.11]∗∗∗ [0.10]∗∗∗ [0.10]∗∗∗ [0.10]∗∗∗ [0.10]∗∗∗ [0.10]∗∗∗
+Const. 0 .01 0 .01 0 .02 0 .01 0 .02 0 .01
+[0.02] [0 .02] [0 .02] [0 .02] [0 .02] [0 .02]
+Annual ex-return FOMC 3 .73 3 .26 3 .26 3 .20 3 .10 2 .52
+Annual ex-return non-FOMC 2 .61 3 .35 4 .23 3 .36 3 .66 1 .80
+FOMC Sharpe Ratio 1 .06 1 .03 1 .05 0 .99 0 .98 0 .80
+Notes: This table provides results for FOMC dummy variable regressions for diﬀerent U.S. equity portfolios for the sample
+period from Sep 1, 1994 through Mar 30, 2011. The dependent variables are the daily excess returns on the value-weighted and
+equally-weighted market portfolio from CRSP as well as the 10 size decile portfolios provided on Ken French’s website. “FOMC
+dummy” denotes a variable that takes on the value of one on days of scheduled FOMC announcements and 0 otherwise. “Annual ex-
+return FOMC” is the average cumulative annual excess return of FOMC day returns, and “Annual ex-return non-FOMC” denotes
+the average cumulative annual excess return of non-FOMC day returns in the sample. “FOMC Sharpe Ratio” is the annualized
+Sharpe-ratio on pre-FOMC returns.*** signiﬁcant at 1%, ** signiﬁcant at 5%, *signiﬁcant at 10%. Robust standard error shown
+in brackets.
+62
+=== PAGE 64 ===
+T able A.6: CRSP Size Portfolio Regressions: 1980-2011
+Dependent V ariable: %Log-excess-return of CRSP portfolio index
+Portfolio: Value Weighted Equal Weighted 1st Decile 2nd Decile 3rd Decile 4th Decile
+FOMC dummy 0 .27 0 .13 0 .10 0 .23 0 .26 0 .28
+[0.07]∗∗∗ [0.05]∗∗ [0.05]∗ [0.07]∗∗∗ [0.07]∗∗∗ [0.07]∗∗∗
+Const. 0 .01 0 .06 0 .02 0 .02 0 .02 0 .02
+[0.01] [0 .01]∗∗∗ [0.01]∗ [0.01] [0 .01] [0 .01]
+Annual ex-return FOMC 2 .20 1 .48 0 .89 1 .89 2 .20 2 .28
+Annual ex-return non-FOMC 3 .42 14 .56 4 .36 3 .79 4 .49 3 .68
+FOMC Sharpe Ratio 0 .78 0 .66 0 .41 0 .60 0 .72 0 .76
+Portfolio: 5th Decile 6th Decile 7th Decile 8th Decile 9th Decile 10th Decile
+FOMC dummy 0 .29 0 .26 0 .26 0 .27 0 .29 0 .26
+[0.07]∗∗∗ [0.06]∗∗∗ [0.06]∗∗∗ [0.07]∗∗∗ [0.07]∗∗∗ [0.07]∗∗∗
+Const. 0 .02 0 .02 0 .02 0 .02 0 .02 0 .01
+[0.01] [0 .01] [0 .01]∗ [0.01] [0 .01] [0 .01]
+Annual ex-return FOMC 2 .39 2 .21 2 .22 2 .24 2 .40 2 .15
+Annual ex-return non-FOMC 4 .38 4 .80 5 .00 4 .53 4 .29 3 .05
+FOMC Sharpe Ratio 0 .81 0 .82 0 .83 0 .78 0 .84 0 .72
+Notes: This table provides results for FOMC dummy variable regressions for diﬀerent U.S. equity portfolios for the sample
+period from Jan 2, 1980 through Mar 30, 2011. The dependent variables are the daily excess returns on the value-weighted and
+equally-weighted market portfolio from CRSP as well as the 10 size decile portfolios provided on Ken French’s website. “FOMC
+dummy” denotes a variable that takes on the value of one on days of scheduled FOMC announcements and 0 otherwise. “Annual ex-
+return FOMC” is the average cumulative annual excess return of FOMC day returns, and “Annual ex-return non-FOMC” denotes
+the average cumulative annual excess return of non-FOMC day returns in the sample. “FOMC Sharpe Ratio” is the annualized
+Sharpe-ratio on pre-FOMC returns.*** signiﬁcant at 1%, ** signiﬁcant at 5%, *signiﬁcant at 10%. Robust standard error shown
+in brackets.
+63

@@ -1,0 +1,33 @@
+{
+  "id": "trend_momentum_trends_everywhere_etf",
+  "sources": [
+    "https://www.aqr.com/-/media/AQR/Documents/Insights/Journal-Article/AQR-Trends-Everywhere_JOIM.pdf"
+  ],
+  "instruments": [
+    "EEM",
+    "VGK",
+    "EWJ",
+    "VNQ",
+    "HYG",
+    "LQD",
+    "EMB",
+    "TIP",
+    "XLB",
+    "XLE",
+    "XLF",
+    "XLI",
+    "XLK",
+    "XLP",
+    "XLU",
+    "XLV",
+    "XLY"
+  ],
+  "variant": "V3",
+  "rule": "V1 with s clipped at 0 (long or T-bills), book 10%, gross<=2, next_open",
+  "selected_on": "highest in-sample net Sharpe among V1-V3 on the common window",
+  "is_window": "2006-02-01..2024-10-02",
+  "series_start": "2006-02-01",
+  "series_end": "2026-10-02",
+  "columns": "daily excess returns over T-bill: net_1x (realistic costs), net_2x (2x costs), gross",
+  "in_sample_end": "2024-10-02"
+}

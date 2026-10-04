@@ -1,0 +1,14 @@
+{
+  "label": "exploratory, post-NO-GO; cannot rescue G3; no trading claim",
+  "features": "PLACEBO FEATURES (synthetic; not a result)",
+  "placebo_tree": true,
+  "fedpress_root": "<scratch>\\placebo_features\\tree_posctrl",
+  "seed": 20261003,
+  "draws": 9999,
+  "prereg_sha256": "e030af98df6fb194532c236890986619341f6e14a457384cfc3ec4bba5dca6d0",
+  "addendum_code": "lib.py (ADDENDUM 1, 7, 8)",
+  "features_manifest": "b4ab16c4a674e9f001c58baa9bd12c1da265700a25395968a7913c2271ab0159  answers_h234.parquet\na2895de0ec5d01883262223a3a4ac0065c20788205a3b4903c1d90e7137c0de5  meetings_h234.parquet\n0a960feda2f10bdfed1e676a9498dfba98eb4c770b880b8a468d9d384481289b  voice_chunks_assigned.parquet\n",
+  "positions_manifest": "0b73d65ac49378fd729f947a19f2bb76f42d9de467145e18fb38ab7373fdb1db  answer_sel_H2_h1.csv\n84ed9ddf4510aec9d65228a87fd476862f295adcb04c3f7fdb559849446f8ed9  answer_sel_H2_h15.csv\n8b4201fda8288f40f6a8ecce91c40143dba7184161822ebcf5a0dce885fd148c  answer_sel_H2_h5.csv\n849491cd656df03d8bfc3f468d35d2811b0e46c6ae4690e7f32c07ccc2abaeec  answer_sel_H2D_h1.csv\n91566c03771fdc8a35e6fda4c4eb99843cd079d9b4da2747db3c9c0c34b4e3da  answer_sel_H2D_h15.csv\ne753f3fc6c66d744e08243e648aea07e1866a59413423b132d1a97363df1b0fd  answer_sel_H2D_h5.csv\n9b6dfcab07c61629817e82eb2097e2b3d8bc70a68e58761c91ef179b1241ce50  answer_sel_H2V_h1.csv\n0162fd05263b53e957e034b960a86094def8c66a5c7cfd29b0db3c68ff58eb71  answer_sel_H2V_h15.csv\n31390b36bcb51e187e80a906c9375a991ba7020b5629d38d06abbc81f647d2b7  answer_sel_H2V_h5.csv\nad38f1aaf436102808378362600027adeb6b886d96ad97beec179aed91b090d1  answer_sel_H3_h1.csv\n1b59019ce9406a546018799df4d62bb40a4c1d1a4940a9099d3c9eb78cd354c7  answer_sel_H3_h15.csv\nf2e2c2c5faaff8cfd1337d9aa1c2d14efbfac7e63af40422b5df00c4de330ba5  answer_sel_H3_h5.csv\n636ebe617dcbd00363c57f5fa7cc38d02f03b9832d8d0224346a17cf49e498c1  answer_sel_H4_h1.csv\n694e5f6b8bea2333d90ccd9585dd491eb1d2029aa64e06c10bc403377939b620  answers_h234_positions.csv\n52267c270d3de4b5cd5ade451dbddc36dc143eb65f2e153fea944cd1bdeaf810  known_at_comparison.csv\n8ba68efee8a1a4b6820cf73e43b98588b36fe83778e503d6402eb05430cadd58  meetings_h234_positions.csv\n37bdcb3cd648cbcc20923fbba420074ee72da5ae6dfb6dd93705b81075468f9c  positions_status.json\n",
+  "fit_sha256": "501117caefde1b4a66afc825828a9d77d45023dfbc30b9b6617ae002ee353403",
+  "bad_quote_records_skipped": 1593
+}

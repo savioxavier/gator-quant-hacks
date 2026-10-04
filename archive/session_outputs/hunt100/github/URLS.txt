@@ -1,0 +1,37 @@
+# github label source list (2026-10-03). [R] = README/doc read, [C] = code read for rule only, [W] = web page fetched
+[R][C] https://github.com/ArturSepp/TrendFollowingSystems
+[C] https://github.com/ArturSepp/QuantInvestStrats (src/qis/models/linear/ewm.py)
+[R] https://ssrn.com/abstract=3167787 (cited by repo)
+[R] https://github.com/phuazz/trend-replication-lab (README, SPEC.md)
+[R][C] https://github.com/hobinkwak/CTA-Position-Monitoring (README, ctarep/config.py); Kestner 2020 https://ssrn.com/abstract=3674828
+[R][C] https://github.com/pst-group/pysystemtrade (docs/introduction.md, docs/backtesting.md, systems/provided/rules/*, systems/provided/rob_system/*)
+[W] https://qoppac.blogspot.com/2021/12/my-trading-system.html
+[W] https://qoppac.blogspot.com/2016/05/a-simple-breakout-trading-rule.html
+[W] https://qoppac.blogspot.com/search?q=mean+reversion+in+the+wings
+[R] https://github.com/paperswithbacktest/awesome-systematic-trading (README current and commit 5c204c5 of 2024-04-13; static/strategies/*.py headers)
+[R] https://github.com/QuantConnect/Tutorials (04 Strategy Library: 36 strategy write-ups)
+[C] https://github.com/QuantConnect/Lean (Algorithm.Python/Alphas/*)
+[R] https://github.com/akadigari/trendlab (README, reports/report.md)
+[R] https://github.com/toniker10/SPY-IBS-Mean-Reversion-Strategy
+[R] https://github.com/NafizNoor1/overnight-anomaly
+[R] https://github.com/Taff1887/leveraged-trend-following
+[R] https://github.com/giovannibrusco/zarattini-2024-momentum-spy
+[R] https://github.com/PazSheimy/spy-intraday-momentum-oos
+[R] https://github.com/francesco-nicolo/intraday-momentum-replication
+[R] https://github.com/blackswan-quants/intraday-momentum ; https://github.com/Ascensao/Intraday-momentum-strategy ; https://github.com/nyyyaomi/intraday-momentum-research
+[R] https://github.com/DevMindset21/Cointegration-Pairs-Trading ; https://github.com/jen-dan/pairs-trading ; https://github.com/VincentTLe/pairs-trading-sector-etf
+[R] https://github.com/AJYS-Arc/futures_trend_following
+[R] https://github.com/billybraith17/commodity-carry-strategy
+[R] https://github.com/ilahuerta-IA/carver-systematic-trading
+[R] https://github.com/jacobmorrisva/yield-gap-fed-model-replication
+[R] https://github.com/peterchettiar/trading-volatility ; https://github.com/eigenquant53/VRP ; https://github.com/Morwane/vix-vol-carry
+[R] https://github.com/dws-data/nas-orb-backtester ; https://github.com/jefrnc/strategy-orb15-momentum
+[R] https://github.com/rkohli3/TSMOM ; https://github.com/quantgalore/Time-Series-Momentum ; https://github.com/engineerinvestor/systematic-trend-following-with-managed-futures
+[R] https://github.com/oronimbus/tactical-asset-allocation ; https://github.com/AleksLi1/Accelerating_Dual_Momentum ; https://github.com/DonaldPG/PyTAAA ; https://github.com/xiqicpt/mebfaber_gtaa_model_backtest
+[R] https://github.com/jackmin97/Momentum-in-US-Treasury-Bond-ETFs
+[R] https://github.com/je-suis-tm/quant-trading
+[R] https://github.com/Dimas-100/webull-trading-system ; https://github.com/0xWick/Pine-Strategy-RSI2
+[R] https://github.com/paappraiser/almanac-trading-strategies ; https://github.com/nupursol/spy-gap-fade
+[R] https://github.com/Nicolas8330/momentum-spxl ; https://github.com/JMA1911/macro-driven-fixed-income-trading
+[R] https://github.com/wilsonfreitas/awesome-quant
+[R] https://github.com/angiekwang/pre-fomc-drift-replication

@@ -1,0 +1,1 @@
+PARSE {"ok": true, "command": "status", "stages": null, "shard": null, "set": ["compute.gpu_type=cpu"], "empty_args": []}

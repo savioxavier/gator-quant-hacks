@@ -1,0 +1,2 @@
+null (beta 0)         : P(GO) 0.039 | P(label | GO): clock 0.29 | base 0.49 | exec_live 0.03 | px 0.16 | any_sig_rule 0.60 | any 0.66
+alternative beta 0.33 : P(GO) 0.221 | P(label | GO): clock 0.22 | base 0.36 | exec_live 0.04 | px 0.12 | any_sig_rule 0.47 | any 0.52

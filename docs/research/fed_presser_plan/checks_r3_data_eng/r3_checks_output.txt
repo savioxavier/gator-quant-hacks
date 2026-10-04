@@ -1,0 +1,79 @@
+1. chair-answer ends in 15:00:00-15:01:10 ET (VTT proxy, r1 trailing-600 s hi)
+    date          grp  n_answer_ends  ends_1500_150110  tau_wall_minus_1500_s
+20230322 confirmation             34                 1                  865.5
+20230503 confirmation             33                 0                 1219.9
+20230920 confirmation             32                 0                 1484.9
+20240131 confirmation             37                 1                 1245.8
+20240501 confirmation             36                 2                 1208.9
+20240612 confirmation             30                 0                 1364.0
+20240731 confirmation             34                 1                 1101.8
+20240918 confirmation             36                 1                 1240.4
+20241107 confirmation             31                 0                  791.4
+20241218 confirmation             32                 1                 1419.6
+20250129 confirmation             39                 0                 1236.3
+20250319 confirmation             38                 1                 1206.8
+20250507 confirmation             38                 0                 1133.1
+20250618 confirmation             33                 1                 1324.0
+20250730 confirmation             34                 1                  917.0
+20250917 confirmation             36                 1                 1383.5
+20251029 confirmation             33                 1                 1512.8
+20260128 confirmation             43                 1                 1067.0
+20260318 confirmation             35                 1                 1122.8
+20260429 confirmation             37                 1                 1555.1
+20260617        warsh             24                 1                  816.3
+20260729        warsh             23                 1                  975.5
+20260916        warsh             18                 2                    9.7
+   cue rate: median trailing-600 s cues 173.0 -> about 17.3 cues per minute; 20 cues need about 69 s
+   confirmation meetings with at least one such answer end: 14 of 20
+
+2. GDELT CNBC rows by year: {'2016': 4, '2017': 4, '2018': 4, '2019': 8, '2020': 9, '2021': 8, '2022': 8, '2023': 8, '2024': 7}
+   anchored confirmation meetings with a GDELT offset: 9 of 20 | last GDELT date 20241107
+   +14.6 s moves the entry bar in 4 of 20 (with GDELT: 3 of 9)
+   +30.0 s moves the entry bar in 10 of 20 (with GDELT: 5 of 9)
+
+3. IA FBC minus CNBC offset (s), 2023+:
+station    CNBC    FBC  fbc_minus_cnbc
+date_key                              
+20230920   38.8   56.0            17.2
+20240131  -15.8   13.5            29.3
+20240918  -13.1   19.0            32.1
+20241107   35.5   65.2            29.7
+20241218   33.2   57.2            24.0
+20250129   41.2   71.3            30.1
+20250319    7.0   40.9            33.9
+20250507   48.4   53.8             5.4
+20250618   19.1   21.7             2.6
+20250730   60.0   62.8             2.8
+20250917   38.5   46.9             8.4
+20251029   20.9   30.4             9.5
+20251210    NaN    NaN             NaN
+20260128   40.9   39.5            -1.4
+20260318   13.8   20.5             6.7
+20260429  111.1  102.9            -8.2
+20260617   44.5   39.3            -5.2
+20260729   53.6   45.4            -8.2
+20260916   64.2   64.0            -0.2
+   confirmation meetings with both stations: 15 ; entry bar moves under max(CNBC, FBC): 2
+
+4. VTT greeting offset vs VTT overrun past MP4 end (2016+ captioned): median greeting 11.486
+    date  greeting_s  last_cue_end_s  duration_s  overrun_s
+20190501        29.4          2670.1      2471.7      198.4
+20200303         NaN           863.0       831.1       31.9
+20200610        36.7          3517.6      3489.5       28.1
+20210317       143.9          3881.5      3596.4      285.1
+20221102        20.2          3005.4      2726.8      278.6
+20230201        55.0          2852.9      2677.1      175.8
+20240131        64.4          3046.6      2968.7       77.9
+20240918        47.2          3039.7      2985.7       54.0
+20251029        25.1          3314.3      3290.4       23.9
+   Spearman(greeting, overrun): SignificanceResult(statistic=np.float64(0.3650367650908499), pvalue=np.float64(0.0023872375045308823))
+
+5. smoke inventory
+   logs\pass1_max120\text.log | 18:15:41 I fedpress.text: text.scored stage=text presser_id=20200303 run_id=20261003T181535-BLADEMASTER sentences=128 units=21 primary=chrono_wf:b2019_l2019
+   logs\pass3_two\text.log | 18:21:16 E fedpress.text: stage.failed stage=text presser_id=20190501 run_id=20261003T182114-BLADEMASTER error=RuntimeError("primary stance model chrono_wf unavailable: FileNotFoundError('walk-forward model b2018_l2018 seed 42 mis
+   logs\pass3_two\text.log | RuntimeError: primary stance model chrono_wf unavailable: FileNotFoundError('walk-forward model b2018_l2018 seed 42 missing (X:\\root\\models\\stance_walkforward\\b2018_l2018\\seed42); run `python -m fedpress.train.stance_walkforw
+   scored text units on disk: root\meetings\20200303\text\text_units.parquet
+   root\models\stance_walkforward\b2019_l2019\seed42\meta.json {'smoke': False, 'n_train': 1654, 'device': 'cuda', 'host': 'BLADEMASTER', 'torch': '2.8.0+cu128', 'created_utc': '2026-10-03T22:26:43+00:00'}
+   root\models\stance_walkforward\b2019_l2019\seed43\meta.json {'smoke': False, 'n_train': 1654, 'device': 'cuda', 'host': 'BLADEMASTER', 'torch': '2.8.0+cu128', 'created_utc': '2026-10-03T22:26:52+00:00'}
+   root\models\stance_walkforward\b2019_l2019\seed44\meta.json {'smoke': False, 'n_train': 1654, 'device': 'cuda', 'host': 'BLADEMASTER', 'torch': '2.8.0+cu128', 'created_utc': '2026-10-03T22:27:23+00:00'}
+   hpg smoke.sbatch default meeting: 20250917 | header says the trained stance models are real and reused: True | prints h1_gap: True

@@ -1,0 +1,5 @@
+utc,family,name,period,cost_mult,params_hash,params,sharpe,ann_return,max_drawdown,turnover_per_year,n_days,git,note
+2026-10-03T16:33:10+00:00,FORWARD,FWD_F1,FWD,1.0,8198fa7f37,"{""strategy"": ""F1""}",-2.1695,-0.06168,-0.0415,0.0,68,nogit,forward test evaluation
+2026-10-03T16:33:11+00:00,FORWARD,FWD_F2,FWD,1.0,69703b2b08,"{""strategy"": ""F2""}",43.9636,0.07339,0.0,0.0,68,nogit,forward test evaluation
+2026-10-03T16:33:12+00:00,FORWARD,FWD_F3,FWD,1.0,ad6c384c55,"{""strategy"": ""F3""}",3177.928,0.09721,0.0,0.0,68,nogit,forward test evaluation
+2026-10-03T16:33:12+00:00,FORWARD,FWD_TSMOM_F,FWD,1.0,8c781b5fa9,"{""strategy"": ""TSMOM_F""}",3177.928,0.10605,0.0,0.0,68,nogit,forward test evaluation

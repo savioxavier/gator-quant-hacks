@@ -1,0 +1,14 @@
+{
+  "stage": "audio",
+  "presser_id": "20200729",
+  "status": "ok",
+  "outputs": [
+    "audio/audio.json"
+  ],
+  "notes": {
+    "duration_s": 3567.9
+  },
+  "run_id": "PLACEBO",
+  "placebo": "PLACEBO: synthetic tree, not package output",
+  "finished_utc": "2026-10-03T23:43:57+00:00"
+}

@@ -1,0 +1,5 @@
+url=https://www.frbsf.org/wp-content/uploads/USMPD.xlsx
+landing=https://sffed.us/usmpd
+sha256=f02bfcbf80cf597548d4fccb5a80b30cb1f4373a7d50e26fd1def097d43df1aa
+fetched=2026-10-03
+readme_last_update=17 September 2026

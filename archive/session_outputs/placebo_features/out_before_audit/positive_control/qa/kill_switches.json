@@ -1,0 +1,40 @@
+{
+  "H2": {
+    "killed": false,
+    "reasons": [],
+    "g4_share_arousal": 0.0,
+    "g4_n_post_burnin": 48,
+    "g4_share_dominance_descriptive": 0.0,
+    "source_invariance": {
+      "status": "source invariance not checked",
+      "icc31": null
+    },
+    "labels": [
+      "exploratory, post-NO-GO; cannot rescue G3; no trading claim",
+      "source invariance not checked"
+    ]
+  },
+  "H3": {
+    "killed": false,
+    "reasons": [],
+    "g4": {
+      "BD": {
+        "share": 0.0,
+        "n_post_burnin": 48
+      },
+      "BI": {
+        "share": 0.0,
+        "n_post_burnin": 48
+      },
+      "ES": {
+        "share": 0.0,
+        "n_post_burnin": 48
+      }
+    },
+    "av_skew": "not estimated, not corrected (A-33; cannot break causality)",
+    "labels": [
+      "exploratory, post-NO-GO; cannot rescue G3; no trading claim"
+    ]
+  },
+  "placebo_tree": true
+}

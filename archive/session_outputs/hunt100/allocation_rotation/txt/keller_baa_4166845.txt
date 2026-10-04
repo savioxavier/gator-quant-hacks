@@ -1,0 +1,710 @@
+
+=== page 1 ===
+1 
+ 
+Relative and Absolute Momentum in Times of Rising/Low Yields: Bold Asset Allocation (BAA) 
+Wouter J. Keller, July 18, 2022, v0.981 
+Abstract 
+Our aim is to develop a very offensive (‘aggressive’) tactical asset allocation strategy, by combining 
+some of our previous models like Protected- (PAA), Vigilant- (VAA) and Defensive (DAA) Asset 
+Allocation. We will call this new strategy the ‘Bold Asset Allocation’ (BAA). BAA combines a slow 
+relative momentum with a fast absolute momentum and crash protection, based on the concept of 
+the ‘canary’ universe, where we switch from our offensive to the defensive universe when any of the 
+assets in the canary universe has negative absolute momentum. As a result, BAA spends ca 60% in 
+the defensive universe. By enhancing this defensive universe beyond cash, we find very impressive 
+returns (>=20%) with low monthly max drawdowns (<=15%) over Dec 1970 – Jun 2022.  
+1. Introduction 
+Momentum of stocks was (re)discovered in the academic investment literature by Jegadeesh (1993). 
+Since Faber (2010), there is also a lot of practical interest in tactical asset allocations (or strategies) 
+based on simple momentum models, like the SMA10 trend filter. With the arrival of ETFs (like SPY 
+and IEF2) as asset classes, this approach has become very popular, see also Faber (2013) and 
+Antonacci (2014) and some of the other literature in section 7.  
+ 
+In case of our SMA10 example, the trendline is defined as the average of the last 10 monthly prices. 
+Now, momentum is zero when the current (total return) price equals the trendline, positive when it 
+is higher and negative (or ‘bad’ momentum) when it is below.  
+The core of these momentum models is a switch from an ‘offensive’ (or risky) single asset (like SPY) 
+or universe to a ‘defensive’ (or risk-off) single asset (like IEF) or universe, depending on the number 
+of ‘bad’ assets in the offensive universe. This is called trendfollowing or absolute momentum. Since 
+it is effective in limiting drawdowns, we will also call this ‘crash protection’. 
+The choice of the best assets within an universe is often based on relative momentum: the assets 
+with the highest momentum form, say, the Top3 assets, often equally weighted. This holds for both 
+the offensive as well as the defensive universe. When both universes consists of only one asset (eg 
+SPY as offensive and IEF as defensive), only absolute momentum matters. 
+Our strategies PAA (Protective Asset Allocation, see Keller 2016), VAA (Vigilant Asset Allocation, see 
+Keller 2017) and DAA (Defensive Asset Allocation, see Keller 2018) all added some new momentum 
+filters, eg. a slower SMA12 from PAA for relative momentum and a faster filter called 13612W from 
+VAA and DAA for absolute momentum. Plus so-called ‘breadth momentum’. With this breadth 
+momentum, the fraction defensive assets (risk-off) is determined by the breadth of a portfolio, ie. 
+the number of assets with a ‘bad’ momentum. It replaces the traditional absolute momentum rule, 
+where often each of the selected offensive assets (in, say, the Top3) were replaced by a defensive 
+asset (like IEF) when it had a negative trend.  
+With the traditional absolute momentum rule, when choosing eg. the Top3 best assets from an 
+offensive universe of say 12 assets, switching to defensive (ie. ‘crash protection’) only occurs very 
+late, ie. when at least 10 assets are bad. With our ‘breadth momentum’ parameter eg. B=6, 
+ 
+1 I thank Jos vd Berkmortel, Jan Willem Keuning, and Bas Nagtzaam for comments. All errors are mine. 
+2 SPY is the ETF for the US SP500 index, IEF the ETF for the US 7-10y Treasuries index. 
+Electronic copy available at: https://ssrn.com/abstract=4166845
+=== page 2 ===
+2 
+ 
+switching to defensive occurs for 100% when at least 6 out of 12 assets are bad, and eg for 50% 
+when 3 assets are bad, etc.  
+In addition, we introduced a ‘canary’ or protective universe in DAA, separate from the offensive 
+universe. Now switching is determined by the number of bad assets in the canary universe (see 
+breadth example above, now applied to the protective universe). So, we distinguish three different 
+universes: offensive, defensive and protective.   
+The BAA (Bold Asset Allocation) strategy discussed below is based on a mix of all these techniques:  
+1. Different momentum filters: slow for relative momentum for the offensive and defensive 
+universes and very fast for absolute momentum for the protective (or canary) universe. 
+2. Very fast ‘crash protection’, based on the concept of the ‘canary’ universe, where we switch 
+from our offensive to the defensive universe when any of the assets in the canary universe 
+has negative abs momentum (B=1). As a result, BAA spends around 60% in defensive mode. 
+3. Enhancement of this defensive universe beyond ‘cash’ is done by adding Commodities (DBC) 
+to all available bonds (including inflation-linked TIP and excluding risky HYG) in the defensive 
+universe in order to provide some sort of ‘save heaven’ for times with low/rising yields and 
+ditto inflation.  
+ 
+ 
+2. From PAA to BAA 
+Our new BAA (Bold Asset Allocation) strategy is inspired by our previous asset allocation strategies, 
+like PAA, VAA and DAA. To understand the basic concepts needed for our new BAA strategy, we first 
+look at our PAA-G12 model (with G12 standing for the Global offensive universe with 12 assets, see 
+Keller, 2016) as an example (see fig 1).3 
+ 
+Period Start Stop R D V K UPI SR DF R6040 
+IS1 Dec 70 Dec 80 16.7% 8.0% 7.3% 13.5% 5.42 1.33 43.9% 7.3% 
+IS2 Jun 12 Jun 22 5.8% 4.6% 5.7% 5.2% 2.64 0.92 54.0% 8.8% 
+OS Dec 80 Jun 12 12.7% 11.2% 7.8% 9.0% 2.70 0.98 51.8% 10.4% 
+RS Jun 02 Jun 22 8.9% 7.0% 7.5% 7.5% 3.24 1.03 48.2% 7.6% 
+FS Dec 70 Jun 22 12.1% 11.2% 7.4% 8.6% 3.03 1.02 50.7% 9.5% 
+SelO= SPY, QQQ, IWM, VGK, EWJ, VWO, VNQ, DBC, GLD, TLT, HYG, LQD D6040= 29.5% 
+SelD= BIL, IEF  TOver= 284% 
+SelP= SPY, QQQ, IWM, VGK, EWJ, VWO, VNQ, DBC, GLD, TLT, HYG, LQD TrM/y= 8.6 
+ NO=12, ND=2, NP=12, LO=12, LD=12, LP=12, B=6, TO=6, TD=1,  TC%=0.1   K/IS= 9.4% 
+Fig 1 PAA-G12  
+ 
+To prevent information overload, we will gradually explain all the parameters in these ‘heavy’ figs in 
+our discussion of PAA-G12 and its BAA siblings. Notice that we have changed our original PAA 
+terminology (see Keller, 2016) slightly (eg. Offensive/Defensive instead of Risky/Cash universes).  
+ 
+3 In our PAA paper we focussed on PAA2 IEF, here we added BIL (‘Cash’) for didactical reasons (and instead of 
+SHY which might not be an appropriate asset for today’s low yield market). 
+Electronic copy available at: https://ssrn.com/abstract=4166845
+=== page 3 ===
+3 
+ 
+But before discussing the universes in more detail, we should mention the assets (or ETF’s) in these 
+universes. In fig 2 we show the list of all our 17 ETF’s discussed in this paper for which we have 
+monthly total return proxies available from Dec 1969 (including 1y lag for momentum)4. As is shown 
+in fig 1, for PAA-G12 we use all these 17 assets/ETFs (7 stocks, 3x alternatives or alts, and 7x bonds).  
+ 
+7x Stocks: SPY (US SP500), QQQ (US Nasdaq), IWM (US Small Cap), VGK (Europe), EWJ (Japan), 
+VWO (Emerging), VEA (Developed Markets) 
+3x Alts: VNQ (US Real Estate), DBC (Commodities), GLD (Gold) 
+7x Bonds: BIL (US 1-3m T-Bill), IEF (US 7-10y Treasuries), TLT (US 20y Treas.), LQD (US Inv. 
+Grade), HYG (US High Yield), TIP (US Inflation-Protected Treas.), BND (Total Bond Market) 
+Fig 2  ETFs used (with monthly data from Dec 1969) 
+ 
+There are always three universes (Offensive, Defensive and Protective), where we switch between 
+the Offensive and the Defensive universe. This switching is based on the ‘breadth momentum’ of the 
+Protective (or ‘canary’) universe (see Keller 2018). For PAA-G12, the Offensive and Protective 
+universe are equal and contains 12 assets (so NO=NP=12, see SelO and SelP in fig 1). The so-called 
+breadth parameter B equals six (B=6).  
+This implies that the switching is 100% to defensive when at least six of the canary assets show 
+negative (or ‘bad’) absolute momentum, no switching (so 0% defensive) with no canary assets ‘bad’, 
+and so on, proportionally for 0<#bad<6. The Defensive universe of PAA-G12 only holds two assets, 
+BIL and IEF (see SelD), so ND=2. All our assets are ETFs, traded at month end. 
+Besides absolute momentum, we will also use relative momentum in order to determine the 
+selection of the best assets in the Offensive  and Defensive universe. For PAA-G12, we select the 
+best Top6 offensive assets (TO=6) and the single best Defensive asset (TD=1) with the same (rather 
+slow) momentum measure, ie. SMA(12). This momentum filter is used in PAA for both absolute and 
+relative momentum for all three universes (see LO=LD=LP=12 in fig 1). The SMA(12) momentum 
+stands for a momentum based on the Simple Moving Average with max lag 12 months (also 
+represented as SMA13 for the average of the last 13 prices pt,..,pt-12, including the present at 
+month t).5  
+All our strategies rebalances at a monthly frequency with equal asset weighting per universe. To give 
+an example, with TO=6, TD=1, B=6 and 3 ‘bad’ canary assets, the PAA-G12 strategy chooses a mix of 
+50% of the best defensive asset (eg. IEF as Top1) and divide the rest equally over the best Top6 
+offensive assets (each 8,33%), for a total of 1x50% + 6x8,33 = 100% total, for 7 assets. 
+For each of the 5 periods (IS1, .., FS), fig 1 displays R which is the yearly compounded return (CAGR), 
+D is the maximum (monthly) drawdown, V is yearly volatility, while DF is the Defensive Fraction, ie. 
+the fraction of months the strategy is in defensive mode. So for PAA-G12 the return over Full Sample 
+(FS: Dec 1970 – Jun 2022) equals R=12.1% per year, while the maximum (monthly) drawdown and 
+yearly volatility equals D=11.2% and V=7.4%, resp., and the average Defensive Fraction equals DF= 
+50,7% over the full sample FS. The (one sided) annual turnover for PAA-G12 equals TOver=284%. For 
+ 
+4 See Appendix A in our PAA paper (Keller, 2016) for our data construction methodologies  for ETF proxies. 
+5 The SMA(12) momentum (with lag 12 months) equals the present price pt divided by the average of the last 
+13 asset prices including the present (also noted as SMA13), minus 1. So our SMA(12) momentum is negative 
+when pt < SMA(12)  = SMA13. 
+Electronic copy available at: https://ssrn.com/abstract=4166845
+=== page 4 ===
+4 
+ 
+the Recent Sample (RS: Jun 2002 -Jun 2022) the return R equals 8.9% per year. We also distinguish in 
+fig. 1 two ‘in-sample’ periods IS1 (first 10 years) and IS2 (last 10 years) with low/increasing rates and 
+inflation, plus the ‘out-of-sample’ period OS, which are used in combination with our own 
+return/risk indicator K (see section3 and notes 6 and 9). 
+To arrive at the new BAA-G12 strategy, we will change PAA in three steps 
+1. First, we will use a different Protective (or ‘canary’) universe (like we did in our DAA 
+strategy) with its own absolute momentum, based on our aggressive VAA-G4 strategy (see 
+Keller 2017). So the canary universe equals four assets (SPY, VWO, VEA and BND), while 
+switching between the Offensive and the Defensive universe is based on the breadth 
+parameter B=1 and the number of ‘bad’ assets of the canary universe: with B=1 we simply 
+switch 100% to defensive when at least one canary asset is bad, ie. has negative absolute 
+momentum6. Like VAA and DAA, we use the so-called ‘13612W’ filter for absolute canary 
+momentum. This ‘fast’ 13612W momentum is based on the weighted average of the 1, 3, 6 
+and 12 months returns, where we use heavier weights for ‘shorter’ returns.7 
+2. Since the combination of this ‘fast’ canary momentum, B=1 and the four-asset canary (or 
+Protective) universe (see SelP in fig 3), the strategy will spend nearly 60% of its months in 
+the defensive universe. Therefore we will allow for a richer Defensive universe, consisting of 
+all our bonds excluding risky HYG but including inflation-linked TIP (see fig 2) plus DBC as an 
+hedge for future times of possible rising yields and inflation8, for a total of 7 defensive assets 
+(ND=7).  
+3. In addition, we will choose the Top3 defensive assets (instead of the Top1 for PAA) based on 
+the same relative momentum, SMA(12), as for the offensive universe in PAA above. In 
+addition, we will add absolute momentum here, such that defensive assets in the Top3 with 
+bad momentum (less than BIL) will be replaced by BIL. Notice that, like for PAA, we don’t use 
+absolute momentum for the Top6 selection of the Offensive universe, only relative 
+momentum. 
+ 
+ 
+3. The ‘balanced’ BAA-G12 strategy 
+The results of the above three steps (starting at PAA-G12) is BAA-G12 shown in fig 3. We will call this 
+BAA-G12 strategy the balanced BAA strategy.  
+Notice that for BAA-G12, we use the same offensive universe, with the same Top6 selection based 
+on the same (slow) SMA(12) momentum as in PAA-G12 but now with the Protective (canary) 
+universe from VAA-G4 with B=1 and (fast) 13612W momentum. In addition, we apply both relative 
+and absolute SMA(12) momentum for a Top3 selection from our enhanced defensive universe with 
+nearly all bonds (excluding only risky HYG) plus DBC (so ND=7). 
+ 
+6 As we will show in section 5, the combination of slow relative momentum SMA(12) from PAA and fast 
+absolute momentum 13612W from VAA also turns out to be in-sample optimum for K/IS, where K/IS equals 
+the average of our own return/risk indicator K over IS1 (first 10 years: rising yield s/inflation) and IS2 (last 10 
+years: low yields/inflation except for 2021/22). So K/IS= (K/IS1 + K/IS2)/2, with IS1+IS2 being our combined in-
+sample (IS) period. 
+7 13612W stands for a momentum based on the weighted average of the 1, 3, 6, 12 months returns  with 
+weights 12, 4, 2, 1 resp., so the 13612W momentum equals this weighted average of these 4 past returns. So 
+our 13612W momentum is negative when 12*RET(1)+4*RET(3)+2*RET(6)+1*RET(12) < 0. This implies that the 
+combined weight (over all 4 terms) for RET(1) in this momentum equals 40%. 
+8 The addition of DBC was also in-sample optimal on K/IS (see note 6).  
+Electronic copy available at: https://ssrn.com/abstract=4166845
+=== page 5 ===
+5 
+ 
+ 
+Period Start Stop R D V K UPI SR DF R6040 
+IS1 Dec 70 Dec 80 19.2% 4.8% 8.5% 17.1% 9.81 1.44 59.5% 7.3% 
+IS2 Jun 12 Jun 22 7.8% 7.2% 6.5% 6.5% 2.85 1.12 59.5% 8.8% 
+OS Dec 80 Jun 12 15.3% 8.7% 8.9% 12.1% 4.78 1.15 55.4% 10.4% 
+RS Jun 02 Jun 22 12.2% 8.7% 8.7% 9.6% 4.30 1.27 53.5% 7.6% 
+FS Dec 70 Jun 22 14.6% 8.7% 8.5% 11.6% 4.81 1.19 57.2% 9.5% 
+SelO= SPY, QQQ, IWM, VGK, EWJ, VWO, VNQ, DBC, GLD, TLT, HYG, LQD D6040= 29.5% 
+SelD= TIP, DBC, BIL, IEF, TLT, LQD, BND  TOver= 472% 
+SelP= SPY, VWO, VEA, BND      TrM/y= 8.2 
+ NO=12, ND=7, NP=4, LO=12, LD=12, LP=0, B=1, TO=6, TD=3,  TC%=0.1   K/IS= 11.8% 
+Fig 3  The BAA-G12 model 
+ 
+Besides R, D, CF and TOver (discussed above) and our own return/risk indicator K (to be discussed 
+below), we see in fig 3 two other return/risk indicators SR and UPI, where UPI stands for the Ulcer 
+Performance Index (see Martin, 1987) and SR stands for the well-known Sharpe Ratio. UPI is similar 
+to the Sharpe Ratio but with the Ulcer index (based on the drawdown pattern) instead of the 
+volatility in the nominator and (as SR) the excess return over risk-free in the denominator.  
+Beside UPI and SR, we will use our own return/risk measure K25, or K for short. This measure 9 
+lowers return R only a little bit for small max drawdowns D and more than proportionally for larger 
+drawdowns, up to K=0 when D>25%. See also Keller (2017, 2018) and TrendXplorer (2018) for a 
+discussion why the particular formula for K was chosen. We sometimes prefer K (over the ratio’s UPI 
+and SR) since K has the same dimension (%) as R and can therefore be interpreted as a return (CAGR) 
+corrected for drawdown.  
+So for our BAA-G12 strategy over the full sample FS (Dec 1970 – Jun 2022), the return R equals 
+R=14.6% (12.1% for PAA in fig 1), while the maximum (monthly) drawdown and yearly volatility 
+equals D=8.7% and V=8.5%, resp., with UPI=4.81 and Sharpe Ratio SR=1.19. The average Defensive 
+Fraction equals DF= 57.2%, the (one sided) annual turnover equals TOver=472%, so nearly double 
+that of PAA (284%), while the average number of ‘Trading Months’ per year equals TrM/y=8.2, 
+compared to 8.6 for PAA. LP=0 and LO=LD=12 refers to 13612W and SMA(12) momentum, resp. 
+Finally, we assume a one-way transaction costs of 0.1% (=TC) for all our strategies.  
+Notice that for BAA-G12, the results are also impressive for the most Recent Sample of 20 years (RS: 
+Jun 2002 – Jun 2022): see, eg. R=12.2% (8.9% for PAA), D= 8.7% (7.0%), K=9.6% (7.5%), UPI= 4.30 
+(3.24), and SR= 1.27 (1.03).  
+ 
+R6040/FS= 9.5% and D6040=29.5% refers to the return and max drawdown of the 60/40 (SPY/IEF) 
+benchmark for the full-sample (FS), compare this with R/D= 14.6/8.7% for BAA-G12. Btw, the YTD 
+2022 (at ultimo Jun 2022) performance of the 60/40 benchmark equals -16%, and +6.4% for BAA-
+G12. 
+ 
+Below (see figs 4 and 5) we show the equity line and max drawdowns of BAA-G12 as compared to 
+our 60/40 benchmark. The yellow line shows the relative price of BAA/6040, when this decreases 
+ 
+9 K = R(1-2D/(1-2D)) when max drawdown D<25% and R>0%, else K=0% (see also K25 in Keller, 2017). 
+Electronic copy available at: https://ssrn.com/abstract=4166845
+=== page 6 ===
+6 
+ 
+60/40 wins, when this increases BAA wins and when it is flat the performance is similar. Notice that 
+the yellow line increases or stays flat in most years, except moving slightly lower in the nineties and 
+the most recent decade. 
+ 
+ 
+Fig 4  Equity line of BAA-G12 vs 60/40 benchmark (and relative price) 
+ 
+ 
+Fig 5  Max (monthly) drawdown of BAA-G12 and the 60/40 benchmark 
+ 
+ 
+4. The BAA-G4 strategy  
+ 
+In this section we will look at the most aggressive BAA strategy called the BAA-G4 strategy. Although 
+most characteristics are the same as BAA-G12, we now change the offensive universe to the 
+aggressive VAA-G4 universe (with 4 Global assets, see Keller 2017) - plus one small change - and 
+select only the Top1 offensive asset as with VAA-G4 (instead of the Top6 for PAA-G12). The change is 
+that we substituted QQQ for SPY10, yielding a global offensive universe of four assets: QQQ, VEA, 
+ 
+10 This change of QQQ for SPY was also in-sample optimal for K/IS (see note 6).  
+1
+10
+100
+1000
+Dec 70
+Jun 72
+Dec 73
+Jun 75
+Dec 76
+Jun 78
+Dec 79
+Jun 81
+Dec 82
+Jun 84
+Dec 85
+Jun 87
+Dec 88
+Jun 90
+Dec 91
+Jun 93
+Dec 94
+Jun 96
+Dec 97
+Jun 99
+Dec 00
+Jun 02
+Dec 03
+Jun 05
+Dec 06
+Jun 08
+Dec 09
+Jun 11
+Dec 12
+Jun 14
+Dec 15
+Jun 17
+Dec 18
+Jun 20
+Dec 21
+BAA-G12 6040 BAA/6040
+-30%
+-25%
+-20%
+-15%
+-10%
+-5%
+0%
+Dec 70
+Dec 72
+Dec 74
+Dec 76
+Dec 78
+Dec 80
+Dec 82
+Dec 84
+Dec 86
+Dec 88
+Dec 90
+Dec 92
+Dec 94
+Dec 96
+Dec 98
+Dec 00
+Dec 02
+Dec 04
+Dec 06
+Dec 08
+Dec 10
+Dec 12
+Dec 14
+Dec 16
+Dec 18
+Dec 20
+BAA-G12 6040
+Electronic copy available at: https://ssrn.com/abstract=4166845
+=== page 7 ===
+7 
+ 
+VWO, BND. We will use the same defensive and protective (canary) universes as with BAA-G12, and 
+use again SMA(12) for the relative momentum in the offensive and defensive selection (as well as for 
+the absolute defensive momentum), and 13612W for absolute ‘breadth’ momentum for the 
+protective (or canary) universe. So the only change from BAA-G12 is the much smaller offensive 
+universe with four risky assets (see SelO with NO=4) and the offensive Top1 selection (TO=1). 
+ 
+Fig 6 shows the final BAA-G4 result, which we will call our aggressive BAA strategy.  
+ 
+Period Start Stop R D V K UPI SR DF R6040 
+IS1 Dec 70 Dec 80 25.0% 5.9% 14.4% 21.7% 11.12 1.26 59.5% 7.3% 
+IS2 Jun 12 Jun 22 10.9% 8.7% 9.4% 8.6% 3.74 1.11 59.5% 8.8% 
+OS Dec 80 Jun 12 22.8% 14.6% 14.4% 13.4% 4.93 1.23 55.4% 10.4% 
+RS Jun 02 Jun 22 16.7% 9.5% 11.8% 12.8% 5.12 1.32 53.5% 7.6% 
+FS Dec 70 Jun 22 21.0% 14.6% 13.6% 12.3% 5.20 1.21 57.2% 9.5% 
+SelO= QQQ, VWO, VEA, BND D6040= 29.5% 
+SelD= TIP, DBC, BIL, IEF, TLT, LQD, BND  TOver= 523% 
+SelP= SPY, VWO, VEA, BND      TrM/y= 6.6 
+ NO=4, ND=7, NP=4, LO=12, LD=12, LP=0, B=1, TO=1, TD=3,  TC%=0.1   K/IS= 15.1% 
+Fig 6 BAA-G4 
+ 
+Let’s start with the BAA-G4 statistics for the Full Sample (FS, Dec 1970- Jun 2022): return (CAGR) and 
+max (monthly) drawdown at FS are R/D= 21.0/14.6% compared to 9.5/29.5% for the 60/40 
+benchmark and 14.6/8.7% for BAA-G12. So roughly twice the return and half the (drawdown) risk 
+compared to the benchmark and nearly half more return and twice the drawdown compared to 
+BAA-G12. The return/risk statistics for the full sample (FS) are K=13.6% and UPI/SR= 5.20/1.21, 
+which are all great statistics. 
+ 
+Similar results holds for the last 20 years (RS): return R= 16.7% and max drawdown D=9.5%, with 
+return/risk stats K=12.8%, UPI=5.12 and SR= 1.32. Finally, from fig 6 we learn that turnover is high 
+(TOver= 523%, so slightly higher than BAA-G12 with 472%), while trading on average is done 6.6 
+times per year (less than BAA-G12 with 8.2x). 
+ 
+Below (see figs 7 and 8) we show the equity line and max drawdowns of BAA-G4 as compared to our 
+60/40 benchmark. The yellow line shows the relative price of BAA/6040, when this decreases 60/40 
+wins, when this increases BAA wins and when it is flat the performance is similar. Notice that the 
+yellow line increases or stays flat in most years.  
+The YTD 2022 performance of BAA-G4 per ultimo Jun 2022 is +6,4% (and -15% for the 60/40 
+benchmark). This return of 6.4% is the same as BAA-G12 since both strategies where completely 
+defensive (with 33% DBC and 67% BIL) in Jan 2022 – Jun 2022. The same holds for any BAA strategy 
+(with the same defensive and protective characteristics).  
+Electronic copy available at: https://ssrn.com/abstract=4166845
+=== page 8 ===
+8 
+ 
+ 
+Fig 7  Equity line of BAA-G4 vs 60/40 benchmark (and relative price) 
+ 
+ 
+ 
+Fig 8  Max (monthly) drawdown of BAA-G4 and the 60/40 benchmark 
+ 
+5. BAA variations 
+In this section we consider some variations on the BAA theme, in particular wrt. the (diversification 
+of the) offensive selection (TO) and universe,  and wrt. both momentum filters used in BAA. This 
+might give the reader some information of the ‘robustness’ of the various BAA strategies. We start 
+with the ‘offensive’ diversification. 
+Although BAA-G4 looks very impressive, some might call it ‘too concentrated’ with only one 
+offensive asset chosen (TO=T=1) when not in defensive mode. Something similar (but opposite) 
+might be said for the ‘very diversified’ offensive selection (TO=T=6) for BAA-G12. 
+Therefore, we will consider here a slightly less diversified version of BAA-G12 with TO=3 (instead of 
+TO=6 in section 3) and a less concentrated version of BAA-G4 with TO=2 (instead of TO=1 in section 
+4). We will name these variations BAA-G12/T3 and BAA-G4/T2. Notice that we only change TO in 
+both cases, and keep all the universes and other parameters constant. See fig 9 and 10 below. 
+1
+10
+100
+1000
+10000
+Dec 70
+Jun 72
+Dec 73
+Jun 75
+Dec 76
+Jun 78
+Dec 79
+Jun 81
+Dec 82
+Jun 84
+Dec 85
+Jun 87
+Dec 88
+Jun 90
+Dec 91
+Jun 93
+Dec 94
+Jun 96
+Dec 97
+Jun 99
+Dec 00
+Jun 02
+Dec 03
+Jun 05
+Dec 06
+Jun 08
+Dec 09
+Jun 11
+Dec 12
+Jun 14
+Dec 15
+Jun 17
+Dec 18
+Jun 20
+Dec 21
+BAA-G4 6040 BAA/6040
+-30%
+-25%
+-20%
+-15%
+-10%
+-5%
+0%
+Dec 70
+Dec 72
+Dec 74
+Dec 76
+Dec 78
+Dec 80
+Dec 82
+Dec 84
+Dec 86
+Dec 88
+Dec 90
+Dec 92
+Dec 94
+Dec 96
+Dec 98
+Dec 00
+Dec 02
+Dec 04
+Dec 06
+Dec 08
+Dec 10
+Dec 12
+Dec 14
+Dec 16
+Dec 18
+Dec 20
+BAA-G4 6040
+Electronic copy available at: https://ssrn.com/abstract=4166845
+=== page 9 ===
+9 
+ 
+Period Start Stop R D V K UPI SR DF R6040 
+IS1 Dec 70 Dec 80 22.6% 5.9% 11.1% 19.6% 10.17 1.41 59.5% 7.3% 
+IS2 Jun 12 Jun 22 6.6% 7.4% 7.5% 5.4% 1.81 0.80 59.5% 8.8% 
+OS Dec 80 Jun 12 17.6% 11.4% 10.9% 12.4% 4.28 1.15 55.4% 10.4% 
+RS Jun 02 Jun 22 12.1% 10.6% 9.9% 8.8% 3.12 1.10 53.5% 7.6% 
+FS Dec 70 Jun 22 16.4% 11.4% 10.4% 11.6% 4.23 1.13 57.2% 9.5% 
+SelO= SPY, QQQ, IWM, VGK, EWJ, VWO, VNQ, DBC, GLD, TLT, HYG, LQD D6040= 29.5% 
+SelD= TIP, DBC, BIL, IEF, TLT, LQD, BND  TOver= 513% 
+SelP= SPY, VWO, VEA, BND      TrM/y= 8.0 
+ NO=12, ND=7, NP=4, LO=12, LD=12, LP=0, B=1, TO=T=3, TD=3,  TC%=0.1   K/IS= 12.5% 
+Fig 9  BAA-12/T3 
+ 
+Period Start Stop R D V K UPI SR DF R6040 
+IS1 Dec 70 Dec 80 20.7% 8.9% 10.9% 16.3% 7.47 1.26 59.5% 7.3% 
+IS2 Jun 12 Jun 22 9.2% 8.0% 7.8% 7.5% 2.88 1.12 59.5% 8.8% 
+OS Dec 80 Jun 12 19.4% 12.7% 11.1% 12.8% 5.43 1.29 55.4% 10.4% 
+RS Jun 02 Jun 22 14.5% 8.7% 10.0% 11.5% 4.42 1.34 53.5% 7.6% 
+FS Dec 70 Jun 22 17.7% 12.7% 10.6% 11.7% 5.08 1.25 57.2% 9.5% 
+SelO= QQQ, VWO, VEA, BND D6040= 29.5% 
+SelD= TIP, DBC, BIL, BIL2, BIL3, IEF, TLT, LQD, BND  TOver= 502% 
+SelP= SPY, VWO, VEA, BND      TrM/y= 6.8 
+ NO=4, ND=9, NP=4, LO=12, LD=12, LP=0, B=1, TO=T=2, TD=3,  TC%=0.1   K/IS= 11.9% 
+Fig 10  BAA-G4/T2 
+ 
+Interestingly, our in-sample return/risk indicator K/IS is slightly better for the BAA-G12/T3 strategy 
+than the BAA-G4/T2 (K/IS=12.5 vs 11.9%) mainly because of its excellent IS1 performance (ie over 
+the first 10 years), but the BAA-G4/T2 strategy wins hands-down in the periods after Dec 1980 on R 
+and return/risk  (see K, UPI and SR).  
+Notice that the performance in defensive mode (which happens in 57% of the months, see the 
+Defensive Fraction DF=57,2%) in all the four BAA models above (see fig 3,6,9,10) is similar (equal in R 
+and V). So would this (defensive/protective) part of our BAA model also works with just SPY as 
+offensive asset (so SO=SPY and TO=NO=1)?  
+In fig 11 we present this simplified BAA-SPY strategy. Notice that our combination of a defensive 
+SMA(12) absolute and relative momentum together with an enhanced defensive universe (most 
+bonds plus DBC) and our fast 13612W protective momentum with a good canary universe, seems 
+able to protect for nearly all of SPY’s bear markets.  
+Compare fig 11 with fig 12 for the unprotected SPY results (D/FS= 50.8% vs 16.2% for BAA-SPY). 
+Notice also that all the return/risk parameters are greatly improved by BAA-SPY compared to SPY 
+alone, as well as nearly all returns (except for R/IS2, ie. over the last 10 years).11  
+ 
+11 Also compare this with the well-known SMA10 absolute momentum on SPY, switching to IEF: R/D= 
+11.8/23.3%, UPI/SR= 1.16/0.59 on FS (Dec 1970 – Jun 2022), so all worse (except R) than with BAA-SPY. And 
+R/D= 9.6/20.3%, UPI/SR= 1.49/0.80 on RS (Jun 2002 – Jun 2022) are all worse than BAA-SPY in fig 11. 
+Electronic copy available at: https://ssrn.com/abstract=4166845
+=== page 10 ===
+10 
+ 
+The above results show the robustness of our BAA results for different choices of TO (number of 
+offensive assets selected in non-defensive mode) and for various offensive universes (G12, G4 and 
+just SPY).  
+Period Start Stop R D V K UPI SR DF R6040 
+IS1 Dec 70 Dec 80 11.3% 12.6% 10.3% 7.5% 1.08 0.42 59.5% 7.3% 
+IS2 Jun 12 Jun 22 10.1% 6.6% 7.6% 8.5% 3.81 1.26 59.5% 8.8% 
+OS Dec 80 Jun 12 11.7% 16.2% 9.8% 6.1% 1.75 0.69 55.4% 10.4% 
+RS Jun 02 Jun 22 11.7% 10.6% 8.9% 8.5% 3.43 1.19 53.5% 7.6% 
+FS Dec 70 Jun 22 11.4% 16.2% 9.5% 6.0% 1.88 0.72 57.2% 9.5% 
+SelO= SPY D6040= 29.5% 
+SelD= TIP, DBC, BIL, IEF, TLT, LQD, BND  TOver= 473% 
+SelP= SPY, VWO, VEA, BND      TrM/y= 6.0 
+ NO=1, ND=7, NP=4, LO=12, LD=12, LP=0, B=1, TO=1, TD=3,  TC%=0.1   K/IS= 8.0% 
+Fig 11  BAA-SPY 
+ 
+Period Start Stop R D V K UPI SR DF R6040 
+IS1 Dec 70 Dec 80 8.2% 42.5% 15.8% 0.0% 0.11 0.08 0.0% 7.3% 
+IS2 Jun 12 Jun 22 12.6% 20.0% 13.7% 4.2% 2.83 0.89 0.0% 8.8% 
+OS Dec 80 Jun 12 10.4% 50.8% 15.4% 0.0% 0.36 0.35 0.0% 10.4% 
+RS Jun 02 Jun 22 8.9% 50.8% 14.8% 0.0% 0.47 0.53 0.0% 7.6% 
+FS Dec 70 Jun 22 10.4% 50.8% 15.2% 0.0% 0.46 0.39 0.0% 9.5% 
+SelO= SPY D6040= 29.5% 
+SelD=   TOver= 0% 
+SelP=       TrM/y= 0.0 
+ NO=1   K/IS= 2.1% 
+Fig 12  SPY 
+To check the robustness for our momentum filters, we examine our BAA-G12 and BAA-G4 results 
+when we change the momentum filter for our offensive/defensive universes and for our protective 
+universes. We take our own return/risk indicator K at the Full Sample (FS: Dec 1970 – Jun 2022) as 
+criterium.  
+Fig 13 and 14 shows the resulting K/FS for BAA-G12 and BAA-G4 when we change LO=LD=L (for the 
+offensive and defensive universe) and LP (for the protective universe) from the very fast 13612W 
+momentum filter to slower SMA(x), x=3,6,9, up to the slow SMA(12), and the very slow RET(12) 
+filter. So, in both figures we order our momentum filters from very fast to very slow. 
+We see that the BAA combination of L/LP= SMA(12)/13612W turns out to be optimal at the Full 
+Sample (FS) for BAA-G12 (see fig 13) and near optimal for BAA-G4 (fig 14). Notice that we did not 
+optimize (‘tune’) the choice of both momentum filters, since we simply used the (offensive and 
+defensive) momentum from PAA (ie. SMA(12)) and the (protective) momentum from VAA (ie. 
+13612W).12 
+ 
+12 It turns out that the in-sample K/IS happens to be optimal for L/LP=SMA(12)/13612W for both BAA-G12 and 
+BAA-G4, both with a similar pattern for other filters as we show in figs 10 and 11 for K/FS. 
+Electronic copy available at: https://ssrn.com/abstract=4166845
+=== page 11 ===
+11 
+ 
+ 
+ 
+ 
+K/FS=11.6% L:13612W SMA(3) SMA(6) SMA(9) SMA(12) RET(12) 
+LP: 13612W 9.6% 9.6% 10.4% 10.9% 11.6% 6.7% 
+SMA(3) 8.4% 10.0% 9.7% 10.6% 11.1% 6.4% 
+SMA(6) 8.6% 9.7% 9.5% 10.1% 10.3% 6.2% 
+SMA(9) 8.4% 9.4% 8.9% 9.2% 9.4% 6.1% 
+SMA(12) 7.9% 8.7% 8.6% 9.5% 9.4% 6.2% 
+RET(12) 7.9% 8.5% 8.7% 9.2% 8.6% 5.0% 
+Fig 13  Robustness of BAA-G12 for the momentum filter (L, LP) 
+ 
+K/FS=12.3% L:13612W SMA(3) SMA(6) SMA(9) SMA(12) RET(12) 
+LP: 13612W 9.7% 9.7% 7.5% 12.6% 12.3% 9.1% 
+SMA(3) 5.3% 6.2% 7.2% 11.7% 11.4% 8.5% 
+SMA(6) 6.0% 8.6% 9.0% 11.4% 11.5% 8.3% 
+SMA(9) 0.0% 0.0% 0.0% 0.0% 0.0% 0.0% 
+SMA(12) 0.0% 0.0% 0.0% 0.0% 0.0% 0.0% 
+RET(12) 0.0% 0.0% 0.0% 0.0% 0.0% 0.0% 
+Fig 14  Robustness of BAA-G4 for momentum filter (L, LP) 
+ 
+In both momentum variations, we included the very slow RET(12) momentum filter (ie. the return 
+over 12 months) as possible alternative, besides the very fast 13612W filter and the slow SMA(x) 
+filter (for x=3, 6, 9, 12 months lag). Notice that our SMA(9) filter (the best L for BAA-G4) equals the 
+often used SMA10 filter (see note 5). 
+From both fig 13 and 14 it is clear that momentum deviations are nearly flat around the optimum 
+and almost everywhere monotonically decreasing farther away, which hints at a certain form of 
+robustness of our BAA strategies for our momentum choices. Note that RET(12) seems clearly too 
+slow for our (slow) non-protective momentum in BAA-G12, while the same holds for SMA(9), 
+SMA(12) and RET(12) for our (fast) protective momentum in BAA-G4. 
+We hope that the robustness to all these variations provide some trust in our BAA strategy results.  
+  
+Electronic copy available at: https://ssrn.com/abstract=4166845
+=== page 12 ===
+12 
+ 
+6. Summary and conclusion 
+By combining a slow relative momentum filter (from PAA, see Keller 2016) with a fast absolute 
+momentum filter (from VAA/DAA, Keller 2017/18) and allowing for some limited risky exposure in 
+our defensive universe, together with a very fast crash-protection (based on a separate canary 
+universe with breadth parm B=1, see Keller 2018), we arrived at several offensive strategies which 
+we labelled the Bold Asset Allocation (BAA).  
+The recipe for our BAA strategies is now: on the close of the last trading day of each month t.. 
+1. Calculate a relative momentum score for each of assets in the offensive and defensive 
+universe, where relative momentum at t equals pt / SMA(12) – 1. Note that the slow 
+SMA(12) trend is calculated based on month-end values with maximum lag 12, so as the 
+average over pt..pt-12 representing the most recent 13 month-end prices, including today. 
+2. Select the defensive universe, if at least one of the assets in the protective (or canary) 
+universe show negative absolute momentum, where absolute momentum at t is based on 
+fast momentum 13612W, which is the weighted average of returns over 1, 3, 6 and 12 
+months with weights 12, 4, 2, 1, resp. Otherwise, select the offensive universe. 
+3. Depending on step 2, select the TopX assets with the highest relative momentum value of 
+the offensive or the defensive universe and allocate 1/TopX of the portfolio to each. Replace 
+the ‘bad’ defensive selections (assets with momentum less than BIL) by BIL. Hold positions 
+until the final trading day of the following month. Rebalance the entire portfolio monthly, 
+regardless of whether there is a change in position. 
+Notice that the only difference between our BAA models is the offensive universe (and TO). We 
+summarize the results of our four BAA strategies in the following table (see fig 15, bold is best per 
+period)13. It is clear that BAA-G4/T1 (‘aggressive’ BAA) is always (both on FS and RS) the most 
+offensive (highest R) and also best on K and UPI, while BAA-G12/T6 (‘balanced’ BAA) is the least 
+volatile (lowest on D and V). Finally, BAA-G4/T2 is best on the Sharpe Ratio (SR) in both periods.  
+ 
+  R D V K UPI SR 
+FS (Dec 1970 - Jun 2022)        
+BAA-G12/T6 (bal.)         14.6% 8.7% 8.5% 11.6% 4.81 1.19 
+BAA-G4/T1 (aggr.) 21.0% 14.6% 13.6% 12.3% 5.20 1.21 
+BAA-G12/T3 16.4% 11.4% 10.4% 11.6% 4.23 1.13 
+BAA-G4/T2  17.7% 12.7% 10.6% 11.7% 5.08 1.25 
+ 
+RS (Jun 2002 - Jun 2022)      
+BAA-G12/T6 (bal.) 12.2% 8.7% 8.7%    9.6% 4.30 1.27 
+BAA-G4/T1 (aggr.) 16.7% 9.5% 11.8% 12.8% 5.12 1.32 
+BAA-G12/T3 12.1% 10.6% 9.9% 8.8% 3.12 1.10 
+BAA-G4/T2 14.5% 8.7% 10.0% 11.5% 4.42 1.34 
+       
+Fig 15  A comparison of all four BAA strategies  
+ 
+13 We denoted BAA-G12 (balanced BAA, see section 3) and BAA-G4 (aggressive BAA, see section 4) now as 
+BAA-G12/T6 and BAA-G4/T1 to distinguish them from BAA-G12/T3 and BAA-G4/T2 (both in section 5). 
+Electronic copy available at: https://ssrn.com/abstract=4166845
+=== page 13 ===
+13 
+ 
+7. Literature  
+Antonacci, G, 2011, Optimal Momentum: A Global Cross Asset Approach, SSRN 1833722  
+Antonacci, G., 2013a, Absolute Momentum: A Simple Rule-Based Strategy and Universal Trend 
+Following Overlay, SSRN 2244633  
+Antonacci, G., 2013b, Risk Premia Harvesting Through Dual Momentum, SSRN 2042750  
+Antonacci, G., 2014, Dual Momentum Investing, McGraw Hill (book)  
+Asness, C.S, T.J. Moskowitz, and L.H. Pedersen, 2012, Value and Momentum Everywhere, Working 
+Paper nr. 80, The Initiative on Global Markets, University of Chicago, SSRN 2174501  
+Asness, C.S., A. Frazzini, R. Israel, and T.J. Moskowitz, 2014, Fact, Fiction and Momentum Investing. 
+Journal of Portfolio Management, Fall 2014, SSRN 2435323  
+Beekhuizen, P. and W.G. Hallerbach, 2015, Uncovering Trend Rules, SSRN 2604942  
+Faber, M. T., 2007, A Quantitative Approach to Tactical Asset Allocation, Journal of Wealth 
+Management, Spring 2007. Updated in Faber (2013).  
+Faber, M. T., 2010, Relative Strength Strategies for Investing, SSRN: 1585517  
+Faber, M. T., 2013, A Quantitative Approach to Tactical Asset Allocation, SSRN 962461. Update of 
+Faber (2007).  
+Faber, Nathan, 2015, The Search for Crisis Alpha: Weathering the Storm Using Relative Momentum, 
+ThinkNewfound.com (paper)  
+Fama, E.F. and K.R. French, 1993, Common risk factors in the returns on stocks and bonds, Journal of 
+Financial Economics 33  
+Harvey, C.R., and Y. Liu, 2013, Backtesting, SSRN 2345489  
+Harvey, C.R., and Y. Liu, 2014, Evaluating Trading Strategies, SSRN 2474755  
+Hurst, B., Y.H. Ooi, and L.H. Pedersen, 2012, A Century of Evidence on Trend-Following Investing, 
+working paper, AQR Capital Management  
+Jegadeesh, N., and S. Titman, 1993, Returns to Buying Winners and Selling Losers: Implications for 
+Stock Market Efficiency, Journal of Finance XLVIII, 65/91.  
+Keller, W.J., and J.W. Keuning, 2016, Protective Asset Allocation (PAA), SSRN 2759734  
+Keller, W.J., and J.W. Keuning, 2017, Vigilant Asset Allocation (VAA), SSRN 3002624  
+Keller, W.J., and J.W. Keuning, 2018, Defensive Asset Allocation (DAA), SSRN 3212862 
+Levine, A. and L. H. Pedersen, 2015, Which Trend is Your Friend?, SSRN 2603731  
+Magdon-Ismail,M., A. Atiya, 2004, An Analysis of the Maximum Drawdown Risk Measure, Risk 
+2004/10  
+Martin, 1987, The Ulcer Index, www.tangotools.com/ui/ui.htm 
+Moskowitz, T., Y.H. Ooi, and L.H. Pedersen, 2011, Time Series Momentum, Working Paper nr. 79, The 
+Initiative on Global Markets, University of Chicago.  
+Electronic copy available at: https://ssrn.com/abstract=4166845
+=== page 14 ===
+14 
+ 
+Newfound, 2015, Two Centuries of Momentum, Thinknewfound.com (paper)  
+Paulsen, D. and J. Söhl, 2016, Noise Fit, Estimation Error and a Sharpe Information Criterion, 
+SSRN2735087  
+TrendXplorer, 2018, Presenting Keller Ratio, 
+https://indexswingtrader.blogspot.com/2018/04/presentingkeller-ratio.html 
+Zakamulin, V., 2015a, Market Timing with Moving Averages: Anatomy and Performance of Trading 
+Rules, SSRN 2585056  
+Zakamulin, V., 2015b, Market Timing With a Robust Moving Average, SSRN 2612307  
+Zakamulin, V., 2015c, A Comprehensive Look at the Real-Life Performance of Moving Average 
+Trading Strategies, SSRN 2677212 
+Electronic copy available at: https://ssrn.com/abstract=4166845

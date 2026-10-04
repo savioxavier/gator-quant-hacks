@@ -1,0 +1,41 @@
+{
+  "S1": {
+    "avg_cost_bp": 1.0675257959552242,
+    "turnover": 42.22664377400243,
+    "scaled": false,
+    "start": "2011-09-02"
+  },
+  "TSMOM_F": {
+    "avg_cost_bp": 0.751350880294566,
+    "turnover_unscaled": 27.45702380804781,
+    "scaled": true,
+    "k_median": 1.405103755989061
+  },
+  "A_F": {
+    "avg_cost_bp": 0.9383402550240699,
+    "turnover_unscaled": 17.078201051694162,
+    "scaled": true,
+    "k_median": 3.7248446072207115,
+    "instruments": [
+      "ES16",
+      "ZN16"
+    ]
+  },
+  "C_F": {
+    "avg_cost_bp": 1.0,
+    "turnover_unscaled": 32.83620243223701,
+    "scaled": true,
+    "k_median": 3.4457557751271306,
+    "instruments": [
+      "ZN16"
+    ]
+  },
+  "ES_10VOL_real": {
+    "avg_cost_bp": 0.7500000000000001,
+    "turnover": 4.850853880193403
+  },
+  "S2_real": {
+    "avg_cost_bp": 1.0001848472710289,
+    "turnover": 33.43789876673712
+  }
+}

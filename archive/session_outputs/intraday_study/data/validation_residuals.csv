@@ -1,0 +1,9 @@
+date,root,window,hourly,ref,diff_bp,n_bars,cum_diff_7day_window_bp,cause
+2012-09-17,ES,1600,-0.00341445,-0.00291345,-5.00995,23,-5.02585,roll day (contract switch at a different hour in the two series)
+2014-09-23,ES,1600,-0.00163584,1.61203e-16,-16.3584,2,1.11022e-12,vendor data hole (other_missing gap) within +-3 days; reference return exactly 0 (no reference bar that day)
+2014-09-26,ES,1600,-0.00453743,-0.00616585,16.2841,9,4.44089e-12,vendor data hole (other_missing gap) within +-3 days
+2014-12-31,ES,1600,0.00096432,-2.13219e-17,9.6432,2,3.33067e-12,vendor data hole (other_missing gap) within +-3 days; reference return exactly 0 (no reference bar that day)
+2015-01-02,ES,1600,-0.0121628,-0.0112102,-9.52591,22,0,vendor data hole (other_missing gap) within +-3 days
+2020-03-18,ES,1600,-0.0557504,-0.0548094,-9.41036,23,-9.961,roll day (contract switch at a different hour in the two series)
+2014-10-03,ZN,1600,0.000997755,-2.82886e-16,9.97755,2,5.82867e-12,vendor data hole (other_missing gap) within +-3 days; reference return exactly 0 (no reference bar that day)
+2014-10-06,ZN,1600,0.000124595,0.00112247,-9.97879,22,2.77556e-12,vendor data hole (other_missing gap) within +-3 days

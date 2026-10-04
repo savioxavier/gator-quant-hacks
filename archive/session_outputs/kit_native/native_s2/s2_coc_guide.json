@@ -1,0 +1,232 @@
+{
+  "meta": {
+    "harness": "validation/starter_kit/run_in_starter.py",
+    "strategy": "gqh_equity_trend",
+    "strategy_class": "EquityTrend",
+    "module": "validation/starter_kit/strategies/gqh_equity_trend.py",
+    "params": {
+      "book": "S2",
+      "fill": "coc"
+    },
+    "symbols": [
+      "F_ES",
+      "F_NQ",
+      "F_RTY",
+      "F_YM",
+      "F_ZT",
+      "F_ZF",
+      "F_ZN",
+      "F_ZB",
+      "F_UB",
+      "F_CL",
+      "F_HO",
+      "F_RB",
+      "F_NG",
+      "F_GC",
+      "F_SI",
+      "F_PL",
+      "F_HG",
+      "F_ZC",
+      "F_ZS",
+      "F_ZW",
+      "F_ZL",
+      "F_ZM",
+      "F_LE",
+      "F_HE",
+      "F_6E",
+      "F_6J",
+      "F_6B",
+      "F_6A",
+      "F_6C",
+      "F_6S"
+    ],
+    "start": "2010-06-07",
+    "end": "2026-10-02",
+    "is_start": "2011-09-02",
+    "costs": "guide",
+    "cost_bps_per_side": {
+      "F_ES": 10.0,
+      "F_NQ": 10.0,
+      "F_RTY": 10.0,
+      "F_YM": 10.0,
+      "F_ZT": 10.0,
+      "F_ZF": 10.0,
+      "F_ZN": 10.0,
+      "F_ZB": 10.0,
+      "F_UB": 10.0,
+      "F_CL": 10.0,
+      "F_HO": 10.0,
+      "F_RB": 10.0,
+      "F_NG": 10.0,
+      "F_GC": 10.0,
+      "F_SI": 10.0,
+      "F_PL": 10.0,
+      "F_HG": 10.0,
+      "F_ZC": 10.0,
+      "F_ZS": 10.0,
+      "F_ZW": 10.0,
+      "F_ZL": 10.0,
+      "F_ZM": 10.0,
+      "F_LE": 10.0,
+      "F_HE": 10.0,
+      "F_6E": 10.0,
+      "F_6J": 10.0,
+      "F_6B": 10.0,
+      "F_6A": 10.0,
+      "F_6C": 10.0,
+      "F_6S": 10.0
+    },
+    "guide_slippage": 0.0005,
+    "extra_costs": true,
+    "margin": true,
+    "leverage": 10.0,
+    "cash": 1000000000.0,
+    "exec": "coc",
+    "cheat_on_close": true,
+    "checksubmit": false,
+    "backtrader_version": "1.9.78.123",
+    "kit": "gqh-webull-backtrader-starter",
+    "data_dir": "gqh",
+    "fwd_data_end": "2026-10-02",
+    "git_head": "4ea63fe",
+    "sharpe_definitions": {
+      "kit_sharpe_rf0": "mean / population std of daily backtrader returns x sqrt(252) (the kit's SharpeRatio analyzer); backtrader pays no interest on cash",
+      "our_sharpe_excess": "mean / sample std of (backtrader return - net weight held x T-bill) x sqrt(252): our definition, cash at the T-bill, borrowed cash paying it"
+    },
+    "runtime_s": 19.2
+  },
+  "kit_metrics": {
+    "starting_value": 1000000000.0,
+    "final_value": 1154976100.0,
+    "pnl": 154976070.0,
+    "pnl_pct": 15.497607,
+    "max_drawdown_pct": 26.509701,
+    "max_drawdown_money": 334264670.0,
+    "sharpe_ratio": 0.14047667,
+    "total_trades": 1700,
+    "won": 585,
+    "lost": 1085,
+    "win_rate": 34.411765,
+    "net_pnl": 424523690.0
+  },
+  "windows": {
+    "in_sample": {
+      "start": "2011-09-02",
+      "end": "2024-10-02",
+      "n_days": 3291,
+      "kit_sharpe_rf0": 0.13476709,
+      "our_sharpe_excess": 0.1266586,
+      "sharpe_total_sample_std": 0.13474662,
+      "ann_return": 0.0084880068,
+      "ann_vol": 0.09961357,
+      "max_drawdown": -0.22904839,
+      "mean_tbill_ann": 0.012876907,
+      "mean_net_weight": 0.61115374,
+      "mean_gross_weight": 2.4913034,
+      "max_gross_weight": 3.0000009,
+      "orders": 96933,
+      "refused_orders": 0,
+      "canceled_orders": 0,
+      "extra_costs_ann": 0.094082874
+    },
+    "out_of_sample": {
+      "start": "2024-10-03",
+      "end": "2026-10-02",
+      "n_days": 501,
+      "kit_sharpe_rf0": 0.22350867,
+      "our_sharpe_excess": 0.1092007,
+      "sharpe_total_sample_std": 0.2232855,
+      "ann_return": 0.017094409,
+      "ann_vol": 0.096874797,
+      "max_drawdown": -0.17332856,
+      "mean_tbill_ann": 0.039591816,
+      "mean_net_weight": 0.26403828,
+      "mean_gross_weight": 2.209365,
+      "max_gross_weight": 3.000001,
+      "orders": 15021,
+      "refused_orders": 0,
+      "canceled_orders": 0,
+      "extra_costs_ann": 0.096769121
+    },
+    "full": {
+      "start": "2010-06-07",
+      "end": "2026-10-02",
+      "n_days": 4107,
+      "kit_sharpe_rf0": 0.14047667,
+      "our_sharpe_excess": 0.11955096,
+      "sharpe_total_sample_std": 0.14045956,
+      "ann_return": 0.0088797253,
+      "ann_vol": 0.095361162,
+      "max_drawdown": -0.26509701,
+      "mean_tbill_ann": 0.015228415,
+      "mean_net_weight": 0.52193576,
+      "mean_gross_weight": 2.2658318,
+      "max_gross_weight": 3.000001,
+      "orders": 111983,
+      "refused_orders": 0,
+      "canceled_orders": 0,
+      "extra_costs_ann": 0.087194563
+    }
+  },
+  "orders": {
+    "total": 111983,
+    "completed": 111953,
+    "refused": 0,
+    "by_status": {
+      "Completed": 111953,
+      "Accepted": 30
+    }
+  },
+  "extra_costs_money": {
+    "roll": 364671210.0,
+    "borrow": 0.0,
+    "close_fill_slippage": 0.0,
+    "coc_slippage_correction": 1134290000.0
+  },
+  "reference": {
+    "path": "s2_engine_guide.csv",
+    "column": "ret",
+    "rf_mode": "tbill",
+    "windows": {
+      "in_sample": {
+        "agreement_bt_minus_reference": {
+          "corr": 0.99999999,
+          "mean_abs_diff_bp": 0.0031140946,
+          "max_abs_diff_bp": 0.11592694,
+          "tracking_diff_ann": -2.1422687e-05,
+          "n_days": 3291
+        },
+        "reference_kit_sharpe_rf0": 0.25625613,
+        "reference_ann_return": 0.020757096,
+        "reference_max_drawdown": -0.20124218,
+        "reference_our_sharpe_excess": 0.12687406
+      },
+      "out_of_sample": {
+        "agreement_bt_minus_reference": {
+          "corr": 0.99999999,
+          "mean_abs_diff_bp": 0.0025425199,
+          "max_abs_diff_bp": 0.067167024,
+          "tracking_diff_ann": -2.1232759e-05,
+          "n_days": 501
+        },
+        "reference_kit_sharpe_rf0": 0.51850965,
+        "reference_ann_return": 0.046559896,
+        "reference_max_drawdown": -0.15835632,
+        "reference_our_sharpe_excess": 0.10941926
+      },
+      "full": {
+        "agreement_bt_minus_reference": {
+          "corr": 0.99999999,
+          "mean_abs_diff_bp": 0.0028055242,
+          "max_abs_diff_bp": 0.11592694,
+          "tracking_diff_ann": -1.9756435e-05,
+          "n_days": 4107
+        },
+        "reference_kit_sharpe_rf0": 0.27955004,
+        "reference_ann_return": 0.0223403,
+        "reference_max_drawdown": -0.20124218,
+        "reference_our_sharpe_excess": 0.11975838
+      }
+    }
+  }
+}

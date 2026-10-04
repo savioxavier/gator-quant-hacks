@@ -1,0 +1,54 @@
+                                               0      1                2      3
+period                     2024Q4 (10-03..12-31)   2025  2026 (to 10-02)    OOS
+sharpe_tone_ex_net1x                      -3.173  0.115            0.188 -0.456
+ret_tone_ex_net1x                         -0.118  0.007            0.009 -0.105
+sharpe_tone_rf0_net1x                     -2.994  0.325            0.306 -0.283
+ret_tone_rf0_net1x                        -0.112  0.031            0.016 -0.071
+sharpe_ctl_dgs2_ex_net1x                  -1.352 -1.007            1.228 -0.236
+ret_ctl_dgs2_ex_net1x                     -0.031 -0.075             0.07 -0.042
+sharpe_tone_orth_ex_net1x                 -3.231  0.208           -0.272 -0.603
+ret_tone_orth_ex_net1x                    -0.129  0.016           -0.019 -0.132
+sharpe_fut_F_ZN_ex_net1x                  -4.478  1.222            0.362    0.1
+ret_fut_F_ZN_ex_net1x                     -0.079  0.081            0.013  0.009
+sharpe_fut_F_ZB_ex_net1x                  -3.896  0.794            0.314  -0.11
+ret_fut_F_ZB_ex_net1x                     -0.114  0.078            0.015  -0.03
+TLT_total_return                          -0.096  0.042            -0.08 -0.133
+mean_w_TLT                                 0.963  0.886              0.4  0.712
+mean_w_UUP                                -0.326   -0.3           -0.135 -0.241
+mean_z_tone                               -1.739  -1.36           -0.551 -1.102
+DGS2_change_bp                              62.0  -77.0            133.0  115.0
+    window  mean_C  mean_decayed_count_N  mean_C_over_N  corr_C_N  kept_docs_per_year  mean_s_kept  mean_z_tone
+0       IS  -0.980                 3.088         -0.356    -0.217              26.963       -0.317        0.303
+1  HOLDOUT  -0.298                 4.146         -0.075    -0.048              37.058       -0.083        0.839
+2      OOS  -2.530                 5.650         -0.445    -0.782              46.596       -0.448       -1.102
+             kept_docs  mean_s
+speech_date                   
+2011                24  -0.585
+2012                20  -0.598
+2013                21  -0.593
+2014                16  -0.492
+2015                20  -0.325
+2016                26  -0.521
+2017                26  -0.227
+2018                18  -0.404
+2019                38  -0.514
+2020                20  -0.628
+2021                34  -0.487
+2022                24   0.194
+2023                38   0.291
+2024                53  -0.309
+2025                54  -0.441
+2026                29  -0.422
+{
+ "volume_counterfactual_OOS": {
+  "mean_z_actual_OOS": -1.102083512667723,
+  "mean_z_actual_C_with_IS_moments": -1.249435049467233,
+  "mean_z_if_C_used_IS_avg_count_with_IS_moments": -0.29378271782371207,
+  "note": "C/N x IS-mean N, standardised with IS mean/std of C: the OOS level the frozen z would have had at IS speech volume; compare with mean_z_actual_C_with_IS_moments (same standardisation)"
+ }
+}
+                          variant  sharpe_ex_1x_IS  sharpe_ex_1x_HOLDOUT  sharpe_ex_1x_OOS  sharpe_ex_1x_FULL  sharpe_ex_1x_IS_ex2022
+0     ETF next_open (frozen rule)            0.210                 0.691            -0.456              0.122                   0.060
+1  ETF next_close, futures timing            0.299                 0.723            -0.279              0.219                   0.153
+2                 F_ZB next_close            0.362                 0.721            -0.110              0.294                   0.213
+3                 F_ZN next_close            0.359                 0.828             0.100              0.322                   0.172

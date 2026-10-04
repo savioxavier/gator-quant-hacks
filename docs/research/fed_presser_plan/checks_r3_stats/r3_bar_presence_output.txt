@@ -1,0 +1,9 @@
+       bar_1349       bar_1419       bar_1559      
+            sum count      sum count      sum count
+symbol                                             
+ZT.v.0       20    20       20    20       20    20
+
+missing bars by day (ZT symbols):
+Empty DataFrame
+Columns: [day, symbol, bar_1349, bar_1419, bar_1559, bars_1350_1419]
+Index: []

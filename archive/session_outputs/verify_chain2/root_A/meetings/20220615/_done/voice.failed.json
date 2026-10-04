@@ -1,0 +1,5 @@
+{
+  "stage": "voice",
+  "presser_id": "20220615",
+  "error": "RuntimeError('simulated systemic failure')"
+}

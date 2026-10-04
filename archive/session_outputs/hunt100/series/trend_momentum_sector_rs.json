@@ -1,0 +1,40 @@
+{
+  "rule": "Month-end, 9 SPDR sector ETFs: score = mean of 1/3/6/9/12-month returns on month-end adjusted closes; V1 long top 3 at 1/3 (natural sizing); V2 V1 but T-bills when SPY month-end close < 10-month SMA; V3 top 3 minus bottom 3, book to 10% (252d cov, gross<=2), short borrow 30 bp/yr; next_open; ETF cost map (5 bp).",
+  "sources": [
+    "https://c.mql5.com/forextsd/forum/213/Relative%20Strength%20Strategies%20for%20Investing.pdf",
+    "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/10_Industry_Portfolios_CSV.zip"
+  ],
+  "universe": [
+    "XLB",
+    "XLE",
+    "XLF",
+    "XLI",
+    "XLK",
+    "XLP",
+    "XLU",
+    "XLV",
+    "XLY"
+  ],
+  "cost_bps_one_way": "config.cost_bps (sector SPDRs 5 bp)",
+  "vol_scaling": "V1/V2 natural (100% invested); V3 10% ex-ante, gross cap 2",
+  "id": "trend_momentum_sector_rs",
+  "headline_variant": "V1_top3",
+  "selection": "highest in-sample (start..2024-10-02) net Sharpe at realistic costs among the 3 pre-declared variants; all variants reported in variants.csv",
+  "columns": {
+    "net_1x": "daily return minus T-bill, net of the realistic cost map",
+    "net_2x": "same at 2x costs",
+    "gross": "daily return minus T-bill before costs"
+  },
+  "window": {
+    "start": "2006-02-01",
+    "in_sample_end": "2024-10-02",
+    "later_window": "2024-10-03..2026-10-02 (descriptive only)"
+  },
+  "spec": "<scratch>\\hunt100\\bt_3\\trend_momentum_sector_rs\\SPEC.md",
+  "variant_is_sharpe_net_1x": {
+    "V1_top3": 0.509,
+    "V2_top3_SMA10": 0.443,
+    "V3_top3_minus_bot3": 0.034
+  },
+  "source_reported": "Faber 2010 (French 10 industries 1928-2009): rotation beats buy-and-hold in ~70% of years; hunt calc (French 10 VW, gross): top3 minus EW10 Sharpe 0.43 (1928-2009), 0.30 (2010-01..2026-08), 0.47 (2016-01..2024-09); top3 excess Sharpe 0.82 vs EW10 0.70 over 2003-2024-09."
+}

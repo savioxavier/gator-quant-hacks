@@ -1,0 +1,116 @@
+{
+  "id": "trend_momentum_turtle_donchian",
+  "variant": "V3",
+  "rule": "Daily close-based Donchian breakout on the excess-return index: V1 System 2 (55-session entry, 20-session exit), V2 System 1 (20/10) with the last-breakout-winner skip filter and 55-session failsafe, V3 System 2 with pyramiding (+1 unit per N/2, max 4); 2N stop from the latest unit; N = Wilder 20-day ATR/close of the front contract (lagged one session); unit weight 0.01/(N/close) at entry; book to 10% ex-ante daily (trailing 252 cov), gross<=3; next_close.",
+  "sources": [
+    "https://oxfordstrat.com/coasdfASD32/uploads/2016/01/turtle-rules.pdf",
+    "https://ideas.repec.org/a/eee/jbfina/v34y2010i2p409-426.html",
+    "https://github.com/robcarver17/pysystemtrade"
+  ],
+  "window": {
+    "is": "2011-06-20..2024-10-02",
+    "later": "2024-10-03..2026-10-02"
+  },
+  "columns": {
+    "net_1x": "daily excess return net of the realistic cost map",
+    "net_2x": "2x costs",
+    "gross": "before costs"
+  },
+  "cost_bps_one_way": {
+    "F_ES": 1.0,
+    "F_NQ": 1.0,
+    "F_RTY": 2.0,
+    "F_YM": 1.0,
+    "F_ZT": 0.5,
+    "F_ZF": 0.7,
+    "F_ZN": 1.0,
+    "F_ZB": 1.5,
+    "F_UB": 1.5,
+    "F_CL": 2.0,
+    "F_HO": 3.0,
+    "F_RB": 3.0,
+    "F_NG": 3.0,
+    "F_GC": 2.0,
+    "F_SI": 2.0,
+    "F_PL": 3.0,
+    "F_HG": 2.0,
+    "F_ZC": 4.0,
+    "F_ZS": 4.0,
+    "F_ZW": 4.0,
+    "F_ZL": 4.0,
+    "F_ZM": 4.0,
+    "F_LE": 4.0,
+    "F_HE": 4.0,
+    "F_6E": 1.0,
+    "F_6J": 1.0,
+    "F_6B": 1.0,
+    "F_6A": 1.0,
+    "F_6C": 1.0,
+    "F_6S": 1.0
+  },
+  "metrics": {
+    "is_window": "2011-06-20..2024-10-02",
+    "is_net_sharpe_1x": 0.07998418940995568,
+    "is_net_sharpe_2x": -0.041077410019124565,
+    "is_gross_sharpe": 0.20103855557332845,
+    "ann_return": 0.008470956927708695,
+    "ann_vol": 0.10590789242472852,
+    "max_dd": -0.3592511824428313,
+    "worst_year": -0.1599784484458564,
+    "worst_year_label": 2019,
+    "pct_positive_years": 0.5714285714285714,
+    "rolling2y_p10": -0.6104869950182565,
+    "turnover": 87.49228746686472,
+    "nw_t": 0.30591637726980403,
+    "corr_es": -0.21709731327542203,
+    "corr_s1": 0.6722547779355729,
+    "corr_f2": 0.06098288988674556,
+    "later_net_sharpe_1x": -0.14145208030922266,
+    "later_net_sharpe_2x": -0.2577700265094856,
+    "later_max_dd": -0.14527796471375787,
+    "later_ann_return": -0.017717618279593634,
+    "full_net_sharpe_1x": 0.0465769390177392,
+    "yearly": {
+      "2011": -0.005806006073395875,
+      "2012": 0.0007398518030818924,
+      "2013": 0.017871317726102287,
+      "2014": 0.24657595331328297,
+      "2015": -0.10623845857488856,
+      "2016": 0.03439530593108708,
+      "2017": -0.1416161792015067,
+      "2018": 0.0730430070171173,
+      "2019": -0.1599784484458564,
+      "2020": 0.18116606118930645,
+      "2021": 0.025242254269480124,
+      "2022": 0.0494542759038914,
+      "2023": -0.05495197802759588,
+      "2024": -0.04219893739430802
+    },
+    "avg_gross_leverage": 2.170498270477259,
+    "frac_in_market": 0.5445873123801211,
+    "avg_units_when_in": 3.0870448361969363
+  },
+  "all_variants": {
+    "V1": {
+      "is_net_sharpe_1x": -0.03097017744050451,
+      "is_net_sharpe_2x": -0.1662735219085367,
+      "is_gross_sharpe": 0.10432747651146852,
+      "later_net_sharpe_1x": -0.19888668760764666,
+      "turnover": 95.87363472862452
+    },
+    "V2": {
+      "is_net_sharpe_1x": 0.06736819473932433,
+      "is_net_sharpe_2x": -0.14253710338555708,
+      "is_gross_sharpe": 0.27729655862883634,
+      "later_net_sharpe_1x": -0.2309222447073228,
+      "turnover": 144.87422281984578
+    },
+    "V3": {
+      "is_net_sharpe_1x": 0.07998418940995568,
+      "is_net_sharpe_2x": -0.041077410019124565,
+      "is_gross_sharpe": 0.20103855557332845,
+      "later_net_sharpe_1x": -0.14145208030922266,
+      "turnover": 87.49228746686472
+    }
+  }
+}

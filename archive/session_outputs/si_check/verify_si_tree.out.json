@@ -1,0 +1,254 @@
+{
+ "si_root": "<fedpress-root>_si",
+ "si_root_has_meetings": true,
+ "placebo_json": false,
+ "placebo_in_path": false,
+ "meetings": {
+  "20190130": {
+   "stage_state_si_voice": "ok",
+   "done_status": "ok",
+   "done_stage_fingerprint": "30e0e615d1e3",
+   "done_code_version": "0.1.0+src.df22a2d52e78",
+   "done_models": {
+    "audeering_msp_dim": "6eba34a2485ea31cb03600241787c3a5edab8626"
+   },
+   "done_overrides": [
+    "compute.gpu_type=local5090",
+    "asr.batch_size=4",
+    "voice.batch_size=4",
+    "diarize.ecapa.batch_size=16",
+    "face.batch_size=8"
+   ],
+   "done_config_hash": "514f8fea5aaa",
+   "done_run_id": "20261003T205839-BLADEMASTER",
+   "done_finished_utc": "2026-10-04T00:59:05+00:00",
+   "fingerprint_matches_original": true,
+   "code_version_matches_original": true,
+   "models_match_original": true,
+   "overrides_match_original": true,
+   "table_meta": {
+    "stage": "voice",
+    "presser_id": "20190130",
+    "run_id": "20261003T205839-BLADEMASTER",
+    "stage_fingerprint": "30e0e615d1e3",
+    "code_version": "0.1.0+src.df22a2d52e78",
+    "models": {
+     "audeering_msp_dim": "6eba34a2485ea31cb03600241787c3a5edab8626"
+    },
+    "config_hash": "514f8fea5aaa",
+    "created_utc": "2026-10-04T00:59:05+00:00",
+    "latency_s": 30.0
+   },
+   "model_prefix_ok": {
+    "audeering_msp_dim": true
+   },
+   "n_rows_si": 184,
+   "n_rows_orig": 184,
+   "missing_needed_columns": [],
+   "same_column_set_as_original": true,
+   "chair_all_powell": true,
+   "known_at_nulls": 0,
+   "structural_columns_identical": {
+    "chunk_idx": true,
+    "turn_idx": true,
+    "qa_idx": true,
+    "t_start_s": true,
+    "t_end_s": true,
+    "dur_s": true,
+    "identity_frac": true,
+    "identity_ok": true,
+    "identity_source": true,
+    "known_at": true,
+    "t_end_utc": true,
+    "presser_id": true,
+    "meeting_date": true,
+    "chair": true,
+    "sample_role": true
+   },
+   "feature_nonnull_si": {
+    "arousal": 184,
+    "dominance": 184,
+    "valence": 184,
+    "voiced_frac": 184,
+    "f0_median_st": 184,
+    "intensity_db": 184,
+    "hnr_db": 184
+   },
+   "feature_nonnull_orig": {
+    "arousal": 184,
+    "dominance": 184,
+    "valence": 184,
+    "voiced_frac": 184,
+    "f0_median_st": 184,
+    "intensity_db": 184,
+    "hnr_db": 184
+   },
+   "share_rows_arousal_not_identical": 1.0,
+   "input_sha256": "4a568cad776affe3624dacc01801e6f1199b9586a4856b62ac4d6dda72040480"
+  },
+  "20190320": {
+   "stage_state_si_voice": "ok",
+   "done_status": "ok",
+   "done_stage_fingerprint": "30e0e615d1e3",
+   "done_code_version": "0.1.0+src.df22a2d52e78",
+   "done_models": {
+    "audeering_msp_dim": "6eba34a2485ea31cb03600241787c3a5edab8626"
+   },
+   "done_overrides": [
+    "compute.gpu_type=local5090",
+    "asr.batch_size=4",
+    "voice.batch_size=4",
+    "diarize.ecapa.batch_size=16",
+    "face.batch_size=8"
+   ],
+   "done_config_hash": "514f8fea5aaa",
+   "done_run_id": "20261003T205906-BLADEMASTER",
+   "done_finished_utc": "2026-10-04T00:59:19+00:00",
+   "fingerprint_matches_original": true,
+   "code_version_matches_original": true,
+   "models_match_original": true,
+   "overrides_match_original": true,
+   "table_meta": {
+    "stage": "voice",
+    "presser_id": "20190320",
+    "run_id": "20261003T205906-BLADEMASTER",
+    "stage_fingerprint": "30e0e615d1e3",
+    "code_version": "0.1.0+src.df22a2d52e78",
+    "models": {
+     "audeering_msp_dim": "6eba34a2485ea31cb03600241787c3a5edab8626"
+    },
+    "config_hash": "514f8fea5aaa",
+    "created_utc": "2026-10-04T00:59:19+00:00",
+    "latency_s": 30.0
+   },
+   "model_prefix_ok": {
+    "audeering_msp_dim": true
+   },
+   "n_rows_si": 190,
+   "n_rows_orig": 190,
+   "missing_needed_columns": [],
+   "same_column_set_as_original": true,
+   "chair_all_powell": true,
+   "known_at_nulls": 0,
+   "structural_columns_identical": {
+    "chunk_idx": true,
+    "turn_idx": true,
+    "qa_idx": true,
+    "t_start_s": true,
+    "t_end_s": true,
+    "dur_s": true,
+    "identity_frac": true,
+    "identity_ok": true,
+    "identity_source": true,
+    "known_at": true,
+    "t_end_utc": true,
+    "presser_id": true,
+    "meeting_date": true,
+    "chair": true,
+    "sample_role": true
+   },
+   "feature_nonnull_si": {
+    "arousal": 190,
+    "dominance": 190,
+    "valence": 190,
+    "voiced_frac": 190,
+    "f0_median_st": 190,
+    "intensity_db": 190,
+    "hnr_db": 190
+   },
+   "feature_nonnull_orig": {
+    "arousal": 190,
+    "dominance": 190,
+    "valence": 190,
+    "voiced_frac": 190,
+    "f0_median_st": 190,
+    "intensity_db": 190,
+    "hnr_db": 190
+   },
+   "share_rows_arousal_not_identical": 1.0,
+   "input_sha256": "2405c0843fa882aab6bb9013fdff6e55ac35a989c29e6514a527b0543c9c8b28"
+  },
+  "20190619": {
+   "stage_state_si_voice": "ok",
+   "done_status": "ok",
+   "done_stage_fingerprint": "30e0e615d1e3",
+   "done_code_version": "0.1.0+src.df22a2d52e78",
+   "done_models": {
+    "audeering_msp_dim": "6eba34a2485ea31cb03600241787c3a5edab8626"
+   },
+   "done_overrides": [
+    "compute.gpu_type=local5090",
+    "asr.batch_size=4",
+    "voice.batch_size=4",
+    "diarize.ecapa.batch_size=16",
+    "face.batch_size=8"
+   ],
+   "done_config_hash": "514f8fea5aaa",
+   "done_run_id": "20261003T205919-BLADEMASTER",
+   "done_finished_utc": "2026-10-04T00:59:32+00:00",
+   "fingerprint_matches_original": true,
+   "code_version_matches_original": true,
+   "models_match_original": true,
+   "overrides_match_original": true,
+   "table_meta": {
+    "stage": "voice",
+    "presser_id": "20190619",
+    "run_id": "20261003T205919-BLADEMASTER",
+    "stage_fingerprint": "30e0e615d1e3",
+    "code_version": "0.1.0+src.df22a2d52e78",
+    "models": {
+     "audeering_msp_dim": "6eba34a2485ea31cb03600241787c3a5edab8626"
+    },
+    "config_hash": "514f8fea5aaa",
+    "created_utc": "2026-10-04T00:59:32+00:00",
+    "latency_s": 30.0
+   },
+   "model_prefix_ok": {
+    "audeering_msp_dim": true
+   },
+   "n_rows_si": 189,
+   "n_rows_orig": 189,
+   "missing_needed_columns": [],
+   "same_column_set_as_original": true,
+   "chair_all_powell": true,
+   "known_at_nulls": 0,
+   "structural_columns_identical": {
+    "chunk_idx": true,
+    "turn_idx": true,
+    "qa_idx": true,
+    "t_start_s": true,
+    "t_end_s": true,
+    "dur_s": true,
+    "identity_frac": true,
+    "identity_ok": true,
+    "identity_source": true,
+    "known_at": true,
+    "t_end_utc": true,
+    "presser_id": true,
+    "meeting_date": true,
+    "chair": true,
+    "sample_role": true
+   },
+   "feature_nonnull_si": {
+    "arousal": 189,
+    "dominance": 189,
+    "valence": 189,
+    "voiced_frac": 189,
+    "f0_median_st": 189,
+    "intensity_db": 189,
+    "hnr_db": 189
+   },
+   "feature_nonnull_orig": {
+    "arousal": 189,
+    "dominance": 189,
+    "valence": 189,
+    "voiced_frac": 189,
+    "f0_median_st": 189,
+    "intensity_db": 189,
+    "hnr_db": 189
+   },
+   "share_rows_arousal_not_identical": 1.0,
+   "input_sha256": "e5d03607983d875bac9a18cd5a5c36152880dc0953b8ad4fea5843b0c99b91a1"
+  }
+ }
+}

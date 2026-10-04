@@ -1,0 +1,64 @@
+{
+  "id": "trend_momentum_hop_1_3_12",
+  "headline_variant": "V2",
+  "rule": "As V1 with weekly decisions (last NYSE session of each week)",
+  "all_variants": {
+    "V1": "Month-end s_i = mean(sign R_21, sign R_63, sign R_252); w_i = s_i*0.40/sigma_i/N; book to 10%, gross<=3, next_close (= forward2.s1_decisions) with the realistic cost map",
+    "V2": "As V1 with weekly decisions (last NYSE session of each week)",
+    "V3": "As V1 with continuous horizon signals clip(R_h/(sigma_daily*sqrt(h)), -1, 1)"
+  },
+  "selection": "headline = highest in-sample net Sharpe (1x) of 3 pre-declared variants",
+  "sources": [
+    "https://www.aqr.com/-/media/AQR/Documents/Insights/Journal-Article/AQR-JPM-Fall-2017.pdf",
+    "https://www.aqr.com/Insights/Research/Journal-Article/Demystifying-Managed-Futures",
+    "https://www.aqr.com/Insights/Research/Journal-Article/You-Cant-Always-Trend-When-You-Want",
+    "https://invesco.com/content/dam/invesco/emea/en/pdf/RRE_2024_Q2_NavigatingMomentum.pdf"
+  ],
+  "source_reported": "HOP 2017 67 markets 1880-2016 ~0.76-0.77 net of costs and 2/20 fees, positive every decade, ~0.41 2010-16; Babu et al. 2020 ~0.32 2010-18; SG Trend 0.30 net 1999-2024; BTOP50 0.50 net 1987-2012",
+  "window": {
+    "is_start": "2011-08-16",
+    "is_end": "2024-10-02",
+    "later": "2024-10-03..2026-10-02 (descriptive)"
+  },
+  "columns": {
+    "net_1x": "daily excess return over T-bill, realistic cost map",
+    "net_2x": "same at 2x costs",
+    "gross": "before costs"
+  },
+  "cost_bps_one_way": {
+    "ES": 1.0,
+    "NQ": 1.0,
+    "YM": 1.0,
+    "RTY": 2.0,
+    "ZT": 0.5,
+    "ZF": 0.7,
+    "ZN": 1.0,
+    "ZB": 1.5,
+    "UB": 1.5,
+    "6E": 1.0,
+    "6J": 1.0,
+    "6B": 1.0,
+    "6A": 1.0,
+    "6C": 1.0,
+    "6S": 1.0,
+    "CL": 2.0,
+    "GC": 2.0,
+    "SI": 2.0,
+    "HG": 2.0,
+    "NG": 3.0,
+    "HO": 3.0,
+    "RB": 3.0,
+    "PL": 3.0,
+    "ZC": 4.0,
+    "ZS": 4.0,
+    "ZW": 4.0,
+    "ZL": 4.0,
+    "ZM": 4.0,
+    "LE": 4.0,
+    "HE": 4.0
+  },
+  "exec": "next_close",
+  "vol": "book scaled to 10% ex-ante (trailing 252d cov)",
+  "spec": "<scratch>\\hunt100\\bt_0\\trend_momentum_hop_1_3_12\\SPEC.md",
+  "script": "<scratch>\\hunt100\\bt_0\\run_tsmom.py"
+}

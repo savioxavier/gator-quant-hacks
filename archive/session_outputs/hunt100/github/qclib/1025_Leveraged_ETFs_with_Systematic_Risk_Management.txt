@@ -1,0 +1,24 @@
+### 01 Abstract.html
+In this tutorial, we attempt to beat the returns of the S&P500 Index using leverage and systematic risk management.
+### 02 Introduction.html
+When measuring the profitability of a strategy, it is usually not enough to be profitable, as it should also beat
+ the benchmark, for which the SP500 Index is most commonly used. If not, what would be the reason to not just invest
+ in a low-cost SP500 index instead (not accounting for risk)? However, what if we could beat the SP500 with the SP500?
+ This is what Gayed et al. proposed with their strategy of using Leveraged SP500 indices with Systematic Risk Management.
+ They propose that Moving Averages are a good method to assess volatility in the market, and they use it to manage risk,
+ which is especially important since the effects of price swings in a leveraged ETF are magnified due to the leverage.
+ With this method, we hope to outperform the SP500 while at the same time, attempt to reduce drawdown.
+### 03 Method.html
+We develop hold/liquidate positions based on the 200-day Simple Moving Average (SMA) of our ETF, for which we use SSO,
+ a 2x leveraged SP500 index ETF. With 200 days instead of using fewer days, say 50, we reduce the number of trades per year,
+ thereby reducing transaction costs and the effects of slippage. Moving on, if the current price of SOO is above the 200-day SMA,
+ we hold SSO, and if SSO dips below our 200-day SMA, we sell liquidate our position and rotate our position into short-term
+ treasuries, which is done through SHY, an ETF that tracks 1-3 year U.S. Treasury Bonds. If we are holding SHY, and the
+ current price of SSO moves above the 200-day SMA, then we rotate back into SSO and liquidate SHY.
+### 05 Results.html
+We use the S&P 500 as our benchmark, which we track by using the SPY ETF. Our strategy yielded a Sharpe Ratio of .732
+ over the past five years, while buying and holding SPY for the same period yielded a Sharpe Ratio of .572.
+### 06 References.html
+Gayed, Michael and Bilello, Charles, Leverage for the Long Run - A Systematic Approach to Managing Risk and
+ Magnifying Returns in Stocks (March 3, 2016). 2016 Charles H. Dow Award.
+ Online Copy .

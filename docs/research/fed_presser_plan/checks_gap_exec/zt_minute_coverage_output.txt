@@ -1,0 +1,29 @@
+20160316 ZT.v.0 ohlcv-1m 120 | ZT.v.0 ohlcv-1s 1328 | ES.v.0 ohlcv-1m 120 | ES.v.0 ohlcv-1s 6777
+20160615 ZT.v.0 ohlcv-1m 120 | ZT.v.0 ohlcv-1s 1121 | ES.v.0 ohlcv-1m 120 | ES.v.0 ohlcv-1s 5732
+20160921 ZT.v.0 ohlcv-1m 107 | ZT.v.0 ohlcv-1s 948 | ES.v.0 ohlcv-1m 120 | ES.v.0 ohlcv-1s 6878
+20161214 ZT.v.0 ohlcv-1m 120 | ZT.v.0 ohlcv-1s 1695 | ES.v.0 ohlcv-1m 120 | ES.v.0 ohlcv-1s 6931
+20170315 ZT.v.0 ohlcv-1m 118 | ZT.v.0 ohlcv-1s 1261 | ES.v.0 ohlcv-1m 120 | ES.v.0 ohlcv-1s 6151
+20170614 ZT.v.0 ohlcv-1m 107 | ZT.v.0 ohlcv-1s 701 | ES.v.0 ohlcv-1m 120 | ES.v.0 ohlcv-1s 6057
+20170920 ZT.v.0 ohlcv-1m 113 | ZT.v.0 ohlcv-1s 1319 | ES.v.0 ohlcv-1m 120 | ES.v.0 ohlcv-1s 5641
+20171213 ZT.v.0 ohlcv-1m 110 | ZT.v.0 ohlcv-1s 930 | ES.v.0 ohlcv-1m 120 | ES.v.0 ohlcv-1s 4289
+20180321 ZT.v.0 ohlcv-1m 116 | ZT.v.0 ohlcv-1s 1192 | ES.v.0 ohlcv-1m 120 | ES.v.0 ohlcv-1s 6963
+20180613 ZT.v.0 ohlcv-1m 111 | ZT.v.0 ohlcv-1s 1119 | ES.v.0 ohlcv-1m 120 | ES.v.0 ohlcv-1s 6036
+20180926 ZT.v.0 ohlcv-1m 106 | ZT.v.0 ohlcv-1s 663 | ES.v.0 ohlcv-1m 120 | ES.v.0 ohlcv-1s 6082
+20181219 ZT.v.0 ohlcv-1m 119 | ZT.v.0 ohlcv-1s 1675 | ES.v.0 ohlcv-1m 120 | ES.v.0 ohlcv-1s 7188
+Traceback (most recent call last):
+  File "<solo-repo>\research\fed_presser_plan\checks_gap_exec\zt_minute_coverage.py", line 19, in <module>
+    n = c.metadata.get_record_count(dataset="GLBX.MDP3", schema=schema, stype_in="continuous", symbols=[sym],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<home>\.venvs\gqh-systematic\Lib\site-packages\databento\historical\api\metadata.py", line 332, in get_record_count
+    response: Response = self._post(
+                         ^^^^^^^^^^^
+  File "<home>\.venvs\gqh-systematic\Lib\site-packages\databento\common\http.py", line 113, in _post
+    check_http_error(response)
+  File "<home>\.venvs\gqh-systematic\Lib\site-packages\databento\common\http.py", line 233, in check_http_error
+    raise BentoServerError(
+databento.common.error.BentoServerError: 504 The remote gateway timed out.
+20190130 ZT.v.0 ohlcv-1m 120 | ZT.v.0 ohlcv-1s 1543 | ES.v.0 ohlcv-1m 120 | ES.v.0 ohlcv-1s 6823
+20200129 ZT.v.0 ohlcv-1m 118 | ZT.v.0 ohlcv-1s 1123 | ES.v.0 ohlcv-1m 120 | ES.v.0 ohlcv-1s 6196
+20210127 ZT.v.0 ohlcv-1m 112 | ZT.v.0 ohlcv-1s 1221 | ES.v.0 ohlcv-1m 120 | ES.v.0 ohlcv-1s 7150
+20230201 ZT.v.0 ohlcv-1m 120 | ZT.v.0 ohlcv-1s 3113 | ES.v.0 ohlcv-1m 120 | ES.v.0 ohlcv-1s 7190
+20260916 ZT.v.0 ohlcv-1m 120 | ZT.v.0 ohlcv-1s 3197 | ES.v.0 ohlcv-1m 120 | ES.v.0 ohlcv-1s 7184

@@ -1,0 +1,1755 @@
+
+=== PAGE 1 ===
+Electronic copy available at: http://ssrn.com/abstract=1716841
+Limits to Arbitrage and Commodity Index Investment:
+Front-Running the Goldman Roll
+Yiqun Mou∗ ∗
+Columbia University
+July 15, 2011
+ABSTRACT
+This paper studies the unique rolling activity of commodity index in futures markets and
+shows that the resulting price impact is statistically and economically signiﬁcant. Two trading
+strategies, devised to exploit this anomaly, yielded excess returns with positive skewness and
+Sharpe ratios as high as 4.39 from 2000 to March 2010. The proﬁtability of the strategies is
+positively correlated with the net result of two opposite forces: the size of index investment
+and the amount of arbitrage capital employed. Due to the price impact, investors forwent 3.6%
+annual return, 48% higher Sharpe ratio, and billions of dollars over the period.
+∗Columbia GSB, 3022 Broadway, Uris Hall, New York, NY 10027; Email: ym2209@columbia.edu.
+I am thankful to Michael Johannes, Lars Lochstoer and Pierre Collin-Dufresne for their encouragement
+and support. I am also grateful to Bjarni Torfason, Charles Jones, Ravi Sastry and seminar participants at
+Columbia University, University of Maryland, University of Wisconsin-Madison, Federal Reserve Board,
+University of Hong Kong, Nanyang Technological University, Norwegian School of Economics and Busi-
+ness Administration for helpful comments.
+=== PAGE 2 ===
+Electronic copy available at: http://ssrn.com/abstract=1716841
+Arbitrage is the basis of the efﬁcient market hypothesis, as in theory, rational arbitrageurs can
+engage in risk-less arbitrage to quickly eliminate any market anomalies. In reality, many empirical
+evidence show that an anomaly can exist and sometimes persist for a long time, because both arbi-
+trage opportunity and arbitrageurs are often limited, causing arbitrage capital to be slow-moving.
+Shleifer and Vishny (1997) show that market is often incomplete, so an arbitrage opportunity is
+usually not really risk free. They also point out that arbitrageurs are often capital constrained
+because of the agency problem. Abreu and Brunnermeier (2002) propose that arbitrageurs face
+synchronization risk due to the heterogeneity and preference to time the market rather than correct
+mispricing immediately, which leads to delayed arbitrage. Dufﬁe (2010) suggests that a market
+anomaly can also persist due to arbitrageurs’ inattention to the market.
+Many empirical evidence on limits to arbitrage is found to be related to index investment.
+The most well-known example is the inclusion and exclusion effect of equity index. Petajisto
+(2011) shows that during the period 1990-2005, prices increased an average of 8.8% around the
+event for stocks added to the S&P 500, and dropped -15.1% if the stocks were deleted from the
+index1. The effect generally grows with the size of index fund assets. Besides that, Kaul, Mehrotra
+and Morck (2000) ﬁnd that when the index increases the weights of stocks, prices experience
+signiﬁcant increases during the event week with no reversal afterwards, even when the adjustment
+is previously announced. These anomalies exist mainly because index funds have to follow very
+mechanical trading rules in order to track the index, while there are not enough arbitrageurs in
+the market to absorb the price impact. In this paper, I extend the research into commodity index
+investment, which is attracting more and more attention from legislators, investors and economists.
+Commodity index investment experienced dramatic growth over the last decade and now con-
+stitutes a signiﬁcant fraction of investment in commodity futures markets. When commodity prices
+reached dizzying heights in mid-2008, the value of total long positions held by index investors
+reached $256 billion, up from about $6 billion in 1999. The average estimated ratio of these long
+positions relative to total open interests increased from 6.7% in 1999 to 44% in mid-2008 across 19
+largest commodity markets that are covered by this paper. After the commodity prices collapsed in
+1Other studies of effects include Harris and Gurel (1986), Shleifer (1986), Lynch and Mendenhall (1997), Chen,
+Noronha and Singal (2004), and many others.
+1
+=== PAGE 3 ===
+the fall of 2008, investment dropped, but it quickly rebounded. The value of index investors’ long
+positions almost doubled from $112 billion to $211 billion at the end of 2009, and the average
+estimated market ratio also increased from 39% to 52%. While there has been a heated debate
+on the impact of this surge in investment on commodity price levels 2, this paper investigates the
+impact from a different angle and focuses on a unique feature of commodity index investment.
+Unlike equity index funds that invest directly in the underlying assets, commodity index funds
+obtain price exposure by entering long positions in futures contracts. In order to maintain the long
+exposure, the funds need to unwind the maturing contracts before they expire and initiate new
+long positions in contracts that have later maturity dates. Since the funds have to roll their entire
+positions forward on regular basis, the potential pressure on the prices of contracts involved can
+be very large given the size of investment. This rolling activity gives investors a return called ”roll
+yield”, which refers to the difference between log price of the maturing contract they roll from and
+the deferred contract they roll into. Little attention of economists has been devoted to the impact
+of index investment on this separate, but quantitatively as least as important, component of total
+return.
+This paper documents that the mechanical rolling forward of futures contracts explicit in com-
+modity index funds’ investment strategies exerts large and time-varying price pressure on the rela-
+tive prices of the contracts involved in the rolling in the largest commodity markets. The price im-
+pact presents a big market anomaly and great trading opportunity. With very simple front-running
+strategies, the arbitrageurs can generate excess returns with positive skewness and annual Sharpe
+ratios as high as 4.39 over the period from January 2000 to March 2010. From the perspective of
+investors, the estimated losses due to this price pressure, amounted to about $26 billion over the
+period from 2000 to 2009, compared to the estimated total management fees of about $5 billion.
+Commodity index investors also forwent on average 3.6% annual return and a 48% higher Sharpe
+ratio over this period. The magnitude of this economic loss dwarfs the cost of price impact in the
+S&P 500 equity index due to the inclusion and exclusion effect, which is about 0.21-0.28% each
+year according to the estimation of Petajisto (2011).
+2See Singleton (2011), Master and White (2008), Buyuksahin and Harris (2011), Hamilton (2009), Kilian (2009),
+Stoll and Whaley (2010).
+2
+=== PAGE 4 ===
+The Standard and Poor’s-Goldman Sachs Commodity Index (SP-GSCI) was the ﬁrst commer-
+cially available commodity index and is also most popular one. The SP-GSCI rolls futures forward
+from the ﬁfth to the ninth business day in each month, and its rolling activity is usually called the
+Goldman roll by practitioners. To help understand the Goldman roll and its impact, I use crude
+oil (WTI) as an example and look at a 15-business-day window ending on February 13, 2001.
+The SP-GSCI rolled the futures forward from February 7 to February 13 by shorting the March
+contracts and longing the April contracts. Panel A of Figure 1 shows the term structure of crude
+oil futures on February 7. As we can see, the slope was negative, which means contracts with
+shorter maturities were trading at premiums. This kind of term structure is called in backwar-
+dation in the literature. Because the March contract was more expensive, by shorting the March
+contract at $31.27 and longing the April contract at $30.98, the investors got a positive roll yield
+ln(31.27/30.98) = 0.93%.
+[Insert Figure 1]
+Panel B of Figure 1 shows how the two contracts’ prices moved during the 15-day window.
+Although the two contracts shared the same general price pattern, their prices were much closer
+during the rolling period. The difference between the prices of two contracts is called the spread.
+As shown in Panel C and Panel D, the spreads and roll yields were much lower in the rolling period.
+More importantly, we can clearly observe a large $0.31 drop in spread and a 1.1% drop in roll
+yield when entering the rolling period. This suggests that due to the large size of index investment,
+the shorting demand exerted by the Goldman roll caused the March contract to be temporarily
+underpriced, and the longing demand caused the April contract to be temporarily overpriced. The
+price pressure caused the roll yield to drop, resulting a loss for investors.
+The plots also indicate how this mispricing due to the price impact can be easily exploited by
+long-short strategies. For example, on January 24, we can short the March contract at $29.05, an-
+ticipating that it would be relatively underpriced after 10 days. At the same time, we long the April
+contract at $28.31, expecting it to be relatively overpriced when the Goldman roll happens. In this
+way, we create a calendar spread position with net value equal to the spread $0.74, and this spread
+3
+=== PAGE 5 ===
+position has little exposure to the change in absolute level of crude oil price. When the mispricing
+happens on February 7 due to the Goldman roll, we unwind the positions by longing the March
+contract and shorting the April contract to exactly offset the positions of the SP-GSCI, paying the
+spread $0.29. This front-running strategy proﬁts from the drop in the spread $0.74−$0.29=$0.45,
+and if we post full collateral for the spread position: $28.68 (= $29.05+$28.31
+2 ), the strategy yields an
+unleveled excess return of 1.57% in 10 days. In real world, initiating such a spread position only
+requires 2-4% margin of the nominal value, so the strategy can be easily implemented with very
+high leverage. As indicated by the plots, even if we front-run the Goldman by just a few days, the
+excess return can still be very high.
+The paper investigates 19 commodities in the SP-GSCI that are traded on US exchanges. They
+have the largest and also the most liquid commodity futures markets, with a total weight of 93.22%
+in the SP-GSCI in 2010. The sample period is from January 1980 to March 2010. The year 2000 is
+set as a cut-off point, because index investment was nonexistent or very small (less than $6 billion)
+before 2000. Two simple trading strategies, like the one above, are designed to exploit the price
+impact. The only difference is that Strategy 1 front-runs the Goldman roll by 10 business days,
+while Strategy 2 front-runs it by just 5 business days.
+The 19 commodities are grouped by sectors to form 4 equally weighted sector portfolios (agri-
+culture, livestock, energy and metals) and one total portfolio. In the period 1980-1999, the port-
+folios’ Sharpe ratios were typically low or negative. However, in the period 2000-2010, both
+strategies yielded very high abnormal returns. Under the assumption that capital was invested in
+risk-free assets when it was not utilized for the strategies, the annualized Sharpe ratios ranged from
+1.09 to 2.75 with Strategy 1 and from 0.46 to 1.78 with Strategy 2. More importantly, the excess re-
+turns were positively skewed for most portfolios, with a maximum skewness of 2.23 with Strategy
+1 and 2.45 with Strategy 2. Energy sector is overall the best performing sector. With Strategy 1,
+the energy portfolio has unleveled annual excess return of 4.43%, with Sharpe ratio 2.2, skewness
+0.88 and maximum drawdown only 0.94%. From the perspective of a money manager who has
+multiple trading opportunities and only cares about performance in the trading periods, the annu-
+alized Sharpe ratios ranged from 2.0 to 3.99 with Strategy 1 and from 1.16 to 4.39 with Strategy
+4
+=== PAGE 6 ===
+2.
+When the same strategies are applied to a control group of 18 commodities not included in the
+SP-GSCI, there were no abnormal returns earned in either period. The Sharpe ratios of similar
+portfolios were either negative or very small, with a maximum of 0.31. Results from panel regres-
+sions show that the average excess returns of both strategies were not signiﬁcantly different from
+0 for either commodities out of the SP-GSCI over the full sample period, or commodities in the
+SP-GSCI before the launch of the index (or the commodities’ inclusion into the SP-GSCI). After
+the inclusions, the average excess return was 0.35% with Strategy 1 and 0.24% with Strategy 2.
+Both are statistically signiﬁcant at the 1% level.
+All information about the Goldman roll is publicly available. What is more, compared to the
+equity market, there are fewer barriers for arbitrage in commodity futures markets. There is no
+short-sell constraint. Anyone can enter into both long and short positions freely. High leverage
+can be easily obtained through low margin requirements. The commodities in the SP-GSCI have
+very liquid futures markets, and the contracts involved in the Goldman roll are also the most liquid
+contracts in each market. If the market was well arbitraged, we would not observe this market
+anomaly. However, the performances of the strategies indicate that the arbitrage capital is slow-
+moving.
+Commodity Futures Trading Commission (CFTC) publishes weekly Commitment of Traders
+(COT) reports, which report the number of positions held by different traders in futures markets
+from 1986. I ﬁnd little increase in the number of spread positions held by speculators before 2004
+in 17 markets that have data available, which indicates that very few arbitrageurs were exploiting
+the market anomaly before 2004. It can be due to the inattention of arbitrageurs to commodity
+markets and thus their unawareness of this market anomaly. From 2004, the number of spread
+positions held by speculators has experienced a dramatic jump in all 17 markets, which suggests
+that as commodity markets and commodity index investment gained more attention and popularity
+from the investment community, more arbitrageurs were becoming aware of this market anomaly,
+and more arbitrage capital was utilized to exploit the price impact. Consistent with the limits to
+arbitrage theory, the paper shows that the performances of front-running strategies are signiﬁcantly
+5
+=== PAGE 7 ===
+related to the net forces of the size of index investment and size of arbitrage capital utilized to take
+advantage of the market anomaly. The arbitrage proﬁt is lower when there is a reduction in index
+investment or an increase in arbitrage capital.
+A related work is the paper of Acharya, Lochstoer and Ramadorai (2010), who show that limits
+to arbitrage by speculators generates limits to hedging by producers, and affects both futures and
+spot commodity prices. The paper is also related to a classic theory called the Theory of Normal
+Backwardation (Keynes (1930), Hicks (1939) and Cootner (1967)) in commodity markets. The
+theory emphasizes the interaction between speculators and hedgers. Speculators earn a risk pre-
+mium by taking opposite positions to meet the hedging demand of hedgers. Empirical evidence 3
+shows that the risk premium is higher when the hedging demand is higher. Normally, commod-
+ity producers are the hedgers, taking short positions to hedge their productions, and commodity
+indices are originally designed to capture the risk premium of taking the long positions, so index
+investors are sometimes called index speculators. However, since index funds have to follow the
+exact rolling rules of the indices they track in order to minimize the tracking error4, they have great
+hedging demand when they roll contracts forward. By meeting this hedging demand, speculators
+can earn very high excess returns.
+The paper is organized as follows. Section 2 describes some facts about commodity index
+investment and the Goldman roll. Section 3 presents the empirical analysis and analyzes the per-
+formance of the front-running strategies. Section 4 concludes.
+I. Commodity Index Investment
+Commodity index investment has become increasingly popular among institutional and individual
+investors in recent years. The ﬁrst commercially available commodity index was launched at the
+end of 1991, and now there are hundreds of different indices. Institutional investors, such as pen-
+sion funds and endowment funds, usually enter into over-the-counter (OTC) swaps with big banks.
+3See Carter, Rausser and Schmitz (1983), Chang (1985), Bessembinder (1992), de Roon, Nijman and Veld (2000)
+and Acharya, Lochstoer and Ramadorai (2010).
+4Index funds also have no incentive to deviate from the ﬁxed trading rules, because they received ﬁxed management
+fees.
+6
+=== PAGE 8 ===
+In a typical swap agreement, the investor pays the 3-month Treasury-bill rate plus a management
+fee to a Wall Street bank, and the bank pays the total return on a particular commodity index.
+The management fee ranges from 0.5% to 1.5% per year depending on the index and nominal
+amount. In order to hedge themselves, banks will take positions in futures contracts to replicate
+the index. Institutional investors can also put their funds under the management of a commodity
+index fund, which tracks a particular index. For individual investors, the main investment chan-
+nel is exchanged-traded funds (ETFs) and notes (ETNs) which are tied to particular indices. The
+management fees associated with ETFs or ETNs are typically higher than the fees of swaps. Like
+other index investors, commodity index investors are usually long-term investors and mostly pas-
+sive in the sense that there is no attempt to time the market or identify under-priced commodities.
+Most of the indices only take long positions in futures contracts 5, and all the positions are fully
+collateralized, with the collateral invested in 3-month Treasury bills.
+The Standard and Poor’s-Goldman Sachs Commodity Index (SP-GSCI) and the Dow Jones-
+UBS Commodity Index (DJ-UBSCI) are the two most popular commodity indices and used as
+industry benchmarks. According to Masters and White (2008), the estimated market share was
+approximately 63% for the SP-GSCI and 32% for the DJ-UBSCI in 2008. The SP-GSCI was the
+ﬁrst commercially available commodity index and was launched in November 1991. It includes
+24 commodities now, and the composition has remained the same since 2002. The DJ-UBSCI
+was launched in July 1998 and includes 19 commodities, 18 of which it shares with the SP-GSCI.
+The weighting schemes of the two indices are different. The weights in the SP-GSCI are pri-
+marily based on the delayed ﬁve-year rolling averages of world production quantities, while the
+DJ-UBSCI chooses weights based on liquidity and world production values, where liquidity is the
+dominant factor. The DJ-UBSCI also imposes lower bound of 2% for individual weight and upper
+bound of 33% for sector weight. Since the SP-GSCI is more popular and includes almost all com-
+modities in the DJ-UBSCI and other indices, I will focus on the 19 commodities in it that are traded
+on US exchanges6. These commodities also have the largest futures markets, and will be referred
+5Starting from 2006, some new commodity indices take both long and short positions depending on the term struc-
+tures and other factors, like the Morningstar long and short commodity index. However, the majority of commodity
+indices still only take long positions.
+6I exclude 5 industrial metals that are traded on London Metal Exchange (LME), because the maturity structure of
+7
+=== PAGE 9 ===
+to as index commodities. Table I lists these commodities and their weights in the two indices in
+20107. The aggregate weight of the 19 commodities is 93.44% in the SP-GSCI and 78.21% in the
+DJ-UBSCI in 2010, so they are very representative. As shown in Table I, the SP-GSCI is heavily
+weighted on the energy sector, with a total weight of 69.25% and a crude oil weight of 50.05%.
+The weights in the DJ-UBSCI are more evenly dispersed, and the total energy weight is only 33%.
+[Insert Table I]
+Commodity index investments give investors exposure to commodity prices. There is both
+academic and industrial research that suggests that even when a commodity index may be a poor
+stand-alone investment, it is still desirable because of the hedging against inﬂation and the diver-
+siﬁcation beneﬁt added to the investors’ total portfolio. Gorton and Rouwenhorst (2006) ﬁnd that
+over the period between July 1959 and March 2004, the returns of investing in commodity futures
+were negatively correlated with equity and bond returns, but positively correlated with inﬂation.
+Based on the examination of asset class data from 1970 to 2004, Idzorek (2006) shows that by
+adding commodity indices into the portfolio, the average improvement in historical return at each
+risk level (standard deviation range of approximately 2.4% to 19.8%) was approximately 1.33%,
+with a maximum of 1.88%. However, a recent study by Tang and Xiong (2010) ﬁnd that with
+the boom of commodity index investments, commodity prices have been increasingly exposed to
+market-wide shocks and shocks to other commodities, such as oil. Therefore, it is not clear whether
+or not the diversiﬁcation beneﬁt of commodity index investment is sustainable in the future.
+A. The Goldman Roll
+Since futures contracts have expiration dates, to maintain the long exposure to commodity prices,
+commodity indices need to roll the positions forward, i.e., by closing the long positions in the ma-
+turing contracts and initiating new long positions in contracts that have later maturity dates. Table
+the futures contracts listed on LME is very different from that in US. The maturities of these futures contracts range
+from one day to 3 months consecutively. It is not clear from the index documentations which contracts these indices
+choose and how they roll the contracts forward.
+7The weights are taken in 2010. The index committee may revise the weights depending on various factors each
+year, so the weights in previous years can be different from the current weights, but the differences are usually small.
+8
+=== PAGE 10 ===
+I shows the rolling scheme of the SP-GSCI by listing the maturities of the futures contracts held
+by the index on the ﬁrst business day of each calendar month. If the index holds different contracts
+at the beginnings of two consecutive months, it means that the index rolls futures forward in the
+ﬁrst month. For example, the SP-GSCI holds the March and May wheat contracts at the beginning
+of February and March respectively, so the index rolls the wheat futures forward in February by
+closing the March contracts and initiating the May contacts. Since the liquidity of contracts drops
+very quickly as the maturity increases, commodity indices usually hold contracts with short matu-
+rities. Different commodities have different rolling frequencies. Agricultural and precious metal
+commodities are typically rolled forward 4 to 5 times a year. The livestock commodities are rolled
+forward a bit more frequently, 6 to 8 times a year. The SP-GSCI rolls the energy commodities ev-
+ery month. The rolling scheme of the DJ-UBSCI is the same for most commodities except energy
+commodities, which are rolled every two months.
+In the rolling month, both the SP-GSCI and DJ-UBSCI have a rolling period of 5 business
+days. The SP-GSCI starts on the ﬁfth business day of the month, and ends on the ninth business
+day, while the DJ-UBSCI rolls from the sixth business day to the tenth business day, so the rolling
+periods of the two indices greatly overlap. Many other indices and ETFs also roll in this period,
+like the former Lehman Brothers Commodity Index and the largest crude oil ETF: United States
+Oil Fund (USO). On each day of the rolling period, both indices roll forward 20% of the positions
+for commodities that need to be rolled. Since the DJ-UBSCI’s rolling rules are very similar to
+the SP-GSCI which is much more popular, in the following empirical analysis, I will focus on the
+rolling activity of the SP-GSCI, which is called the Goldman roll by practitioners.
+The total excess return of investing in futures contracts consists of spot return and roll yield.
+Spot return captures the price change of the futures contracts that investors hold. Roll yield (also
+called roll return) captures the slope of futures curve when investors roll futures forward. From
+now on, the contracts held by the SP-GSCI will be referred to as the maturing contracts, and the
+contracts that the SP-GSCI rolls into will be called the deferred contracts. Suppose the price of the
+maturing contract is Ft,T1 at time t with maturity T1, and Ft,T2 is the price of the deferred contract
+with maturity T2, where T2 > T1. The roll yield is deﬁned as
+9
+=== PAGE 11 ===
+Roll Yield = ln(Ft,T1)− ln(Ft,T2) (1)
+When the maturing contract is more expensive Ft,T1 > Ft,T2, the term structure is usually called in
+backwardation and the roll yield is positive. When the maturing contract is at a discount Ft,T1 <
+Ft,T2, the term structure is called in contango and the roll yield is negative.
+Historically, the roll yield is an important component of the total excess return. Anson (1998)
+shows that the roll yield provided most of commodity investments’ total excess return in the period
+between 1985 and 1997, and in the case of the SP-GSCI, the average annual roll yield was 6.11%
+while the average spot return was -0.08%. Feldman and Till (2006) ﬁnd that from 1983 to 2004,
+whether a commodity was in structural backwardation or not largely determined its returns, and
+roll yield has been the dominant driver of commodity futures returns.
+II. Empirical Analysis
+The daily prices for individual commodity’s futures contracts are obtained from the Commodity
+Research Bureau (CRB) and the full sample period is from January 2, 1980 to March 31, 2010 8.
+In the following analysis, the year 2000 is often set as a cutoff point, since commodity index
+investment was nonexistent or very small (less than $6 billion) before 2000. As shown later, the
+exact choice of the cutoff point is not important and does not change the results. To facilitate the
+analysis, I form a control group using 18 commodities not included in the SP-GSCI with futures
+trading on US exchanges since 2005 or earlier. These commodities will be referred to as out-of-
+index commodities. I apply a similar rolling scheme as the SP-GSCI by matching the sector and
+maturity structures of futures markets. The rolling periods of these commodities are exactly the
+same as the SP-GSCI. Table II lists the commodities in this control group9 and the rolling scheme.
+8I exclude the sample before 1980 due to the following considerations. First, there could be some potential struc-
+tural changes in commodity futures markets, so the data further back may not be so relevant. Second, the SP-GSCI is
+heavily weighted on energy sector, and the ﬁrst energy commodity futures (heating oil) started trading at the end of
+1979. Third, I check the empirical analysis using all available data and the results are very similar. The results using
+whole history are available upon request.
+9The soybean oil is actually included in the DJ-UBSCI and some smaller indices, but the weight is very low.
+The orange juice is also included in some smaller indices. The copper here is traded on NYMEX, so it is not the
+10
+=== PAGE 12 ===
+Many commodities in the control group are closely related to some index commodities.
+[Insert Table II]
+A. Preliminary Evidence of Price Impact
+Given the massive size of investment tied to the SP-GSCI, when it rolls futures forward, the large
+shorting demand of the maturing contract (being rolled from) could potentially push its price down,
+while the large longing demand of the deferred contract (being rolled into) could push its price up.
+Together, the resulting price impact would cause the roll yield to drop in the rolling period. In the
+following analysis, I will provide some preliminary and visual evidence based on this intuition to
+show the existence of the price impact.
+First, a 15-business-day window is constructed to examine the change of roll yields, with the
+last 5 days being the rolling dates of the SP-GSCI. This window is labeled ”rolling window”. Days
+after SP-GSCI’s rolling period are not included here, because for energy commodities, after the
+SP-GSCI unwinds the maturing contracts, these contracts typically have less than a week before
+the last trading days. Previous empirical studies usually exclude such contracts because of the
+liquidity concerns. The full sample is divided into two sub-samples: 1980-1999 and 2000-2010.
+Figure 2 shows the average roll yields (in percentage) of four representative index commodities
+(crude oil WTI, heating oil, gasoline RBOB and live cattle) over the rolling window in the two
+periods.
+[Insert Figure 2]
+The plots in Figure 2 reveal some interesting facts. First, before 2000, the average roll yields
+were positive on every day for all 4 commodities. It is consistent with the ﬁndings of Litzenberger
+and Rabinowitz (1995) and Casassus and Collin-Dufresne (2005) that these commodities were
+often in backwardation. In the period 2000-2010, the average roll yields dropped, especially in
+the SP-GSCI’s rolling period. Second and more interestingly, before 2000, the roll yields showed
+same contract which the SP-GSCI and DJ-UBSCI hold. I put milk and butter in the livestock sector because they are
+produced by livestock and I can have more than one commodity in livestock sector when I form sector portfolios later.
+11
+=== PAGE 13 ===
+no clear trend in the window, and the average roll yields in the SP-GSCI’s rolling period were
+not signiﬁcantly lower than the average roll yields in the ﬁrst 5 days of the window. The roll
+yields were also very smooth across the days. However, in the period 2000-2010, we can observe
+very clear drops of roll yields when entering the SP-GSCI’s rolling period, especially for 3 energy
+commodities. There are decreasing trends for all commodities, and the average roll yields in the
+SP-GSCI’s rolling period are much lower than the average roll yields in the ﬁrst 5 days, with
+statistical signiﬁcance at the 1% level for three energy commodities and at the 5% level for live
+cattle.
+There are also some drops of roll yields from day 6 to day 10, which could be due to the price
+impact of some other commodity indices that roll futures forward a little earlier than the SP-GSCI.
+For example, the Reuters/Jefferies-CRB Index (CRB) rolls futures forward between the 1st and 4th
+business days of the rolling month (day 7 to day 10), and the Deutsche Bank Liquid Commodity
+Index (DBLCI) has a rolling period which is between the 2nd and 6th business day (day 8 to
+day 11). The decrease in roll yields can also be caused by some arbitrageurs who front-run the
+Goldman roll by just a few days.
+Second, I examine an alternative 15-business-day window, with the last day being one day
+earlier than the ﬁrst day of the rolling window, so the two windows are consecutive. As shown
+in Figure 3, there were no clear trends over the window and drops on any particular day for all
+commodities in both time periods. The average roll yields in the last 5 days of the window were
+not signiﬁcantly lower than the average roll yields in the ﬁrst 5 days. In the case of gasoline and
+heating oil, the average roll yields in the two periods were very close to each other everyday.
+[Insert Figure 3]
+Finally, to further conﬁrm that the unique pattern is caused by the price impact of the Goldman
+roll, I pick four representative out-of-index commodities from the control group and examine the
+change of roll yields in the rolling window. These four commodities are soybean meal, pork belly,
+propane and copper, one from each sector. As shown in Figure 4, the results form clear contrasts to
+the results of index commodities in the rolling window, but are very similar to the results of index
+12
+=== PAGE 14 ===
+commodities in the alternative window. For all 4 commodities in both periods, there were no clear
+trends and no signiﬁcant differences between the average roll yields in the ﬁrst and last 5 days.
+Also there were no clear drops of roll yields when entering the rolling period for all 4 commodities
+in the period 2000-2010.
+[Insert Figure 4]
+In sum, the time-series and cross-sectional evidence above is very supportive of the existence
+of the price impact due to the Goldman roll. To provide further and more rigorous evidence, I will
+design two simple trading strategies to capture the price impact in the next section and show how
+both statistically and economically signiﬁcant the price impact was.
+B. Front-Running the Goldman Roll
+The idea is that since the Goldman roll would cause the maturing contracts to be temporarily
+underpriced and the deferred contracts to be overpriced, we can create long-short positions to
+capture this price impact. One can either front-run by creating the spread positions before the
+Goldman roll or back-run by creating opposite positions at the same time as the Goldman roll.
+Because there is liquidity concern of maturing contracts after the Goldman roll and the front-
+running offers more ﬂexibility, I will only focus on front-running strategies.
+Assuming that the price of the maturing contract (being rolled from) is Ft,T1, and the deferred
+contract (being rolled into) has price Ft,T2, then the spread
+SPT1,T2
+t = Ft,T1− Ft,T2 (2)
+is the amount of gain (or loss) per unit of the commodity when rolling futures forward. It is also
+the value of a calendar spread position which shorts one unit of the maturing contract, and longs
+one unit of the deferred contract. This long-short spread position has little exposure to the change
+in absolute price level, and is ideal to capture the full impact of price pressures exerted by the
+Goldman roll in both directions.
+13
+=== PAGE 15 ===
+Without price impact, the spread SPT1,T2
+t should be roughly the same over a short time period.
+With price impact, the spread can decrease in the rolling period because the maturing contract’s
+price Ft,T1 would be pushed down and the deferred contract’s price Ft,T2 would be pushed up. The
+front-running strategy is designed to capture this drop of spread by shorting the maturing contracts
+and longing the deferred contracts before the SP-GSCI’s rolling period. The spread positions are
+then unwound and exactly offset the SP-GSCI’s positions when it roll futures forward10.
+I focus on the rolling window analyzed in the last section 11. The 15-day window is equally
+divided into three groups. The formal trading strategies are designed as follows. With Strategy
+1, in each month, I ﬁrst identify the commodities that the SP-GSCI will roll forward. For such
+commodities, calendar spread positions are created on each day in the ﬁrst group, which runs from
+10 to 6 business days before the SP-GSCI’s ﬁrst rolling date. The spread position involves shorting
+the maturing contracts that the SP-GSCI is currently holding and longing the deferred contracts
+that it will roll into. In this way, I create the same spread positions as the Goldman roll, except I do
+it 10 days earlier. The calendar spread positions will be unwound in the SP-GSCI’s rolling period.
+Like the SP-GSCI, I create 20% of the total spread positions each day and also unwind 20% each
+day.
+Strategy 2 follows the same methodology except front-running the Goldman roll by just 5 days.
+The spread positions are created in the second group of days, which runs from 5 to 1 business day
+before the ﬁrst rolling date of the SP-GSCI. Since both strategies are implemented in very short
+periods, if they earn very high abnormal excess returns, it is very unlikely to be caused by factors
+other than the price impact of the Goldman roll. There are multiple ways to improve the simple
+strategies, but the idea here is to show how the most simple and straightforward strategy would
+perform.
+For commodity i, the excess return of Strategyj ( j = 1,2), from dayt j when the spread position
+10One can also create a butterﬂy spread position to reduce some exposure to the slope of the futures curve. The
+butterﬂy spread position will capture the change in the convexity of the curve, and consists of long positions in the
+deferred contracts and short positions in the maturing contracts and contracts with maturities later than that of the
+deferred contracts.
+11From Figure 3, we can see that moving further ahead of the rolling window would not help the performance a lot.
+14
+=== PAGE 16 ===
+is created to day t
+′
+when the position is unwound, is deﬁned as follows
+ri, j
+t =
+SPi,T1,T2
+t j − SPi,T1,T2
+t′
+(F i
+t j,T1 + F i
+t j,T2)/2 =
+(F i
+t j,T1− F i
+t j,T2)− (F i
+t′ ,T1
+− F i
+t′ ,T2
+)
+(F i
+t j,T1 + F i
+t j,T2)/2 . (3)
+This return is an excess return because the collateral earns the interest of risk-free rates. I also
+assume that both strategies invest the capital in the risk-free asset when they are not front-running
+the Goldman roll, so if the SP-GSCI rolls commodity i forward in the month, the monthly excess
+return of investing in commodity i with Strategy j is just the 5-day average of ri, j
+t , otherwise the
+monthly excess return is zero.
+The 19 commodities are grouped by sector to form equally weighted portfolios (agriculture,
+energy, livestock and metals), and a total portfolio using all commodities. In each month, the
+portfolio’s return is the average return of the commodities that the SP-GSCI rolls forward in this
+portfolio during the month. Equation (3) also indicates that the spread position is fully collateral-
+ized, so the excess return ri, j
+t involves no leverage. In practice, the margin requirement is about
+10-15% of the nominal value for creating an outright futures position, and only 2-4% for initiating
+a calendar spread position, so both strategies can be easily implemented using very high leverage
+in the real world.
+B.1. Performance of the Strategies
+Similar to the previous analysis, I divided the full sample period into two sub-periods: 1980-1999
+and 2000-2010. Table III reports the summary statistics of the ﬁve portfolios’ monthly excess
+returns (in percentage). The difference of performances in the two periods is striking. Let us ﬁrst
+discuss Strategy 1.
+[Insert Table III]
+First, the mean excess returns of all 5 portfolios were very signiﬁcantly positive in the period
+2000-2010, and much larger than the mean excess returns before 2000. In the period 1980-1999,
+besides the metals portfolio, the mean excess returns ranged from -0.006% (energy) to 0.13%
+15
+=== PAGE 17 ===
+(agriculture) monthly, while in the period 2000-2010, the mean excess returns increased to a range
+of 0.31% (total) to 0.42% (livestock) monthly. The mean excess return was relatively small in
+magnitude for the metals portfolio, but still it increased from -0.028% before 2000 to 0.033%
+since 2000.
+Second, the monthly Sharpe ratios surged to very high levels in the period 2000-2010, ranging
+from 0.32 (agriculture) to 0.79 (total). In the period 1980-1999, besides the agriculture portfolio,
+the monthly Sharpe ratios of the other 4 portfolios were typically low or even negative, ranging
+from -0.14 (metals) to 0.15 (total). The jumps in monthly Sharpe ratios were especially striking
+for three portfolios: energy portfolio (from -0.007 to 0.64), metals portfolio (from -0.14 to 0.55)
+and total portfolio (from 0.15 to 0.79).
+Third, except for the agriculture portfolio, 4 portfolios’ excess returns were positively skewed
+in the period 2000-2010, with skewness ranging from 0.13 (total) to 2.23 (metals). This makes it
+more difﬁcult to explain the high Sharpe ratios with risk based theories. In contrast, in the period
+1980-1999, the skewness was slightly positive 0.19 for the livestock portfolio, and negative for the
+other 3 portfolios, ranging from -3.12 (metals) to -0.17 (total).
+Finally, in the period 2000-2010, 4 portfolios experienced big drops in the maximum draw-
+down. The most dramatic ones are energy and metals portfolio, whose maximum drawdowns
+decreased from 22.4% before 2000 to only 0.94% and from 7.4% to 0.09% respectively.
+The results for Strategy 2 are similar, and even stronger in some cases. Besides the agriculture
+portfolio, the mean excess returns of the other 4 portfolios were not signiﬁcantly different from zero
+before 2000, ranging from -0.013% (metals) to 0.027% (energy), but they became very positive
+and highly signiﬁcant in the period 2000-2010, ranging from 0.019% (metals) to 0.22% (energy).
+The monthly Sharpe ratios of these 4 portfolios ranged from -0.11 (metals) to 0.06 (total) before
+2000, and increased to the range of 0.21 (livestock) to 0.52 (metals) since 2000. The skewness of
+excess return also increased a lot for the energy, livestock and metals portfolios, among which the
+energy portfolio experienced a jump from 0.09 before 2000 to 2.45 since 2000.
+Panel A of Table IV reports the summary statistics of the portfolios’ annualized excess returns
+in the period 2000-2010. The annual Sharpe ratios ranged from 1.09 (agriculture) to 2.75 (total)
+16
+=== PAGE 18 ===
+with Strategy 1, and from 0.46 (agriculture) to 1.78 (metals) with Strategy 2. So far the capital is
+assumed to be invested in the risk-free assets when not utilized for front-running. However, a large
+hedge fund could use the capital to invest in other assets and trading strategies, so the fund manager
+may only care about the performance in the period when the capital is actually used. The excess
+returns with Strategy 1 were actually 10-day returns and should be annualized by multiplying by
+a factor of 252/10. Similarly, the excess returns with Strategy 2 were 5-day returns and should
+be annualized by a factor of 252/5. As reported in Panel B of Table IV, the annualized Sharpe
+ratios now are much higher, ranging from 2.0 (agriculture) to 3.99 (total) with Strategy 1 and from
+1.16 (agriculture) to 4.39 (metals) with Strategy 2. Besides the metals portfolio, the means of
+unlevered annual excess returns ranged from 7.8% (total) to 10.47% (livestock) with Strategy 1,
+and ranged from 5.16% (agriculture) to 10.8% (energy) with Strategy 2. Therefore, the strategies’
+performances are much better from the perspective of a money manager with multiple investing
+opportunities.
+[Insert Table IV]
+The CRB data set does not have data on the bid-ask-spreads, so I can not incorporate transaction
+costs into the evaluation of the strategies. However, since the index commodities have the most
+liquid markets among all commodities, and the contracts involved in the Goldman roll are also
+the most liquid contracts in each market, the transaction costs are quite low. The typical bid-
+ask-spread is only a few bps (basis points) of the futures price. For crude oil (WTI), the bid-
+ask-spread is often just 1 bp. In addition, since the trading volumes tend to increase a lot in the
+SP-GSCI’s rolling period, the bid-ask-spread can be even lower when the strategies unwind the
+spread positions. Therefore, the strategies should still be very proﬁtable even after taking into
+account the transaction costs, especially in the most liquid energy sector.
+Now let us focus on Strategy 1 and take a closer look at the excess returns year by year. Figure 5
+shows each year the average monthly excess returns (in percentage) of the 4 sector portfolios. The
+energy and livestock portfolios actually had mostly positive excess returns as early as 1992, right
+after the launch of the SP-GSCI. For the metals portfolio, the average excess returns were mostly
+17
+=== PAGE 19 ===
+negative before 2000, and then stayed positive every year from 2000. The agriculture portfolio is
+quite different from the other 3 portfolios. The average excess returns have been mostly positive in
+the whole sample period, and there was a cyclical pattern before 2003. However, since 2003, the
+cyclical pattern disappeared and the average excess returns have stayed positive every year. The
+plots indicate that the exact choice of the cutoff year is not very important, and the results can be
+even better if the cutoff year is moved a few years earlier.
+[Insert Figure 5]
+As a comparison, the same trading strategies are applied to the control group with the 18 out-
+of-index commodities. Similarly, four equally weighted sector portfolios and one total portfolio
+are formed. Table V reports the summary statistics of these 5 portfolios’ monthly excess returns
+in the same two periods: 1980-1999 and 2000-2010. The results form a very clear contrast to the
+results in Table III. With both strategies in both periods, most of the 5 portfolios’ mean excess
+returns were not signiﬁcantly different from 0, or even signiﬁcantly negative in some cases. The
+monthly Sharpe ratios were all either negative or close to zero, with a maximum of 0.09 obtained
+by the energy portfolio with Strategy 1 before 2000. What is more, with Strategy 1, except for the
+livestock portfolio, the mean excess returns and Sharpe ratios actually dropped in the period 2000-
+2010 for 4 portfolios. With Strategy 2, there were also 4 portfolios whose mean excess returns and
+Sharpe ratios decreased in the period 2000-2010.
+[Insert Table V]
+To further conﬁrm the results, I perform a panel regression which is speciﬁed as follows
+Reti,t = α + β1Ii
+IndexCom + β2Ii,t
+inIndex +Controls + ui,t, (4)
+where the dependent variable Reti,t is Strategy’s average excess return in the trading period of
+commodity i in year t and ui,t is the random error. Ii
+IndexCom is an indicator variable, which is equal
+to 1 if commodity i is an index commodity and 0 if it is an out-of-index commodity. Ii,t
+inIndex is also
+an indicate variable, which is equal to 1 if commodityi is actually included in the SP-GSCI in year
+18
+=== PAGE 20 ===
+t and 0 if otherwise. Since the SP-GSCI was launched at the end of 1991, Ii,t
+inIndex = 0 for all index
+commodities before 1992. Among the 19 index commodities, 14 commodities were included at
+the launch time. Natural gas was added in 1994. Then SP-GSCI included crude oil (Brent), gasoil
+and Kansas wheat in 1999, and feeder cattle in 2002.
+To control for the macroeconomic demand-and-supply conditions and business cycle, the con-
+temporaneous real GDP growth and inﬂation are included in the regressions. I also include a
+control variable that is speciﬁc to each commodity in each year. This variable is the average roll
+yield of commodity i in year t. This control variable summarizes the commodity-speciﬁc demand-
+and-supply condition and the average term structure of the futures market. All control variables
+are demeaned.
+The coefﬁcients of interests are α, β1and β2. α is the average of Reti,t for out-of-index com-
+modities. For index commodities, α + β1 is the average of Reti,t before they were included in the
+SP-GSCI (or the launch of the SP-GSCI), while α + β1 + β2 is the average of Reti,t after the in-
+clusions. The expected values of α and β1are: α = 0 and β1 = 0, which means that without index
+investment, the strategy’s excess return is 0. If the Goldman roll had price impact, we would expect
+β2 > 0. As reported in Column 1 and 3 of Table VI, the coefﬁcients α and β1 are not statistically
+different from 0 for both strategies. After inclusion in the SP-GSCI, Strategy 1 yielded an average
+excess return of 0.35% in the trading period of 10 days, while Strategy 2 has an average excess
+return of 0.24% in the 5-day trading period. Both are statistically signiﬁcant at the 1% level. Col-
+umn 2 and 4 of Table VI indicates that the results are robust if we only consider index commodities
+(Ii
+IndexCom = 1).
+[Insert Table VI]
+For the control variables, GDP growth and inﬂation were both positively correlated with the
+dependent variable and statistically signiﬁcant. The commodity-speciﬁc control variable–average
+roll yield of commodity i in year t–is insigniﬁcant, which means that the strategies’ excess returns
+are not related the slope of the futures curves.
+In sum, the results above indicate that the price impact of the Goldman roll is both statistically
+and economically signiﬁcant. The Goldman roll effectively created a large market anomaly and a
+19
+=== PAGE 21 ===
+great trading opportunity for arbitragers.
+C. Limits to Arbitrage
+All information about the Goldman roll is publicly available. Compared to equity and bond mar-
+kets, futures markets have much fewer barriers for arbitrage. There is no short-sell constraints,
+and high leverage can be easily obtained through low margin requirement. The transaction cost is
+also very low, and the trading strategies are very easy to implement. Therefore, if the market is
+well arbitraged, we should not expect to see such great performance of front-running the Goldman
+roll since it would be quickly arbitraged away. The fact that the strategies worked so well in the
+last decade suggests that there are some limits to arbitrage. The performance of front-running is
+largely determined by two opposite forces. The positive one is the size of index investment, while
+the negative one is the size of arbitrage capital utilized to take advantage of the price impact.
+From 1986, the CFTC started to publish weekly Commitment of Traders (COT) reports, which
+includes the aggregate number of spread positions taken by ”Noncommercial” traders. These
+traders are mainly money managers and labeled speculators in the literature. In order to capture
+the price impact, the arbitrageurs have to create spread positions, so the number of spread positions
+held by speculators serves as a good approximation, although the positions are aggregated and the
+nature of these spread positions can not be exactly identiﬁed. Figure 6 shows the average spread
+positions taken by speculators each year and also their ratios relative to total open interests in the
+markets of 9 index commodities 12. For most commodities, there was very few spread positions
+and also little growth until 2003, especially in energy and livestock sectors, which front-running
+strategies yielded the best performances. However, the positions started to growth dramatically
+from 2004 and reached peaks in 2008 for many commodities. The plots suggest that very few arbi-
+trage capital was used to exploit the price impact before 2004, and then as the arbitrageurs became
+more aware of this trading opportunity, more capital is utilized to exploit this market anomaly.
+This is consistent with the theory of Dufﬁe (2010) that arbitrage capital can be slow-moving due
+12Due to limit of space and the large number of commodities, I only report these 9 commodities. The plots for other
+8 commodities have similar pattern, and are available upon request.
+20
+=== PAGE 22 ===
+to arbitrageurs’ inattention to a particular market and anomaly. Before 2004, commodity was not
+a popular asset class and commodity index investment was rarely known among the investment
+communities.
+[Insert Figure 6]
+As shown in Figure 5, the 4 sector portfolios enjoyed the best gains in the period 2003-2005,
+when commodity index investment started the most dramatic growth and there were still not many
+arbitrageurs. During the three years, the average of unlevered annual excess return was 8.09%
+for the energy portfolio, 7.18% for the livestock portfolio, 5.62% for the agriculture portfolio and
+0.28% for the metals portfolio. However, the performance of the 4 portfolios has been declining
+since 2006, and the average excess returns dropped to levels close to 0. The livestock portfolio
+even experienced negative average excess returns since 2008, which suggests a possibility of over-
+exploiting by arbitrageurs.
+The increasing arbitrage capital is an important reason, but another cause is that many in-
+vestors may have moved their assets away from these commodity index. When the commodity
+prices collapsed in the middle of 2008, commodity index investment reduced a lot. The data from
+CFTC’s supplement reports shows that the total long positions held by index investors dropped
+30-50% from their peaks for many agriculture and livestock commodities in 2008. During this
+period, many front-running portfolios also experienced their maximum drawdowns. Also, a new
+generation of commodity indices emerged since 2006 with more intelligent rolling methodologies.
+Many investments moved from the old generation to the new generation. Instead of just focus-
+ing on contracts with short maturities, new commodity indices search the full term structure, and
+choose maturities as far as one year ahead. The exact maturity choice usually depends on the term
+structure of the current market. If the term structure is in contango, they roll into contracts with
+long maturities to reduce the frequency of rolling and thus the roll cost. If the term structure is in
+backwardation, they roll into the contracts with close maturities to take advantage of the positive
+roll yields.
+This is consistent with the classic limits to arbitrage theory by Shleifer and Vishny (1997). The
+arbitrage proﬁt is lower when there is a reduction in size of index investment and an increase in the
+21
+=== PAGE 23 ===
+amount of arbitrage capital in the futures markets. The performance of front-running the Goldman
+roll is determined by the net result of two opposite forces. To conﬁrm this correlation, I run the
+following panel regressions for index commodities:
+Reti,t = α + β2Ii,t
+inIndex + β3Ii,t
+inIndex× NetRatio i,t +Controls + ui,t. (5)
+where the dependent variable Reti,t is Strategy’s average excess return in the trading period of
+commodity i in year t and Ii,t
+inIndex is the indicator variable speciﬁed in the last section, which is equal
+to 1 if commodity i is actually included in the SP-GSCI in year t and 0 if otherwise. NetRatio i,t =
+IndexRatio i,t− SpreadRatio i,t measures net result of the two forces, where IndexRatio i,t is the
+average ratio of index investment in commodity i relative to the value of its total open interest
+and SpreadRatio i,t is the average ratio of spread position held by speculators relative to total open
+interest.
+The data on investment tied to the SP-GSCI and DJ-UBSCI are not publicly available. An
+annual series of estimated investment tied to the two indices is constructed by collecting data from
+Masters and White (2008) and the CFTC’s reports of index investment 13. For each index, total
+value of investment tied to this index is then allocated to individual commodity according to its
+weighting scheme each year. For individual commodity, the total value of index investment is
+equal to sum of investment from the two indices.
+As reported in Column 1 and 3 of Table VII, the coefﬁcient β3 is statistically positive for both
+strategies, especially for Strategy 1, whose average excess return increases by 0.96 bps with 1%
+increase in the net ratio. Column 2 and 4 of Table VII shows that the results are robust if we only
+consider index commodities after they were included in the SP-GSCI.
+[Insert Table VII]
+13Masters and White (2008) use sources of Bloomberg, Goldman Sachs and CFTC reports and construct an annual
+series of estimated investment tied to the two indices from 1991 to 2008 (ﬁrst 2 quarters). In addition, they estimate
+that the market share was about 63% for the SP-GSCI and 32% for the DJ-UBSCI in 2008. Starting from fourth
+quarter of 2007, the CFTC started to publish quarterly reports on the value of total commodity index investment. Only
+the values of total long positions in the reports are used, and the quarterly data is converted into annual data by using
+averaging four quarters in one calendar year. Using the estimated market share, I construct the values of investment
+tied to the SP-GSCI and DJ-UBSCI in 2008 and 2009.
+22
+=== PAGE 24 ===
+To conclude, the exercise provides empirical evidence that a market anomaly can exist and
+persist due to slow-moving arbitrage capital. As more people become aware of the price impact,
+more arbitragers will exploit it and index investors will also move their investments into better
+designed commodity indices, which cause the anomaly to disappear.
+D. Cost of the Price Impact
+It has been very proﬁtable to exploit the price impact of the Goldman roll, but from the perspective
+of index investors, how costly was the price impact? In this section, I will estimate the cost of the
+price impact by comparing two excess return indices. Since the SP-GSCI was launched at the end
+of 1991, I consider the period starting from 1992 for the estimation.
+On January 2 1992, $100 dollars were assumed to be invested in futures contracts of the 19
+index commodities. The investment that each commodity receives from the $100 is proportional to
+its SP-GSCI weight in 2010. To focus on the cost of the price impact, there is no re-balancing and
+the choice of futures contracts to hold is exactly the same as the SP-GSCI. I construct two indices
+with different rolling periods. One index rolls the futures forward in the SP-GSCI’s rolling period,
+and is labeled ”SP-GSCI Roll” index, so this index rolls exactly the same as the Goldman roll. The
+other index rolls just 10 business days earlier, in the ﬁrst 5 days of the 15-day rolling window we
+discussed previously, and is labeled ”Earlier Roll” index. The interest earned on collateral is not
+considered, so the indices are excess return indices.
+As shown in Panel A of Figure 7, the values of the two indices closely tracked each other before
+2000, and then started to deviate far away. Although the two indices still shared the same pattern
+in the period 2000-2010 due to the same exposure to the spot returns, the ”Earlier Roll” index
+outperformed the ”SP-GSCI Roll” index because its roll yields were higher. When commodity
+prices reached heights in mid-2008, the ”SP-GSCI Roll” index reached a peak value $725, while
+the ”Earlier Roll” index reached $1099, with difference of $374.
+[Insert Figure 7]
+As a comparison, I also picked from the control group 12 out-of-index commodities that have
+23
+=== PAGE 25 ===
+data back to 1992 and until 2009. Since there are no reference weights, equal weight is applied to
+each commodity. The same two rolling rules are applied to form the same two indices: ”SP-GSCI
+Roll” and ”Earlier Roll”. As shown in Panel B of Figure 7, there is no detectable difference be-
+tween the values of two indices in the whole period 1992-2009. The maximum difference between
+the two indices was only about $6.
+Table VIII reports the summary statistics of the two indices’ annualized excess returns. The full
+period is divided into two sub-periods: 1992-1999 and 2000-2009. For the 19 index commodities,
+the excess returns of the two indices had almost the same standard deviations and skewness in both
+periods, but the means are quite different. The ”SP-GSCI Roll” index yielded an annual excess
+return of 2.31% before 2000 and 7.93% since 2000, while the ”Earlier Roll” index outperformed it
+annually by 1.66% and 3.59% respectively. Therefore, the Sharpe ratio of the ”Earlier Roll” index
+was 82% higher in the period 1992-1999 and 48% higher in the period 2000-2009. In addition, the
+difference in excess returns had a positive skewness 0.43 before 2000, and 0.79 from 2000, which
+indicates the arbitrage opportunity induced by the price impact. It is also statistically signiﬁcant
+that the mean difference in excess returns in the period 2000-2009 is larger than the mean difference
+in the period 1992-1999, which suggests that when index investment grew larger, index investors
+endured a higher cost of the price impact.
+[Insert Table VIII]
+In a clear contrast, for the 12 out-of-index commodities, all the summary statistics of the two
+indices are roughly the same in both periods. Although the ”Earlier Roll” index was still slightly
+better, the out-performance was very small, only about 0.25%, and the difference of excess returns
+were not always positively skewed.
+In order to estimate the cost of the price impact in absolute amount, I assume all index invest-
+ments are tied to the ”SP-GSCI Roll” index. Each year, the cost due to the price impact is estimated
+by the size of index investment multiplied by the average difference of excess returns between the
+”SP-GSCI Roll” index and ”Earlier Roll” index in this year. As shown in Figure 8, as the index
+investment grew, the cost also grew fast. From 2004, investing in the ”SP-GSCI Roll” index lost
+24
+=== PAGE 26 ===
+over $2 billion every year to the ”Earlier Roll” index, and in 2009, the loss reached a maximum of
+$8.4 billion.
+[Insert Figure 8]
+In sum, because the massive shorting and longing of futures contracts exerts very high price
+pressure in the rolling period, the resulting price impact has been very costly to index investors in
+terms of both forgone excess return and absolute amount of loss.
+III. Conclusion
+Since index funds have very low management fees, investors usually perceive index investment as
+an inexpensive way to gain broad market exposure. While it seems to be true for the equity index
+funds, this paper shows that index investment can be very expensive in the commodity markets due
+to the large price impact of index investors’ mechanical rolling forward of futures contracts. Equity
+index funds invest directly in the underlying assets, so the fund managers rarely need to change
+positions besides the inﬂow and outﬂow of funds. While there are some documented inefﬁciencies
+in equity investment, like the inclusion and exclusion effects, the resulted costs are quite small,
+because the inefﬁciencies only happen at very low frequency and changes are very small relative
+to the total positions of the investments. Commodity index investment is very different, because
+investors take long positions in futures contracts. Since futures contracts have expiration dates,
+commodity index investors have to roll their entire positions forward at monthly frequency, which
+resulted a much higher cost due to the large price impact of this rolling activity.
+Concern about price impact motivated some second-generation commodity indices to have
+longer rolling periods so that the price pressure on each rolling date is very small. Some new in-
+dices now roll futures forward at daily frequency. However, it seems that many other new indices
+still do not recognize the possible price impact, because they still have very short rolling periods,
+and the new rolling methodologies are mainly designed to reduce the roll cost in the current con-
+tango markets. As discussed, these indices tend to roll into contracts with long maturities, but these
+25
+=== PAGE 27 ===
+contracts are not as liquid as the contracts with short maturities, so the price impact of the rolling
+activity could be quite large even though the investment tied to these indices is small. As these
+indices get more popular, the price impact and the resulted cost can be even larger.
+This extends to a more general question of security design. Commodity indices are very differ-
+ent from the traditional securities, because investing in them requires continuous management due
+to the special rolling requirement. Therefore, the designer has to think about the possible negative
+effects of ﬁxed management actions when the assets under management grow larger, and whether
+the designed index will be immune to these effects. Another problem is that as the designer tries
+to minimize the potential negative effects, the management rules could become very complicated.
+As the complexity of the index increases, the cost of replicating it and thus the management fee
+increases, and investors may also feel more difﬁcult to understand and analyze the index. There
+is a balance between the potential beneﬁts and costs associated with the complexity of securities.
+These problems also apply to the design of exchange-traded funds (ETFs), which are becoming
+more and more popular among investors.
+Although the market anomaly created by the Goldman roll can be arbitraged away by enough
+arbitrageurs, the impact of index investment will not disappear. As more and more arbitrageurs try
+to front-run the Goldman roll and also each other, they can spread the price impact out to other
+dates and also other maturities. This can have a profound effect on the term structure of commodity
+futures markets, and may potentially be one of the reasons why the term structures of many index
+commodities have moved from backwardation towards contango in recent years, which can have
+important implications for production and consumption of these commodities. Further research
+can investigate this hypothesis and look at the impact of index investment on commodity term
+structure, supply and demand.
+26
+=== PAGE 28 ===
+References
+[1] Abreu, Dilip, and Markus K. Brunnermeier, 2002, Synchronization risk and delayed arbitrage, Journal
+of Financial Economics 66, 341-360.
+[2] Acharya, Viral V ., Lars A. Lochstoer, and Tarun Ramadorai, 2010, Limits to arbitrage and hedging:
+Evidence from commodity markets, Working paper, Columbia University.
+[3] Anson, Mark J.P., 1998, Spot returns, roll yield, and diversiﬁcation with commodity futures, Journal
+of Alternative Investment 1, 16-32.
+[4] Bessembinder, Hendrik, 1992, Systematic risk, hedging pressure, and risk premiums in futures mar-
+kets, Review of Economic Studies 5, 637-667.
+[5] Buyuksahin, Bahattin, and Jeffrey H. Harris, 2011, Do speculators drive crude oil futures prices, The
+Energy Journal 32, 167-202.
+[6] Carter, Colin A., Gordon C. Rausser, and Andrew Schmitz, 1983, Efﬁcient asset portfolios and the
+theory of normal backwardation, Journal of Political Economy 91, 319-331.
+[7] Casassus, Jaime, and Pierre Collin-Dufresne, 2005. Stochastic convenience yield implied from com-
+modity futures and interest rates, Journal of Finance 60, 463-520.
+[8] Chang, Eric C., 1985, Returns to speculators and the theory of normal backwardation, Journal of
+Finance 40, 193-208.
+[9] Chen, Honghui, Gregory Noronha, and Vijay Singal, 2004, The price response to S&P 500 index
+additions and deletions: Evidence of asymmetry and a new explanation, Journal of Finance 59, 1901-
+1929.
+[10] Cootner, Paul H., 1960, Return to speculators: Telser vs. Keynes, Journal of Political Economy 68,
+396-404.
+[11] de Roon, Frans A., Theo E. Nijman, and Chris Veld, 2000, Hedging pressure effects in futures markets,
+Journal of Finance 55, 1437-1456.
+27
+=== PAGE 29 ===
+[12] Dufﬁe, Darrell, 2010, Presidential address: Asset price dynamics with slow-moving capital, Journal
+of Finance 65, 1237-1267.
+[13] Feldman, Barry, and Hilary Till, 2006, Backwardation and commodity futures performance: Evidence
+from evolving agricultural markets, Journal of Alternative Investment 9, 24-39.
+[14] Gorton, Gary, and Geert K. Rouwenhorst, 2006, Facts and fantasies about commodity futures, Finan-
+cial Analysts Journal 62, 47-68.
+[15] Hamilton, James D., 2009, Causes and consequences of the oil shock of 2007-08, Brookings Papers
+on Economic Activity Spring, 215-259.
+[16] Harris, Lawrence E., and Eitan Gurel, 1986, Price and volume effects associated with changes in the
+S&P 500: New evidence for the existence of price pressures, Journal of Finance 41, 815-829.
+[17] Hicks, John, 1939. Value and Capital (Oxford University Press, London).
+[18] Idzorek, Thomas M., 2006, Strategic asset allocation and commodities, Ibbotson Associates white
+paper.
+[19] Keynes, John M., 1930. A Treatise on Money, V ol. 2 (Macmillan, London).
+[20] Kilian, Lutz, 2009, Not all oil price shocks are alike: Disentangling demand and supply shocks in the
+crude oil market, American Economic Review 99, 1053-1069.
+[21] Litzenberger, Robert H., and Nir Rabinowitz, 1995, Backwardation in oil futures markets: Theory and
+empirical evidence, Journal of Finance 50, 1517-1545.
+[22] Lynch, Anthony W., and Richard R. Mendenhall, 1997, New evidence on stock price effects associated
+with changes in the S&P 500 index, Journal of Business 70, 351-383.
+[23] Masters, Michael W., and Adam K. White, 2008, The accidental hunt brothers: How institutional
+investors are driving up food and energy prices, Technical report.
+[24] Petajisto, Antti, 2011, The index premium and its hidden cost for index funds, Journal of Empirical
+Finance 18, 271-288.
+[25] Shleifer, Andrei, 1986, Do demand curves for stocks slope down? Journal of Finance 41, 579-590.
+28
+=== PAGE 30 ===
+[26] Shleifer, Andrei, and Robert W. Vishny, 1997, The limits of arbitrage, Journal of Finance 52, 35-56.
+[27] Singleton, Kenneth J., 2011, Investor ﬂows and the 2008 boom/bust in oil prices, Working paper,
+Stanford University.
+[28] Stoll, Hans R., and Robert E. Whaley, 2010, Commodity index investing and commodity futures prices,
+Journal of Applied Finance 20, 7-46.
+[29] Tang, Ke, and Wei Xiong, 2010, Index investing and the ﬁnancialization of commodities, Working
+paper, Princeton University.
+29
+=== PAGE 31 ===
+Table I - Commodity Futures and Their Weights in the SP-GSCI and DJ-UBSCI
+Table I: This table lists the futures contracts of 19 commodities in the SP-GSCI. The ﬁrst column lists the trading facility of the commodity.
+The third and fourth column list the weight of the commodity in the SP-GSCI and DJ-UBSCI. These weights are taken in 2010. The ﬁfth
+column list the starting month of futures market for each commodity. The last 12 columns show the rolling scheme of the SP-GSCI by listing
+the maturities of the futures contracts held by the SP-GSCI at the beginning of each calender month.
+Trading Commodity SP-GSCI DJ-UBSCI Futures Maturity of contracts at Month Begin
+Facility (Contracts) Weights Weights Since 1 2 3 4 5 6 7 8 9 10 11 12
+Agriculture (8 Commodities)
+ICE Cocoa 0.36% 0.0% 1964.12 H H K K N N U U Z Z Z H
+ICE Coffee ”C” 0.78% 2.56% 1972.08 H H K K N N U U Z Z Z H
+CBOT Corn 3.99% 7.09% 1964.12 H H K K N N U U Z Z Z H
+ICE Cotton #2 0.96% 2.00% 1964.12 H H K K N N Z Z Z Z Z H
+CBOT Soybean 2.77% 7.91% 1964.12 H H K K N N X X X X F F
+ICE Sugar #11 1.92% 2.89% 1964.12 H H K K N N V V V H H H
+KBOT Wheat (Kansas) 0.86% 0.0% 1970.01 H H K K N N U U Z Z Z H
+CBOT Wheat 4.05% 4.70% 1964.12 H H K K N N U U Z Z Z H
+Livestock (3 Commodities)
+CME Feeder Cattle 0.56% 0.0% 1972.03 H H J K Q Q Q U V X F F
+CME Lean Hogs 1.54% 2.10% 1966.02 G J J M M N Q V V Z Z G
+CME Live Cattle 3.01% 3.55% 1964.12 G J J M M Q Q V V Z Z G
+Energy (6 Commodities)
+ICE Crude Oil (Brent) 13.14% 0.0% 1989.07 H J K M N Q U V X Z F G
+NYMEX Crude Oil (WTI) 36.91% 14.34% 1983.03 G H J K M N Q U V X Z F
+ICE Gasoil 4.78% 0.0% 1986.06 G H J K M N Q U V X Z F
+NYMEX Gasoline (RBOB) 4.56% 3.53% 1984.12 G H J K M N Q U V X Z F
+NYMEX Heating Oil #2 4.54% 3.58% 1978.11 G H J K M N Q U V X Z F
+NYMEX Natural Gas 5.32% 11.55% 1990.04 G H J K M N Q U V X Z F
+Metals (2 Commodities)
+NYMEX Gold 2.86% 9.12% 1974.12 G J J M M Q Q Z Z Z Z G
+NYMEX Silver 0.31% 3.29% 1964.12 H H K K N N U U Z Z Z H
+F: January G: February H: March J: April K: May M: June N: July Q: August U: September V: October X: November Z: December
+30
+=== PAGE 32 ===
+Table II - Commodities Futures out of the SP-GSCI and their Rolling Scheme
+Table II: This table lists the commodities out of the SP-GSCI that I use to form the control group. The ﬁrst
+column lists the trading facility and the second column shows the name of commodity. The third column
+lists the length of futures data. The last 12 columns show the rolling methodology by listing the maturity
+of contracts held on the ﬁrst business day of the calender month. The rolling methodology is set similar
+to the SP-GSCI by matching the sector and maturity structure. The ”Butter” and ”Milk” are categorized as
+livestocks because they are produced by livestocks and I could have more than just one commodity in this
+sector.
+Trading Commodity Futures Data Maturity of contracts at Month Begin
+Facility (Contracts) Period 1 2 3 4 5 6 7 8 9 10 11 12
+Agriculture (8 Commodities)
+CME Lumber 1969.10–2010.3 H H K K N N U U X X F F
+CBOT Oats 1959.7–2010.3 H H K K N N U U Z Z Z H
+ICE Orange Juice 1967.2–2010.3 H H K K N N U U X X F F
+CBOT Rough Rice 1986.8–2010.3 H H K K N N U U X X F F
+CBOT Soybean Meal 1959.7–2010.3 H H K K N N V V V F F F
+CBOT Soybean Oil 1959.7–2010.3 H H K K N N V V V F F F
+ICE Sugar #14 1985.7–2008.2 H H K K N N U U X X F F
+MGEX Wheat, Spring 1970.1–2010.3 H H K K N N U U Z Z Z H
+Livestock (3 Commodities)
+CME Butter 1996.9–2010.3 G H K K N N U U V Z Z G
+CME Milk, Class III 1996.1–2010.3 G J J M M N U U Z Z Z G
+CME Pork Bellies 1966.2–2010.3 G H K K N N Q G G G G G
+Energy (4 Commodities)
+NYMEX Coal 2001.7–2010.3 G H J K M N Q U V X Z F
+NYMEX Electricity, PJM 2003.4–2010.3 G H J K M N Q U V X Z F
+CBOT Ethanol 2005.3–2010.3 G H J K M N Q U V X Z F
+NYMEX Propane 1987.8–2009.9 G H J K M N Q U V X Z F
+Metals (3 Commodities)
+NYMEX Copper 1959.7–2010.3 G H J K M N Q U V X Z F
+NYMEX Palladium 1977.1–2010.3 H H M M M U U U Z Z Z H
+NYMEX Platinum 1968.3–2010.3 J J J N N N V V V F F F
+31
+=== PAGE 33 ===
+Table III - Summary Statistics of Monthly Excess Returns with Two Front-running Strategies
+Table III: This table reports the summary statistics of two front-running strategies in two time periods. The strategies are designed as follows. In each
+month, I ﬁrst identify the commodities that the SP-GSCI will roll forward. With Strategy 1, I create spread positions for these commodities from 10 to
+6 business days before the SP-GSCI’s ﬁrst roll date. The spread position involves shorting the contracts held by the SP-GSCI and longing the contracts
+that it will roll into. The spread positions will be unwound in the SP-GSCI’s rolling period. Like the SP-GSCI, I create 20% of the spread positions each
+day, and also unwind 20% each day. For commodity i, the excess return ri
+t is deﬁned in Equation (3). On other dates, the capital is invested in risk-free
+assets, so the monthly excess return with commodityi is the 5-day average ri
+t if commodity i is rolled over in the month and 0 otherwise. The commodities
+are grouped to form four sector portfolios and one total portfolio. In each month, the portfolio return is the average return of the commodities in this
+portfolio.Strategy 2 follows the same methodology except the spread positions are initiated 5 to 1 business days before the ﬁrst roll date of the SP-GSCI.
+The excess returns are monthly and in percentage term. The full sample period is from 1980/01/01 to 2010/03/31.
+Agriculture Energy Livestock Metals Total
+1980-1999 2000-2010 1980-1999 2000-2010 1980-1999 2000-2010 1980-1999 2000-2010 1980-1999 2000-2010
+Strategy 1
+Mean 0.13 0.23 -0.006 0.37 0.12 0.42 -0.03 0.033 0.06 0.31
+T-stat 3.29 3.50 -0.11 7.05 1.96 5.34 -2.17 6.14 2.36 8.81
+Std 0.61 0.73 0.81 0.58 0.93 0.86 0.20 0.06 0.41 0.39
+Skewness 1.78 -2.61 -0.71 0.88 0.19 0.74 -3.12 2.23 -0.17 0.13
+Kurtosis 9.93 35.1 6.69 4.45 3.83 5.55 24.6 12.8 3.32 5.75
+Min -1.84 -5.39 -3.82 -0.88 -2.93 -1.72 -1.66 -0.087 -1.19 -1.22
+Max 2.73 3.73 2.66 2.38 3.22 4.32 0.69 0.39 1.06 1.70
+Sharpe Ratio 0.21 0.32 -0.007 0.64 0.13 0.48 -0.14 0.55 0.15 0.79
+Max Drawdown 2.09 5.39 22.40 0.94 8.73 7.53 7.40 0.09 5.25 1.44
+# of obs 240 123 240 123 240 123 240 123 240 123
+Strategy 2
+Mean 0.05 0.07 0.027 0.21 0.01 0.13 -0.013 0.019 0.02 0.13
+T-stat 2.13 1.47 0.66 4.81 0.25 2.33 -1.65 5.71 0.97 4.53
+Std 0.38 0.51 0.64 0.50 0.62 0.61 0.12 0.04 0.31 0.31
+Skewness -1.15 -1.40 0.09 2.45 -0.07 0.12 -3.34 0.76 -0.16 -0.61
+Kurtosis 12.9 33.4 7.13 15.8 4.38 3.97 21.2 5.40 4.34 11.0
+Min -1.91 -3.63 -2.44 -0.81 -2.14 -1.69 -0.85 -0.08 -0.94 -1.53
+Max 1.54 3.06 2.85 3.37 2.07 2.25 0.3 0.15 1.27 1.35
+Sharpe Ratio 0.17 0.16 0.04 0.43 0.02 0.21 -0.12 0.62 0.06 0.41
+Max Drawdown 2.87 3.63 15.09 2.61 17.26 5.19 3.40 0.08 9.34 2.05
+# of obs 240 123 240 123 240 123 240 123 240 123
+32
+=== PAGE 34 ===
+Table IV - Summary Statistics of Annualized Excess Returns in the Period 2000-2010
+Table IV: This table reports the summary statistics of annualized excess returns in the period 2000-
+2010. In Panel A, capital is invested in risk-free asset when it is not utilized for the trading strate-
+gies, and excess returns are treated as monthly excess returns and annualized by multiplying 12. In
+Panel B, excess returns are treated as the excess returns in the period when the capital is actually
+utilized for the trading strategies. With Strategy 1, the excess returns are annualized by multiply-
+ing 252/10, and with Strategy 2, the excess returns are annualized by multiplying 252/5. The full
+sample period is from 1980/01/01 to 2010/03/31.
+Panel A: Annualized by Month
+Agriculture Energy Livestock Metals Total
+Strategy 1
+Mean 2 .74% 4 .43% 4 .99% 0 .40% 3 .71%
+Std 2 .51% 2 .01% 2 .99% 0 .21% 1 .35%
+Skewness −2.61 0 .88 0 .74 2 .23 0 .13
+Sharpe Ratio 1 .09 2 .20 1 .67 1 .92 2 .75
+Strategy 2
+Mean 0 .81% 2 .58% 1 .53% 0 .23% 1 .52%
+Std 1 .76% 1 .72% 2 .11% 0 .13% 1 .08%
+Skewness −1.40 2 .45 0 .12 0 .76 −0.61
+Sharpe Ratio 0 .46 1 .50 0 .73 1 .78 1 .41
+Panel B: Annualized by Trading Days
+Agriculture Energy Livestock Metals Total
+Strategy 1
+Mean 8 .74% 9 .30% 10 .47% 1 .12% 7 .80%
+Std 4 .38% 2 .92% 4 .34% 0 .33% 1 .95%
+Skewness −2.69 0 .88 0 .74 1 .82 0 .13
+Sharpe Ratio 2 .00 3 .19 2 .41 3 .36 3 .99
+Strategy 2
+Mean 5 .16% 10 .82% 6 .43% 1 .29% 6 .40%
+Std 4 .44% 3 .52% 4 .32% 0 .29% 2 .21%
+Skewness −1.32 2 .45 0 .12 0 .34 −0.61
+Sharpe Ratio 1 .16 3 .08 1 .49 4 .39 2 .90
+33
+=== PAGE 35 ===
+Table V - Summary Statistics of Monthly Excess Returns with Two Strategies using Out-of-Index Commodities
+Table V: This table reports the summary statistics of two front-running strategies in two time periods when applied to the control group of
+18 commodities not included in the SP-GSCI. The trading strategies are the same as described in Table III. The excess returns are monthly
+and in percentage term. The full sample period is from 1980/01/01 to 2010/03/31.
+Agriculture Energy Livestock Metals Total
+1980-1999 2000-2010 1980-1999 2000-2010 1980-1999 2000-2010 1980-1999 2000-2010 1980-1999 2000-2010
+Strategy 1
+Mean 0.02 -0.04 0.12 -0.31 -0.06 0.05 -0.06 -0.10 -0.013 -0.13
+T-stat 0.64 -0.97 1.07 -1.81 -0.49 0.25 -1.55 -3.10 -0.25 -1.57
+Std 0.51 0.47 1.34 1.93 1.87 2.07 0.59 0.35 0.83 0.90
+Skewness -0.73 -0.64 0.76 -0.42 1.50 -2.69 -0.84 0.06 1.27 -0.90
+Kurtosis 8.17 6.16 11.0 4.42 19.8 16.7 10.9 11.2 13.3 5.63
+Min -2.48 -2.09 -5.46 -7.91 -7.50 -12.8 -2.70 -1.40 -3.57 -4.18
+Max 1.70 1.15 6.39 4.66 12.1 4.17 3.34 1.73 5.13 1.80
+Sharpe Ratio 0.04 -0.09 0.09 -0.16 -0.03 0.02 -0.10 -0.28 -0.02 -0.14
+# of obs 240 123 145 123 240 123 240 123 240 123
+Strategy 2
+Mean 0.003 -0.07 0.032 -0.10 -0.004 0.03 -0.035 -0.04 0.006 -0.06
+T-stat 0.11 -2.26 0.37 -0.76 -0.05 0.25 -1.32 -2.15 0.15 -0.91
+Std 0.39 0.35 1.04 1.52 1.36 1.54 0.41 0.20 0.62 0.71
+Skewness -1.24 -1.04 0.36 -0.26 2.38 -2.14 1.24 2.03 1.94 -0.83
+Kurtosis 12.4 9.34 12.2 5.21 24.0 16.1 14.6 19.0 16.6 6.47
+Min -2.54 -1.85 -2.44 -5.97 -5.74 -8.64 -1.94 -0.74 -2.57 -3.10
+Max 1.44 1.29 5.32 5.14 9.04 5.77 2.69 1.28 4.32 2.17
+Sharpe Ratio 0.01 -0.20 0.03 -0.07 -0.003 0.02 -0.09 -0.19 0.01 -0.08
+# of obs 240 123 145 123 240 123 240 123 240 123
+34
+=== PAGE 36 ===
+Table VI - Regressions on the Trading Strategies’ Excess Returns 1
+Table VI: This table reports the results from regressions of Strategies’ average excess return during the
+trading days ( Reti,t), where i indicates commodity and t indicates year. Ii
+IndexCom is an indicator variable,
+which equal to 1 if commodity i is an index commodity and 0 otherwise. Ii,t
+inIndex is an indicator variable,
+which equal to 1 if commodity i is included in the SP-GSCI at year t and 0 otherwise. The control variables
+include: RYi,t, average roll yields of commodity i in year t, growtht
+GDP, real GDP growth in year t, and
+In f lationt, the inﬂation in year t. All the control variables are demeaned. The sample period is from 1980
+to 2009. In each year t, commodities are clustered to account for possible cross-sectional correlation. *
+denotes signiﬁcance at the 10% level, ** denotes signiﬁcance at the 5% level, and *** denotes signiﬁcance
+at the 1% level.
+Dependent variable: Reti,t
+Strategy 1 Strategy 2
+All I i
+IndexCom = 1 All I i
+IndexCom = 1
+1 2 3 4
+Constant −0.028 0 .011 −0.026 −0.030
+(0.040) ( 0.022) ( 0.024) ( 0.022)
+Ii
+IndexCom 0.029 −0.016
+(0.044) ( 0.034)
+Ii,t
+inIndex 0.35∗∗∗ 0.33∗∗∗ 0.24∗∗∗ 0.22∗∗∗
+(0.057) ( 0.060) ( 0.036) ( 0.034)
+Controls
+RYi,t −0.031 −0.022 −0.008 0 .002
+(0.019) ( 0.016) ( 0.011) ( 0.012)
+growtht
+GDP 0.034∗∗∗ 0.033∗∗ 0.030∗∗∗ 0.035∗∗∗
+(0.011) ( 0.013) ( 0.007) ( 0.009)
+In f lationt 0.032∗∗∗ 0.021∗∗ 0.019∗∗∗ 0.005
+(0.008) ( 0.009) ( 0.006) ( 0.010)
+R2
+ad j 8.89% 10 .25% 7 .82% 10 .72%
+obs 956 537 956 537
+35
+=== PAGE 37 ===
+Table VII - Regressions on the Trading Strategies’ Excess Returns 2
+Table VII: This table reports the results from regressions of Strategies’ average excess return during the
+trading days ( Reti,t), where i indicates commodity and t indicates year. Ii
+IndexCom and Ii,t
+inIndex are indicator
+variable deﬁned in Table VI. NetRatio i,t = IndexRatio i,t− SpreadRatio i,t measures the net effect of two
+opposite forces, where IndexRatio i,t measures the ratio of index investment in commodity i in year t, and
+is equal to the index investment in commodity i divided by the value of total open interest. SpreadRatio i,t
+measures the proportion of spread position held by speculators relative to total open interest in the futures
+market of commodity i in year t. The control variables include: RYi,t, average roll yields of commodity i in
+year t, growtht
+GDP, real GDP growth in yeart, and In f lationt, the inﬂation in year t. All the control variables
+are demeaned. The sample period is from 1986 to 2009. In each yeart, commodities are clustered to account
+for possible cross-sectional correlation. * denotes signiﬁcance at the 10% level, ** denotes signiﬁcance at
+the 5% level, and *** denotes signiﬁcance at the 1% level.
+Dependent variable: Reti,t
+Strategy 1 Strategy 2
+Ii
+IndexCom = 1 Ii,t
+inIndex = 1 Ii
+IndexCom = 1 Ii,t
+inIndex = 1
+1 2 3 4
+Constant 0.062∗∗ 0.24∗∗∗ −0.013 0 .15∗∗∗
+(0.029) ( 0.05) ( 0.026) ( 0.039)
+Ii,t
+inIndex 0.20∗∗∗ 0.18∗∗∗
+(0.055) ( 0.037)
+NetRatio∗Ii,t
+inIndex 0.96∗∗∗ 1.04∗∗∗ 0.33∗ 0.39∗∗
+(0.25) ( 0.24) ( 0.17) ( 0.17)
+Controls
+RYi,t 0.002 0 .002 0 .021 0 .027
+(0.019) ( 0.025) ( 0.013) ( 0.018)
+growtht
+GDP 0.064∗∗∗ 0.078∗∗ 0.052∗∗∗ 0.061∗∗∗
+(0.021) ( 0.024) ( 0.010) ( 0.013)
+In f lationt 0.012 −0.009 0 .002 −0.007
+(0.022) ( 0.049) ( 0.019) ( 0.041)
+R2
+ad j 12.16% 9 .26% 11 .12% 8 .40%
+obs 404 287 404 287
+36
+=== PAGE 38 ===
+Table VIII - Summary Statistics of Two Indices with Different Rolling Periods
+Table VIII: This table reports the summary statistics of annualized excess returns of investing in 19 com-
+modities in SP-GSCI index and 12 commodities out of the index with two different rolling periods. SP-GSCI
+weights are applied to 19 commodities in the index. Out-of-index commodites are equally weighted. ”SP-
+GSCI Roll” stards for rolling in the SP-GSCI rolling period. ”Earlier Roll” means rolling from 10 to 6
+business days before the ﬁrst roll date of the SP-GSCI. ”DID” stands for ”Difference in Difference”. The
+returns are continuously compounded returns. The sample period of index commodities is from Jan. 1992
+to Dec. 2009. The sample period of out-of-index commodities is from Jan. 1992 to Sep. 2009. ** indicates
+signiﬁcance at the 5% level
+1992-1999 2000-2009
+SP-GSCI Roll Earlier Roll Diff. SP-GSCI Roll Earlier Roll Diff. DID
+19 Index Commodities
+Mean 2 .31% 3 .97% 1 .66% 7 .93% 11 .52% 3 .59% 1 .93%∗∗
+Sd 21 .5% 20 .3% 2 .20% 34 .4% 34 .1% 2 .36%
+Skewness 0 .02 0 .05 0 .43 −0.3 −0.3 0 .79
+Sharpe Ratio 0 .11 0 .20 0 .23 0 .34
+12 Out-of-Index Commodities
+Mean 4 .67% 4 .90% 0 .23% 5 .61% 5 .87% 0 .26% 0 .03%
+Sd 11 .4% 11 .4% 1 .14% 20 .1% 20 .2% 1 .02%
+Skewness 0 .008 −0.001 2 .19 −0.2 −0.2 −0.31
+Sharpe Ratio 0 .41 0 .43 0 .28 0 .29
+37
+=== PAGE 39 ===
+Figure 1: Related Plots of Crude Oil (WTI) Example 
+This Figure shows the related plots of the crude oil (WTI) example. Panel A shows the term 
+structure of crude oil (WTI) futures on February 7, 2001. Panel B shows the movements of the 
+prices of the March and April contracts from January 24, 2001 to February 13, 2001, a 15-
+business-day window. Panel C shows the change of spreads between the prices of the March and 
+April contracts over the 15-day window. The spread is equal to the price of March contract minus 
+the price of April contract. Panel D shows the change of roll yields (in percentage) over the 15-
+day window. The roll yield here is equal to the difference of log prices between the March and 
+April contracts. In Panel B, C and D, the shaded area indicates the SP-GSCI's rolling period. 
+ 
+ 
+ 
+ 
+ 
+0 5 10 15
+25
+26
+27
+28
+29
+30
+31
+32
+Months from Maturity
+Futures Prices
+Panel A: Term Structure on Feb. 7, 2001
+1/24 1/31 2/07 2/13
+27
+28
+29
+30
+31
+32
+Date
+Futures Prices
+Panel B: Prices of March and April Contracts
+ 
+ 
+March
+April
+1/24 1/31 2/07 2/13
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+Date
+Price Spreads
+Panel C: Spreads between March and April Contracts
+1/24 1/31 2/07 2/13
+0
+0.5
+1
+1.5
+2
+2.5
+3
+3.5
+4
+Date
+Roll Yields (%)
+Panel D: Roll Yields
+March Contract
+April Contract
+=== PAGE 40 ===
+Figure 2: Average Roll Yields of Index Commodities over the 15-day Rolling Window 
+This Figure shows the average daily roll yields of 4 representative commodities over the 15-day 
+rolling window with the last 5 days being the SP-GSCI’s roll dates. The shaded area indicates the 
+SP-GSCI’s rolling dates. The roll yields are in percentage units. 𝑅𝑌𝐷𝑖𝑓𝑓.
+𝑃𝑒𝑟𝑖𝑜𝑑 is the difference of 
+average roll yields in the first and last 5 days of the rolling window, which period indicates the 
+specific time period. T-tests are performed to test if the average roll yields in the first 5 days are 
+larger than the average roll yields in the last 5 days. * indicates significance at the 10% level, ** 
+indicates significance at the 5% level, and *** indicates significance at the 1% level. The sample 
+period is from Jan 1980 to Mar 2010 for “Heating Oil” and “Live Cattle”. The sample periods of 
+“Crude Oil, WTI” and “Gasoline, RBOB” are from Mar 1983 to Mar 2010 and Dec 1984 to Mar 
+2010.  
+ 
+ 
+ 
+ 
+1 6 11 16
+-0.4
+-0.2
+0
+0.2
+0.4
+0.6
+0.8
+RYD iff.
+1983-1999=0,   RYD iff.
+2000-2010=0.47***
+Avg. Roll Yield (%)
+Crude Oil, WTI
+ 
+ 
+1983-1999
+2000-2010
+1 6 11 16
+-0.2
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+RYD iff.
+1984-1999=-0.02,   RYD iff.
+2000-2010
+=0.39***
+Avg. Roll Yield (%)
+Gasoline, RBOB
+ 
+ 
+1984-1999
+2000-2010
+1 6 11 16
+-0.4
+-0.3
+-0.2
+-0.1
+0
+0.1
+0.2
+RYD iff.
+1980-1999=-0.02,   RYD iff.
+2000-2010
+=0.39***
+Avg. Roll Yield (%)
+Heating Oil
+ 
+ 
+1980-1999
+2000-2010
+1 6 11 16
+-1.5
+-1
+-0.5
+0
+0.5
+1
+RYD iff.
+1980-1999=0.19,   RYD iff.
+2000-2010
+=0.54**
+Avg. Roll Yield (%)
+Live Cattle
+ 
+ 
+1980-1999
+2000-2010
+=== PAGE 41 ===
+Figure 3: Average Roll Yield of Index Commodities over an Alternative 15-day Window 
+This Figure shows the average daily roll yields of the 4 representative commodities over an 
+alternative 15-day window with the last day right before the first day of the rolling window. 
+Therefore, this 15-day window ranges from 25 to 11 days before the SP-GSCI’s first roll date. 
+The roll yields are in percentage units. 𝑅𝑌𝐷𝑖𝑓𝑓.
+𝑃𝑒𝑟𝑖𝑜𝑑 is the difference of average roll yields in the first 
+and last 5 days of the window, which period indicates the specific time period. T-tests are 
+performed to test if the average roll yields in the first 5 days are larger than the average roll yields 
+in the last 5 days. * indicates significance at the 10% level, ** indicates significance at the 5% 
+level, and *** indicates significance at the 1% level. The sample period is from Jan 1980 to Mar 
+2010 for “Heating Oil” and “Live Cattle”. The sample periods of “Crude Oil, WTI” and 
+“Gasoline, RBOB” are from Mar 1983 to Mar 2010 and Dec 1984 to Mar 2010.  
+ 
+ 
+ 
+1 6 11 16
+-0.4
+-0.2
+0
+0.2
+0.4
+0.6
+0.8
+RYD iff.
+1983-1999=-0.11,   RYD iff.
+2000-2010
+=0.11
+Avg. Roll Yields (%)
+Crude Oil, WTI
+ 
+ 
+1983-1999
+2000-2010
+1 6 11 16
+-0.2
+0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+RYD iff.
+1984-1999=-0.05,   RYD iff.
+2000-2010=0.05
+Avg. Roll Yields (%)
+Gasoline, RBOB
+ 
+ 
+1984-1999
+2000-2010
+1 6 11 16
+-0.4
+-0.3
+-0.2
+-0.1
+0
+0.1
+0.2
+RYD iff.
+1980-1999=-0.06,   RYD iff.
+2000-2010
+=-0.02
+Avg. Roll Yields (%)
+Heating Oil
+ 
+ 
+1980-1999
+2000-2010
+1 6 11 16
+-1.5
+-1
+-0.5
+0
+0.5
+1
+RYD iff.
+1980-1999=-0.19,   RYD iff.
+2000-2010
+=0.35
+Avg. Roll Yields (%)
+Live Cattle
+ 
+ 
+1980-1999
+2000-2010
+=== PAGE 42 ===
+Figure 4: Average Roll Yield of Out-of-Index Commodities over the Rolling Window 
+This Figure shows the average daily roll yields of 4 representative commodities out of the SP-
+GSCI over the 15-day rolling window with the last 5 days being the SP-GSCI’s roll dates. The 
+shaded area indicates the SP-GSCI’s rolling dates. The roll yields are in percentage units. 
+𝑅𝑌𝐷𝑖𝑓𝑓.
+𝑃𝑒𝑟𝑖𝑜𝑑 is the difference of average roll yields in the first and last 5 days of the rolling window, 
+which period indicates the specific time period. T-tests are performed to test if the average roll 
+yields in the first 5 days are larger than the average roll yields in the last 5 days. * indicates 
+significance at the 10% level, ** indicates significance at the 5% level, and *** indicates 
+significance at the 1% level. The sample period is from Jan 1980 to Mar 2010 for “Soybean 
+Meal”, “Pork Belly” and “Copper”. The sample period of “Propane” is Aug 1987 to Sep 2009.  
+ 
+ 
+ 
+1 6 11 16
+-1
+-0.5
+0
+0.5
+1
+1.5
+RYD iff.
+1980-1999=-0.11, RYD iff.
+2000-2010
+=-0.08
+Avg. Roll Yield (%)
+Soybean Meal
+ 
+ 
+1980-1999
+2000-2010
+1 6 11 16
+-3.5
+-3
+-2.5
+-2
+-1.5
+-1
+-0.5
+0
+RYD iff.
+1980-1999=0.39, RYD iff.
+2000-2010=0.07
+Avg. Roll Yield (%)
+Pork Belly
+ 
+ 
+1980-1999
+2000-2010
+1 6 11 16
+0
+0.2
+0.4
+0.6
+0.8
+1
+RYD iff.
+1987-1999=0.11, RYD iff.
+2000-2010
+=0.05
+Avg. Roll Yield (%)
+Propane
+ 
+ 
+1987-1999
+2000-2010
+1 6 11 16
+-0.1
+0
+0.1
+0.2
+0.3
+0.4
+RYD iff.
+1980-1999=-0.02, RYD iff.
+2000-2010=0.01
+Avg. Roll Yield (%)
+Copper
+ 
+ 
+1980-1999
+2000-2010
+=== PAGE 43 ===
+Figure 5: Average Monthly Excess Returns of the Four Sector Portfolios with Strategy 1 
+This Figure plots the average monthly excess returns each year for the four sector portfolios with 
+Strategy 1.  The capital is assumed to invest in risk-free asset when it is not utilized to front-run 
+the Goldman roll. The excess returns are in percentage units. The sample period is from Jan 1980 
+to Dec 2009. 
+ 
+ 
+ 
+ 
+ 
+1980 1990 2000 2010
+-0.4
+-0.2
+0
+0.2
+0.4
+0.6
+0.8
+1
+Average Monthly Return of Energy Portfolio
+1980 1990 2000 2010
+-0.4
+-0.2
+0
+0.2
+0.4
+0.6
+0.8
+1
+Average Monthly Return of Livestock Portfolio
+1980 1990 2000 2010
+-0.4
+-0.2
+0
+0.2
+0.4
+0.6
+0.8
+1
+Average Monthly Return of Agriculture Portfolio
+1980 1990 2000 2010
+-0.25
+-0.2
+-0.15
+-0.1
+-0.05
+0
+0.05
+0.1
+0.15
+Average Monthly Return of Precious Metal Portfolio
+=== PAGE 44 ===
+Figure 6: Average Number of Spread Position Taken by Speculators 
+This Figure plots the average number of spread positions taken by the trader category 
+“Noncommercial” in the CFTC reports. These traders are labeled as speculators in literature, and 
+mainly financial traders like hedge funds.  The sample period is from Jan 1986 to March 2010. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+1990 2000 2010
+0
+0.5
+1
+1.5
+2
+2.5
+x 10
+4
+Number
+Corn
+1990 2000 2010
+0
+2
+4
+6
+8
+x 10
+4 Sugar
+Number
+1990 2000 2010
+0
+1
+2
+3
+x 10
+4 Wheat
+Number
+1990 2000 2010
+0
+1
+2
+3
+4
+x 10
+5 Crude Oil, WTI
+Number
+1990 2000 2010
+0
+1
+2
+3
+4
+x 10
+4 Heating Oil
+Number
+1990 2000 2010
+0
+1
+2
+3
+4
+5
+x 10
+4 Natural Gas
+Number
+1990 2000 2010
+0
+0.5
+1
+1.5
+2
+x 10
+4 Lean Hogs
+Number
+1990 2000 2010
+0
+1
+2
+3
+4
+5
+x 10
+4 Live Cattle
+Number
+1990 2000 2010
+0
+2
+4
+6
+8
+10
+12
+x 10
+4 Gold
+Number
+1990 2000 2010
+0
+0.05
+0.1
+0.15
+0.2
+Ratio
+1990 2000 2010
+0
+0.02
+0.04
+0.06
+0.08
+0.1
+Ratio
+1990 2000 2010
+0.05
+0.1
+0.15
+0.2
+Ratio
+1990 2000 2010
+0
+0.1
+0.2
+0.3
+Ratio
+1990 2000 2010
+0
+0.05
+0.1
+0.15
+Ratio
+1990 2000 2010
+0
+0.1
+0.2
+0.3
+0.4
+Ratio
+1990 2000 2010
+0.05
+0.1
+0.15
+0.2
+0.25
+Ratio
+1990 2000 2010
+0.05
+0.1
+0.15
+0.2
+Ratio
+1990 2000 2010
+0.05
+0.1
+0.15
+0.2
+0.25
+Ratio
+=== PAGE 45 ===
+Figure 7: Value of Two Indices with Different Rolling Dates 
+This figure shows the value of two excess return indices:  “SP-GSCI Roll” index and an “Earlier 
+Roll” index. Both indices invested $100 dollars in commodity futures on Jan 2, 1992 and choose 
+the same contracts as the SP-GSCI. The “SP-GSCI Roll” index rolls on the SP-GSCI’s rolling 
+dates, while the “Earlier Roll” index rolls 10 business days before the SP-GSCI’s rolling dates.   
+With the 19 index commodities, the commodities’ weights are proportional to the weights in the 
+SP-GSCI. With the 12 out-of-index commodities, equal weights are applied. There is no 
+rebalancing, and the interest earned on collateral is not considered. Panel A shows the value of 
+two indices with the 19 index commodities from Jan 1992 to Mar 2010. Panel B shows the value 
+of two indices with the 12 out-of-index commodities from Jan 1992 to Sep 2009.  
+ 
+1992 1994 1996 1998 2000 2002 2004 2006 2008 2010
+0
+200
+400
+600
+800
+1000
+1200
+Date
+Value
+Cumulative Value of Two Indices with the 19 Index Commodities
+ 
+ 
+SP-GSCI Roll
+Earlier Roll
+1992 1994 1996 1998 2000 2002 2004 2006 2008 2010
+50
+100
+150
+200
+250
+300
+350
+400
+450
+500
+Date
+Value
+Cumulative Value of Two Indices with the 12 Out-of-Index Commodities
+ 
+ 
+SP-GSCI Roll
+Earlier Roll
+=== PAGE 46 ===
+Figure 8: Estimated Size of Index Investment and Loss due to Price Pressure 
+This Figure shows the estimated size of total commodity index investment and loss due to the 
+price impact of the Goldman Roll. The index investment data is compiled using source of Masters 
+and White (2008) and the index investment reports from the CFTC, and the unit is billions of 
+dollars. All investment is assumed to be tied to the “SP-GSCI Roll” index, and multiply it by the 
+difference of average excess returns between the “SP-GSCI Roll” index and “Earlier Roll” index.  
+The result is used to estimate the loss due to the price impact of the Goldman roll. The sample 
+period is from 1991 to 2009.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+0 50 100 150 200
+Estimated Size of Index Investment (Billion)
+0 2 4 6 8
+Estimated Loss due to Price Pressure (Billion)
+1990 1995 2000 2005 2010
+Year
+Loss Value
+Estimated Size of Index Investment and Loss due to Price Impact

@@ -1,0 +1,7 @@
+2011 2015 n 20 corr(SPFUT,UST2Y) -0.15 corr(SPFUT,ED4) -0.20
+2016 2018 n 12 corr(SPFUT,UST2Y) 0.07 corr(SPFUT,ED4) 0.22
+2019 2021 n 23 corr(SPFUT,UST2Y) -0.30 corr(SPFUT,ED4) -0.33
+2022 2023 n 16 corr(SPFUT,UST2Y) -0.85 corr(SPFUT,ED4) -0.83
+2024 2026 n 22 corr(SPFUT,UST2Y) -0.64 corr(SPFUT,ED4) -0.66
+2016 2023 n 51 corr(SPFUT,UST2Y) -0.69 corr(SPFUT,ED4) -0.70
+share of trailing 8-event windows with corr>0 since 2016: 0.15 (min -0.98, max 0.37)

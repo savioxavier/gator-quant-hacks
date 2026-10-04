@@ -1,0 +1,1005 @@
+{
+ "openai/whisper-large-v3": {
+  "ok": true,
+  "id": "openai/whisper-large-v3",
+  "license": "apache-2.0",
+  "license_name": null,
+  "lictags": [
+   "license:apache-2.0"
+  ],
+  "gated": false,
+  "lastModified": "2024-08-12T10:20:10.000Z",
+  "createdAt": "2023-11-07T18:41:14.000Z",
+  "params": 1543490560,
+  "downloads": 4218590,
+  "base": null
+ },
+ "openai/whisper-large-v3-turbo": {
+  "ok": true,
+  "id": "openai/whisper-large-v3-turbo",
+  "license": "mit",
+  "license_name": null,
+  "lictags": [
+   "license:mit"
+  ],
+  "gated": false,
+  "lastModified": "2024-10-04T14:51:11.000Z",
+  "createdAt": "2024-10-01T07:39:28.000Z",
+  "params": 808878080,
+  "downloads": 6368123,
+  "base": [
+   "openai/whisper-large-v3"
+  ]
+ },
+ "nvidia/parakeet-tdt-0.6b-v2": {
+  "ok": true,
+  "id": "nvidia/parakeet-tdt-0.6b-v2",
+  "license": "cc-by-4.0",
+  "license_name": null,
+  "lictags": [
+   "license:cc-by-4.0"
+  ],
+  "gated": false,
+  "lastModified": "2026-06-29T19:00:21.000Z",
+  "createdAt": "2025-04-15T19:31:12.000Z",
+  "params": null,
+  "downloads": 181479,
+  "base": null
+ },
+ "nvidia/parakeet-tdt-0.6b-v3": {
+  "ok": true,
+  "id": "nvidia/parakeet-tdt-0.6b-v3",
+  "license": "cc-by-4.0",
+  "license_name": null,
+  "lictags": [
+   "license:cc-by-4.0"
+  ],
+  "gated": false,
+  "lastModified": "2026-08-05T21:46:17.000Z",
+  "createdAt": "2025-08-04T13:34:09.000Z",
+  "params": 627057286,
+  "downloads": 569148,
+  "base": null
+ },
+ "nvidia/canary-qwen-2.5b": {
+  "ok": true,
+  "id": "nvidia/canary-qwen-2.5b",
+  "license": "cc-by-4.0",
+  "license_name": null,
+  "lictags": [
+   "license:cc-by-4.0"
+  ],
+  "gated": false,
+  "lastModified": "2026-04-21T12:31:18.000Z",
+  "createdAt": "2025-06-26T16:05:40.000Z",
+  "params": 2559447568,
+  "downloads": 45603,
+  "base": [
+   "nvidia/canary-1b-flash",
+   "Qwen/Qwen3-1.7B"
+  ]
+ },
+ "nvidia/canary-1b-v2": {
+  "ok": true,
+  "id": "nvidia/canary-1b-v2",
+  "license": "cc-by-4.0",
+  "license_name": null,
+  "lictags": [
+   "license:cc-by-4.0"
+  ],
+  "gated": false,
+  "lastModified": "2026-08-31T19:01:49.000Z",
+  "createdAt": "2025-08-04T13:34:41.000Z",
+  "params": 978998272,
+  "downloads": 69332,
+  "base": null
+ },
+ "Qwen/Qwen3-ASR-1.7B": {
+  "ok": true,
+  "id": "Qwen/Qwen3-ASR-1.7B",
+  "license": "apache-2.0",
+  "license_name": null,
+  "lictags": [
+   "license:apache-2.0"
+  ],
+  "gated": false,
+  "lastModified": "2026-01-30T03:00:12.000Z",
+  "createdAt": "2026-01-28T03:22:40.000Z",
+  "params": 2349217408,
+  "downloads": 1528510,
+  "base": null
+ },
+ "Qwen/Qwen3-ASR-1.7B-hf": {
+  "ok": true,
+  "id": "Qwen/Qwen3-ASR-1.7B-hf",
+  "license": "apache-2.0",
+  "license_name": null,
+  "lictags": [
+   "license:apache-2.0"
+  ],
+  "gated": false,
+  "lastModified": "2026-07-22T11:58:31.000Z",
+  "createdAt": "2026-06-26T08:34:21.000Z",
+  "params": 2038052480,
+  "downloads": 353994,
+  "base": null
+ },
+ "Qwen/Qwen3-ForcedAligner-0.6B": {
+  "ok": true,
+  "id": "Qwen/Qwen3-ForcedAligner-0.6B",
+  "license": "apache-2.0",
+  "license_name": null,
+  "lictags": [
+   "license:apache-2.0"
+  ],
+  "gated": false,
+  "lastModified": "2026-01-30T03:00:55.000Z",
+  "createdAt": "2026-01-28T03:29:54.000Z",
+  "params": 917728896,
+  "downloads": 396462,
+  "base": null
+ },
+ "Qwen/Qwen3-ForcedAligner-0.6B-hf": {
+  "ok": true,
+  "id": "Qwen/Qwen3-ForcedAligner-0.6B-hf",
+  "license": "apache-2.0",
+  "license_name": null,
+  "lictags": [
+   "license:apache-2.0"
+  ],
+  "gated": false,
+  "lastModified": "2026-06-26T08:42:38.000Z",
+  "createdAt": "2026-06-26T08:42:01.000Z",
+  "params": 917728896,
+  "downloads": 77378,
+  "base": null
+ },
+ "CohereLabs/cohere-transcribe-03-2026": {
+  "ok": true,
+  "id": "CohereLabs/cohere-transcribe-03-2026",
+  "license": "apache-2.0",
+  "license_name": null,
+  "lictags": [
+   "license:apache-2.0"
+  ],
+  "gated": "auto",
+  "lastModified": "2026-06-10T15:46:19.000Z",
+  "createdAt": "2026-03-24T10:35:54.000Z",
+  "params": 2065804048,
+  "downloads": 200046,
+  "base": null
+ },
+ "nyrahealth/CrisperWhisper": {
+  "ok": true,
+  "id": "nyralabs/CrisperWhisper",
+  "license": "cc-by-nc-4.0",
+  "license_name": null,
+  "lictags": [
+   "license:cc-by-nc-4.0"
+  ],
+  "gated": false,
+  "lastModified": "2026-07-22T12:07:48.000Z",
+  "createdAt": "2024-08-29T15:53:10.000Z",
+  "params": 1609879040,
+  "downloads": 25634,
+  "base": "openai/whisper-large-v3"
+ },
+ "nyralabs/CrisperWhisper2.0_large": {
+  "ok": true,
+  "id": "nyralabs/CrisperWhisper2.0_large",
+  "license": "other",
+  "license_name": "nyra-health-non-commercial-research",
+  "lictags": [
+   "license:other"
+  ],
+  "gated": false,
+  "lastModified": "2026-08-13T15:51:53.000Z",
+  "createdAt": "2026-07-15T09:09:19.000Z",
+  "params": 1543345921,
+  "downloads": 32859,
+  "base": null
+ },
+ "pyannote/speaker-diarization-community-1": {
+  "ok": true,
+  "id": "pyannote/speaker-diarization-community-1",
+  "license": "cc-by-4.0",
+  "license_name": null,
+  "lictags": [
+   "license:cc-by-4.0"
+  ],
+  "gated": "auto",
+  "lastModified": "2025-09-29T08:43:24.000Z",
+  "createdAt": "2025-04-15T21:31:35.000Z",
+  "params": null,
+  "downloads": 5542278,
+  "base": null
+ },
+ "pyannote/speaker-diarization-3.1": {
+  "ok": true,
+  "id": "pyannote/speaker-diarization-3.1",
+  "license": "mit",
+  "license_name": null,
+  "lictags": [
+   "license:mit"
+  ],
+  "gated": "auto",
+  "lastModified": "2024-05-10T19:43:23.000Z",
+  "createdAt": "2023-11-16T08:19:01.000Z",
+  "params": null,
+  "downloads": 7165745,
+  "base": null
+ },
+ "pyannote/speaker-diarization-precision-2": {
+  "ok": true,
+  "id": "pyannote/speaker-diarization-precision",
+  "license": null,
+  "license_name": null,
+  "lictags": [],
+  "gated": false,
+  "lastModified": "2026-09-18T15:47:42.000Z",
+  "createdAt": "2025-09-13T20:49:03.000Z",
+  "params": null,
+  "downloads": 10016,
+  "base": null
+ },
+ "speechbrain/spkrec-ecapa-voxceleb": {
+  "ok": true,
+  "id": "speechbrain/spkrec-ecapa-voxceleb",
+  "license": "apache-2.0",
+  "license_name": null,
+  "lictags": [
+   "license:apache-2.0"
+  ],
+  "gated": false,
+  "lastModified": "2025-02-18T12:29:58.000Z",
+  "createdAt": "2022-03-02T23:29:05.000Z",
+  "params": null,
+  "downloads": 2226275,
+  "base": null
+ },
+ "nvidia/diar_streaming_sortformer_4spk-v2": {
+  "ok": true,
+  "id": "nvidia/diar_streaming_sortformer_4spk-v2",
+  "license": "cc-by-4.0",
+  "license_name": null,
+  "lictags": [
+   "license:cc-by-4.0"
+  ],
+  "gated": false,
+  "lastModified": "2026-09-23T14:47:45.000Z",
+  "createdAt": "2025-06-04T20:35:51.000Z",
+  "params": null,
+  "downloads": 33775,
+  "base": null
+ },
+ "nvidia/diar_sortformer_4spk-v1": {
+  "ok": true,
+  "id": "nvidia/diar_sortformer_4spk-v1",
+  "license": "cc-by-nc-4.0",
+  "license_name": null,
+  "lictags": [
+   "license:cc-by-nc-4.0"
+  ],
+  "gated": false,
+  "lastModified": "2026-09-23T14:54:26.000Z",
+  "createdAt": "2024-12-09T19:17:22.000Z",
+  "params": 123522952,
+  "downloads": 101750,
+  "base": null
+ },
+ "audeering/wav2vec2-large-robust-12-ft-emotion-msp-dim": {
+  "ok": true,
+  "id": "audeering/wav2vec2-large-robust-12-ft-emotion-msp-dim",
+  "license": "cc-by-nc-sa-4.0",
+  "license_name": null,
+  "lictags": [
+   "license:cc-by-nc-sa-4.0"
+  ],
+  "gated": false,
+  "lastModified": "2024-09-19T08:07:19.000Z",
+  "createdAt": "2022-04-06T12:40:02.000Z",
+  "params": 165336707,
+  "downloads": 447540,
+  "base": null
+ },
+ "3loi/SER-Odyssey-Baseline-WavLM-Multi-Attributes": {
+  "ok": true,
+  "id": "3loi/SER-Odyssey-Baseline-WavLM-Multi-Attributes",
+  "license": "mit",
+  "license_name": null,
+  "lictags": [
+   "license:mit"
+  ],
+  "gated": false,
+  "lastModified": "2024-06-12T20:35:33.000Z",
+  "createdAt": "2024-03-05T01:03:46.000Z",
+  "params": 318607043,
+  "downloads": 5466,
+  "base": null
+ },
+ "tiantiaf/wavlm-large-msp-podcast-emotion-dim": {
+  "ok": true,
+  "id": "tiantiaf/wavlm-large-msp-podcast-emotion-dim",
+  "license": "openrail",
+  "license_name": null,
+  "lictags": [
+   "license:openrail"
+  ],
+  "gated": false,
+  "lastModified": "2025-08-10T21:38:41.000Z",
+  "createdAt": "2025-06-11T14:20:15.000Z",
+  "params": 316045276,
+  "downloads": 1257,
+  "base": [
+   "microsoft/wavlm-large"
+  ]
+ },
+ "tiantiaf/whisper-large-v3-msp-podcast-emotion-dim": {
+  "ok": true,
+  "id": "tiantiaf/whisper-large-v3-msp-podcast-emotion-dim",
+  "license": "openrail",
+  "license_name": null,
+  "lictags": [
+   "license:openrail"
+  ],
+  "gated": false,
+  "lastModified": "2025-08-10T21:38:48.000Z",
+  "createdAt": "2025-06-11T13:50:21.000Z",
+  "params": 1543326526,
+  "downloads": 440,
+  "base": [
+   "openai/whisper-large-v3"
+  ]
+ },
+ "tiantiaf/wavlm-large-voice-quality": {
+  "ok": true,
+  "id": "tiantiaf/wavlm-large-voice-quality",
+  "license": "openrail",
+  "license_name": null,
+  "lictags": [
+   "license:openrail"
+  ],
+  "gated": false,
+  "lastModified": "2025-08-10T21:38:21.000Z",
+  "createdAt": "2025-05-21T18:12:52.000Z",
+  "params": 317721586,
+  "downloads": 276,
+  "base": [
+   "microsoft/wavlm-large"
+  ]
+ },
+ "tiantiaf/wavlm-large-speech-flow": {
+  "ok": true,
+  "id": "tiantiaf/wavlm-large-speech-flow",
+  "license": "openrail",
+  "license_name": null,
+  "lictags": [
+   "license:openrail"
+  ],
+  "gated": false,
+  "lastModified": "2026-10-02T19:25:51.000Z",
+  "createdAt": "2025-05-21T18:09:17.000Z",
+  "params": 317782752,
+  "downloads": 158,
+  "base": [
+   "microsoft/wavlm-large"
+  ]
+ },
+ "emotion2vec/emotion2vec_plus_large": {
+  "ok": true,
+  "id": "emotion2vec/emotion2vec_plus_large",
+  "license": "other",
+  "license_name": "model-license",
+  "lictags": [
+   "license:other"
+  ],
+  "gated": false,
+  "lastModified": "2024-06-24T09:51:20.000Z",
+  "createdAt": "2024-05-15T06:24:38.000Z",
+  "params": null,
+  "downloads": 1978,
+  "base": null
+ },
+ "speechbrain/emotion-recognition-wav2vec2-IEMOCAP": {
+  "ok": true,
+  "id": "speechbrain/emotion-recognition-wav2vec2-IEMOCAP",
+  "license": "apache-2.0",
+  "license_name": null,
+  "lictags": [
+   "license:apache-2.0"
+  ],
+  "gated": false,
+  "lastModified": "2024-07-23T07:52:24.000Z",
+  "createdAt": "2022-03-02T23:29:05.000Z",
+  "params": null,
+  "downloads": 46319,
+  "base": null
+ },
+ "ehcalabres/wav2vec2-lg-xlsr-en-speech-emotion-recognition": {
+  "ok": true,
+  "id": "ehcalabres/wav2vec2-lg-xlsr-en-speech-emotion-recognition",
+  "license": "apache-2.0",
+  "license_name": null,
+  "lictags": [
+   "license:apache-2.0"
+  ],
+  "gated": false,
+  "lastModified": "2024-10-24T13:29:57.000Z",
+  "createdAt": "2022-03-02T23:29:05.000Z",
+  "params": 316496520,
+  "downloads": 18044,
+  "base": null
+ },
+ "firdhokk/speech-emotion-recognition-with-openai-whisper-large-v3": {
+  "ok": true,
+  "id": "firdhokk/speech-emotion-recognition-with-openai-whisper-large-v3",
+  "license": "apache-2.0",
+  "license_name": null,
+  "lictags": [
+   "license:apache-2.0"
+  ],
+  "gated": false,
+  "lastModified": "2025-11-01T03:19:07.000Z",
+  "createdAt": "2024-09-21T12:01:48.000Z",
+  "params": 637298695,
+  "downloads": 1690,
+  "base": "openai/whisper-large-v3"
+ },
+ "Qwen/Qwen2-Audio-7B-Instruct": {
+  "ok": true,
+  "id": "Qwen/Qwen2-Audio-7B-Instruct",
+  "license": "apache-2.0",
+  "license_name": null,
+  "lictags": [
+   "license:apache-2.0"
+  ],
+  "gated": false,
+  "lastModified": "2025-01-12T02:05:48.000Z",
+  "createdAt": "2024-07-31T09:22:21.000Z",
+  "params": 8397094912,
+  "downloads": 297116,
+  "base": null
+ },
+ "Qwen/Qwen2.5-Omni-7B": {
+  "ok": true,
+  "id": "Qwen/Qwen2.5-Omni-7B",
+  "license": "other",
+  "license_name": "apache-2.0",
+  "lictags": [
+   "license:other"
+  ],
+  "gated": false,
+  "lastModified": "2025-04-30T13:48:45.000Z",
+  "createdAt": "2025-03-22T02:27:55.000Z",
+  "params": 10732225440,
+  "downloads": 329645,
+  "base": null
+ },
+ "Qwen/Qwen2.5-Omni-7B-AWQ": {
+  "ok": true,
+  "id": "Qwen/Qwen2.5-Omni-7B-AWQ",
+  "license": "other",
+  "license_name": "apache-2.0",
+  "lictags": [
+   "license:other"
+  ],
+  "gated": false,
+  "lastModified": "2025-05-15T10:09:17.000Z",
+  "createdAt": "2025-05-14T08:29:05.000Z",
+  "params": 10732225440,
+  "downloads": 13798,
+  "base": null
+ },
+ "Qwen/Qwen3-Omni-30B-A3B-Instruct": {
+  "ok": true,
+  "id": "Qwen/Qwen3-Omni-30B-A3B-Instruct",
+  "license": "other",
+  "license_name": "apache-2.0",
+  "lictags": [
+   "license:other"
+  ],
+  "gated": false,
+  "lastModified": "2025-09-22T14:17:52.000Z",
+  "createdAt": "2025-09-20T03:16:00.000Z",
+  "params": 35259818545,
+  "downloads": 637299,
+  "base": null
+ },
+ "Qwen/Qwen3-Omni-30B-A3B-Captioner": {
+  "ok": true,
+  "id": "Qwen/Qwen3-Omni-30B-A3B-Captioner",
+  "license": "other",
+  "license_name": "apache-2.0",
+  "lictags": [
+   "license:other"
+  ],
+  "gated": false,
+  "lastModified": "2025-09-22T13:46:56.000Z",
+  "createdAt": "2025-09-15T15:26:43.000Z",
+  "params": 31719205488,
+  "downloads": 8392,
+  "base": null
+ },
+ "ggml-org/Qwen3-Omni-30B-A3B-Instruct-GGUF": {
+  "ok": true,
+  "id": "ggml-org/Qwen3-Omni-30B-A3B-Instruct-GGUF",
+  "license": null,
+  "license_name": null,
+  "lictags": [],
+  "gated": false,
+  "lastModified": "2026-04-13T00:07:43.000Z",
+  "createdAt": "2026-04-13T00:04:50.000Z",
+  "params": null,
+  "downloads": 65728,
+  "base": "Qwen/Qwen3-Omni-30B-A3B-Instruct"
+ },
+ "cyankiwi/Qwen3-Omni-30B-A3B-Instruct-AWQ-4bit": {
+  "ok": true,
+  "id": "cyankiwi/Qwen3-Omni-30B-A3B-Instruct-AWQ-4bit",
+  "license": "other",
+  "license_name": "apache-2.0",
+  "lictags": [
+   "license:other"
+  ],
+  "gated": false,
+  "lastModified": "2026-07-21T18:30:13.000Z",
+  "createdAt": "2025-09-28T20:09:42.000Z",
+  "params": 10034262961,
+  "downloads": 10367,
+  "base": "Qwen/Qwen3-Omni-30B-A3B-Instruct"
+ },
+ "stepfun-ai/Step-Audio-2-mini": {
+  "ok": true,
+  "id": "stepfun-ai/Step-Audio-2-mini",
+  "license": "apache-2.0",
+  "license_name": null,
+  "lictags": [
+   "license:apache-2.0"
+  ],
+  "gated": false,
+  "lastModified": "2026-02-14T09:32:03.000Z",
+  "createdAt": "2025-08-28T07:12:50.000Z",
+  "params": 8315179264,
+  "downloads": 1424,
+  "base": null
+ },
+ "nvidia/audio-flamingo-3-hf": {
+  "ok": true,
+  "id": "nvidia/audio-flamingo-3-hf",
+  "license": "other",
+  "license_name": null,
+  "lictags": [
+   "license:other"
+  ],
+  "gated": false,
+  "lastModified": "2026-04-13T08:08:11.000Z",
+  "createdAt": "2025-10-24T17:38:40.000Z",
+  "params": 8267215360,
+  "downloads": 54280,
+  "base": null
+ },
+ "nvidia/audio-flamingo-next-hf": {
+  "ok": true,
+  "id": "nvidia/audio-flamingo-next-hf",
+  "license": "other",
+  "license_name": null,
+  "lictags": [
+   "license:other"
+  ],
+  "gated": false,
+  "lastModified": "2026-05-13T18:38:05.000Z",
+  "createdAt": "2026-04-05T22:22:34.000Z",
+  "params": 8267215360,
+  "downloads": 3855,
+  "base": null
+ },
+ "mistralai/Voxtral-Mini-3B-2507": {
+  "ok": true,
+  "id": "mistralai/Voxtral-Mini-3B-2507",
+  "license": "apache-2.0",
+  "license_name": null,
+  "lictags": [
+   "license:apache-2.0"
+  ],
+  "gated": false,
+  "lastModified": "2025-07-28T17:16:11.000Z",
+  "createdAt": "2025-07-01T14:11:46.000Z",
+  "params": 4676271104,
+  "downloads": 186894,
+  "base": null
+ },
+ "py-feat/face_multitask_v2": {
+  "ok": true,
+  "id": "py-feat/face_multitask_v2",
+  "license": "other",
+  "license_name": "research-only",
+  "lictags": [
+   "license:other"
+  ],
+  "gated": false,
+  "lastModified": "2026-09-06T17:07:50.000Z",
+  "createdAt": "2026-06-03T04:42:01.000Z",
+  "params": null,
+  "downloads": 0,
+  "base": null
+ },
+ "py-feat/arcface_r50": {
+  "ok": true,
+  "id": "py-feat/arcface_r50",
+  "license": "other",
+  "license_name": "insightface-non-commercial-research",
+  "lictags": [
+   "license:other"
+  ],
+  "gated": false,
+  "lastModified": "2026-05-03T01:58:24.000Z",
+  "createdAt": "2026-05-03T01:53:19.000Z",
+  "params": null,
+  "downloads": 0,
+  "base": null
+ },
+ "py-feat/l2cs": {
+  "ok": true,
+  "id": "py-feat/l2cs",
+  "license": "mit",
+  "license_name": null,
+  "lictags": [
+   "license:mit"
+  ],
+  "gated": false,
+  "lastModified": "2026-05-17T00:50:46.000Z",
+  "createdAt": "2026-05-17T00:50:33.000Z",
+  "params": null,
+  "downloads": 0,
+  "base": null
+ },
+ "Qwen/Qwen3.8-27B": {
+  "ok": true,
+  "id": "Qwen/Qwen3.8-27B",
+  "license": "apache-2.0",
+  "license_name": null,
+  "lictags": [
+   "license:apache-2.0"
+  ],
+  "gated": false,
+  "lastModified": "2026-08-14T15:00:01.000Z",
+  "createdAt": "2026-08-05T08:22:59.000Z",
+  "params": 27781427952,
+  "downloads": 6895117,
+  "base": null
+ },
+ "Qwen/Qwen3-VL-8B-Instruct": {
+  "ok": true,
+  "id": "Qwen/Qwen3-VL-8B-Instruct",
+  "license": "apache-2.0",
+  "license_name": null,
+  "lictags": [
+   "license:apache-2.0"
+  ],
+  "gated": false,
+  "lastModified": "2025-10-15T16:16:59.000Z",
+  "createdAt": "2025-10-11T07:23:39.000Z",
+  "params": 8767123696,
+  "downloads": 14599193,
+  "base": null
+ },
+ "Qwen/Qwen2.5-VL-7B-Instruct": {
+  "ok": true,
+  "id": "Qwen/Qwen2.5-VL-7B-Instruct",
+  "license": "apache-2.0",
+  "license_name": null,
+  "lictags": [
+   "license:apache-2.0"
+  ],
+  "gated": false,
+  "lastModified": "2025-04-06T16:23:01.000Z",
+  "createdAt": "2025-01-26T09:26:37.000Z",
+  "params": 8292166656,
+  "downloads": 5828339,
+  "base": null
+ },
+ "gtfintechlab/FOMC-RoBERTa": {
+  "ok": true,
+  "id": "gtfintechlab/FOMC-RoBERTa",
+  "license": "cc-by-nc-4.0",
+  "license_name": null,
+  "lictags": [
+   "license:cc-by-nc-4.0"
+  ],
+  "gated": "manual",
+  "lastModified": "2023-09-12T21:08:45.000Z",
+  "createdAt": "2023-05-03T16:37:17.000Z",
+  "params": null,
+  "downloads": 1382,
+  "base": null
+ },
+ "gtfintechlab/model_federal_reserve_system_stance_label": {
+  "ok": true,
+  "id": "gtfintechlab/model_federal_reserve_system_stance_label",
+  "license": "cc-by-nc-sa-4.0",
+  "license_name": null,
+  "lictags": [
+   "license:cc-by-nc-sa-4.0"
+  ],
+  "gated": false,
+  "lastModified": "2025-08-15T20:27:08.000Z",
+  "createdAt": "2025-04-04T20:49:21.000Z",
+  "params": 355363844,
+  "downloads": 106,
+  "base": [
+   "roberta-base"
+  ]
+ },
+ "gtfintechlab/model_federal_reserve_system_certain_label": {
+  "ok": true,
+  "id": "gtfintechlab/model_federal_reserve_system_certain_label",
+  "license": "cc-by-nc-sa-4.0",
+  "license_name": null,
+  "lictags": [
+   "license:cc-by-nc-sa-4.0"
+  ],
+  "gated": "manual",
+  "lastModified": "2025-05-12T07:47:47.000Z",
+  "createdAt": "2025-04-04T20:43:37.000Z",
+  "params": 355361794,
+  "downloads": 0,
+  "base": [
+   "roberta-base"
+  ]
+ },
+ "gtfintechlab/model_federal_reserve_system_time_label": {
+  "ok": true,
+  "id": "gtfintechlab/model_federal_reserve_system_time_label",
+  "license": "cc-by-nc-sa-4.0",
+  "license_name": null,
+  "lictags": [
+   "license:cc-by-nc-sa-4.0"
+  ],
+  "gated": "manual",
+  "lastModified": "2025-05-12T07:47:46.000Z",
+  "createdAt": "2025-04-04T20:51:19.000Z",
+  "params": 355361794,
+  "downloads": 0,
+  "base": [
+   "roberta-base"
+  ]
+ },
+ "Moritz-Pfeifer/CentralBankRoBERTa-sentiment-classifier": {
+  "ok": true,
+  "id": "Moritz-Pfeifer/CentralBankRoBERTa-sentiment-classifier",
+  "license": "mit",
+  "license_name": null,
+  "lictags": [
+   "license:mit"
+  ],
+  "gated": false,
+  "lastModified": "2024-11-15T05:35:14.000Z",
+  "createdAt": "2023-07-28T22:34:44.000Z",
+  "params": null,
+  "downloads": 973,
+  "base": null
+ },
+ "Moritz-Pfeifer/CentralBankRoBERTa-agent-classifier": {
+  "ok": true,
+  "id": "Moritz-Pfeifer/CentralBankRoBERTa-agent-classifier",
+  "license": "mit",
+  "license_name": null,
+  "lictags": [
+   "license:mit"
+  ],
+  "gated": false,
+  "lastModified": "2024-01-10T17:33:25.000Z",
+  "createdAt": "2023-07-28T07:25:36.000Z",
+  "params": null,
+  "downloads": 323,
+  "base": null
+ },
+ "ProsusAI/finbert": {
+  "ok": true,
+  "id": "ProsusAI/finbert",
+  "license": null,
+  "license_name": null,
+  "lictags": [],
+  "gated": false,
+  "lastModified": "2023-05-23T12:43:35.000Z",
+  "createdAt": "2022-03-02T23:29:04.000Z",
+  "params": null,
+  "downloads": 4417673,
+  "base": null
+ },
+ "yiyanghkust/finbert-tone": {
+  "ok": true,
+  "id": "yiyanghkust/finbert-tone",
+  "license": null,
+  "license_name": null,
+  "lictags": [],
+  "gated": false,
+  "lastModified": "2022-10-17T00:35:39.000Z",
+  "createdAt": "2022-03-02T23:29:05.000Z",
+  "params": null,
+  "downloads": 1199850,
+  "base": null
+ },
+ "ZiweiChen/FinBERT-FOMC": {
+  "ok": true,
+  "id": "ZiweiChen/FinBERT-FOMC",
+  "license": null,
+  "license_name": null,
+  "lictags": [],
+  "gated": false,
+  "lastModified": "2024-10-05T13:41:00.000Z",
+  "createdAt": "2023-06-11T00:02:49.000Z",
+  "params": null,
+  "downloads": 325,
+  "base": null
+ },
+ "Wonseong/FinBERT-FOMC-aspects": {
+  "ok": true,
+  "id": "Wonseong/FinBERT-FOMC-aspects",
+  "license": "apache-2.0",
+  "license_name": null,
+  "lictags": [
+   "license:apache-2.0"
+  ],
+  "gated": false,
+  "lastModified": "2026-04-22T13:18:26.000Z",
+  "createdAt": "2026-04-16T19:23:31.000Z",
+  "params": 109754115,
+  "downloads": 21,
+  "base": "ZiweiChen/FinBERT-FOMC"
+ },
+ "LorenzoAleCon29/roberta-large-fomc-hawkish-dovish": {
+  "ok": true,
+  "id": "LorenzoAleCon29/roberta-large-fomc-hawkish-dovish",
+  "license": null,
+  "license_name": null,
+  "lictags": [],
+  "gated": false,
+  "lastModified": "2026-08-13T08:20:38.000Z",
+  "createdAt": "2026-08-02T10:37:32.000Z",
+  "params": 355362819,
+  "downloads": 234,
+  "base": null
+ },
+ "openai/gpt-oss-20b": {
+  "ok": true,
+  "id": "openai/gpt-oss-20b",
+  "license": "apache-2.0",
+  "license_name": null,
+  "lictags": [
+   "license:apache-2.0"
+  ],
+  "gated": false,
+  "lastModified": "2025-08-26T17:25:47.000Z",
+  "createdAt": "2025-08-04T22:33:29.000Z",
+  "params": 20914757184,
+  "downloads": 6574377,
+  "base": null
+ },
+ "manelalab/chrono-bert-v1-20181231": {
+  "ok": true,
+  "id": "manelalab/chrono-bert-v1-20181231",
+  "license": "mit",
+  "license_name": null,
+  "lictags": [
+   "license:mit"
+  ],
+  "gated": false,
+  "lastModified": "2025-06-10T05:43:28.000Z",
+  "createdAt": "2025-02-28T02:14:58.000Z",
+  "params": 149655232,
+  "downloads": 970,
+  "base": null
+ },
+ "manelalab/chrono-gpt-instruct-v1-20181231": {
+  "ok": true,
+  "id": "manelalab/chrono-gpt-instruct-v1-20181231",
+  "license": "mit",
+  "license_name": null,
+  "lictags": [
+   "license:mit"
+  ],
+  "gated": false,
+  "lastModified": "2025-12-09T17:20:58.000Z",
+  "createdAt": "2025-10-12T20:07:47.000Z",
+  "params": null,
+  "downloads": 37,
+  "base": null
+ },
+ "manelalab/chrono-bert-v1-20241231": {
+  "ok": true,
+  "id": "manelalab/chrono-bert-v1-20241231",
+  "license": "mit",
+  "license_name": null,
+  "lictags": [
+   "license:mit"
+  ],
+  "gated": false,
+  "lastModified": "2025-06-10T05:44:18.000Z",
+  "createdAt": "2025-02-28T02:15:09.000Z",
+  "params": 149655232,
+  "downloads": 582,
+  "base": null
+ },
+ "Qwen/Qwen3-Embedding-8B": {
+  "ok": true,
+  "id": "Qwen/Qwen3-Embedding-8B",
+  "license": "apache-2.0",
+  "license_name": null,
+  "lictags": [
+   "license:apache-2.0"
+  ],
+  "gated": false,
+  "lastModified": "2025-07-07T09:02:21.000Z",
+  "createdAt": "2025-06-03T14:39:10.000Z",
+  "params": 7567295488,
+  "downloads": 2587093,
+  "base": [
+   "Qwen/Qwen3-8B-Base"
+  ]
+ },
+ "Qwen/Qwen3-Embedding-0.6B": {
+  "ok": true,
+  "id": "Qwen/Qwen3-Embedding-0.6B",
+  "license": "apache-2.0",
+  "license_name": null,
+  "lictags": [
+   "license:apache-2.0"
+  ],
+  "gated": false,
+  "lastModified": "2026-04-20T02:45:58.000Z",
+  "createdAt": "2025-06-03T14:25:32.000Z",
+  "params": 595776512,
+  "downloads": 9558268,
+  "base": [
+   "Qwen/Qwen3-0.6B-Base"
+  ]
+ },
+ "BAAI/bge-m3": {
+  "ok": true,
+  "id": "BAAI/bge-m3",
+  "license": "mit",
+  "license_name": null,
+  "lictags": [
+   "license:mit"
+  ],
+  "gated": false,
+  "lastModified": "2024-07-03T14:50:10.000Z",
+  "createdAt": "2024-01-27T17:07:29.000Z",
+  "params": null,
+  "downloads": 34779717,
+  "base": null
+ },
+ "FutureMa/Eva-4B-V2": {
+  "ok": true,
+  "id": "FutureMa/Eva-4B-V2",
+  "license": "apache-2.0",
+  "license_name": null,
+  "lictags": [
+   "license:apache-2.0"
+  ],
+  "gated": false,
+  "lastModified": "2026-02-10T15:08:24.000Z",
+  "createdAt": "2026-02-04T11:31:33.000Z",
+  "params": 4022468096,
+  "downloads": 249,
+  "base": "Qwen/Qwen3-4B-Instruct-2507"
+ },
+ "gtfintechlab/SubjECTiveQA-CLEAR": {
+  "ok": true,
+  "id": "gtfintechlab/SubjECTiveQA-CLEAR",
+  "license": "cc-by-4.0",
+  "license_name": null,
+  "lictags": [
+   "license:cc-by-4.0"
+  ],
+  "gated": "auto",
+  "lastModified": "2024-12-17T00:24:26.000Z",
+  "createdAt": "2024-10-08T19:01:02.000Z",
+  "params": 109484547,
+  "downloads": 10,
+  "base": [
+   "google-bert/bert-base-uncased"
+  ]
+ }
+}

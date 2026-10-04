@@ -1,0 +1,440 @@
+2026-10-03 14:50:38.984 INFO webull.main [Backtest] strategy=dual_ma symbols=['SPY'] params={}
+2026-10-03 14:50:38.988 INFO webull.main [Backtest] starting cash: 100000.00
+2026-10-03 14:50:39.252 INFO webull.strategy [Order] SPY BUY completed: price=80.18 size=10 value=801.79 commission=0.40
+2026-10-03 14:50:39.255 INFO webull.strategy [Order] SPY SELL completed: price=80.53 size=-10 value=801.79 commission=0.40
+2026-10-03 14:50:39.257 INFO webull.strategy [Order] SPY BUY completed: price=79.97 size=10 value=799.73 commission=0.40
+2026-10-03 14:50:39.257 INFO webull.strategy [Order] SPY SELL completed: price=78.17 size=-10 value=799.73 commission=0.39
+2026-10-03 14:50:39.259 INFO webull.strategy [Order] SPY BUY completed: price=79.73 size=10 value=797.30 commission=0.40
+2026-10-03 14:50:39.262 INFO webull.strategy [Order] SPY SELL completed: price=81.63 size=-10 value=797.30 commission=0.41
+2026-10-03 14:50:39.263 INFO webull.strategy [Order] SPY BUY completed: price=82.81 size=10 value=828.08 commission=0.41
+2026-10-03 14:50:39.264 INFO webull.strategy [Order] SPY SELL completed: price=83.59 size=-10 value=828.08 commission=0.42
+2026-10-03 14:50:39.266 INFO webull.strategy [Order] SPY BUY completed: price=83.94 size=10 value=839.41 commission=0.42
+2026-10-03 14:50:39.267 INFO webull.strategy [Order] SPY SELL completed: price=82.57 size=-10 value=839.41 commission=0.41
+2026-10-03 14:50:39.269 INFO webull.strategy [Order] SPY BUY completed: price=82.00 size=10 value=820.01 commission=0.41
+2026-10-03 14:50:39.273 INFO webull.strategy [Order] SPY SELL completed: price=85.44 size=-10 value=820.01 commission=0.43
+2026-10-03 14:50:39.273 INFO webull.strategy [Order] SPY BUY completed: price=87.73 size=10 value=877.33 commission=0.44
+2026-10-03 14:50:39.275 INFO webull.strategy [Order] SPY SELL completed: price=86.97 size=-10 value=877.33 commission=0.43
+2026-10-03 14:50:39.275 INFO webull.strategy [Order] SPY BUY completed: price=87.77 size=10 value=877.72 commission=0.44
+2026-10-03 14:50:39.276 INFO webull.strategy [Order] SPY SELL completed: price=86.56 size=-10 value=877.72 commission=0.43
+2026-10-03 14:50:39.276 INFO webull.strategy [Order] SPY BUY completed: price=87.95 size=10 value=879.53 commission=0.44
+2026-10-03 14:50:39.278 INFO webull.strategy [Order] SPY SELL completed: price=87.43 size=-10 value=879.53 commission=0.44
+2026-10-03 14:50:39.278 INFO webull.strategy [Order] SPY BUY completed: price=89.78 size=10 value=897.82 commission=0.45
+2026-10-03 14:50:39.280 INFO webull.strategy [Order] SPY SELL completed: price=88.51 size=-10 value=897.82 commission=0.44
+2026-10-03 14:50:39.281 INFO webull.strategy [Order] SPY BUY completed: price=90.61 size=10 value=906.07 commission=0.45
+2026-10-03 14:50:39.282 INFO webull.strategy [Order] SPY SELL completed: price=89.19 size=-10 value=906.07 commission=0.45
+2026-10-03 14:50:39.285 INFO webull.strategy [Order] SPY BUY completed: price=88.14 size=10 value=881.40 commission=0.44
+2026-10-03 14:50:39.286 INFO webull.strategy [Order] SPY SELL completed: price=85.41 size=-10 value=881.40 commission=0.43
+2026-10-03 14:50:39.287 INFO webull.strategy [Order] SPY BUY completed: price=87.79 size=10 value=877.94 commission=0.44
+2026-10-03 14:50:39.296 INFO webull.strategy [Order] SPY SELL completed: price=98.19 size=-10 value=877.94 commission=0.49
+2026-10-03 14:50:39.297 INFO webull.strategy [Order] SPY BUY completed: price=99.86 size=10 value=998.60 commission=0.50
+2026-10-03 14:50:39.300 INFO webull.strategy [Order] SPY SELL completed: price=97.89 size=-10 value=998.60 commission=0.49
+2026-10-03 14:50:39.301 INFO webull.strategy [Order] SPY BUY completed: price=100.54 size=10 value=1005.44 commission=0.50
+2026-10-03 14:50:39.307 INFO webull.strategy [Order] SPY SELL completed: price=105.66 size=-10 value=1005.44 commission=0.53
+2026-10-03 14:50:39.307 INFO webull.strategy [Order] SPY BUY completed: price=107.36 size=10 value=1073.60 commission=0.54
+2026-10-03 14:50:39.308 INFO webull.strategy [Order] SPY SELL completed: price=105.61 size=-10 value=1073.60 commission=0.53
+2026-10-03 14:50:39.309 INFO webull.strategy [Order] SPY BUY completed: price=107.25 size=10 value=1072.55 commission=0.54
+2026-10-03 14:50:39.310 INFO webull.strategy [Order] SPY SELL completed: price=104.20 size=-10 value=1072.55 commission=0.52
+2026-10-03 14:50:39.312 INFO webull.strategy [Order] SPY BUY completed: price=103.09 size=10 value=1030.89 commission=0.52
+2026-10-03 14:50:39.316 INFO webull.strategy [Order] SPY SELL completed: price=105.16 size=-10 value=1030.89 commission=0.53
+2026-10-03 14:50:39.318 INFO webull.strategy [Order] SPY BUY completed: price=103.70 size=10 value=1037.05 commission=0.52
+2026-10-03 14:50:39.319 INFO webull.strategy [Order] SPY SELL completed: price=103.73 size=-10 value=1037.05 commission=0.52
+2026-10-03 14:50:39.320 INFO webull.strategy [Order] SPY BUY completed: price=105.89 size=10 value=1058.87 commission=0.53
+2026-10-03 14:50:39.320 INFO webull.strategy [Order] SPY SELL completed: price=102.91 size=-10 value=1058.87 commission=0.51
+2026-10-03 14:50:39.323 INFO webull.strategy [Order] SPY BUY completed: price=96.63 size=10 value=966.35 commission=0.48
+2026-10-03 14:50:39.324 INFO webull.strategy [Order] SPY SELL completed: price=94.51 size=-10 value=966.35 commission=0.47
+2026-10-03 14:50:39.324 INFO webull.strategy [Order] SPY BUY completed: price=95.61 size=10 value=956.11 commission=0.48
+2026-10-03 14:50:39.325 INFO webull.strategy [Order] SPY SELL completed: price=94.75 size=-10 value=956.11 commission=0.47
+2026-10-03 14:50:39.327 INFO webull.strategy [Order] SPY BUY completed: price=96.06 size=10 value=960.56 commission=0.48
+2026-10-03 14:50:39.328 INFO webull.strategy [Order] SPY SELL completed: price=96.05 size=-10 value=960.56 commission=0.48
+2026-10-03 14:50:39.329 INFO webull.strategy [Order] SPY BUY completed: price=98.75 size=10 value=987.49 commission=0.49
+2026-10-03 14:50:39.331 INFO webull.strategy [Order] SPY SELL completed: price=98.34 size=-10 value=987.49 commission=0.49
+2026-10-03 14:50:39.334 INFO webull.strategy [Order] SPY BUY completed: price=92.14 size=10 value=921.42 commission=0.46
+2026-10-03 14:50:39.337 INFO webull.strategy [Order] SPY SELL completed: price=91.10 size=-10 value=921.42 commission=0.46
+2026-10-03 14:50:39.338 INFO webull.strategy [Order] SPY BUY completed: price=93.14 size=10 value=931.40 commission=0.47
+2026-10-03 14:50:39.338 INFO webull.strategy [Order] SPY SELL completed: price=93.26 size=-10 value=931.40 commission=0.47
+2026-10-03 14:50:39.338 INFO webull.strategy [Order] SPY BUY completed: price=91.16 size=10 value=911.59 commission=0.46
+2026-10-03 14:50:39.339 INFO webull.strategy [Order] SPY SELL completed: price=88.43 size=-10 value=911.59 commission=0.44
+2026-10-03 14:50:39.342 INFO webull.strategy [Order] SPY BUY completed: price=71.53 size=10 value=715.32 commission=0.36
+2026-10-03 14:50:39.343 INFO webull.strategy [Order] SPY SELL completed: price=63.65 size=-10 value=715.32 commission=0.32
+2026-10-03 14:50:39.345 INFO webull.strategy [Order] SPY BUY completed: price=65.26 size=10 value=652.57 commission=0.33
+2026-10-03 14:50:39.346 INFO webull.strategy [Order] SPY SELL completed: price=63.44 size=-10 value=652.57 commission=0.32
+2026-10-03 14:50:39.346 INFO webull.strategy [Order] SPY BUY completed: price=67.43 size=10 value=674.32 commission=0.34
+2026-10-03 14:50:39.347 INFO webull.strategy [Order] SPY SELL completed: price=62.21 size=-10 value=674.32 commission=0.31
+2026-10-03 14:50:39.349 INFO webull.strategy [Order] SPY BUY completed: price=62.80 size=10 value=628.02 commission=0.31
+2026-10-03 14:50:39.349 INFO webull.strategy [Order] SPY SELL completed: price=58.03 size=-10 value=628.02 commission=0.29
+2026-10-03 14:50:39.351 INFO webull.strategy [Order] SPY BUY completed: price=55.38 size=10 value=553.77 commission=0.28
+2026-10-03 14:50:39.356 INFO webull.strategy [Order] SPY SELL completed: price=66.26 size=-10 value=553.77 commission=0.33
+2026-10-03 14:50:39.356 INFO webull.strategy [Order] SPY BUY completed: price=68.68 size=10 value=686.77 commission=0.34
+2026-10-03 14:50:39.358 INFO webull.strategy [Order] SPY SELL completed: price=68.19 size=-10 value=686.77 commission=0.34
+2026-10-03 14:50:39.359 INFO webull.strategy [Order] SPY BUY completed: price=69.35 size=10 value=693.53 commission=0.35
+2026-10-03 14:50:39.362 INFO webull.strategy [Order] SPY SELL completed: price=75.87 size=-10 value=693.53 commission=0.38
+2026-10-03 14:50:39.363 INFO webull.strategy [Order] SPY BUY completed: price=76.53 size=10 value=765.34 commission=0.38
+2026-10-03 14:50:39.364 INFO webull.strategy [Order] SPY SELL completed: price=76.16 size=-10 value=765.34 commission=0.38
+2026-10-03 14:50:39.365 INFO webull.strategy [Order] SPY BUY completed: price=79.83 size=10 value=798.33 commission=0.40
+2026-10-03 14:50:39.366 INFO webull.strategy [Order] SPY SELL completed: price=78.67 size=-10 value=798.33 commission=0.39
+2026-10-03 14:50:39.367 INFO webull.strategy [Order] SPY BUY completed: price=81.72 size=10 value=817.22 commission=0.41
+2026-10-03 14:50:39.369 INFO webull.strategy [Order] SPY SELL completed: price=81.93 size=-10 value=817.22 commission=0.41
+2026-10-03 14:50:39.369 INFO webull.strategy [Order] SPY BUY completed: price=82.83 size=10 value=828.26 commission=0.41
+2026-10-03 14:50:39.372 INFO webull.strategy [Order] SPY SELL completed: price=82.01 size=-10 value=828.26 commission=0.41
+2026-10-03 14:50:39.374 INFO webull.strategy [Order] SPY BUY completed: price=82.39 size=10 value=823.93 commission=0.41
+2026-10-03 14:50:39.378 INFO webull.strategy [Order] SPY SELL completed: price=89.19 size=-10 value=823.93 commission=0.45
+2026-10-03 14:50:39.381 INFO webull.strategy [Order] SPY BUY completed: price=83.33 size=10 value=833.30 commission=0.42
+2026-10-03 14:50:39.382 INFO webull.strategy [Order] SPY SELL completed: price=79.59 size=-10 value=833.30 commission=0.40
+2026-10-03 14:50:39.383 INFO webull.strategy [Order] SPY BUY completed: price=82.14 size=10 value=821.41 commission=0.41
+2026-10-03 14:50:39.386 INFO webull.strategy [Order] SPY SELL completed: price=80.75 size=-10 value=821.41 commission=0.40
+2026-10-03 14:50:39.388 INFO webull.strategy [Order] SPY BUY completed: price=82.55 size=10 value=825.54 commission=0.41
+2026-10-03 14:50:39.392 INFO webull.strategy [Order] SPY SELL completed: price=90.12 size=-10 value=825.54 commission=0.45
+2026-10-03 14:50:39.393 INFO webull.strategy [Order] SPY BUY completed: price=92.64 size=10 value=926.44 commission=0.46
+2026-10-03 14:50:39.398 INFO webull.strategy [Order] SPY SELL completed: price=101.34 size=-10 value=926.44 commission=0.51
+2026-10-03 14:50:39.400 INFO webull.strategy [Order] SPY BUY completed: price=100.36 size=10 value=1003.62 commission=0.50
+2026-10-03 14:50:39.402 INFO webull.strategy [Order] SPY SELL completed: price=99.51 size=-10 value=1003.62 commission=0.50
+2026-10-03 14:50:39.402 INFO webull.strategy [Order] SPY BUY completed: price=102.25 size=10 value=1022.46 commission=0.51
+2026-10-03 14:50:39.404 INFO webull.strategy [Order] SPY SELL completed: price=101.53 size=-10 value=1022.46 commission=0.51
+2026-10-03 14:50:39.407 INFO webull.strategy [Order] SPY BUY completed: price=100.52 size=10 value=1005.23 commission=0.50
+2026-10-03 14:50:39.408 INFO webull.strategy [Order] SPY SELL completed: price=98.71 size=-10 value=1005.23 commission=0.49
+2026-10-03 14:50:39.410 INFO webull.strategy [Order] SPY BUY completed: price=92.62 size=10 value=926.20 commission=0.46
+2026-10-03 14:50:39.411 INFO webull.strategy [Order] SPY SELL completed: price=87.66 size=-10 value=926.20 commission=0.44
+2026-10-03 14:50:39.412 INFO webull.strategy [Order] SPY BUY completed: price=90.71 size=10 value=907.11 commission=0.45
+2026-10-03 14:50:39.412 INFO webull.strategy [Order] SPY SELL completed: price=92.39 size=-10 value=907.11 commission=0.46
+2026-10-03 14:50:39.412 INFO webull.strategy [Order] SPY BUY completed: price=93.45 size=10 value=934.53 commission=0.47
+2026-10-03 14:50:39.412 INFO webull.strategy [Order] SPY SELL completed: price=86.29 size=-10 value=934.53 commission=0.43
+2026-10-03 14:50:39.414 INFO webull.strategy [Order] SPY BUY completed: price=92.92 size=10 value=929.22 commission=0.46
+2026-10-03 14:50:39.417 INFO webull.strategy [Order] SPY SELL completed: price=94.29 size=-10 value=929.22 commission=0.47
+2026-10-03 14:50:39.418 INFO webull.strategy [Order] SPY BUY completed: price=97.24 size=10 value=972.44 commission=0.49
+2026-10-03 14:50:39.419 INFO webull.strategy [Order] SPY SELL completed: price=94.64 size=-10 value=972.44 commission=0.47
+2026-10-03 14:50:39.419 INFO webull.strategy [Order] SPY BUY completed: price=96.64 size=10 value=966.36 commission=0.48
+2026-10-03 14:50:39.426 INFO webull.strategy [Order] SPY SELL completed: price=106.81 size=-10 value=966.36 commission=0.53
+2026-10-03 14:50:39.427 INFO webull.strategy [Order] SPY BUY completed: price=109.11 size=10 value=1091.15 commission=0.55
+2026-10-03 14:50:39.428 INFO webull.strategy [Order] SPY SELL completed: price=105.11 size=-10 value=1091.15 commission=0.53
+2026-10-03 14:50:39.430 INFO webull.strategy [Order] SPY BUY completed: price=103.21 size=10 value=1032.12 commission=0.52
+2026-10-03 14:50:39.433 INFO webull.strategy [Order] SPY SELL completed: price=107.05 size=-10 value=1032.12 commission=0.54
+2026-10-03 14:50:39.433 INFO webull.strategy [Order] SPY BUY completed: price=108.41 size=10 value=1084.12 commission=0.54
+2026-10-03 14:50:39.436 INFO webull.strategy [Order] SPY SELL completed: price=110.34 size=-10 value=1084.12 commission=0.55
+2026-10-03 14:50:39.436 INFO webull.strategy [Order] SPY BUY completed: price=112.73 size=10 value=1127.33 commission=0.56
+2026-10-03 14:50:39.438 INFO webull.strategy [Order] SPY SELL completed: price=113.94 size=-10 value=1127.33 commission=0.57
+2026-10-03 14:50:39.438 INFO webull.strategy [Order] SPY BUY completed: price=114.59 size=10 value=1145.86 commission=0.57
+2026-10-03 14:50:39.438 INFO webull.strategy [Order] SPY SELL completed: price=113.43 size=-10 value=1145.86 commission=0.57
+2026-10-03 14:50:39.439 INFO webull.strategy [Order] SPY BUY completed: price=114.50 size=10 value=1144.97 commission=0.57
+2026-10-03 14:50:39.439 INFO webull.strategy [Order] SPY SELL completed: price=111.59 size=-10 value=1144.97 commission=0.56
+2026-10-03 14:50:39.441 INFO webull.strategy [Order] SPY BUY completed: price=110.90 size=10 value=1108.95 commission=0.55
+2026-10-03 14:50:39.443 INFO webull.strategy [Order] SPY SELL completed: price=110.58 size=-10 value=1108.95 commission=0.55
+2026-10-03 14:50:39.444 INFO webull.strategy [Order] SPY BUY completed: price=115.71 size=10 value=1157.08 commission=0.58
+2026-10-03 14:50:39.448 INFO webull.strategy [Order] SPY SELL completed: price=118.68 size=-10 value=1157.08 commission=0.59
+2026-10-03 14:50:39.448 INFO webull.strategy [Order] SPY BUY completed: price=121.79 size=10 value=1217.87 commission=0.61
+2026-10-03 14:50:39.451 INFO webull.strategy [Order] SPY SELL completed: price=122.87 size=-10 value=1217.87 commission=0.61
+2026-10-03 14:50:39.452 INFO webull.strategy [Order] SPY BUY completed: price=126.05 size=10 value=1260.46 commission=0.63
+2026-10-03 14:50:39.454 INFO webull.strategy [Order] SPY SELL completed: price=129.71 size=-10 value=1260.46 commission=0.65
+2026-10-03 14:50:39.456 INFO webull.strategy [Order] SPY BUY completed: price=132.04 size=10 value=1320.35 commission=0.66
+2026-10-03 14:50:39.459 INFO webull.strategy [Order] SPY SELL completed: price=133.85 size=-10 value=1320.35 commission=0.67
+2026-10-03 14:50:39.460 INFO webull.strategy [Order] SPY BUY completed: price=134.96 size=10 value=1349.65 commission=0.67
+2026-10-03 14:50:39.462 INFO webull.strategy [Order] SPY SELL completed: price=134.77 size=-10 value=1349.65 commission=0.67
+2026-10-03 14:50:39.463 INFO webull.strategy [Order] SPY BUY completed: price=137.82 size=10 value=1378.18 commission=0.69
+2026-10-03 14:50:39.467 INFO webull.strategy [Order] SPY SELL completed: price=143.80 size=-10 value=1378.18 commission=0.72
+2026-10-03 14:50:39.467 INFO webull.strategy [Order] SPY BUY completed: price=147.53 size=10 value=1475.25 commission=0.74
+2026-10-03 14:50:39.469 INFO webull.strategy [Order] SPY SELL completed: price=144.64 size=-10 value=1475.25 commission=0.72
+2026-10-03 14:50:39.471 INFO webull.strategy [Order] SPY BUY completed: price=146.22 size=10 value=1462.23 commission=0.73
+2026-10-03 14:50:39.473 INFO webull.strategy [Order] SPY SELL completed: price=150.45 size=-10 value=1462.23 commission=0.75
+2026-10-03 14:50:39.473 INFO webull.strategy [Order] SPY BUY completed: price=152.45 size=10 value=1524.48 commission=0.76
+2026-10-03 14:50:39.474 INFO webull.strategy [Order] SPY SELL completed: price=149.89 size=-10 value=1524.48 commission=0.75
+2026-10-03 14:50:39.474 INFO webull.strategy [Order] SPY BUY completed: price=153.60 size=10 value=1535.98 commission=0.77
+2026-10-03 14:50:39.475 INFO webull.strategy [Order] SPY SELL completed: price=147.78 size=-10 value=1535.98 commission=0.74
+2026-10-03 14:50:39.475 INFO webull.strategy [Order] SPY BUY completed: price=152.54 size=10 value=1525.38 commission=0.76
+2026-10-03 14:50:39.483 INFO webull.strategy [Order] SPY SELL completed: price=156.98 size=-10 value=1525.38 commission=0.78
+2026-10-03 14:50:39.484 INFO webull.strategy [Order] SPY BUY completed: price=161.45 size=10 value=1614.45 commission=0.81
+2026-10-03 14:50:39.486 INFO webull.strategy [Order] SPY SELL completed: price=161.91 size=-10 value=1614.45 commission=0.81
+2026-10-03 14:50:39.486 INFO webull.strategy [Order] SPY BUY completed: price=165.22 size=10 value=1652.17 commission=0.83
+2026-10-03 14:50:39.486 INFO webull.strategy [Order] SPY SELL completed: price=161.10 size=-10 value=1652.17 commission=0.81
+2026-10-03 14:50:39.488 INFO webull.strategy [Order] SPY BUY completed: price=160.47 size=10 value=1604.70 commission=0.80
+2026-10-03 14:50:39.491 INFO webull.strategy [Order] SPY SELL completed: price=165.97 size=-10 value=1604.70 commission=0.83
+2026-10-03 14:50:39.492 INFO webull.strategy [Order] SPY BUY completed: price=171.49 size=10 value=1714.87 commission=0.86
+2026-10-03 14:50:39.493 INFO webull.strategy [Order] SPY SELL completed: price=165.88 size=-10 value=1714.87 commission=0.83
+2026-10-03 14:50:39.495 INFO webull.strategy [Order] SPY BUY completed: price=167.32 size=10 value=1673.24 commission=0.84
+2026-10-03 14:50:39.495 INFO webull.strategy [Order] SPY SELL completed: price=164.75 size=-10 value=1673.24 commission=0.82
+2026-10-03 14:50:39.496 INFO webull.strategy [Order] SPY BUY completed: price=170.28 size=10 value=1702.84 commission=0.85
+2026-10-03 14:50:39.497 INFO webull.strategy [Order] SPY SELL completed: price=170.24 size=-10 value=1702.84 commission=0.85
+2026-10-03 14:50:39.498 INFO webull.strategy [Order] SPY BUY completed: price=174.24 size=10 value=1742.40 commission=0.87
+2026-10-03 14:50:39.499 INFO webull.strategy [Order] SPY SELL completed: price=171.29 size=-10 value=1742.40 commission=0.86
+2026-10-03 14:50:39.500 INFO webull.strategy [Order] SPY BUY completed: price=173.23 size=10 value=1732.30 commission=0.87
+2026-10-03 14:50:39.502 INFO webull.strategy [Order] SPY SELL completed: price=172.00 size=-10 value=1732.30 commission=0.86
+2026-10-03 14:50:39.502 INFO webull.strategy [Order] SPY BUY completed: price=174.92 size=10 value=1749.19 commission=0.87
+2026-10-03 14:50:39.504 INFO webull.strategy [Order] SPY SELL completed: price=173.68 size=-10 value=1749.19 commission=0.87
+2026-10-03 14:50:39.505 INFO webull.strategy [Order] SPY BUY completed: price=176.52 size=10 value=1765.19 commission=0.88
+2026-10-03 14:50:39.505 INFO webull.strategy [Order] SPY SELL completed: price=172.29 size=-10 value=1765.19 commission=0.86
+2026-10-03 14:50:39.507 INFO webull.strategy [Order] SPY BUY completed: price=176.64 size=10 value=1766.44 commission=0.88
+2026-10-03 14:50:39.508 INFO webull.strategy [Order] SPY SELL completed: price=174.70 size=-10 value=1766.44 commission=0.87
+2026-10-03 14:50:39.509 INFO webull.strategy [Order] SPY BUY completed: price=175.09 size=10 value=1750.92 commission=0.88
+2026-10-03 14:50:39.510 INFO webull.strategy [Order] SPY SELL completed: price=173.03 size=-10 value=1750.92 commission=0.87
+2026-10-03 14:50:39.511 INFO webull.strategy [Order] SPY BUY completed: price=173.98 size=10 value=1739.81 commission=0.87
+2026-10-03 14:50:39.511 INFO webull.strategy [Order] SPY SELL completed: price=167.69 size=-10 value=1739.81 commission=0.84
+2026-10-03 14:50:39.513 INFO webull.strategy [Order] SPY BUY completed: price=166.43 size=10 value=1664.34 commission=0.83
+2026-10-03 14:50:39.513 INFO webull.strategy [Order] SPY SELL completed: price=162.64 size=-10 value=1664.34 commission=0.81
+2026-10-03 14:50:39.514 INFO webull.strategy [Order] SPY BUY completed: price=166.36 size=10 value=1663.62 commission=0.83
+2026-10-03 14:50:39.517 INFO webull.strategy [Order] SPY SELL completed: price=169.05 size=-10 value=1663.62 commission=0.85
+2026-10-03 14:50:39.517 INFO webull.strategy [Order] SPY BUY completed: price=173.87 size=10 value=1738.65 commission=0.87
+2026-10-03 14:50:39.518 INFO webull.strategy [Order] SPY SELL completed: price=172.29 size=-10 value=1738.65 commission=0.86
+2026-10-03 14:50:39.520 INFO webull.strategy [Order] SPY BUY completed: price=174.26 size=10 value=1742.57 commission=0.87
+2026-10-03 14:50:39.520 INFO webull.strategy [Order] SPY SELL completed: price=166.71 size=-10 value=1742.57 commission=0.83
+2026-10-03 14:50:39.522 INFO webull.strategy [Order] SPY BUY completed: price=160.46 size=10 value=1604.62 commission=0.80
+2026-10-03 14:50:39.522 INFO webull.strategy [Order] SPY SELL completed: price=154.12 size=-10 value=1604.62 commission=0.77
+2026-10-03 14:50:39.523 INFO webull.strategy [Order] SPY BUY completed: price=163.12 size=10 value=1631.20 commission=0.82
+2026-10-03 14:50:39.528 INFO webull.strategy [Order] SPY SELL completed: price=173.19 size=-10 value=1631.20 commission=0.87
+2026-10-03 14:50:39.529 INFO webull.strategy [Order] SPY BUY completed: price=177.13 size=10 value=1771.30 commission=0.89
+2026-10-03 14:50:39.531 INFO webull.strategy [Order] SPY SELL completed: price=175.94 size=-10 value=1771.30 commission=0.88
+2026-10-03 14:50:39.532 INFO webull.strategy [Order] SPY BUY completed: price=178.42 size=10 value=1784.16 commission=0.89
+2026-10-03 14:50:39.535 INFO webull.strategy [Order] SPY SELL completed: price=184.81 size=-10 value=1784.16 commission=0.92
+2026-10-03 14:50:39.536 INFO webull.strategy [Order] SPY BUY completed: price=184.41 size=10 value=1844.11 commission=0.92
+2026-10-03 14:50:39.536 INFO webull.strategy [Order] SPY SELL completed: price=180.40 size=-10 value=1844.11 commission=0.90
+2026-10-03 14:50:39.537 INFO webull.strategy [Order] SPY BUY completed: price=182.89 size=10 value=1828.89 commission=0.91
+2026-10-03 14:50:39.539 INFO webull.strategy [Order] SPY SELL completed: price=181.09 size=-10 value=1828.89 commission=0.91
+2026-10-03 14:50:39.541 INFO webull.strategy [Order] SPY BUY completed: price=184.62 size=10 value=1846.24 commission=0.92
+2026-10-03 14:50:39.544 INFO webull.strategy [Order] SPY SELL completed: price=194.28 size=-10 value=1846.24 commission=0.97
+2026-10-03 14:50:39.545 INFO webull.strategy [Order] SPY BUY completed: price=194.69 size=10 value=1946.93 commission=0.97
+2026-10-03 14:50:39.549 INFO webull.strategy [Order] SPY SELL completed: price=202.03 size=-10 value=1946.93 commission=1.01
+2026-10-03 14:50:39.550 INFO webull.strategy [Order] SPY BUY completed: price=203.94 size=10 value=2039.39 commission=1.02
+2026-10-03 14:50:39.550 INFO webull.strategy [Order] SPY SELL completed: price=202.60 size=-10 value=2039.39 commission=1.01
+2026-10-03 14:50:39.551 INFO webull.strategy [Order] SPY BUY completed: price=205.88 size=10 value=2058.81 commission=1.03
+2026-10-03 14:50:39.553 INFO webull.strategy [Order] SPY SELL completed: price=204.71 size=-10 value=2058.81 commission=1.02
+2026-10-03 14:50:39.554 INFO webull.strategy [Order] SPY BUY completed: price=208.20 size=10 value=2082.03 commission=1.04
+2026-10-03 14:50:39.556 INFO webull.strategy [Order] SPY SELL completed: price=209.95 size=-10 value=2082.03 commission=1.05
+2026-10-03 14:50:39.557 INFO webull.strategy [Order] SPY BUY completed: price=212.01 size=10 value=2120.12 commission=1.06
+2026-10-03 14:50:39.559 INFO webull.strategy [Order] SPY SELL completed: price=211.45 size=-10 value=2120.12 commission=1.06
+2026-10-03 14:50:39.561 INFO webull.strategy [Order] SPY BUY completed: price=215.05 size=10 value=2150.48 commission=1.08
+2026-10-03 14:50:39.570 INFO webull.strategy [Order] SPY SELL completed: price=227.52 size=-10 value=2150.48 commission=1.14
+2026-10-03 14:50:39.571 INFO webull.strategy [Order] SPY BUY completed: price=243.67 size=10 value=2436.71 commission=1.22
+2026-10-03 14:50:39.573 INFO webull.strategy [Order] SPY SELL completed: price=235.44 size=-10 value=2436.71 commission=1.18
+2026-10-03 14:50:39.574 INFO webull.strategy [Order] SPY BUY completed: price=236.92 size=10 value=2369.23 commission=1.18
+2026-10-03 14:50:39.575 INFO webull.strategy [Order] SPY SELL completed: price=231.89 size=-10 value=2369.23 commission=1.16
+2026-10-03 14:50:39.576 INFO webull.strategy [Order] SPY BUY completed: price=237.81 size=10 value=2378.12 commission=1.19
+2026-10-03 14:50:39.579 INFO webull.strategy [Order] SPY SELL completed: price=239.79 size=-10 value=2378.12 commission=1.20
+2026-10-03 14:50:39.580 INFO webull.strategy [Order] SPY BUY completed: price=244.90 size=10 value=2448.97 commission=1.22
+2026-10-03 14:50:39.586 INFO webull.strategy [Order] SPY SELL completed: price=254.84 size=-10 value=2448.97 commission=1.27
+2026-10-03 14:50:39.588 INFO webull.strategy [Order] SPY BUY completed: price=248.63 size=10 value=2486.33 commission=1.24
+2026-10-03 14:50:39.589 INFO webull.strategy [Order] SPY SELL completed: price=242.12 size=-10 value=2486.33 commission=1.21
+2026-10-03 14:50:39.590 INFO webull.strategy [Order] SPY BUY completed: price=247.09 size=10 value=2470.89 commission=1.24
+2026-10-03 14:50:39.590 INFO webull.strategy [Order] SPY SELL completed: price=237.34 size=-10 value=2470.89 commission=1.19
+2026-10-03 14:50:39.592 INFO webull.strategy [Order] SPY BUY completed: price=228.79 size=10 value=2287.92 commission=1.14
+2026-10-03 14:50:39.595 INFO webull.strategy [Order] SPY SELL completed: price=248.90 size=-10 value=2287.92 commission=1.24
+2026-10-03 14:50:39.596 INFO webull.strategy [Order] SPY BUY completed: price=251.57 size=10 value=2515.72 commission=1.26
+2026-10-03 14:50:39.599 INFO webull.strategy [Order] SPY SELL completed: price=255.52 size=-10 value=2515.72 commission=1.28
+2026-10-03 14:50:39.602 INFO webull.strategy [Order] SPY BUY completed: price=260.94 size=10 value=2609.43 commission=1.30
+2026-10-03 14:50:39.605 INFO webull.strategy [Order] SPY SELL completed: price=259.34 size=-10 value=2609.43 commission=1.30
+2026-10-03 14:50:39.607 INFO webull.strategy [Order] SPY BUY completed: price=261.83 size=10 value=2618.34 commission=1.31
+2026-10-03 14:50:39.609 INFO webull.strategy [Order] SPY SELL completed: price=267.75 size=-10 value=2618.34 commission=1.34
+2026-10-03 14:50:39.610 INFO webull.strategy [Order] SPY BUY completed: price=270.10 size=10 value=2701.04 commission=1.35
+2026-10-03 14:50:39.616 INFO webull.strategy [Order] SPY SELL completed: price=297.18 size=-10 value=2701.04 commission=1.49
+2026-10-03 14:50:39.617 INFO webull.strategy [Order] SPY BUY completed: price=301.33 size=10 value=3013.25 commission=1.51
+2026-10-03 14:50:39.618 INFO webull.strategy [Order] SPY SELL completed: price=285.53 size=-10 value=3013.25 commission=1.43
+2026-10-03 14:50:39.621 INFO webull.strategy [Order] SPY BUY completed: price=235.94 size=10 value=2359.40 commission=1.18
+2026-10-03 14:50:39.625 INFO webull.strategy [Order] SPY SELL completed: price=283.40 size=-10 value=2359.40 commission=1.42
+2026-10-03 14:50:39.625 INFO webull.strategy [Order] SPY BUY completed: price=288.75 size=10 value=2887.51 commission=1.44
+2026-10-03 14:50:39.626 INFO webull.strategy [Order] SPY SELL completed: price=278.64 size=-10 value=2887.51 commission=1.39
+2026-10-03 14:50:39.627 INFO webull.strategy [Order] SPY BUY completed: price=289.86 size=10 value=2898.63 commission=1.45
+2026-10-03 14:50:39.631 INFO webull.strategy [Order] SPY SELL completed: price=308.34 size=-10 value=2898.63 commission=1.54
+2026-10-03 14:50:39.632 INFO webull.strategy [Order] SPY BUY completed: price=310.11 size=10 value=3101.07 commission=1.55
+2026-10-03 14:50:39.634 INFO webull.strategy [Order] SPY SELL completed: price=306.15 size=-10 value=3101.07 commission=1.53
+2026-10-03 14:50:39.635 INFO webull.strategy [Order] SPY BUY completed: price=335.86 size=10 value=3358.61 commission=1.68
+2026-10-03 14:50:39.640 INFO webull.strategy [Order] SPY SELL completed: price=351.47 size=-10 value=3358.61 commission=1.76
+2026-10-03 14:50:39.641 INFO webull.strategy [Order] SPY BUY completed: price=360.74 size=10 value=3607.38 commission=1.80
+2026-10-03 14:50:39.642 INFO webull.strategy [Order] SPY SELL completed: price=356.97 size=-10 value=3607.38 commission=1.78
+2026-10-03 14:50:39.643 INFO webull.strategy [Order] SPY BUY completed: price=365.43 size=10 value=3654.28 commission=1.83
+2026-10-03 14:50:39.647 INFO webull.strategy [Order] SPY SELL completed: price=378.23 size=-10 value=3654.28 commission=1.89
+2026-10-03 14:50:39.648 INFO webull.strategy [Order] SPY BUY completed: price=390.65 size=10 value=3906.49 commission=1.95
+2026-10-03 14:50:39.650 INFO webull.strategy [Order] SPY SELL completed: price=394.35 size=-10 value=3906.49 commission=1.97
+2026-10-03 14:50:39.650 INFO webull.strategy [Order] SPY BUY completed: price=396.33 size=10 value=3963.30 commission=1.98
+2026-10-03 14:50:39.652 INFO webull.strategy [Order] SPY SELL completed: price=407.70 size=-10 value=3963.30 commission=2.04
+2026-10-03 14:50:39.652 INFO webull.strategy [Order] SPY BUY completed: price=409.78 size=10 value=4097.80 commission=2.05
+2026-10-03 14:50:39.655 INFO webull.strategy [Order] SPY SELL completed: price=414.32 size=-10 value=4097.80 commission=2.07
+2026-10-03 14:50:39.657 INFO webull.strategy [Order] SPY BUY completed: price=416.18 size=10 value=4161.84 commission=2.08
+2026-10-03 14:50:39.660 INFO webull.strategy [Order] SPY SELL completed: price=431.89 size=-10 value=4161.84 commission=2.16
+2026-10-03 14:50:39.660 INFO webull.strategy [Order] SPY BUY completed: price=439.99 size=10 value=4399.90 commission=2.20
+2026-10-03 14:50:39.663 INFO webull.strategy [Order] SPY SELL completed: price=436.44 size=-10 value=4399.90 commission=2.18
+2026-10-03 14:50:39.665 INFO webull.strategy [Order] SPY BUY completed: price=427.48 size=10 value=4274.78 commission=2.14
+2026-10-03 14:50:39.666 INFO webull.strategy [Order] SPY SELL completed: price=415.79 size=-10 value=4274.78 commission=2.08
+2026-10-03 14:50:39.668 INFO webull.strategy [Order] SPY BUY completed: price=418.56 size=10 value=4185.57 commission=2.09
+2026-10-03 14:50:39.669 INFO webull.strategy [Order] SPY SELL completed: price=416.95 size=-10 value=4185.57 commission=2.08
+2026-10-03 14:50:39.672 INFO webull.strategy [Order] SPY BUY completed: price=391.08 size=10 value=3910.80 commission=1.96
+2026-10-03 14:50:39.673 INFO webull.strategy [Order] SPY SELL completed: price=354.63 size=-10 value=3910.80 commission=1.77
+2026-10-03 14:50:39.675 INFO webull.strategy [Order] SPY BUY completed: price=366.37 size=10 value=3663.74 commission=1.83
+2026-10-03 14:50:39.675 INFO webull.strategy [Order] SPY SELL completed: price=364.88 size=-10 value=3663.74 commission=1.82
+2026-10-03 14:50:39.676 INFO webull.strategy [Order] SPY BUY completed: price=371.29 size=10 value=3712.94 commission=1.86
+2026-10-03 14:50:39.678 INFO webull.strategy [Order] SPY SELL completed: price=396.36 size=-10 value=3712.94 commission=1.98
+2026-10-03 14:50:39.683 INFO webull.strategy [Order] SPY BUY completed: price=346.84 size=10 value=3468.39 commission=1.73
+2026-10-03 14:50:39.686 INFO webull.strategy [Order] SPY SELL completed: price=374.79 size=-10 value=3468.39 commission=1.87
+2026-10-03 14:50:39.688 INFO webull.strategy [Order] SPY BUY completed: price=374.30 size=10 value=3743.02 commission=1.87
+2026-10-03 14:50:39.690 INFO webull.strategy [Order] SPY SELL completed: price=382.82 size=-10 value=3743.02 commission=1.91
+2026-10-03 14:50:39.692 INFO webull.strategy [Order] SPY BUY completed: price=381.37 size=10 value=3813.73 commission=1.91
+2026-10-03 14:50:39.695 INFO webull.strategy [Order] SPY SELL completed: price=389.49 size=-10 value=3813.73 commission=1.95
+2026-10-03 14:50:39.695 INFO webull.strategy [Order] SPY BUY completed: price=394.06 size=10 value=3940.56 commission=1.97
+2026-10-03 14:50:39.695 INFO webull.strategy [Order] SPY SELL completed: price=395.20 size=-10 value=3940.56 commission=1.98
+2026-10-03 14:50:39.696 INFO webull.strategy [Order] SPY BUY completed: price=396.03 size=10 value=3960.29 commission=1.98
+2026-10-03 14:50:39.701 INFO webull.strategy [Order] SPY SELL completed: price=430.40 size=-10 value=3960.29 commission=2.15
+2026-10-03 14:50:39.703 INFO webull.strategy [Order] SPY BUY completed: price=434.26 size=10 value=4342.58 commission=2.17
+2026-10-03 14:50:39.704 INFO webull.strategy [Order] SPY SELL completed: price=419.98 size=-10 value=4342.58 commission=2.10
+2026-10-03 14:50:39.705 INFO webull.strategy [Order] SPY BUY completed: price=419.93 size=10 value=4199.27 commission=2.10
+2026-10-03 14:50:39.706 INFO webull.strategy [Order] SPY SELL completed: price=407.40 size=-10 value=4199.27 commission=2.04
+2026-10-03 14:50:39.707 INFO webull.strategy [Order] SPY BUY completed: price=420.39 size=10 value=4203.90 commission=2.10
+2026-10-03 14:50:39.712 INFO webull.strategy [Order] SPY SELL completed: price=456.69 size=-10 value=4203.90 commission=2.28
+2026-10-03 14:50:39.712 INFO webull.strategy [Order] SPY BUY completed: price=462.69 size=10 value=4626.87 commission=2.31
+2026-10-03 14:50:39.717 INFO webull.strategy [Order] SPY SELL completed: price=498.50 size=-10 value=4626.87 commission=2.49
+2026-10-03 14:50:39.719 INFO webull.strategy [Order] SPY BUY completed: price=502.97 size=10 value=5029.68 commission=2.51
+2026-10-03 14:50:39.724 INFO webull.strategy [Order] SPY SELL completed: price=527.26 size=-10 value=5029.68 commission=2.64
+2026-10-03 14:50:39.726 INFO webull.strategy [Order] SPY BUY completed: price=537.60 size=10 value=5376.02 commission=2.69
+2026-10-03 14:50:39.727 INFO webull.strategy [Order] SPY SELL completed: price=530.47 size=-10 value=5376.02 commission=2.65
+2026-10-03 14:50:39.728 INFO webull.strategy [Order] SPY BUY completed: price=550.94 size=10 value=5509.39 commission=2.75
+2026-10-03 14:50:39.730 INFO webull.main ============================================================
+2026-10-03 14:50:39.730 INFO webull.main [Backtest] Result Summary
+2026-10-03 14:50:39.730 INFO webull.main ============================================================
+2026-10-03 14:50:39.730 INFO webull.main Starting cash    : 100000.00
+2026-10-03 14:50:39.730 INFO webull.main Final cash       : 102349.11
+2026-10-03 14:50:39.730 INFO webull.main Net P&L          : 2349.11 (2.35%)
+2026-10-03 14:50:39.730 INFO webull.main Max drawdown     : 0.71% (723.19)
+2026-10-03 14:50:39.730 INFO webull.main Sharpe ratio     : 0.4586 (annualized)
+2026-10-03 14:50:39.730 INFO webull.main Total trades     : 141 (won=59, lost=81, win rate=41.84%)
+2026-10-03 14:50:39.730 INFO webull.main Trades net P&L   : 2307.96
+2026-10-03 14:50:39.730 INFO webull.main ============================================================
+2026-10-03 14:50:39.730 INFO webull.main [Backtest] Trade-by-trade detail (140 closed trade(s)):
+2026-10-03 14:50:39.730 INFO webull.main   #1 SPY LONG size=10 entry=80.18@2005-02-03 16:00:00-05:00 exit=80.53@2005-03-16 16:00:00-05:00 pnl=3.50 pnlcomm=2.70 commission=0.80 bars=28
+2026-10-03 14:50:39.730 INFO webull.main   #2 SPY LONG size=10 entry=79.97@2005-04-11 16:00:00-04:00 exit=78.17@2005-04-15 16:00:00-04:00 pnl=-18.02 pnlcomm=-18.81 commission=0.79 bars=4
+2026-10-03 14:50:39.730 INFO webull.main   #3 SPY LONG size=10 entry=79.73@2005-05-06 16:00:00-04:00 exit=81.63@2005-06-29 16:00:00-04:00 pnl=18.96 pnlcomm=18.16 commission=0.81 bars=37
+2026-10-03 14:50:39.730 INFO webull.main   #4 SPY LONG size=10 entry=82.81@2005-07-12 16:00:00-04:00 exit=83.59@2005-08-11 16:00:00-04:00 pnl=7.85 pnlcomm=7.02 commission=0.83 bars=22
+2026-10-03 14:50:39.730 INFO webull.main   #5 SPY LONG size=10 entry=83.94@2005-09-08 16:00:00-04:00 exit=82.57@2005-09-23 16:00:00-04:00 pnl=-13.75 pnlcomm=-14.58 commission=0.83 bars=11
+2026-10-03 14:50:39.730 INFO webull.main   #6 SPY LONG size=10 entry=82.00@2005-10-31 16:00:00-05:00 exit=85.44@2005-12-30 16:00:00-05:00 pnl=34.40 pnlcomm=33.56 commission=0.84 bars=42
+2026-10-03 14:50:39.730 INFO webull.main   #7 SPY LONG size=10 entry=87.73@2006-01-06 16:00:00-05:00 exit=86.97@2006-01-25 16:00:00-05:00 pnl=-7.59 pnlcomm=-8.46 commission=0.87 bars=12
+2026-10-03 14:50:39.730 INFO webull.main   #8 SPY LONG size=10 entry=87.77@2006-02-02 16:00:00-05:00 exit=86.56@2006-02-06 16:00:00-05:00 pnl=-12.08 pnlcomm=-12.95 commission=0.87 bars=2
+2026-10-03 14:50:39.730 INFO webull.main   #9 SPY LONG size=10 entry=87.95@2006-02-16 16:00:00-05:00 exit=87.43@2006-03-10 16:00:00-05:00 pnl=-5.19 pnlcomm=-6.07 commission=0.88 bars=15
+2026-10-03 14:50:39.730 INFO webull.main   #10 SPY LONG size=10 entry=89.78@2006-03-16 16:00:00-05:00 exit=88.51@2006-04-12 16:00:00-04:00 pnl=-12.73 pnlcomm=-13.62 commission=0.89 bars=19
+2026-10-03 14:50:39.730 INFO webull.main   #11 SPY LONG size=10 entry=90.61@2006-04-21 16:00:00-04:00 exit=89.19@2006-05-16 16:00:00-04:00 pnl=-14.17 pnlcomm=-15.07 commission=0.90 bars=17
+2026-10-03 14:50:39.730 INFO webull.main   #12 SPY LONG size=10 entry=88.14@2006-06-30 16:00:00-04:00 exit=85.41@2006-07-18 16:00:00-04:00 pnl=-27.32 pnlcomm=-28.19 commission=0.87 bars=11
+2026-10-03 14:50:39.730 INFO webull.main   #13 SPY LONG size=10 entry=87.79@2006-07-28 16:00:00-04:00 exit=98.19@2007-01-08 16:00:00-05:00 pnl=103.97 pnlcomm=103.04 commission=0.93 bars=111
+2026-10-03 14:50:39.730 INFO webull.main   #14 SPY LONG size=10 entry=99.86@2007-01-16 16:00:00-05:00 exit=97.89@2007-02-28 16:00:00-05:00 pnl=-19.69 pnlcomm=-20.67 commission=0.99 bars=30
+2026-10-03 14:50:39.730 INFO webull.main   #15 SPY LONG size=10 entry=100.54@2007-03-22 16:00:00-04:00 exit=105.66@2007-06-11 16:00:00-04:00 pnl=51.15 pnlcomm=50.12 commission=1.03 bars=55
+2026-10-03 14:50:39.730 INFO webull.main   #16 SPY LONG size=10 entry=107.36@2007-06-19 16:00:00-04:00 exit=105.61@2007-06-26 16:00:00-04:00 pnl=-17.53 pnlcomm=-18.59 commission=1.06 bars=5
+2026-10-03 14:50:39.730 INFO webull.main   #17 SPY LONG size=10 entry=107.25@2007-07-05 16:00:00-04:00 exit=104.20@2007-07-27 16:00:00-04:00 pnl=-30.53 pnlcomm=-31.59 commission=1.06 bars=16
+2026-10-03 14:50:39.730 INFO webull.main   #18 SPY LONG size=10 entry=103.09@2007-08-24 16:00:00-04:00 exit=105.16@2007-10-22 16:00:00-04:00 pnl=20.67 pnlcomm=19.63 commission=1.04 bars=40
+2026-10-03 14:50:39.730 INFO webull.main   #19 SPY LONG size=10 entry=103.70@2007-12-04 16:00:00-05:00 exit=103.73@2007-12-20 16:00:00-05:00 pnl=0.24 pnlcomm=-0.80 commission=1.04 bars=12
+2026-10-03 14:50:39.730 INFO webull.main   #20 SPY LONG size=10 entry=105.89@2007-12-27 16:00:00-05:00 exit=102.91@2008-01-03 16:00:00-05:00 pnl=-29.79 pnlcomm=-30.83 commission=1.04 bars=4
+2026-10-03 14:50:39.730 INFO webull.main   #21 SPY LONG size=10 entry=96.63@2008-02-05 16:00:00-05:00 exit=94.51@2008-02-08 16:00:00-05:00 pnl=-21.21 pnlcomm=-22.16 commission=0.96 bars=3
+2026-10-03 14:50:39.730 INFO webull.main   #22 SPY LONG size=10 entry=95.61@2008-02-15 16:00:00-05:00 exit=94.75@2008-03-05 16:00:00-05:00 pnl=-8.63 pnlcomm=-9.58 commission=0.95 bars=12
+2026-10-03 14:50:39.730 INFO webull.main   #23 SPY LONG size=10 entry=96.06@2008-03-26 16:00:00-04:00 exit=96.05@2008-04-16 16:00:00-04:00 pnl=-0.05 pnlcomm=-1.01 commission=0.96 bars=15
+2026-10-03 14:50:39.730 INFO webull.main   #24 SPY LONG size=10 entry=98.75@2008-04-21 16:00:00-04:00 exit=98.34@2008-05-27 16:00:00-04:00 pnl=-4.06 pnlcomm=-5.04 commission=0.99 bars=25
+2026-10-03 14:50:39.730 INFO webull.main   #25 SPY LONG size=10 entry=92.14@2008-07-24 16:00:00-04:00 exit=91.10@2008-08-26 16:00:00-04:00 pnl=-10.39 pnlcomm=-11.30 commission=0.92 bars=23
+2026-10-03 14:50:39.730 INFO webull.main   #26 SPY LONG size=10 entry=93.14@2008-08-29 16:00:00-04:00 exit=93.26@2008-09-02 16:00:00-04:00 pnl=1.22 pnlcomm=0.29 commission=0.93 bars=1
+2026-10-03 14:50:39.730 INFO webull.main   #27 SPY LONG size=10 entry=91.16@2008-09-04 16:00:00-04:00 exit=88.43@2008-09-05 16:00:00-04:00 pnl=-27.31 pnlcomm=-28.20 commission=0.90 bars=1
+2026-10-03 14:50:39.730 INFO webull.main   #28 SPY LONG size=10 entry=71.53@2008-11-04 16:00:00-05:00 exit=63.65@2008-11-12 16:00:00-05:00 pnl=-78.84 pnlcomm=-79.52 commission=0.68 bars=6
+2026-10-03 14:50:39.730 INFO webull.main   #29 SPY LONG size=10 entry=65.26@2008-12-09 16:00:00-05:00 exit=63.44@2008-12-26 16:00:00-05:00 pnl=-18.12 pnlcomm=-18.77 commission=0.64 bars=12
+2026-10-03 14:50:39.730 INFO webull.main   #30 SPY LONG size=10 entry=67.43@2009-01-05 16:00:00-05:00 exit=62.21@2009-01-14 16:00:00-05:00 pnl=-52.24 pnlcomm=-52.88 commission=0.65 bars=7
+2026-10-03 14:50:39.730 INFO webull.main   #31 SPY LONG size=10 entry=62.80@2009-02-10 16:00:00-05:00 exit=58.03@2009-02-18 16:00:00-05:00 pnl=-47.75 pnlcomm=-48.36 commission=0.60 bars=5
+2026-10-03 14:50:39.730 INFO webull.main   #32 SPY LONG size=10 entry=55.38@2009-03-17 16:00:00-04:00 exit=66.26@2009-05-28 16:00:00-04:00 pnl=108.81 pnlcomm=108.20 commission=0.61 bars=50
+2026-10-03 14:50:39.730 INFO webull.main   #33 SPY LONG size=10 entry=68.68@2009-06-01 16:00:00-04:00 exit=68.19@2009-06-19 16:00:00-04:00 pnl=-4.84 pnlcomm=-5.52 commission=0.68 bars=14
+2026-10-03 14:50:39.730 INFO webull.main   #34 SPY LONG size=10 entry=69.35@2009-07-17 16:00:00-04:00 exit=75.87@2009-09-08 16:00:00-04:00 pnl=65.16 pnlcomm=64.43 commission=0.73 bars=36
+2026-10-03 14:50:39.730 INFO webull.main   #35 SPY LONG size=10 entry=76.53@2009-09-10 16:00:00-04:00 exit=76.16@2009-10-05 16:00:00-04:00 pnl=-3.78 pnlcomm=-4.55 commission=0.76 bars=17
+2026-10-03 14:50:39.730 INFO webull.main   #36 SPY LONG size=10 entry=79.83@2009-10-12 16:00:00-04:00 exit=78.67@2009-10-30 16:00:00-04:00 pnl=-11.60 pnlcomm=-12.40 commission=0.79 bars=14
+2026-10-03 14:50:39.730 INFO webull.main   #37 SPY LONG size=10 entry=81.72@2009-11-11 16:00:00-05:00 exit=81.93@2009-12-10 16:00:00-05:00 pnl=2.07 pnlcomm=1.25 commission=0.82 bars=20
+2026-10-03 14:50:39.730 INFO webull.main   #38 SPY LONG size=10 entry=82.83@2009-12-16 16:00:00-05:00 exit=82.01@2010-01-25 16:00:00-05:00 pnl=-8.20 pnlcomm=-9.03 commission=0.82 bars=25
+2026-10-03 14:50:39.730 INFO webull.main   #39 SPY LONG size=10 entry=82.39@2010-02-19 16:00:00-05:00 exit=89.19@2010-05-03 16:00:00-04:00 pnl=68.02 pnlcomm=67.16 commission=0.86 bars=50
+2026-10-03 14:50:39.730 INFO webull.main   #40 SPY LONG size=10 entry=83.33@2010-06-16 16:00:00-04:00 exit=79.59@2010-06-29 16:00:00-04:00 pnl=-37.41 pnlcomm=-38.22 commission=0.81 bars=9
+2026-10-03 14:50:39.730 INFO webull.main   #41 SPY LONG size=10 entry=82.14@2010-07-14 16:00:00-04:00 exit=80.75@2010-08-16 16:00:00-04:00 pnl=-13.88 pnlcomm=-14.70 commission=0.81 bars=23
+2026-10-03 14:50:39.730 INFO webull.main   #42 SPY LONG size=10 entry=82.55@2010-09-08 16:00:00-04:00 exit=90.12@2010-11-18 16:00:00-05:00 pnl=75.66 pnlcomm=74.80 commission=0.86 bars=51
+2026-10-03 14:50:39.730 INFO webull.main   #43 SPY LONG size=10 entry=92.64@2010-12-06 16:00:00-05:00 exit=101.34@2011-03-01 16:00:00-05:00 pnl=86.94 pnlcomm=85.97 commission=0.97 bars=58
+2026-10-03 14:50:39.730 INFO webull.main   #44 SPY LONG size=10 entry=100.36@2011-03-28 16:00:00-04:00 exit=99.51@2011-04-18 16:00:00-04:00 pnl=-8.55 pnlcomm=-9.55 commission=1.00 bars=15
+2026-10-03 14:50:39.730 INFO webull.main   #45 SPY LONG size=10 entry=102.25@2011-04-26 16:00:00-04:00 exit=101.53@2011-05-18 16:00:00-04:00 pnl=-7.19 pnlcomm=-8.21 commission=1.02 bars=16
+2026-10-03 14:50:39.730 INFO webull.main   #46 SPY LONG size=10 entry=100.52@2011-06-30 16:00:00-04:00 exit=98.71@2011-07-29 16:00:00-04:00 pnl=-18.08 pnlcomm=-19.08 commission=1.00 bars=20
+2026-10-03 14:50:39.730 INFO webull.main   #47 SPY LONG size=10 entry=92.62@2011-08-30 16:00:00-04:00 exit=87.66@2011-09-12 16:00:00-04:00 pnl=-49.63 pnlcomm=-50.53 commission=0.90 bars=8
+2026-10-03 14:50:39.730 INFO webull.main   #48 SPY LONG size=10 entry=90.71@2011-09-14 16:00:00-04:00 exit=92.39@2011-09-15 16:00:00-04:00 pnl=16.78 pnlcomm=15.87 commission=0.92 bars=1
+2026-10-03 14:50:39.730 INFO webull.main   #49 SPY LONG size=10 entry=93.45@2011-09-16 16:00:00-04:00 exit=86.29@2011-09-23 16:00:00-04:00 pnl=-71.59 pnlcomm=-72.49 commission=0.90 bars=5
+2026-10-03 14:50:39.730 INFO webull.main   #50 SPY LONG size=10 entry=92.92@2011-10-12 16:00:00-04:00 exit=94.29@2011-11-18 16:00:00-05:00 pnl=13.70 pnlcomm=12.76 commission=0.94 bars=27
+2026-10-03 14:50:39.730 INFO webull.main   #51 SPY LONG size=10 entry=97.24@2011-12-06 16:00:00-05:00 exit=94.64@2011-12-20 16:00:00-05:00 pnl=-26.03 pnlcomm=-26.99 commission=0.96 bars=10
+2026-10-03 14:50:39.730 INFO webull.main   #52 SPY LONG size=10 entry=96.64@2011-12-22 16:00:00-05:00 exit=106.81@2012-04-11 16:00:00-04:00 pnl=101.76 pnlcomm=100.74 commission=1.02 bars=74
+2026-10-03 14:50:39.730 INFO webull.main   #53 SPY LONG size=10 entry=109.11@2012-04-30 16:00:00-04:00 exit=105.11@2012-05-09 16:00:00-04:00 pnl=-40.07 pnlcomm=-41.14 commission=1.07 bars=7
+2026-10-03 14:50:39.730 INFO webull.main   #54 SPY LONG size=10 entry=103.21@2012-06-13 16:00:00-04:00 exit=107.05@2012-07-27 16:00:00-04:00 pnl=38.41 pnlcomm=37.36 commission=1.05 bars=31
+2026-10-03 14:50:39.730 INFO webull.main   #55 SPY LONG size=10 entry=108.41@2012-07-31 16:00:00-04:00 exit=110.34@2012-09-05 16:00:00-04:00 pnl=19.25 pnlcomm=18.16 commission=1.09 bars=25
+2026-10-03 14:50:39.730 INFO webull.main   #56 SPY LONG size=10 entry=112.73@2012-09-07 16:00:00-04:00 exit=113.94@2012-10-02 16:00:00-04:00 pnl=12.04 pnlcomm=10.91 commission=1.13 bars=17
+2026-10-03 14:50:39.730 INFO webull.main   #57 SPY LONG size=10 entry=114.59@2012-10-08 16:00:00-04:00 exit=113.43@2012-10-11 16:00:00-04:00 pnl=-11.52 pnlcomm=-12.66 commission=1.14 bars=3
+2026-10-03 14:50:39.730 INFO webull.main   #58 SPY LONG size=10 entry=114.50@2012-10-19 16:00:00-04:00 exit=111.59@2012-10-24 16:00:00-04:00 pnl=-29.11 pnlcomm=-30.24 commission=1.13 bars=3
+2026-10-03 14:50:39.731 INFO webull.main   #59 SPY LONG size=10 entry=110.90@2012-11-27 16:00:00-05:00 exit=110.58@2012-12-31 16:00:00-05:00 pnl=-3.15 pnlcomm=-4.26 commission=1.11 bars=23
+2026-10-03 14:50:39.731 INFO webull.main   #60 SPY LONG size=10 entry=115.71@2013-01-03 16:00:00-05:00 exit=118.68@2013-02-27 16:00:00-05:00 pnl=29.72 pnlcomm=28.55 commission=1.17 bars=37
+2026-10-03 14:50:39.731 INFO webull.main   #61 SPY LONG size=10 entry=121.79@2013-03-05 16:00:00-05:00 exit=122.87@2013-04-19 16:00:00-04:00 pnl=10.87 pnlcomm=9.65 commission=1.22 bars=32
+2026-10-03 14:50:39.731 INFO webull.main   #62 SPY LONG size=10 entry=126.05@2013-04-26 16:00:00-04:00 exit=129.71@2013-06-05 16:00:00-04:00 pnl=36.60 pnlcomm=35.32 commission=1.28 bars=27
+2026-10-03 14:50:39.731 INFO webull.main   #63 SPY LONG size=10 entry=132.04@2013-07-09 16:00:00-04:00 exit=133.85@2013-08-15 16:00:00-04:00 pnl=18.11 pnlcomm=16.78 commission=1.33 bars=27
+2026-10-03 14:50:39.731 INFO webull.main   #64 SPY LONG size=10 entry=134.96@2013-09-10 16:00:00-04:00 exit=134.77@2013-10-04 16:00:00-04:00 pnl=-1.93 pnlcomm=-3.28 commission=1.35 bars=18
+2026-10-03 14:50:39.731 INFO webull.main   #65 SPY LONG size=10 entry=137.82@2013-10-17 16:00:00-04:00 exit=143.80@2013-12-16 16:00:00-05:00 pnl=59.84 pnlcomm=58.43 commission=1.41 bars=41
+2026-10-03 14:50:39.731 INFO webull.main   #66 SPY LONG size=10 entry=147.53@2013-12-23 16:00:00-05:00 exit=144.64@2014-01-27 16:00:00-05:00 pnl=-28.86 pnlcomm=-30.32 commission=1.46 bars=22
+2026-10-03 14:50:39.731 INFO webull.main   #67 SPY LONG size=10 entry=146.22@2014-02-13 16:00:00-05:00 exit=150.45@2014-03-20 16:00:00-04:00 pnl=42.24 pnlcomm=40.76 commission=1.48 bars=24
+2026-10-03 14:50:39.731 INFO webull.main   #68 SPY LONG size=10 entry=152.45@2014-03-21 16:00:00-04:00 exit=149.89@2014-03-27 16:00:00-04:00 pnl=-25.54 pnlcomm=-27.05 commission=1.51 bars=4
+2026-10-03 14:50:39.731 INFO webull.main   #69 SPY LONG size=10 entry=153.60@2014-04-03 16:00:00-04:00 exit=147.78@2014-04-11 16:00:00-04:00 pnl=-58.21 pnlcomm=-59.72 commission=1.51 bars=6
+2026-10-03 14:50:39.731 INFO webull.main   #70 SPY LONG size=10 entry=152.54@2014-04-23 16:00:00-04:00 exit=156.98@2014-08-01 16:00:00-04:00 pnl=44.42 pnlcomm=42.87 commission=1.55 bars=70
+2026-10-03 14:50:39.731 INFO webull.main   #71 SPY LONG size=10 entry=161.45@2014-08-19 16:00:00-04:00 exit=161.91@2014-09-16 16:00:00-04:00 pnl=4.66 pnlcomm=3.05 commission=1.62 bars=19
+2026-10-03 14:50:39.731 INFO webull.main   #72 SPY LONG size=10 entry=165.22@2014-09-19 16:00:00-04:00 exit=161.10@2014-09-26 16:00:00-04:00 pnl=-41.13 pnlcomm=-42.76 commission=1.63 bars=5
+2026-10-03 14:50:39.731 INFO webull.main   #73 SPY LONG size=10 entry=160.47@2014-10-27 16:00:00-04:00 exit=165.97@2014-12-12 16:00:00-05:00 pnl=54.99 pnlcomm=53.36 commission=1.63 bars=33
+2026-10-03 14:50:39.731 INFO webull.main   #74 SPY LONG size=10 entry=171.49@2014-12-24 16:00:00-05:00 exit=165.88@2015-01-07 16:00:00-05:00 pnl=-56.07 pnlcomm=-57.76 commission=1.69 bars=8
+2026-10-03 14:50:39.731 INFO webull.main   #75 SPY LONG size=10 entry=167.32@2015-01-27 16:00:00-05:00 exit=164.75@2015-02-02 16:00:00-05:00 pnl=-25.72 pnlcomm=-27.38 commission=1.66 bars=4
+2026-10-03 14:50:39.731 INFO webull.main   #76 SPY LONG size=10 entry=170.28@2015-02-06 16:00:00-05:00 exit=170.24@2015-03-10 16:00:00-04:00 pnl=-0.47 pnlcomm=-2.17 commission=1.70 bars=21
+2026-10-03 14:50:39.731 INFO webull.main   #77 SPY LONG size=10 entry=174.24@2015-03-23 16:00:00-04:00 exit=171.29@2015-03-30 16:00:00-04:00 pnl=-29.51 pnlcomm=-31.24 commission=1.73 bars=5
+2026-10-03 14:50:39.731 INFO webull.main   #78 SPY LONG size=10 entry=173.23@2015-04-10 16:00:00-04:00 exit=172.00@2015-05-07 16:00:00-04:00 pnl=-12.32 pnlcomm=-14.05 commission=1.73 bars=19
+2026-10-03 14:50:39.731 INFO webull.main   #79 SPY LONG size=10 entry=174.92@2015-05-14 16:00:00-04:00 exit=173.68@2015-06-05 16:00:00-04:00 pnl=-12.42 pnlcomm=-14.16 commission=1.74 bars=15
+2026-10-03 14:50:39.731 INFO webull.main   #80 SPY LONG size=10 entry=176.52@2015-06-23 16:00:00-04:00 exit=172.29@2015-06-30 16:00:00-04:00 pnl=-42.33 pnlcomm=-44.07 commission=1.74 bars=5
+2026-10-03 14:50:39.731 INFO webull.main   #81 SPY LONG size=10 entry=176.64@2015-07-17 16:00:00-04:00 exit=174.70@2015-07-30 16:00:00-04:00 pnl=-19.47 pnlcomm=-21.23 commission=1.76 bars=9
+2026-10-03 14:50:39.731 INFO webull.main   #82 SPY LONG size=10 entry=175.09@2015-08-03 16:00:00-04:00 exit=173.03@2015-08-07 16:00:00-04:00 pnl=-20.58 pnlcomm=-22.32 commission=1.74 bars=4
+2026-10-03 14:50:39.731 INFO webull.main   #83 SPY LONG size=10 entry=173.98@2015-08-19 16:00:00-04:00 exit=167.69@2015-08-21 16:00:00-04:00 pnl=-62.92 pnlcomm=-64.63 commission=1.71 bars=2
+2026-10-03 14:50:39.731 INFO webull.main   #84 SPY LONG size=10 entry=166.43@2015-09-17 16:00:00-04:00 exit=162.64@2015-09-25 16:00:00-04:00 pnl=-37.97 pnlcomm=-39.62 commission=1.65 bars=6
+2026-10-03 14:50:39.731 INFO webull.main   #85 SPY LONG size=10 entry=166.36@2015-10-07 16:00:00-04:00 exit=169.05@2015-11-16 16:00:00-05:00 pnl=26.91 pnlcomm=25.24 commission=1.68 bars=28
+2026-10-03 14:50:39.731 INFO webull.main   #86 SPY LONG size=10 entry=173.87@2015-11-24 16:00:00-05:00 exit=172.29@2015-12-09 16:00:00-05:00 pnl=-15.78 pnlcomm=-17.51 commission=1.73 bars=10
+2026-10-03 14:50:39.731 INFO webull.main   #87 SPY LONG size=10 entry=174.26@2015-12-30 16:00:00-05:00 exit=166.71@2016-01-06 16:00:00-05:00 pnl=-75.43 pnlcomm=-77.13 commission=1.70 bars=4
+2026-10-03 14:50:39.731 INFO webull.main   #88 SPY LONG size=10 entry=160.46@2016-02-04 16:00:00-05:00 exit=154.12@2016-02-09 16:00:00-05:00 pnl=-63.38 pnlcomm=-64.96 commission=1.57 bars=3
+2026-10-03 14:50:39.731 INFO webull.main   #89 SPY LONG size=10 entry=163.12@2016-02-22 16:00:00-05:00 exit=173.19@2016-05-04 16:00:00-04:00 pnl=100.73 pnlcomm=99.04 commission=1.68 bars=51
+2026-10-03 14:50:39.731 INFO webull.main   #90 SPY LONG size=10 entry=177.13@2016-05-26 16:00:00-04:00 exit=175.94@2016-06-17 16:00:00-04:00 pnl=-11.85 pnlcomm=-13.61 commission=1.77 bars=15
+2026-10-03 14:50:39.731 INFO webull.main   #91 SPY LONG size=10 entry=178.42@2016-07-07 16:00:00-04:00 exit=184.81@2016-08-31 16:00:00-04:00 pnl=63.95 pnlcomm=62.13 commission=1.82 bars=39
+2026-10-03 14:50:39.731 INFO webull.main   #92 SPY LONG size=10 entry=184.41@2016-09-09 16:00:00-04:00 exit=180.40@2016-09-12 16:00:00-04:00 pnl=-40.11 pnlcomm=-41.93 commission=1.82 bars=1
+2026-10-03 14:50:39.731 INFO webull.main   #93 SPY LONG size=10 entry=182.89@2016-09-27 16:00:00-04:00 exit=181.09@2016-10-13 16:00:00-04:00 pnl=-17.96 pnlcomm=-19.78 commission=1.82 bars=12
+2026-10-03 14:50:39.731 INFO webull.main   #94 SPY LONG size=10 entry=184.62@2016-11-11 16:00:00-05:00 exit=194.28@2017-01-05 16:00:00-05:00 pnl=96.52 pnlcomm=94.62 commission=1.89 bars=36
+2026-10-03 14:50:39.731 INFO webull.main   #95 SPY LONG size=10 entry=194.69@2017-01-06 16:00:00-05:00 exit=202.03@2017-03-23 16:00:00-04:00 pnl=73.35 pnlcomm=71.36 commission=1.98 bars=52
+2026-10-03 14:50:39.731 INFO webull.main   #96 SPY LONG size=10 entry=203.94@2017-04-05 16:00:00-04:00 exit=202.60@2017-04-06 16:00:00-04:00 pnl=-13.42 pnlcomm=-15.45 commission=2.03 bars=1
+2026-10-03 14:50:39.731 INFO webull.main   #97 SPY LONG size=10 entry=205.88@2017-04-26 16:00:00-04:00 exit=204.71@2017-05-19 16:00:00-04:00 pnl=-11.73 pnlcomm=-13.78 commission=2.05 bars=17
+2026-10-03 14:50:39.731 INFO webull.main   #98 SPY LONG size=10 entry=208.20@2017-05-25 16:00:00-04:00 exit=209.95@2017-06-30 16:00:00-04:00 pnl=17.42 pnlcomm=15.33 commission=2.09 bars=25
+2026-10-03 14:50:39.731 INFO webull.main   #99 SPY LONG size=10 entry=212.01@2017-07-14 16:00:00-04:00 exit=211.45@2017-08-11 16:00:00-04:00 pnl=-5.59 pnlcomm=-7.70 commission=2.12 bars=20
+2026-10-03 14:50:39.731 INFO webull.main   #100 SPY LONG size=10 entry=215.05@2017-09-01 16:00:00-04:00 exit=227.52@2018-02-06 16:00:00-05:00 pnl=124.76 pnlcomm=122.55 commission=2.21 bars=107
+2026-10-03 14:50:39.731 INFO webull.main   #101 SPY LONG size=10 entry=243.67@2018-02-27 16:00:00-05:00 exit=235.44@2018-03-22 16:00:00-04:00 pnl=-82.32 pnlcomm=-84.72 commission=2.40 bars=17
+2026-10-03 14:50:39.731 INFO webull.main   #102 SPY LONG size=10 entry=236.92@2018-04-17 16:00:00-04:00 exit=231.89@2018-05-01 16:00:00-04:00 pnl=-50.35 pnlcomm=-52.69 commission=2.34 bars=10
+2026-10-03 14:50:39.731 INFO webull.main   #103 SPY LONG size=10 entry=237.81@2018-05-10 16:00:00-04:00 exit=239.79@2018-06-26 16:00:00-04:00 pnl=19.77 pnlcomm=17.38 commission=2.39 bars=32
+2026-10-03 14:50:39.731 INFO webull.main   #104 SPY LONG size=10 entry=244.90@2018-07-11 16:00:00-04:00 exit=254.84@2018-10-09 16:00:00-04:00 pnl=99.43 pnlcomm=96.93 commission=2.50 bars=63
+2026-10-03 14:50:39.731 INFO webull.main   #105 SPY LONG size=10 entry=248.63@2018-11-08 16:00:00-05:00 exit=242.12@2018-11-19 16:00:00-05:00 pnl=-65.09 pnlcomm=-67.54 commission=2.45 bars=7
+2026-10-03 14:50:39.731 INFO webull.main   #106 SPY LONG size=10 entry=247.09@2018-12-04 16:00:00-05:00 exit=237.34@2018-12-11 16:00:00-05:00 pnl=-97.44 pnlcomm=-99.86 commission=2.42 bars=4
+2026-10-03 14:50:39.731 INFO webull.main   #107 SPY LONG size=10 entry=228.79@2019-01-10 16:00:00-05:00 exit=248.90@2019-03-12 16:00:00-04:00 pnl=201.07 pnlcomm=198.68 commission=2.39 bars=41
+2026-10-03 14:50:39.731 INFO webull.main   #108 SPY LONG size=10 entry=251.57@2019-03-15 16:00:00-04:00 exit=255.52@2019-05-09 16:00:00-04:00 pnl=39.50 pnlcomm=36.96 commission=2.54 bars=38
+2026-10-03 14:50:39.731 INFO webull.main   #109 SPY LONG size=10 entry=260.94@2019-06-11 16:00:00-04:00 exit=259.34@2019-08-05 16:00:00-04:00 pnl=-16.03 pnlcomm=-18.64 commission=2.60 bars=38
+2026-10-03 14:50:39.731 INFO webull.main   #110 SPY LONG size=10 entry=261.83@2019-09-03 16:00:00-04:00 exit=267.75@2019-09-30 16:00:00-04:00 pnl=59.19 pnlcomm=56.54 commission=2.65 bars=19
+2026-10-03 14:50:39.731 INFO webull.main   #111 SPY LONG size=10 entry=270.10@2019-10-16 16:00:00-04:00 exit=297.18@2020-01-31 16:00:00-05:00 pnl=270.76 pnlcomm=267.92 commission=2.84 bars=73
+2026-10-03 14:50:39.731 INFO webull.main   #112 SPY LONG size=10 entry=301.33@2020-02-10 16:00:00-05:00 exit=285.53@2020-02-26 16:00:00-05:00 pnl=-157.96 pnlcomm=-160.90 commission=2.93 bars=11
+2026-10-03 14:50:39.731 INFO webull.main   #113 SPY LONG size=10 entry=235.94@2020-04-06 16:00:00-04:00 exit=283.40@2020-06-18 16:00:00-04:00 pnl=474.55 pnlcomm=471.96 commission=2.60 bars=51
+2026-10-03 14:50:39.731 INFO webull.main   #114 SPY LONG size=10 entry=288.75@2020-06-19 16:00:00-04:00 exit=278.64@2020-06-25 16:00:00-04:00 pnl=-101.13 pnlcomm=-103.97 commission=2.84 bars=4
+2026-10-03 14:50:39.731 INFO webull.main   #115 SPY LONG size=10 entry=289.86@2020-07-07 16:00:00-04:00 exit=308.34@2020-09-11 16:00:00-04:00 pnl=184.78 pnlcomm=181.79 commission=2.99 bars=47
+2026-10-03 14:50:39.731 INFO webull.main   #116 SPY LONG size=10 entry=310.11@2020-10-05 16:00:00-04:00 exit=306.15@2020-10-28 16:00:00-04:00 pnl=-39.61 pnlcomm=-42.69 commission=3.08 bars=17
+2026-10-03 14:50:39.731 INFO webull.main   #117 SPY LONG size=10 entry=335.86@2020-11-09 16:00:00-05:00 exit=351.47@2021-02-02 16:00:00-05:00 pnl=156.11 pnlcomm=152.67 commission=3.44 bars=57
+2026-10-03 14:50:39.731 INFO webull.main   #118 SPY LONG size=10 entry=360.74@2021-02-08 16:00:00-05:00 exit=356.97@2021-03-01 16:00:00-05:00 pnl=-37.67 pnlcomm=-41.26 commission=3.59 bars=14
+2026-10-03 14:50:39.731 INFO webull.main   #119 SPY LONG size=10 entry=365.43@2021-03-15 16:00:00-04:00 exit=378.23@2021-05-13 16:00:00-04:00 pnl=128.06 pnlcomm=124.34 commission=3.72 bars=42
+2026-10-03 14:50:39.731 INFO webull.main   #120 SPY LONG size=10 entry=390.65@2021-05-27 16:00:00-04:00 exit=394.35@2021-06-23 16:00:00-04:00 pnl=37.01 pnlcomm=33.08 commission=3.92 bars=18
+2026-10-03 14:50:39.731 INFO webull.main   #121 SPY LONG size=10 entry=396.33@2021-06-24 16:00:00-04:00 exit=407.70@2021-07-23 16:00:00-04:00 pnl=113.73 pnlcomm=109.71 commission=4.02 bars=20
+2026-10-03 14:50:39.731 INFO webull.main   #122 SPY LONG size=10 entry=409.78@2021-07-26 16:00:00-04:00 exit=414.32@2021-09-15 16:00:00-04:00 pnl=45.39 pnlcomm=41.26 commission=4.12 bars=36
+2026-10-03 14:50:39.731 INFO webull.main   #123 SPY LONG size=10 entry=416.18@2021-10-15 16:00:00-04:00 exit=431.89@2021-11-30 16:00:00-05:00 pnl=157.10 pnlcomm=152.86 commission=4.24 bars=31
+2026-10-03 14:50:39.731 INFO webull.main   #124 SPY LONG size=10 entry=439.99@2021-12-13 16:00:00-05:00 exit=436.44@2022-01-11 16:00:00-05:00 pnl=-35.49 pnlcomm=-39.87 commission=4.38 bars=20
+2026-10-03 14:50:39.731 INFO webull.main   #125 SPY LONG size=10 entry=427.48@2022-02-09 16:00:00-05:00 exit=415.79@2022-02-17 16:00:00-05:00 pnl=-116.85 pnlcomm=-121.06 commission=4.22 bars=6
+2026-10-03 14:50:39.731 INFO webull.main   #126 SPY LONG size=10 entry=418.56@2022-03-21 16:00:00-04:00 exit=416.95@2022-04-12 16:00:00-04:00 pnl=-16.04 pnlcomm=-20.22 commission=4.18 bars=16
+2026-10-03 14:50:39.731 INFO webull.main   #127 SPY LONG size=10 entry=391.08@2022-06-01 16:00:00-04:00 exit=354.63@2022-06-14 16:00:00-04:00 pnl=-364.51 pnlcomm=-368.24 commission=3.73 bars=9
+2026-10-03 14:50:39.731 INFO webull.main   #128 SPY LONG size=10 entry=366.37@2022-07-08 16:00:00-04:00 exit=364.88@2022-07-19 16:00:00-04:00 pnl=-14.91 pnlcomm=-18.56 commission=3.66 bars=7
+2026-10-03 14:50:39.731 INFO webull.main   #129 SPY LONG size=10 entry=371.29@2022-07-20 16:00:00-04:00 exit=396.36@2022-08-26 16:00:00-04:00 pnl=250.71 pnlcomm=246.87 commission=3.84 bars=27
+2026-10-03 14:50:39.731 INFO webull.main   #130 SPY LONG size=10 entry=346.84@2022-10-21 16:00:00-04:00 exit=374.79@2022-12-09 16:00:00-05:00 pnl=279.52 pnlcomm=275.91 commission=3.61 bars=34
+2026-10-03 14:50:39.731 INFO webull.main   #131 SPY LONG size=10 entry=374.30@2023-01-11 16:00:00-05:00 exit=382.82@2023-02-23 16:00:00-05:00 pnl=85.20 pnlcomm=81.42 commission=3.79 bars=29
+2026-10-03 14:50:39.731 INFO webull.main   #132 SPY LONG size=10 entry=381.37@2023-03-27 16:00:00-04:00 exit=389.49@2023-04-27 16:00:00-04:00 pnl=81.17 pnlcomm=77.31 commission=3.85 bars=22
+2026-10-03 14:50:39.731 INFO webull.main   #133 SPY LONG size=10 entry=394.06@2023-05-03 16:00:00-04:00 exit=395.20@2023-05-08 16:00:00-04:00 pnl=11.47 pnlcomm=7.52 commission=3.95 bars=3
+2026-10-03 14:50:39.731 INFO webull.main   #134 SPY LONG size=10 entry=396.03@2023-05-12 16:00:00-04:00 exit=430.40@2023-08-08 16:00:00-04:00 pnl=343.66 pnlcomm=339.53 commission=4.13 bars=59
+2026-10-03 14:50:39.731 INFO webull.main   #135 SPY LONG size=10 entry=434.26@2023-08-31 16:00:00-04:00 exit=419.98@2023-09-21 16:00:00-04:00 pnl=-142.78 pnlcomm=-147.05 commission=4.27 bars=14
+2026-10-03 14:50:39.731 INFO webull.main   #136 SPY LONG size=10 entry=419.93@2023-10-13 16:00:00-04:00 exit=407.40@2023-10-24 16:00:00-04:00 pnl=-125.27 pnlcomm=-129.40 commission=4.14 bars=7
+2026-10-03 14:50:39.731 INFO webull.main   #137 SPY LONG size=10 entry=420.39@2023-11-07 16:00:00-05:00 exit=456.69@2024-01-09 16:00:00-05:00 pnl=362.99 pnlcomm=358.60 commission=4.39 bars=42
+2026-10-03 14:50:39.731 INFO webull.main   #138 SPY LONG size=10 entry=462.69@2024-01-11 16:00:00-05:00 exit=498.50@2024-04-10 16:00:00-04:00 pnl=358.17 pnlcomm=353.36 commission=4.81 bars=61
+2026-10-03 14:50:39.731 INFO webull.main   #139 SPY LONG size=10 entry=502.97@2024-05-07 16:00:00-04:00 exit=527.26@2024-07-25 16:00:00-04:00 pnl=242.89 pnlcomm=237.74 commission=5.15 bars=54
+2026-10-03 14:50:39.731 INFO webull.main   #140 SPY LONG size=10 entry=537.60@2024-08-16 16:00:00-04:00 exit=530.47@2024-09-09 16:00:00-04:00 pnl=-71.31 pnlcomm=-76.65 commission=5.34 bars=15
+2026-10-03 14:50:39.732 INFO webull.main ============================================================
+2026-10-03 14:50:39.732 INFO webull.main [Backtest] visualization disabled (WEBULL_VISUALIZE=false)
+2026-10-03 14:50:39.792 INFO webull.harness [Harness] in_sample     2005-01-03..2024-10-02  kit Sharpe 0.4586  our Sharpe 0.3578  ann 0.12%  max DD -0.71%  orders 281 (refused 0)
+2026-10-03 14:50:39.792 INFO webull.harness [Harness] full          2005-01-03..2024-10-02  kit Sharpe 0.4586  our Sharpe 0.3578  ann 0.12%  max DD -0.71%  orders 281 (refused 0)
+2026-10-03 14:50:39.793 INFO webull.harness [Harness] metrics written: <scratch>/kit_native/final_run/smoke_guide.json

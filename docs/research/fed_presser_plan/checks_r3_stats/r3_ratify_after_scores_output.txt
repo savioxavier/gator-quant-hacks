@@ -1,0 +1,3 @@
+corr(s, in-presser move) 0.0: false GO  pre-named two-sided 0.0508 | scorer picked on P 0.0521 | scorer and one-sided direction picked on P 0.0652
+corr(s, in-presser move) 0.3: false GO  pre-named two-sided 0.0528 | scorer picked on P 0.0538 | scorer and one-sided direction picked on P 0.0582
+corr(s, in-presser move) 0.6: false GO  pre-named two-sided 0.0515 | scorer picked on P 0.0515 | scorer and one-sided direction picked on P 0.0516

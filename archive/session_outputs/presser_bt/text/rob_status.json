@@ -1,0 +1,6 @@
+{
+  "status": "blocked",
+  "error_type": "GatedRepoError",
+  "error": "401 Client Error. (Request ID: Root=1-6ac169cf-241e485e5c21584f43c00b2d;73604535-b3e8-478b-ae55-645cc5f7687d)",
+  "when": "2026-10-03T16:47:10-0400"
+}

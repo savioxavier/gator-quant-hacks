@@ -1,0 +1,19 @@
+trend_momentum_carver_ewmac_breakout V1 IS 2011-08-16..2024-10-02: net1x 0.143 net2x 0.053 gross 0.233 | ret 1.351% vol 9.421% MDD -17.6% worst yr -6.5% (2023) pos yrs 50% roll2y p10 -0.50 TO 57.4x gross notional 2.63 NW t 0.54 | corr ES -0.10 S1 0.84 F2 0.19 | later net1x -0.058 MDD -14.2%
+   FDM mean IS 1.136 | AQR same months IS 0.28 ours 0.24 corr 0.64 | tax-year corr with Carver live 0.78 (rank 0.68)
+   tax years ours: {'2014/15': 0.1869, '2015/16': -0.0222, '2016/17': -0.0851, '2017/18': 0.012, '2018/19': -0.0104, '2019/20': 0.0844, '2020/21': 0.0777, '2021/22': 0.1172, '2022/23': -0.0323, '2023/24': 0.0419, '2024/25': -0.1308}
+trend_momentum_carver_ewmac_breakout V2 IS 2012-04-04..2024-10-02: net1x 0.226 net2x 0.118 gross 0.333 | ret 2.022% vol 8.966% MDD -19.5% worst yr -6.4% (2016) pos yrs 38% roll2y p10 -0.53 TO 65.8x gross notional 2.61 NW t 0.84 | corr ES -0.07 S1 0.83 F2 0.16 | later net1x -0.097 MDD -15.2%
+   FDM mean IS 1.266 | AQR same months IS 0.34 ours 0.33 corr 0.59 | tax-year corr with Carver live 0.71 (rank 0.55)
+   tax years ours: {'2014/15': 0.1867, '2015/16': -0.0474, '2016/17': -0.0815, '2017/18': 0.011, '2018/19': 0.0037, '2019/20': 0.0821, '2020/21': 0.1077, '2021/22': 0.122, '2022/23': -0.0305, '2023/24': 0.0584, '2024/25': -0.1099}
+trend_momentum_carver_ewmac_breakout V3 IS 2012-04-04..2024-10-02: net1x 0.186 net2x 0.089 gross 0.284 | ret 1.724% vol 9.246% MDD -18.1% worst yr -6.5% (2012) pos yrs 38% roll2y p10 -0.41 TO 61.2x gross notional 2.62 NW t 0.69 | corr ES -0.08 S1 0.84 F2 0.18 | later net1x -0.112 MDD -15.2%
+   FDM mean IS 1.22 | AQR same months IS 0.34 ours 0.28 corr 0.63 | tax-year corr with Carver live 0.76 (rank 0.55)
+   tax years ours: {'2014/15': 0.1837, '2015/16': -0.0336, '2016/17': -0.0781, '2017/18': 0.0127, '2018/19': -0.0055, '2019/20': 0.0844, '2020/21': 0.0877, '2021/22': 0.1179, '2022/23': -0.0325, '2023/24': 0.0501, '2024/25': -0.1244}
+trend_momentum_carver_staunch_trend_carry V1 IS 2011-08-16..2024-10-02: net1x 0.072 net2x -0.010 gross 0.153 | ret 0.581% vol 8.124% MDD -20.4% worst yr -8.8% (2023) pos yrs 57% roll2y p10 -0.24 TO 40.8x gross notional 2.69 NW t 0.25 | corr ES -0.12 S1 0.62 F2 0.20 | later net1x 0.555 MDD -8.8%
+   FDM mean IS 1.31 | AQR same months IS 0.28 ours 0.15 corr 0.58 | tax-year corr with Carver live 0.89 (rank 0.86)
+   tax years ours: {'2014/15': 0.1003, '2015/16': 0.023, '2016/17': -0.059, '2017/18': -0.0394, '2018/19': 0.0238, '2019/20': 0.1094, '2020/21': -0.0456, '2021/22': 0.0606, '2022/23': -0.0261, '2023/24': 0.0202, '2024/25': -0.0669}
+trend_momentum_carver_staunch_trend_carry V2 IS 2011-08-16..2024-10-02: net1x 0.176 net2x 0.097 gross 0.255 | ret 1.556% vol 8.845% MDD -19.2% worst yr -8.4% (2023) pos yrs 50% roll2y p10 -0.37 TO 45.9x gross notional 2.69 NW t 0.64 | corr ES -0.09 S1 0.79 F2 0.23 | later net1x 0.304 MDD -10.7%
+   FDM mean IS 1.262 | AQR same months IS 0.28 ours 0.26 corr 0.68 | tax-year corr with Carver live 0.81 (rank 0.73)
+   tax years ours: {'2014/15': 0.1414, '2015/16': 0.0106, '2016/17': -0.087, '2017/18': 0.0251, '2018/19': -0.0055, '2019/20': 0.1121, '2020/21': 0.0318, '2021/22': 0.1044, '2022/23': -0.0028, '2023/24': 0.0345, '2024/25': -0.1227}
+trend_momentum_carver_staunch_trend_carry V3 IS 2011-08-16..2024-10-02: net1x 0.172 net2x 0.094 gross 0.250 | ret 1.610% vol 9.359% MDD -18.0% worst yr -8.8% (2016) pos yrs 50% roll2y p10 -0.47 TO 49.6x gross notional 2.67 NW t 0.64 | corr ES -0.06 S1 0.83 F2 0.23 | later net1x 0.056 MDD -12.3%
+   FDM mean IS 1.099 | AQR same months IS 0.28 ours 0.25 corr 0.70 | tax-year corr with Carver live 0.79 (rank 0.61)
+   tax years ours: {'2014/15': 0.1829, '2015/16': -0.0013, '2016/17': -0.1042, '2017/18': 0.0318, '2018/19': -0.0351, '2019/20': 0.1097, '2020/21': 0.046, '2021/22': 0.1468, '2022/23': -0.0013, '2023/24': 0.0358, '2024/25': -0.1498}
+staunch V1 vs V3 (IS): corr 0.741 Sharpe V1 0.072 V3 0.172

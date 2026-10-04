@@ -1,0 +1,14 @@
+backtests: <scratch>/team_push/backtests
+re-run outputs: <scratch>/team_push/backtests/rerun
+
+== exploratory H2/H3/H4 (voice, face, combined)
+  "t": 2.0455432461130165,
+  "p_one": 0.03556233778270246,
+  "oos_r2_C_vs_T": 0.12094487448491065
+ }
+}
+-> h234: completed (exploratory, post-NO-GO; cannot rescue G3; no trading claim); outputs in <scratch>/team_push/backtests/presser/backtest_h234_local
+
+== summary
+  h234: completed (exploratory, post-NO-GO; cannot rescue G3; no trading claim); outputs in <scratch>/team_push/backtests/presser/backtest_h234_local
+exit=0

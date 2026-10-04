@@ -1,0 +1,64 @@
+{
+  "H1": {
+    "signal": "H1",
+    "status": "not computed",
+    "reason": "no stance scores: FOMC-RoBERTa gated; D1 chrono-bert scores not yet built"
+  },
+  "lexH1raw": {
+    "signal": "lexH1raw",
+    "n": 20,
+    "mean": -4.1,
+    "sd": 12.49378793009171,
+    "median": 1.0,
+    "hit": 0.55,
+    "t": -1.4675899349416668,
+    "wb_p_one": 0.9162,
+    "wb_p_two": 0.1697,
+    "bb_ci90_lo": -9.454999999999998,
+    "bb_ci90_hi": 0.6,
+    "bb_p_one": 0.9211,
+    "mean_usd": -32.03125,
+    "t_ci90_hi": 0.7306712648035418,
+    "decision": "NO-GO: not detected (90% block-bootstrap CI upper bound 0.60 ticks)",
+    "block_boot_agrees": true,
+    "loo_min": -5.052631578947368,
+    "loo_max": -2.526315789473684,
+    "loo_most_influential": "2023-05-03",
+    "drop_top2_dates": [
+      "2023-05-03",
+      "2024-07-31"
+    ],
+    "drop_top2_mean": -1.0555555555555556,
+    "drop_top2_wb_p_one": 0.703,
+    "perm_p_one": 0.9055,
+    "slope_coef": 0.0006155281030585295,
+    "slope_t_hc3": 1.0535741859105805,
+    "slope_p_lower": 0.8614,
+    "slope_p_two": 0.2771,
+    "exec30_n": 20,
+    "exec30_mean": -4.0,
+    "point_clock_n": 20,
+    "point_clock_mean": -3.85,
+    "convention_clock_n": 20,
+    "convention_clock_mean": -4.2,
+    "sens1_drop_text_flags_n": 18,
+    "sens1_drop_text_flags_mean": -3.0555555555555554,
+    "sens1_drop_text_flags_wb_p_one": 0.8349,
+    "sens2_drop_degraded_n": 18,
+    "sens2_drop_degraded_mean": -3.888888888888889,
+    "sens2_drop_degraded_wb_p_one": 0.8818,
+    "sens3_unc_le10_n": 3,
+    "sens3_unc_le10_mean": 1.6666666666666667,
+    "sens3_unc_le10_wb_p_one": 0.1279
+  },
+  "lexH1": {
+    "signal": "lexH1",
+    "status": "not estimable",
+    "reason": "frozen MIN_HD=5 lexicon H1 defined for 4 of 75 meetings; no meeting passes the 8-meeting burn-in"
+  },
+  "H1Q": {
+    "signal": "H1-Q",
+    "status": "not computed",
+    "reason": "needs stance q_mean_score and H1; FOMC-RoBERTa gated, D1 scores not built"
+  }
+}

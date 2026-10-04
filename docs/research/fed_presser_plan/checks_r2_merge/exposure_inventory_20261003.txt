@@ -1,0 +1,64 @@
+Exposure inventory, written 2026-10-03 18:07:00 EDT by the round-2 merge.
+File names, sizes, modification times and SHA-256 only. No file content below was opened or displayed.
+
+== Databento cache <home>/.cache/gqh/presser/ (schema: file count, earliest and latest mtime)
+bbo-1s files=76 first=2026-10-03 16:56:49 last=2026-10-03 17:06:07
+ohlcv-1m files=76 first=2026-10-03 16:42:04 last=2026-10-03 16:49:32
+ohlcv-1s files=76 first=2026-10-03 16:49:40 last=2026-10-03 16:56:31
+date range of cached day files: 20160316 .. 20260916 (75 day files per schema plus one combined all_2016_2026 file)
+
+== Parallel pipeline outputs under <scratch>/presser_bt/backtest/ (mtime EDT, bytes, sha256, path)
+2026-10-03 17:48:34 14972 9d35a893647025da08457eeead107846fd62454e936eacfedb9738260955c166 backtest/qa/a07_usmpd_flags.csv
+2026-10-03 17:48:34 1201 521aeb9033d69b623fa14613f79e5d78a56cf74bac9acaaf707f80d6d1c22422 backtest/qa/bar_skips_qa.csv
+2026-10-03 17:48:34 4845 0bd37c6c2ed658499d4b556820514933a09a7c39f831b94ac14c1e8402136119 backtest/qa/caption_timeline_agreement.csv
+2026-10-03 17:48:21 2148 98e512c2eac7bb74ab5372586a8e53b07ef0165434e658741f3e59b390d6cb59 backtest/qa/input_manifest.json
+2026-10-03 17:48:34 33742 9b1300e854e838bf54069bccf8f1ef0e95cbe0cbdf6f369489dca7622cb1957f backtest/qa/instrument_ids_per_window.csv
+2026-10-03 17:48:34 509 032ff7a8fd5f58889c730ea42a72addc401c8bf5e3b2656e9ff2fedabe1dae32 backtest/qa/qa_summary.json
+2026-10-03 17:48:34 16332 c9269393705dee8f51ab45d7d33f8485b67f6e086cb0b03cec4b94d3573dcca6 backtest/qa/tau_ordering.csv
+2026-10-03 17:48:34 1474 b54201a91bc548aff5d06ddfe67cc5b0a575b6ea2d662696e1b83f0fb6f49249 backtest/qa/tick_check.csv
+2026-10-03 17:50:44 106 fa563fb5c23e7973ff5130b9db31a35cffc0e51346ede23d51a19c079dd77afb backtest/positions/answer_sel_H1_h1.csv
+2026-10-03 17:50:44 106 fa563fb5c23e7973ff5130b9db31a35cffc0e51346ede23d51a19c079dd77afb backtest/positions/answer_sel_H1_h15.csv
+2026-10-03 17:50:44 106 fa563fb5c23e7973ff5130b9db31a35cffc0e51346ede23d51a19c079dd77afb backtest/positions/answer_sel_H1_h5.csv
+2026-10-03 17:50:45 118 6f16e173a21c0caad0762d8110a97d2b19dcc9c2c04593a6494c579f7e523129 backtest/positions/answer_sel_lexH1_h1.csv
+2026-10-03 17:50:45 118 6f16e173a21c0caad0762d8110a97d2b19dcc9c2c04593a6494c579f7e523129 backtest/positions/answer_sel_lexH1_h15.csv
+2026-10-03 17:50:45 118 6f16e173a21c0caad0762d8110a97d2b19dcc9c2c04593a6494c579f7e523129 backtest/positions/answer_sel_lexH1_h5.csv
+2026-10-03 17:50:45 233605 f840eb8dd5dc8252f2f0fe8e9bd539d4acb97dafd21d07040aa087fbcefb8cf1 backtest/positions/answer_sel_lexH1raw_h1.csv
+2026-10-03 17:50:45 30782 77bf753ba8f721490e5900af8e7b7ea97774fd161371cac86df38c922040c03a backtest/positions/answer_sel_lexH1raw_h15.csv
+2026-10-03 17:50:45 77962 d24891fe41e3c7f7a55784ec5901f2c7806f9d2f042ba84c996acb35711e07bf backtest/positions/answer_sel_lexH1raw_h5.csv
+2026-10-03 17:50:45 846949 0a17cec0ed1c4fc78fac7548497bf2d8ad7f762e47c3352a14f1ccb03dedb2b7 backtest/positions/answers_positions.csv
+2026-10-03 17:50:45 3856 b482b30d176913133c96d07f0d4dc3f637327d139f2517b1cd4ba0ae201e593a backtest/positions/bar_log_positions.csv
+2026-10-03 17:50:45 1179 cd89a913e21e04b25eded6f994809b0467d67fd7aeb469fea0124d9f338ba1b2 backtest/positions/manifest_sha256.txt
+2026-10-03 17:50:45 40982 9a08d2d32e4af783f069aac1e99938d3c82e07a30834172a9b5ebd16bfa5d370 backtest/positions/meetings_positions.csv
+2026-10-03 17:50:45 705 9a92188539db4b7620fadc8b588de2708b7063b15edf564fd48352236fe0515e backtest/positions/positions_status.json
+2026-10-03 17:54:05 4762 064c9acae37ab990aba667e55add912665bb61361caa36008a1e01ae4c2da355 backtest/results/bar_log_pnl.csv
+2026-10-03 17:52:58 4897 636c59a44c9732fa9cb7e66cf4c2b69317df9dcb2a5aa90d4ed437bb67deab67 backtest/results/benchr_break_stats.csv
+2026-10-03 17:52:58 7705 a6be4651498684f76d5cbf4b36d0dc10b24d328441981b6ac4803c2136707317 backtest/results/benchr_cost_hurdle.csv
+2026-10-03 17:52:47 208038 948bbf7319361bd8efb38ee1d8651ad6311c44c555efbc13d68b2ef9ef773434 backtest/results/benchr_trades.csv
+2026-10-03 17:52:58 5116 c9cf54a9ca1cb59cafb3ffa171cd0eaf6e45c28356b15a0ef319d24dbb5951c4 backtest/results/benchr_usmpd_ust2y.csv
+2026-10-03 17:53:58 2015 c93f24c18218903d10aa1ba7bdaadcc1af891dd7682ded3941e94845448f44dd backtest/results/g3_and_h1primary_extras.json
+2026-10-03 17:54:05 206929 10b3ab5eedf2f6409ab413338319a017c8876e7f3fe6156639c98c582ae5bfdf backtest/results/h1answer_1s_sweep_summary.csv
+2026-10-03 17:54:05 3916461 5c01ac81d155b1ad51c36b9aaa1eac4925cc655f8db850b0a6bc94c29da458ff backtest/results/h1answer_1s_sweep_trades.csv
+2026-10-03 17:53:59 48079 ef2d5ebd662fefe7603dff58dc8eb893a7ecd46e6a22ac996e5c58810ad2d1d9 backtest/results/h1answer_summary.csv
+2026-10-03 17:53:59 633489 e96542a2d70178e69403457cc80f1fa32777238ff55ae1ad8831296f00c9f054 backtest/results/h1answer_trades.csv
+2026-10-03 17:53:03 568 438d3771f93a2cd82fa7e7dad54f7092f6f6ee39eb220168f4c6f7ca3779208e backtest/results/h1primary_lexH1raw_2016_2022_robustness.json
+2026-10-03 17:53:58 440217 9d9d3afd2bef9395007f55af6d8b746a2a0ebdf7284e77180b35bb59d6bcb6a0 backtest/results/h1primary_trades.csv
+2026-10-03 17:57:06 10454 a691a866f545afe5063df83d9a935994b39ed3ab1a970f17f60e66e5838d98f5 backtest/results/key_results.json
+2026-10-03 17:54:05 1649 dddf6155fd7500e7205385bdafc2124ec0a7725ba9afc827008c00c1aaa191f7 backtest/results/run_meta.json
+2026-10-03 17:56:10 1604 9a1b5725e7d4c063f28da60cf28b9670d9c2e4f3fee20c3cb419df4f857ac0b0 backtest/results/spreads_at_fill_points.csv
+2026-10-03 17:56:10 80785 9bd226b42d82f45fb9ff9f510487a56d811ffe1dc043df3b2c3af5e2e093d018 backtest/results/spreads_by_clock_minute.csv
+2026-10-03 17:56:09 62140 d6ef1e876b934be6fa2f51579ff40dc28ee760b390cc13520b1fead821eb37cc backtest/results/spreads_by_minute_of_presser.csv
+2026-10-03 17:56:10 4391 d7fb6387a46338e2cc11719b08fec0ce503899689e3d20d0e08ad1a27da86461 backtest/results/spreads_by_presser_phase.csv
+2026-10-03 17:54:05 789142 e01f7ffd05c082a667e2965c11502a576bec411d5623ba9980776245f7522256 backtest/results/summary_long.csv
+2026-10-03 17:57:06 15620 2da75d694a82b42f0d78ad8f63d0741c09b4388bf3a06b8c823a1c121e9600ec backtest/tables/benchr_per_meeting_ES.csv
+2026-10-03 17:57:06 15135 92733e8620bb0e5dd443bf003be05ba4ccaee5a199b0bde41d7532e95aee15e3 backtest/tables/benchr_per_meeting_ZF.csv
+2026-10-03 17:57:06 16530 7e643007c1cf994ccdcab340226eda50869f3531eccb0cb6f92ca9e7c6a66fb4 backtest/tables/benchr_per_meeting_ZN.csv
+2026-10-03 17:57:06 17008 491ead27019b5aff5cd3d47dcfdc0836922580fa82453545549244af18696a74 backtest/tables/benchr_per_meeting_ZT.csv
+2026-10-03 17:57:06 13116 0187a1ec89b26a1dbd9387d1c7a6fd4f29ffae0690944de9ab0ff9fa9964cebf backtest/tables/lexicon_h1primary_per_meeting_ES.csv
+2026-10-03 17:57:06 12504 013f935d11a1703bbd52437867b4673bb8b6cb87170f1df42caa17d145c8dcee backtest/tables/lexicon_h1primary_per_meeting_ZF.csv
+2026-10-03 17:57:06 13587 c9a026abd1c9494e7f82a4f7eea10a792d1d527209783a73d521d3f752bcfd64 backtest/tables/lexicon_h1primary_per_meeting_ZN.csv
+2026-10-03 17:57:06 14269 49364a71f57eafbba153808a87290d16ed6ef48d4675de86a58c5d13cf631c7a backtest/tables/lexicon_h1primary_per_meeting_ZT.csv
+
+== Other parallel inputs
+2026-10-03 17:42:29 25948 1921b2ca1dc6e646b95ee1d1bbc3e3ef7f6a864c06cd724956df7c6569de2dc4 ADDENDUM.md
+2026-10-03 17:28:49 119118 fe3b3be41744a22fc4a531a1542a38443e5da863f31e010552f87a09a77f816d events/events_market_long.csv
+2026-10-03 17:26:24 4998 860cc8103a2d51b32cf40c22ac437564bf6c182fc0ed983acd905b70497e0a01 events/s4_market_align.py

@@ -1,0 +1,9 @@
+{
+  "stage": "face",
+  "presser_id": "20171213",
+  "status": "not_applicable",
+  "outputs": [],
+  "run_id": "PLACEBO",
+  "reason": "chair Yellen not in face.chairs ['Powell']",
+  "placebo": "PLACEBO: synthetic tree, not package output"
+}

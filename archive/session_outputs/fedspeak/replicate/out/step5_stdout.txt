@@ -1,0 +1,19 @@
+                            metric  published  ours_their_data  ours_our_data_standalone  engine_rf0  engine_excess_tbill
+                      sharpe_gross     0.2547           0.2547                    0.2547      0.2393               0.2717
+                         sharpe_1x     0.2053           0.2053                    0.2053      0.1774               0.2098
+                         sharpe_2x     0.1559           0.1559                    0.1559      0.1292               0.1617
+                     sharpe_tlt_1x     0.2141           0.2141                    0.2141      0.1874               0.2385
+                     sharpe_uup_1x     0.0016           0.0016                    0.0016     -0.0154              -0.1196
+                    sharpe_2022_1x     1.1941           1.1941                    1.1941      1.1807               1.2449
+                    sharpe_rest_1x     0.0655           0.0655                    0.0655      0.0317               0.0602
+               corr_C_DGS2_tminus2     0.5289           0.5289                    0.5289         NaN                  NaN
+                      turnover_ann    23.4374          23.4374                   23.4374     24.5012              24.5012
+                          maxdd_1x    -0.3288          -0.3288                   -0.3288     -0.3358              -0.3284
+       holdout_2021_2024_sharpe_1x        NaN           0.6928                    0.6928      0.6110               0.6912
+holdout_2021_2024_sharpe_1x_ex2022        NaN              NaN                       NaN      0.3290               0.4194
+{
+ "standalone_1x_monthly_sharpe": 0.19818768565111866,
+ "engine_excess_1x_monthly_sharpe": 0.21209062598376524,
+ "standalone_1x_monthly_sharpe_holdout": 0.6325816680377006,
+ "engine_excess_1x_monthly_sharpe_holdout": 0.657411679443033
+}

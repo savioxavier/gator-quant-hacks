@@ -1,0 +1,8 @@
+s2 project IS  engine as is: corr 0.99957 0.828 bp | trade cost on the fill day: corr 0.99980 0.483 bp | Sharpe native 0.4962 engine 0.5032 shifted 0.5036
+s2 project OOS engine as is: corr 0.99960 0.846 bp | trade cost on the fill day: corr 0.99980 0.535 bp | Sharpe native 0.4372 engine 0.4628 shifted 0.4628
+s2 guide   IS  engine as is: corr 0.99522 2.129 bp | trade cost on the fill day: corr 0.99980 0.494 bp | Sharpe native 0.1210 engine 0.1269 shifted 0.1291
+s2 guide   OOS engine as is: corr 0.99580 2.048 bp | trade cost on the fill day: corr 0.99980 0.549 bp | Sharpe native 0.0828 engine 0.1094 shifted 0.1095
+s1 project IS  engine as is: corr 0.99928 1.067 bp | trade cost on the fill day: corr 0.99978 0.584 bp | Sharpe native -0.1324 engine -0.1330 shifted -0.1325
+s1 project OOS engine as is: corr 0.99919 1.277 bp | trade cost on the fill day: corr 0.99962 0.792 bp | Sharpe native 0.1438 engine 0.1351 shifted 0.1352
+s1 guide   IS  engine as is: corr 0.99020 2.831 bp | trade cost on the fill day: corr 0.99978 0.599 bp | Sharpe native -0.6128 engine -0.6151 shifted -0.6120
+s1 guide   OOS engine as is: corr 0.99109 3.110 bp | trade cost on the fill day: corr 0.99962 0.808 bp | Sharpe native -0.3189 engine -0.3283 shifted -0.3287

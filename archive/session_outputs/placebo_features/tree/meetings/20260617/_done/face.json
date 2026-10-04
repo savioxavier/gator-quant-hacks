@@ -1,0 +1,9 @@
+{
+  "stage": "face",
+  "presser_id": "20260617",
+  "status": "not_applicable",
+  "outputs": [],
+  "run_id": "PLACEBO",
+  "reason": "chair Warsh not in face.chairs ['Powell']",
+  "placebo": "PLACEBO: synthetic tree, not package output"
+}

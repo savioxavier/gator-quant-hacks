@@ -1,0 +1,27 @@
+C IS: n_win 169 total 26.83bp (t 4.74) | 14-15 6.09 (t 3.07) | 15-16 -0.47 (t -0.28) | 10-12 6.35 (t 2.66) | asia18-02 7.49 (t 2.53) | post16-18 -1.37 (t -1.41) | day 18.16 (t 4.52) night 8.67 (t 1.94) | T-2 13.68 (t 3.23) | T-1 4.39 (t 1.16) | T+0 8.76 (t 2.81) | T bar13 -0.16 (t -0.24) | T bar14 0.77 (t 0.58) | T bar15 0.84 (t 0.66)
+C IS_pre: n_win 111 total 27.07bp (t 4.40) | 14-15 9.99 (t 4.13) | 15-16 -4.97 (t -3.56) | 10-12 6.27 (t 2.20) | asia18-02 8.08 (t 2.22) | post16-18 -0.79 (t -0.75) | day 15.40 (t 3.10) night 11.67 (t 2.36) | T-2 14.21 (t 2.67) | T-1 5.55 (t 1.26) | T+0 7.31 (t 2.01) | T bar13 -0.27 (t -0.28) | T bar14 2.51 (t 1.48) | T bar15 -0.95 (t -1.03)
+C IS_post: n_win 58 total 26.36bp (t 2.27) | 14-15 -1.36 (t -0.54) | 15-16 8.13 (t 2.76) | 10-12 6.49 (t 1.52) | asia18-02 6.37 (t 1.26) | post16-18 -2.46 (t -1.27) | day 23.44 (t 3.55) night 2.92 (t 0.33) | T-2 12.65 (t 1.81) | T-1 2.17 (t 0.31) | T+0 11.54 (t 1.98) | T bar13 0.05 (t 0.06) | T bar14 -2.57 (t -1.45) | T bar15 4.26 (t 1.40)
+C later: n_win 24 total 7.31bp (t 0.30) | 14-15 -4.51 (t -0.85) | 15-16 6.82 (t 1.63) | 10-12 -6.75 (t -0.61) | asia18-02 5.11 (t 0.80) | post16-18 -3.25 (t -1.24) | day 8.24 (t 0.49) night -0.93 (t -0.08) | T-2 -3.60 (t -0.36) | T-1 9.46 (t 0.95) | T+0 1.45 (t 0.14) | T bar13 -2.69 (t -2.36) | T bar14 -5.12 (t -2.94) | T bar15 7.57 (t 1.81)
+ZN unit bar 13:00 on T, IS: mean -0.32bp t -0.70 n 170
+ZN unit bar 14:00 on T, IS: mean 0.66bp t 0.87 n 166
+ZN unit bar 15:00 on T, IS: mean 0.42bp t 0.55 n 167
+ZN median abnormal volume on T by start hour: {9: 0.97, 10: 0.97, 11: 0.94, 12: 1.03, 13: 0.86, 14: 1.8, 15: 2.61, 16: 0.95}
+ES median abnormal volume on T by start hour: {9: 0.89, 10: 0.93, 11: 0.94, 12: 0.93, 13: 0.82, 14: 0.92, 15: 1.48, 16: 0.93}
+A IS window mean 16.96 (t 2.16); ES leg 13.80 (81%); ZN leg 3.15
+A IS day 12.66 (75%, t 2.74); T 15:00 bar -0.04
+A IS net1x total 2256.8bp; top window 2020-02-28 share 42%; top5 83%
+A IS net1x Sharpe 0.465; without best window 0.288
+C later net1x per window (last 6): {Timestamp('2026-04-30 00:00:00'): -90.5, Timestamp('2026-05-29 00:00:00'): 24.9, Timestamp('2026-06-30 00:00:00'): -57.0, Timestamp('2026-07-31 00:00:00'): -112.2, Timestamp('2026-08-31 00:00:00'): -150.3, Timestamp('2026-09-30 00:00:00'): -139.9}
+C later gross sum 175bp over 24 windows; ex last 3 mean 26.4bp
+boot C 1x exit_1500: dSR CI [-0.104, 0.086] P(d<=0) 0.526
+boot C 1x exit_1700: dSR CI [-0.064, 0.067] P(d<=0) 0.461
+boot C 1x day_only: dSR CI [-1.098, -0.286] P(d<=0) 1.000
+boot C 1x night_only: dSR CI [-1.619, -0.846] P(d<=0) 1.000
+boot A 1x exit_1500: dSR CI [-0.095, 0.090] P(d<=0) 0.433
+boot A 1x exit_1700: dSR CI [-0.104, -0.020] P(d<=0) 0.997
+boot A 1x day_only: dSR CI [-0.823, -0.168] P(d<=0) 0.999
+boot A 1x night_only: dSR CI [-1.232, -0.586] P(d<=0) 1.000
+boot C 0x exit_1500: dSR CI [-0.087, 0.085] P(d<=0) 0.467
+boot C 0x exit_1700: dSR CI [-0.060, 0.068] P(d<=0) 0.453
+boot C 0x day_only: dSR CI [-0.433, 0.345] P(d<=0) 0.589
+boot C 0x night_only: dSR CI [-0.977, -0.211] P(d<=0) 0.998

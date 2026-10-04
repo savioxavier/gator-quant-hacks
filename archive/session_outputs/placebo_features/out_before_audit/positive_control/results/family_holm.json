@@ -1,0 +1,56 @@
+{
+  "H2": {
+    "status": "run",
+    "p_raw": 0.0001,
+    "p_used": 0.0001,
+    "n_answers": 542,
+    "n_meetings": 20,
+    "mean_ticks": 1.3560885608856088,
+    "bb_ci90": [
+      1.0286333067365783,
+      1.6841710838331707
+    ],
+    "reasons": [],
+    "labels": [
+      "exploratory, post-NO-GO; cannot rescue G3; no trading claim",
+      "source invariance not checked"
+    ],
+    "p_holm": 0.0002,
+    "holm_significant_at_0.05": true,
+    "wording": "exploratory association, post-NO-GO"
+  },
+  "H3": {
+    "status": "run",
+    "p_raw": 0.0001,
+    "p_used": 0.0001,
+    "n_answers": 548,
+    "n_meetings": 20,
+    "mean_ticks": 1.7262773722627738,
+    "bb_ci90": [
+      1.443254350169387,
+      2.025463835434638
+    ],
+    "reasons": [],
+    "labels": [
+      "exploratory, post-NO-GO; cannot rescue G3; no trading claim"
+    ],
+    "p_holm": 0.0002,
+    "holm_significant_at_0.05": true,
+    "wording": "exploratory association, post-NO-GO"
+  },
+  "H4": {
+    "status": "run",
+    "p_raw": 3.710212315155559e-08,
+    "p_used": 3.710212315155559e-08,
+    "n_answers": 542,
+    "n_meetings": 20,
+    "labels": [
+      "exploratory, post-NO-GO; cannot rescue G3; no trading claim"
+    ],
+    "p_holm": 1.1130636945466676e-07,
+    "holm_significant_at_0.05": true,
+    "wording": "exploratory association, post-NO-GO"
+  },
+  "note": "Holm m = 3 across H2, H3, H4 (new exploratory family; the locked register keeps them at p = 1, R2-26). A killed or unrunnable primary enters with p = 1.",
+  "features": "PLACEBO FEATURES (synthetic; not a result)"
+}

@@ -1,0 +1,34 @@
+{
+  "stage": "turns",
+  "presser_id": "20230503",
+  "status": "ok",
+  "outputs": [
+    "turns/turns.parquet",
+    "turns/anchor.json"
+  ],
+  "notes": {
+    "clock_source": "asr",
+    "base_clock": "asr",
+    "align_method": "text_match",
+    "timing_ok": true,
+    "greeting_media_s": 16.646,
+    "anchor": {
+      "media_s": 16.646,
+      "wall_utc": "2023-05-03T18:30:00+00:00",
+      "source": "scheduled_start",
+      "uncertainty_s": null,
+      "rule": "greeting_at_scheduled"
+    },
+    "n_turns": 99,
+    "n_answers": 32,
+    "vtt_check": {
+      "n_words": 4846,
+      "median_offset_s": 0.286,
+      "median_abs_s": 0.33599999999999997,
+      "p90_abs_s": 0.6859999999999999
+    }
+  },
+  "run_id": "PLACEBO",
+  "placebo": "PLACEBO: synthetic tree, not package output",
+  "finished_utc": "2026-10-03T23:44:12+00:00"
+}

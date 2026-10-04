@@ -1,0 +1,207 @@
+{
+ "VME|MOM^AA|IS 2011-07..2024-09": {
+  "n_months": 159,
+  "ann_mean": -0.0058,
+  "ann_vol": 0.045,
+  "sharpe": -0.128,
+  "first": 201107,
+  "last": 202409
+ },
+ "VME|MOM^AA|LATER 2024-10..end": null,
+ "VME|MOMLS_VME_EQ|IS 2011-07..2024-09": {
+  "n_months": 159,
+  "ann_mean": 0.0034,
+  "ann_vol": 0.0845,
+  "sharpe": 0.04,
+  "first": 201107,
+  "last": 202409
+ },
+ "VME|MOMLS_VME_EQ|LATER 2024-10..end": null,
+ "VME|MOMLS_VME_FX|IS 2011-07..2024-09": {
+  "n_months": 159,
+  "ann_mean": -0.0065,
+  "ann_vol": 0.0645,
+  "sharpe": -0.101,
+  "first": 201107,
+  "last": 202409
+ },
+ "VME|MOMLS_VME_FX|LATER 2024-10..end": null,
+ "VME|MOMLS_VME_FI|IS 2011-07..2024-09": {
+  "n_months": 159,
+  "ann_mean": 0.0009,
+  "ann_vol": 0.0223,
+  "sharpe": 0.04,
+  "first": 201107,
+  "last": 202409
+ },
+ "VME|MOMLS_VME_FI|LATER 2024-10..end": null,
+ "VME|MOMLS_VME_COM|IS 2011-07..2024-09": {
+  "n_months": 159,
+  "ann_mean": -0.0327,
+  "ann_vol": 0.1812,
+  "sharpe": -0.18,
+  "first": 201107,
+  "last": 202409
+ },
+ "VME|MOMLS_VME_COM|LATER 2024-10..end": null,
+ "CENTURY|Equity indices Momentum|IS 2011-07..2024-09": {
+  "n_months": 159,
+  "ann_mean": 0.0133,
+  "ann_vol": 0.0841,
+  "sharpe": 0.158,
+  "first": 201107,
+  "last": 202409
+ },
+ "CENTURY|Equity indices Momentum|LATER 2024-10..end": {
+  "n_months": 17,
+  "ann_mean": 0.1926,
+  "ann_vol": 0.0453,
+  "sharpe": 4.255,
+  "first": 202410,
+  "last": 202602
+ },
+ "CENTURY|Fixed income Momentum|IS 2011-07..2024-09": {
+  "n_months": 159,
+  "ann_mean": 0.0112,
+  "ann_vol": 0.0438,
+  "sharpe": 0.256,
+  "first": 201107,
+  "last": 202409
+ },
+ "CENTURY|Fixed income Momentum|LATER 2024-10..end": {
+  "n_months": 17,
+  "ann_mean": -0.1299,
+  "ann_vol": 0.159,
+  "sharpe": -0.817,
+  "first": 202410,
+  "last": 202602
+ },
+ "CENTURY|Currencies Momentum|IS 2011-07..2024-09": {
+  "n_months": 159,
+  "ann_mean": -0.0113,
+  "ann_vol": 0.0621,
+  "sharpe": -0.181,
+  "first": 201107,
+  "last": 202409
+ },
+ "CENTURY|Currencies Momentum|LATER 2024-10..end": {
+  "n_months": 17,
+  "ann_mean": 0.0315,
+  "ann_vol": 0.0316,
+  "sharpe": 0.998,
+  "first": 202410,
+  "last": 202602
+ },
+ "CENTURY|Commodities Momentum|IS 2011-07..2024-09": {
+  "n_months": 159,
+  "ann_mean": -0.0301,
+  "ann_vol": 0.1979,
+  "sharpe": -0.152,
+  "first": 201107,
+  "last": 202409
+ },
+ "CENTURY|Commodities Momentum|LATER 2024-10..end": {
+  "n_months": 17,
+  "ann_mean": 0.284,
+  "ann_vol": 0.1614,
+  "sharpe": 1.76,
+  "first": 202410,
+  "last": 202602
+ },
+ "CENTURY|All Macro Momentum|IS 2011-07..2024-09": {
+  "n_months": 159,
+  "ann_mean": 0.0018,
+  "ann_vol": 0.0422,
+  "sharpe": 0.043,
+  "first": 201107,
+  "last": 202409
+ },
+ "CENTURY|All Macro Momentum|LATER 2024-10..end": {
+  "n_months": 17,
+  "ann_mean": 0.0215,
+  "ann_vol": 0.0829,
+  "sharpe": 0.26,
+  "first": 202410,
+  "last": 202602
+ },
+ "TSMOM|TSMOM|IS 2011-07..2024-09": {
+  "n_months": 159,
+  "ann_mean": 0.0422,
+  "ann_vol": 0.137,
+  "sharpe": 0.308,
+  "first": 201107,
+  "last": 202409
+ },
+ "TSMOM|TSMOM|LATER 2024-10..end": {
+  "n_months": 20,
+  "ann_mean": 0.086,
+  "ann_vol": 0.0882,
+  "sharpe": 0.975,
+  "first": 202410,
+  "last": 202605
+ },
+ "TSMOM|TSMOM^CM|IS 2011-07..2024-09": {
+  "n_months": 159,
+  "ann_mean": 0.0064,
+  "ann_vol": 0.1624,
+  "sharpe": 0.039,
+  "first": 201107,
+  "last": 202409
+ },
+ "TSMOM|TSMOM^CM|LATER 2024-10..end": {
+  "n_months": 20,
+  "ann_mean": 0.1636,
+  "ann_vol": 0.1339,
+  "sharpe": 1.221,
+  "first": 202410,
+  "last": 202605
+ },
+ "TSMOM|TSMOM^EQ|IS 2011-07..2024-09": {
+  "n_months": 159,
+  "ann_mean": 0.0016,
+  "ann_vol": 0.2625,
+  "sharpe": 0.006,
+  "first": 201107,
+  "last": 202409
+ },
+ "TSMOM|TSMOM^EQ|LATER 2024-10..end": {
+  "n_months": 20,
+  "ann_mean": 0.2348,
+  "ann_vol": 0.2845,
+  "sharpe": 0.825,
+  "first": 202410,
+  "last": 202605
+ },
+ "TSMOM|TSMOM^FI|IS 2011-07..2024-09": {
+  "n_months": 159,
+  "ann_mean": 0.1493,
+  "ann_vol": 0.3064,
+  "sharpe": 0.487,
+  "first": 201107,
+  "last": 202409
+ },
+ "TSMOM|TSMOM^FI|LATER 2024-10..end": {
+  "n_months": 20,
+  "ann_mean": -0.1026,
+  "ann_vol": 0.1892,
+  "sharpe": -0.542,
+  "first": 202410,
+  "last": 202605
+ },
+ "TSMOM|TSMOM^FX|IS 2011-07..2024-09": {
+  "n_months": 159,
+  "ann_mean": 0.028,
+  "ann_vol": 0.1851,
+  "sharpe": 0.151,
+  "first": 201107,
+  "last": 202409
+ },
+ "TSMOM|TSMOM^FX|LATER 2024-10..end": {
+  "n_months": 20,
+  "ann_mean": 0.0234,
+  "ann_vol": 0.188,
+  "sharpe": 0.125,
+  "first": 202410,
+  "last": 202605
+ }
+}

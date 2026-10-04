@@ -1,0 +1,109 @@
+{
+  "stance_scorer": "chrono walk-forward stance model (DEVIATION_D1 + D1a = HYPOTHESIS_v2 Amendments 2-3; model Y scores year Y; 3-seed mean probabilities, argmax; label-year rule true)",
+  "placebo": false,
+  "chrono_root": "<scratch>\\chrono\\full",
+  "inputs_sha256": {
+    "<scratch>\\chrono\\full\\scores\\doc_scores_chrono.parquet": "a9d7d206f00df4d596b2d482ed704f4d9b3dd8f156e53afcc19cd96d4fe82d20",
+    "<scratch>\\chrono\\full\\scores\\presser_meetings_chrono.parquet": "252b62b53f6952c398d255cd122d5b78c1600b6e9b22f3bb6c66a667df751a91",
+    "<scratch>\\presser_bt\\text\\answers.parquet": "b37fd1f5361b03caadc3f9832aa9d2057e4f92a42ccf717222d7065af3cd5013",
+    "<scratch>\\presser_bt\\text\\meetings.parquet": "350b05bd9db34aad8a6591b3d8385a30d765a1b13554f2d1abeb0a9f57a08821"
+  },
+  "merge_meta": {
+    "years_merged": [
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "years_absent": [],
+    "n_docs": 5225,
+    "docs_by_source": {
+      "presser_answer": 2026,
+      "presser_question": 2026,
+      "speech": 828,
+      "statement": 97,
+      "minutes": 94,
+      "presser_doc": 79,
+      "presser_statement": 75
+    },
+    "n_answers": 2026,
+    "n_meetings": 75,
+    "label_year_rule": "true",
+    "seeds_by_year": {
+      "2015": "42,43,44",
+      "2016": "42,43,44",
+      "2017": "42,43,44",
+      "2018": "42,43,44",
+      "2019": "42,43,44",
+      "2020": "42,43,44",
+      "2021": "42,43,44",
+      "2022": "42,43,44",
+      "2023": "42,43,44",
+      "2024": "42,43,44",
+      "2025": "42,43,44",
+      "2026": "42,43,44"
+    },
+    "nonspec_years": {}
+  },
+  "crosscheck_vs_team_merge": {
+    "statement_score": {
+      "max_abs_diff": 0.0,
+      "nan_pattern_mismatch": 0
+    },
+    "qa_mean_score": {
+      "max_abs_diff": 0.0,
+      "nan_pattern_mismatch": 0
+    },
+    "H1": {
+      "max_abs_diff": 0.0,
+      "nan_pattern_mismatch": 0
+    },
+    "qa_pooled_score": {
+      "max_abs_diff": 0.0,
+      "nan_pattern_mismatch": 0
+    },
+    "q_mean_score": {
+      "max_abs_diff": 0.0,
+      "nan_pattern_mismatch": 0
+    },
+    "statement_score_incl_roster": {
+      "max_abs_diff": 0.0,
+      "nan_pattern_mismatch": 0
+    },
+    "qa_mean_score_ge40w": {
+      "max_abs_diff": 0.0,
+      "nan_pattern_mismatch": 0
+    }
+  },
+  "n_answers": 2026,
+  "n_answers_scorable_chrono": 1977,
+  "n_answers_unit_count_equal_textpipe": 2021,
+  "n_answers_textpipe_ge1_but_no_chrono_score": 5,
+  "n_meetings": 75,
+  "n_meetings_H1": 75,
+  "H1_by_sample": {
+    "count": {
+      "confirm_2023_2026_powell": 27,
+      "contaminated_2016_2022": 45,
+      "warsh_2026": 3
+    },
+    "mean": {
+      "confirm_2023_2026_powell": 0.0716605150130962,
+      "contaminated_2016_2022": 0.16758516720409425,
+      "warsh_2026": -0.0996620012970632
+    },
+    "std": {
+      "confirm_2023_2026_powell": 0.13077233819863165,
+      "contaminated_2016_2022": 0.17172030551305228,
+      "warsh_2026": 0.2669639856478091
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "trend_momentum_basis_reversal",
+  "sources": [
+    "https://www.cxoadvisory.com/commodity-futures/commodity-futures-term-structure-reversals",
+    "https://quantreturns.substack.com/p/when-futures-overreact-a-weekly-edge"
+  ],
+  "variant": "V3",
+  "rule": "weekly time series on 15 commodities: w=-sign(S)*0.40/sigma/N, book 10%, gross<=3, next_close",
+  "is_window": "2011-06-21..2024-10-02",
+  "series_start": "2011-06-21",
+  "series_end": "2026-10-02",
+  "columns": "daily excess returns over T-bill: net_1x (realistic costs), net_2x (2x costs), gross",
+  "in_sample_end": "2024-10-02"
+}

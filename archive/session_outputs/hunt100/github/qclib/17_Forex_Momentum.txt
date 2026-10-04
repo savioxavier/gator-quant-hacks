@@ -1,0 +1,10 @@
+### 01 Introduction.html
+Momentum is a trend following strategy, where the strategy buys the assets which have performed well in the past and sells the assets which have performed bad.
+### 02 Method.html
+This algorithm applies momentum to the forex market. Our universe consists of 15 forex pairs
+ and covers period from 2006 to 2018. The algorithm goes long 3 currencies with strongest 12-month
+ momentum against USD and goes short 3 currencies with lowest 12-month momentum against USD.
+### 03 Algorithm.html
+
+### 04 Source.html
+Quantpedia - FX Momentum

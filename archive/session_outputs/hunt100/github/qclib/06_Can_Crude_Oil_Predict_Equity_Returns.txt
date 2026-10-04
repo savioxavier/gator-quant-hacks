@@ -1,0 +1,67 @@
+### 01 Abstract.html
+In this tutorial we use regression to predict the return from the stock market and compare it to the short-term U.S. T-bill rate. It is based on the paper?" Striking Oil: Another Puzzle? ". by Gerben, Ben and Benjamin (2007).
+ If the predicted return is larger than the risk-free rate, the portfolio is fully invested in stock; if the predicted return is lower than the risk-free rate, the portfolio is invested in short-term U.S T-bills. The backtesting period starts in 1980 and is divided into an in-sample period where regression analysis is made and an out?of sample period where the regression result is embedded "statically" into the strategy.
+ In our implementation of the strategy we adapt the method of the original paper to make it more applicable to the current market. We have set our backtesting period to be from 2010 to 2017 and we refresh our regression analysis each month to form a rolling dynamic projection. This is because?empirical evidence shows?us the correlation between oil and stocks is not as strong as in the 1980's. We use?the price of S&P GSCI? Crude Oil Total Return Index ETNs to represent spot oil price, and import T-bill data from Quandl by defining a custom class.?We use the "Schedule" API to trigger an event every month automatically?and the "History" function to retrieve data for regression analysis.
+ Our analysis shows this strategy under performs the market in recent years. In the 9 year analysis period the algorithm was mostly long the S&P500 index and only 9 trades were performed as the markets were strongly bullish. The trades could potentially simply be due to the weakening of the relationship between stocks and oil.
+### 03 Method.html
+The algorithm implementation consists of mainly three parts: Defining the custom imported data, initialization of the strategy parameters, and monthly re-balancing of the portfolio.
+Step 1: Defining Custom Imported Data 
+ We import T-Bill data from Quandl - a marketplace for financial, economic and alternative data. This requires defining a small class that tells QuantConnect how to interpret?the Quandl data.
+class TBill(PythonData):
+ def GetSource(self, config, date, isLiveMode):
+ return SubscriptionDataSource("https://www.quandl.com/api/v3/datasets/USTREASURY/BILLRATES.csv?api_key=XXXXXXXXX&order=asc", SubscriptionTransportMedium.RemoteFile)
+ def Reader(self, config, line, date, isLiveMode):
+ tbill = TBill()
+ tbill.Symbol = config.Symbol
+ # Example Line Format:
+ # Date 4 Wk Bank Discount Rate
+ # 2017-06-01 0.8
+ if not (line.strip() and line[0].isdigit()): return None
+ try:
+ data = line.split(',')
+ value = float(data[1])*0.01
+ value = decimal.Decimal(value)
+ if value == 0: return None
+ tbill.Time = datetime.strptime(data[0], "%Y-%m-%d")
+ tbill.Value = value
+ tbill["Close"] = float(value)
+ return tbill;
+ except ValueError:
+ return None
+ We first provide the source of the data as a URL to Quandl's API in the GetSource method. We need to make sure the data is?organized in ascending order which is done with the?"order=asc" parameter.?You need to substitute the API key in the URL for your personal Quandl API token.
+ The Reader method parses a line of the data file. When using custom data you need to minimally set?the Time property?and Value property. In this example we find the value property from the headings in the spreadsheet is the second column and we reference it with data[1]. We set the Close property to the same value.
+ In our "Initialize" function we use the following commands to add the custom data into our portfolio.
+self.AddData(TBill, "tbill")
+self.tbill = self.Securities["tbill"].Symbol
+Step 2: Initialization of the Strategy Parameters 
+ In our?"Initialize" function we set the cash amount, start-end date as well as other parameters that are specific to this strategy.?We set two parameters for the regression analysis period:
+self.regPeriod = 24
+self.daysInMonth = 21
+ The variable "regPeriod" indicates how many months we are going to take into consideration in our regression analysis. We assume 21 days per month and request a historical period of approximately 2 years. We jump back in steps of 21 days and assume it is roughly 1 month of return.
+ We need to set up "Schedule" function in "Initialize" so as to trigger the monthly re-balancing function every month.
+self.Schedule.On(self.DateRules.MonthStart(self.spy), self.TimeRules.AfterMarketOpen(self.spy),Action(self.MonthlyReg))
+Step 3: Monthly Re-balancing of the Portfolio 
+ Every month we reconstruct the regression analysis to determine whether to be 100% long stocks or T-Bill contracts. We perform this re-balancing in the MonthlyReg function at the start of each month.?We use the History function to retrieve historical data for oil and stocks?and then divide the T-Bill rate by 12 to make it comparable to the monthly expected return of stocks.
+hist = self.History([self.oil, self.spy], self.regPeriod*self.daysInMonth, Resolution.Daily)
+oilSeries = hist.loc[str(self.oil)]['close'][self.daysInMonth-1:self.regPeriod*self.daysInMonth:self.daysInMonth]
+spySeries = hist.loc[str(self.spy)]['close'][self.daysInMonth-1:self.regPeriod*self.daysInMonth:self.daysInMonth]
+rf = float(self.Securities[self.tbill].Price)/12.0
+ Then we make an OLS regression by using "numpy" to make the prediction on next month's stock return.
+x = np.array(oilSeries)
+x = (np.diff(x)/x[:-1])
+y = np.array(spySeries)
+y = (np.diff(y)/y[:-1])
+A = np.vstack([x[:-1],np.ones(len(x[:-1]))]).T
+beta, alpha = np.linalg.lstsq(A,y[1:])[0]
+yPred = alpha + x[-1]*beta
+ Finally, we compare the expected return of stocks with risk-free rate. If the former is larger than the latter, we invest fully in stocks; otherwise we liquidate our holdings. Because we cannot purchase T-Bill contracts the performance is likely slightly underestimated.
+if yPred > rf:
+ self.SetHoldings(self.spy, 1)
+else:
+ self.Liquidate(self.spy)
+### 04 Summary.html
+We backtested this strategy over the period beginning in 2010 and ending in 2017. It has a sharpe ratio of 0.72 beating the benchmark's 0.6 over a similar period.
+ Although the annual return closely matches that of the paper,?it is largely a coincidence of the strong bull market in recent years.?If we look at the monthly regression results, we could find that in most cases, the p-value is not small enough to reject the null hypothesis that there is no correlation between oil and stocks. So the investment decisions based on the insignificant statistical results are almost meaningless. The performance of this strategy cannot effectively beat the benchmark, mostly?due to?the weakened correlation between oil and stocks.
+ Further research and backtesting could be conducted on assets other than oil that have a stronger relationship with stocks.
+### 06 References.html
+Gerben, Driesprong (2007). Striking Oil: Another Puzzle? page 1, Online Copy

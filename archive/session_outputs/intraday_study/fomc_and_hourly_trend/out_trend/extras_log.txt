@@ -1,0 +1,44 @@
+  market    corr  sr_engine  sr_16h  mean_diff_bp_per_day
+0     ES  0.9999     0.7146  0.7192               -0.0213
+1     ZN  1.0000     0.1910  0.1891                0.0040
+    system     speed market   costs  alpha_ann_pct  alpha_t_nw   beta  beta_t
+0    daily     16_64     ES   gross         -1.546      -0.443  0.244   3.765
+1    daily     16_64     ES  net_1x         -1.745      -0.499  0.244   3.765
+2    daily     16_64     ZN   gross          3.497       1.169  0.060   0.383
+3    daily     16_64     ZN  net_1x          2.857       0.955  0.061   0.386
+4    daily       2_8     ES   gross          0.581       0.174 -0.199  -4.491
+5    daily       2_8     ES  net_1x         -0.233      -0.069 -0.199  -4.486
+6    daily       2_8     ZN   gross         -0.321      -0.106  0.101   0.753
+7    daily       2_8     ZN  net_1x         -3.705      -1.218  0.103   0.766
+8    daily      4_16     ES   gross          0.178       0.059 -0.126  -2.449
+9    daily      4_16     ES  net_1x         -0.249      -0.082 -0.126  -2.444
+10   daily      4_16     ZN   gross          0.766       0.248  0.071   0.480
+11   daily      4_16     ZN  net_1x         -0.963      -0.310  0.072   0.486
+12   daily      8_32     ES   gross         -1.174      -0.356  0.049   0.813
+13   daily      8_32     ES  net_1x         -1.435      -0.435  0.049   0.815
+14   daily      8_32     ZN   gross          2.473       0.785  0.035   0.218
+15   daily      8_32     ZN  net_1x          1.488       0.472  0.035   0.220
+16   daily  combined     ES   gross         -0.549      -0.177 -0.013  -0.242
+17   daily  combined     ES  net_1x         -0.937      -0.302 -0.013  -0.238
+18   daily  combined     ZN   gross          1.792       0.579  0.077   0.505
+19   daily  combined     ZN  net_1x          0.216       0.069  0.078   0.511
+20  hourly     16_64     ES   gross         -0.128      -0.038 -0.161  -4.355
+21  hourly     16_64     ES  net_1x         -2.181      -0.646 -0.160  -4.345
+22  hourly     16_64     ZN   gross         -2.772      -0.974  0.019   0.174
+23  hourly     16_64     ZN  net_1x        -10.987      -3.808  0.020   0.187
+24  hourly    32_128     ES   gross          1.148       0.342 -0.196  -4.671
+25  hourly    32_128     ES  net_1x          0.057       0.017 -0.196  -4.666
+26  hourly    32_128     ZN   gross         -1.053      -0.361  0.071   0.575
+27  hourly    32_128     ZN  net_1x         -5.378      -1.828  0.073   0.591
+28  hourly    64_256     ES   gross          1.655       0.529 -0.174  -3.733
+29  hourly    64_256     ES  net_1x          1.065       0.340 -0.174  -3.730
+30  hourly    64_256     ZN   gross          0.354       0.119  0.075   0.549
+31  hourly    64_256     ZN  net_1x         -1.958      -0.657  0.076   0.556
+32  hourly      8_32     ES   gross          0.943       0.287 -0.123  -3.871
+33  hourly      8_32     ES  net_1x         -2.963      -0.896 -0.123  -3.848
+34  hourly      8_32     ZN   gross         -4.199      -1.585 -0.034  -0.376
+35  hourly      8_32     ZN  net_1x        -20.048      -7.391 -0.034  -0.376
+36  hourly  combined     ES   gross          0.997       0.311 -0.173  -4.379
+37  hourly  combined     ES  net_1x         -0.792      -0.246 -0.173  -4.369
+38  hourly  combined     ZN   gross         -1.931      -0.695  0.036   0.309
+39  hourly  combined     ZN  net_1x         -9.060      -3.218  0.037   0.317

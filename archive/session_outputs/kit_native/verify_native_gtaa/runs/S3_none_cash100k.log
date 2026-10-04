@@ -1,0 +1,113 @@
+2026-10-03 14:23:23.828 INFO webull.main [Backtest] strategy=gqh_gtaa symbols=['SPY', 'EFA', 'IEF', 'VNQ', 'DBC'] params={}
+2026-10-03 14:23:23.828 INFO webull.main [Backtest] starting cash: 100000.00
+2026-10-03 14:23:27.526 INFO webull.main ============================================================
+2026-10-03 14:23:27.526 INFO webull.main [Backtest] Result Summary
+2026-10-03 14:23:27.526 INFO webull.main ============================================================
+2026-10-03 14:23:27.526 INFO webull.main Starting cash    : 100000.00
+2026-10-03 14:23:27.526 INFO webull.main Final cash       : 290095.22
+2026-10-03 14:23:27.526 INFO webull.main Net P&L          : 190095.22 (190.10%)
+2026-10-03 14:23:27.526 INFO webull.main Max drawdown     : 15.80% (21753.15)
+2026-10-03 14:23:27.526 INFO webull.main Sharpe ratio     : 0.6714 (annualized)
+2026-10-03 14:23:27.526 INFO webull.main Total trades     : 96 (won=41, lost=52, win rate=42.71%)
+2026-10-03 14:23:27.526 INFO webull.main Trades net P&L   : 142969.87
+2026-10-03 14:23:27.526 INFO webull.main ============================================================
+2026-10-03 14:23:27.526 INFO webull.main [Backtest] Trade-by-trade detail (93 closed trade(s)):
+2026-10-03 14:23:27.526 INFO webull.main   #1 IEF LONG size=421 entry=48.30@2006-01-03 16:00:00-05:00 exit=48.05@2006-02-01 16:00:00-05:00 pnl=-106.65 pnlcomm=-106.65 commission=0.00 bars=20
+2026-10-03 14:23:27.526 INFO webull.main   #2 DBC LONG size=1148 entry=20.24@2006-12-01 16:00:00-05:00 exit=19.61@2007-02-01 16:00:00-05:00 pnl=-936.59 pnlcomm=-936.59 commission=0.00 bars=40
+2026-10-03 14:23:27.526 INFO webull.main   #3 IEF LONG size=452 entry=48.63@2006-08-01 16:00:00-04:00 exit=49.75@2007-07-02 16:00:00-04:00 pnl=860.63 pnlcomm=860.63 commission=0.00 bars=230
+2026-10-03 14:23:27.526 INFO webull.main   #4 VNQ LONG size=822 entry=29.51@2005-11-01 16:00:00-05:00 exit=31.97@2007-07-02 16:00:00-04:00 pnl=6197.63 pnlcomm=6197.63 commission=0.00 bars=417
+2026-10-03 14:23:27.526 INFO webull.main   #5 SPY LONG size=242 entry=92.57@2005-11-01 16:00:00-05:00 exit=104.11@2008-01-02 16:00:00-05:00 pnl=5384.61 pnlcomm=5384.61 commission=0.00 bars=544
+2026-10-03 14:23:27.526 INFO webull.main   #6 EFA LONG size=655 entry=38.30@2005-11-01 16:00:00-05:00 exit=45.30@2008-01-02 16:00:00-05:00 pnl=9168.44 pnlcomm=9168.44 commission=0.00 bars=544
+2026-10-03 14:23:27.526 INFO webull.main   #7 VNQ LONG size=866 entry=30.50@2008-05-01 16:00:00-04:00 exit=26.79@2008-07-01 16:00:00-04:00 pnl=-3714.24 pnlcomm=-3714.24 commission=0.00 bars=42
+2026-10-03 14:23:27.526 INFO webull.main   #8 DBC LONG size=1159 entry=27.91@2007-03-01 16:00:00-05:00 exit=27.88@2008-10-01 16:00:00-04:00 pnl=9031.73 pnlcomm=9031.73 commission=0.00 bars=401
+2026-10-03 14:23:27.526 INFO webull.main   #9 VNQ LONG size=900 entry=24.46@2008-09-02 16:00:00-04:00 exit=19.75@2008-11-03 16:00:00-05:00 pnl=-8063.02 pnlcomm=-8063.02 commission=0.00 bars=44
+2026-10-03 14:23:27.526 INFO webull.main   #10 IEF LONG size=469 entry=56.06@2007-08-01 16:00:00-04:00 exit=60.04@2009-06-01 16:00:00-04:00 pnl=4395.76 pnlcomm=4395.76 commission=0.00 bars=461
+2026-10-03 14:23:27.526 INFO webull.main   #11 IEF LONG size=424 entry=62.07@2009-10-01 16:00:00-04:00 exit=60.45@2010-01-04 16:00:00-05:00 pnl=-754.63 pnlcomm=-754.63 commission=0.00 bars=64
+2026-10-03 14:23:27.527 INFO webull.main   #12 DBC LONG size=1276 entry=19.84@2009-08-03 16:00:00-04:00 exit=19.30@2010-02-01 16:00:00-05:00 pnl=-660.28 pnlcomm=-660.28 commission=0.00 bars=125
+2026-10-03 14:23:27.527 INFO webull.main   #13 IEF LONG size=428 entry=61.68@2010-02-01 16:00:00-05:00 exit=61.24@2010-04-01 16:00:00-04:00 pnl=-198.64 pnlcomm=-198.64 commission=0.00 bars=42
+2026-10-03 14:23:27.527 INFO webull.main   #14 EFA LONG size=864 entry=30.18@2009-06-01 16:00:00-04:00 exit=29.19@2010-06-01 16:00:00-04:00 pnl=420.72 pnlcomm=420.72 commission=0.00 bars=252
+2026-10-03 14:23:27.527 INFO webull.main   #15 DBC LONG size=1350 entry=19.97@2010-03-01 16:00:00-05:00 exit=18.40@2010-06-01 16:00:00-04:00 pnl=-2357.72 pnlcomm=-2357.72 commission=0.00 bars=64
+2026-10-03 14:23:27.527 INFO webull.main   #16 SPY LONG size=355 entry=72.17@2009-07-01 16:00:00-04:00 exit=77.47@2010-07-01 16:00:00-04:00 pnl=3373.74 pnlcomm=3373.74 commission=0.00 bars=252
+2026-10-03 14:23:27.527 INFO webull.main   #17 SPY LONG size=325 entry=83.92@2010-08-02 16:00:00-04:00 exit=80.16@2010-09-01 16:00:00-04:00 pnl=-1261.32 pnlcomm=-1261.32 commission=0.00 bars=22
+2026-10-03 14:23:27.527 INFO webull.main   #18 EFA LONG size=836 entry=32.81@2010-08-02 16:00:00-04:00 exit=31.73@2010-09-01 16:00:00-04:00 pnl=-944.09 pnlcomm=-944.09 commission=0.00 bars=22
+2026-10-03 14:23:27.527 INFO webull.main   #19 IEF LONG size=459 entry=64.32@2010-05-03 16:00:00-04:00 exit=65.56@2011-01-03 16:00:00-05:00 pnl=1490.62 pnlcomm=1490.62 commission=0.00 bars=170
+2026-10-03 14:23:27.527 INFO webull.main   #20 SPY LONG size=311 entry=89.63@2010-10-01 16:00:00-04:00 exit=93.69@2011-09-01 16:00:00-04:00 pnl=2156.90 pnlcomm=2156.90 commission=0.00 bars=232
+2026-10-03 14:23:27.527 INFO webull.main   #21 EFA LONG size=788 entry=35.03@2010-10-01 16:00:00-04:00 exit=34.02@2011-09-01 16:00:00-04:00 pnl=-142.30 pnlcomm=-142.30 commission=0.00 bars=232
+2026-10-03 14:23:27.527 INFO webull.main   #22 VNQ LONG size=1424 entry=26.31@2009-08-03 16:00:00-04:00 exit=31.48@2011-09-01 16:00:00-04:00 pnl=16718.77 pnlcomm=16718.77 commission=0.00 bars=526
+2026-10-03 14:23:27.527 INFO webull.main   #23 DBC LONG size=1317 entry=22.61@2010-10-01 16:00:00-04:00 exit=21.40@2011-10-03 16:00:00-04:00 pnl=1374.75 pnlcomm=1374.75 commission=0.00 bars=253
+2026-10-03 14:23:27.527 INFO webull.main   #24 VNQ LONG size=886 entry=31.06@2011-11-01 16:00:00-04:00 exit=30.91@2011-12-01 16:00:00-05:00 pnl=-149.03 pnlcomm=-149.03 commission=0.00 bars=21
+2026-10-03 14:23:27.527 INFO webull.main   #25 EFA LONG size=820 entry=35.13@2012-03-01 16:00:00-05:00 exit=30.31@2012-06-01 16:00:00-04:00 pnl=-4420.35 pnlcomm=-4420.35 commission=0.00 bars=64
+2026-10-03 14:23:27.527 INFO webull.main   #26 DBC LONG size=1168 entry=24.63@2012-03-01 16:00:00-05:00 exit=21.04@2012-06-01 16:00:00-04:00 pnl=-4698.48 pnlcomm=-4698.48 commission=0.00 bars=64
+2026-10-03 14:23:27.527 INFO webull.main   #27 DBC LONG size=1161 entry=24.48@2012-09-04 16:00:00-04:00 exit=23.38@2012-11-01 16:00:00-04:00 pnl=-1346.82 pnlcomm=-1346.82 commission=0.00 bars=40
+2026-10-03 14:23:27.527 INFO webull.main   #28 IEF LONG size=448 entry=74.19@2011-06-01 16:00:00-04:00 exit=78.44@2013-02-01 16:00:00-05:00 pnl=3901.10 pnlcomm=3901.10 commission=0.00 bars=420
+2026-10-03 14:23:27.527 INFO webull.main   #29 DBC LONG size=1192 entry=23.91@2012-12-03 16:00:00-05:00 exit=22.73@2013-03-01 16:00:00-05:00 pnl=-1538.90 pnlcomm=-1538.90 commission=0.00 bars=60
+2026-10-03 14:23:27.527 INFO webull.main   #30 IEF LONG size=374 entry=79.30@2013-04-01 16:00:00-04:00 exit=77.78@2013-06-03 16:00:00-04:00 pnl=-572.80 pnlcomm=-572.80 commission=0.00 bars=44
+2026-10-03 14:23:27.527 INFO webull.main   #31 VNQ LONG size=882 entry=36.16@2012-01-03 16:00:00-05:00 exit=38.18@2013-09-03 16:00:00-04:00 pnl=4331.07 pnlcomm=4331.07 commission=0.00 bars=418
+2026-10-03 14:23:27.527 INFO webull.main   #32 VNQ LONG size=746 entry=41.21@2013-11-01 16:00:00-04:00 exit=38.93@2013-12-02 16:00:00-05:00 pnl=-1788.29 pnlcomm=-1788.29 commission=0.00 bars=20
+2026-10-03 14:23:27.527 INFO webull.main   #33 DBC LONG size=1415 entry=22.35@2014-03-03 16:00:00-05:00 exit=21.32@2014-08-01 16:00:00-04:00 pnl=-1606.42 pnlcomm=-1606.42 commission=0.00 bars=106
+2026-10-03 14:23:27.527 INFO webull.main   #34 EFA LONG size=829 entry=39.33@2012-09-04 16:00:00-04:00 exit=44.91@2014-10-01 16:00:00-04:00 pnl=8390.53 pnlcomm=8390.53 commission=0.00 bars=521
+2026-10-03 14:23:27.527 INFO webull.main   #35 VNQ LONG size=744 entry=44.58@2014-02-03 16:00:00-05:00 exit=50.16@2015-06-01 16:00:00-04:00 pnl=6867.43 pnlcomm=6867.43 commission=0.00 bars=333
+2026-10-03 14:23:27.527 INFO webull.main   #36 IEF LONG size=395 entry=78.35@2014-02-03 16:00:00-05:00 exit=80.60@2015-07-01 16:00:00-04:00 pnl=1710.06 pnlcomm=1710.06 commission=0.00 bars=355
+2026-10-03 14:23:27.527 INFO webull.main   #37 SPY LONG size=284 entry=139.18@2012-02-01 16:00:00-05:00 exit=160.61@2015-09-01 16:00:00-04:00 pnl=13989.23 pnlcomm=13989.23 commission=0.00 bars=901
+2026-10-03 14:23:27.527 INFO webull.main   #38 EFA LONG size=723 entry=46.16@2015-03-02 16:00:00-05:00 exit=42.14@2015-09-01 16:00:00-04:00 pnl=-2897.91 pnlcomm=-2897.91 commission=0.00 bars=128
+2026-10-03 14:23:27.527 INFO webull.main   #39 IEF LONG size=404 entry=82.19@2015-08-03 16:00:00-04:00 exit=82.46@2015-09-01 16:00:00-04:00 pnl=128.54 pnlcomm=128.54 commission=0.00 bars=21
+2026-10-03 14:23:27.527 INFO webull.main   #40 IEF LONG size=383 entry=83.58@2015-10-01 16:00:00-04:00 exit=82.66@2016-01-04 16:00:00-05:00 pnl=-382.82 pnlcomm=-382.82 commission=0.00 bars=64
+2026-10-03 14:23:27.527 INFO webull.main   #41 SPY LONG size=184 entry=172.75@2015-11-02 16:00:00-05:00 exit=161.91@2016-02-01 16:00:00-05:00 pnl=-2240.14 pnlcomm=-2240.14 commission=0.00 bars=61
+2026-10-03 14:23:27.527 INFO webull.main   #42 EFA LONG size=759 entry=42.14@2016-06-01 16:00:00-04:00 exit=41.59@2016-07-01 16:00:00-04:00 pnl=-484.88 pnlcomm=-484.88 commission=0.00 bars=22
+2026-10-03 14:23:27.527 INFO webull.main   #43 IEF LONG size=369 entry=85.66@2016-02-01 16:00:00-05:00 exit=86.62@2016-11-01 16:00:00-04:00 pnl=652.70 pnlcomm=652.70 commission=0.00 bars=191
+2026-10-03 14:23:27.527 INFO webull.main   #44 VNQ LONG size=621 entry=53.10@2015-11-02 16:00:00-05:00 exit=54.66@2016-11-01 16:00:00-04:00 pnl=2071.82 pnlcomm=2071.82 commission=0.00 bars=252
+2026-10-03 14:23:27.527 INFO webull.main   #45 EFA LONG size=769 entry=43.09@2016-08-01 16:00:00-04:00 exit=42.25@2016-12-01 16:00:00-05:00 pnl=-610.38 pnlcomm=-610.38 commission=0.00 bars=86
+2026-10-03 14:23:27.527 INFO webull.main   #46 VNQ LONG size=577 entry=58.18@2017-03-01 16:00:00-05:00 exit=56.88@2017-04-03 16:00:00-04:00 pnl=-804.53 pnlcomm=-804.53 commission=0.00 bars=23
+2026-10-03 14:23:27.527 INFO webull.main   #47 DBC LONG size=2595 entry=12.48@2016-05-02 16:00:00-04:00 exit=12.52@2017-05-01 16:00:00-04:00 pnl=869.57 pnlcomm=869.57 commission=0.00 bars=251
+2026-10-03 14:23:27.527 INFO webull.main   #48 IEF LONG size=397 entry=85.45@2017-06-01 16:00:00-04:00 exit=85.19@2017-12-01 16:00:00-05:00 pnl=-88.92 pnlcomm=-88.92 commission=0.00 bars=128
+2026-10-03 14:23:27.527 INFO webull.main   #49 VNQ LONG size=586 entry=58.19@2017-07-03 16:00:00-04:00 exit=56.57@2018-02-01 16:00:00-05:00 pnl=-1000.72 pnlcomm=-1000.72 commission=0.00 bars=147
+2026-10-03 14:23:27.527 INFO webull.main   #50 EFA LONG size=763 entry=46.60@2017-01-03 16:00:00-05:00 exit=54.03@2018-06-01 16:00:00-04:00 pnl=7403.45 pnlcomm=7403.45 commission=0.00 bars=355
+2026-10-03 14:23:27.527 INFO webull.main   #51 EFA LONG size=679 entry=54.13@2018-08-01 16:00:00-04:00 exit=52.41@2018-09-04 16:00:00-04:00 pnl=-1211.04 pnlcomm=-1211.04 commission=0.00 bars=23
+2026-10-03 14:23:27.527 INFO webull.main   #52 IEF LONG size=443 entry=83.74@2018-09-04 16:00:00-04:00 exit=82.75@2018-10-01 16:00:00-04:00 pnl=-445.03 pnlcomm=-445.03 commission=0.00 bars=19
+2026-10-03 14:23:27.527 INFO webull.main   #53 SPY LONG size=185 entry=202.18@2016-04-01 16:00:00-04:00 exit=240.96@2018-11-01 16:00:00-04:00 pnl=11608.65 pnlcomm=11608.65 commission=0.00 bars=653
+2026-10-03 14:23:27.527 INFO webull.main   #54 DBC LONG size=2665 entry=13.56@2017-10-02 16:00:00-04:00 exit=14.41@2018-11-01 16:00:00-04:00 pnl=4176.97 pnlcomm=4176.97 commission=0.00 bars=274
+2026-10-03 14:23:27.527 INFO webull.main   #55 SPY LONG size=149 entry=245.92@2018-12-03 16:00:00-05:00 exit=219.50@2019-01-02 16:00:00-05:00 pnl=-4403.66 pnlcomm=-4403.66 commission=0.00 bars=19
+2026-10-03 14:23:27.527 INFO webull.main   #56 VNQ LONG size=640 entry=57.27@2018-06-01 16:00:00-04:00 exit=55.02@2019-01-02 16:00:00-05:00 pnl=-918.86 pnlcomm=-918.86 commission=0.00 bars=147
+2026-10-03 14:23:27.527 INFO webull.main   #57 SPY LONG size=141 entry=250.69@2019-03-01 16:00:00-05:00 exit=246.76@2019-06-03 16:00:00-04:00 pnl=-461.67 pnlcomm=-461.67 commission=0.00 bars=64
+2026-10-03 14:23:27.527 INFO webull.main   #58 EFA LONG size=690 entry=52.14@2019-04-01 16:00:00-04:00 exit=50.66@2019-06-03 16:00:00-04:00 pnl=-1030.50 pnlcomm=-1030.50 commission=0.00 bars=43
+2026-10-03 14:23:27.527 INFO webull.main   #59 DBC LONG size=2696 entry=13.85@2020-01-02 16:00:00-05:00 exit=12.58@2020-02-03 16:00:00-05:00 pnl=-3678.48 pnlcomm=-3678.48 commission=0.00 bars=21
+2026-10-03 14:23:27.527 INFO webull.main   #60 SPY LONG size=135 entry=269.10@2019-07-01 16:00:00-04:00 exit=271.15@2020-03-02 16:00:00-05:00 pnl=751.96 pnlcomm=751.96 commission=0.00 bars=168
+2026-10-03 14:23:27.527 INFO webull.main   #61 EFA LONG size=666 entry=54.08@2019-07-01 16:00:00-04:00 exit=51.21@2020-03-02 16:00:00-05:00 pnl=-1839.53 pnlcomm=-1839.53 commission=0.00 bars=168
+2026-10-03 14:23:27.527 INFO webull.main   #62 VNQ LONG size=562 entry=65.09@2019-02-01 16:00:00-05:00 exit=67.92@2020-03-02 16:00:00-05:00 pnl=3301.04 pnlcomm=3301.04 commission=0.00 bars=271
+2026-10-03 14:23:27.527 INFO webull.main   #63 DBC LONG size=3149 entry=11.75@2020-09-01 16:00:00-04:00 exit=10.99@2020-11-02 16:00:00-05:00 pnl=-2603.10 pnlcomm=-2603.10 commission=0.00 bars=43
+2026-10-03 14:23:27.527 INFO webull.main   #64 IEF LONG size=434 entry=91.91@2018-12-03 16:00:00-05:00 exit=102.23@2020-12-01 16:00:00-05:00 pnl=7364.71 pnlcomm=7364.71 commission=0.00 bars=502
+2026-10-03 14:23:27.527 INFO webull.main   #65 IEF LONG size=448 entry=100.84@2021-08-02 16:00:00-04:00 exit=98.94@2021-10-01 16:00:00-04:00 pnl=-881.88 pnlcomm=-881.88 commission=0.00 bars=43
+2026-10-03 14:23:27.527 INFO webull.main   #66 EFA LONG size=703 entry=57.89@2020-08-03 16:00:00-04:00 exit=66.54@2021-12-01 16:00:00-05:00 pnl=9351.02 pnlcomm=9351.02 commission=0.00 bars=336
+2026-10-03 14:23:27.527 INFO webull.main   #67 EFA LONG size=689 entry=68.80@2022-01-03 16:00:00-05:00 exit=66.44@2022-02-01 16:00:00-05:00 pnl=-1653.55 pnlcomm=-1653.55 commission=0.00 bars=20
+2026-10-03 14:23:27.527 INFO webull.main   #68 IEF LONG size=455 entry=98.96@2021-12-01 16:00:00-05:00 exit=96.81@2022-02-01 16:00:00-05:00 pnl=-1058.13 pnlcomm=-1058.13 commission=0.00 bars=42
+2026-10-03 14:23:27.527 INFO webull.main   #69 SPY LONG size=129 entry=333.90@2020-06-01 16:00:00-04:00 exit=408.32@2022-03-01 16:00:00-05:00 pnl=15568.16 pnlcomm=15568.16 commission=0.00 bars=441
+2026-10-03 14:23:27.527 INFO webull.main   #70 VNQ LONG size=561 entry=75.84@2020-12-01 16:00:00-05:00 exit=85.41@2022-03-01 16:00:00-05:00 pnl=10168.19 pnlcomm=10168.19 commission=0.00 bars=313
+2026-10-03 14:23:27.527 INFO webull.main   #71 SPY LONG size=110 entry=424.80@2022-04-01 16:00:00-04:00 exit=387.97@2022-05-02 16:00:00-04:00 pnl=-4400.61 pnlcomm=-4400.61 commission=0.00 bars=20
+2026-10-03 14:23:27.527 INFO webull.main   #72 VNQ LONG size=519 entry=90.96@2022-04-01 16:00:00-04:00 exit=86.78@2022-05-02 16:00:00-04:00 pnl=-2102.84 pnlcomm=-2102.84 commission=0.00 bars=20
+2026-10-03 14:23:27.527 INFO webull.main   #73 DBC LONG size=3086 entry=19.29@2020-12-01 16:00:00-05:00 exit=21.27@2022-10-03 16:00:00-04:00 pnl=25723.60 pnlcomm=25723.60 commission=0.00 bars=462
+2026-10-03 14:23:27.527 INFO webull.main   #74 SPY LONG size=117 entry=386.64@2022-12-01 16:00:00-05:00 exit=366.62@2023-01-03 16:00:00-05:00 pnl=-2505.86 pnlcomm=-2505.86 commission=0.00 bars=21
+2026-10-03 14:23:27.527 INFO webull.main   #75 IEF LONG size=521 entry=87.02@2023-02-01 16:00:00-05:00 exit=83.67@2023-03-01 16:00:00-05:00 pnl=-1785.88 pnlcomm=-1785.88 commission=0.00 bars=19
+2026-10-03 14:23:27.527 INFO webull.main   #76 VNQ LONG size=577 entry=77.96@2023-02-01 16:00:00-05:00 exit=73.36@2023-03-01 16:00:00-05:00 pnl=-2739.49 pnlcomm=-2739.49 commission=0.00 bars=19
+2026-10-03 14:23:27.527 INFO webull.main   #77 IEF LONG size=510 entry=86.94@2023-04-03 16:00:00-04:00 exit=84.57@2023-08-01 16:00:00-04:00 pnl=-1279.95 pnlcomm=-1279.95 commission=0.00 bars=82
+2026-10-03 14:23:27.527 INFO webull.main   #78 VNQ LONG size=617 entry=73.46@2023-07-03 16:00:00-04:00 exit=72.98@2023-09-01 16:00:00-04:00 pnl=-265.17 pnlcomm=-265.17 commission=0.00 bars=43
+2026-10-03 14:23:27.528 INFO webull.main   #79 EFA LONG size=757 entry=61.45@2022-12-01 16:00:00-05:00 exit=62.32@2023-10-02 16:00:00-04:00 pnl=1594.62 pnlcomm=1594.62 commission=0.00 bars=208
+2026-10-03 14:23:27.528 INFO webull.main   #80 SPY LONG size=117 entry=391.15@2023-02-01 16:00:00-05:00 exit=404.28@2023-11-01 16:00:00-04:00 pnl=2179.24 pnlcomm=2179.24 commission=0.00 bars=189
+2026-10-03 14:23:27.528 INFO webull.main   #81 DBC LONG size=2132 entry=21.32@2023-08-01 16:00:00-04:00 exit=20.33@2024-01-02 16:00:00-05:00 pnl=-2197.72 pnlcomm=-2197.72 commission=0.00 bars=106
+2026-10-03 14:23:27.528 INFO webull.main   #82 IEF LONG size=523 entry=86.33@2024-01-02 16:00:00-05:00 exit=83.38@2024-05-01 16:00:00-04:00 pnl=-1685.43 pnlcomm=-1685.43 commission=0.00 bars=83
+2026-10-03 14:23:27.528 INFO webull.main   #83 VNQ LONG size=607 entry=73.54@2023-12-01 16:00:00-05:00 exit=72.15@2024-05-01 16:00:00-04:00 pnl=-203.95 pnlcomm=-203.95 commission=0.00 bars=103
+2026-10-03 14:23:27.528 INFO webull.main   #84 DBC LONG size=2219 entry=21.19@2024-04-01 16:00:00-04:00 exit=20.72@2024-08-01 16:00:00-04:00 pnl=-940.83 pnlcomm=-940.83 commission=0.00 bars=85
+2026-10-03 14:23:27.528 INFO webull.main   #85 EFA LONG size=669 entry=68.72@2023-12-01 16:00:00-05:00 exit=74.15@2024-12-02 16:00:00-05:00 pnl=5530.87 pnlcomm=5530.87 commission=0.00 bars=251
+2026-10-03 14:23:27.528 INFO webull.main   #86 IEF LONG size=545 entry=85.54@2024-06-03 16:00:00-04:00 exit=86.58@2025-01-02 16:00:00-05:00 pnl=988.42 pnlcomm=988.42 commission=0.00 bars=147
+2026-10-03 14:23:27.528 INFO webull.main   #87 SPY LONG size=100 entry=489.37@2023-12-01 16:00:00-05:00 exit=548.35@2025-04-01 16:00:00-04:00 pnl=10499.03 pnlcomm=10499.03 commission=0.00 bars=332
+2026-10-03 14:23:27.528 INFO webull.main   #88 VNQ LONG size=610 entry=79.52@2024-06-03 16:00:00-04:00 exit=85.81@2025-04-01 16:00:00-04:00 pnl=6059.24 pnlcomm=6059.24 commission=0.00 bars=207
+2026-10-03 14:23:27.528 INFO webull.main   #89 DBC LONG size=2278 entry=21.22@2025-02-03 16:00:00-05:00 exit=19.90@2025-05-01 16:00:00-04:00 pnl=-3209.79 pnlcomm=-3209.79 commission=0.00 bars=61
+2026-10-03 14:23:27.528 INFO webull.main   #90 SPY LONG size=84 entry=601.63@2025-06-02 16:00:00-04:00 exit=650.60@2026-04-01 16:00:00-04:00 pnl=5862.93 pnlcomm=5862.93 commission=0.00 bars=209
+2026-10-03 14:23:27.528 INFO webull.main   #91 VNQ LONG size=573 entry=87.44@2025-09-02 16:00:00-04:00 exit=87.17@2026-04-01 16:00:00-04:00 pnl=21.70 pnlcomm=21.70 commission=0.00 bars=146
+2026-10-03 14:23:27.528 INFO webull.main   #92 IEF LONG size=549 entry=90.50@2025-03-03 16:00:00-05:00 exit=92.63@2026-06-01 16:00:00-04:00 pnl=2006.17 pnlcomm=2006.17 commission=0.00 bars=313
+2026-10-03 14:23:27.528 INFO webull.main   #93 VNQ LONG size=595 entry=95.15@2026-05-01 16:00:00-04:00 exit=89.35@2026-10-01 16:00:00-04:00 pnl=-3402.61 pnlcomm=-3402.61 commission=0.00 bars=105
+2026-10-03 14:23:27.528 INFO webull.main ============================================================
+2026-10-03 14:23:27.528 INFO webull.main [Backtest] visualization disabled (WEBULL_VISUALIZE=false)
+2026-10-03 14:23:27.626 INFO webull.harness [Harness] in_sample     2005-11-01..2024-10-02  kit Sharpe 0.6415  our Sharpe 0.5183  ann 4.93%  max DD -15.80%  orders 12627 (refused 0)
+2026-10-03 14:23:27.626 INFO webull.harness [Harness] out_of_sample 2024-10-03..2026-10-02  kit Sharpe 1.1729  our Sharpe 0.7139  ann 8.11%  max DD -6.33%  orders 1553 (refused 0)
+2026-10-03 14:23:27.626 INFO webull.harness [Harness] full          2005-01-03..2026-10-02  kit Sharpe 0.6714  our Sharpe 0.5236  ann 5.03%  max DD -15.80%  orders 14183 (refused 0)
+2026-10-03 14:23:27.647 INFO webull.harness [Harness] metrics written: <scratch>/kit_native/verify_native_gtaa/runs/S3_none_cash100k.json

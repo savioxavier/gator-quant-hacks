@@ -1,0 +1,37 @@
+variant,family,kind,eligible,description
+A1_RP_LONG_INSTR,a_long_only,futures,True,"30 futures long-only, equal risk per instrument, 10% ex-ante vol, monthly (= forward2 LONG_ONLY_F)"
+A2_RP_LONG_CLASS,a_long_only,futures,True,"30 futures long-only, equal risk per asset class (7 classes), equal within class, 10% vol"
+P2_RP_LONG_EQ_RATES,drift_benchmark,futures,True,"long-only equal risk over the 9 equity-index and Treasury futures only, 10% vol"
+P1_RP_LONG_ES_ZN,drift_benchmark,futures,True,"long-only equal risk ES + ZN, 10% vol"
+B1_GTAA_FUT_INSTR_FIXED,b_gtaa_futures,futures,True,A1 x 10-month SMA long-or-flat filter per instrument; off slots in T-bills (risk budget of on slots unchanged)
+B2_GTAA_FUT_INSTR_RESCALE,b_gtaa_futures,futures,True,"same filter, filtered book rescaled to 10% ex-ante vol (gross <= 3)"
+B3_GTAA_FUT_CLASS_FIXED,b_gtaa_futures,futures,True,"A2 (equal risk per class) x SMA long-or-flat filter, off slots in T-bills"
+E1_LS_SMA10_INSTR,e_long_short_same_signal,futures,True,"A1 x (+1 above SMA / -1 below): the long-short twin of B1 (B1 = 0.5 A1 + 0.5 E1 exactly, gross)"
+E2_LS_SMA10_CLASS,e_long_short_same_signal,futures,True,A2 x (+1/-1): long-short twin of B3
+B4_GTAA_FUT_EQ_RATES_FIXED,post_hoc_b,futures,True,"ADDED AFTER FIRST RUN: P2 (9 equity-index + Treasury futures, equal risk) x SMA long-or-flat filter"
+E4_LS_SMA10_EQ_RATES,post_hoc_b,futures,True,ADDED AFTER FIRST RUN: long-short twin of B4
+C1_FUT5_GTAA_20,c_fut5,futures,True,"S3 on futures: ES, ZN, CL/GC/HG/ZC basket at 20% notional each when above SMA; EFA and VNQ slots have no future -> permanently T-bills"
+C2_FUT5_GTAA_THIRDS,c_fut5,futures,True,same 3 sleeves at 1/3 notional each
+C3_FUT5_BH_20,c_fut5,futures,True,"buy-and-hold twin of C1 (20/20/20, 40% T-bills)"
+C4_FUT5_BH_THIRDS,c_fut5,futures,True,buy-and-hold twin of C2
+C5_FUT5_LS_20,c_fut5,futures,True,long-short twin of C1 (+-20% per sleeve)
+ETF_S3,etf_bridge,etf,True,"frozen S3 (Faber GTAA, 5 ETFs)"
+ETF_BH5,etf_bridge,etf,True,"frozen BH5 (20% each, daily rebalanced)"
+ETF_LS5,etf_bridge,etf,True,"long-short twin of S3 (+-20% per ETF, shorts pay 30 bp/yr borrow)"
+ETF_S3_3SLEEVE_20,etf_bridge,etf,True,S3 rule on SPY/IEF/DBC only at 20% each (ETF analogue of C1)
+ETF_S3_3SLEEVE_THIRDS,etf_bridge,etf,True,S3 rule on SPY/IEF/DBC at 1/3 each (ETF analogue of C2)
+D1_S1_LS_SIGN_TREND,d_long_short,futures,True,"frozen forward-test-2 S1: sign of 21/63/252-day returns, 0.40/sigma/N, 10% ex-ante vol, monthly"
+D2_TSMOM_F,d_long_short,futures,True,frozen forward-test-1 TSMOM_F benchmark (20 futures)
+REF_ES_10VOL,drift_benchmark,futures,True,"frozen ES_10VOL: long ES at 10% ex-ante vol, monthly"
+D_EWMAC_SLOW_LS,d_ewmac,futures,True,"trade-ngin TREND_FOLLOWING-style EWMAC, 6 speeds, 20% risk target, buffered, daily, long-short"
+D_EWMAC_FAST_LS,d_ewmac,futures,True,"trade-ngin TREND_FOLLOWING_FAST-style EWMAC, 5 speeds, 25% risk target, unbuffered, daily, long-short"
+D_EWMAC_7030_LS,d_ewmac,futures,True,"trade-ngin BASE_PORTFOLIO-style 70% slow + 30% fast, long-short"
+D_EWMAC_SLOW_LF,d_ewmac,futures,True,"trade-ngin TREND_FOLLOWING-style EWMAC, 6 speeds, 20% risk target, buffered, daily, long-or-flat (combined forecast floored at 0)"
+D_EWMAC_FAST_LF,d_ewmac,futures,True,"trade-ngin TREND_FOLLOWING_FAST-style EWMAC, 5 speeds, 25% risk target, unbuffered, daily, long-or-flat (combined forecast floored at 0)"
+D_EWMAC_7030_LF,d_ewmac,futures,True,"trade-ngin BASE_PORTFOLIO-style 70% slow + 30% fast, long-or-flat (combined forecast floored at 0)"
+MIX_50A1_50S1,mix,futures,True,daily 50/50 mix of A1 and S1 returns (a long-or-flat version of S1 at the return level; turnover shown is an upper bound)
+DIAG_SAMECLOSE_B1_GTAA_FUT_INSTR_FIXED,diagnostic_lookahead,futures,False,NOT TRADEABLE: decision filled at the close that produced it (trade-ngin backtest convention); measures how much that convention flatters B1_GTAA_FUT_INSTR_FIXED
+DIAG_SAMECLOSE_D1_S1_LS_SIGN_TREND,diagnostic_lookahead,futures,False,NOT TRADEABLE: decision filled at the close that produced it (trade-ngin backtest convention); measures how much that convention flatters D1_S1_LS_SIGN_TREND
+DIAG_SAMECLOSE_D_EWMAC_7030_LS,diagnostic_lookahead,futures,False,NOT TRADEABLE: decision filled at the close that produced it (trade-ngin backtest convention); measures how much that convention flatters D_EWMAC_7030_LS
+DIAG_SAMECLOSE_D_EWMAC_7030_LF,diagnostic_lookahead,futures,False,NOT TRADEABLE: decision filled at the close that produced it (trade-ngin backtest convention); measures how much that convention flatters D_EWMAC_7030_LF
+DIAG_SAMECLOSE_C1_FUT5_GTAA_20,diagnostic_lookahead,futures,False,NOT TRADEABLE: decision filled at the close that produced it (trade-ngin backtest convention); measures how much that convention flatters C1_FUT5_GTAA_20

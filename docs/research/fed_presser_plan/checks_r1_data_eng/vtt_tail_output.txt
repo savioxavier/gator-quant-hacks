@@ -1,0 +1,4 @@
+20240131: video/HLS end 2968.7 s; last CHAIR label cue 2988.1 s; last speech cue end 3046.6 s; last chair answer starts +19.4 s relative to video end
+20240918: video/HLS end 2985.7 s; last CHAIR label cue 2988.9 s; last speech cue end 3039.7 s; last chair answer starts +3.2 s relative to video end
+20251029: video/HLS end 3290.4 s; last CHAIR label cue 3291.3 s; last speech cue end 3314.3 s; last chair answer starts +0.9 s relative to video end
+20250917: video/HLS end 3134.2 s; last CHAIR label cue 3044.2 s; last speech cue end 3130.1 s; last chair answer starts -90.0 s relative to video end

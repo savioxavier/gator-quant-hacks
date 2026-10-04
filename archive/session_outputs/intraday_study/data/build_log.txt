@@ -1,0 +1,100 @@
+raw rows 347270: {'ES.v.0': 97300, 'ZN.v.0': 96408, 'ES.v.1': 92304, 'ZN.v.1': 61258}
+raw span 2010-06-07 00:00:00+00:00 .. 2026-10-02 20:00:00+00:00 (UTC bar starts)
+bars whose 16:00 return day lies past the calendar end (2026-10-02): 2 [['ES', '2026-10-02 16:00:00-04:00'], ['ZN', '2026-10-02 16:00:00-04:00']]
+
+ES: 97300 front bars, 4101 trade dates 2010-06-07 .. 2026-10-02
+  rolls 66; roll bars with return from v1 66, NaN 0
+  roll bar ET hours {20: 50, 19: 16}
+  NaN returns 1 (incl. first bar)
+  gap types {'none': 94197, 'daily_break': 2129, 'weekend': 817, 'early_close_reopen': 99, 'holiday_closure': 49, 'other_missing': 8, 'first_bar': 1}
+  bars on CME sessions of non-NYSE days 1301
+  |hourly ret| > 3%: 21; max |ret| 0.0675
+  front volume == 0 bars 0
+  bars per trade date: median 23; trade dates with a 15:00 ET bar 4067
+
+ZN: 96408 front bars, 4106 trade dates 2010-06-07 .. 2026-10-02
+  rolls 65; roll bars with return from v1 65, NaN 0
+  roll bar ET hours {19: 28, 20: 25, 18: 12}
+  NaN returns 1 (incl. first bar)
+  gap types {'none': 92382, 'daily_break': 3057, 'weekend': 817, 'early_close_reopen': 90, 'holiday_closure': 51, 'other_missing': 10, 'first_bar': 1}
+  bars on CME sessions of non-NYSE days 1327
+  |hourly ret| > 3%: 0; max |ret| 0.0146
+  front volume == 0 bars 0
+  bars per trade date: median 23; trade dates with a 15:00 ET bar 4078
+ES: NYSE days with no hourly bar in the 1600 window (hourly comp NaN, reference 0): ['2014-06-13', '2014-09-24', '2014-09-25']
+ES: NYSE days with no hourly bar in the utc0 window (hourly comp NaN, reference 0): ['2014-06-12', '2014-06-13', '2014-09-23', '2014-09-24', '2014-09-25', '2014-12-31']
+ZN: NYSE days with no hourly bar in the 1600 window (hourly comp NaN, reference 0): []
+ZN: NYSE days with no hourly bar in the utc0 window (hourly comp NaN, reference 0): ['2014-10-03']
+ES: total log-return difference comp_1600 - ref_ES16 over 4103 days: -3.37 bp
+ES: total log-return difference comp_utc0 - ref_F_ES over 4100 days: 14.07 bp
+ES: total log-return difference comp_1600 - ref_F_ES over 4103 days: 33.94 bp
+ZN: total log-return difference comp_1600 - ref_ZN16 over 4106 days: 6.66 bp
+ZN: total log-return difference comp_utc0 - ref_F_ZN over 4105 days: -2.44 bp
+ZN: total log-return difference comp_1600 - ref_F_ZN over 4106 days: -15.97 bp
+
+non-routine gaps (gap_type other_missing): 18
+root              bar_start_et  hours_since_prev trade_date  ret_simple         prev_bar_start_et
+  ES 2012-07-03 16:00:00-04:00               3.0 2012-07-03   -0.000548 2012-07-03 13:00:00-04:00
+  ES 2014-06-15 18:00:00-04:00              97.0 2014-06-16   -0.005658 2014-06-11 17:00:00-04:00
+  ES 2014-09-26 07:00:00-04:00              86.0 2014-09-26   -0.010335 2014-09-22 17:00:00-04:00
+  ES 2015-01-01 18:00:00-05:00              49.0 2015-01-02   -0.008189 2014-12-30 17:00:00-05:00
+  ES 2015-06-30 20:00:00-04:00               3.0 2015-07-01    0.000730 2015-06-30 17:00:00-04:00
+  ES 2019-02-26 22:00:00-05:00               3.0 2019-02-27    0.000627 2019-02-26 19:00:00-05:00
+  ES 2020-06-30 20:00:00-04:00               3.0 2020-07-01   -0.000324 2020-06-30 17:00:00-04:00
+  ES 2025-11-28 08:00:00-05:00              11.0 2025-11-28    0.000329 2025-11-27 21:00:00-05:00
+  ZN 2014-09-23 07:00:00-04:00              15.0 2014-09-23    0.001257 2014-09-22 16:00:00-04:00
+  ZN 2014-10-05 18:00:00-04:00              73.0 2014-10-06   -0.001994 2014-10-02 17:00:00-04:00
+  ZN 2015-06-30 20:00:00-04:00               4.0 2015-07-01   -0.000124 2015-06-30 16:00:00-04:00
+  ZN 2019-02-26 22:00:00-05:00               3.0 2019-02-27   -0.000511 2019-02-26 19:00:00-05:00
+  ZN 2020-02-26 22:00:00-05:00               2.0 2020-02-27    0.000469 2020-02-26 20:00:00-05:00
+  ZN 2020-02-27 16:00:00-05:00               3.0 2020-02-27    0.002812 2020-02-27 13:00:00-05:00
+  ZN 2020-02-28 03:00:00-05:00              11.0 2020-02-28    0.004907 2020-02-27 16:00:00-05:00
+  ZN 2020-02-28 15:00:00-05:00               7.0 2020-02-28    0.002673 2020-02-28 08:00:00-05:00
+  ZN 2020-06-30 20:00:00-04:00              10.0 2020-07-01   -0.002131 2020-06-30 10:00:00-04:00
+  ZN 2025-11-28 08:00:00-05:00              11.0 2025-11-28    0.000826 2025-11-27 21:00:00-05:00
+
+validation summary (diff in bp):
+root                                             comparison                    sample  n_days     corr       mad_bp  share_absdiff_gt_5bp  n_absdiff_gt_5bp  max_absdiff_bp
+  ES    hourly 16:00->16:00 vs ref 16:00 (ES16/ZN16 excess)                      full    4103 0.999990 3.248085e-02              0.001462                 6    1.635837e+01
+  ES    hourly 16:00->16:00 vs ref 16:00 (ES16/ZN16 excess)                 in_sample    3602 0.999989 3.592957e-02              0.001666                 6    1.635837e+01
+  ES    hourly 16:00->16:00 vs ref 16:00 (ES16/ZN16 excess)       later_2024-10-03_on     501 1.000000 7.685807e-03              0.000000                 0    1.028961e+00
+  ES    hourly 16:00->16:00 vs ref 16:00 (ES16/ZN16 excess) full_ex_roll_and_nan_days    4037 0.999992 1.379011e-02              0.000991                 4    1.635837e+01
+  ES       hourly 16:00->16:00 vs F_ (futures_daily excess)                      full    4103 0.937533 2.082117e+01              0.780648              3203    7.543795e+02
+  ES       hourly 16:00->16:00 vs F_ (futures_daily excess)                 in_sample    3602 0.940492 2.051021e+01              0.778734              2805    7.543795e+02
+  ES       hourly 16:00->16:00 vs F_ (futures_daily excess)       later_2024-10-03_on     501 0.917447 2.305682e+01              0.794411               398    3.625880e+02
+  ES       hourly 16:00->16:00 vs F_ (futures_daily excess) full_ex_roll_and_nan_days    4037 0.942087 2.070944e+01              0.780282              3150    7.543795e+02
+  ES hourly 00:00UTC->00:00UTC vs F_ (like-for-like window)                      full    4100 0.999999 1.377854e-02              0.000000                 0    3.808276e+00
+  ES hourly 00:00UTC->00:00UTC vs F_ (like-for-like window)                 in_sample    3599 0.999999 1.569659e-02              0.000000                 0    3.808276e+00
+  ES hourly 00:00UTC->00:00UTC vs F_ (like-for-like window)       later_2024-10-03_on     501 1.000000 2.880932e-12              0.000000                 0    1.113692e-11
+  ES hourly 00:00UTC->00:00UTC vs F_ (like-for-like window) full_ex_roll_and_nan_days    4034 1.000000 2.847347e-12              0.000000                 0    1.545639e-11
+  ES  ref 16:00 vs F_ (daily references against each other)                      full    4103 0.937652 2.081707e+01              0.780161              3201    7.543795e+02
+  ES  ref 16:00 vs F_ (daily references against each other)                 in_sample    3602 0.940627 2.050512e+01              0.778179              2803    7.543795e+02
+  ES  ref 16:00 vs F_ (daily references against each other)       later_2024-10-03_on     501 0.917435 2.305993e+01              0.794411               398    3.625880e+02
+  ES  ref 16:00 vs F_ (daily references against each other) full_ex_roll_and_nan_days    4037 0.942082 2.070781e+01              0.780035              3149    7.543795e+02
+  ZN    hourly 16:00->16:00 vs ref 16:00 (ES16/ZN16 excess)                      full    4106 0.999960 2.374954e-02              0.000487                 2    9.978794e+00
+  ZN    hourly 16:00->16:00 vs ref 16:00 (ES16/ZN16 excess)                 in_sample    3605 0.999959 2.429185e-02              0.000555                 2    9.978794e+00
+  ZN    hourly 16:00->16:00 vs ref 16:00 (ES16/ZN16 excess)       later_2024-10-03_on     501 0.999968 1.984733e-02              0.000000                 0    4.227068e+00
+  ZN    hourly 16:00->16:00 vs ref 16:00 (ES16/ZN16 excess) full_ex_roll_and_nan_days    4041 0.999978 4.938467e-03              0.000495                 2    9.978794e+00
+  ZN       hourly 16:00->16:00 vs F_ (futures_daily excess)                      full    4106 0.959389 6.387704e+00              0.457867              1880    1.149131e+02
+  ZN       hourly 16:00->16:00 vs F_ (futures_daily excess)                 in_sample    3605 0.962282 6.286325e+00              0.447712              1614    9.718307e+01
+  ZN       hourly 16:00->16:00 vs F_ (futures_daily excess)       later_2024-10-03_on     501 0.933685 7.117185e+00              0.530938               266    1.149131e+02
+  ZN       hourly 16:00->16:00 vs F_ (futures_daily excess) full_ex_roll_and_nan_days    4041 0.959291 6.384704e+00              0.457065              1847    1.149131e+02
+  ZN hourly 00:00UTC->00:00UTC vs F_ (like-for-like window)                      full    4105 0.999996 4.769050e-03              0.000000                 0    2.420846e+00
+  ZN hourly 00:00UTC->00:00UTC vs F_ (like-for-like window)                 in_sample    3604 0.999996 5.432006e-03              0.000000                 0    2.420846e+00
+  ZN hourly 00:00UTC->00:00UTC vs F_ (like-for-like window)       later_2024-10-03_on     501 1.000000 2.765302e-12              0.000000                 0    1.190020e-11
+  ZN hourly 00:00UTC->00:00UTC vs F_ (like-for-like window) full_ex_roll_and_nan_days    4040 1.000000 2.732693e-12              0.000000                 0    1.396236e-11
+  ZN  ref 16:00 vs F_ (daily references against each other)                      full    4106 0.959389 6.387967e+00              0.457623              1879    1.149131e+02
+  ZN  ref 16:00 vs F_ (daily references against each other)                 in_sample    3605 0.962305 6.283871e+00              0.447434              1613    9.718307e+01
+  ZN  ref 16:00 vs F_ (daily references against each other)       later_2024-10-03_on     501 0.933476 7.137000e+00              0.530938               266    1.149131e+02
+  ZN  ref 16:00 vs F_ (daily references against each other) full_ex_roll_and_nan_days    4041 0.959291 6.384705e+00              0.457065              1847    1.149131e+02
+
+residual days |diff| > 5 bp (like-for-like windows):
+      date root window    hourly           ref    diff_bp  n_bars  cum_diff_7day_window_bp                                                                                                        cause
+2012-09-17   ES   1600 -0.003414 -2.913453e-03  -5.009951      23            -5.025852e+00                                             roll day (contract switch at a different hour in the two series)
+2014-09-23   ES   1600 -0.001636  1.612030e-16 -16.358374       2             1.110223e-12 vendor data hole (other_missing gap) within +-3 days; reference return exactly 0 (no reference bar that day)
+2014-09-26   ES   1600 -0.004537 -6.165849e-03  16.284149       9             4.440892e-12                                                         vendor data hole (other_missing gap) within +-3 days
+2014-12-31   ES   1600  0.000964 -2.132194e-17   9.643202       2             3.330669e-12 vendor data hole (other_missing gap) within +-3 days; reference return exactly 0 (no reference bar that day)
+2015-01-02   ES   1600 -0.012163 -1.121022e-02  -9.525913      22             0.000000e+00                                                         vendor data hole (other_missing gap) within +-3 days
+2020-03-18   ES   1600 -0.055750 -5.480940e-02  -9.410359      23            -9.961003e+00                                             roll day (contract switch at a different hour in the two series)
+2014-10-03   ZN   1600  0.000998 -2.828862e-16   9.977551       2             5.828671e-12 vendor data hole (other_missing gap) within +-3 days; reference return exactly 0 (no reference bar that day)
+2014-10-06   ZN   1600  0.000125  1.122474e-03  -9.978794      22             2.775558e-12                                                         vendor data hole (other_missing gap) within +-3 days

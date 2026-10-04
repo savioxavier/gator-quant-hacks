@@ -1,0 +1,22 @@
+ref zero_cost          in_ ours +1.3544 kit +1.5408  out ours +0.3968 kit +1.0036
+ref guide_cost         in_ ours +0.1596 kit +0.3445  out ours -1.2013 kit -0.6251
+ref official           in_ ours +0.9845 kit +1.1712  out ours -0.1215 kit +0.4799
+native_none            in_ kit +1.4246 ours +1.3527 ann +11.11% dd -10.96% | vs zero_cost: corr 0.99979 0.18 bp, aligned 0.99979 0.18 bp
+native_none            out kit +0.7828 ours +0.4031 ann  +5.03% dd  -7.68% | vs zero_cost: corr 0.99997 0.15 bp, aligned 0.99997 0.15 bp
+native_project         in_ kit +1.0928 ours +1.0197 ann  +8.32% dd -11.68% | vs official: corr 0.99624 1.99 bp, aligned 0.99971 0.29 bp
+native_project         out kit +0.3211 ours -0.0589 ann  +1.91% dd  -9.07% | vs official: corr 0.99387 2.35 bp, aligned 0.99978 0.29 bp
+native_guide           in_ kit +0.3439 ours +0.2696 ann  +2.36% dd -17.94% | vs guide_cost: corr 0.96134 6.39 bp, aligned 0.99857 0.57 bp
+native_guide           out kit -0.6834 ours -1.0546 ann  -4.67% dd -14.73% | vs guide_cost: corr 0.93731 7.57 bp, aligned 0.99807 0.64 bp
+native_guide_literal   in_ kit +0.8791 ours +0.8054 ann  +6.58% dd -12.14% | vs guide_cost: corr 0.97496 4.91 bp, aligned 0.99366 2.04 bp
+native_guide_literal   out kit +0.0249 ours -0.3539 ann  -0.05% dd -10.07% | vs guide_cost: corr 0.95938 5.85 bp, aligned 0.99023 2.41 bp
+open_none              in_ kit +1.4299 ours +1.3580 ann +11.16% dd -10.94% | vs zero_cost: corr 0.99963 0.33 bp, aligned 0.99963 0.33 bp
+open_none              out kit +0.7870 ours +0.4067 ann  +5.05% dd  -7.74% | vs zero_cost: corr 0.99920 0.45 bp, aligned 0.99920 0.45 bp
+open_project           in_ kit +1.0993 ours +1.0262 ann  +8.37% dd -11.65% | vs official: corr 0.99612 2.04 bp, aligned 0.99954 0.41 bp
+open_project           out kit +0.3252 ours -0.0553 ann  +1.93% dd  -9.12% | vs official: corr 0.99347 2.44 bp, aligned 0.99913 0.52 bp
+coc_none               in_ kit +1.4253 ours +1.3534 ann +11.14% dd -10.96% | vs zero_cost: corr 1.00000 0.05 bp, aligned 1.00000 0.05 bp
+coc_none               out kit +0.7774 ours +0.3974 ann  +4.99% dd  -7.66% | vs zero_cost: corr 1.00000 0.04 bp, aligned 1.00000 0.04 bp
+coc_project            in_ kit +1.0935 ours +1.0206 ann  +8.35% dd -11.68% | vs official: corr 0.99988 0.17 bp, aligned 0.99988 0.17 bp
+coc_project            out kit +0.3165 ours -0.0618 ann  +1.88% dd  -9.04% | vs official: corr 0.99981 0.20 bp, aligned 0.99981 0.20 bp
+coc_guide              in_ kit +0.3480 ours +0.2742 ann  +2.40% dd -17.94% | vs guide_cost: corr 0.99872 0.46 bp, aligned 0.99872 0.46 bp
+coc_guide              out kit -0.6706 ours -1.0360 ann  -4.67% dd -14.66% | vs guide_cost: corr 0.99813 0.56 bp, aligned 0.99813 0.56 bp
+wrote <scratch>\kit_native\final_run\recheck_flow_clock\summary.json in 60.5 s

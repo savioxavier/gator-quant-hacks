@@ -1,0 +1,118 @@
+{
+  "id": "trend_momentum_bk_trend_tstat_cf",
+  "variant": "V2",
+  "rule": "Month-end; X = sign of the Newey-West (lag 21) t-stat of the 252-session log-price time-trend slope if |t| > 2 else 0 (V1/V2) or sign of the 12-month excess return (V3); vol = Yang-Zhang 63 sessions (V1/V2) or EWMA com 60 (V3); w = X * 0.10 * CF / vol / N_t with CF = sqrt(N/(1+(N-1)rho)), rho = mean pairwise corr of signed returns of active futures over 126 sessions (V1/V3); V2: CF = 1 then book to 10%; gross <= 3; next_close.",
+  "sources": [
+    "https://spiral.imperial.ac.uk/handle/10044/1/41472",
+    "https://papers.ssrn.com/abstract=2140091",
+    "https://www.quantconnect.com/learning/articles/investment-strategy-library/improved-momentum-strategy-on-commodities-futures"
+  ],
+  "window": {
+    "is": "2011-07-05..2024-10-02",
+    "later": "2024-10-03..2026-10-02"
+  },
+  "columns": {
+    "net_1x": "daily excess return net of the realistic cost map",
+    "net_2x": "2x costs",
+    "gross": "before costs"
+  },
+  "cost_bps_one_way": {
+    "F_ES": 1.0,
+    "F_NQ": 1.0,
+    "F_RTY": 2.0,
+    "F_YM": 1.0,
+    "F_ZT": 0.5,
+    "F_ZF": 0.7,
+    "F_ZN": 1.0,
+    "F_ZB": 1.5,
+    "F_UB": 1.5,
+    "F_CL": 2.0,
+    "F_HO": 3.0,
+    "F_RB": 3.0,
+    "F_NG": 3.0,
+    "F_GC": 2.0,
+    "F_SI": 2.0,
+    "F_PL": 3.0,
+    "F_HG": 2.0,
+    "F_ZC": 4.0,
+    "F_ZS": 4.0,
+    "F_ZW": 4.0,
+    "F_ZL": 4.0,
+    "F_ZM": 4.0,
+    "F_LE": 4.0,
+    "F_HE": 4.0,
+    "F_6E": 1.0,
+    "F_6J": 1.0,
+    "F_6B": 1.0,
+    "F_6A": 1.0,
+    "F_6C": 1.0,
+    "F_6S": 1.0
+  },
+  "metrics": {
+    "is_window": "2011-07-05..2024-10-02",
+    "is_net_sharpe_1x": 0.34877013039327404,
+    "is_net_sharpe_2x": 0.2864902982630013,
+    "is_gross_sharpe": 0.4110490748858311,
+    "ann_return": 0.0319832301478974,
+    "ann_vol": 0.09170289357013754,
+    "max_dd": -0.21318956717885718,
+    "worst_year": -0.12254160339196873,
+    "worst_year_label": 2016,
+    "pct_positive_years": 0.6428571428571429,
+    "rolling2y_p10": -0.3820402437895332,
+    "turnover": 38.64104718340035,
+    "nw_t": 1.2278111506938243,
+    "corr_es": 0.08812397986623349,
+    "corr_s1": 0.4886421861171245,
+    "corr_f2": 0.28421147280201864,
+    "later_net_sharpe_1x": 0.9201937725449773,
+    "later_net_sharpe_2x": 0.8379345045213024,
+    "later_max_dd": -0.07596206390905347,
+    "later_ann_return": 0.08654662395673669,
+    "full_net_sharpe_1x": 0.4250857129549833,
+    "yearly": {
+      "2011": -0.05106373525873864,
+      "2012": -0.048735488494743184,
+      "2013": 0.11909850786634846,
+      "2014": 0.08037847816123778,
+      "2015": 0.12810839662346774,
+      "2016": -0.12254160339196873,
+      "2017": 0.0636486752723533,
+      "2018": -0.10351372701450545,
+      "2019": 0.026991100324374573,
+      "2020": 0.04323847287995264,
+      "2021": 0.02247867377666002,
+      "2022": 0.2718215475685799,
+      "2023": -0.08516581342262142,
+      "2024": 0.09980045094379575
+    },
+    "avg_gross_leverage": 2.727080291971328,
+    "avg_cf": 1.0,
+    "avg_rho": null,
+    "avg_n_active_frac": 0.7091594827586206,
+    "avg_decision_gross": 2.7167934640547555
+  },
+  "all_variants": {
+    "V1": {
+      "is_net_sharpe_1x": 0.29891105118014183,
+      "is_net_sharpe_2x": 0.23552493945567315,
+      "is_gross_sharpe": 0.36230035254096654,
+      "later_net_sharpe_1x": 1.1313668848857719,
+      "turnover": 32.72174678602237
+    },
+    "V2": {
+      "is_net_sharpe_1x": 0.34877013039327404,
+      "is_net_sharpe_2x": 0.2864902982630013,
+      "is_gross_sharpe": 0.4110490748858311,
+      "later_net_sharpe_1x": 0.9201937725449773,
+      "turnover": 38.64104718340035
+    },
+    "V3": {
+      "is_net_sharpe_1x": 0.23004918038286326,
+      "is_net_sharpe_2x": 0.15409090992336436,
+      "is_gross_sharpe": 0.3060030226622484,
+      "later_net_sharpe_1x": 0.29589675443763325,
+      "turnover": 41.17673929347162
+    }
+  }
+}

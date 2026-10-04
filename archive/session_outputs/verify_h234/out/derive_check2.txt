@@ -1,0 +1,2 @@
+{'H2 sign(z_A), ZT +1 min': 515, 'H4 sign(yC) (combined), ZT +1 min': 515, 'H4 sign(yT) (text-only reference), ZT +1 min': 515}
+{'rows': 1089, 'on_tick_grid': 1089, 'equal_to_a_1m_bar_level': 1089}

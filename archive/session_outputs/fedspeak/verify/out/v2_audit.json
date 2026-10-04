@@ -1,0 +1,1275 @@
+{
+ "combined_rows": 1012,
+ "combined_by_source": {
+  "their_speech_scores_csv": 809,
+  "rescored_federalreserve_gov_20261003": 203
+ },
+ "insample_rows_equal_their_rows_le_cut": {
+  "n_comb": 809,
+  "n_theirs_le_cut": 809,
+  "same_slugs": true,
+  "max_abs_s_diff": 0.0,
+  "kept_equal": true,
+  "date_equal": true
+ },
+ "their_rows_after_cut_not_in_comb_as_theirs": 16,
+ "rescore_post_cut": {
+  "n_rows": 203,
+  "n_with_raw": 203,
+  "H_exact": 203,
+  "D_exact": 203,
+  "chars_exact": 203,
+  "kept_agree": 203,
+  "max_abs_s_diff": 1.1102230246251565e-16
+ },
+ "rescore_their_rows_with_raw": {
+  "n": 140,
+  "H_exact": 140,
+  "D_exact": 140,
+  "chars_exact": 140
+ },
+ "dup_slug": 0,
+ "dup_url": 0,
+ "dup_speaker_date_title": [
+  [
+   "barr20251022a",
+   "Brief Remarks"
+  ],
+  [
+   "barr20251022b",
+   "Brief Remarks"
+  ]
+ ],
+ "dup_kept_same_H_D_chars": [],
+ "same_speaker_same_title_pairs": [
+  [
+   "barr20230329a",
+   "Brief Remarks",
+   false,
+   NaN
+  ],
+  [
+   "barr20251022a",
+   "Brief Remarks",
+   false,
+   NaN
+  ],
+  [
+   "barr20251022b",
+   "Brief Remarks",
+   false,
+   NaN
+  ],
+  [
+   "barr20231027a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "barr20240117a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "barr20250515a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "barr20250624a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "bernanke20120216a",
+   "Community Banking",
+   false,
+   NaN
+  ],
+  [
+   "bernanke20120314a",
+   "Community Banking",
+   false,
+   NaN
+  ],
+  [
+   "bernanke20110915a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "bernanke20120323a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "bernanke20131216a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "bernanke20110607a",
+   "The U.S. Economic Outlook",
+   true,
+   -0.5217391304347826
+  ],
+  [
+   "bernanke20110908a",
+   "The U.S. Economic Outlook",
+   true,
+   -0.5882352941176471
+  ],
+  [
+   "bowman20241122a",
+   "Artificial Intelligence in the Financial System",
+   false,
+   NaN
+  ],
+  [
+   "bowman20260501a",
+   "Artificial Intelligence in the Financial System",
+   false,
+   NaN
+  ],
+  [
+   "bowman20200819a",
+   "Brief Remarks",
+   false,
+   NaN
+  ],
+  [
+   "bowman20230420a",
+   "Brief Remarks",
+   false,
+   NaN
+  ],
+  [
+   "bowman20230531a",
+   "Brief Remarks",
+   false,
+   NaN
+  ],
+  [
+   "bowman20231018a",
+   "Brief Remarks",
+   false,
+   NaN
+  ],
+  [
+   "bowman20230805a",
+   "Brief Remarks on the Economy and Monetary Policy",
+   true,
+   0.5
+  ],
+  [
+   "bowman20230922a",
+   "Brief Remarks on the Economy and Monetary Policy",
+   true,
+   0.8571428571428571
+  ],
+  [
+   "bowman20240503a",
+   "Brief Remarks on the Economy and Monetary Policy",
+   true,
+   0.125
+  ],
+  [
+   "bowman20240517a",
+   "Brief Remarks on the Economy, Monetary Policy, and Bank Regulation",
+   true,
+   0.2222222222222222
+  ],
+  [
+   "bowman20240627a",
+   "Brief Remarks on the Economy, Monetary Policy, and Bank Regulation",
+   true,
+   0.3636363636363636
+  ],
+  [
+   "bowman20191017a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "bowman20230622a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "bowman20240418a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "bowman20240625b",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "bowman20240710a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "bowman20240724a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "bowman20241023a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "bowman20251009a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "bowman20251030a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "bowman20260219a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "bowman20260514a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "bowman20260929a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "bowman20260116a",
+   "Outlook for the Economy and Monetary Policy",
+   true,
+   -0.6451612903225806
+  ],
+  [
+   "bowman20260130a",
+   "Outlook for the Economy and Monetary Policy",
+   true,
+   -0.7058823529411765
+  ],
+  [
+   "bowman20240924a",
+   "Recent Views on Monetary Policy and the Economic Outlook",
+   true,
+   -0.25
+  ],
+  [
+   "bowman20240926a",
+   "Recent Views on Monetary Policy and the Economic Outlook",
+   true,
+   -0.25
+  ],
+  [
+   "bowman20240930a",
+   "Recent Views on Monetary Policy and the Economic Outlook",
+   true,
+   -0.25
+  ],
+  [
+   "bowman20240227a",
+   "Reflections on the Economy and Bank Regulation",
+   true,
+   0.5
+  ],
+  [
+   "bowman20240307a",
+   "Reflections on the Economy and Bank Regulation",
+   true,
+   0.375
+  ],
+  [
+   "bowman20251007a",
+   "Welcome Remarks",
+   false,
+   NaN
+  ],
+  [
+   "bowman20251016a",
+   "Welcome Remarks",
+   false,
+   NaN
+  ],
+  [
+   "bowman20190325a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "bowman20210803a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "bowman20211019a",
+   "Welcoming Remarks",
+   true,
+   -0.625
+  ],
+  [
+   "bowman20220318a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "bowman20221020a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "bowman20230215a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "bowman20230807a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "bowman20230822a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "bowman20230926a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "bowman20250715a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "brainard20170711a",
+   "Cross-Border Spillovers of Balance Sheet Normalization",
+   true,
+   0.6461538461538462
+  ],
+  [
+   "brainard20170713a",
+   "Cross-Border Spillovers of Balance Sheet Normalization",
+   true,
+   0.6461538461538462
+  ],
+  [
+   "clarida20201116a",
+   "The Federal Reserve's New Framework: Context and Consequences",
+   true,
+   0.5245901639344263
+  ],
+  [
+   "clarida20210113a",
+   "The Federal Reserve's New Framework: Context and Consequences",
+   true,
+   0.3095238095238095
+  ],
+  [
+   "clarida20190222a",
+   "The Federal Reserve's Review of Its Monetary Policy Strategy, Tools, and Communication Practices",
+   true,
+   -0.6428571428571429
+  ],
+  [
+   "clarida20190409a",
+   "The Federal Reserve's Review of Its Monetary Policy Strategy, Tools, and Communication Practices",
+   true,
+   -0.7307692307692307
+  ],
+  [
+   "clarida20190520a",
+   "The Federal Reserve's Review of Its Monetary Policy Strategy, Tools, and Communication Practices",
+   true,
+   -0.6875
+  ],
+  [
+   "clarida20190605a",
+   "The Federal Reserve's Review of Its Monetary Policy Strategy, Tools, and Communication Practices",
+   true,
+   -0.8571428571428571
+  ],
+  [
+   "clarida20190701a",
+   "The Federal Reserve's Review of Its Monetary Policy Strategy, Tools, and Communication Practices",
+   true,
+   -0.7407407407407407
+  ],
+  [
+   "clarida20190513a",
+   "The Federal Reserve\u00e2\u0080\u0099s Review of Its Monetary Policy Strategy, Tools, and Communication Practices",
+   false,
+   NaN
+  ],
+  [
+   "clarida20190517a",
+   "The Federal Reserve\u00e2\u0080\u0099s Review of Its Monetary Policy Strategy, Tools, and Communication Practices",
+   false,
+   NaN
+  ],
+  [
+   "clarida20190926a",
+   "The Federal Reserve\u00e2\u0080\u0099s Review of Its Monetary Policy Strategy, Tools, and Communication Practices",
+   true,
+   -0.56
+  ],
+  [
+   "clarida20191114a",
+   "The Federal Reserve\u00e2\u0080\u0099s Review of Its Monetary Policy Strategy, Tools, and Communication Practices",
+   true,
+   -0.3529411764705882
+  ],
+  [
+   "clarida20190228a",
+   "U.S. Economic Outlook and Monetary Policy",
+   true,
+   -0.1666666666666666
+  ],
+  [
+   "clarida20190411a",
+   "U.S. Economic Outlook and Monetary Policy",
+   true,
+   -0.1666666666666666
+  ],
+  [
+   "clarida20191018a",
+   "U.S. Economic Outlook and Monetary Policy",
+   true,
+   -0.5
+  ],
+  [
+   "clarida20200109a",
+   "U.S. Economic Outlook and Monetary Policy",
+   true,
+   -0.1666666666666666
+  ],
+  [
+   "clarida20200225a",
+   "U.S. Economic Outlook and Monetary Policy",
+   false,
+   NaN
+  ],
+  [
+   "clarida20200521a",
+   "U.S. Economic Outlook and Monetary Policy",
+   true,
+   -0.9230769230769232
+  ],
+  [
+   "clarida20201014a",
+   "U.S. Economic Outlook and Monetary Policy",
+   true,
+   -0.7272727272727273
+  ],
+  [
+   "clarida20210108a",
+   "U.S. Economic Outlook and Monetary Policy",
+   true,
+   -0.5714285714285714
+  ],
+  [
+   "clarida20210224a",
+   "U.S. Economic Outlook and Monetary Policy",
+   true,
+   -0.5714285714285714
+  ],
+  [
+   "clarida20210325a",
+   "U.S. Economic Outlook and Monetary Policy",
+   true,
+   -0.6666666666666666
+  ],
+  [
+   "clarida20210512a",
+   "U.S. Economic Outlook and Monetary Policy",
+   true,
+   -0.625
+  ],
+  [
+   "clarida20211012a",
+   "U.S. Economic Outlook and Monetary Policy",
+   true,
+   0.5
+  ],
+  [
+   "cook20230505a",
+   "Commencement Address",
+   false,
+   NaN
+  ],
+  [
+   "cook20230513a",
+   "Commencement Address",
+   false,
+   NaN
+  ],
+  [
+   "cook20230515a",
+   "Commencement Address",
+   false,
+   NaN
+  ],
+  [
+   "cook20221006a",
+   "Economic Outlook",
+   true,
+   0.4761904761904761
+  ],
+  [
+   "cook20241120a",
+   "Economic Outlook",
+   true,
+   -0.8333333333333334
+  ],
+  [
+   "cook20250603a",
+   "Economic Outlook",
+   false,
+   NaN
+  ],
+  [
+   "cook20260204a",
+   "Economic Outlook",
+   true,
+   -0.85
+  ],
+  [
+   "cook20260715a",
+   "Economic Outlook",
+   true,
+   -0.5714285714285714
+  ],
+  [
+   "cook20230216a",
+   "Welcome Remarks",
+   false,
+   NaN
+  ],
+  [
+   "cook20260624a",
+   "Welcome Remarks",
+   false,
+   NaN
+  ],
+  [
+   "cook20230404a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "cook20231113a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "cook20250604a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "duke20110202a",
+   "From Community Banker to Central Banker--My Journey",
+   false,
+   NaN
+  ],
+  [
+   "duke20120116a",
+   "From Community Banker to Central Banker--My Journey",
+   true,
+   -0.2857142857142857
+  ],
+  [
+   "fischer20141011a",
+   "The Federal Reserve and the Global Economy",
+   true,
+   0.0
+  ],
+  [
+   "fischer20150526a",
+   "The Federal Reserve and the Global Economy",
+   true,
+   0.28125
+  ],
+  [
+   "powell20260321a",
+   "Acceptance Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20260531a",
+   "Acceptance Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20170420a",
+   "Brief Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20190311a",
+   "Brief Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20191007a",
+   "Brief Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20240930a",
+   "Economic Outlook",
+   true,
+   -0.75
+  ],
+  [
+   "powell20241114a",
+   "Economic Outlook",
+   true,
+   -0.5714285714285714
+  ],
+  [
+   "powell20250307a",
+   "Economic Outlook",
+   true,
+   -0.5
+  ],
+  [
+   "powell20250404a",
+   "Economic Outlook",
+   true,
+   -0.8571428571428571
+  ],
+  [
+   "powell20250416a",
+   "Economic Outlook",
+   true,
+   -0.5714285714285714
+  ],
+  [
+   "powell20250923a",
+   "Economic Outlook",
+   true,
+   -0.5454545454545454
+  ],
+  [
+   "powell20160621a",
+   "Introductory Comments",
+   false,
+   NaN
+  ],
+  [
+   "powell20200619a",
+   "Introductory Comments",
+   false,
+   NaN
+  ],
+  [
+   "powell20140923a",
+   "Introductory Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20171102a",
+   "Introductory Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20210924a",
+   "Introductory Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20231025a",
+   "Introductory Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20141020a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20151120a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20190604a",
+   "Opening Remarks",
+   true,
+   -0.8333333333333334
+  ],
+  [
+   "powell20191004a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20191009a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20200521a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20211108a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20211109a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20211129a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20231019a",
+   "Opening Remarks",
+   true,
+   0.7222222222222222
+  ],
+  [
+   "powell20231108a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20231109a",
+   "Opening Remarks",
+   true,
+   0.6428571428571429
+  ],
+  [
+   "powell20231201a",
+   "Opening Remarks",
+   true,
+   0.4705882352941176
+  ],
+  [
+   "powell20240403a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20240926a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20250515a",
+   "Opening Remarks",
+   true,
+   -0.2352941176470588
+  ],
+  [
+   "powell20250602a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20250722a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20251201a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20150204a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20170405a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20181206a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20190206a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20190509a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20210817a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20220524a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20220617a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20220928a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20230928a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "powell20251009a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "quarles20200117a",
+   "Spontaneity and Order: Transparency, Accountability, and Fairness in Bank Supervision",
+   false,
+   NaN
+  ],
+  [
+   "quarles20200211a",
+   "Spontaneity and Order: Transparency, Accountability, and Fairness in Bank Supervision",
+   false,
+   NaN
+  ],
+  [
+   "stein20131004a",
+   "The Fire-Sales Problem and Securities Financing Transactions",
+   false,
+   NaN
+  ],
+  [
+   "stein20131107a",
+   "The Fire-Sales Problem and Securities Financing Transactions",
+   false,
+   NaN
+  ],
+  [
+   "tarullo20150504",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "tarullo20151202a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "tarullo20160712a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "waller20250321a",
+   "Statement by Governor Christopher J. Waller",
+   false,
+   NaN
+  ],
+  [
+   "waller20250801a",
+   "Statement by Governor Christopher J. Waller",
+   true,
+   -0.8888888888888888
+  ],
+  [
+   "waller20260130a",
+   "Statement by Governor Christopher J. Waller",
+   true,
+   -0.8333333333333334
+  ],
+  [
+   "waller20230622a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "waller20240624a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "waller20250423a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "waller20250623a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "waller20240520a",
+   "Welcoming Remarks on the International Role of the U.S. Dollar",
+   false,
+   NaN
+  ],
+  [
+   "waller20260622a",
+   "Welcoming Remarks on the International Role of the U.S. Dollar",
+   false,
+   NaN
+  ],
+  [
+   "yellen20151020a",
+   "Brief Remarks",
+   false,
+   NaN
+  ],
+  [
+   "yellen20160929a",
+   "Brief Remarks",
+   false,
+   NaN
+  ],
+  [
+   "yellen20140521a",
+   "Commencement Remarks",
+   false,
+   NaN
+  ],
+  [
+   "yellen20161219a",
+   "Commencement Remarks",
+   false,
+   NaN
+  ],
+  [
+   "yellen20140415a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "yellen20150402a",
+   "Opening Remarks",
+   false,
+   NaN
+  ],
+  [
+   "yellen20120411a",
+   "The Economic Outlook and Monetary Policy",
+   true,
+   -0.8061224489795918
+  ],
+  [
+   "yellen20151202a",
+   "The Economic Outlook and Monetary Policy",
+   true,
+   -0.375
+  ],
+  [
+   "yellen20141030a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "yellen20150930a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "yellen20151112a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "yellen20170112a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "yellen20170323a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ],
+  [
+   "yellen20171004a",
+   "Welcoming Remarks",
+   false,
+   NaN
+  ]
+ ],
+ "post_cut_speakers": {
+  "2024": {
+   "jefferson": 2,
+   "kugler": 3,
+   "cook": 2,
+   "bowman": 4,
+   "waller": 4,
+   "powell": 1
+  },
+  "2025": {
+   "cook": 11,
+   "waller": 20,
+   "bowman": 19,
+   "jefferson": 13,
+   "kugler": 14,
+   "barr": 24,
+   "powell": 12,
+   "miran": 4
+  },
+  "2026": {
+   "bowman": 21,
+   "powell": 3,
+   "miran": 2,
+   "jefferson": 8,
+   "waller": 13,
+   "cook": 10,
+   "barr": 12,
+   "warsh": 1
+  }
+ },
+ "post_cut_speaker_titles": [
+  "Chair Jerome H. Powell",
+  "Chairman Kevin Warsh",
+  "Governor Adriana D. Kugler",
+  "Governor Christopher J. Waller",
+  "Governor Jerome H. Powell",
+  "Governor Lisa D. Cook",
+  "Governor Michael S. Barr",
+  "Governor Michelle W. Bowman",
+  "Governor Stephen I. Miran",
+  "Vice Chair Philip N. Jefferson",
+  "Vice Chair for Supervision Michael S. Barr",
+  "Vice Chair for Supervision Michelle W. Bowman"
+ ],
+ "date_ne_slugdate": [
+  [
+   "fischer20170928a",
+   "2017-10-11",
+   "True"
+  ]
+ ],
+ "feed_match": {
+  "rows": 1012,
+  "matched": 1009,
+  "kept_matched": 461,
+  "kept_unmatched": []
+ },
+ "feed_lag_days_counts_all": {
+  "-13.0": 1,
+  "0.0": 1003,
+  "1.0": 3,
+  "2.0": 1,
+  "365.0": 1
+ },
+ "feed_lag_days_counts_kept": {
+  "-13.0": 1,
+  "0.0": 456,
+  "1.0": 2,
+  "2.0": 1,
+  "365.0": 1
+ },
+ "speech_date_before_feed_date": [
+  [
+   "bernanke20110210a",
+   "2011-02-10",
+   "2012-02-10 12:30:00",
+   "True",
+   "0.1818181818181818"
+  ],
+  [
+   "raskin20120411a",
+   "2012-04-11",
+   "2012-04-12 15:30:00",
+   "True",
+   "-0.65"
+  ],
+  [
+   "powell20130221a",
+   "2013-02-21",
+   "2013-02-22 10:15:00",
+   "True",
+   "-0.125"
+  ],
+  [
+   "yellen20130302a",
+   "2013-03-02",
+   "2013-03-04 08:00:00",
+   "True",
+   "-0.5645161290322581"
+  ],
+  [
+   "waller20260928a",
+   "2026-09-28",
+   "2026-09-29 15:00:00",
+   "False",
+   NaN
+  ]
+ ],
+ "speech_date_after_feed_date": [
+  [
+   "fischer20170928a",
+   "2017-10-11",
+   "2017-09-28 10:00:00",
+   "True"
+  ]
+ ],
+ "kept_hours_from_feed_time_to_use_open": {
+  "min": -8739.0,
+  "n_lt_12h": 5,
+  "n_le_0": 3
+ },
+ "kept_without_feed_time": 0,
+ "kept_feed_hour_hist": {
+  "0": 3,
+  "2": 2,
+  "3": 5,
+  "5": 5,
+  "6": 4,
+  "7": 5,
+  "8": 26,
+  "9": 44,
+  "10": 55,
+  "11": 32,
+  "12": 81,
+  "13": 61,
+  "14": 20,
+  "15": 25,
+  "16": 19,
+  "17": 15,
+  "18": 15,
+  "19": 28,
+  "20": 11,
+  "21": 2,
+  "22": 3
+ },
+ "kept_weekend_or_holiday_speech_date": 25,
+ "feed_entries_missing_from_corpus": [],
+ "corpus_rows_not_in_feed": [
+  [
+   "20130404a",
+   "2013-04-04",
+   "False"
+  ],
+  [
+   "yellen20161219a",
+   "2016-12-19",
+   "False"
+  ],
+  [
+   "bowman20260226a",
+   "2026-02-26",
+   "False"
+  ]
+ ],
+ "feed_speaker_titles_post_cut": {
+  "Vice Chair Philip N. Jefferson": 23,
+  "Vice Chair for Supervision Michelle W. Bowman": 33,
+  "Governor Christopher J. Waller": 37,
+  "Governor Lisa D. Cook": 23,
+  "Governor Michael S. Barr": 32,
+  "Chairman Kevin Warsh": 1,
+  "Governor Jerome H. Powell": 1,
+  "Governor Stephen I. Miran": 6,
+  "Chair Jerome H. Powell": 15,
+  "Governor Adriana D. Kugler": 17,
+  "Governor Michelle W. Bowman": 11,
+  "Vice Chair for Supervision Michael S. Barr": 4
+ },
+ "feed_nonboard_like": []
+}

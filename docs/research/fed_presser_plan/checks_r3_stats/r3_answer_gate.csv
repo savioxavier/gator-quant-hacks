@@ -1,0 +1,24 @@
+date,status,grp,n_answers,n_answers_fail,fail_in_first_item_minutes,max_secs_after_15h_of_failing,h1run_meeting_fails
+20230322,skipped (page not cached),,,,,,
+20230503,skipped (page not cached),,,,,,
+20230920,ok,confirmation,28.0,1.0,1.0,56.0,1.0
+20240131,ok,confirmation,36.0,1.0,1.0,23.0,1.0
+20240501,skipped (page not cached),,,,,,
+20240612,skipped (page not cached),,,,,,
+20240731,skipped (page not cached),,,,,,
+20240918,ok,confirmation,34.0,1.0,1.0,28.0,1.0
+20241107,ok,confirmation,29.0,0.0,0.0,,0.0
+20241218,ok,confirmation,31.0,2.0,2.0,72.0,1.0
+20250129,ok,confirmation,38.0,0.0,0.0,,0.0
+20250319,ok,confirmation,37.0,1.0,1.0,8.0,1.0
+20250507,ok,confirmation,37.0,0.0,0.0,,0.0
+20250618,ok,confirmation,30.0,1.0,1.0,3.0,1.0
+20250730,ok,confirmation,33.0,1.0,1.0,15.0,1.0
+20250917,ok,confirmation,35.0,1.0,1.0,45.0,1.0
+20251029,ok,confirmation,32.0,1.0,1.0,26.0,1.0
+20260128,ok,confirmation,42.0,1.0,1.0,21.0,1.0
+20260318,ok,confirmation,32.0,0.0,0.0,,0.0
+20260429,ok,confirmation,36.0,1.0,1.0,24.0,1.0
+20260617,ok,warsh,23.0,1.0,1.0,8.0,1.0
+20260729,ok,warsh,22.0,1.0,1.0,11.0,1.0
+20260916,ok,warsh,17.0,0.0,0.0,,0.0

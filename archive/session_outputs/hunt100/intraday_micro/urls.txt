@@ -1,0 +1,70 @@
+# intraday_micro source list (fetched or located 2026-10-03)
+# [F] = full text fetched and read (local text extract in pdf/), [A] = abstract/summary page only, [S] = search snippet only
+
+## Market intraday momentum / last-hour effects
+[F] Gao, Han, Li, Zhou (2018 JFE) Market intraday momentum - working-paper copy: https://c.mql5.com/forextsd/forum/173/intraday_momentum_-_the_first_half-hour_return_predicts_the_last_half-hour_return.pdf
+[A] https://profiles.wustl.edu/en/publications/market-intraday-momentum/
+[F] Baltussen, Da, Lammers, Martens (2021 JFE) Hedging demand and market intraday momentum: https://academicweb.nd.edu/~zda/intramom.pdf
+[A] https://pure.eur.nl/en/publications/hedging-demand-and-market-intraday-momentum/
+[A] Rosa (2022 J Futures Markets) Understanding intraday momentum strategies (OOS disappearance): https://ideas.repec.org/a/wly/jfutmk/v42y2022i12p2218-2234.html
+[F] Limkriangkrai, Chai, Zheng (2023 PBFJ) Market intraday momentum: APAC evidence: https://researchmgt.monash.edu/ws/files/519509174/494419119_oa.pdf
+[A] Mesfin (2026 arXiv 2605.04004) OHLCV intraday signals in MNQ, falsification 2021-2025: https://arxiv.org/abs/2605.04004
+[S] Dim, Eraker, Vilkov (2024) 0DTEs: trading, gamma risk and volatility propagation (summary): https://quantpedia.com/do-sp500-0dtes-options-increase-market-volatility/
+[S] Cboe, Evaluating the market impact of SPX 0DTE options: https://www.cboe.com/insights/posts/volatility-insights-evaluating-the-market-impact-of-spx-0-dte-options
+[DATA] SqueezeMetrics free DIX/GEX history (2011-05..2026-10-02), saved as squeeze_DIX.csv: https://squeezemetrics.com/monitor/static/DIX.csv
+
+## Zarattini / Aziz / Barbon day-trading papers and independent replications
+[F] Zarattini, Aziz, Barbon (2024) Beat the Market: intraday momentum SPY (SFI RP 24-97): https://alexandria.unisg.ch/server/api/core/bitstreams/a99aba00-f967-49b3-aceb-f544dc386e0b/content
+[A] https://ideas.repec.org/p/chf/rpseri/rp2497.html
+[A] https://concretumgroup.com/beat-the-market-an-effective-intraday-momentum-strategy-for-sp500-etf-spy/
+[F] Independent replication + OOS (SPY/ES, Sharpe ~0 since 2025): https://github.com/giovannibrusco/zarattini-2024-momentum-spy
+[F] Independent OOS May 2024-Mar 2026 (Sharpe 0.39): https://github.com/PazSheimy/spy-intraday-momentum-oos
+[A] Other code: https://github.com/Ascensao/Intraday-momentum-strategy , https://github.com/blackswan-quants/intraday-momentum
+[A] Zarattini, Aziz (2023) Can Day Trading Really Be Profitable? ORB on QQQ (SSRN 4416622): https://papers.ssrn.com/abstract=4416622
+[A] CXO summary of ORB rules: https://www.cxoadvisory.com/technical-trading/day-trading-with-an-opening-range-breakout-strategy
+[F] Independent ORB replication with cost stress: https://github.com/giovannibrusco/zarattini-2023-orb-qqq
+[A] Zarattini, Aziz (2023) VWAP: the holy grail for day trading systems: https://concretumgroup.com/volume-weighted-average-price-vwap-the-holy-grail-for-day-trading-systems/
+[A] QuantConnect ORB stocks-in-play thread: https://www.quantconnect.com/forum/discussion/18444/opening-range-breakout-for-stocks-in-play/
+
+## Overnight / around-the-clock returns
+[F] Boyarchenko, Larsen, Whelan (2023 RFS) The Overnight Drift, NY Fed SR 917: https://www.newyorkfed.org/medialibrary/media/research/staff_reports/sr917.pdf
+[A] Liberty Street (2021) The overnight drift in US equity returns: https://libertystreeteconomics.newyorkfed.org/2021/05/the-overnight-drift-in-us-equity-returns
+[A] Liberty Street (2026-07) The disappearing overnight drift: https://libertystreeteconomics.newyorkfed.org/2026/07/the-disappearing-overnight-drift/
+[A] Bondarenko, Muravyev (2023 JFQA) Market return around the clock: a puzzle: https://ideas.repec.org/a/cup/jfinqa/v58y2023i3p939-967_1.html
+[S] window definitions (EU-open 23:30-03:30 ET, 7.6%/yr, SR 1.67): https://alphaarchitect.com/market-return-around-the-clock/
+[S] NightShares ETFs (overnight futures ETFs, closed after ~14 months): https://etfstrategy.com/nightshares-debuts-two-us-equity-etfs-for-overnight-trading-10338
+[A] Grant, Wolf, Yu (2005 JBF) Intraday price reversals in the US stock index futures market: https://ideas.repec.org/a/eee/jbfina/v29y2005i5p1311-1327.html
+[A] Weekend effect post-1987 (Boston Fed WP 98-6): https://www.bostonfed.org/-/media/Documents/Workingpapers/PDF/wp98_6.pdf
+[A] Heston, Korajczyk, Sadka (2010 JF) Intraday patterns in the cross-section of stock returns: https://ar5iv.arxiv.org/html/1005.3535
+[A] Bogousslavsky (2021 JFE) The cross-section of intraday and overnight returns: https://finance.unibocconi.eu/sites/default/files/files/media/attachments/The%2520Cross-Section%2520of%2520Intraday%2520and%2520Overnight%2520Returns_21Dec1620170112151545.pdf
+
+## FOMC / macro announcements
+[F] Lucca, Moench (2015 JF) The pre-FOMC announcement drift (NBER conf. drafts): https://conference.nber.org/conf_papers/f66717.pdf , https://conference.nber.org/conf_papers/f64395/f64395.pdf
+[A] Kurov, Wolfe, Gilbert (2021 FRL) The disappearing pre-FOMC announcement drift: https://ssrn.com/abstract=3134546
+[S] FOMC-day reversal strategy on E-mini 1997-2020 (Insper thesis 'Essays in Financial Economics', page blocked): https://repositorio.insper.edu.br/handle/11224/7532
+[A] GitHub pre-FOMC replications: https://github.com/angiekwang/pre-fomc-drift-replication , https://github.com/johnhz0229/pre-fomc-backtest
+[F] Ai, Bansal, Guo (2023 NBER w31923) Macroeconomic announcement premium (1961-2023 update): https://www.nber.org/system/files/working_papers/w31923/w31923.pdf
+[A] Savor, Wilson (2013 JFQA) How much do investors care about macroeconomic risk?: https://ideas.repec.org/a/cup/jfinqa/v48y2013i02p343-375_00.html
+[A] Jones, Lamont, Lumsdaine (1998 JFE) Macroeconomic news and bond market volatility: https://ideas.repec.org/a/eee/jfinec/v47y1998i3p315-337.html
+[A] Faust, Wright / Fed FEDS 2014-100 Jumps in bond yields at known times: https://www.federalreserve.gov/econresdata/feds/2014/files/2014100r1pap.pdf
+[A] Hillenbrand (2025 RFS) The Fed and the secular decline in interest rates (Quantpedia summary): https://quantpedia.com/?p=6950
+[F] Brooks, Katz, Lustig (NBER w25127) Post-FOMC announcement drift in U.S. bond markets: https://www.nber.org/papers/w25127.pdf
+
+## Treasury auctions
+[F] Lou, Yan, Zhang (2013 RFS) Anticipated and repeated shocks in liquid markets (FMG DP684): https://www.fmg.ac.uk/sites/default/files/publications/DP684.pdf
+[A] Fleming, Liu, Nguyen (NY Fed SR 1188, 2026) Intraday price pressure and order flow around U.S. Treasury auctions: https://www.fedinprint.org/item/fednsr/102915
+[A] Robeco (2025-03) Quant chart: US Treasuries up for auction (10y futures -6 bp ahead of auctions, 1983-2024): https://robeco.com/en-int/insights/2025/03/quant-chart-us-treasuries-up-for-auction
+[S] AEA 2022 paper: permanent yield decline over auctions gone 2010-2025: https://aeaweb.org/conference/2022/preliminary/paper/Gr5d93YA
+[A] The effect of treasury auctions on 10-year Treasury note futures (Accounting & Finance 2021): https://ideas.repec.org/a/bla/acctfi/v61y2021is1p1517-1555.html
+
+## Commodity index roll
+[F] Mou (2010/2011) Limits to arbitrage and commodity index investment: front-running the Goldman roll (CFTC copy): https://www.cftc.gov/sites/default/files/idc/groups/public/@swaps/documents/file/plstudy_33_yu.pdf
+[A] SSRN: https://papers.ssrn.com/abstract=1716841
+[F] Two Sigma (2017) The commodity futures roll return tax: https://www.twosigma.com/wp-content/uploads/SV_10_17.pdf
+[A] GSCI roll schedule (5th-9th business day, 20%/day): https://www.goldmansachs.com/what-we-do/FICC-and-equities/business-groups/sts-folder/gsci/roll-period.html
+[F] Taylor (2016 JCM) Roll strategy efficiency in commodity futures markets: https://research-information.bris.ac.uk/ws/files/57045347/Rollover_v2.pdf
+
+## Option expiration
+[A] Stivers, Sun (2013 JBF) Returns and option activity over the option-expiration week for S&P 100 stocks: https://ideas.repec.org/a/eee/jbfina/v37y2013i11p4226-4240.html
+[A] CXO drill-down: https://cxoadvisory.com/calendar-effects/option-expiration-week-stock-return-drill-down
+[A] Quantpedia: https://quantpedia.com/strategies/option-expiration-week-effect

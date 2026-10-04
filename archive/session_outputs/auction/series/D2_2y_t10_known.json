@@ -1,0 +1,27 @@
+{
+  "candidate": "D2_2y_t10_known",
+  "task_label": "futures_test",
+  "rule": "DIAGNOSTIC: V2_2y_t10 without the announcement gate (paper's Table V timing)",
+  "diagnostic": true,
+  "columns": {
+    "net_1x": "daily excess return over T-bill, realistic one-way costs ZT 0.5 / ZF 0.7 / ZN 1.0 / ZB, UB 1.5 / ES 1.0 bp (+ engine roll round trip)",
+    "net_2x": "same at 2x costs",
+    "gross": "no costs"
+  },
+  "execution": "engine.simulate exec=next_close (held on return day t decided at close t-2); auctions gated by announcement date <= t-2",
+  "avg_cost_bp": 0.6158536585365855,
+  "selection_window": [
+    "2010-06-07",
+    "2020-12-31"
+  ],
+  "validation_window": [
+    "2021-01-01",
+    "2024-10-02"
+  ],
+  "later_descriptive": [
+    "2024-10-03",
+    "2026-10-02"
+  ],
+  "spec": "auction/futures_test/SPEC.md",
+  "script": "auction/futures_test/auction_futures.py"
+}

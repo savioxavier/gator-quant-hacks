@@ -1,0 +1,1459 @@
+{
+  "meta": {
+    "script": "validation/starter_kit/check_flow_clock.py",
+    "fwd_data_end": "2026-10-02",
+    "windows": {
+      "in_sample": [
+        "2006-05-08",
+        "2024-10-02"
+      ],
+      "out_of_sample": [
+        "2024-10-03",
+        "2026-10-02"
+      ]
+    },
+    "reference_checks": {
+      "official_minus_combine_max_abs": 0.0,
+      "official_rebuilt_max_abs": 6.9388939e-18
+    },
+    "runs": [
+      {
+        "name": "native_none",
+        "seconds": 23.5
+      },
+      {
+        "name": "native_project",
+        "seconds": 23.5
+      },
+      {
+        "name": "native_guide",
+        "seconds": 24.3
+      },
+      {
+        "name": "native_guide_literal",
+        "seconds": 23.3
+      },
+      {
+        "name": "open_none",
+        "seconds": 16.1
+      },
+      {
+        "name": "open_project",
+        "seconds": 16.7
+      },
+      {
+        "name": "coc_none",
+        "seconds": 16.4
+      },
+      {
+        "name": "coc_project",
+        "seconds": 16.5
+      },
+      {
+        "name": "coc_guide",
+        "seconds": 16.8
+      }
+    ],
+    "desync_bars": 0,
+    "runtime_s": 60.5
+  },
+  "references": {
+    "zero_cost": {
+      "sharpe": {
+        "in_sample": {
+          "our_sharpe_excess": 1.3543621,
+          "kit_sharpe_rf0": 1.5408323
+        },
+        "out_of_sample": {
+          "our_sharpe_excess": 0.39675945,
+          "kit_sharpe_rf0": 1.0035689
+        }
+      },
+      "in_sample": {
+        "ann_return": 0.1209254,
+        "max_drawdown": -0.10896912
+      },
+      "out_of_sample": {
+        "ann_return": 0.065429568,
+        "max_drawdown": -0.071386894
+      }
+    },
+    "guide_cost": {
+      "sharpe": {
+        "in_sample": {
+          "our_sharpe_excess": 0.15963899,
+          "kit_sharpe_rf0": 0.34449796
+        },
+        "out_of_sample": {
+          "our_sharpe_excess": -1.2013041,
+          "kit_sharpe_rf0": -0.62507707
+        }
+      },
+      "in_sample": {
+        "ann_return": 0.023744779,
+        "max_drawdown": -0.21098871
+      },
+      "out_of_sample": {
+        "ann_return": -0.044224974,
+        "max_drawdown": -0.14539958
+      }
+    },
+    "official": {
+      "sharpe": {
+        "in_sample": {
+          "our_sharpe_excess": 0.98448491,
+          "kit_sharpe_rf0": 1.171248
+        },
+        "out_of_sample": {
+          "our_sharpe_excess": -0.12152013,
+          "kit_sharpe_rf0": 0.47985458
+        }
+      },
+      "in_sample": {
+        "ann_return": 0.089753053,
+        "max_drawdown": -0.11670703
+      },
+      "out_of_sample": {
+        "ann_return": 0.029857431,
+        "max_drawdown": -0.086697373
+      }
+    }
+  },
+  "runs": {
+    "native_none": {
+      "params": "fill=native",
+      "costs": "none",
+      "extra_costs": false,
+      "orders": {
+        "total": 140377,
+        "completed": 140347,
+        "refused": 0,
+        "by_status": {
+          "Completed": 140347,
+          "Accepted": 30
+        }
+      },
+      "windows": {
+        "in_sample": {
+          "kit_sharpe_rf0": 1.4246487,
+          "our_sharpe_excess": 1.3526747,
+          "ann_return": 0.11114738,
+          "ann_vol": 0.076021822,
+          "max_drawdown": -0.10963806,
+          "mean_gross_weight": 0.90278111,
+          "orders": 126192,
+          "refused_orders": 0,
+          "our_sharpe_excess_aligned": 1.3526747
+        },
+        "out_of_sample": {
+          "kit_sharpe_rf0": 0.78280797,
+          "our_sharpe_excess": 0.40308104,
+          "ann_return": 0.050287776,
+          "ann_vol": 0.065475669,
+          "max_drawdown": -0.076846111,
+          "mean_gross_weight": 1.1096135,
+          "orders": 14185,
+          "refused_orders": 0,
+          "our_sharpe_excess_aligned": 0.40308104
+        }
+      },
+      "vs_matched_reference": {
+        "reference": "zero_cost",
+        "raw": {
+          "in_sample": {
+            "corr": 0.99979156,
+            "mean_abs_diff_bp": 0.17951296,
+            "max_abs_diff_bp": 53.295499,
+            "tracking_diff_ann": -0.00028307787,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.99997329,
+            "mean_abs_diff_bp": 0.14815342,
+            "max_abs_diff_bp": 1.951185,
+            "tracking_diff_ann": 0.00042048463,
+            "n_days": 501
+          }
+        },
+        "aligned": {
+          "in_sample": {
+            "corr": 0.99979156,
+            "mean_abs_diff_bp": 0.17951296,
+            "max_abs_diff_bp": 53.295499,
+            "tracking_diff_ann": -0.00028307787,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.99997329,
+            "mean_abs_diff_bp": 0.14815342,
+            "max_abs_diff_bp": 1.951185,
+            "tracking_diff_ann": 0.00042048463,
+            "n_days": 501
+          }
+        }
+      },
+      "vs_official": {
+        "raw": {
+          "in_sample": {
+            "corr": 0.99798135,
+            "mean_abs_diff_bp": 1.2157824,
+            "max_abs_diff_bp": 41.277778,
+            "tracking_diff_ann": 0.027939598,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.99670326,
+            "mean_abs_diff_bp": 1.4251736,
+            "max_abs_diff_bp": 14.913188,
+            "tracking_diff_ann": 0.034347572,
+            "n_days": 501
+          }
+        },
+        "aligned": {
+          "in_sample": {
+            "corr": 0.99798135,
+            "mean_abs_diff_bp": 1.2157824,
+            "max_abs_diff_bp": 41.277778,
+            "tracking_diff_ann": 0.027939598,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.99670326,
+            "mean_abs_diff_bp": 1.4251736,
+            "max_abs_diff_bp": 14.913188,
+            "tracking_diff_ann": 0.034347572,
+            "n_days": 501
+          }
+        }
+      },
+      "largest_aligned_daily_diffs_bp": {
+        "2012-11-01": -53.295499,
+        "2020-02-25": -17.264723,
+        "2007-11-27": 12.06577,
+        "2008-02-29": -10.585072,
+        "2021-02-26": 8.4226122
+      }
+    },
+    "native_project": {
+      "params": "fill=native",
+      "costs": "project",
+      "extra_costs": true,
+      "orders": {
+        "total": 140375,
+        "completed": 140345,
+        "refused": 0,
+        "by_status": {
+          "Completed": 140345,
+          "Accepted": 30
+        }
+      },
+      "windows": {
+        "in_sample": {
+          "kit_sharpe_rf0": 1.0927907,
+          "our_sharpe_excess": 1.0196893,
+          "ann_return": 0.083228941,
+          "ann_vol": 0.07579669,
+          "max_drawdown": -0.11679423,
+          "mean_gross_weight": 0.90292433,
+          "orders": 126190,
+          "refused_orders": 0,
+          "our_sharpe_excess_aligned": 1.017916
+        },
+        "out_of_sample": {
+          "kit_sharpe_rf0": 0.3211291,
+          "our_sharpe_excess": -0.058889856,
+          "ann_return": 0.019054768,
+          "ann_vol": 0.065501508,
+          "max_drawdown": -0.090729886,
+          "mean_gross_weight": 1.1097898,
+          "orders": 14185,
+          "refused_orders": 0,
+          "our_sharpe_excess_aligned": -0.05871951
+        }
+      },
+      "vs_matched_reference": {
+        "reference": "official",
+        "raw": {
+          "in_sample": {
+            "corr": 0.99624424,
+            "mean_abs_diff_bp": 1.9852698,
+            "max_abs_diff_bp": 53.01126,
+            "tracking_diff_ann": 0.0024663423,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.99386736,
+            "mean_abs_diff_bp": 2.3451558,
+            "max_abs_diff_bp": 14.890272,
+            "tracking_diff_ann": 0.0041525251,
+            "n_days": 501
+          }
+        },
+        "aligned": {
+          "in_sample": {
+            "corr": 0.99971014,
+            "mean_abs_diff_bp": 0.29149006,
+            "max_abs_diff_bp": 42.957234,
+            "tracking_diff_ann": 0.0024828451,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.99977547,
+            "mean_abs_diff_bp": 0.29230481,
+            "max_abs_diff_bp": 7.2498722,
+            "tracking_diff_ann": 0.0041435498,
+            "n_days": 501
+          }
+        }
+      },
+      "vs_official": {
+        "raw": {
+          "in_sample": {
+            "corr": 0.99624424,
+            "mean_abs_diff_bp": 1.9852698,
+            "max_abs_diff_bp": 53.01126,
+            "tracking_diff_ann": 0.0024663423,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.99386736,
+            "mean_abs_diff_bp": 2.3451558,
+            "max_abs_diff_bp": 14.890272,
+            "tracking_diff_ann": 0.0041525251,
+            "n_days": 501
+          }
+        },
+        "aligned": {
+          "in_sample": {
+            "corr": 0.99971014,
+            "mean_abs_diff_bp": 0.29149006,
+            "max_abs_diff_bp": 42.957234,
+            "tracking_diff_ann": 0.0024828451,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.99977547,
+            "mean_abs_diff_bp": 0.29230481,
+            "max_abs_diff_bp": 7.2498722,
+            "tracking_diff_ann": 0.0041435498,
+            "n_days": 501
+          }
+        }
+      },
+      "largest_aligned_daily_diffs_bp": {
+        "2012-11-01": -42.957234,
+        "2020-02-25": -17.129008,
+        "2007-11-27": 12.252391,
+        "2013-05-29": 11.796074,
+        "2008-02-29": -10.539683
+      }
+    },
+    "native_guide": {
+      "params": "fill=native",
+      "costs": "guide",
+      "extra_costs": true,
+      "orders": {
+        "total": 140372,
+        "completed": 140342,
+        "refused": 0,
+        "by_status": {
+          "Completed": 140342,
+          "Accepted": 30
+        }
+      },
+      "windows": {
+        "in_sample": {
+          "kit_sharpe_rf0": 0.34394645,
+          "our_sharpe_excess": 0.26955517,
+          "ann_return": 0.02356055,
+          "ann_vol": 0.076119796,
+          "max_drawdown": -0.17944831,
+          "mean_gross_weight": 0.90324822,
+          "orders": 126190,
+          "refused_orders": 0,
+          "our_sharpe_excess_aligned": 0.26647089
+        },
+        "out_of_sample": {
+          "kit_sharpe_rf0": -0.68341256,
+          "our_sharpe_excess": -1.0546454,
+          "ann_return": -0.046691116,
+          "ann_vol": 0.066773876,
+          "max_drawdown": -0.14729201,
+          "mean_gross_weight": 1.1101861,
+          "orders": 14182,
+          "refused_orders": 0,
+          "our_sharpe_excess_aligned": -1.0394032
+        }
+      },
+      "vs_matched_reference": {
+        "reference": "guide_cost",
+        "raw": {
+          "in_sample": {
+            "corr": 0.96134276,
+            "mean_abs_diff_bp": 6.3907749,
+            "max_abs_diff_bp": 52.167712,
+            "tracking_diff_ann": 0.0082546077,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.93730756,
+            "mean_abs_diff_bp": 7.5692915,
+            "max_abs_diff_bp": 47.741562,
+            "tracking_diff_ann": 0.01200146,
+            "n_days": 501
+          }
+        },
+        "aligned": {
+          "in_sample": {
+            "corr": 0.99857172,
+            "mean_abs_diff_bp": 0.56913673,
+            "max_abs_diff_bp": 32.778805,
+            "tracking_diff_ann": 0.008162614,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.99806793,
+            "mean_abs_diff_bp": 0.63849547,
+            "max_abs_diff_bp": 23.949736,
+            "tracking_diff_ann": 0.011785437,
+            "n_days": 501
+          }
+        }
+      },
+      "vs_official": {
+        "raw": {
+          "in_sample": {
+            "corr": 0.98096483,
+            "mean_abs_diff_bp": 4.0599021,
+            "max_abs_diff_bp": 78.930923,
+            "tracking_diff_ann": -0.05417984,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.969094,
+            "mean_abs_diff_bp": 4.7159644,
+            "max_abs_diff_bp": 46.557144,
+            "tracking_diff_ann": -0.062460215,
+            "n_days": 501
+          }
+        },
+        "aligned": {
+          "in_sample": {
+            "corr": 0.99211814,
+            "mean_abs_diff_bp": 2.2510592,
+            "max_abs_diff_bp": 45.755893,
+            "tracking_diff_ann": -0.054271834,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.98770775,
+            "mean_abs_diff_bp": 2.5704346,
+            "max_abs_diff_bp": 31.799426,
+            "tracking_diff_ann": -0.062676238,
+            "n_days": 501
+          }
+        }
+      },
+      "largest_aligned_daily_diffs_bp": {
+        "2012-11-02": -32.778805,
+        "2020-10-28": 32.453164,
+        "2021-02-24": 30.280884,
+        "2014-06-26": 30.026575,
+        "2020-10-01": 29.766904
+      }
+    },
+    "native_guide_literal": {
+      "params": "fill=native",
+      "costs": "guide",
+      "extra_costs": false,
+      "orders": {
+        "total": 140374,
+        "completed": 140344,
+        "refused": 0,
+        "by_status": {
+          "Completed": 140344,
+          "Accepted": 30
+        }
+      },
+      "windows": {
+        "in_sample": {
+          "kit_sharpe_rf0": 0.87907431,
+          "our_sharpe_excess": 0.80542026,
+          "ann_return": 0.065806427,
+          "ann_vol": 0.075770483,
+          "max_drawdown": -0.12138088,
+          "mean_gross_weight": 0.90301356,
+          "orders": 126190,
+          "refused_orders": 0,
+          "our_sharpe_excess_aligned": 0.80267148
+        },
+        "out_of_sample": {
+          "kit_sharpe_rf0": 0.024903155,
+          "our_sharpe_excess": -0.35393538,
+          "ann_return": -0.00051571512,
+          "ann_vol": 0.065690311,
+          "max_drawdown": -0.10071479,
+          "mean_gross_weight": 1.1098983,
+          "orders": 14184,
+          "refused_orders": 0,
+          "our_sharpe_excess_aligned": -0.3513583
+        }
+      },
+      "vs_matched_reference": {
+        "reference": "guide_cost",
+        "raw": {
+          "in_sample": {
+            "corr": 0.97495679,
+            "mean_abs_diff_bp": 4.9098014,
+            "max_abs_diff_bp": 52.013313,
+            "tracking_diff_ann": 0.048679528,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.95937643,
+            "mean_abs_diff_bp": 5.8542492,
+            "max_abs_diff_bp": 47.724504,
+            "tracking_diff_ann": 0.059232076,
+            "n_days": 501
+          }
+        },
+        "aligned": {
+          "in_sample": {
+            "corr": 0.99365533,
+            "mean_abs_diff_bp": 2.0355513,
+            "max_abs_diff_bp": 41.040511,
+            "tracking_diff_ann": 0.048686319,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.99022898,
+            "mean_abs_diff_bp": 2.4147243,
+            "max_abs_diff_bp": 29.830982,
+            "tracking_diff_ann": 0.059190997,
+            "n_days": 501
+          }
+        }
+      },
+      "vs_official": {
+        "raw": {
+          "in_sample": {
+            "corr": 0.99355375,
+            "mean_abs_diff_bp": 2.5486504,
+            "max_abs_diff_bp": 62.118945,
+            "tracking_diff_ann": -0.01375492,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.98954071,
+            "mean_abs_diff_bp": 2.973408,
+            "max_abs_diff_bp": 22.884128,
+            "tracking_diff_ann": -0.0152296,
+            "n_days": 501
+          }
+        },
+        "aligned": {
+          "in_sample": {
+            "corr": 0.9991234,
+            "mean_abs_diff_bp": 0.74233523,
+            "max_abs_diff_bp": 45.501686,
+            "tracking_diff_ann": -0.013748128,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.99879918,
+            "mean_abs_diff_bp": 0.8137553,
+            "max_abs_diff_bp": 10.379271,
+            "tracking_diff_ann": -0.015270678,
+            "n_days": 501
+          }
+        }
+      },
+      "largest_aligned_daily_diffs_bp": {
+        "2014-06-26": 41.040511,
+        "2020-10-28": 38.802673,
+        "2013-05-29": 38.741866,
+        "2018-05-29": 36.257906,
+        "2021-02-24": 35.719049
+      }
+    },
+    "open_none": {
+      "params": "fill=native,tsmom_scale=open",
+      "costs": "none",
+      "extra_costs": false,
+      "orders": {
+        "total": 75725,
+        "completed": 75710,
+        "refused": 0,
+        "by_status": {
+          "Completed": 75710,
+          "Accepted": 15
+        }
+      },
+      "windows": {
+        "in_sample": {
+          "kit_sharpe_rf0": 1.429921,
+          "our_sharpe_excess": 1.3579565,
+          "ann_return": 0.11155235,
+          "ann_vol": 0.075995161,
+          "max_drawdown": -0.10940444,
+          "mean_gross_weight": 0.90277517,
+          "orders": 67922,
+          "refused_orders": 0,
+          "our_sharpe_excess_aligned": 1.3579565
+        },
+        "out_of_sample": {
+          "kit_sharpe_rf0": 0.78695541,
+          "our_sharpe_excess": 0.40674793,
+          "ann_return": 0.050513584,
+          "ann_vol": 0.065397411,
+          "max_drawdown": -0.077368706,
+          "mean_gross_weight": 1.1096237,
+          "orders": 7803,
+          "refused_orders": 0,
+          "our_sharpe_excess_aligned": 0.40674793
+        }
+      },
+      "vs_matched_reference": {
+        "reference": "zero_cost",
+        "raw": {
+          "in_sample": {
+            "corr": 0.99962974,
+            "mean_abs_diff_bp": 0.32812201,
+            "max_abs_diff_bp": 53.289063,
+            "tracking_diff_ann": 7.9661385e-05,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.99920075,
+            "mean_abs_diff_bp": 0.44647958,
+            "max_abs_diff_bp": 28.561655,
+            "tracking_diff_ann": 0.00062998016,
+            "n_days": 501
+          }
+        },
+        "aligned": {
+          "in_sample": {
+            "corr": 0.99962974,
+            "mean_abs_diff_bp": 0.32812201,
+            "max_abs_diff_bp": 53.289063,
+            "tracking_diff_ann": 7.9661385e-05,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.99920075,
+            "mean_abs_diff_bp": 0.44647958,
+            "max_abs_diff_bp": 28.561655,
+            "tracking_diff_ann": 0.00062998016,
+            "n_days": 501
+          }
+        }
+      },
+      "vs_official": {
+        "raw": {
+          "in_sample": {
+            "corr": 0.9977201,
+            "mean_abs_diff_bp": 1.2928902,
+            "max_abs_diff_bp": 41.271343,
+            "tracking_diff_ann": 0.028302338,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.99600516,
+            "mean_abs_diff_bp": 1.5673884,
+            "max_abs_diff_bp": 29.812233,
+            "tracking_diff_ann": 0.034557068,
+            "n_days": 501
+          }
+        },
+        "aligned": {
+          "in_sample": {
+            "corr": 0.9977201,
+            "mean_abs_diff_bp": 1.2928902,
+            "max_abs_diff_bp": 41.271343,
+            "tracking_diff_ann": 0.028302338,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.99600516,
+            "mean_abs_diff_bp": 1.5673884,
+            "max_abs_diff_bp": 29.812233,
+            "tracking_diff_ann": 0.034557068,
+            "n_days": 501
+          }
+        }
+      },
+      "largest_aligned_daily_diffs_bp": {
+        "2012-11-01": -53.289063,
+        "2026-03-03": 28.561655,
+        "2018-05-29": -19.112074,
+        "2013-12-27": 18.560127,
+        "2020-02-25": -17.303307
+      }
+    },
+    "open_project": {
+      "params": "fill=native,tsmom_scale=open",
+      "costs": "project",
+      "extra_costs": true,
+      "orders": {
+        "total": 75724,
+        "completed": 75709,
+        "refused": 0,
+        "by_status": {
+          "Completed": 75709,
+          "Accepted": 15
+        }
+      },
+      "windows": {
+        "in_sample": {
+          "kit_sharpe_rf0": 1.0993048,
+          "our_sharpe_excess": 1.0261747,
+          "ann_return": 0.083704688,
+          "ann_vol": 0.075743629,
+          "max_drawdown": -0.11653467,
+          "mean_gross_weight": 0.90291937,
+          "orders": 67921,
+          "refused_orders": 0,
+          "our_sharpe_excess_aligned": 1.0241679
+        },
+        "out_of_sample": {
+          "kit_sharpe_rf0": 0.32515908,
+          "our_sharpe_excess": -0.055255929,
+          "ann_return": 0.019305398,
+          "ann_vol": 0.065432673,
+          "max_drawdown": -0.091218393,
+          "mean_gross_weight": 1.1098022,
+          "orders": 7803,
+          "refused_orders": 0,
+          "our_sharpe_excess_aligned": -0.055105509
+        }
+      },
+      "vs_matched_reference": {
+        "reference": "official",
+        "raw": {
+          "in_sample": {
+            "corr": 0.99612164,
+            "mean_abs_diff_bp": 2.0389776,
+            "max_abs_diff_bp": 52.70103,
+            "tracking_diff_ann": 0.0029018016,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.99346837,
+            "mean_abs_diff_bp": 2.4443485,
+            "max_abs_diff_bp": 28.7167,
+            "tracking_diff_ann": 0.0043935294,
+            "n_days": 501
+          }
+        },
+        "aligned": {
+          "in_sample": {
+            "corr": 0.99954494,
+            "mean_abs_diff_bp": 0.41182146,
+            "max_abs_diff_bp": 42.951912,
+            "tracking_diff_ann": 0.0029187594,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.99913396,
+            "mean_abs_diff_bp": 0.52031861,
+            "max_abs_diff_bp": 28.7167,
+            "tracking_diff_ann": 0.0043854339,
+            "n_days": 501
+          }
+        }
+      },
+      "vs_official": {
+        "raw": {
+          "in_sample": {
+            "corr": 0.99612164,
+            "mean_abs_diff_bp": 2.0389776,
+            "max_abs_diff_bp": 52.70103,
+            "tracking_diff_ann": 0.0029018016,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.99346837,
+            "mean_abs_diff_bp": 2.4443485,
+            "max_abs_diff_bp": 28.7167,
+            "tracking_diff_ann": 0.0043935294,
+            "n_days": 501
+          }
+        },
+        "aligned": {
+          "in_sample": {
+            "corr": 0.99954494,
+            "mean_abs_diff_bp": 0.41182146,
+            "max_abs_diff_bp": 42.951912,
+            "tracking_diff_ann": 0.0029187594,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.99913396,
+            "mean_abs_diff_bp": 0.52031861,
+            "max_abs_diff_bp": 28.7167,
+            "tracking_diff_ann": 0.0043854339,
+            "n_days": 501
+          }
+        }
+      },
+      "largest_aligned_daily_diffs_bp": {
+        "2012-11-01": -42.951912,
+        "2026-03-03": 28.7167,
+        "2013-12-27": 23.391654,
+        "2020-02-25": -17.170612,
+        "2017-08-29": -16.34985
+      }
+    },
+    "coc_none": {
+      "params": "fill=coc",
+      "costs": "none",
+      "extra_costs": false,
+      "orders": {
+        "total": 76395,
+        "completed": 76380,
+        "refused": 0,
+        "by_status": {
+          "Completed": 76380,
+          "Accepted": 15
+        }
+      },
+      "windows": {
+        "in_sample": {
+          "kit_sharpe_rf0": 1.4252863,
+          "our_sharpe_excess": 1.3533738,
+          "ann_return": 0.11136229,
+          "ann_vol": 0.076129299,
+          "max_drawdown": -0.109606,
+          "mean_gross_weight": 0.90248039,
+          "orders": 68520,
+          "refused_orders": 0,
+          "our_sharpe_excess_aligned": 1.3533738
+        },
+        "out_of_sample": {
+          "kit_sharpe_rf0": 0.77738903,
+          "our_sharpe_excess": 0.39739223,
+          "ann_return": 0.04988311,
+          "ann_vol": 0.065432242,
+          "max_drawdown": -0.076561808,
+          "mean_gross_weight": 1.1093639,
+          "orders": 7875,
+          "refused_orders": 0,
+          "our_sharpe_excess_aligned": 0.39739223
+        }
+      },
+      "vs_matched_reference": {
+        "reference": "zero_cost",
+        "raw": {
+          "in_sample": {
+            "corr": 0.99999687,
+            "mean_abs_diff_bp": 0.04580695,
+            "max_abs_diff_bp": 1.9183075,
+            "tracking_diff_ann": -8.6307999e-05,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.99999769,
+            "mean_abs_diff_bp": 0.040261726,
+            "max_abs_diff_bp": 1.2237527,
+            "tracking_diff_ann": 3.3791477e-05,
+            "n_days": 501
+          }
+        },
+        "aligned": {
+          "in_sample": {
+            "corr": 0.99999687,
+            "mean_abs_diff_bp": 0.04580695,
+            "max_abs_diff_bp": 1.9183075,
+            "tracking_diff_ann": -8.6307999e-05,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.99999769,
+            "mean_abs_diff_bp": 0.040261726,
+            "max_abs_diff_bp": 1.2237527,
+            "tracking_diff_ann": 3.3791477e-05,
+            "n_days": 501
+          }
+        }
+      },
+      "vs_official": {
+        "raw": {
+          "in_sample": {
+            "corr": 0.99814263,
+            "mean_abs_diff_bp": 1.1365026,
+            "max_abs_diff_bp": 16.127326,
+            "tracking_diff_ann": 0.028136368,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.996754,
+            "mean_abs_diff_bp": 1.3576542,
+            "max_abs_diff_bp": 14.782332,
+            "tracking_diff_ann": 0.033960879,
+            "n_days": 501
+          }
+        },
+        "aligned": {
+          "in_sample": {
+            "corr": 0.99814263,
+            "mean_abs_diff_bp": 1.1365026,
+            "max_abs_diff_bp": 16.127326,
+            "tracking_diff_ann": 0.028136368,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.996754,
+            "mean_abs_diff_bp": 1.3576542,
+            "max_abs_diff_bp": 14.782332,
+            "tracking_diff_ann": 0.033960879,
+            "n_days": 501
+          }
+        }
+      },
+      "largest_aligned_daily_diffs_bp": {
+        "2008-09-29": -1.9183075,
+        "2008-09-30": -1.7403139,
+        "2008-01-23": -1.730117,
+        "2008-09-19": 1.7189316,
+        "2008-09-18": -1.571537
+      }
+    },
+    "coc_project": {
+      "params": "fill=coc",
+      "costs": "project",
+      "extra_costs": true,
+      "orders": {
+        "total": 76394,
+        "completed": 76379,
+        "refused": 0,
+        "by_status": {
+          "Completed": 76379,
+          "Accepted": 15
+        }
+      },
+      "windows": {
+        "in_sample": {
+          "kit_sharpe_rf0": 1.0934744,
+          "our_sharpe_excess": 1.0205905,
+          "ann_return": 0.083543819,
+          "ann_vol": 0.076031212,
+          "max_drawdown": -0.11679569,
+          "mean_gross_weight": 0.90248039,
+          "orders": 68519,
+          "refused_orders": 0,
+          "our_sharpe_excess_aligned": 1.0205905
+        },
+        "out_of_sample": {
+          "kit_sharpe_rf0": 0.31648267,
+          "our_sharpe_excess": -0.061764642,
+          "ann_return": 0.018818907,
+          "ann_vol": 0.065792063,
+          "max_drawdown": -0.090351106,
+          "mean_gross_weight": 1.1093639,
+          "orders": 7875,
+          "refused_orders": 0,
+          "our_sharpe_excess_aligned": -0.061764642
+        }
+      },
+      "vs_matched_reference": {
+        "reference": "official",
+        "raw": {
+          "in_sample": {
+            "corr": 0.99987744,
+            "mean_abs_diff_bp": 0.17214066,
+            "max_abs_diff_bp": 10.044368,
+            "tracking_diff_ann": 0.0027712402,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.99981159,
+            "mean_abs_diff_bp": 0.19911178,
+            "max_abs_diff_bp": 7.2826319,
+            "tracking_diff_ann": 0.0039466189,
+            "n_days": 501
+          }
+        },
+        "aligned": {
+          "in_sample": {
+            "corr": 0.99987744,
+            "mean_abs_diff_bp": 0.17214066,
+            "max_abs_diff_bp": 10.044368,
+            "tracking_diff_ann": 0.0027712402,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.99981159,
+            "mean_abs_diff_bp": 0.19911178,
+            "max_abs_diff_bp": 7.2826319,
+            "tracking_diff_ann": 0.0039466189,
+            "n_days": 501
+          }
+        }
+      },
+      "vs_official": {
+        "raw": {
+          "in_sample": {
+            "corr": 0.99987744,
+            "mean_abs_diff_bp": 0.17214066,
+            "max_abs_diff_bp": 10.044368,
+            "tracking_diff_ann": 0.0027712402,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.99981159,
+            "mean_abs_diff_bp": 0.19911178,
+            "max_abs_diff_bp": 7.2826319,
+            "tracking_diff_ann": 0.0039466189,
+            "n_days": 501
+          }
+        },
+        "aligned": {
+          "in_sample": {
+            "corr": 0.99987744,
+            "mean_abs_diff_bp": 0.17214066,
+            "max_abs_diff_bp": 10.044368,
+            "tracking_diff_ann": 0.0027712402,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.99981159,
+            "mean_abs_diff_bp": 0.19911178,
+            "max_abs_diff_bp": 7.2826319,
+            "tracking_diff_ann": 0.0039466189,
+            "n_days": 501
+          }
+        }
+      },
+      "largest_aligned_daily_diffs_bp": {
+        "2020-10-28": 10.044368,
+        "2021-02-24": 9.134764,
+        "2014-06-26": 9.0812734,
+        "2018-05-29": 8.9341171,
+        "2020-10-01": 8.9198422
+      }
+    },
+    "coc_guide": {
+      "params": "fill=coc",
+      "costs": "guide",
+      "extra_costs": true,
+      "orders": {
+        "total": 76392,
+        "completed": 76377,
+        "refused": 0,
+        "by_status": {
+          "Completed": 76377,
+          "Accepted": 15
+        }
+      },
+      "windows": {
+        "in_sample": {
+          "kit_sharpe_rf0": 0.34797743,
+          "our_sharpe_excess": 0.27416978,
+          "ann_return": 0.02403397,
+          "ann_vol": 0.076689739,
+          "max_drawdown": -0.17943888,
+          "mean_gross_weight": 0.90248039,
+          "orders": 68517,
+          "refused_orders": 0,
+          "our_sharpe_excess_aligned": 0.27416978
+        },
+        "out_of_sample": {
+          "kit_sharpe_rf0": -0.67062331,
+          "our_sharpe_excess": -1.035969,
+          "ann_return": -0.046654271,
+          "ann_vol": 0.067877661,
+          "max_drawdown": -0.14656474,
+          "mean_gross_weight": 1.1093639,
+          "orders": 7875,
+          "refused_orders": 0,
+          "our_sharpe_excess_aligned": -1.035969
+        }
+      },
+      "vs_matched_reference": {
+        "reference": "guide_cost",
+        "raw": {
+          "in_sample": {
+            "corr": 0.99872008,
+            "mean_abs_diff_bp": 0.46357641,
+            "max_abs_diff_bp": 33.19832,
+            "tracking_diff_ann": 0.0087598976,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.99813344,
+            "mean_abs_diff_bp": 0.56100747,
+            "max_abs_diff_bp": 24.114258,
+            "tracking_diff_ann": 0.012132148,
+            "n_days": 501
+          }
+        },
+        "aligned": {
+          "in_sample": {
+            "corr": 0.99872008,
+            "mean_abs_diff_bp": 0.46357641,
+            "max_abs_diff_bp": 33.19832,
+            "tracking_diff_ann": 0.0087598976,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.99813344,
+            "mean_abs_diff_bp": 0.56100747,
+            "max_abs_diff_bp": 24.114258,
+            "tracking_diff_ann": 0.012132148,
+            "n_days": 501
+          }
+        }
+      },
+      "vs_official": {
+        "raw": {
+          "in_sample": {
+            "corr": 0.9923263,
+            "mean_abs_diff_bp": 2.1610196,
+            "max_abs_diff_bp": 32.133134,
+            "tracking_diff_ann": -0.05367455,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.98775815,
+            "mean_abs_diff_bp": 2.4957608,
+            "max_abs_diff_bp": 31.414105,
+            "tracking_diff_ann": -0.062329527,
+            "n_days": 501
+          }
+        },
+        "aligned": {
+          "in_sample": {
+            "corr": 0.9923263,
+            "mean_abs_diff_bp": 2.1610196,
+            "max_abs_diff_bp": 32.133134,
+            "tracking_diff_ann": -0.05367455,
+            "n_days": 4633
+          },
+          "out_of_sample": {
+            "corr": 0.98775815,
+            "mean_abs_diff_bp": 2.4957608,
+            "max_abs_diff_bp": 31.414105,
+            "tracking_diff_ann": -0.062329527,
+            "n_days": 501
+          }
+        }
+      },
+      "largest_aligned_daily_diffs_bp": {
+        "2020-10-28": 33.19832,
+        "2021-02-24": 30.370384,
+        "2020-10-01": 29.758188,
+        "2014-06-26": 29.755382,
+        "2018-05-29": 29.752828
+      }
+    }
+  },
+  "attribution": {
+    "close_order_sizing": {
+      "a": "native_none",
+      "b": "coc_none",
+      "differs_in": "A/C and TSMOM re-scale by bt.Order.Close sized a session early vs cheat-on-close at exact weights",
+      "agreement": {
+        "in_sample": {
+          "corr": 0.99979544,
+          "mean_abs_diff_bp": 0.16492983,
+          "max_abs_diff_bp": 53.3221,
+          "tracking_diff_ann": -0.00019676987,
+          "n_days": 4633
+        },
+        "out_of_sample": {
+          "corr": 0.99997543,
+          "mean_abs_diff_bp": 0.13636906,
+          "max_abs_diff_bp": 2.0545936,
+          "tracking_diff_ann": 0.00038669315,
+          "n_days": 501
+        }
+      }
+    },
+    "tsmom_open_sizing": {
+      "a": "coc_none",
+      "b": "@zero_cost",
+      "differs_in": "TSMOM market orders sized at the previous close vs the engine's exact weights at the open",
+      "agreement": {
+        "in_sample": {
+          "corr": 0.99999687,
+          "mean_abs_diff_bp": 0.04580695,
+          "max_abs_diff_bp": 1.9183075,
+          "tracking_diff_ann": -8.6307999e-05,
+          "n_days": 4633
+        },
+        "out_of_sample": {
+          "corr": 0.99999769,
+          "mean_abs_diff_bp": 0.040261726,
+          "max_abs_diff_bp": 1.2237527,
+          "tracking_diff_ann": 3.3791477e-05,
+          "n_days": 501
+        }
+      }
+    },
+    "tsmom_rescale_at_open": {
+      "a": "open_none",
+      "b": "native_none",
+      "differs_in": "TSMOM re-scaled at the open vs at the close",
+      "agreement": {
+        "in_sample": {
+          "corr": 0.99983763,
+          "mean_abs_diff_bp": 0.20561369,
+          "max_abs_diff_bp": 18.394355,
+          "tracking_diff_ann": 0.00036273926,
+          "n_days": 4633
+        },
+        "out_of_sample": {
+          "corr": 0.99923488,
+          "mean_abs_diff_bp": 0.36015178,
+          "max_abs_diff_bp": 28.226293,
+          "tracking_diff_ann": 0.00020949553,
+          "n_days": 501
+        }
+      }
+    },
+    "cost_netting_and_timing": {
+      "a": "coc_project",
+      "b": "@official",
+      "differs_in": "one netted book vs per-stream and overlay costs",
+      "agreement": {
+        "in_sample": {
+          "corr": 0.99987744,
+          "mean_abs_diff_bp": 0.17214066,
+          "max_abs_diff_bp": 10.044368,
+          "tracking_diff_ann": 0.0027712402,
+          "n_days": 4633
+        },
+        "out_of_sample": {
+          "corr": 0.99981159,
+          "mean_abs_diff_bp": 0.19911178,
+          "max_abs_diff_bp": 7.2826319,
+          "tracking_diff_ann": 0.0039466189,
+          "n_days": 501
+        }
+      }
+    }
+  },
+  "internals_vs_engine": [
+    {
+      "quantity": "held A SPY",
+      "max_abs_diff": 9.0205621e-17,
+      "days_over_1e-12": 0,
+      "days": []
+    },
+    {
+      "quantity": "held A IEF",
+      "max_abs_diff": 4.4408921e-16,
+      "days_over_1e-12": 0,
+      "days": []
+    },
+    {
+      "quantity": "held C IEF",
+      "max_abs_diff": 4.4408921e-16,
+      "days_over_1e-12": 0,
+      "days": []
+    },
+    {
+      "quantity": "decision TSMOM SPY",
+      "max_abs_diff": 9.7144515e-17,
+      "days_over_1e-12": 0,
+      "days": []
+    },
+    {
+      "quantity": "decision TSMOM QQQ",
+      "max_abs_diff": 9.7144515e-17,
+      "days_over_1e-12": 0,
+      "days": []
+    },
+    {
+      "quantity": "decision TSMOM IWM",
+      "max_abs_diff": 9.7144515e-17,
+      "days_over_1e-12": 0,
+      "days": []
+    },
+    {
+      "quantity": "decision TSMOM EFA",
+      "max_abs_diff": 9.7144515e-17,
+      "days_over_1e-12": 0,
+      "days": []
+    },
+    {
+      "quantity": "decision TSMOM EEM",
+      "max_abs_diff": 9.7144515e-17,
+      "days_over_1e-12": 0,
+      "days": []
+    },
+    {
+      "quantity": "decision TSMOM TLT",
+      "max_abs_diff": 9.7144515e-17,
+      "days_over_1e-12": 0,
+      "days": []
+    },
+    {
+      "quantity": "decision TSMOM IEF",
+      "max_abs_diff": 9.7144515e-17,
+      "days_over_1e-12": 0,
+      "days": []
+    },
+    {
+      "quantity": "decision TSMOM LQD",
+      "max_abs_diff": 8.3266727e-17,
+      "days_over_1e-12": 0,
+      "days": []
+    },
+    {
+      "quantity": "decision TSMOM HYG",
+      "max_abs_diff": 9.0205621e-17,
+      "days_over_1e-12": 0,
+      "days": []
+    },
+    {
+      "quantity": "decision TSMOM TIP",
+      "max_abs_diff": 8.3266727e-17,
+      "days_over_1e-12": 0,
+      "days": []
+    },
+    {
+      "quantity": "decision TSMOM GLD",
+      "max_abs_diff": 9.7144515e-17,
+      "days_over_1e-12": 0,
+      "days": []
+    },
+    {
+      "quantity": "decision TSMOM SLV",
+      "max_abs_diff": 9.7144515e-17,
+      "days_over_1e-12": 0,
+      "days": []
+    },
+    {
+      "quantity": "decision TSMOM DBC",
+      "max_abs_diff": 9.7144515e-17,
+      "days_over_1e-12": 0,
+      "days": []
+    },
+    {
+      "quantity": "decision TSMOM UUP",
+      "max_abs_diff": 9.7144515e-17,
+      "days_over_1e-12": 0,
+      "days": []
+    },
+    {
+      "quantity": "decision TSMOM VNQ",
+      "max_abs_diff": 9.7144515e-17,
+      "days_over_1e-12": 0,
+      "days": []
+    },
+    {
+      "quantity": "close-order target A SPY vs engine decision",
+      "max_abs_diff": 0.065065458,
+      "days_over_1e-12": 1,
+      "days": [
+        "2012-10-26"
+      ]
+    },
+    {
+      "quantity": "close-order target A IEF vs engine decision",
+      "max_abs_diff": 0.13523606,
+      "days_over_1e-12": 1,
+      "days": [
+        "2012-10-26"
+      ]
+    },
+    {
+      "quantity": "close-order target C IEF vs engine decision",
+      "max_abs_diff": 2.0,
+      "days_over_1e-12": 1,
+      "days": [
+        "2012-10-26"
+      ]
+    },
+    {
+      "quantity": "paper excess A",
+      "max_abs_diff": 9.996344e-17,
+      "days_over_1e-12": 0,
+      "days": []
+    },
+    {
+      "quantity": "gross A",
+      "max_abs_diff": 4.4408921e-16,
+      "days_over_1e-12": 0,
+      "days": []
+    },
+    {
+      "quantity": "lam A (relative)",
+      "max_abs_diff": 2.7755576e-16,
+      "days_over_1e-12": 0,
+      "days": []
+    },
+    {
+      "quantity": "paper excess C",
+      "max_abs_diff": 9.996344e-17,
+      "days_over_1e-12": 0,
+      "days": []
+    },
+    {
+      "quantity": "gross C",
+      "max_abs_diff": 4.4408921e-16,
+      "days_over_1e-12": 0,
+      "days": []
+    },
+    {
+      "quantity": "lam C (relative)",
+      "max_abs_diff": 1.3877788e-16,
+      "days_over_1e-12": 0,
+      "days": []
+    },
+    {
+      "quantity": "paper excess TSMOM",
+      "max_abs_diff": 9.985502e-17,
+      "days_over_1e-12": 0,
+      "days": []
+    },
+    {
+      "quantity": "gross TSMOM",
+      "max_abs_diff": 4.4408921e-16,
+      "days_over_1e-12": 0,
+      "days": []
+    },
+    {
+      "quantity": "lam TSMOM (relative)",
+      "max_abs_diff": 8.8817842e-16,
+      "days_over_1e-12": 0,
+      "days": []
+    },
+    {
+      "quantity": "k",
+      "max_abs_diff": 1.0408341e-16,
+      "days_over_1e-12": 0,
+      "days": []
+    },
+    {
+      "quantity": "k sizing the A/C close orders, on days A or C hold",
+      "max_abs_diff": 1.0408341e-16,
+      "days_over_1e-12": 0,
+      "days": []
+    },
+    {
+      "quantity": "k sizing the A/C close orders, all days",
+      "max_abs_diff": 0.0011480866,
+      "days_over_1e-12": 58,
+      "days": [
+        "2007-08-01",
+        "2007-11-01",
+        "2008-09-02",
+        "2009-10-01",
+        "2010-03-01",
+        "2010-04-01",
+        "2010-05-03",
+        "2011-06-01",
+        "2011-07-01",
+        "2012-03-01"
+      ]
+    },
+    {
+      "quantity": "paper ensemble vs forward.returns F1",
+      "max_abs_diff": 1.0061396e-16,
+      "days_over_1e-12": 0,
+      "days": []
+    }
+  ]
+}

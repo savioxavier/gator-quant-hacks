@@ -1,0 +1,34 @@
+{
+  "candidate": "carry_ts_fx",
+  "variant": "TS_fx_C1_M",
+  "rule": "Futures carry, time-series sign (KMPV 2018), signal C1 (21-session trailing mean of front/second annualised carry, lagged 1 session), monthly decisions, next-close fills, book: fx",
+  "universe": [
+    "6E",
+    "6J",
+    "6B",
+    "6A",
+    "6C",
+    "6S"
+  ],
+  "columns": {
+    "net_1x": "daily excess return over T-bill net of the realistic cost map",
+    "net_2x": "same at 2x costs",
+    "gross": "before costs"
+  },
+  "cost_bps_one_way": {
+    "6E": 0.5,
+    "6J": 0.75,
+    "6B": 0.75,
+    "6A": 0.75,
+    "6C": 0.75,
+    "6S": 1.0
+  },
+  "vol_scaling": "10% annualised ex-ante via trailing 252-session sample covariance of daily instrument excess returns (min 60 obs), instruments normalised by EWMA vol (com 60); scale cap 4",
+  "window": {
+    "start": "2011-09-02",
+    "in_sample_end": "2024-10-02",
+    "later_window": "2024-10-03..2026-10-02 (descriptive only)"
+  },
+  "selection": "headline variant = highest in-sample net Sharpe among 4 global variants of this construction; class books use the same variant (no per-class selection)",
+  "spec": "<scratch>\\edges\\carry\\SPEC.md"
+}

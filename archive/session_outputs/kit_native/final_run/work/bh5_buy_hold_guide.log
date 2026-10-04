@@ -1,0 +1,18 @@
+2026-10-03 14:50:05.759 INFO webull.main [Backtest] strategy=gqh_gtaa symbols=['SPY', 'EFA', 'IEF', 'VNQ', 'DBC'] params={'buy_and_hold': True}
+2026-10-03 14:50:05.763 INFO webull.main [Backtest] starting cash: 1000000000.00
+2026-10-03 14:50:10.245 INFO webull.main ============================================================
+2026-10-03 14:50:10.245 INFO webull.main [Backtest] Result Summary
+2026-10-03 14:50:10.245 INFO webull.main ============================================================
+2026-10-03 14:50:10.245 INFO webull.main Starting cash    : 1000000000.00
+2026-10-03 14:50:10.245 INFO webull.main Final cash       : 3779795927.97
+2026-10-03 14:50:10.245 INFO webull.main Net P&L          : 2779795927.97 (277.98%)
+2026-10-03 14:50:10.245 INFO webull.main Max drawdown     : 45.82% (632975810.62)
+2026-10-03 14:50:10.245 INFO webull.main Sharpe ratio     : 0.5127 (annualized)
+2026-10-03 14:50:10.245 INFO webull.main Total trades     : 5 (won=0, lost=0, win rate=0.00%)
+2026-10-03 14:50:10.245 INFO webull.main Trades net P&L   : 0.00
+2026-10-03 14:50:10.245 INFO webull.main ============================================================
+2026-10-03 14:50:10.370 INFO webull.visualize_lwc [VisualizeLWC] report written: <scratch>\kit_native\final_run\work\bh5_buy_hold_report.html (5 symbol card(s), equity=True, kpi=True)
+2026-10-03 14:50:10.497 INFO webull.harness [Harness] in_sample     2005-11-01..2024-10-02  kit Sharpe 0.4786  our Sharpe 0.3802  ann 6.06%  max DD -45.82%  orders 23532 (refused 0)
+2026-10-03 14:50:10.497 INFO webull.harness [Harness] out_of_sample 2024-10-03..2026-10-02  kit Sharpe 1.2306  our Sharpe 0.8065  ann 11.59%  max DD -10.44%  orders 2505 (refused 0)
+2026-10-03 14:50:10.498 INFO webull.harness [Harness] full          2005-01-03..2026-10-02  kit Sharpe 0.5127  our Sharpe 0.3968  ann 6.31%  max DD -45.82%  orders 26041 (refused 0)
+2026-10-03 14:50:10.519 INFO webull.harness [Harness] metrics written: <scratch>\kit_native\final_run\work\bh5_buy_hold_guide.json

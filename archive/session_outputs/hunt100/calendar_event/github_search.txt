@@ -1,0 +1,19 @@
+0 LeonardHoch/BSIC_Pre_FOMC_Drift | 
+0 angiekwang/pre-fomc-drift-replication | Replication of Table B.3 in Lucca & Moench (2013) "The Pre-FOMC Announcement Drift."
+0 johnhz0229/pre-fomc-backtest | A backtest on the trading strategy based on the pre FOMC drift published by Lucca-Moench (2015)
+0 JackCooperWarrington/sp500-implied-volatility | A replication study of implied volatility, the volatility risk premium, and the pre-FOMC drift in S&
+total 4 
+---
+10 concorde-speed/Concorde | Date of Concorde In January of the year 1976 after 29 years of the first to penetrate to the speed o
+5 trtajans/A-song-makes-you-feel-a-thought... | If I have time left over from my intense and tiring work; besides religious music, sometimes, I also
+3 trtajans/https-github.com-trtajans-A-song-makes-you-feel-a-thought | If I have time left over from my intense and tiring work;  besides religious music, sometimes,  I al
+2 KalpaTrader/Turn-of-the-Month | Turn of the month effect explored in Nifty 
+1 yeyechen/dash-for-cash | Examine the Turn-of-the-Month effect via the macro news channel.
+0 laholmes/daily-returns | Analysing the turn of the month effect in equity indices
+0 Komalpriya12/-Aratt-Cityscapes-Reviews---One-of-the-Best-Location-and-Floor-Plan | Review 1: I'm happy to add a positive recognition for the Aratt Cityscapes Reviews. Likewise, a simi
+total 7 
+---
+1 ogsui/financial-variance | An end-to-end financial data pipeline, forecasting backtest engine, and multi-tiered anomaly detecti
+0 tvenk/CalendarAnomaly-Backtest | Python project script that back test the Calendar Anomaly
+total 2 
+---

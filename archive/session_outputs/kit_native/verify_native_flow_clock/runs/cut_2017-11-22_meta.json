@@ -1,0 +1,45 @@
+{
+ "side_bps": {
+  "SPY": 3.0,
+  "QQQ": 3.0,
+  "IWM": 3.0,
+  "EFA": 3.0,
+  "EEM": 3.0,
+  "TLT": 3.0,
+  "IEF": 3.0,
+  "LQD": 3.0,
+  "HYG": 3.0,
+  "TIP": 5.0,
+  "GLD": 3.0,
+  "SLV": 5.0,
+  "DBC": 5.0,
+  "UUP": 5.0,
+  "VNQ": 5.0
+ },
+ "symbols": [
+  "SPY",
+  "QQQ",
+  "IWM",
+  "EFA",
+  "EEM",
+  "TLT",
+  "IEF",
+  "LQD",
+  "HYG",
+  "TIP",
+  "GLD",
+  "SLV",
+  "DBC",
+  "UUP",
+  "VNQ"
+ ],
+ "extra": true,
+ "extra_totals": {
+  "roll": 0.0,
+  "borrow": 21184501.244135153,
+  "close_fill_slippage": 0.0,
+  "coc_slippage_correction": 0.0
+ },
+ "desync": 0,
+ "refused": 0
+}

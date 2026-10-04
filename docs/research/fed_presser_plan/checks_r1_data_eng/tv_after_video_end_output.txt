@@ -1,0 +1,51 @@
+20240131 video_end=2968.7s after_video_end=False: n=128 vtt_s 2370-2968 offset interval [-40.4, 0.4]
+20240131 video_end=2968.7s after_video_end=True: n=11 vtt_s 2971-3023 offset interval [-48.3, -1.3]
+   vtt_s  after_video_end      lo      hi                                               text
+2971.336             True -48.336  26.664                   than any inflation threat might?
+2973.626             True -50.626  24.374 That, you know-you're in a position, in other word
+2975.926             True -52.926  22.074 to keep rates elevated as long as the economy stay
+2983.496             True -60.496  14.504 that the economy is maybe a little too strong righ
+2986.116             True -63.116  11.884  and that inflation could come back at some point?
+2988.326             True -65.326   9.674                     I'm not so worried about that.
+2999.336             True -76.336  -1.336 and there's no reason why we should want to get in
+3001.156             True -78.156  -3.156        of that process, if it's going to continue.
+3012.496             True -89.496 -14.496        are really the main thing we're looking at.
+3014.126             True -31.126  43.874 Of course, we want the labor market to remain stro
+3022.836             True -39.836  35.164           and those are the two things we look at.
+
+20240918 video_end=2985.7s after_video_end=False: n=170 vtt_s 2390-2980 offset interval [-38.4, 1.2]
+20240918 video_end=2985.7s after_video_end=True: n=10 vtt_s 2991-3018 offset interval [-30.6, -5.9]
+   vtt_s  after_video_end      lo      hi                                               text
+2990.976             True -66.976   8.024 I don't-there's-as I look-well, let me look at it 
+2996.996             True -72.996   2.004 I don't see anything in the economy right now that
+3001.186             True -77.186  -2.186          that the likelihood of a recession-sorry,
+3004.136             True -80.136  -5.136                   of a downturn is elevated, okay?
+3007.796             True -83.796  -8.796                                  I don't see that.
+3009.046             True -85.046 -10.046            You see-you see growth at a solid rate,
+3012.296             True -28.296  46.704                     you see inflation coming down,
+3013.566             True -29.566  45.434                 and you see a labor market that's,
+3014.886             True -30.886  44.114                 that's still at very solid levels.
+3017.736             True -33.736  41.264                So, so I don't really see that, no.
+
+20251029 video_end=3290.4s after_video_end=False: n=175 vtt_s 2692-3290 offset interval [-16.0, -0.7]
+20251029 video_end=3290.4s after_video_end=True: n=18 vtt_s 3292-3313 offset interval [-26.8, -0.8]
+   vtt_s  after_video_end      lo     hi                                               text
+3291.546             True -67.546  7.454 So there is some-there is some relationship there,
+3292.866             True -68.866  6.134             remember, the more wealth someone has,
+3293.796             True -69.796  5.204  the lower an additional dollar of wealth matters.
+3295.746             True -71.746  3.254             to consume declines quite dramatically
+3296.766             True -72.766  2.234 as you reach-as you reach levels of stock market w
+3298.176             True -74.176  0.824       So the stock market-it would affect spending
+3299.346             True -75.346 -0.346                     if the stock market went down,
+3300.156             True -76.156 -1.156 but it wouldn't drop-it wouldn't drop sharply unle
+3301.776             True -77.776 -2.776            quite a sharp drop in the stock market.
+3302.826             True -78.826 -3.826                  People at the lower end of income
+3303.696             True -79.696 -4.696  and wealth have a much higher marginal propensity
+3304.986             True -21.986 53.014 to consume an incremental dollar of income or weal
+3306.396             True -23.396 51.604       but they don't have the stock market wealth.
+3307.476             True -24.476 50.524 So I think it's certainly a factor supporting cons
+3308.976             True -25.976 49.024                right now, but-and you would see it
+3310.956             True -27.956 47.044 But it wouldn't be-you shouldn't think that it'll,
+3312.186             True -29.186 45.814               dollar for dollar, stop consumption,
+3313.086             True -30.086 44.914                 because that wouldn't be the case.
+

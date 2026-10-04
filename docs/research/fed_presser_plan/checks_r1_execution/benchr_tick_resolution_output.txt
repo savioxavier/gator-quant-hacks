@@ -1,0 +1,12 @@
+            n  med_abs_st_bp  share_lt_half_tick  share_lt_1_tick  share_lt_2_ticks  sd_pc_bp
+regime                                                                                       
+2011-19  40.0           2.82               0.100            0.125             0.175     3.069
+2020-26  53.0           1.68               0.019            0.189             0.264     5.780
+            n  med_abs_st_bp  share_lt_half_tick  share_lt_1_tick  share_lt_2_ticks  sd_pc_bp
+sub                                                                                          
+2011-15  20.0           2.00               0.200            0.200             0.200     2.480
+2016-19  20.0           3.97               0.000            0.050             0.150     3.627
+2020-22  23.0           0.40               0.000            0.348             0.522     6.459
+2023-26  30.0           2.30               0.033            0.067             0.067     5.298
+2011-19 corr(st,pc) all 0.27 n 40 | |st|>=1 tick 0.27 n 35
+2020-26 corr(st,pc) all -0.06 n 53 | |st|>=1 tick -0.06 n 43

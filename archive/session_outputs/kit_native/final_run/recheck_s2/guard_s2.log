@@ -1,0 +1,28 @@
+2026-10-03 14:44:09.498 INFO webull.main [Backtest] strategy=gqh_equity_trend symbols=['F_ES', 'F_NQ', 'F_RTY', 'F_YM', 'F_ZT', 'F_ZF', 'F_ZN', 'F_ZB', 'F_UB', 'F_CL', 'F_HO', 'F_RB', 'F_NG', 'F_GC', 'F_SI', 'F_PL', 'F_HG', 'F_ZC', 'F_ZS', 'F_ZW', 'F_ZL', 'F_ZM', 'F_LE', 'F_HE', 'F_6E', 'F_6J', 'F_6B', 'F_6A', 'F_6C', 'F_6S'] params={}
+2026-10-03 14:44:09.498 INFO webull.main [Backtest] starting cash: 1000000000.00
+Traceback (most recent call last):
+  File "<solo-repo>\validation\starter_kit\run_in_starter.py", line 656, in <module>
+    main()
+  File "<solo-repo>\validation\starter_kit\run_in_starter.py", line 592, in main
+    cerebro, strat, metrics, side_bps = run_backtest(kit, su, RecorderAnalyzer)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<solo-repo>\validation\starter_kit\run_in_starter.py", line 548, in run_backtest
+    results = cerebro.run(runonce=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<home>\.venvs\gqh-systematic\Lib\site-packages\backtrader\cerebro.py", line 1132, in run
+    runstrat = self.runstrategies(iterstrat)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<home>\.venvs\gqh-systematic\Lib\site-packages\backtrader\cerebro.py", line 1303, in runstrategies
+    self._runnext(runstrats)
+  File "<home>\.venvs\gqh-systematic\Lib\site-packages\backtrader\cerebro.py", line 1635, in _runnext
+    strat._next()
+  File "<home>\.venvs\gqh-systematic\Lib\site-packages\backtrader\strategy.py", line 347, in _next
+    super(Strategy, self)._next()
+  File "<home>\.venvs\gqh-systematic\Lib\site-packages\backtrader\lineiterator.py", line 273, in _next
+    self.nextstart()  # only called for the 1st value
+    ^^^^^^^^^^^^^^^^
+  File "<home>\.venvs\gqh-systematic\Lib\site-packages\backtrader\lineiterator.py", line 347, in nextstart
+    self.next()
+  File "<solo-repo>\validation\starter_kit\strategies\gqh_equity_trend.py", line 151, in next
+    raise ValueError(f"feeds start {day}, after the first print {self.first_print}: the signals need the "
+ValueError: feeds start 2012-01-03, after the first print 2010-06-07: the signals need the whole history (keep the harness's default --start)

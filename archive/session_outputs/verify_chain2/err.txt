@@ -1,0 +1,4 @@
+systemic failure: no meeting finished ['diarize']; first errors:
+  diarize 20160615: RuntimeError('simulated diarize failure')
+  diarize 20161214: RuntimeError('simulated diarize failure')
+  diarize 20170614: RuntimeError('simulated diarize failure')

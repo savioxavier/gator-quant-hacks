@@ -1,0 +1,5 @@
+{
+  "stage": "face",
+  "presser_id": "20230614",
+  "error": "RuntimeError('simulated systemic failure')"
+}

@@ -1,0 +1,281 @@
+{
+ "truncation": [
+  {
+   "builder": "A1_long_only",
+   "date": "2012-03-30",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "B1_gtaa_fixed",
+   "date": "2012-03-30",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "B2_gtaa_rescale",
+   "date": "2012-03-30",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "C1_fut5",
+   "date": "2012-03-30",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "A1_long_only",
+   "date": "2012-09-28",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "B1_gtaa_fixed",
+   "date": "2012-09-28",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "B2_gtaa_rescale",
+   "date": "2012-09-28",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "C1_fut5",
+   "date": "2012-09-28",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "A1_long_only",
+   "date": "2015-03-31",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "B1_gtaa_fixed",
+   "date": "2015-03-31",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "B2_gtaa_rescale",
+   "date": "2015-03-31",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "C1_fut5",
+   "date": "2015-03-31",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "A1_long_only",
+   "date": "2015-09-30",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "B1_gtaa_fixed",
+   "date": "2015-09-30",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "B2_gtaa_rescale",
+   "date": "2015-09-30",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "C1_fut5",
+   "date": "2015-09-30",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "A1_long_only",
+   "date": "2018-09-28",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "B1_gtaa_fixed",
+   "date": "2018-09-28",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "B2_gtaa_rescale",
+   "date": "2018-09-28",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "C1_fut5",
+   "date": "2018-09-28",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "A1_long_only",
+   "date": "2020-03-31",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "B1_gtaa_fixed",
+   "date": "2020-03-31",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "B2_gtaa_rescale",
+   "date": "2020-03-31",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "C1_fut5",
+   "date": "2020-03-31",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "A1_long_only",
+   "date": "2020-09-30",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "B1_gtaa_fixed",
+   "date": "2020-09-30",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "B2_gtaa_rescale",
+   "date": "2020-09-30",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "C1_fut5",
+   "date": "2020-09-30",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "A1_long_only",
+   "date": "2022-03-31",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "B1_gtaa_fixed",
+   "date": "2022-03-31",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "B2_gtaa_rescale",
+   "date": "2022-03-31",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "C1_fut5",
+   "date": "2022-03-31",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "A1_long_only",
+   "date": "2022-09-30",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "B1_gtaa_fixed",
+   "date": "2022-09-30",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "B2_gtaa_rescale",
+   "date": "2022-09-30",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "C1_fut5",
+   "date": "2022-09-30",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "A1_long_only",
+   "date": "2024-09-30",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "B1_gtaa_fixed",
+   "date": "2024-09-30",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "B2_gtaa_rescale",
+   "date": "2024-09-30",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "C1_fut5",
+   "date": "2024-09-30",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "EWMAC_slow_ls",
+   "date": "2013-05-15",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "EWMAC_fast_lf",
+   "date": "2013-05-15",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "EWMAC_slow_ls",
+   "date": "2016-11-09",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "EWMAC_fast_lf",
+   "date": "2016-11-09",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "EWMAC_slow_ls",
+   "date": "2020-03-16",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "EWMAC_fast_lf",
+   "date": "2020-03-16",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "EWMAC_slow_ls",
+   "date": "2023-07-20",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "EWMAC_fast_lf",
+   "date": "2023-07-20",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "ETF_gtaa",
+   "date": "2008-06-30",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "ETF_gtaa",
+   "date": "2013-06-28",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "ETF_gtaa",
+   "date": "2019-06-28",
+   "max_abs_diff": 0.0
+  },
+  {
+   "builder": "ETF_gtaa",
+   "date": "2023-06-30",
+   "max_abs_diff": 0.0
+  }
+ ],
+ "fill_lag": {
+  "next_close": {
+   "decision_date": "2019-03-12",
+   "first_return_day_held": "2019-03-14",
+   "sessions_after_decision": 2,
+   "required": 2
+  },
+  "next_open": {
+   "decision_date": "2019-03-12",
+   "first_day_held_from_open": "2019-03-13",
+   "sessions_after_decision": 1,
+   "required": 1
+  }
+ },
+ "truncation_max_abs_diff": 0.0,
+ "truncation_n_tests": 52,
+ "pass": true
+}

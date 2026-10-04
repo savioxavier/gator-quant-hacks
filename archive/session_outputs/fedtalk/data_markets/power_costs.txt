@@ -1,0 +1,7 @@
+== Cost of one round trip (1 tick spread + fees) vs volatility, 2019-2026 scheduled pressers
+  ES (SPFUT %)                 n= 61 presser-window sd=$   3040/contract  per-2-min sd~$   514  round trip=$ 17.5  cost/sd presser= 0.6%  cost/sd 2-min= 3.4%  min |IC| for sign trade at 2-min=0.043
+  ZN (UST10Y pp)               n= 61 presser-window sd=$    255/contract  per-2-min sd~$    43  round trip=$ 19.6  cost/sd presser= 7.7%  cost/sd 2-min=45.5%  min |IC| for sign trade at 2-min=0.570
+  ZF (UST5Y pp)                n= 61 presser-window sd=$    224/contract  per-2-min sd~$    38  round trip=$ 11.8  cost/sd presser= 5.3%  cost/sd 2-min=31.2%  min |IC| for sign trade at 2-min=0.391
+  ZT (UST2Y pp)                n= 61 presser-window sd=$    223/contract  per-2-min sd~$    38  round trip=$ 11.8  cost/sd presser= 5.3%  cost/sd 2-min=31.3%  min |IC| for sign trade at 2-min=0.393
+  SR3 (ED4 pp, 4th qtr strip)  n= 61 presser-window sd=$    182/contract  per-2-min sd~$    31  round trip=$ 16.5  cost/sd presser= 9.1%  cost/sd 2-min=53.6%  min |IC| for sign trade at 2-min=0.671
+  6E (EURUSD %)                n= 61 presser-window sd=$    508/contract  per-2-min sd~$    86  round trip=$ 10.2  cost/sd presser= 2.0%  cost/sd 2-min=11.9%  min |IC| for sign trade at 2-min=0.150

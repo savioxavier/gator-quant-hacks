@@ -1,0 +1,17 @@
+gaps answer end -> next chair answer start, n = 1828
+count    1828.0
+mean       29.1
+std        17.2
+min         0.3
+50%        28.1
+90%        47.4
+95%        55.5
+99%        73.5
+max       280.7
+per-presser maximum gap (s): median 60.5, p90 84.4, max 280.7
+timeout  30 s: share of non-final answers that a "no chair speech for T s" detector would call final: 0.440; share of pressers with at least one false end: 1.00
+timeout  45 s: share of non-final answers that a "no chair speech for T s" detector would call final: 0.127; share of pressers with at least one false end: 0.84
+timeout  60 s: share of non-final answers that a "no chair speech for T s" detector would call final: 0.036; share of pressers with at least one false end: 0.53
+timeout  90 s: share of non-final answers that a "no chair speech for T s" detector would call final: 0.004; share of pressers with at least one false end: 0.10
+pre-2023 gap p50/p90/p99: [30.8 51.  80.3]
+2023+ gap p50/p90/p99: [22.8 39.7 65.5]

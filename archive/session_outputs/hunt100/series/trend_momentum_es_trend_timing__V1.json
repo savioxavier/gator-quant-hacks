@@ -1,0 +1,22 @@
+{
+  "id": "trend_momentum_es_trend_timing",
+  "sources": [
+    "https://www.trendfollowing.com/whitepaper/CMT-Simple.pdf",
+    "https://benny.aeaweb.org/conference/2021/preliminary/paper/492Ds6fk",
+    "https://www.aqr.com/-/media/AQR/Documents/Insights/Data-Sets/Time-Series-Momentum-Factors-Monthly.xlsx"
+  ],
+  "instruments": [
+    "F_ES"
+  ],
+  "exec": "next_close",
+  "cost_bps_one_way": {
+    "F_ES": 1.0
+  },
+  "variant": "V1",
+  "rule": "month-end: long F_ES at 10%/sigma (EWMA com 60, cap 3x) if index > 10-month SMA of month-end closes, else T-bills",
+  "is_window": "2011-07-05..2024-10-02",
+  "series_start": "2011-07-05",
+  "series_end": "2026-10-02",
+  "columns": "daily excess returns over T-bill: net_1x (realistic costs), net_2x (2x costs), gross",
+  "in_sample_end": "2024-10-02"
+}

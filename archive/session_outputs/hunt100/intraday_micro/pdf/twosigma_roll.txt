@@ -1,0 +1,221 @@
+
+=== PAGE 1 ===
+Copyright © 2017 TWO SIGMA INVESTMENTS, LP. All rights reserved. This document is distributed for informational and 
+educational purposes only. Please see the back of this report for important disclaimer and disclosure information.
+Street 
+View
+www.twosigma.com 
+NEW YORK HOUSTON 
+LONDON HONG KONG
+EXECUTIVE SUMMARY    The cost of rolling futures contracts, 
+rather than the decline in commodity prices, has been the largest drag on 
+commodity index performance over the past 10 years. Although difficult 
+to implement, asset allocators’ best response may be to develop dynamic 
+execution strategies to mitigate the roll return “tax.”
+OCTOBER 2017
+BY GERARDO MANZO & JEFFREY N. SARET
+Inside:  
+The Commodity Futures Roll Return ‘Tax’: 
+Addressing a Recent Headwind
+=== PAGE 2 ===
+Copyright © 2017 TWO SIGMA INVESTMENTS, LP. All rights reserved.  This document is distributed for 
+informational and educational purposes only.  Please see the back of this report for important disclaimer and 
+disclosure information.
+Street View October 2017 |  2
+THE COMMODITY FUTURES ROLL RETURN ‘TAX’: ADDRESSING A RECENT HEADWIND
+That commodity index returns have suffered both 
+during 2017 and the past decade likely comes as no 
+surprise to asset allocators.  What may surprise some 
+is how commodity indices have suffered.  
+Take the S&P GSCI Total Return Index as an example.  
+The index has declined 2.38 percent year-to-date 
+and 57.7 percent since 2007, but the spot prices 
+of the underlying commodities have increased by 
+0.88 percent year-to-date and only fallen by 6.53 
+percent since 2007.¹ In other words, the largest drag 
+on commodity index performance has not been 
+the decline in commodity prices but rather the cost 
+of rolling futures contracts in order to hold those 
+positions. 
+This negative drag exists at both the aggregate 
+level (e.g., S&P GSCI Index) and for most individual 
+commodity indices (e.g., agriculture and energy 
+indices). Asset allocators trying to maintain a persistent 
+exposure to commodities might want to bear in mind 
+the magnitude of the headwinds of rolling futures 
+contracts that has in the past persistently affected 
+portfolio returns. 
+DECOMPOSITION OF TOTAL INDEX RETURNS
+Academic research like Erb and Harvey (2006) 
+highlights the problem. The total return to a 
+commodity index decomposes into three parts:² 
+Total Return ≈ Spot Price Return + Futures Roll Yield + 
+Collateral Return
+or
+Excess Return ≈ Spot Price Return + Futures Roll Yield 
+where the collateral return equals the return to 
+investing in US Treasury bills.  Figure 1 plots each of 
+these terms since 1970 for the monthly S&P GSCI 
+Index.
+The figure highlights two important facts. First, 
+spot returns fluctuated in a relatively tight band 
+between 1970 and 2004, during which time the roll 
+returns were positive. As a result, an allocator with a 
+persistent exposure to commodities via the S&P GSCI 
+Index during those three-plus decades would have 
+benefitted from price increases in both the underlying 
+commodities and from rolling futures contracts in 
+backwardation. Second, the period since 2004 has 
+been characterized by higher spot return volatility and 
+negative average roll return (about -10 percent from 
+2004 to 2017).
+1 The indices are sampled monthly, using the end-of-month most 
+available observation.
+2  In general, this total return decomposition is true for any investment in 
+futures, such as equity and bond futures. Moreover, the relation does not 
+hold with equality because the S&P GSCI spot index   is not tradable and 
+the collateral return is implicit in the clearing mechanism.
+Figure 1 – S&P GSCI Excess Return, Spot Return, Collateral Return, and Roll Yield. 
+Cumulative values. Source: Bloomberg and authors' computation. 
+FIGURE 1 - S&P GSCI EXCESS RETURN, SPOT RETUR, COLLATERAL 
+RETURN, AND ROLL YIELD
+=== PAGE 3 ===
+Copyright © 2017 TWO SIGMA INVESTMENTS, LP. All rights reserved.  This document is distributed for 
+informational and educational purposes only.  Please see the back of this report for important disclaimer and 
+disclosure information.
+Street View October 2017 |  3
+HOW CAN AN ALLOCATOR RESPOND TO 
+NEGATIVE ROLL RETURNS?
+An obvious question is why roll returns remain 
+persistently negative. Unfortunately, some of the 
+obvious answers seem incomplete. For example, Mou 
+(2011) posits that GSCI’s published roll-rules allows 
+arbitragers to front-run the index. That argument may 
+be true at some level—publicly declaring when and how 
+much to trade seems like a suboptimal approach—but a 
+simple arbitrage strategy that persists for more than a 
+decade strains even weak formulations of the efficient 
+market hypothesis. 
+Perhaps a more important question than why roll 
+returns have been so negative for the past decade is 
+what an asset allocator who wants persistent exposure 
+to commodities can do about it. One option is to pay 
+the roll return “tax” and accept that as the cost of 
+holding commodity exposure.  Another option is to buy 
+and store physical commodities. A third option is to 
+develop execution strategies that look like a dynamic 
+game—i.e., optimize a function that outputs a roll date 
+and volume for each commodity, based on expected 
+transaction costs. Transaction costs usually vary as a 
+function of future spreads, volume, volatility, and other 
+variables, making this dynamic game an uncertain one. 
+This last option is not easy to implement, but it could 
+lend itself to data analysis and systematic strategies.   
+GLOSSARY ³
+S&P GSCI Total Return Index: measures the returns 
+accrued from investing in fully-collateralized nearby 
+commodity futures.
+S&P GSCI Excess Return Index: measures the returns 
+accrued from investing in uncollateralized nearby 
+commodity futures.
+S&P GSCI Spot Return Index:  measures the level of 
+nearby commodity prices.
+Backwardation:  the condition in futures markets 
+wherein the price of a commodities' futures contract 
+is trading below the expected spot price at contract 
+maturity. This also refers to a downward-sloping term 
+structure of futures contracts.
+Contango: the condition in futures markets wherein 
+the price of a commodities' futures contract is trading 
+above the expected spot price at contract maturity. 
+This also refers to an upward-sloping term structure of 
+futures contracts.
+Roll return: represents the net benefit or cost of 
+owning the underlying asset beyond moves in the spot 
+price itself (CME Group, 2014).
+REFERENCES 
+Erb, <assistant> B., and Campbell R. Harvey. "The strategic and tactical value of commodity futures." Financial Analysts 
+Journal62.2 (2006): 69-97.
+Mou, Yiqun. "Limits to arbitrage and commodity index investment: front-running the Goldman roll." (2011).
+CME Group. “Deconstructing Futures Returns: The Role of Roll Yield.” Campbell White Paper Series. (2014)
+3 The definitions of the S&P GSCI Indices can be found here: http:/ /
+www.goldmansachs.com/what-we-do/securities/products-and-business-
+groups/products/gsci/components-weights-index-levels.html
+=== PAGE 4 ===
+Copyright © 2017 TWO SIGMA INVESTMENTS, LP. All rights reserved.  This document is distributed for 
+informational and educational purposes only.  Please see the back of this report for important disclaimer and 
+disclosure information.
+Street View October 2017 |  4
+Two Sigma views itself as a technology company that applies a rigorous, scientific method-based approach 
+to investment management. Our technology is inspired by a diverse set of fields including artificial 
+intelligence and distributed computing. Occasionally, we read articles in the popular press that describe 
+applications of technology that we find interesting, thought-provoking, and relevant for people thinking 
+about improving the investment management process. Below is a subset of the articles we read this month. 
+Please do not view the inclusion of these articles as an endorsement by Two Sigma of their viewpoints or 
+the companies discussed therein. Two Sigma welcomes discussions (and contributions) about these and 
+other such technology-related articles.
+INTERESTING TECHNOLOGY-RELATED ARTICLES
+“How Blockchain Could Give Us a Smarter Energy Grid” by Mike Orcutt
+https:/ /www.technologyreview.com/s/609077/how-blockchain-could-give-us-a-smarter-energy-grid/
+Blockchain, the distributed, encrypted ledger system underpinning cryptocurrencies like Bitcoin, has potential 
+applications in almost any endeavor involving contracts and counterparties, since it can increase efficiency by 
+eliminating intermediaries. Among its potential uses is to mitigate red tape and data-management problems 
+plaguing the renewable energy sector. Currently, trading in clean energy depends on a byzantine system of 
+certificates involving numerous different registries, brokers, and other intermediaries—a system that lacks 
+transparency, is prone to accounting errors, and reduces incentives to invest in clean energy projects. Blockchain 
+technology could ameliorate these issues and potentially even ease the way toward a decentralized system of 
+clean electricity production from the generally centralized and inefficient power grid systems predominant today.
+“China seeks dominance of global AI industry” by Louise Lucas 
+https:/ /www.ft.com/content/856753d6-8d31-11e7-a352-e46f43c5825d?mhq5j=e7
+While the U.S. artificial intelligence industry currently dwarfs that of China, the Chinese government is making 
+development of its AI ecosystem a strategic priority. According to a July “State Council Notice on the Issuance 
+of the Next Generation Artificial Intelligence Development Plan”  and subsequent reporting, China aims to grow 
+its AI sector to $150 billion by 2030, through a combination of investments in state-owned enterprises (SOEs), 
+universities, and promising private companies, as well as by encouraging the hiring of leading AI experts from 
+overseas. Like other nations, China sees AI as having a potentially enormous economic and military impact, and 
+sees an opportunity to create an advantage as other countries scale back their national research budgets.
+=== PAGE 5 ===
+Copyright © 2017 TWO SIGMA INVESTMENTS, LP. All rights reserved.  This document is distributed for 
+informational and educational purposes only.  Please see the back of this report for important disclaimer and 
+disclosure information.
+Street View October 2017 |  5
+IMPORTANT DISCLAIMER AND DISCLOSURE INFORMATION
+This report is prepared and circulated for informational and educational purposes only and is not an offer to sell or the solicitation of an offer to 
+buy any securities or other instruments. The information contained herein is not intended to provide, and should not be relied upon for investment, 
+accounting, legal or tax advice. This document does not purport to advise you personally concerning the nature, potential, value or suitability of 
+any particular sector, geographic region, security, portfolio of securities, transaction, investment strategy or other matter. No consideration has 
+been given to the specific investment needs or risk-tolerances of any recipient. The recipient is reminded that an investment in any security is 
+subject to a number of risks including the risk of a total loss of capital, and that discussion herein does not contain a list or description of relevant 
+risk factors. As always, past performance is no guarantee of future results. The recipient hereof should make an independent investigation of the 
+information described herein, including consulting its own tax, legal, accounting and other advisors about the matters discussed herein. This report 
+does not constitute any form of invitation or inducement by Two Sigma to engage in investment activity. 
+The views expressed herein are not necessarily the views of Two Sigma Investments, LP or any of its affiliates (collectively, “Two Sigma”) but are 
+derived from the Two Sigma Alpha Capture system (the “Alpha Capture System”), which gathers inputs from sell-side contributors (not analysts) 
+to the Alpha Capture System who receive compensation for their participation, as further described in the section titled “Brief Explanation of 
+the Data” (page 1 hereof) and the document titled “Overview of the Two Sigma Alpha Capture System”. Such views (i) may be historic or forward-
+looking in nature, (ii) reflect significant assumptions and subjective judgments of the contributors to the Alpha Capture System as well as, in 
+some instances, the authors of this report, and (iii) are subject to change without notice. Two Sigma may have market views or opinions that 
+materially differ from those discussed, and may have a significant financial interest in (or against) one or more of such positions or theses. In some 
+circumstances, this report may employ data derived from third-party sources. No representation is made as to the accuracy of such information 
+and the use of such information in no way implies an endorsement of the source of such information or its validity. 
+This report may include certain statements and projections regarding the anticipated future performance of various securities, sectors, geographic 
+regions or of the Alpha Capture System generally. These forward-looking statements are inherently subject to significant business, economic and 
+competitive uncertainties and contingencies, many of which are beyond our control. In addition, these forward-looking statements are subject to 
+assumptions with respect to future business strategies and decisions that are subject to change. Factors which could cause actual results to differ 
+materially from those anticipated include, but are not limited to: competitive and general business, economic, market and political conditions in the 
+United States and abroad from those expected; changes in the legal, regulatory and legislative environments in the markets in which Two Sigma 
+operates; and the ability of management to effectively implement certain strategies. Words like “believe,” “expect,” “anticipate,” “promise,” “plan,” 
+and other expressions or words of similar meanings, as well as future or conditional verbs such as “will,” “would,” “should,” “could,” or “may” are 
+generally intended to identify forward-looking statements. 
+Two Sigma makes no representations, express or implied, regarding the accuracy or completeness of this information, and the recipient accepts all 
+risks in relying on this report for any purpose whatsoever. This report is being furnished to the recipient on a confidential basis and is not intended 
+for public use or distribution. By accepting this report, the recipient agrees to keep confidential the existence of this report and the information 
+contained herein. The recipient should not disclose, reproduce, distribute or otherwise make available the existence of and/or all or any portion of 
+the information contained herein to any other person (other than its employees, officers and advisors on a need-to-know basis, whom the recipient 
+will cause to keep the information confidential) without Two Sigma’s prior written consent. This report shall remain the property of Two Sigma and 
+Two Sigma reserves the right to require the return of this report at any time. 
+Some of the images, logos or other material used herein may be protected by copyright and/or trademark. If so, such copyrights and/or 
+trademarks are most likely owned by the entity that created the material and are used purely for identification and comment as fair use under 
+international copyright and/or trademark laws. Use of such image, copyright or trademark does not imply any association with such organization (or 
+endorsement of such organization) by Two Sigma, nor vice versa.
+© 2017 Two Sigma Investments, LP | ALL RIGHTS RESERVED | “Two Sigma” and “ 2σ” are trademarks of Two Sigma Investments, LP.

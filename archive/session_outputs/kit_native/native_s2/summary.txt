@@ -1,0 +1,47 @@
+                   run win     kit    ours     ann     mdd                  ref  ref_ours  ref_kit_total  corr_same  bp_same  corr_off  bp_off  orders  refused  xcost  gross
+      s2_close_project  IS  0.5043  0.4962  0.0460 -0.1825      s2_official.csv    0.5032         0.6334     0.9996   0.8275    0.9996  0.8275   96943        0 0.0055 2.4912
+      s2_close_project OOS  0.5528  0.4372  0.0498 -0.1601      s2_official.csv    0.4628         0.8734     0.9996   0.8460    0.9996  0.8460   15029        0 0.0059 2.2097
+        s2_close_guide  IS  0.1291  0.1210  0.0079 -0.2286  s2_engine_guide.csv    0.1269         0.2563     0.9952   2.1291    0.9956  2.0952   96939        0 0.0359 2.4916
+        s2_close_guide OOS  0.1975  0.0828  0.0145 -0.1734  s2_engine_guide.csv    0.1094         0.5185     0.9958   2.0476    0.9970  2.0316   15026        0 0.0339 2.2100
+s2_close_guide_literal  IS  0.4913  0.4832  0.0447 -0.1831  s2_engine_guide.csv    0.1269         0.2563     0.9953   2.3674    0.9991  1.1369   96940        0 0.0000 2.4912
+s2_close_guide_literal OOS  0.5495  0.4340  0.0495 -0.1608  s2_engine_guide.csv    0.1094         0.5185     0.9960   2.4271    0.9991  1.2020   15028        0 0.0000 2.2097
+         s2_close_none  IS  0.6198  0.6117  0.0580 -0.1726 s2_engine_nocost.csv    0.6190         0.7493     0.9998   0.4836    0.9996  0.8134   96934        0 0.0000 2.4911
+         s2_close_none OOS  0.6724  0.5567  0.0619 -0.1571 s2_engine_nocost.csv    0.5819         0.9927     0.9998   0.5334    0.9996  0.8529   15029        0 0.0000 2.2096
+        s2_coc_project  IS  0.5113  0.5032  0.0468 -0.1827      s2_official.csv    0.5032         0.6334     1.0000   0.0001    1.0000  0.0001   96942        0 0.0055 2.4913
+        s2_coc_project OOS  0.5779  0.4627  0.0524 -0.1593      s2_official.csv    0.4628         0.8734     1.0000   0.0001    1.0000  0.0001   15028        0 0.0059 2.2094
+          s2_coc_guide  IS  0.1348  0.1267  0.0085 -0.2290  s2_engine_guide.csv    0.1269         0.2563     1.0000   0.0031    0.9973  1.4775   96933        0 0.0941 2.4913
+          s2_coc_guide OOS  0.2235  0.1092  0.0171 -0.1733  s2_engine_guide.csv    0.1094         0.5185     1.0000   0.0025    0.9980  1.3546   15021        0 0.0968 2.2094
+      s1_close_project  IS -0.2016 -0.1324 -0.0229 -0.3764      s1_official.csv   -0.1330         0.0050     0.9993   1.0670    0.9993  1.0670   96937        0 0.0068 2.7638
+      s1_close_project OOS  0.0706  0.1438  0.0020 -0.1275      s1_official.csv    0.1351         0.5228     0.9992   1.2769    0.9992  1.2769   15027        0 0.0081 2.7803
+        s1_close_guide  IS -0.6811 -0.6128 -0.0664 -0.6111  s1_engine_guide.csv   -0.6151        -0.4785     0.9902   2.8312    0.9918  2.6083   96933        0 0.0435 2.7644
+        s1_close_guide OOS -0.3919 -0.3189 -0.0447 -0.1479  s1_engine_guide.csv   -0.3283         0.0571     0.9911   3.1100    0.9941  2.8791   15023        0 0.0466 2.7808
+s1_close_guide_literal  IS -0.2226 -0.1534 -0.0249 -0.3894  s1_engine_guide.csv   -0.6151        -0.4785     0.9915   2.9790    0.9983  1.4689   96932        0 0.0000 2.7639
+s1_close_guide_literal OOS  0.0591  0.1323  0.0008 -0.1283  s1_engine_guide.csv   -0.3283         0.0571     0.9923   3.5037    0.9983  1.7899   15026        0 0.0000 2.7803
+         s1_close_none  IS -0.0427  0.0267 -0.0083 -0.2955 s1_engine_nocost.csv    0.0264         0.1645     0.9998   0.5832    0.9994  1.0195   96922        0 0.0000 2.7637
+         s1_close_none OOS  0.2353  0.3084  0.0191 -0.1213 s1_engine_nocost.csv    0.3004         0.6882     0.9996   0.7896    0.9993  1.2687   15026        0 0.0000 2.7801
+        s1_coc_project  IS -0.2021 -0.1330 -0.0230 -0.3791      s1_official.csv   -0.1330         0.0050     1.0000   0.0002    1.0000  0.0002   96934        0 0.0068 2.7635
+        s1_coc_project OOS  0.0618  0.1351  0.0011 -0.1293      s1_official.csv    0.1351         0.5228     1.0000   0.0003    1.0000  0.0003   15029        0 0.0081 2.7795
+          s1_coc_guide  IS -0.6838 -0.6155 -0.0666 -0.6108  s1_engine_guide.csv   -0.6151        -0.4785     1.0000   0.0050    0.9951  1.8080   96929        0 0.1191 2.7635
+          s1_coc_guide OOS -0.4017 -0.3287 -0.0455 -0.1496  s1_engine_guide.csv   -0.3283         0.0571     1.0000   0.0056    0.9963  1.8887   15024        0 0.1420 2.7795
+
+official reference Sharpe (ours, kit-on-total):
+s2 IS 0.5032 0.6334 ann 0.0595
+s2 OOS 0.4628 0.8734 ann 0.0829
+s1 IS -0.133 0.005 ann -0.0039
+s1 OOS 0.1351 0.5228 ann 0.0494
+
+month-end decisions, native vs engine (max |w diff|):
+s2 close 196 196 3.9968028886505635e-15 engine nonzero before first native decision: 0.0
+s2 coc 196 196 3.9968028886505635e-15 engine nonzero before first native decision: 0.0
+s1 close 196 196 1.887379141862766e-15 engine nonzero before first native decision: 0.0
+s1 coc 196 196 1.887379141862766e-15 engine nonzero before first native decision: 0.0
+
+timing effect (next_close vs coc, same costs, excess returns):
+s2 project IS corr 0.999567 mean abs diff bp 0.8275
+s2 project OOS corr 0.999599 mean abs diff bp 0.846
+s2 guide IS corr 0.99522 mean abs diff bp 2.1294
+s2 guide OOS corr 0.995795 mean abs diff bp 2.0478
+s1 project IS corr 0.999277 mean abs diff bp 1.067
+s1 project OOS corr 0.99919 mean abs diff bp 1.2768
+s1 guide IS corr 0.990199 mean abs diff bp 2.8315
+s1 guide OOS corr 0.991089 mean abs diff bp 3.1095

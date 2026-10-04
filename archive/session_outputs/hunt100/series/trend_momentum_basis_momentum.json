@@ -1,0 +1,62 @@
+{
+  "rule": "Month-end, 15 CME commodities: BM = prod(1+r1) - prod(1+r2) over 252 sessions, r1/r2 = within-contract daily returns of Databento .v.0/.v.1 (roll day: new contract's own previous close, else 0); V1 High4-Low4 equal notional, V2 High4-Low4 1/sigma, V3 time-series sign(BM) risk units; positions in the F_ index; book to 10% (252d cov, gross<=3); next_close.",
+  "sources": [
+    "https://ideas.repec.org/a/bla/jfinan/v74y2019i1p239-279.html",
+    "https://4nations.albertjmenkveld.com/papers/boonsprado17.pdf"
+  ],
+  "universe": [
+    "F_CL",
+    "F_HO",
+    "F_RB",
+    "F_NG",
+    "F_GC",
+    "F_SI",
+    "F_PL",
+    "F_HG",
+    "F_ZC",
+    "F_ZS",
+    "F_ZW",
+    "F_ZL",
+    "F_ZM",
+    "F_LE",
+    "F_HE"
+  ],
+  "cost_bps_one_way": {
+    "F_CL": 2.0,
+    "F_HO": 3.0,
+    "F_RB": 3.0,
+    "F_NG": 3.0,
+    "F_GC": 2.0,
+    "F_SI": 2.0,
+    "F_PL": 3.0,
+    "F_HG": 2.0,
+    "F_ZC": 4.0,
+    "F_ZS": 4.0,
+    "F_ZW": 4.0,
+    "F_ZL": 4.0,
+    "F_ZM": 4.0,
+    "F_LE": 4.0,
+    "F_HE": 4.0
+  },
+  "vol_scaling": "10% annualised ex-ante, trailing 252-session sample covariance (min 60), gross cap 3",
+  "id": "trend_momentum_basis_momentum",
+  "headline_variant": "V3_TS_sign",
+  "selection": "highest in-sample (start..2024-10-02) net Sharpe at realistic costs among the 3 pre-declared variants; all variants reported in variants.csv",
+  "columns": {
+    "net_1x": "daily return minus T-bill, net of the realistic cost map",
+    "net_2x": "same at 2x costs",
+    "gross": "daily return minus T-bill before costs"
+  },
+  "window": {
+    "start": "2011-07-05",
+    "in_sample_end": "2024-10-02",
+    "later_window": "2024-10-03..2026-10-02 (descriptive only)"
+  },
+  "spec": "<scratch>\\hunt100\\bt_3\\trend_momentum_basis_momentum\\SPEC.md",
+  "variant_is_sharpe_net_1x": {
+    "V1_H4L4_EW": 0.012,
+    "V2_H4L4_IV": -0.01,
+    "V3_TS_sign": 0.123
+  },
+  "source_reported": "Boons & Porras Prado 2019 (21 commodities, 1960-08..2014-02, gross): High4-Low4 nearby return 18.38%/yr (t 6.73), Sharpe about 0.9, robust pre/post 1986; no post-2014 replication found."
+}

@@ -1,0 +1,27 @@
+{
+  "candidate": "PORT_core_IV_10",
+  "task_label": "combine",
+  "sleeves": {
+    "rpm_ES_MM": "equity",
+    "CAL_TSY_ME_ZN": "calendar",
+    "S1": "trend"
+  },
+  "weighting": "IV",
+  "target_vol": 0.1,
+  "columns": {
+    "net_1x": "daily excess return over T-bill, realistic costs (sleeve + overlay)",
+    "net_2x": "2x costs",
+    "gross": "no costs"
+  },
+  "rule": "month-end decisions from trailing sleeve returns (252-day covariance, min 126 obs), applied from d+2; leverage cap 4 on summed sleeve instrument gross; overlay costs on multiplier changes",
+  "in_sample": [
+    "2012-05-02",
+    "2024-10-02"
+  ],
+  "later_descriptive": [
+    "2024-10-03",
+    "2026-10-02"
+  ],
+  "spec": "edges/combine/SPEC.md",
+  "script": "edges/combine/combine.py"
+}

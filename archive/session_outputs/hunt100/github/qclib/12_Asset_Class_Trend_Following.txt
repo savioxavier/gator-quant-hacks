@@ -1,0 +1,11 @@
+### 01 Introduction.html
+Asset class trend following is a strategy that tries to exploit a momentum anomaly between various assets. It uses various moving averages or momentum filters to gain an exposure to an asset class only at the time when there is a higher probability for outperformance with less risk.
+ The basic logic behind the trend following is finding a method to detect the trend of price movement and buy an asset when its price trend goes up, and sell when its trend goes down.
+### 02 Method.html
+This algorithm applies to trend following ideas to 5 ETFs in different asset classes like stocks, bonds, and commodities. The simple moving average is used to detect the trend. When the closing price is over its ten-month simple moving average,
+ we give equal allocation to those ETFs, otherwise stay in cash. 
+ SMA(symbol, period, resolution) is used to generate the moving average value In LEAN implementation. A warm-up period of ten months is set to prime the data and initialize the indicator so the SMA is ready to use when the algorithm starts.
+### 03 Algorithm.html
+
+### 04 Source.html
+Quantpedia - Asset Class Trend Following
