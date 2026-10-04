@@ -84,11 +84,13 @@ fp_activate() {  # fp_activate [env-prefix]
   cd "$FP_PKG" || return 2
 }
 
-fp_sets() {  # the --set arguments shared by every fedpress call in this job
+fp_sets() {  # the --set arguments shared by every fedpress call in this job; one per line, nothing when none
   local out=() kv
   [ -n "${FP_GPU_TYPE_SET:-}" ] && out+=(--set "compute.gpu_type=$FP_GPU_TYPE_SET")
   for kv in $FP_SET; do out+=(--set "$kv"); done
-  printf '%s\n' "${out[@]}"
+  # printf with no arguments still prints one empty line, which `mapfile -t` turns into an "" argument that
+  # `fedpress.cli launch` rejects (CPU steps set no FP_GPU_TYPE_SET, so out is empty there)
+  [ ${#out[@]} -eq 0 ] || printf '%s\n' "${out[@]}"
 }
 
 fp_face_sets() {  # face/frames overrides for FACE_PRESET (docs/FACE.md); one per line
@@ -160,7 +162,7 @@ fp_step_speech() {
 fp_step_face() {
   local sel; mapfile -t sel < <(fp_selection)
   local sets; mapfile -t sets < <(fp_sets; fp_face_sets)
-  local wpg=$WORKERS_PER_GPU
+  local wpg=${WORKERS_PER_GPU:-}      # unset in a FACE_ON_CPU job submitted by hand (no fp_gpu_profile there)
   if [ "$FACE_ON_CPU" = 1 ]; then
     sets+=(--set compute.gpu_type=cpu --set face.device=cpu); wpg=$CPU_WORKERS
   fi
