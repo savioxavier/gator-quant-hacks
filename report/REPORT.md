@@ -29,30 +29,45 @@ significant (Newey-West t = 0.84) and comes mostly from the final months.
 
 ## 2. Economic Hypothesis
 
-**Claim (v2, pre-registered).** Fed communication carries information about the future policy path that rates and the
-dollar absorb over days, not seconds. A hawkish consensus should predict falling Treasury prices and a rising dollar
-beyond what recent rate momentum explains.
+**Claim (pre-registered).** Fed communication carries information about the future policy path that Treasuries and
+the dollar absorb over days, not seconds: a hawkish consensus should predict falling Treasury prices and a rising
+dollar beyond what recent rate momentum explains.
 
-**Why prices could adjust slowly.** Remarks are dated, often only by day, and hundreds of speeches a year make the
-Committee's centre of gravity a slow-moving state that no single release reveals. Positive voice tone in press
-conferences moves the S&P 500 about 75 bp per standard deviation over several days but only about 1 bp at the minute
-level (Gorodnichenko, Pham and Talavera, 2023; 36 conferences, 692 answers). Press-conference content correlates more
-strongly with the future policy rate than statements or speeches do (Byun et al., 2026). v2 replaces strategy 01's
-failed 40-word speech lexicon with a domain-trained stance model read over all official Board and FOMC text.
+**Who is on the other side.** Mostly investors who hold duration and dollars for reasons unrelated to Fed speeches:
+liability-matching pension funds and insurers, index and benchmark-tracking bond funds, foreign reserve managers,
+bank securities portfolios, and retail holders of TLT and UUP. They keep their exposure through a hawkish turn
+because their mandate, benchmark or liabilities require it, not because they disagree with our reading.
 
-**Press-conference claim (H1).** Q&A answers reveal policy information the statement lacked; if markets absorb it over
-minutes, a Q&A hawkishness surprise should predict the 2-year futures move after the conference. The prior is low: the
-statement-window move predicted the press-conference move up to January 2020 (correlation 0.58 for Eurodollars, 41
-conferences; Gomez-Cram and Grotteria, 2022), this reversed under Powell after COVID (Narain and Sangani, 2026), and no
-paper we read shows predictability net of latency and costs. H1 is therefore a measurement with one GO/NO-GO gate (G3).
+**Why the opportunity can persist.**
 
-**Voice and face (H2-H4, exploratory).** Vocal arousal and upper-face tension during answers could carry information
-beyond the words (Gorodnichenko et al., 2023; Curti and Kazinnik, 2023). They were pre-registered after H1's NO-GO as
-exploratory tests that cannot rescue H1 or support a trading claim.
+- **Behavioural bias: limited attention to gradual information.** The Committee's centre of gravity moves through
+  hundreds of speeches, minutes and conference answers a year, often dated only by day, and no single release
+  summarises it. Investors underreact to information that arrives continuously in small pieces (Da, Gurun and
+  Warachka, 2014) and anchor on the statement and the dots; voice tone in press conferences moves equities over days,
+  not minutes (Gorodnichenko, Pham and Talavera, 2023).
+- **Structural and institutional constraints.** Benchmark and liability mandates limit tactical duration and currency
+  bets; Fed blackout periods and day-level dating make the signal slow and noisy, which deters short-horizon capital;
+  and a usable signal needs a stance model that never sees future text. Most off-the-shelf language models are
+  trained on data that postdates the documents they score, and the standard labelled dataset mis-dates most of its
+  sentences, a hurdle we had to fix ourselves (Section 4.1).
+- **Risk premium.** The position is short duration when the Fed sounds hawkish, so it loses when policy surprises the
+  other way. Part of any return is likely compensation for bearing that policy-path risk, which predicts returns
+  concentrated in policy-turning regimes (such as 2022) rather than spread evenly; we treat such concentration as a
+  warning sign, not as evidence.
+- **Capacity.** The chosen expression uses UUP, whose daily volume limits the sleeve to about $10m, so funds large
+  enough to arbitrage the effect cannot use it at size (the futures version is a different trade; Section 7).
+- **Liquidity provision: not claimed.** We trade at the next open in deep markets (TLT, Treasury futures) and take
+  liquidity at low cost; no part of the hypothesis relies on being paid for supplying liquidity.
 
-**Registered falsifiers (v2).** v2 fails if the selection Sharpe is at most 0.2 or the validation Sharpe at most 0; if
-more than half of in-sample P&L comes from 2022; if the momentum-orthogonalised signal (T3) is about zero while the raw
-signals (T1/T2) look good; or if the net Sharpe at 2x costs is at most 0.
+**Press conferences (H1, H2-H4).** If the Chair's answers carry policy information the statement lacked and markets
+absorb it over minutes, a Q&A surprise should predict the 2-year futures move after the conference; the other side
+would be traders who priced the statement and react slowly to the answers. But speed competition is intense for
+exactly this information, and the statement-to-conference continuation reversed after 2020 (Narain and Sangani,
+2026), so we stated a low prior and treated it as a measurement with one go/no-go gate, not as an expected edge.
+
+**What would falsify it (registered before any result).** A selection Sharpe at or below 0.2 or a validation Sharpe at
+or below 0; more than half of in-sample P&L from 2022; a momentum-orthogonalised signal near zero while the raw
+signals look good; a net Sharpe at or below 0 at double costs.
 
 ## 3. Data & Universe
 
@@ -475,6 +490,7 @@ documented outside this repository and are not part of this submission's evidenc
 - Bailey, D. H., Lopez de Prado, M. (2014). The deflated Sharpe ratio. *Journal of Portfolio Management* 40(5).
 - Byun, R., Fees, B., Jacobson, M. M., Walker, T. B. (2026). The Fed's fine-tune: Coarse statements and predictive pressers. Working paper.
 - Curti, F., Kazinnik, S. (2023). Let's face it: Quantifying the impact of nonverbal communication in FOMC press conferences. *Journal of Monetary Economics* 139.
+- Da, Z., Gurun, U. G., Warachka, M. (2014). Frog in the pan: Continuous information and momentum. *Review of Financial Studies* 27(7).
 - Gomez-Cram, R., Grotteria, M. (2022). Real-time price discovery via verbal communication: Method and application to Fedspeak. *Journal of Financial Economics* 143(3).
 - Gorodnichenko, Y., Pham, T., Talavera, O. (2023). The voice of monetary policy. *American Economic Review* 113(2).
 - He, S., Lv, L., Manela, A., Wu, J. (2025). Chronologically consistent large language models. arXiv:2502.21206.
