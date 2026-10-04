@@ -1,0 +1,8 @@
+# Shell and Slurm scripts must keep LF endings: sbatch rejects DOS line breaks and bash fails on a sourced CRLF file.
+*.sh      text eol=lf
+*.sbatch  text eol=lf
+*.def     text eol=lf
+*.py      text eol=lf
+*.yml     text eol=lf
+*.yaml    text eol=lf
+*.parquet binary

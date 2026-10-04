@@ -1,0 +1,449 @@
+# fedpress configuration: every tunable of the FOMC press-conference feature build.
+#
+# Defaults implement research/fed_presser_plan/team_FINAL_PLAN.md. Options from plan_v0.md are present
+# but switched off. Environment variables are expanded: ${VAR} and ${VAR:-default}.
+# Override any key for one run without editing this file:
+#   python -m fedpress.cli face --all --set face.fps=2 --set compute.gpu_type=rtx6000
+# Each stage's done-marker records a hash of its own section (plus the models it uses), so `status`
+# shows which outputs were made with a different configuration.
+
+version: 1
+
+paths:
+  root: ${FEDPRESS_ROOT:-/blue/jie.xu/${USER}/fedpress}   # all job I/O; on the laptop set FEDPRESS_ROOT
+  meetings: meetings          # <root>/meetings/<presser_id>/<stage dirs>
+  panel: panel                # cross-meeting tables (aggregate --all, status)
+  logs: logs                  # <root>/logs/<stage>/<presser_id>.jsonl
+  cache: cache                # HF_HOME, TORCH_HOME, CUDA JIT cache, models_lock.json
+  scratch: ${TMPDIR:-}        # node-local scratch ($TMPDIR in Slurm jobs); empty -> <root>/tmp
+
+manifest:                     # relative paths resolve against the package directory (this file's folder)
+  pressers_csv: manifest/pressers.csv
+  meetings_csv: manifest/meetings.csv
+  anchors_csv: manifest/anchors.csv       # optional, see timing.anchor; absent file = no overrides
+  local_seed_dir: ${FEDPRESS_SEED:-}      # optional folder holding the manifest local_* files (PDF/VTT copies)
+
+# ---------------------------------------------------------------- which meetings
+sample:
+  # Team plan: meetings 2016-01..2026-10 (88 policy meetings, ~75 pressers). The manifest lists held
+  # pressers only, so today this selects the 75 held 2016-03-16..2026-09-16; 2026-10-28 joins after the
+  # manifest is rebuilt. --all and --index use this sample.
+  study_window: {start: "2016-01-01", end: "2026-10-31"}
+  calibration_window: {start: "2011-01-01", end: "2015-12-31"}   # plan_v0 calibration data
+  include_calibration: false   # true: 2011-2015 pressers are processed too, rows flagged sample_role=calibration
+  include: []                  # extra presser_ids (YYYYMMDD strings)
+  exclude: []                  # presser_ids to skip
+
+# ---------------------------------------------------------------- clocks and known_at
+timing:
+  latency_s: 30.0              # known_at = t_end_utc + latency_s (team plan: delay = max(measured p90, 30 s))
+  appendix_latencies_s: [60.0] # analysis only; rows carry t_end_utc, so another latency needs no rerun
+  timezone: America/New_York
+  anchor:
+    # Video time zero is not a wall clock (greeting 0.6-144 s into the video, no PROGRAM-DATE-TIME tags).
+    # greeting_at_scheduled  : the chair's first transcript words, as heard, = the scheduled presser minute
+    #                          (team plan fallback: "first PDF-matching audible open")
+    # video_zero_at_scheduled: video t=0 = the scheduled minute (Gomez-Cram & Grotteria convention)
+    # file                   : anchors_csv only; a meeting without a row gets no known_at and the stage fails
+    # A row in anchors_csv (e.g. a Bloomberg headline time) always overrides the rule for that meeting.
+    rule: greeting_at_scheduled
+    default_uncertainty_s: null    # null = unknown (NaN on rows); measured anchors carry their own value
+    max_uncertainty_s: 30.0        # team plan: predictive tests drop meetings above this (flag only here)
+
+# ---------------------------------------------------------------- compute (HiPerGator: <= 2 GPUs per job)
+compute:
+  gpu_type: b200               # b200 | rtx6000 | l4 | a100 | local5090 | cpu  (HiPerGator has no A100 since 2025-06)
+  max_gpus: 2                  # group rule: never more than 2 GPUs per job or session; values > 2 are rejected
+  workers_per_gpu: null        # null = profile value; each worker is one process holding one model
+  cpus_per_worker: null        # null = profile cpus_per_gpu // workers_per_gpu
+  mps: false                   # CUDA MPS inside the job: unverified on HiPerGator, keep off
+  profiles:
+    b200:      {partition: hpg-b200,    gres: "gpu:b200",         vram_gb: 180, cpus_per_gpu: 14, mem_gb_per_gpu: 200, workers_per_gpu: 6, cuda_arch: "10.0"}
+    rtx6000:   {partition: hpg-rtx6000, gres: "gpu:rtx-pro-6000", vram_gb: 96,  cpus_per_gpu: 16, mem_gb_per_gpu: 160, workers_per_gpu: 4, cuda_arch: "12.0"}
+    l4:        {partition: hpg-turin,   gres: "gpu:l4",           vram_gb: 24,  cpus_per_gpu: 4,  mem_gb_per_gpu: 48,  workers_per_gpu: 2, cuda_arch: "8.9"}
+    a100:      {partition: null,        gres: "gpu:a100",         vram_gb: 80,  cpus_per_gpu: 8,  mem_gb_per_gpu: 120, workers_per_gpu: 1, cuda_arch: "8.0"}
+    local5090: {partition: null,        gres: null,               vram_gb: 32,  cpus_per_gpu: 8,  mem_gb_per_gpu: 32,  workers_per_gpu: 2, cuda_arch: "12.0", power_limit_w: 400}
+    cpu:       {partition: hpg-default, gres: null,               vram_gb: 0,   cpus_per_gpu: 16, mem_gb_per_gpu: 64,  workers_per_gpu: 8, cuda_arch: null}
+
+slurm:                         # reference only: the job scripts read environment variables (slurm/common.sh,
+  account: jie.xu              # README "Settings"), e.g. GPU_TYPE=rtx6000 bash slurm/submit_all.sh
+  qos_gpu: jie.xu              # QOS_GPU; there is no burst QOS for GPUs
+  qos_cpu: jie.xu              # QOS_CPU; jie.xu-b (burst) is allowed for CPU-only jobs
+  cpu_partition: hpg-default   # CPU_PARTITION
+  array_throttle: 2            # GPU arrays of 1-GPU tasks: --array=0-N%2 (never more than 2 GPUs at once)
+
+waves:                         # how slurm/submit_all.sh groups the stages into jobs (afterok chain)
+  prep: [fetch, audio, frames] # 01_fetch (CPU array, outbound HTTPS) -> 02_audio_frames (CPU array, aftercorr)
+  gpu: [asr, turns, diarize, voice, face, text]   # 03 speech, 04 face, 05 text (+ stance training): one GPU
+                               # step at a time, each <= 2 GPUs; turns is short CPU work inside 03
+  post: [aggregate]            # 06 (CPU), --force by default, then the panel files
+
+runtime:
+  claim_ttl_s: 21600           # a claim older than this, or whose process died on this host, can be taken over
+  offline_gpu: true            # GPU stages run with HF_HUB_OFFLINE=1; run `prefetch-models` first
+  log_level: INFO
+  log_format: json             # json | text
+  fail_fast: false             # false: a failing meeting is recorded, the run continues
+
+# ---------------------------------------------------------------- stages
+fetch:
+  video: true
+  transcript_pdf: true
+  statement_html: true         # statement text for the statement-vs-Q&A stance gap
+  captions_vtt: true           # official WebVTT (~80 KB). With the default ASR clock it is QA only: turns.vtt_check
+                               # compares ASR word times with the captions. Required for turns.clock_source vtt*
+  mp4_rule: max_within_960x540 # same rule as the manifest (max_within_<max_width>x<max_height> | highest)
+  max_width: 960
+  max_height: 540
+  verify_bytes: true           # final MP4 size must equal manifest mp4_bytes (HEAD Content-Length)
+  redownload: false            # false: an existing MP4 of the right size is kept, also under --force
+  hash_video: true             # sha256 of the MP4 into raw/fetch.json (about 2 s per GB)
+  parallel: 4                  # files of one meeting fetched concurrently (MP4, PDF, HTML, VTT)
+  timeout_s: 120
+  retries: 3                   # per file; MP4 retries resume with HTTP Range and re-resolve the signed URL
+  brightcove_account_id: "66043936001"
+  brightcove_player: default_default
+
+audio:
+  sample_rate: 16000
+  channels: 1
+  codec: pcm_s16le
+  loudnorm: false              # whole-file normalisation would leak future audio into earlier chunks: keep off
+  loudnorm_target: {i: -23.0, tp: -2.0, lra: 7.0}   # used only if loudnorm: true (recorded as causal: false)
+  analyze_loudness: true       # EBU R128 + peak/RMS/clipping into audio/audio.json (logged, never applied)
+  max_duration_gap_s: 5.0      # WAV vs manifest duration; larger gaps fail the meeting (truncated download?)
+  ffmpeg: ffmpeg               # name or path; laptops without ffmpeg fall back to the imageio-ffmpeg binary
+
+frames:                        # slot grid t_k = k/fps; slot k shows the latest source frame at or before t_k
+  fps: 1.0                     # team plan: 1 fps. plan_v0 options (py-feat, InsightFace) use 2-5 fps: then store: index
+  store: zip                   # zip: JPEGs in one zip per meeting (Lustre dislikes many small files)
+                               # index: slot list only; the face stage decodes the video itself in the GPU job
+  qa_sample_fps: 1.0           # store=index: keep a JPEG sample at this rate to check the face stage by eye (0 = none)
+  chairs: null                 # null = face.chairs (frames feed only the face stage); [] = every chair
+  max_height: 540              # 2015-12-16 is 1280x720; downscale so frame sizes match
+  jpeg_quality: 90
+  hwaccel: none                # none | auto | cuda (NVDEC); CPU jobs have no GPU
+  ffmpeg: ffmpeg               # name or path; laptops without ffmpeg fall back to the imageio-ffmpeg binary
+  threads: 4                   # decoder threads
+
+asr:
+  enabled: true
+  engine: faster_whisper
+  model: whisper_turbo_ct2
+  device: cuda                 # cuda | cpu (team laptop path: cpu + int8)
+  compute_type: float16        # float16 on GPU (int8 GEMMs fail on some Blackwell shapes)
+  compute_type_cpu: int8       # used when no GPU is visible (laptop / CPU fallback)
+  beam_size: 5
+  batch_size: 16               # BatchedInferencePipeline; 0 = sequential decoding
+  word_timestamps: true
+  vad_filter: true
+  language: en
+  condition_on_previous_text: false
+  initial_prompt: null         # e.g. "FOMC, Federal Open Market Committee" (changes decoding: record it)
+
+turns:
+  clock_source: asr            # asr (team plan: Whisper clocks + transcript words) | vtt | vtt_then_asr
+                               # vtt needs fetch.captions_vtt=true; 7 default-sample meetings (12 of 95) have no
+                               # caption track and fail under `vtt`, so prefer vtt_then_asr with asr left enabled
+  align:
+    method: text_match         # text_match (transcript words take ASR word times) | whisperx | qwen_forced_aligner
+    whisperx_align_model: wav2vec2_align_en
+    qwen_aligner_model: qwen_forced_aligner   # needs `pip install qwen-asr` (not in the default env)
+    device: cuda               # forced aligners only (turns runs in the GPU wave)
+    whisperx_segment_s: 30.0   # transcript chunks handed to the aligner, around the base clock
+    qwen_segment_s: 180.0      # Qwen3-ForcedAligner handles up to 300 s per call
+    qwen_batch_size: 8
+    pad_s: 0.5
+    max_wer_proxy: 0.35        # team plan: drop bad WER-proxy meetings (flag `timing_ok`; nothing deleted)
+    min_matched_frac: 0.80     # placeholders: pre-register both before results are seen
+  chair_label_regex: '^(CHAIR|CHAIRMAN|CHAIRWOMAN) (BERNANKE|YELLEN|POWELL|WARSH)$'
+  moderator_label_regex: '^(MICHELLE SMITH|MS\. SMITH)$'
+  label_fuzzy: 0.8             # labels this similar to "CHAIR <NAME>" / "MICHELLE SMITH" count (typos such as
+                               # CHAIRIMAN POWELL, CHARIMAN WARSH, MICHELE SMITH occur in the PDFs)
+  closing_max_words: 25        # the last chair turn after the moderator, if this short, is `closing`, not an answer
+  greeting_search_s: 240       # the chair's first word must fall within this many seconds of video start
+  vtt_check: true              # with the ASR clock: compare word times with the official captions (notes only)
+
+diarize:
+  enabled: true
+  method: ecapa_verify         # ecapa_verify (chair voice check, Apache-2.0, ungated) | pyannote | none (labels only)
+  device: cuda
+  ecapa:
+    model: ecapa_voxceleb
+    enroll_from: opening       # chair embedding from the opening remarks, which precede every Q&A turn
+    min_enroll_s: 60
+    chunk_s: 3.0               # scored windows inside every turn that starts after the opening
+    min_chunk_s: 1.5
+    batch_size: 64
+    outlier_mad: 4.0           # enrolment windows this many robust SDs below the median similarity are dropped
+    threshold: null            # null = causal calibration from the opening only:
+    calib_quantile: 0.02       #   max(min_threshold, quantile(leave-one-out opening scores) - calib_margin)
+    calib_margin: 0.10         # placeholders: pre-register before results are seen
+    min_threshold: 0.30
+  pyannote:
+    enabled: false             # team plan: only if the Hub terms are accepted (gated; token on HiPerGator)
+    model: pyannote_31         # pyannote_31 | pyannote_community1
+    num_speakers: null
+    gate: false                # false: cross-check only (whole-recording clustering is not causal); true: also required
+    min_chair_frac: 0.5        # share of a chunk spoken by the chair's pyannote speaker
+
+voice:                         # vocal_proxy (secondary, Powell only; not "emotion of the chair")
+  enabled: true
+  chairs: [Powell]             # Warsh: text only
+  segments: [answer]           # opening remarks excluded
+  identity_gate: true          # use only chunks diarize marked chair_verified (falls back to labels if diarize off)
+  identity_min_frac: 1.0       # share of a chunk that verified diarize windows must cover for identity_ok
+  device: cuda
+  chunking: fixed              # fixed (chunk_s windows every hop_s) | words (cut at word boundaries / pauses)
+  chunk_s: 8.0                 # fixed: window length; words: target length
+  hop_s: 8.0                   # non-overlapping, causal windows inside each answer
+  min_chunk_s: 3.0             # SER models were trained on 3-15 s clips
+  max_chunk_s: 15.0            # words mode only
+  chunk_pause_s: 0.6           # words mode: a pause this long closes a chunk once it is min_chunk_s long
+  pause_min_s: 0.25            # gaps between matched words counted as pauses
+  model: audeering_msp_dim
+  batch_size: 32
+  dtype: float32               # float16 halves memory on GPU but shifts A/D/V slightly
+  save_embeddings: false       # true: voice/voice_embeddings.npz (1024-d pooled states, for linear probes)
+  f0:
+    engine: parselmouth
+    time_step_s: 0.01
+    semitone_ref_hz: 100.0
+    pitch_range_hz: {default: [75, 300], Yellen: [100, 500]}
+  emotion2vec: {enabled: false, model: emotion2vec_plus_large}       # plan_v0 option
+  ser_crosscheck: {enabled: false, model: ser_3loi_wavlm}             # plan_v0 option
+  opensmile: {enabled: false, feature_set: eGeMAPSv02}                # research licence
+
+face:                          # expression_proxy (secondary, Powell only); details in docs/FACE.md
+  enabled: true
+  chairs: [Powell]             # Warsh: text only
+  segments: [answer]           # feature frames (opening remarks excluded)
+  enroll_segments: [opening]   # the chair's face is enrolled from the opening remarks, which precede every answer
+  enroll_max_s: 180            # first N seconds of the opening are enough to enrol
+  fps: 1.0                     # team plan 1 fps; plan_v0 2-5 fps (set frames.fps too, or frames.store=index)
+  source: auto                 # auto (frames zip when it holds face.fps or an integer multiple) | zip | stream (decode video)
+  decode: {hwaccel: auto, threads: 2, max_height: 540}   # stream source only; auto = NVDEC when ffmpeg has it
+  device: cuda
+  batch_size: 32               # frames per batch (detector, embeddings, expression models)
+  detector: mediapipe          # mediapipe (team plan) | insightface | pyfeat; that backend must be enabled below
+  expression: [emotiefflib]    # any of: emotiefflib, pyfeat; [] = none
+  mediapipe: {enabled: true, model: mediapipe_face_landmarker, num_faces: 4, min_detection_confidence: 0.5,
+              min_presence_confidence: 0.5, threads: null, crosscheck: true}   # threads null = OMP_NUM_THREADS; crosscheck: blendshapes on the chair crop when another detector is used
+  emotiefflib: {enabled: true, model: emotiefflib_enet_b0_8_va_mtl, engine: torch, crop_expand: 1.1}  # torch: native sm_100 (its onnx engine is CPU-only)
+  sface: {enabled: true, model: sface_opencv, providers: [CPUExecutionProvider]}   # identity embeddings, ~1 ms per face on CPU
+  insightface: {enabled: false, pack: insightface_buffalo_l, det_size: 640, det_thresh: 0.5,
+                providers: [CUDAExecutionProvider, CPUExecutionProvider]}       # plan_v0 option; non-commercial weights
+  pyfeat: {enabled: false, model: pyfeat_multitask_v2, weights_file: face_multitask_v28.safetensors, amp: true,
+           blendshapes: false, face_detection_threshold: 0.5}                   # plan_v0 option; env/environment-pyfeat.yml
+  identity:                    # H3 identity gate: the Fed video cuts to reporters, often with several faces in view
+    method: sface              # sface (Apache-2.0) | insightface | pyfeat (its ArcFace; detector pyfeat) | geometry | none
+    threshold: null            # null = method default: sface 0.363 (OpenCV), insightface/pyfeat 0.40, geometry 0.25
+    enroll_min_frames: 10
+    enroll_min_cos: 0.5        # robust enrolment: opening faces below this similarity to the mean are dropped
+    geometry: {sigma_pos: 0.10, sigma_size: 0.25}   # fallback without embeddings: box centre/size vs the opening
+  track: {iou_min: 0.3, max_gap_s: 3.0}             # causal track of the chair box (cuts break it)
+  gates: {min_face_h_px: 80, max_abs_yaw_deg: 40, max_abs_pitch_deg: 30, min_blur: 20.0, min_det_score: 0.5}
+  masks: {jaw_open: 0.025, reading_pitch_deg: -10.0, eyes_closed: 0.5}  # flags, not deletions; placeholders: pre-register
+                               # after a hand-labelled frame check (jawOpen ran 0.003-0.05 while Powell spoke, pitch has a camera offset)
+  blink_min_fps: 10            # blink events need >= 10 fps; below it only eyes_closed_frac is reported
+  upper_face_only: true        # face_turns averages brow/eye/cheek blendshapes, upper AUs, pose (speech moves the lower face)
+  aggregate: {windows_s: [30, 60], min_gated_frames: 3,
+              mouth_closed_columns: [ex_valence, ex_arousal, ex_happiness, bs_mouthSmileLeft, bs_mouthSmileRight, au12, pf_happy,
+                                     pf_valence, pf_arousal]}
+  record_frame_size: true
+
+text:                          # stance, the primary channel (H1); details in docs/TEXT.md
+  enabled: true
+  units: [statement, answer, question]   # opening/closing excluded (team plan); questions feed H1-Q only
+  # Scorers: `primary` gives `hawk`; every available scorer adds <prefix>_* columns. Deviation D1 (2026-10-03):
+  # gtfintechlab/FOMC-RoBERTa is gated (manual approval) and not accessible, so the stance model is the
+  # walk-forward ChronoBERT; train it before this stage (python -m fedpress.train.stance_walkforward prepare,
+  # then train --all). FOMC-RoBERTa stays a cross-check that is scored once its weights are in the cache.
+  primary: chrono_wf
+  stance_models: [chrono_wf, fomc_roberta]
+  sentiment_models: [centralbank_roberta]   # agent sentiment (A-30), not a stance cross-check
+  require_primary: true        # a meeting fails when the primary scorer cannot run; cross-checks never fail it
+  score: share                 # share = share hawkish - share dovish (D1) | prob = mean P(hawkish) - P(dovish) (A-10)
+  sentences:
+    splitter: fedpress_regex   # pinned rules in fedpress/nlp/split.py (id fedpress-regex-1) | nltk_punkt
+    min_words: 4               # A-10: sentences of >= 4 words enter unit scores (TDW keyword filter = robustness column)
+  statement:
+    required: true             # H1 needs hawk(statement); raw/statement.html comes from fetch
+    stop_regex: '^(Voting for|Voting against|Implementation Note|For media inquiries|Attachment)'
+  batch_size: 64
+  max_length: 256              # tokens per sentence (Amendment 2); longer sentences are truncated and flagged
+  device: cuda
+  dtype: float32               # scoring precision, recorded; bfloat16 is faster but can flip argmax near ties (A-27)
+  chrono_wf:
+    allow_smoke: false         # true only for local smoke tests with --max-rows/--max-epochs models
+  loughran_mcdonald:
+    enabled: true
+    model: loughran_mcdonald
+    csv_path: "${FEDPRESS_LM_CSV:-}"   # master dictionary CSV (academic licence; download it by hand)
+    required: false            # false: lm_* columns are NaN and the done-marker says so when the file is missing
+    categories: [Uncertainty, WeakModal, StrongModal, Negative, Positive, Constraining]
+  hedges:                      # counted on lower-case word sequences, non-overlapping, longest phrase first
+    phrases: [i think, we think, i believe, i would say, i'd say, i guess, perhaps, maybe, possibly, probably,
+              it seems, it appears, may be, may well, might, could be, not sure, not clear, unclear, hard to say,
+              difficult to say, too early to say, remains to be seen, we'll see, we will see, it depends,
+              depending on, data dependent, to some extent, somewhat, sort of, kind of, more or less, on balance,
+              i don't know, we don't know, can't say, uncertain, uncertainty, likely, unlikely, roughly,
+              approximately, in a sense, i wouldn't want to]
+  novelty:                     # lexical novelty (hashed term counts, nothing fitted) is always computed
+    embeddings: {enabled: false, model: qwen3_embedding_06b, batch_size: 16, max_seq_length: 2048, dtype: float32}
+                               # plan_v0 option; qwen3_embedding_8b or any sentence-transformers key also works
+  lexicon_negative_control: {enabled: false, path: null}   # frozen strategies/01 20+20 lexicon (not in this repo)
+  llm: {enabled: false}        # team plan: no LLM in the primary path
+
+aggregate:                     # per-meeting joins; raw values only (causal z at analysis time); docs/TEXT.md
+  segments: [answer]           # chair turns that get a row in features/answers.parquet (opening excluded)
+  wait_for: [voice, face]      # stop while these are pending for the meeting (failed, n/a or disabled is fine)
+  h1_answer_min_words: 40      # A-22: flag h1_answer_eligible (answers of >= 40 words); no row is dropped
+  h1_weighting: sentence       # A-10: meeting hawk = equal-weight mean over all chair Q&A sentences | answer
+  voice:
+    columns: [arousal, dominance, f0_median_st, f0_iqr_st, voiced_frac, intensity_db, speech_rate_wps, pause_frac]
+                               # A-31: arousal primary, dominance second, valence excluded (add it to study it)
+    stat: median               # per answer and per meeting (A-31)
+    gate_cols: [identity_ok]
+  face:
+    columns: auto              # auto = ex_*, pf_*, pose, head speed, face size, mouth_open; upper-face bs_*/au* (face.upper_face_only)
+    stat: mean
+    gate_cols: [gate_ok, identity_ok]
+  windows_s: [30, 60]          # plan_v0 trailing windows -> features/windows.parquet; [] = no window table
+  window_step_s: 10
+  novelty_prev: {enabled: true, same_chair: false}   # dataset build: novelty vs the previous presser
+  baselines:                   # fedpress.baselines.causal_z: strictly earlier meetings, never inside a meeting
+    same_chair: true
+    burn_in_meetings: 4
+    variance_floor: 1.0e-6
+    robust: true               # median / (1.4826 MAD)
+    pool: rows                 # rows (answers of earlier meetings) | meeting_means
+    columns: auto              # auto = numeric voice_*/face_* features
+    text_columns: []           # e.g. [hawk, hawk_gap] (plan_v0: text within chair, changes not levels)
+    meeting_text_columns: []
+    write_panel: true          # aggregate --all also writes panel/answers_causal_z.parquet, meetings_causal_z.parquet
+
+train:
+  stance_walkforward:          # deviation D1 = fedspeak_v2 Amendment 2; python -m fedpress.train.stance_walkforward
+    base: chrono_bert          # checkpoint year = min(Y-1, newest pinned revision) for pressers in year Y
+    out_dir: models/stance_walkforward   # under paths.root: <key>/seed<s>/ model + meta.json, registry.json
+    registry_file: ${FEDPRESS_ROOT:-/blue/jie.xu/${USER}/fedpress}/models/stance_walkforward/registry.json
+    labels_dir: train          # under paths.root: stance_labels.parquet, labels_meta.json, raw downloads
+    data:
+      hf: {enabled: true, repo: gtfintechlab/fomc_communication, revision: 6b0283f55f0005a6d38d49f271d795c21fccc1a3,
+           files: [train.csv, test.csv]}
+      github_doc_types:        # document type per sentence: mm minutes, pc press conferences, sp speeches
+        enabled: true
+        repo: gtfintechlab/fomc-hawkish-dovish
+        commit: 98646987452b326507479cf641571b33814bb73f
+        files: {mm: data/annotated_data/manual-mm-split.xlsx, pc: data/annotated_data/manual-pc-split.xlsx,
+                sp: data/annotated_data/manual-sp-split.xlsx}
+        add_missing: false     # true: also train on labelled GitHub rows that are absent from the HF copy
+      team_csv: {path: "${FEDPRESS_TEAM_LABELS:-}"}   # optional blind team labels: sentence,label,date|year[,doc_type]
+      redate:                  # deviation D1a (= fedspeak_v2 Amendment 3): the dataset `year` column is not the source
+        enabled: true          # document's year for 2,336 of 2,480 rows; model Y trains only on rows whose source
+        table: manifest/label_dates.parquet   # document is dated before Y-01-01 (table built by manifest/build_label_dates.py)
+        sha256: 16a54100d531e9ab933671f4c0e541b1c202be1630fd5f3aa6b4a5c26a558dfe
+        undated_year: 2022     # rows without a source date: out of the 2015-2022 models, kept for 2023+ (none today)
+      doc_types: null          # null = all; e.g. [pc] trains on press-conference sentences only
+    split: {val_frac: 0.15, seed: 0}
+    hyper: {lr: 2.0e-5, batch_size: 16, max_length: 256, max_epochs: 8, patience: 2, weight_decay: 0.01,
+            warmup_frac: 0.10}
+    seeds: [42, 43, 44]
+    device: cuda
+    dtype: float32
+    allow_tf32: false
+    gate: {min_heldout_macro_f1: null}   # A-14 accuracy gate on year-held-out labels: fix it before any H1 join
+
+# ---------------------------------------------------------------- model registry (pinned revisions, licences)
+# source: hf (Hugging Face repo, revision = commit sha) | url (file, sha256 recorded by prefetch-models)
+#         | lib (downloaded by its library; version pinned in the environment) | manual (user-supplied file)
+models:
+  whisper_turbo_ct2:
+    {source: hf, id: mobiuslabsgmbh/faster-whisper-large-v3-turbo, revision: 0a363e9161cbc7ed1431c9597a8ceaf0c4f78fcf,
+     license: MIT, upstream: openai/whisper-large-v3-turbo@41f01f3fe87f28c78e2fbf8b568835947dd65ed9, gated: false}
+  fomc_roberta:
+    {source: hf, id: gtfintechlab/FOMC-RoBERTa, revision: aa3bc4281fb1fe73c8872e09ad5c64b898f90d83,
+     license: CC-BY-NC-4.0, gated: manual, label_map_fallback: {0: dovish, 1: hawkish, 2: neutral},
+     prefix: fomc, data_end: "2022-10-15", base_pretrain_end: "2019-02-28",
+     note: "gated with manual approval; read id2label from the model config, fallback map from the TDW repo README (LABEL_0 dovish, LABEL_1 hawkish, LABEL_2 neutral). data_end = last TDW label date (A-29); RoBERTa-large pretraining text runs to 2019-02"}
+  centralbank_roberta:
+    {source: hf, id: Moritz-Pfeifer/CentralBankRoBERTa-sentiment-classifier, revision: 5055d180f238771264d90d6cd22dc6dc479bd000,
+     license: MIT, gated: false, prefix: cbr, role: agent_sentiment, data_end: null,
+     ignore_patterns: [optimizer.pt, scheduler.pt, training_args.bin, rng_state.pth],   # trainer state, ~1 GB
+     note: "positive/negative for households, firms, financial sector, government (A-30): sentiment, not stance; training-data end not published"}
+  audeering_msp_dim:
+    {source: hf, id: audeering/wav2vec2-large-robust-12-ft-emotion-msp-dim, revision: 6eba34a2485ea31cb03600241787c3a5edab8626,
+     license: CC-BY-NC-SA-4.0, gated: false, outputs: [arousal, dominance, valence],
+     ignore_patterns: [pytorch_model.bin]}   # model.safetensors holds the same weights
+  ecapa_voxceleb:
+    {source: hf, id: speechbrain/spkrec-ecapa-voxceleb, revision: 0f99f2d0ebe89ac095bcc5903c4dd8f72b367286,
+     license: Apache-2.0, gated: false}
+  pyannote_31:
+    {source: hf, id: pyannote/speaker-diarization-3.1, revision: 84fd25912480287da0247647c3d2b4853cb3ee5d,
+     license: MIT, gated: auto, needs: [pyannote_seg30, pyannote_wespeaker]}
+  pyannote_seg30:
+    {source: hf, id: pyannote/segmentation-3.0, revision: e66f3d3b9eb0873085418a7b813d3b369bf160bb, license: MIT, gated: auto}
+  pyannote_wespeaker:
+    {source: hf, id: pyannote/wespeaker-voxceleb-resnet34-LM, revision: 837717ddb9ff5507820346191109dc79c958d614,
+     license: CC-BY-4.0, gated: false}
+  pyannote_community1:
+    {source: hf, id: pyannote/speaker-diarization-community-1, revision: 3533c8cf8e369892e6b79ff1bf80f7b0286a54ee,
+     license: CC-BY-4.0, gated: auto}
+  wav2vec2_align_en:
+    {source: hf, id: jonatasgrosman/wav2vec2-large-xlsr-53-english, revision: 569a6236e92bd5f7652a0420bfe9bb94c5664080,
+     license: Apache-2.0, gated: false}
+  qwen_forced_aligner:
+    {source: hf, id: Qwen/Qwen3-ForcedAligner-0.6B, revision: c7cbfc2048c462b0d63a45797104fc9db3ad62b7,
+     license: Apache-2.0, gated: false, note: "plan_v0 option; needs its own runtime package"}
+  emotion2vec_plus_large:
+    {source: hf, id: emotion2vec/emotion2vec_plus_large, revision: 6c303ba987b86b93193de93e34bb2b077a6bedc4,
+     license: FunASR model licence (attribution), gated: false}
+  ser_3loi_wavlm:
+    {source: hf, id: 3loi/SER-Odyssey-Baseline-WavLM-Multi-Attributes, revision: 00d0e12ba9bf957f5aeea36e8663c8c61cb50ac9,
+     license: MIT, gated: false}
+  mediapipe_face_landmarker:
+    {source: url, url: "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task",
+     sha256: 64184e229b263107bc2b804c6625db1341ff2bb731874b0bcc2fe6544e0bc9ff, license: Apache-2.0}
+  emotiefflib_enet_b0_8_va_mtl:
+    {source: url, id: enet_b0_8_va_mtl, package: emotiefflib==1.1.1,
+     url: "https://github.com/sb-ai-lab/EmotiEffLib/raw/9f62dbb76f933a55fcebdb5fab9e76492c435187/models/affectnet_emotions/enet_b0_8_va_mtl.pt",
+     sha256: b7b9522ec6062d94919ef5cf620b561bc0320c8d03c88a807b95accb0da3d600,
+     license: "code Apache-2.0; weights trained on AffectNet (non-commercial research licence)",
+     note: "torch engine loads this pinned file; the onnx engine (CPU only) uses the library's own download"}
+  sface_opencv:
+    {source: url, url: "https://huggingface.co/opencv/face_recognition_sface/resolve/3d7082438a6e4551e840c9b2bb60b71e8da4b524/face_recognition_sface_2021dec.onnx",
+     sha256: 0ba9fbfa01b5270c96627c4ef784da859931e02f04419c829e83484087c34e79, license: Apache-2.0,
+     note: "SFace MobileFaceNet (OpenCV Zoo); chair identity embeddings"}
+  insightface_buffalo_l:
+    {source: lib, id: buffalo_l, package: insightface, license: "non-commercial research only (models); MIT code"}
+  pyfeat_multitask_v2:
+    {source: hf, id: py-feat/face_multitask_v2, revision: 66c65f28f15394347db9333833250b73a052486d,
+     license: research-only weights, gated: false}
+  chrono_bert:                 # base checkpoints of the walk-forward stance models (pretrained on text to 31 Dec <year>)
+    {source: hf, id_template: "manelalab/chrono-bert-v1-{year}1231", license: MIT, gated: false,
+     revisions: {"2010": "1520cf239e7922584ce7762af9e5040e8edd9374", "2011": "c525b313b750d52d650a0df6adc28df85570daea",
+                 "2012": "a21a301631c64230f82020a53c095269c82cb751", "2013": "071ed3022975063514f5426d8c42815246241412",
+                 "2014": "9e61adb8d6674d363f14d0d4a3153e4fea3ebefd", "2015": "01122aa3fd7a07879a524b6897c41e55c1db091a",
+                 "2016": "89dff1bb2043cc929c00756002469dfa9482f280", "2017": "02bde7f9d3d8c55c1e44d7e3ee071f374a1b9bb4",
+                 "2018": "e716596f5c90945781e74e78ab90c591b9b46080", "2019": "33a5fc6e87910b614cf4319eb995301195d9a99d",
+                 "2020": "8402477b6b77b799ee220665fcb258939eaf7455", "2021": "2d187f3f29b1071392b546fa1195d6b55036ae9b",
+                 "2022": "58bdf9ce273a6744bf8c8acda2df56655e7f1f51", "2023": "d1cbfa139a61b067ce0089c12d93f196798ad6b1",
+                 "2024": "2478c3bd4a676e2e7bdc72f8100262b39bde4b0d"}}
+  chrono_wf:                   # walk-forward stance models trained here (deviation D1); not downloadable
+    {source: manual, path_key: train.stance_walkforward.registry_file, needs: [chrono_bert], prefix: cwf,
+     url: "python -m fedpress.train.stance_walkforward prepare, then: train --all",
+     license: "MIT base (ChronoBERT); fine-tuned on CC BY-NC 4.0 labels (gtfintechlab/fomc_communication): non-commercial",
+     note: "pressers in year Y: chrono-bert-v1-<min(Y-1,2024)>1231 fine-tuned on labels with year <= Y-1; 3 seeds averaged"}
+  qwen3_embedding_8b:
+    {source: hf, id: Qwen/Qwen3-Embedding-8B, revision: 1d8ad4ca9b3dd8059ad90a75d4983776a23d44af, license: Apache-2.0, gated: false,
+     data_end: null, note: "training-data cutoff not published (A-29: keep out of 2023-2026 confirmatory use)"}
+  qwen3_embedding_06b:
+    {source: hf, id: Qwen/Qwen3-Embedding-0.6B, revision: 97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3, license: Apache-2.0, gated: false,
+     data_end: null, note: "training-data cutoff not published (A-29)"}
+  all_minilm_l6_v2:
+    {source: hf, id: sentence-transformers/all-MiniLM-L6-v2, revision: 1110a243fdf4706b3f48f1d95db1a4f5529b4d41,
+     license: Apache-2.0, gated: false, data_end: null, note: "small sentence-transformers alternative for text.novelty.embeddings"}
+  loughran_mcdonald:
+    {source: manual, path_key: text.loughran_mcdonald.csv_path, url: "https://sraf.nd.edu/loughranmcdonald-master-dictionary/",
+     license: "free for academic use; commercial use needs a licence"}

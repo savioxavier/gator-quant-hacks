@@ -1,0 +1,37 @@
+{
+  "roberta_status": "blocked: gtfintechlab/FOMC-RoBERTa is a gated repo (manual approval); no access",
+  "lexicon_min_hd": 5,
+  "frozen_lexicon_sha256": {
+    "scripts/score.py": "be6ad6e3b8259a42d20362f575c1de0bf75de5a54964154f7f7e5fccf2b790aa",
+    "lexicon/hawk.txt": "ceead1cae1edd8a2acef83e20dfe2bc5934494d20339d756f912f22dd7cf33bf",
+    "lexicon/dove.txt": "2d43390600d89c7c113b6007bc36c74b37e56dc461a7e7865259acc6981ce5ae"
+  },
+  "n_meetings": 75,
+  "n_answers": 2026,
+  "n_answers_timed": 1812,
+  "meetings_no_captions": [
+    "20221214",
+    "20230614",
+    "20230726",
+    "20231101",
+    "20231213",
+    "20240320",
+    "20251210"
+  ],
+  "meetings_drop_P_timing": [
+    "20190501",
+    "20200610",
+    "20210317",
+    "20221102",
+    "20221214",
+    "20230201",
+    "20230614",
+    "20230726",
+    "20231101",
+    "20231213",
+    "20240131",
+    "20240320",
+    "20240918",
+    "20251210"
+  ]
+}

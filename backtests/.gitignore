@@ -1,0 +1,4 @@
+# re-run outputs and caches (never committed; re-runs may contain licensed price levels)
+rerun/
+__pycache__/
+*.pyc

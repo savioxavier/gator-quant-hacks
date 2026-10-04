@@ -1,0 +1,36 @@
+# Optional second environment for the plan_v0 face options (py-feat face_multitask_v2, InsightFace) at 2-5 fps.
+# py-feat 2.x requires torchcodec >= 0.11 (torch >= 2.11) and timm >= 1.0, which conflict with the main env
+# (whisperx pins torch 2.8; EmotiEffLib's torch engine pins timm 0.9, so EmotiEffLib is not in this env).
+# Run the face stage from this env with the plan_v0 profile (docs/FACE.md), e.g.
+#   --set face.pyfeat.enabled=true --set face.detector=pyfeat --set "face.expression=[pyfeat]"
+#   --set face.emotiefflib.enabled=false --set face.fps=5 --set frames.fps=5 --set face.source=stream
+#   conda env create -p /blue/jie.xu/$USER/envs/fedpress-pyfeat -f env/environment-pyfeat.yml
+#   bash env/post_install.sh /blue/jie.xu/$USER/envs/fedpress-pyfeat
+name: fedpress-pyfeat
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.11
+  - pip
+  - ffmpeg>=6,<8               # also the shared libraries torchcodec loads (py-feat imports it)
+  - python-sounddevice>=0.5,<0.6   # mediapipe dependency; the conda build finds conda's PortAudio
+  - git
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu128
+      - torch==2.11.0+cu128
+      - torchvision==0.26.0+cu128
+      - torchcodec==0.11.1
+      - nvidia-npp-cu12==12.3.3.100   # libnppicc.so.12: the cu128 torchcodec build will not load without it
+      - numpy==2.2.6
+      - pandas==2.3.3
+      - pyarrow==21.0.0
+      - pyyaml==6.0.3
+      - requests==2.32.5
+      - py-feat==2.1.3             # code MIT; face_multitask_v2 weights research-only
+      - insightface==2.0           # non-commercial model weights
+      - mediapipe==1.0.1           # blendshape cross-check on the chair crop (face.mediapipe.crosscheck)
+      - imageio-ffmpeg==0.6.0      # fallback ffmpeg binary for the face stage's stream source
+      - huggingface-hub==0.36.2
+      # env/post_install.sh swaps in onnxruntime-gpu==1.26.0 and opencv-contrib-python-headless==4.12.0.88
+      - pytest==8.4.2

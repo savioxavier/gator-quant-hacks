@@ -1,0 +1,71 @@
+# Main environment for HiPerGator (Linux x86_64, el9). GPUs: B200 = sm_100, RTX PRO 6000 = sm_120, L4 = sm_89.
+# Build it in a dev session, not on a login node (login nodes allow 4 cores / 32 GB / short tests only):
+#   module load ufrc conda && srundev --time=04:00:00 --cpus-per-task=8 --mem=32gb
+#   conda env create -p /blue/jie.xu/$USER/envs/fedpress -f env/environment.yml
+#   bash env/post_install.sh /blue/jie.xu/$USER/envs/fedpress
+#   source env/activate.sh && python -m fedpress.cli doctor
+#
+# CUDA: no CUDA module is needed at run time. The torch cu128 wheels bring the CUDA 12.8 runtime, cuBLAS and
+# cuDNN 9; CTranslate2 and onnxruntime-gpu use the same libraries (env/activate.sh puts them on the loader path).
+# HiPerGator drivers support CUDA 13 and 12 (R580+); cu128 wheels need R570+.
+# py-feat (plan_v0 option) needs torch >= 2.11 / torchcodec >= 0.11 and lives in env/environment-pyfeat.yml.
+name: fedpress
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.11
+  - pip
+  - ffmpeg>=6,<8               # decoding; also the shared libraries torchcodec loads
+  - libsndfile
+  - python-sounddevice>=0.5,<0.6   # mediapipe dependency; the conda build finds conda's PortAudio
+  - git
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu128
+      # PyTorch 2.8, CUDA 12.8 build: kernels for sm_75..sm_90, sm_100 (B200) and sm_120 (RTX PRO 6000 / RTX 5090)
+      - torch==2.8.0+cu128
+      - torchaudio==2.8.0+cu128
+      - torchvision==0.23.0+cu128
+      - torchcodec==0.7.0          # matches torch 2.8; pyannote 4.0.x needs >= 0.7, whisperx needs < 0.8
+      - nvidia-npp-cu12==12.3.3.100   # libnppicc.so.12: the cu128 torchcodec build will not load without it
+      # data and plumbing
+      - numpy==2.2.6
+      - pandas==2.3.3
+      - pyarrow==21.0.0
+      - pyyaml==6.0.3
+      - requests==2.32.5
+      - ffmpeg-python==0.2.0
+      # clocks and transcripts (team plan: Whisper large-v3-turbo via faster-whisper + transcript PDF)
+      - faster-whisper==1.2.1
+      - ctranslate2==4.8.2         # built with CUDA 12.8 (Blackwell support since 4.6.3; int8 disabled on sm_120)
+      - pdfplumber==0.11.7
+      - pypdf==6.0.0
+      - webvtt-py==0.5.1           # optional caption clock (plan_v0)
+      - rapidfuzz==3.14.1
+      - whisperx==3.8.6            # optional forced alignment (plan_v0); pins torch 2.8 / hub < 1.0
+      # text stance (FOMC-RoBERTa, CentralBankRoBERTa) and voice model loading
+      - transformers==4.57.6       # 4.x: whisperx needs huggingface-hub < 1.0, transformers 5.x needs >= 1.31
+      - huggingface-hub==0.36.2
+      - accelerate==1.12.0
+      - sentence-transformers==5.2.0   # optional embeddings novelty (plan_v0)
+      # chair verification and diarization
+      - speechbrain==1.0.3         # ECAPA chair check (Apache-2.0)
+      - pyannote.audio==4.0.7      # optional; gated models need the Hub terms accepted + HF token
+      # voice (Powell-only vocal_proxy)
+      - praat-parselmouth==0.4.7   # GPL-3.0
+      - soundfile==0.13.1
+      - opensmile==2.6.0           # optional; audEERING research licence
+      - funasr==1.4.16             # optional emotion2vec (plan_v0)
+      - librosa==0.11.0
+      # face (Powell-only expression_proxy): MediaPipe + EmotiEffLib at 1 fps
+      - mediapipe==1.0.1
+      - emotiefflib==1.1.1
+      - timm==0.9.16               # EmotiEffLib torch engine (optional; default engine is onnx)
+      - onnx==1.18.0
+      - insightface==2.0           # optional (plan_v0); non-commercial model weights
+      # The CPU onnxruntime and three OpenCV variants get pulled in by the packages above;
+      # env/post_install.sh replaces them with these two:
+      #   onnxruntime-gpu==1.26.0  (last PyPI CUDA 12.8 Linux build with compute_90 PTX -> runs on sm_100 via JIT;
+      #                             1.28+ CUDA 12.8 builds ship no sm_100 code at all)
+      #   opencv-contrib-python-headless==4.12.0.88
+      - pytest==8.4.2
