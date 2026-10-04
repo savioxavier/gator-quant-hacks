@@ -1,0 +1,64 @@
+{
+  "rule": "Month-end, 15 CME commodities: rank on cumulative excess return of the F_ index over the formation window (no skip); long top 3, short bottom 3; V1 12m equal notional, V2 12m 1/sigma (equal risk), V3 6m equal notional; book to 10% ex-ante (252d cov, gross<=3); hold one month; next_close.",
+  "sources": [
+    "https://risk.edhec.edu/publications/momentum-strategies-commodity-futures",
+    "Hollstein, Prokopczuk & Tharann 2021, QJF 11(4), SSRN 3567629",
+    "https://www.aqr.com/-/media/AQR/Documents/Insights/Data-Sets/Value-and-Momentum-Everywhere-Factors-Monthly.xlsx",
+    "https://ideas.repec.org/a/eme/rbfpps/rbf-05-2019-0067.html"
+  ],
+  "universe": [
+    "F_CL",
+    "F_HO",
+    "F_RB",
+    "F_NG",
+    "F_GC",
+    "F_SI",
+    "F_PL",
+    "F_HG",
+    "F_ZC",
+    "F_ZS",
+    "F_ZW",
+    "F_ZL",
+    "F_ZM",
+    "F_LE",
+    "F_HE"
+  ],
+  "cost_bps_one_way": {
+    "F_CL": 2.0,
+    "F_HO": 3.0,
+    "F_RB": 3.0,
+    "F_NG": 3.0,
+    "F_GC": 2.0,
+    "F_SI": 2.0,
+    "F_PL": 3.0,
+    "F_HG": 2.0,
+    "F_ZC": 4.0,
+    "F_ZS": 4.0,
+    "F_ZW": 4.0,
+    "F_ZL": 4.0,
+    "F_ZM": 4.0,
+    "F_LE": 4.0,
+    "F_HE": 4.0
+  },
+  "vol_scaling": "10% annualised ex-ante, trailing 252-session sample covariance (min 60), gross cap 3",
+  "id": "trend_momentum_commodity_xsmom",
+  "headline_variant": "V2_12m_IV",
+  "selection": "highest in-sample (start..2024-10-02) net Sharpe at realistic costs among the 3 pre-declared variants; all variants reported in variants.csv",
+  "columns": {
+    "net_1x": "daily return minus T-bill, net of the realistic cost map",
+    "net_2x": "same at 2x costs",
+    "gross": "daily return minus T-bill before costs"
+  },
+  "window": {
+    "start": "2011-07-05",
+    "in_sample_end": "2024-10-02",
+    "later_window": "2024-10-03..2026-10-02 (descriptive only)"
+  },
+  "spec": "<scratch>\\hunt100\\bt_3\\trend_momentum_commodity_xsmom\\SPEC.md",
+  "variant_is_sharpe_net_1x": {
+    "V1_12m_EW": -0.343,
+    "V2_12m_IV": -0.307,
+    "V3_6m_EW": -0.36
+  },
+  "source_reported": "Miffre-Rallis 2007 (31 commodities, 1979-2004, gross): 12m/1m long-short 14.6%/yr, vol 25.6% (Sharpe ~0.57); Hollstein et al. 2021: 1-yr momentum 7.44%/yr full sample, much attenuated post-2004; AQR VME commodity momentum Sharpe 0.52 (1972-2011) vs -0.20 post-publication; AQR Century commodities momentum -0.02 (2012-2026)."
+}

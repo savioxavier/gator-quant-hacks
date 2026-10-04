@@ -1,0 +1,29 @@
+ES_1600 common eligible days 4026 mine only 3 theirs only 33
+  lh: max |diff| 0.000 bp, days >0.5bp 0, sign disagreements 0
+  rod: max |diff| 9.168 bp, days >0.5bp 36, sign disagreements 32
+  onfh: max |diff| 9.465 bp, days >0.5bp 36, sign disagreements 45
+  examples rod diff: {Timestamp('2010-12-13 00:00:00'): {'rod': 46.56, 'rod_t': 50.66}, Timestamp('2011-03-14 00:00:00'): {'rod': -103.91, 'rod_t': -101.81}, Timestamp('2011-12-12 00:00:00'): {'rod': -188.19, 'rod_t': -190.23}, Timestamp('2012-06-11 00:00:00'): {'rod': -54.99, 'rod_t': -53.83}, Timestamp('2012-09-17 00:00:00'): {'rod': -39.42, 'rod_t': -44.42}}
+  their-only days sample: ['2010-11-29', '2011-11-28', '2012-11-26', '2012-12-26', '2013-07-05', '2013-12-02', '2013-12-26', '2014-07-07']
+ZN_1500 common eligible days 4044 mine only 3 theirs only 26
+  lh: max |diff| 0.000 bp, days >0.5bp 0, sign disagreements 0
+  rod: max |diff| 5.473 bp, days >0.5bp 41, sign disagreements 62
+  onfh: max |diff| 5.474 bp, days >0.5bp 41, sign disagreements 80
+  examples rod diff: {Timestamp('2010-09-02 00:00:00'): {'rod': -17.53, 'rod_t': -18.82}, Timestamp('2011-03-02 00:00:00'): {'rod': -9.18, 'rod_t': -10.53}, Timestamp('2011-06-02 00:00:00'): {'rod': -25.34, 'rod_t': -29.2}, Timestamp('2011-09-02 00:00:00'): {'rod': 47.02, 'rod_t': 49.42}, Timestamp('2012-03-02 00:00:00'): {'rod': 45.49, 'rod_t': 44.27}}
+  their-only days sample: ['2010-11-29', '2011-01-03', '2011-11-28', '2012-11-26', '2012-12-26', '2013-12-02', '2013-12-26', '2014-12-01']
+ES S2 gross IS total 4140 bp; 2020-02-20..04-30 (50 days) 2025 bp = 49% of total
+ES S5 gross IS total 4557 bp; covid window 2053 bp
+ES S6 gross IS total 5382 bp; covid window 2030 bp; net 1x total 3024 bp, covid net 1932 bp
+ES S6 net1x by year (bp): {2010: -572.0, 2011: 207.0, 2012: -185.0, 2013: 578.0, 2014: 362.0, 2015: 815.0, 2016: -248.0, 2017: -26.0, 2018: 650.0, 2019: 19.0, 2020: 1319.0, 2021: -692.0, 2022: 862.0, 2023: 377.0, 2024: -441.0}
+ES S5 net1x by year (bp): {2010: -199.0, 2011: 407.0, 2012: -318.0, 2013: 527.0, 2014: 237.0, 2015: -21.0, 2016: -648.0, 2017: -108.0, 2018: 136.0, 2019: -438.0, 2020: 1187.0, 2021: -567.0, 2022: 773.0, 2023: 595.0, 2024: -544.0}
+ES high-low same-day RV tercile sign(ROD) 4.69 bp, CI [1.02 8.96]
+ES ROD x same-day RV interaction all: b 0.0228 t 2.46
+ES ROD x same-day RV interaction exCOVID: b 0.0004 t 0.05
+non-benchmark gross IS strategy definitions: 37 max t 2.87 min Bonferroni p 0.154
+any Holm rejection at 5%: False
+positive 1x IS Sharpe definitions:
+         spec                         variant    sharpe  nw_t_mean
+84   ES_1600                S5_ROD_ABOVE_MED  0.163838   0.581883
+308  ES_1600     S6_SIGN_ROD_HIGHVOL_rv_prev  0.156401   0.581649
+340  ES_1600    S6_SIGN_ROD_HIGHVOL_vix_lag1  0.211429   0.802859
+372  ES_1600  S6_SIGN_ROD_HIGHVOL_rv_sameday  0.430880   1.594702
+E[max of 18 N(0,0.27)] approx 0.49

@@ -1,0 +1,15 @@
+[00:00:00] PLACEBO run: label-year rule: true
+[00:00:00] training: 0 to run, 36 already done, concurrency 0
+[00:00:00] score 2015: PLACEBO (74 docs, 9633 sentences)
+[00:00:00] score 2016: PLACEBO (222 docs, 9315 sentences)
+[00:00:00] score 2017: PLACEBO (251 docs, 10660 sentences)
+[00:00:00] score 2018: PLACEBO (278 docs, 8724 sentences)
+[00:00:00] score 2019: PLACEBO (571 docs, 13321 sentences)
+[00:00:00] score 2020: PLACEBO (439 docs, 12725 sentences)
+[00:00:00] score 2021: PLACEBO (494 docs, 14069 sentences)
+[00:00:00] score 2022: PLACEBO (462 docs, 10741 sentences)
+[00:00:00] score 2023: PLACEBO (629 docs, 14270 sentences)
+[00:00:00] score 2024: PLACEBO (658 docs, 16828 sentences)
+[00:00:00] score 2025: PLACEBO (702 docs, 17575 sentences)
+[00:00:00] score 2026: PLACEBO (445 docs, 9665 sentences)
+[00:00:00] all done in 0s; outputs in <scratch>\placebo_chain\chrono\scores (PLACEBO)

@@ -1,0 +1,19 @@
+2026-10-03 14:17:19.640 WARNING webull.harness [Harness] margin account with a kit strategy: order_target_percent sizes x10
+2026-10-03 14:17:19.681 INFO webull.main [Backtest] strategy=gtaa_open_sizing symbols=['SPY', 'EFA', 'IEF', 'VNQ', 'DBC'] params={'buy_and_hold': True}
+2026-10-03 14:17:19.685 INFO webull.main [Backtest] starting cash: 1000000000.00
+2026-10-03 14:17:23.697 INFO webull.main ============================================================
+2026-10-03 14:17:23.697 INFO webull.main [Backtest] Result Summary
+2026-10-03 14:17:23.697 INFO webull.main ============================================================
+2026-10-03 14:17:23.697 INFO webull.main Starting cash    : 1000000000.00
+2026-10-03 14:17:23.697 INFO webull.main Final cash       : 3924293176.84
+2026-10-03 14:17:23.697 INFO webull.main Net P&L          : 2924293176.84 (292.43%)
+2026-10-03 14:17:23.697 INFO webull.main Max drawdown     : 45.90% (639722233.39)
+2026-10-03 14:17:23.697 INFO webull.main Sharpe ratio     : 0.5212 (annualized)
+2026-10-03 14:17:23.697 INFO webull.main Total trades     : 5 (won=0, lost=0, win rate=0.00%)
+2026-10-03 14:17:23.697 INFO webull.main Trades net P&L   : 0.00
+2026-10-03 14:17:23.697 INFO webull.main ============================================================
+2026-10-03 14:17:23.697 INFO webull.main [Backtest] visualization disabled (WEBULL_VISUALIZE=false)
+2026-10-03 14:17:23.985 INFO webull.harness [Harness] in_sample     2005-11-01..2024-10-02  kit Sharpe 0.4873  our Sharpe 0.3889  ann 6.25%  max DD -45.90%  orders 23531 (refused 0)
+2026-10-03 14:17:23.985 INFO webull.harness [Harness] out_of_sample 2024-10-03..2026-10-02  kit Sharpe 1.2392  our Sharpe 0.8154  ann 11.81%  max DD -10.52%  orders 2505 (refused 0)
+2026-10-03 14:17:23.985 INFO webull.harness [Harness] full          2005-01-03..2026-10-02  kit Sharpe 0.5212  our Sharpe 0.4054  ann 6.50%  max DD -45.90%  orders 26036 (refused 0)
+2026-10-03 14:17:24.003 INFO webull.harness [Harness] metrics written: <scratch>/kit_native/native_gtaa/diag/BH5_project_open_sized.json

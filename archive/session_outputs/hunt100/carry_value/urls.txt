@@ -1,0 +1,68 @@
+# carry_value hunt: URLs consulted (2026-10-03). [T] = full text read (PDF text in papers/), [A] = abstract/summary page only, [G] = GitHub repo files read, [D] = data endpoint checked
+
+## Commodity term structure, basis-momentum, positioning
+[T] https://4nations.albertjmenkveld.com/papers/boonsprado17.pdf  (Boons & Porras Prado, Basis-momentum, JF 2019 manuscript)
+[A] https://ideas.repec.org/a/bla/jfinan/v74y2019i1p239-279.html
+[T] https://conference.nber.org/conf_papers/f89296/f89296.pdf  (Boons & Porras Prado, NBER version)
+[T] https://climateinstitute.edhec.edu/system/files/publications/factor_based_commodity_investing_1.pdf  (Sakkas & Tessaromatis, JBF 2020)
+[T] https://www.efmaefm.org/0EFMAMEETINGS/EFMA%20ANNUAL%20MEETINGS/2024-Lisbon/papers/Manuscript350.pdf  (Jiang & Liu, factor momentum in commodity futures, 1985-2022)
+[T] https://openaccess.city.ac.uk/id/eprint/6416/1/Fuertes_Miffre_Rallis_JBF2010(CRO).pdf  (Fuertes, Miffre & Rallis 2010)
+[A] https://quantpedia.com/strategies/term-structure-effect-in-commodities
+[A] https://ideas.repec.org/a/bla/jfinan/v69y2014i1p453-482.html  (Szymanowska et al. 2014)
+[A] https://climateinstitute.edhec.edu/publications/capturing-risk-premium-commodity-futures-role-hedging-pressure  (Basu & Miffre 2013)
+[T] https://openaccess.city.ac.uk/23283/1/FINAL_JFM__Accepted_27Nov2019_SSRN.pdf  (Fan, Fernandez-Perez, Fuertes & Miffre, Speculative Pressure, JFM 2020)
+[A] https://cxoadvisory.com/equity-premium/net-speculators-position-as-futures-return-predictor
+[T] https://www7.uc.cl/economia/finance_uc/docs/conferences/11th/Rouwenhorst-Tale%20of%20two%20premiums.pdf  (Kang, Rouwenhorst & Tang 2016 draft; JF 2020)
+[A] https://ideas.repec.org/a/bla/jfinan/v75y2020i1p377-417.html
+[A] https://www.nber.org/system/files/working_papers/w16712/w16712.pdf  (Hong & Yogo 2012, open interest)
+[A] https://www.nber.org/papers/w13249.pdf  (Gorton, Hayashi & Rouwenhorst, fundamentals of commodity futures returns)
+[A] https://www.cxoadvisory.com/momentum-investing/classic-paper-physical-inventories-and-commodity-futures-returns
+[A] https://papers.ssrn.com/abstract=1716841  (Mou 2011, Goldman roll; covered by calendar_event)
+[T] https://www.twosigma.com/wp-content/uploads/SV_10_17.pdf  (Two Sigma 2017, roll-return tax)
+[T] https://research-information.bris.ac.uk/ws/files/57045347/Rollover_v2.pdf  (Taylor 2016, roll efficiency; not used)
+[G] https://github.com/jjj1231978/QIS_Commodities  (carry F3-F0 spread, value, congestion, basis momentum; 2015-2026 net results)
+[G] https://github.com/ddxmy/Basis-Momentum  (Goldman-style F0/F6 basis-momentum 2008-2026, liquidity L0-L1 2019-2026)
+[A] https://ideas.repec.org/a/gam/jjrfmx/v3y2010i1p63-96d28369.html  (Mitchell 2010, crush spread profitability unstable)
+[A] https://ideas.repec.org/a/wly/jfutmk/v19y1999i3p271-289.html  (Simon 1999 crush spread)
+[A] https://www.thetrading.tools/gas-storage  (EIA storage vs UNG, 2015-2026)
+
+## FX
+[T] https://www.nber.org/papers/w16427.pdf  (Lustig, Roussanov & Verdelhan, dollar carry)
+[A] https://quantpedia.com/strategies/dollar-carry-trade
+[T] https://business.columbia.edu/sites/default/files-efs/pubfiles/6378/Daniel.Hodrick.Lu.Carry%20Trade.Critical%20Finance%20Review.2017.pdf
+[T] https://drupalgsb-test.paas.cc.columbia.edu/sites/default/files-efs/pubfiles/3957/Yield%20Cuve%20Predictors%20of%20Foreign%20Exchange%20Returns.pdf  (Ang & Chen 2010)
+[A] https://ideas.repec.org/p/cpr/ceprdp/11324.html  (Menkhoff et al., Currency value, RFS 2017)
+[A] https://openaccess.city.ac.uk/3296  (Menkhoff et al., Currency momentum, JFE 2012; covered by trend_momentum)
+[A] https://openaccess.city.ac.uk/id/eprint/3391/1/CTVOL_R3_v4_paper.pdf  (Menkhoff et al., carry and global FX volatility)
+[A] https://www.rba.gov.au/publications/rdp/2004/2004-07/description-of-the-data.html  (Kearns & Manners, speculators in currency futures)
+
+## Rates
+[T] https://www.efmaefm.org/0EFMAMEETINGS/EFMA%20ANNUAL%20MEETINGS/2017-Athens/papers/EFMA2017_0407_fullpaper.pdf  (Beekhuizen, Duyvesteyn, Martens & Zomerdijk, Carry investing on the yield curve)
+[A] https://ideas.repec.org/a/oup/rfinst/v25y2012i10p3141-3168.html  (Thornton & Valente 2012)
+[A] https://files.stlouisfed.org/files/htdocs/wp/2010/2010-034.pdf
+
+## Equity value
+[A] https://quantpedia.com/strategies/mean-reversion-effect-in-country-equity-indexes
+[A] https://quantpedia.com/Screener/Details/16
+[A] https://ideas.repec.org/a/oup/rfinst/v37y2024i11p3490-3557..html  (Goyal, Welch & Zafirov 2024)
+[A] https://nber.org/papers/w11468  (Campbell & Thompson 2008)
+[A] https://cambriafunds.com/GVAL  (live CAPE country-value ETF, since 2014)
+
+## Already-computed evidence in this session (edge-search study, verified)
+scratchpad/edges/carry/carry_all_variants.csv
+scratchpad/edges/value_reversal/value_reversal_table.csv
+scratchpad/edges/value_reversal/vme_check.json  (AQR VME pre/post-publication Sharpes)
+
+## Free data endpoints (reachability checked 2026-10-03)
+[D] https://www.cftc.gov/files/dea/history/deacot{YYYY}.zip  (legacy futures-only COT, OK)
+[D] https://www.cftc.gov/files/dea/history/fut_fin_txt_{YYYY}.zip  (TFF, OK)
+[D] https://www.cftc.gov/files/dea/history/fut_disagg_txt_{YYYY}.zip  (disaggregated, OK)
+[D] https://huggingface.co/datasets/ZipLime/commitments-of-traders  (COT with release_at timestamps, 2010-01-05..2026-09-08, OK)
+[D] https://www.eia.gov/dnav/pet/hist_xls/WCESTUS1w.xls  (weekly crude stocks ex-SPR, OK)
+[D] https://www.eia.gov/dnav/ng/hist_xls/NW2_EPG0_SWO_R48_BCFw.xls  (weekly L48 gas storage, OK)
+[D] http://www.econ.yale.edu/~shiller/data/ie_data.xls  (Shiller monthly, OK)
+[D] https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/{YYYY}/all?type=daily_treasury_yield_curve&field_tdr_date_value={YYYY}&_format=csv  (par curve 1M..30Y, OK)
+[D] https://sdmx.oecd.org/public/rest/data/OECD.SDD.TPS,DSD_PRICES@DF_PRICES_ALL,1.0/...  (OECD CPI, OK)
+[D] https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html  (OK)
+[D] yfinance country ETF prices and dividends (EWG dividends 1996-2026, OK)
+[D] https://fred.stlouisfed.org/graph/fredgraph.csv?id=...  (TIMED OUT from this host on 2026-10-03; use treasury.gov / OECD / local fred_daily instead)

@@ -1,0 +1,104 @@
+{
+ "specs": {
+  "ES_1600": {
+   "root": "ES",
+   "close_h": 16,
+   "open_end_h": 10,
+   "note": "as briefed: target 15:00-16:00 ET bar; ONFH prev 16:00->10:00; ROD prev 16:00->15:00"
+  },
+  "ZN_1600": {
+   "root": "ZN",
+   "close_h": 16,
+   "open_end_h": 10,
+   "note": "as briefed: same clock as ES (one hour after the ZN settlement window)"
+  },
+  "ZN_1500": {
+   "root": "ZN",
+   "close_h": 15,
+   "open_end_h": 9,
+   "note": "pre-specified from Baltussen et al. US Treasury futures hours 8:20-15:00 ET: target 14:00-15:00 ET bar; ONFH prev 15:00->09:00; ROD prev 15:00->14:00"
+  }
+ },
+ "regressions": {
+  "R1_ONFH": [
+   "onfh"
+  ],
+  "R2_ROD": [
+   "rod"
+  ],
+  "R3_DECOMP": [
+   "onfh",
+   "m",
+   "slh"
+  ],
+  "R4_ROD_LAGLH": [
+   "rod",
+   "lh_lag"
+  ]
+ },
+ "strategies": {
+  "B0_ALWAYS_LONG": {
+   "kind": "long"
+  },
+  "S1_SIGN_ONFH": {
+   "kind": "sign",
+   "pred": "onfh"
+  },
+  "S2_SIGN_ROD": {
+   "kind": "sign",
+   "pred": "rod"
+  },
+  "S3_JOINT_ONFH_ROD": {
+   "kind": "joint"
+  },
+  "S4_ONFH_ABOVE_MED": {
+   "kind": "sign_thr",
+   "pred": "onfh"
+  },
+  "S5_ROD_ABOVE_MED": {
+   "kind": "sign_thr",
+   "pred": "rod"
+  }
+ },
+ "vol_measures": {
+  "rv_prev": "prior session realised vol, sqrt(sum of squared hourly log returns), known at previous close",
+  "vix_lag1": "VIXCLS on the previous NYSE day (as-of), known before the trade",
+  "rv_sameday": "same-session realised vol of the ROD bars, known at the signal time (hourly stand-in for Gao's first half-hour volatility)"
+ },
+ "samples": {
+  "IS": [
+   "None",
+   "2024-10-02 00:00:00"
+  ],
+  "IS_pre2018": [
+   "None",
+   "2017-12-31 00:00:00"
+  ],
+  "IS_post2018": [
+   "2018-01-01 00:00:00",
+   "2024-10-02 00:00:00"
+  ],
+  "LATER_descriptive": [
+   "2024-10-03 00:00:00",
+   "2026-10-02 00:00:00"
+  ]
+ },
+ "costs_one_way": {
+  "ES": 0.0001,
+  "ZN": 0.00015
+ },
+ "cost_levels": [
+  "gross",
+  "1x",
+  "2x",
+  "tick"
+ ],
+ "cost_rule": "one round trip (2 x one-way) per traded day; tick level = ES 2 ticks (0.5 pt) at the entry price, ZN not computed",
+ "thresholds": "S4/S5: |predictor| > its in-sample median over eligible in-sample days (fixed in advance as the median, not optimised); vol terciles and z-score moments in-sample only",
+ "publication_split": "2018-01-01",
+ "bootstrap": {
+  "type": "moving block",
+  "block_days": 20,
+  "reps": 5000
+ }
+}

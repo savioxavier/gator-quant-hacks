@@ -1,0 +1,1362 @@
+[
+  {
+    "name": "00 Strategy Library",
+    "path": "04 Strategy Library/00 Strategy Library",
+    "sha": "850fec231d2f24ef73cb714d34bcbe5ff3ca5fa2",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/00%20Strategy%20Library?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/00%20Strategy%20Library",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/850fec231d2f24ef73cb714d34bcbe5ff3ca5fa2",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/00%20Strategy%20Library?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/850fec231d2f24ef73cb714d34bcbe5ff3ca5fa2",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/00%20Strategy%20Library"
+    }
+  },
+  {
+    "name": "01 CAPM Alpha Ranking Strategy on Dow 30 Companies",
+    "path": "04 Strategy Library/01 CAPM Alpha Ranking Strategy on Dow 30 Companies",
+    "sha": "661b7f8633e4a64b4cb2287a7c474bb3190fc0bf",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/01%20CAPM%20Alpha%20Ranking%20Strategy%20on%20Dow%2030%20Companies?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/01%20CAPM%20Alpha%20Ranking%20Strategy%20on%20Dow%2030%20Companies",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/661b7f8633e4a64b4cb2287a7c474bb3190fc0bf",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/01%20CAPM%20Alpha%20Ranking%20Strategy%20on%20Dow%2030%20Companies?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/661b7f8633e4a64b4cb2287a7c474bb3190fc0bf",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/01%20CAPM%20Alpha%20Ranking%20Strategy%20on%20Dow%2030%20Companies"
+    }
+  },
+  {
+    "name": "02 Combining Mean Reversion and Momentum in Forex Market",
+    "path": "04 Strategy Library/02 Combining Mean Reversion and Momentum in Forex Market",
+    "sha": "21b62433b8ee77bfb7405266266e28e6698f8cbc",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/02%20Combining%20Mean%20Reversion%20and%20Momentum%20in%20Forex%20Market?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/02%20Combining%20Mean%20Reversion%20and%20Momentum%20in%20Forex%20Market",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/21b62433b8ee77bfb7405266266e28e6698f8cbc",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/02%20Combining%20Mean%20Reversion%20and%20Momentum%20in%20Forex%20Market?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/21b62433b8ee77bfb7405266266e28e6698f8cbc",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/02%20Combining%20Mean%20Reversion%20and%20Momentum%20in%20Forex%20Market"
+    }
+  },
+  {
+    "name": "03 Pairs Trading-Copula vs Cointegration",
+    "path": "04 Strategy Library/03 Pairs Trading-Copula vs Cointegration",
+    "sha": "80ca579bc3a4022e19af41fe283073972488024e",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/03%20Pairs%20Trading-Copula%20vs%20Cointegration?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/03%20Pairs%20Trading-Copula%20vs%20Cointegration",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/80ca579bc3a4022e19af41fe283073972488024e",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/03%20Pairs%20Trading-Copula%20vs%20Cointegration?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/80ca579bc3a4022e19af41fe283073972488024e",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/03%20Pairs%20Trading-Copula%20vs%20Cointegration"
+    }
+  },
+  {
+    "name": "04 The Dynamic Breakout II Strategy",
+    "path": "04 Strategy Library/04 The Dynamic Breakout II Strategy",
+    "sha": "625d2bb92b78f4d7617fb04c53218f97033872a5",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/04%20The%20Dynamic%20Breakout%20II%20Strategy?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/04%20The%20Dynamic%20Breakout%20II%20Strategy",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/625d2bb92b78f4d7617fb04c53218f97033872a5",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/04%20The%20Dynamic%20Breakout%20II%20Strategy?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/625d2bb92b78f4d7617fb04c53218f97033872a5",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/04%20The%20Dynamic%20Breakout%20II%20Strategy"
+    }
+  },
+  {
+    "name": "05 Dual Thrust Trading Algorithm",
+    "path": "04 Strategy Library/05 Dual Thrust Trading Algorithm",
+    "sha": "39ea26c680b10b1d357a54691975d7d04241a330",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/05%20Dual%20Thrust%20Trading%20Algorithm?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/05%20Dual%20Thrust%20Trading%20Algorithm",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/39ea26c680b10b1d357a54691975d7d04241a330",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/05%20Dual%20Thrust%20Trading%20Algorithm?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/39ea26c680b10b1d357a54691975d7d04241a330",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/05%20Dual%20Thrust%20Trading%20Algorithm"
+    }
+  },
+  {
+    "name": "06 Can Crude Oil Predict Equity Returns",
+    "path": "04 Strategy Library/06 Can Crude Oil Predict Equity Returns",
+    "sha": "b9bbd76b3eb1c6722ae40c43bfa59d64f641d344",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/06%20Can%20Crude%20Oil%20Predict%20Equity%20Returns?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/06%20Can%20Crude%20Oil%20Predict%20Equity%20Returns",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/b9bbd76b3eb1c6722ae40c43bfa59d64f641d344",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/06%20Can%20Crude%20Oil%20Predict%20Equity%20Returns?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/b9bbd76b3eb1c6722ae40c43bfa59d64f641d344",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/06%20Can%20Crude%20Oil%20Predict%20Equity%20Returns"
+    }
+  },
+  {
+    "name": "07 Intraday Dynamic Pairs Trading using Correlation and Cointegration Approach",
+    "path": "04 Strategy Library/07 Intraday Dynamic Pairs Trading using Correlation and Cointegration Approach",
+    "sha": "2720335b28803429bbac6fb3207d2627230112c8",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/07%20Intraday%20Dynamic%20Pairs%20Trading%20using%20Correlation%20and%20Cointegration%20Approach?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/07%20Intraday%20Dynamic%20Pairs%20Trading%20using%20Correlation%20and%20Cointegration%20Approach",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/2720335b28803429bbac6fb3207d2627230112c8",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/07%20Intraday%20Dynamic%20Pairs%20Trading%20using%20Correlation%20and%20Cointegration%20Approach?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/2720335b28803429bbac6fb3207d2627230112c8",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/07%20Intraday%20Dynamic%20Pairs%20Trading%20using%20Correlation%20and%20Cointegration%20Approach"
+    }
+  },
+  {
+    "name": "08 The Momentum Strategy Based on the Low Frequency Component of Forex Market",
+    "path": "04 Strategy Library/08 The Momentum Strategy Based on the Low Frequency Component of Forex Market",
+    "sha": "8c6322b2ea0fabc284af1afa9582481a093180ac",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/08%20The%20Momentum%20Strategy%20Based%20on%20the%20Low%20Frequency%20Component%20of%20Forex%20Market?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/08%20The%20Momentum%20Strategy%20Based%20on%20the%20Low%20Frequency%20Component%20of%20Forex%20Market",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/8c6322b2ea0fabc284af1afa9582481a093180ac",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/08%20The%20Momentum%20Strategy%20Based%20on%20the%20Low%20Frequency%20Component%20of%20Forex%20Market?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/8c6322b2ea0fabc284af1afa9582481a093180ac",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/08%20The%20Momentum%20Strategy%20Based%20on%20the%20Low%20Frequency%20Component%20of%20Forex%20Market"
+    }
+  },
+  {
+    "name": "09 Stock Selection Strategy Based on Fundamental Factors",
+    "path": "04 Strategy Library/09 Stock Selection Strategy Based on Fundamental Factors",
+    "sha": "0919220b347df0dcad2940eb77e5040f2183ff44",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/09%20Stock%20Selection%20Strategy%20Based%20on%20Fundamental%20Factors?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/09%20Stock%20Selection%20Strategy%20Based%20on%20Fundamental%20Factors",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/0919220b347df0dcad2940eb77e5040f2183ff44",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/09%20Stock%20Selection%20Strategy%20Based%20on%20Fundamental%20Factors?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/0919220b347df0dcad2940eb77e5040f2183ff44",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/09%20Stock%20Selection%20Strategy%20Based%20on%20Fundamental%20Factors"
+    }
+  },
+  {
+    "name": "10 Short-Term Reversal Strategy in Stocks",
+    "path": "04 Strategy Library/10 Short-Term Reversal Strategy in Stocks",
+    "sha": "6a4db4908bec326fc43095408c4b5c322483a449",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/10%20Short-Term%20Reversal%20Strategy%20in%20Stocks?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/10%20Short-Term%20Reversal%20Strategy%20in%20Stocks",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/6a4db4908bec326fc43095408c4b5c322483a449",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/10%20Short-Term%20Reversal%20Strategy%20in%20Stocks?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/6a4db4908bec326fc43095408c4b5c322483a449",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/10%20Short-Term%20Reversal%20Strategy%20in%20Stocks"
+    }
+  },
+  {
+    "name": "100 Trading with WTI BRENT Spread",
+    "path": "04 Strategy Library/100 Trading with WTI BRENT Spread",
+    "sha": "8f9fec18ccdf53844a1074160d5ab748b28c5c81",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/100%20Trading%20with%20WTI%20BRENT%20Spread?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/100%20Trading%20with%20WTI%20BRENT%20Spread",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/8f9fec18ccdf53844a1074160d5ab748b28c5c81",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/100%20Trading%20with%20WTI%20BRENT%20Spread?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/8f9fec18ccdf53844a1074160d5ab748b28c5c81",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/100%20Trading%20with%20WTI%20BRENT%20Spread"
+    }
+  },
+  {
+    "name": "102 Option Expiration Week Effect",
+    "path": "04 Strategy Library/102 Option Expiration Week Effect",
+    "sha": "af18cbdb86f2d0e5700ba9de1122205ea7e63bad",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/102%20Option%20Expiration%20Week%20Effect?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/102%20Option%20Expiration%20Week%20Effect",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/af18cbdb86f2d0e5700ba9de1122205ea7e63bad",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/102%20Option%20Expiration%20Week%20Effect?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/af18cbdb86f2d0e5700ba9de1122205ea7e63bad",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/102%20Option%20Expiration%20Week%20Effect"
+    }
+  },
+  {
+    "name": "1023 Intraday Arbitrage Between Index ETFs",
+    "path": "04 Strategy Library/1023 Intraday Arbitrage Between Index ETFs",
+    "sha": "202e665eebb32e66f62953fa3f32f4c8c6e66fbd",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/1023%20Intraday%20Arbitrage%20Between%20Index%20ETFs?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/1023%20Intraday%20Arbitrage%20Between%20Index%20ETFs",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/202e665eebb32e66f62953fa3f32f4c8c6e66fbd",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/1023%20Intraday%20Arbitrage%20Between%20Index%20ETFs?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/202e665eebb32e66f62953fa3f32f4c8c6e66fbd",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/1023%20Intraday%20Arbitrage%20Between%20Index%20ETFs"
+    }
+  },
+  {
+    "name": "1024 Forecasting Stock Prices using a Temporal CNN Model",
+    "path": "04 Strategy Library/1024 Forecasting Stock Prices using a Temporal CNN Model",
+    "sha": "6d38664554c7b692bb9c6f97faa3cda5cd42b0bf",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/1024%20Forecasting%20Stock%20Prices%20using%20a%20Temporal%20CNN%20Model?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/1024%20Forecasting%20Stock%20Prices%20using%20a%20Temporal%20CNN%20Model",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/6d38664554c7b692bb9c6f97faa3cda5cd42b0bf",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/1024%20Forecasting%20Stock%20Prices%20using%20a%20Temporal%20CNN%20Model?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/6d38664554c7b692bb9c6f97faa3cda5cd42b0bf",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/1024%20Forecasting%20Stock%20Prices%20using%20a%20Temporal%20CNN%20Model"
+    }
+  },
+  {
+    "name": "1025 Leveraged ETFs with Systematic Risk Management",
+    "path": "04 Strategy Library/1025 Leveraged ETFs with Systematic Risk Management",
+    "sha": "570a09ed7f6544cd7ed520bfe2def26e7e3a2854",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/1025%20Leveraged%20ETFs%20with%20Systematic%20Risk%20Management?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/1025%20Leveraged%20ETFs%20with%20Systematic%20Risk%20Management",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/570a09ed7f6544cd7ed520bfe2def26e7e3a2854",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/1025%20Leveraged%20ETFs%20with%20Systematic%20Risk%20Management?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/570a09ed7f6544cd7ed520bfe2def26e7e3a2854",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/1025%20Leveraged%20ETFs%20with%20Systematic%20Risk%20Management"
+    }
+  },
+  {
+    "name": "1026 Intraday ETF Momentum",
+    "path": "04 Strategy Library/1026 Intraday ETF Momentum",
+    "sha": "a3bcfc10d398374a485cef62b0182550d6729a14",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/1026%20Intraday%20ETF%20Momentum?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/1026%20Intraday%20ETF%20Momentum",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/a3bcfc10d398374a485cef62b0182550d6729a14",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/1026%20Intraday%20ETF%20Momentum?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/a3bcfc10d398374a485cef62b0182550d6729a14",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/1026%20Intraday%20ETF%20Momentum"
+    }
+  },
+  {
+    "name": "1027 Using News Sentiment to Predict Price Direction of Drug Manufacturers",
+    "path": "04 Strategy Library/1027 Using News Sentiment to Predict Price Direction of Drug Manufacturers",
+    "sha": "a0497ad75ed8a49d84c9f486f40fc64fd3418119",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/1027%20Using%20News%20Sentiment%20to%20Predict%20Price%20Direction%20of%20Drug%20Manufacturers?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/1027%20Using%20News%20Sentiment%20to%20Predict%20Price%20Direction%20of%20Drug%20Manufacturers",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/a0497ad75ed8a49d84c9f486f40fc64fd3418119",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/1027%20Using%20News%20Sentiment%20to%20Predict%20Price%20Direction%20of%20Drug%20Manufacturers?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/a0497ad75ed8a49d84c9f486f40fc64fd3418119",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/1027%20Using%20News%20Sentiment%20to%20Predict%20Price%20Direction%20of%20Drug%20Manufacturers"
+    }
+  },
+  {
+    "name": "1028 Ichimoku Clouds in the Energy Sector",
+    "path": "04 Strategy Library/1028 Ichimoku Clouds in the Energy Sector",
+    "sha": "03b8bb008d1785628c361d108ddc51c9ff2a90a8",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/1028%20Ichimoku%20Clouds%20in%20the%20Energy%20Sector?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/1028%20Ichimoku%20Clouds%20in%20the%20Energy%20Sector",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/03b8bb008d1785628c361d108ddc51c9ff2a90a8",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/1028%20Ichimoku%20Clouds%20in%20the%20Energy%20Sector?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/03b8bb008d1785628c361d108ddc51c9ff2a90a8",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/1028%20Ichimoku%20Clouds%20in%20the%20Energy%20Sector"
+    }
+  },
+  {
+    "name": "1029 Optimal Pairs Trading",
+    "path": "04 Strategy Library/1029 Optimal Pairs Trading",
+    "sha": "0138188211252a94417e053d191e7dd9a06d91b7",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/1029%20Optimal%20Pairs%20Trading?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/1029%20Optimal%20Pairs%20Trading",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/0138188211252a94417e053d191e7dd9a06d91b7",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/1029%20Optimal%20Pairs%20Trading?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/0138188211252a94417e053d191e7dd9a06d91b7",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/1029%20Optimal%20Pairs%20Trading"
+    }
+  },
+  {
+    "name": "1030 G-Score Investing",
+    "path": "04 Strategy Library/1030 G-Score Investing",
+    "sha": "a365c4864baa3920f3e8d59d966ce04161c76972",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/1030%20G-Score%20Investing?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/1030%20G-Score%20Investing",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/a365c4864baa3920f3e8d59d966ce04161c76972",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/1030%20G-Score%20Investing?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/a365c4864baa3920f3e8d59d966ce04161c76972",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/1030%20G-Score%20Investing"
+    }
+  },
+  {
+    "name": "1031 SVM Wavelet Forecasting",
+    "path": "04 Strategy Library/1031 SVM Wavelet Forecasting",
+    "sha": "e24f72569e3f28a580fb9eb0f8cdf650b3482c42",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/1031%20SVM%20Wavelet%20Forecasting?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/1031%20SVM%20Wavelet%20Forecasting",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/e24f72569e3f28a580fb9eb0f8cdf650b3482c42",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/1031%20SVM%20Wavelet%20Forecasting?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/e24f72569e3f28a580fb9eb0f8cdf650b3482c42",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/1031%20SVM%20Wavelet%20Forecasting"
+    }
+  },
+  {
+    "name": "1033 Gradient Boosting Model",
+    "path": "04 Strategy Library/1033 Gradient Boosting Model",
+    "sha": "93129d1e6afc2ce6c67b8a4b5117a79ba38c0775",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/1033%20Gradient%20Boosting%20Model?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/1033%20Gradient%20Boosting%20Model",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/93129d1e6afc2ce6c67b8a4b5117a79ba38c0775",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/1033%20Gradient%20Boosting%20Model?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/93129d1e6afc2ce6c67b8a4b5117a79ba38c0775",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/1033%20Gradient%20Boosting%20Model"
+    }
+  },
+  {
+    "name": "1036 Gaussian Naive Bayes Model",
+    "path": "04 Strategy Library/1036 Gaussian Naive Bayes Model",
+    "sha": "4d841a1b198214994f25533da5985eaf8615cadc",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/1036%20Gaussian%20Naive%20Bayes%20Model?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/1036%20Gaussian%20Naive%20Bayes%20Model",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/4d841a1b198214994f25533da5985eaf8615cadc",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/1036%20Gaussian%20Naive%20Bayes%20Model?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/4d841a1b198214994f25533da5985eaf8615cadc",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/1036%20Gaussian%20Naive%20Bayes%20Model"
+    }
+  },
+  {
+    "name": "11 Fundamental Factor Long Short Strategy",
+    "path": "04 Strategy Library/11 Fundamental Factor Long Short Strategy",
+    "sha": "e4f53c6610e8dcc356c473d9a474d5951a43a941",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/11%20Fundamental%20Factor%20Long%20Short%20Strategy?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/11%20Fundamental%20Factor%20Long%20Short%20Strategy",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/e4f53c6610e8dcc356c473d9a474d5951a43a941",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/11%20Fundamental%20Factor%20Long%20Short%20Strategy?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/e4f53c6610e8dcc356c473d9a474d5951a43a941",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/11%20Fundamental%20Factor%20Long%20Short%20Strategy"
+    }
+  },
+  {
+    "name": "113 January Barometer",
+    "path": "04 Strategy Library/113 January Barometer",
+    "sha": "c6d5550acd2c678ad555bcd2addbfb5c7d4d9e01",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/113%20January%20Barometer?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/113%20January%20Barometer",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/c6d5550acd2c678ad555bcd2addbfb5c7d4d9e01",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/113%20January%20Barometer?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/c6d5550acd2c678ad555bcd2addbfb5c7d4d9e01",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/113%20January%20Barometer"
+    }
+  },
+  {
+    "name": "114 January Effect in Stocks",
+    "path": "04 Strategy Library/114 January Effect in Stocks",
+    "sha": "0e76f0cd0fc9396bdb795402f885ae37d45bed9c",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/114%20January%20Effect%20in%20Stocks?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/114%20January%20Effect%20in%20Stocks",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/0e76f0cd0fc9396bdb795402f885ae37d45bed9c",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/114%20January%20Effect%20in%20Stocks?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/0e76f0cd0fc9396bdb795402f885ae37d45bed9c",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/114%20January%20Effect%20in%20Stocks"
+    }
+  },
+  {
+    "name": "118 Time Series Momentum Effect",
+    "path": "04 Strategy Library/118 Time Series Momentum Effect",
+    "sha": "3c819a88cc262814db4b733597fa951f7abbecc1",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/118%20Time%20Series%20Momentum%20Effect?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/118%20Time%20Series%20Momentum%20Effect",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/3c819a88cc262814db4b733597fa951f7abbecc1",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/118%20Time%20Series%20Momentum%20Effect?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/3c819a88cc262814db4b733597fa951f7abbecc1",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/118%20Time%20Series%20Momentum%20Effect"
+    }
+  },
+  {
+    "name": "12 Asset Class Trend Following",
+    "path": "04 Strategy Library/12 Asset Class Trend Following",
+    "sha": "13fad4b94045a5bf3c108e40c3c87c016d6c795d",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/12%20Asset%20Class%20Trend%20Following?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/12%20Asset%20Class%20Trend%20Following",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/13fad4b94045a5bf3c108e40c3c87c016d6c795d",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/12%20Asset%20Class%20Trend%20Following?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/13fad4b94045a5bf3c108e40c3c87c016d6c795d",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/12%20Asset%20Class%20Trend%20Following"
+    }
+  },
+  {
+    "name": "125 12 Month Cycle in Cross-Section of Stocks Returns",
+    "path": "04 Strategy Library/125 12 Month Cycle in Cross-Section of Stocks Returns",
+    "sha": "f27b049e11b1302191b107d1300b7af9cb19b12a",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/125%2012%20Month%20Cycle%20in%20Cross-Section%20of%20Stocks%20Returns?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/125%2012%20Month%20Cycle%20in%20Cross-Section%20of%20Stocks%20Returns",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/f27b049e11b1302191b107d1300b7af9cb19b12a",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/125%2012%20Month%20Cycle%20in%20Cross-Section%20of%20Stocks%20Returns?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/f27b049e11b1302191b107d1300b7af9cb19b12a",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/125%2012%20Month%20Cycle%20in%20Cross-Section%20of%20Stocks%20Returns"
+    }
+  },
+  {
+    "name": "13 Asset Class Momentum",
+    "path": "04 Strategy Library/13 Asset Class Momentum",
+    "sha": "ced55ef611201995155e94b1865e8511ce9f0ee3",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/13%20Asset%20Class%20Momentum?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/13%20Asset%20Class%20Momentum",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/ced55ef611201995155e94b1865e8511ce9f0ee3",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/13%20Asset%20Class%20Momentum?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/ced55ef611201995155e94b1865e8511ce9f0ee3",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/13%20Asset%20Class%20Momentum"
+    }
+  },
+  {
+    "name": "136 Residual Momentum",
+    "path": "04 Strategy Library/136 Residual Momentum",
+    "sha": "cb1c899315acfcf7de087cf62664b7335c4a960c",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/136%20Residual%20Momentum?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/136%20Residual%20Momentum",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/cb1c899315acfcf7de087cf62664b7335c4a960c",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/136%20Residual%20Momentum?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/cb1c899315acfcf7de087cf62664b7335c4a960c",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/136%20Residual%20Momentum"
+    }
+  },
+  {
+    "name": "14 Sector Momentum",
+    "path": "04 Strategy Library/14 Sector Momentum",
+    "sha": "da986f3c75bc555ca863cf6ddccad6530778f72b",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/14%20Sector%20Momentum?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/14%20Sector%20Momentum",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/da986f3c75bc555ca863cf6ddccad6530778f72b",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/14%20Sector%20Momentum?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/da986f3c75bc555ca863cf6ddccad6530778f72b",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/14%20Sector%20Momentum"
+    }
+  },
+  {
+    "name": "15 Short Term Reversal",
+    "path": "04 Strategy Library/15 Short Term Reversal",
+    "sha": "c71970a0f652794f8976687fdeb1f9afc76eac80",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/15%20Short%20Term%20Reversal?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/15%20Short%20Term%20Reversal",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/c71970a0f652794f8976687fdeb1f9afc76eac80",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/15%20Short%20Term%20Reversal?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/c71970a0f652794f8976687fdeb1f9afc76eac80",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/15%20Short%20Term%20Reversal"
+    }
+  },
+  {
+    "name": "152 Momentum Effect in REITs",
+    "path": "04 Strategy Library/152 Momentum Effect in REITs",
+    "sha": "18068e3d717e6fe4cb3c59119214acea7fffe957",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/152%20Momentum%20Effect%20in%20REITs?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/152%20Momentum%20Effect%20in%20REITs",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/18068e3d717e6fe4cb3c59119214acea7fffe957",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/152%20Momentum%20Effect%20in%20REITs?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/18068e3d717e6fe4cb3c59119214acea7fffe957",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/152%20Momentum%20Effect%20in%20REITs"
+    }
+  },
+  {
+    "name": "155 Momentum and Reversal Combined with Volatility Effect in Stocks",
+    "path": "04 Strategy Library/155 Momentum and Reversal Combined with Volatility Effect in Stocks",
+    "sha": "46fb84ae0f08fb7d2fc7ea44e64f289a34ae2602",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/155%20Momentum%20and%20Reversal%20Combined%20with%20Volatility%20Effect%20in%20Stocks?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/155%20Momentum%20and%20Reversal%20Combined%20with%20Volatility%20Effect%20in%20Stocks",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/46fb84ae0f08fb7d2fc7ea44e64f289a34ae2602",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/155%20Momentum%20and%20Reversal%20Combined%20with%20Volatility%20Effect%20in%20Stocks?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/46fb84ae0f08fb7d2fc7ea44e64f289a34ae2602",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/155%20Momentum%20and%20Reversal%20Combined%20with%20Volatility%20Effect%20in%20Stocks"
+    }
+  },
+  {
+    "name": "16 Overnight Anomaly",
+    "path": "04 Strategy Library/16 Overnight Anomaly",
+    "sha": "dcfa182be832eba730159c75bd0b1dbb8d051bef",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/16%20Overnight%20Anomaly?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/16%20Overnight%20Anomaly",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/dcfa182be832eba730159c75bd0b1dbb8d051bef",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/16%20Overnight%20Anomaly?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/dcfa182be832eba730159c75bd0b1dbb8d051bef",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/16%20Overnight%20Anomaly"
+    }
+  },
+  {
+    "name": "162 Momentum Effect in Stocks in Small Portfolios",
+    "path": "04 Strategy Library/162 Momentum Effect in Stocks in Small Portfolios",
+    "sha": "c009dcceee5b2fe1872dc15b0b576704716f0516",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/162%20Momentum%20Effect%20in%20Stocks%20in%20Small%20Portfolios?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/162%20Momentum%20Effect%20in%20Stocks%20in%20Small%20Portfolios",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/c009dcceee5b2fe1872dc15b0b576704716f0516",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/162%20Momentum%20Effect%20in%20Stocks%20in%20Small%20Portfolios?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/c009dcceee5b2fe1872dc15b0b576704716f0516",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/162%20Momentum%20Effect%20in%20Stocks%20in%20Small%20Portfolios"
+    }
+  },
+  {
+    "name": "17 Forex Momentum",
+    "path": "04 Strategy Library/17 Forex Momentum",
+    "sha": "a08b102168d92ca5a46ed530a587648c7ddf9950",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/17%20Forex%20Momentum?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/17%20Forex%20Momentum",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/a08b102168d92ca5a46ed530a587648c7ddf9950",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/17%20Forex%20Momentum?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/a08b102168d92ca5a46ed530a587648c7ddf9950",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/17%20Forex%20Momentum"
+    }
+  },
+  {
+    "name": "18 Volatility Effect in Stocks",
+    "path": "04 Strategy Library/18 Volatility Effect in Stocks",
+    "sha": "d04659a47efaf485311f0430e53d6a17fe439e5f",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/18%20Volatility%20Effect%20in%20Stocks?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/18%20Volatility%20Effect%20in%20Stocks",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/d04659a47efaf485311f0430e53d6a17fe439e5f",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/18%20Volatility%20Effect%20in%20Stocks?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/d04659a47efaf485311f0430e53d6a17fe439e5f",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/18%20Volatility%20Effect%20in%20Stocks"
+    }
+  },
+  {
+    "name": "19 Pairs Trading with Stocks",
+    "path": "04 Strategy Library/19 Pairs Trading with Stocks",
+    "sha": "1fe534e69d7474a4e3b31d9bee886127101092c4",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/19%20Pairs%20Trading%20with%20Stocks?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/19%20Pairs%20Trading%20with%20Stocks",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/1fe534e69d7474a4e3b31d9bee886127101092c4",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/19%20Pairs%20Trading%20with%20Stocks?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/1fe534e69d7474a4e3b31d9bee886127101092c4",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/19%20Pairs%20Trading%20with%20Stocks"
+    }
+  },
+  {
+    "name": "198 Exploiting Term Structure of VIX Futures",
+    "path": "04 Strategy Library/198 Exploiting Term Structure of VIX Futures",
+    "sha": "e0379ca4f2d9dcbe9023a8a4b3f181e39a45879d",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/198%20Exploiting%20Term%20Structure%20of%20VIX%20Futures?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/198%20Exploiting%20Term%20Structure%20of%20VIX%20Futures",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/e0379ca4f2d9dcbe9023a8a4b3f181e39a45879d",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/198%20Exploiting%20Term%20Structure%20of%20VIX%20Futures?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/e0379ca4f2d9dcbe9023a8a4b3f181e39a45879d",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/198%20Exploiting%20Term%20Structure%20of%20VIX%20Futures"
+    }
+  },
+  {
+    "name": "199 ROA Effect within Stocks",
+    "path": "04 Strategy Library/199 ROA Effect within Stocks",
+    "sha": "e6b0aed670144cd15fd93c38ab74ee19e184a508",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/199%20ROA%20Effect%20within%20Stocks?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/199%20ROA%20Effect%20within%20Stocks",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/e6b0aed670144cd15fd93c38ab74ee19e184a508",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/199%20ROA%20Effect%20within%20Stocks?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/e6b0aed670144cd15fd93c38ab74ee19e184a508",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/199%20ROA%20Effect%20within%20Stocks"
+    }
+  },
+  {
+    "name": "20 Forex Carry Trade",
+    "path": "04 Strategy Library/20 Forex Carry Trade",
+    "sha": "1ddbc62ee9103c2de43da12e82d6822c01c07a71",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/20%20Forex%20Carry%20Trade?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/20%20Forex%20Carry%20Trade",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/1ddbc62ee9103c2de43da12e82d6822c01c07a71",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/20%20Forex%20Carry%20Trade?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/1ddbc62ee9103c2de43da12e82d6822c01c07a71",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/20%20Forex%20Carry%20Trade"
+    }
+  },
+  {
+    "name": "207 Value Effect within Countries",
+    "path": "04 Strategy Library/207 Value Effect within Countries",
+    "sha": "989b71ecaf99a49173347afc4048ba2fd4bf2f91",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/207%20Value%20Effect%20within%20Countries?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/207%20Value%20Effect%20within%20Countries",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/989b71ecaf99a49173347afc4048ba2fd4bf2f91",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/207%20Value%20Effect%20within%20Countries?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/989b71ecaf99a49173347afc4048ba2fd4bf2f91",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/207%20Value%20Effect%20within%20Countries"
+    }
+  },
+  {
+    "name": "21 Momentum Effect in Stocks",
+    "path": "04 Strategy Library/21 Momentum Effect in Stocks",
+    "sha": "d92a464855bb345a9a2e14de718273b00f0fed88",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/21%20Momentum%20Effect%20in%20Stocks?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/21%20Momentum%20Effect%20in%20Stocks",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/d92a464855bb345a9a2e14de718273b00f0fed88",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/21%20Momentum%20Effect%20in%20Stocks?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/d92a464855bb345a9a2e14de718273b00f0fed88",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/21%20Momentum%20Effect%20in%20Stocks"
+    }
+  },
+  {
+    "name": "211 Mean-Reversion Statistical Arbitrage Strategy in Stocks",
+    "path": "04 Strategy Library/211 Mean-Reversion Statistical Arbitrage Strategy in Stocks",
+    "sha": "0fef57465d5de9e0771c8bdb5d48f38a7ae2f04c",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/211%20Mean-Reversion%20Statistical%20Arbitrage%20Strategy%20in%20Stocks?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/211%20Mean-Reversion%20Statistical%20Arbitrage%20Strategy%20in%20Stocks",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/0fef57465d5de9e0771c8bdb5d48f38a7ae2f04c",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/211%20Mean-Reversion%20Statistical%20Arbitrage%20Strategy%20in%20Stocks?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/0fef57465d5de9e0771c8bdb5d48f38a7ae2f04c",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/211%20Mean-Reversion%20Statistical%20Arbitrage%20Strategy%20in%20Stocks"
+    }
+  },
+  {
+    "name": "22 Momentum Effect in Country Equity Indexes",
+    "path": "04 Strategy Library/22 Momentum Effect in Country Equity Indexes",
+    "sha": "ba65b2df5f3b7b2f8775d239058dd7147c51eebf",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/22%20Momentum%20Effect%20in%20Country%20Equity%20Indexes?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/22%20Momentum%20Effect%20in%20Country%20Equity%20Indexes",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/ba65b2df5f3b7b2f8775d239058dd7147c51eebf",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/22%20Momentum%20Effect%20in%20Country%20Equity%20Indexes?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/ba65b2df5f3b7b2f8775d239058dd7147c51eebf",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/22%20Momentum%20Effect%20in%20Country%20Equity%20Indexes"
+    }
+  },
+  {
+    "name": "229 Earnings Quality Factor",
+    "path": "04 Strategy Library/229 Earnings Quality Factor",
+    "sha": "0342d7a27ce729afffa58cbfe38d542eb1359450",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/229%20Earnings%20Quality%20Factor?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/229%20Earnings%20Quality%20Factor",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/0342d7a27ce729afffa58cbfe38d542eb1359450",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/229%20Earnings%20Quality%20Factor?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/0342d7a27ce729afffa58cbfe38d542eb1359450",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/229%20Earnings%20Quality%20Factor"
+    }
+  },
+  {
+    "name": "23 Mean Reversion Effect in Country Equity Indexes",
+    "path": "04 Strategy Library/23 Mean Reversion Effect in Country Equity Indexes",
+    "sha": "327e62ad239f3e9def13f0658060c3a581c2c333",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/23%20Mean%20Reversion%20Effect%20in%20Country%20Equity%20Indexes?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/23%20Mean%20Reversion%20Effect%20in%20Country%20Equity%20Indexes",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/327e62ad239f3e9def13f0658060c3a581c2c333",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/23%20Mean%20Reversion%20Effect%20in%20Country%20Equity%20Indexes?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/327e62ad239f3e9def13f0658060c3a581c2c333",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/23%20Mean%20Reversion%20Effect%20in%20Country%20Equity%20Indexes"
+    }
+  },
+  {
+    "name": "24 Liquidity Effect in Stocks",
+    "path": "04 Strategy Library/24 Liquidity Effect in Stocks",
+    "sha": "775224a37e4050c6eeeb6ae37aba44d9ed9d667d",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/24%20Liquidity%20Effect%20in%20Stocks?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/24%20Liquidity%20Effect%20in%20Stocks",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/775224a37e4050c6eeeb6ae37aba44d9ed9d667d",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/24%20Liquidity%20Effect%20in%20Stocks?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/775224a37e4050c6eeeb6ae37aba44d9ed9d667d",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/24%20Liquidity%20Effect%20in%20Stocks"
+    }
+  },
+  {
+    "name": "25 Volatility Risk Premium Effect",
+    "path": "04 Strategy Library/25 Volatility Risk Premium Effect",
+    "sha": "617772b38088f85338611e3ec2c95c4840a7c6bb",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/25%20Volatility%20Risk%20Premium%20Effect?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/25%20Volatility%20Risk%20Premium%20Effect",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/617772b38088f85338611e3ec2c95c4840a7c6bb",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/25%20Volatility%20Risk%20Premium%20Effect?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/617772b38088f85338611e3ec2c95c4840a7c6bb",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/25%20Volatility%20Risk%20Premium%20Effect"
+    }
+  },
+  {
+    "name": "26 Quantpedia",
+    "path": "04 Strategy Library/26 Quantpedia",
+    "sha": "79379ad8a58f3a4a4f900a113dc67d0ab7ac0cf6",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/26%20Quantpedia?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/26%20Quantpedia",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/79379ad8a58f3a4a4f900a113dc67d0ab7ac0cf6",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/26%20Quantpedia?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/79379ad8a58f3a4a4f900a113dc67d0ab7ac0cf6",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/26%20Quantpedia"
+    }
+  },
+  {
+    "name": "269 Seasonality Effect based on Same-Calendar Month Returns",
+    "path": "04 Strategy Library/269 Seasonality Effect based on Same-Calendar Month Returns",
+    "sha": "a4a0f117bb868a598fe86ad84dbf6b327e18e840",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/269%20Seasonality%20Effect%20based%20on%20Same-Calendar%20Month%20Returns?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/269%20Seasonality%20Effect%20based%20on%20Same-Calendar%20Month%20Returns",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/a4a0f117bb868a598fe86ad84dbf6b327e18e840",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/269%20Seasonality%20Effect%20based%20on%20Same-Calendar%20Month%20Returns?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/a4a0f117bb868a598fe86ad84dbf6b327e18e840",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/269%20Seasonality%20Effect%20based%20on%20Same-Calendar%20Month%20Returns"
+    }
+  },
+  {
+    "name": "27 Momentum Effect in Commodities Futures",
+    "path": "04 Strategy Library/27 Momentum Effect in Commodities Futures",
+    "sha": "5db31bd4c68a16e9fb04b833430ce77589611d9c",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/27%20Momentum%20Effect%20in%20Commodities%20Futures?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/27%20Momentum%20Effect%20in%20Commodities%20Futures",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/5db31bd4c68a16e9fb04b833430ce77589611d9c",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/27%20Momentum%20Effect%20in%20Commodities%20Futures?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/5db31bd4c68a16e9fb04b833430ce77589611d9c",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/27%20Momentum%20Effect%20in%20Commodities%20Futures"
+    }
+  },
+  {
+    "name": "270 Risk Premia in Forex Markets",
+    "path": "04 Strategy Library/270 Risk Premia in Forex Markets",
+    "sha": "bb64b7947441e40345bc3d29a2b2a371c851c789",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/270%20Risk%20Premia%20in%20Forex%20Markets?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/270%20Risk%20Premia%20in%20Forex%20Markets",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/bb64b7947441e40345bc3d29a2b2a371c851c789",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/270%20Risk%20Premia%20in%20Forex%20Markets?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/bb64b7947441e40345bc3d29a2b2a371c851c789",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/270%20Risk%20Premia%20in%20Forex%20Markets"
+    }
+  },
+  {
+    "name": "271 Price and Earning Momentum",
+    "path": "04 Strategy Library/271 Price and Earning Momentum",
+    "sha": "bd389cad93990d1926aefab8168abf5b4fd7a735",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/271%20Price%20and%20Earning%20Momentum?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/271%20Price%20and%20Earning%20Momentum",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/bd389cad93990d1926aefab8168abf5b4fd7a735",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/271%20Price%20and%20Earning%20Momentum?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/bd389cad93990d1926aefab8168abf5b4fd7a735",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/271%20Price%20and%20Earning%20Momentum"
+    }
+  },
+  {
+    "name": "28 Small Capitalization Stocks Premium Anomaly",
+    "path": "04 Strategy Library/28 Small Capitalization Stocks Premium Anomaly",
+    "sha": "1b76768fc1faae9fa2e6f182b8a6ae6f02d51978",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/28%20Small%20Capitalization%20Stocks%20Premium%20Anomaly?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/28%20Small%20Capitalization%20Stocks%20Premium%20Anomaly",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/1b76768fc1faae9fa2e6f182b8a6ae6f02d51978",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/28%20Small%20Capitalization%20Stocks%20Premium%20Anomaly?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/1b76768fc1faae9fa2e6f182b8a6ae6f02d51978",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/28%20Small%20Capitalization%20Stocks%20Premium%20Anomaly"
+    }
+  },
+  {
+    "name": "29 Term Structure Effect in Commodities",
+    "path": "04 Strategy Library/29 Term Structure Effect in Commodities",
+    "sha": "7f62a17065613adce8058c71a963bf43cfd5a372",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/29%20Term%20Structure%20Effect%20in%20Commodities?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/29%20Term%20Structure%20Effect%20in%20Commodities",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/7f62a17065613adce8058c71a963bf43cfd5a372",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/29%20Term%20Structure%20Effect%20in%20Commodities?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/7f62a17065613adce8058c71a963bf43cfd5a372",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/29%20Term%20Structure%20Effect%20in%20Commodities"
+    }
+  },
+  {
+    "name": "30 Momentum Effect Combined with Term Structure in Commodities",
+    "path": "04 Strategy Library/30 Momentum Effect Combined with Term Structure in Commodities",
+    "sha": "051badc2db44f281f8db303e830258110e38e860",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/30%20Momentum%20Effect%20Combined%20with%20Term%20Structure%20in%20Commodities?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/30%20Momentum%20Effect%20Combined%20with%20Term%20Structure%20in%20Commodities",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/051badc2db44f281f8db303e830258110e38e860",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/30%20Momentum%20Effect%20Combined%20with%20Term%20Structure%20in%20Commodities?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/051badc2db44f281f8db303e830258110e38e860",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/30%20Momentum%20Effect%20Combined%20with%20Term%20Structure%20in%20Commodities"
+    }
+  },
+  {
+    "name": "31 Book-to-Market Value Anomaly",
+    "path": "04 Strategy Library/31 Book-to-Market Value Anomaly",
+    "sha": "081d3d39930921348987f747e3bf4d0bc9ad90e6",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/31%20Book-to-Market%20Value%20Anomaly?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/31%20Book-to-Market%20Value%20Anomaly",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/081d3d39930921348987f747e3bf4d0bc9ad90e6",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/31%20Book-to-Market%20Value%20Anomaly?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/081d3d39930921348987f747e3bf4d0bc9ad90e6",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/31%20Book-to-Market%20Value%20Anomaly"
+    }
+  },
+  {
+    "name": "32 Gold Market Timing",
+    "path": "04 Strategy Library/32 Gold Market Timing",
+    "sha": "b8c8081e3591fbac51594b9da366d44b67eb3e48",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/32%20Gold%20Market%20Timing?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/32%20Gold%20Market%20Timing",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/b8c8081e3591fbac51594b9da366d44b67eb3e48",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/32%20Gold%20Market%20Timing?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/b8c8081e3591fbac51594b9da366d44b67eb3e48",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/32%20Gold%20Market%20Timing"
+    }
+  },
+  {
+    "name": "33 Paired Switching",
+    "path": "04 Strategy Library/33 Paired Switching",
+    "sha": "1761aded3a82920c3321f46b3b5a5fc664153251",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/33%20Paired%20Switching?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/33%20Paired%20Switching",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/1761aded3a82920c3321f46b3b5a5fc664153251",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/33%20Paired%20Switching?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/1761aded3a82920c3321f46b3b5a5fc664153251",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/33%20Paired%20Switching"
+    }
+  },
+  {
+    "name": "34 Momentum-Short Term Reversal Strategy",
+    "path": "04 Strategy Library/34 Momentum-Short Term Reversal Strategy",
+    "sha": "b8f586017781c591d03fcbf81958ec1f2f6d4117",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/34%20Momentum-Short%20Term%20Reversal%20Strategy?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/34%20Momentum-Short%20Term%20Reversal%20Strategy",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/b8f586017781c591d03fcbf81958ec1f2f6d4117",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/34%20Momentum-Short%20Term%20Reversal%20Strategy?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/b8f586017781c591d03fcbf81958ec1f2f6d4117",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/34%20Momentum-Short%20Term%20Reversal%20Strategy"
+    }
+  },
+  {
+    "name": "35 Turn of the Month in Equity Indexes",
+    "path": "04 Strategy Library/35 Turn of the Month in Equity Indexes",
+    "sha": "8be92c0fdf8a332075a9e1e264195ff91d225b92",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/35%20Turn%20of%20the%20Month%20in%20Equity%20Indexes?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/35%20Turn%20of%20the%20Month%20in%20Equity%20Indexes",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/8be92c0fdf8a332075a9e1e264195ff91d225b92",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/35%20Turn%20of%20the%20Month%20in%20Equity%20Indexes?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/8be92c0fdf8a332075a9e1e264195ff91d225b92",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/35%20Turn%20of%20the%20Month%20in%20Equity%20Indexes"
+    }
+  },
+  {
+    "name": "353 Fama French Five Factors",
+    "path": "04 Strategy Library/353 Fama French Five Factors",
+    "sha": "9018fb50388224ee3ff0cc70fae8f9be619c3af8",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/353%20Fama%20French%20Five%20Factors?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/353%20Fama%20French%20Five%20Factors",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/9018fb50388224ee3ff0cc70fae8f9be619c3af8",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/353%20Fama%20French%20Five%20Factors?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/9018fb50388224ee3ff0cc70fae8f9be619c3af8",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/353%20Fama%20French%20Five%20Factors"
+    }
+  },
+  {
+    "name": "354 Expected Idiosyncratic Skewness",
+    "path": "04 Strategy Library/354 Expected Idiosyncratic Skewness",
+    "sha": "cd289f7efab28e51ad2a083aa56c145acbbf3e5c",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/354%20Expected%20Idiosyncratic%20Skewness?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/354%20Expected%20Idiosyncratic%20Skewness",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/cd289f7efab28e51ad2a083aa56c145acbbf3e5c",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/354%20Expected%20Idiosyncratic%20Skewness?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/cd289f7efab28e51ad2a083aa56c145acbbf3e5c",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/354%20Expected%20Idiosyncratic%20Skewness"
+    }
+  },
+  {
+    "name": "355 Standardized Unexpected Earnings",
+    "path": "04 Strategy Library/355 Standardized Unexpected Earnings",
+    "sha": "90e3740ee4d9f6bfb9b4f37c10ad46e098746717",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/355%20Standardized%20Unexpected%20Earnings?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/355%20Standardized%20Unexpected%20Earnings",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/90e3740ee4d9f6bfb9b4f37c10ad46e098746717",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/355%20Standardized%20Unexpected%20Earnings?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/90e3740ee4d9f6bfb9b4f37c10ad46e098746717",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/355%20Standardized%20Unexpected%20Earnings"
+    }
+  },
+  {
+    "name": "356 Improved Momentum Strategy on Commodities Futures",
+    "path": "04 Strategy Library/356 Improved Momentum Strategy on Commodities Futures",
+    "sha": "f6e5af55da1581fb3027608b3b0f958f4501dbec",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/356%20Improved%20Momentum%20Strategy%20on%20Commodities%20Futures?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/356%20Improved%20Momentum%20Strategy%20on%20Commodities%20Futures",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/f6e5af55da1581fb3027608b3b0f958f4501dbec",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/356%20Improved%20Momentum%20Strategy%20on%20Commodities%20Futures?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/f6e5af55da1581fb3027608b3b0f958f4501dbec",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/356%20Improved%20Momentum%20Strategy%20on%20Commodities%20Futures"
+    }
+  },
+  {
+    "name": "357 Commodities Futures Trend Following",
+    "path": "04 Strategy Library/357 Commodities Futures Trend Following",
+    "sha": "b0fde91c36a222fccde3ce806be26de59930c63c",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/357%20Commodities%20Futures%20Trend%20Following?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/357%20Commodities%20Futures%20Trend%20Following",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/b0fde91c36a222fccde3ce806be26de59930c63c",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/357%20Commodities%20Futures%20Trend%20Following?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/b0fde91c36a222fccde3ce806be26de59930c63c",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/357%20Commodities%20Futures%20Trend%20Following"
+    }
+  },
+  {
+    "name": "36 Sentiment and Style Rotation Effect in Stocks",
+    "path": "04 Strategy Library/36 Sentiment and Style Rotation Effect in Stocks",
+    "sha": "344b723732ed676ba94cc8a43ba5b30fafbf8174",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/36%20Sentiment%20and%20Style%20Rotation%20Effect%20in%20Stocks?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/36%20Sentiment%20and%20Style%20Rotation%20Effect%20in%20Stocks",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/344b723732ed676ba94cc8a43ba5b30fafbf8174",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/36%20Sentiment%20and%20Style%20Rotation%20Effect%20in%20Stocks?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/344b723732ed676ba94cc8a43ba5b30fafbf8174",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/36%20Sentiment%20and%20Style%20Rotation%20Effect%20in%20Stocks"
+    }
+  },
+  {
+    "name": "37 Momentum and State of Market Filters",
+    "path": "04 Strategy Library/37 Momentum and State of Market Filters",
+    "sha": "658f422eae8f127169bf9df8ef718b411e5463cf",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/37%20Momentum%20and%20State%20of%20Market%20Filters?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/37%20Momentum%20and%20State%20of%20Market%20Filters",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/658f422eae8f127169bf9df8ef718b411e5463cf",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/37%20Momentum%20and%20State%20of%20Market%20Filters?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/658f422eae8f127169bf9df8ef718b411e5463cf",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/37%20Momentum%20and%20State%20of%20Market%20Filters"
+    }
+  },
+  {
+    "name": "38 Accrual Anomaly",
+    "path": "04 Strategy Library/38 Accrual Anomaly",
+    "sha": "fe8c88dfe5685f4c6ec23b20599914d590826530",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/38%20Accrual%20Anomaly?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/38%20Accrual%20Anomaly",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/fe8c88dfe5685f4c6ec23b20599914d590826530",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/38%20Accrual%20Anomaly?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/fe8c88dfe5685f4c6ec23b20599914d590826530",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/38%20Accrual%20Anomaly"
+    }
+  },
+  {
+    "name": "39 Asset Growth Effect",
+    "path": "04 Strategy Library/39 Asset Growth Effect",
+    "sha": "4c7b735286e4496f95aa10e1cf6e92d08acb3a23",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/39%20Asset%20Growth%20Effect?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/39%20Asset%20Growth%20Effect",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/4c7b735286e4496f95aa10e1cf6e92d08acb3a23",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/39%20Asset%20Growth%20Effect?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/4c7b735286e4496f95aa10e1cf6e92d08acb3a23",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/39%20Asset%20Growth%20Effect"
+    }
+  },
+  {
+    "name": "40 Pairs Trading with Country ETFs",
+    "path": "04 Strategy Library/40 Pairs Trading with Country ETFs",
+    "sha": "99824f225024b563546fe2aeca4d438647e56f9e",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/40%20Pairs%20Trading%20with%20Country%20ETFs?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/40%20Pairs%20Trading%20with%20Country%20ETFs",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/99824f225024b563546fe2aeca4d438647e56f9e",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/40%20Pairs%20Trading%20with%20Country%20ETFs?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/99824f225024b563546fe2aeca4d438647e56f9e",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/40%20Pairs%20Trading%20with%20Country%20ETFs"
+    }
+  },
+  {
+    "name": "58 VIX Predicts Stock Index Returns",
+    "path": "04 Strategy Library/58 VIX Predicts Stock Index Returns",
+    "sha": "c70329380fd92f99f15d793b26e8d58109635212",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/58%20VIX%20Predicts%20Stock%20Index%20Returns?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/58%20VIX%20Predicts%20Stock%20Index%20Returns",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/c70329380fd92f99f15d793b26e8d58109635212",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/58%20VIX%20Predicts%20Stock%20Index%20Returns?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/c70329380fd92f99f15d793b26e8d58109635212",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/58%20VIX%20Predicts%20Stock%20Index%20Returns"
+    }
+  },
+  {
+    "name": "61 Lunar Cycle in Equity Market",
+    "path": "04 Strategy Library/61 Lunar Cycle in Equity Market",
+    "sha": "e877b37cad8d30f399d9a85f8eeb9b6acd877b05",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/61%20Lunar%20Cycle%20in%20Equity%20Market?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/61%20Lunar%20Cycle%20in%20Equity%20Market",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/e877b37cad8d30f399d9a85f8eeb9b6acd877b05",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/61%20Lunar%20Cycle%20in%20Equity%20Market?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/e877b37cad8d30f399d9a85f8eeb9b6acd877b05",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/61%20Lunar%20Cycle%20in%20Equity%20Market"
+    }
+  },
+  {
+    "name": "66 Combining Momentum Effect with Volume",
+    "path": "04 Strategy Library/66 Combining Momentum Effect with Volume",
+    "sha": "5152f38d59e420cf79b20939b1d0692c8f637069",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/66%20Combining%20Momentum%20Effect%20with%20Volume?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/66%20Combining%20Momentum%20Effect%20with%20Volume",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/5152f38d59e420cf79b20939b1d0692c8f637069",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/66%20Combining%20Momentum%20Effect%20with%20Volume?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/5152f38d59e420cf79b20939b1d0692c8f637069",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/66%20Combining%20Momentum%20Effect%20with%20Volume"
+    }
+  },
+  {
+    "name": "71 Short Term Reversal with Futures",
+    "path": "04 Strategy Library/71 Short Term Reversal with Futures",
+    "sha": "7d89bde9656fc55fdf6ec27570720685cfef965e",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/71%20Short%20Term%20Reversal%20with%20Futures?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/71%20Short%20Term%20Reversal%20with%20Futures",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/7d89bde9656fc55fdf6ec27570720685cfef965e",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/71%20Short%20Term%20Reversal%20with%20Futures?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/7d89bde9656fc55fdf6ec27570720685cfef965e",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/71%20Short%20Term%20Reversal%20with%20Futures"
+    }
+  },
+  {
+    "name": "77 Beta Factors in Stocks",
+    "path": "04 Strategy Library/77 Beta Factors in Stocks",
+    "sha": "1eead6917e2fd002b1fb9498736871e1f21bae6c",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/77%20Beta%20Factors%20in%20Stocks?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/77%20Beta%20Factors%20in%20Stocks",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/1eead6917e2fd002b1fb9498736871e1f21bae6c",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/77%20Beta%20Factors%20in%20Stocks?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/1eead6917e2fd002b1fb9498736871e1f21bae6c",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/77%20Beta%20Factors%20in%20Stocks"
+    }
+  },
+  {
+    "name": "78 Beta Factor in Country Equity Indexes",
+    "path": "04 Strategy Library/78 Beta Factor in Country Equity Indexes",
+    "sha": "58511fe0f25062c94f5c82dc78a6a5fc0e546eed",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/78%20Beta%20Factor%20in%20Country%20Equity%20Indexes?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/78%20Beta%20Factor%20in%20Country%20Equity%20Indexes",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/58511fe0f25062c94f5c82dc78a6a5fc0e546eed",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/78%20Beta%20Factor%20in%20Country%20Equity%20Indexes?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/58511fe0f25062c94f5c82dc78a6a5fc0e546eed",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/78%20Beta%20Factor%20in%20Country%20Equity%20Indexes"
+    }
+  },
+  {
+    "name": "83 Pre-Holiday Effect",
+    "path": "04 Strategy Library/83 Pre-Holiday Effect",
+    "sha": "7661536a40d2b4a725c691b8df460d061e50327b",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/83%20Pre-Holiday%20Effect?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/83%20Pre-Holiday%20Effect",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/7661536a40d2b4a725c691b8df460d061e50327b",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/83%20Pre-Holiday%20Effect?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/7661536a40d2b4a725c691b8df460d061e50327b",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/83%20Pre-Holiday%20Effect"
+    }
+  },
+  {
+    "name": "85 Momentum in Mutual Fund Returns",
+    "path": "04 Strategy Library/85 Momentum in Mutual Fund Returns",
+    "sha": "4ae241de7054c64c2b2b5314cff24c48809df3f7",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/85%20Momentum%20in%20Mutual%20Fund%20Returns?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/85%20Momentum%20in%20Mutual%20Fund%20Returns",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/4ae241de7054c64c2b2b5314cff24c48809df3f7",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/85%20Momentum%20in%20Mutual%20Fund%20Returns?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/4ae241de7054c64c2b2b5314cff24c48809df3f7",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/85%20Momentum%20in%20Mutual%20Fund%20Returns"
+    }
+  },
+  {
+    "name": "91 Momentum and Style Rotation Effect",
+    "path": "04 Strategy Library/91 Momentum and Style Rotation Effect",
+    "sha": "74883c61b891ea4e7b21acdd912cf3fc64b483aa",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/91%20Momentum%20and%20Style%20Rotation%20Effect?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/91%20Momentum%20and%20Style%20Rotation%20Effect",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/74883c61b891ea4e7b21acdd912cf3fc64b483aa",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/91%20Momentum%20and%20Style%20Rotation%20Effect?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/74883c61b891ea4e7b21acdd912cf3fc64b483aa",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/91%20Momentum%20and%20Style%20Rotation%20Effect"
+    }
+  },
+  {
+    "name": "92 Price Earnings Anomaly",
+    "path": "04 Strategy Library/92 Price Earnings Anomaly",
+    "sha": "9ec118b8af77d8bf696a9e9a56893b5a6e5df830",
+    "size": 0,
+    "url": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/92%20Price%20Earnings%20Anomaly?ref=master",
+    "html_url": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/92%20Price%20Earnings%20Anomaly",
+    "git_url": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/9ec118b8af77d8bf696a9e9a56893b5a6e5df830",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/QuantConnect/Tutorials/contents/04%20Strategy%20Library/92%20Price%20Earnings%20Anomaly?ref=master",
+      "git": "https://api.github.com/repos/QuantConnect/Tutorials/git/trees/9ec118b8af77d8bf696a9e9a56893b5a6e5df830",
+      "html": "https://github.com/QuantConnect/Tutorials/tree/master/04%20Strategy%20Library/92%20Price%20Earnings%20Anomaly"
+    }
+  }
+]

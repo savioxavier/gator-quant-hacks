@@ -1,0 +1,36 @@
+== Minimum detectable correlation (Fisher z), 80% power
+  all scheduled pressers 2011-2026   n=  93  alpha=.05: r=0.287   alpha=.01: r=0.345   alpha=.001 (t~3.3): r=0.410
+  every-meeting era 2019-2026        n=  61  alpha=.05: r=0.352   alpha=.01: r=0.421   alpha=.001 (t~3.3): r=0.495
+  Powell only                        n=  64  alpha=.05: r=0.344   alpha=.01: r=0.412   alpha=.001 (t~3.3): r=0.485
+  Warsh so far: n=3 (no inference possible)
+  by end-2027 (93+10)                n= 103  alpha=.05: r=0.273   alpha=.01: r=0.329   alpha=.001 (t~3.3): r=0.391
+== Answer-level with clustering by meeting: n=2226 answers in 93-95 pressers (m~23.4 per presser)
+  ICC=0.00 design effect= 1.00 n_eff=   2226 MDE r(.05)=0.059 MDE r(.001)=0.087
+  ICC=0.02 design effect= 1.45 n_eff=   1537 MDE r(.05)=0.071 MDE r(.001)=0.105
+  ICC=0.05 design effect= 2.12 n_eff=   1049 MDE r(.05)=0.086 MDE r(.001)=0.127
+  ICC=0.10 design effect= 3.24 n_eff=    686 MDE r(.05)=0.107 MDE r(.001)=0.157
+  ICC=0.20 design effect= 5.49 n_eff=    406 MDE r(.05)=0.139 MDE r(.001)=0.203
+  ICC=0.40 design effect= 9.97 n_eff=    223 MDE r(.05)=0.187 MDE r(.001)=0.271
+== Per-event Sharpe needed for t-stat thresholds (t = SR_event * sqrt(N))
+  N= 61 t=2.0: SR/event=0.256  annualised at 8 events/yr=0.72
+  N= 61 t=3.0: SR/event=0.384  annualised at 8 events/yr=1.09
+  N= 93 t=2.0: SR/event=0.207  annualised at 8 events/yr=0.59
+  N= 93 t=3.0: SR/event=0.311  annualised at 8 events/yr=0.88
+  N=103 t=2.0: SR/event=0.197  annualised at 8 events/yr=0.56
+  N=103 t=3.0: SR/event=0.296  annualised at 8 events/yr=0.84
+== Years of live out-of-sample needed to confirm a given per-event Sharpe at t=2 (8 pressers/yr)
+  SR/event=0.1: N=  400 events =  50.0 years
+  SR/event=0.2: N=  100 events =  12.5 years
+  SR/event=0.3: N=   44 events =   5.6 years
+  SR/event=0.5: N=   16 events =   2.0 years
+== Same for answer-level trades, ~22 answers/presser, assuming design effect 3 (ICC~0.1)
+  SR/trade=0.02: trades=  30000 =   1364 pressers = 170.5 years
+  SR/trade=0.05: trades=   4800 =    218 pressers =  27.3 years
+  SR/trade=0.1: trades=   1200 =     55 pressers =   6.8 years
+== Cost of one round trip (1 tick spread + fees) vs volatility, 2019-2026 scheduled pressers
+  ES (SPFUT %)                 n= 61 presser-window sd=$   3040/contract  per-2-min sd~$   514  round trip=$ 17.5  cost/sd presser= 0.6%  cost/sd 2-min= 3.4%  min |IC| for sign trade at 2-min=0.043
+  ZN (UST10Y pp)               n= 61 presser-window sd=$    255/contract  per-2-min sd~$    43  round trip=$ 19.6  cost/sd presser= 7.7%  cost/sd 2-min=45.5%  min |IC| for sign trade at 2-min=0.570
+  ZF (UST5Y pp)                n= 61 presser-window sd=$    224/contract  per-2-min sd~$    38  round trip=$ 11.8  cost/sd presser= 5.3%  cost/sd 2-min=31.2%  min |IC| for sign trade at 2-min=0.391
+  ZT (UST2Y pp)                n= 61 presser-window sd=$    223/contract  per-2-min sd~$    38  round trip=$ 11.8  cost/sd presser= 5.3%  cost/sd 2-min=31.3%  min |IC| for sign trade at 2-min=0.393
+  SR3 (ED4 pp, 4th qtr strip)  n= 61 presser-window sd=$    182/contract  per-2-min sd~$    31  round trip=$ 16.5  cost/sd presser= 9.1%  cost/sd 2-min=53.6%  min |IC| for sign trade at 2-min=0.671
+  6E (EURUSD %)                n= 61 presser-window sd=$    508/contract  per-2-min sd~$    86  round trip=$ 10.2  cost/sd presser= 2.0%  cost/sd 2-min=11.9%  min |IC| for sign trade at 2-min=0.150

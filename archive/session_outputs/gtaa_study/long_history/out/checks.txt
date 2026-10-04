@@ -1,0 +1,70 @@
+US_EQ_D              SMA10  truncated at 1931-06-15: positions identical up to D: True
+US_EQ_D              MOM12  truncated at 1931-06-15: positions identical up to D: True
+US_EQ_D              SMA10  truncated at 1987-10-20: positions identical up to D: True
+US_EQ_D              MOM12  truncated at 1987-10-20: positions identical up to D: True
+US_EQ_D              SMA10  truncated at 2008-10-01: positions identical up to D: True
+US_EQ_D              MOM12  truncated at 2008-10-01: positions identical up to D: True
+US_EQ_D              SMA10  truncated at 2020-03-16: positions identical up to D: True
+US_EQ_D              MOM12  truncated at 2020-03-16: positions identical up to D: True
+US_EQ_D              SMA10  truncated at 2024-10-02: positions identical up to D: True
+US_EQ_D              MOM12  truncated at 2024-10-02: positions identical up to D: True
+US_EQ_D              min sessions from decision close to first return day using it: [2, 2, 2, 2, 2] (must be >= 2)
+US_EQ_M              SMA6   truncation mismatches=0  pos==sig.shift(1): True
+US_EQ_M              SMA8   truncation mismatches=0  pos==sig.shift(1): True
+US_EQ_M              SMA10  truncation mismatches=0  pos==sig.shift(1): True
+US_EQ_M              SMA12  truncation mismatches=0  pos==sig.shift(1): True
+US_EQ_M              MOM12  truncation mismatches=0  pos==sig.shift(1): True
+US_10Y_D             SMA10  truncated at 1987-10-20: positions identical up to D: True
+US_10Y_D             MOM12  truncated at 1987-10-20: positions identical up to D: True
+US_10Y_D             SMA10  truncated at 2008-10-01: positions identical up to D: True
+US_10Y_D             MOM12  truncated at 2008-10-01: positions identical up to D: True
+US_10Y_D             SMA10  truncated at 2020-03-16: positions identical up to D: True
+US_10Y_D             MOM12  truncated at 2020-03-16: positions identical up to D: True
+US_10Y_D             SMA10  truncated at 2024-10-02: positions identical up to D: True
+US_10Y_D             MOM12  truncated at 2024-10-02: positions identical up to D: True
+US_10Y_D             min sessions from decision close to first return day using it: [2, 2, 2, 2, 2] (must be >= 2)
+US_10Y_M             SMA6   truncation mismatches=0  pos==sig.shift(1): True
+US_10Y_M             SMA8   truncation mismatches=0  pos==sig.shift(1): True
+US_10Y_M             SMA10  truncation mismatches=0  pos==sig.shift(1): True
+US_10Y_M             SMA12  truncation mismatches=0  pos==sig.shift(1): True
+US_10Y_M             MOM12  truncation mismatches=0  pos==sig.shift(1): True
+GOLD_AVG_L2          SMA6   truncation mismatches=0  pos==sig.shift(2): True
+GOLD_AVG_L2          SMA8   truncation mismatches=0  pos==sig.shift(2): True
+GOLD_AVG_L2          SMA10  truncation mismatches=0  pos==sig.shift(2): True
+GOLD_AVG_L2          SMA12  truncation mismatches=0  pos==sig.shift(2): True
+GOLD_AVG_L2          MOM12  truncation mismatches=0  pos==sig.shift(2): True
+GOLD_AVG_L1          SMA6   truncation mismatches=0  pos==sig.shift(1): True
+GOLD_AVG_L1          SMA8   truncation mismatches=0  pos==sig.shift(1): True
+GOLD_AVG_L1          SMA10  truncation mismatches=0  pos==sig.shift(1): True
+GOLD_AVG_L1          SMA12  truncation mismatches=0  pos==sig.shift(1): True
+GOLD_AVG_L1          MOM12  truncation mismatches=0  pos==sig.shift(1): True
+GOLD_ME_GLD          SMA6   truncation mismatches=0  pos==sig.shift(1): True
+GOLD_ME_GLD          SMA8   truncation mismatches=0  pos==sig.shift(1): True
+GOLD_ME_GLD          SMA10  truncation mismatches=0  pos==sig.shift(1): True
+GOLD_ME_GLD          SMA12  truncation mismatches=0  pos==sig.shift(1): True
+GOLD_ME_GLD          MOM12  truncation mismatches=0  pos==sig.shift(1): True
+COMMOD_M             SMA6   truncation mismatches=0  pos==sig.shift(1): True
+COMMOD_M             SMA8   truncation mismatches=0  pos==sig.shift(1): True
+COMMOD_M             SMA10  truncation mismatches=0  pos==sig.shift(1): True
+COMMOD_M             SMA12  truncation mismatches=0  pos==sig.shift(1): True
+COMMOD_M             MOM12  truncation mismatches=0  pos==sig.shift(1): True
+REIT_M               SMA6   truncation mismatches=0  pos==sig.shift(1): True
+REIT_M               SMA8   truncation mismatches=0  pos==sig.shift(1): True
+REIT_M               SMA10  truncation mismatches=0  pos==sig.shift(1): True
+REIT_M               SMA12  truncation mismatches=0  pos==sig.shift(1): True
+REIT_M               MOM12  truncation mismatches=0  pos==sig.shift(1): True
+INTL_M               SMA6   truncation mismatches=0  pos==sig.shift(1): True
+INTL_M               SMA8   truncation mismatches=0  pos==sig.shift(1): True
+INTL_M               SMA10  truncation mismatches=0  pos==sig.shift(1): True
+INTL_M               SMA12  truncation mismatches=0  pos==sig.shift(1): True
+INTL_M               MOM12  truncation mismatches=0  pos==sig.shift(1): True
+US_EQ_SHA_L2         SMA6   truncation mismatches=0  pos==sig.shift(2): True
+US_EQ_SHA_L2         SMA8   truncation mismatches=0  pos==sig.shift(2): True
+US_EQ_SHA_L2         SMA10  truncation mismatches=0  pos==sig.shift(2): True
+US_EQ_SHA_L2         SMA12  truncation mismatches=0  pos==sig.shift(2): True
+US_EQ_SHA_L2         MOM12  truncation mismatches=0  pos==sig.shift(2): True
+US_EQ_SHA_L1         SMA6   truncation mismatches=0  pos==sig.shift(1): True
+US_EQ_SHA_L1         SMA8   truncation mismatches=0  pos==sig.shift(1): True
+US_EQ_SHA_L1         SMA10  truncation mismatches=0  pos==sig.shift(1): True
+US_EQ_SHA_L1         SMA12  truncation mismatches=0  pos==sig.shift(1): True
+US_EQ_SHA_L1         MOM12  truncation mismatches=0  pos==sig.shift(1): True

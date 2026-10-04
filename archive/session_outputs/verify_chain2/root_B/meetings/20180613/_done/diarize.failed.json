@@ -1,0 +1,5 @@
+{
+  "stage": "diarize",
+  "presser_id": "20180613",
+  "error": "RuntimeError('simulated diarize failure')"
+}

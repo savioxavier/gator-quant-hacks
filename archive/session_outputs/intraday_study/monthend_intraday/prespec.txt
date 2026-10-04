@@ -1,0 +1,46 @@
+Month-end flow sleeves A and C at hourly resolution: specification fixed before any hourly result was computed
+(written 2026-10-03, before running 01_sleeve_weights.py / 02_monthend_intraday.py).
+
+Data: shared hourly panel (cached Databento GLBX ohlcv-1h, ES.v.0 / ZN.v.0), bar timestamps are bar STARTS.
+Return day d = 16:00 ET of the previous NYSE day to 16:00 ET of d (ret_date_1600). Offsets T-k / T+k on the NYSE
+calendar (calendar_utils.month_offsets). In-sample = return days <= 2024-10-02; 2024-10-03..2026-10-02 descriptive.
+
+Sizing (unchanged from the repo rules, futures replication instruments ES16/ZN16):
+  Sleeve C: w_ZN = min(q_issuance * 0.10 / vol63_ZN(T-4), 2), held over return days [T-2, T]
+            (ifc_treasury.hold_weights, ticker ZN16, ex-ante calendar).
+  Sleeve A: q = clip(D(T-6)/s, -2, 2); w_ES = -q*0.05/vol63_ES, w_ZN = +q*0.05/vol63_ZN over [T-4, T]
+            (ifc_rebalance.hold_weights on ES16/ZN16 closes, planned calendar).
+  Bond-minus-stock proxy for the profile = sleeve A's own legs: q*(0.05/vol_ZN * r_ZN - 0.05/vol_ES * r_ES),
+  i.e. a vol-parity ZN-minus-ES spread signed (and scaled) by the 60/40 drift observed at T-6.
+
+Hypotheses (from the literature / market structure, not from this data):
+  H-C1 Treasury index extension (Hartley & Schwarz 2019): index-benchmarked managers buy duration into the
+       month-end index pricing, which for Treasury indices is the 15:00 ET mark (also the ZN settlement time).
+       Prediction: the [T-2, T] ZN return sits in US day hours up to 15:00 ET on T; the 15:00-16:00 bar of T
+       carries no positive premium (possibly a post-pricing giveback). So exiting at 15:00 on T should not hurt.
+  H-C2 The day-session part (09:00-16:00 ET) of [T-2, T] carries more of the premium than the overnight part.
+  H-A1 Balanced-fund / pension rebalancing (sleeve A) is executed largely at the US cash close (market-on-close,
+       bar 15:00-16:00 ET) on T-4..T, most on T. Prediction: the signed spread is concentrated in the 15:00 bar,
+       and exiting at 15:00 on T loses part of the effect.
+  H-A2 Some global balanced funds trade/hedge around the London 16:00 fix (about 11:00 ET); weak prediction of a
+       positive signed spread in the 10:00-12:00 ET bars.
+
+Strategy variants (all pre-specified; every one is reported; same monthly sizing as the baseline):
+  For C over return days [T-2, T] and for A over [T-4, T]:
+   base  : enter 16:00 ET of the day before the window start, exit 16:00 ET on T (= the daily holding).
+   (i)   exit_1500 : same entry, exit 15:00 ET on T (drop the 15:00-16:00 bar of T).
+   (ii)  exit_1600 : identical to base by construction (hourly reconstruction; checked against ES16/ZN16).
+   (ii-b) exit_1700: same entry, exit 17:00 ET on T (adds the 16:00-17:00 post-close bar).
+   (iii) day_only  : hold only bars starting 09:00..15:00 ET of each window day (flat overnight).
+   (iv)  night_only: hold only bars starting 16:00..08:00 ET belonging to window days (flat 09:00-16:00).
+  Distinct strategy variants = 5 per sleeve x 2 sleeves = 10, each reported gross, 1x and 2x costs.
+  Costs one-way per unit notional: ES 1.0 bp, ZN 1.5 bp; every entry/exit is charged; a position held across a
+  front-contract change pays one extra round trip.
+Statistics: Sharpe of daily excess P&L over all NYSE return days from the sleeve's first active month,
+  SE = sqrt((1+SR^2/2)/years); Newey-West t of the mean monthly window P&L; paired 3-month-block bootstrap
+  (5,000 draws) for Sharpe differences vs base. Sleeve C pre/post-publication split at 2019-12-01 (Hartley &
+  Schwarz working paper, Nov 2019). Sleeve A's source (Harvey, Mazzoleni & Melone, NBER w33554) is from 2025,
+  after the in-sample end, so all its in-sample data is pre-publication.
+Hourly approximations: no 09:30 or 15:30 boundary exists; "day session" uses 09:00, which straddles the 09:30 cash
+  open; the London fix (16:00 London) is approximated by the bars starting 10:00 and 11:00 ET (12:00 ET during the
+  US/UK DST mismatch weeks; reported only as a profile block).

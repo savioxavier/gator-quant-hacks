@@ -1,0 +1,34 @@
+[Sat Oct  3 21:49:26 EDT 2026] job=local-20261004T014926Z host=BLADEMASTER repo=<scratch>/hpg_emul3/clone
+local emulation: environment step skipped; PY=<home>/.venvs/gqh-systematic/Scripts/python.exe
+python 3.12.10 | numpy 2.5.3 | pandas 3.0.6 | scipy 1.18.1 | pyarrow 25.0.1 | statsmodels 0.15.0
+[Sat Oct  3 21:49:27 EDT 2026] extracting ~/private/gqh_private_bundle.tgz
+bundle verified (140 files); archive deleted
+features: <fedpress-root> (65 voice tables)
+v2 inputs: GQH_REPO at 1587f25f77991e6d1cad146921090e17c4c8fe68, GQH_DATA_DIR and V2_WORK_ROOT in ~/private/gqh
+v2: V2_OOS_DEVIATION not set (V2_D3=0; this commit's v2 code does not read it, or V2_D3=0)
+[Sat Oct  3 21:49:31 EDT 2026] running backtests/run_all_backtests.sh all at 6a61ef9a4a3904b3b1b6eadbe0446e1ed9759a7d (full log: <scratch>/hpg_emul3/home/private/gqh/runs/local-20261004T014926Z/run_all_backtests.log)
+== chrono inputs
+-> chrono: skipped (CHRONO_ROOT not set; the committed frozen inputs are used)
+== Fed communication v2
+-> v2: refused (one-shot OOS lock; decision record oos_not_evaluated.json exists: rule FAILED, OOS not evaluated)
+== press-conference suite (BENCH-R, H1-primary, H1-Q, H1-answer, lexicon control)
+-> presser: re-run reproduces the committed results (G3 NO-GO unchanged); outputs in <scratch>/hpg_emul3/home/private/gqh/runs/local-20261004T014926Z/repo/backtests/rerun/presser_h1
+== exploratory H2/H3/H4 (voice, face, combined)
+-> h234: completed (exploratory, post-NO-GO; cannot rescue G3; no trading claim); outputs in <scratch>/hpg_emul3/home/private/gqh/runs/local-20261004T014926Z/repo/backtests/presser/backtest_h234
+[Sat Oct  3 21:53:14 EDT 2026] run_all_backtests.sh exit 0
+== summary
+  chrono: skipped (CHRONO_ROOT not set; the committed frozen inputs are used)
+  v2: refused (one-shot OOS lock; decision record oos_not_evaluated.json exists: rule FAILED, OOS not evaluated)
+  presser: re-run reproduces the committed results (G3 NO-GO unchanged); outputs in <scratch>/hpg_emul3/home/private/gqh/runs/local-20261004T014926Z/repo/backtests/rerun/presser_h1
+  h234: completed (exploratory, post-NO-GO; cannot rescue G3; no trading claim); outputs in <scratch>/hpg_emul3/home/private/gqh/runs/local-20261004T014926Z/repo/backtests/presser/backtest_h234
+
+packed 42 result files (withheld 0) + run log + RUN_INFO.txt
+0f01f9b1fc6f98167a24fe24a3220af9a76bad490304a6e109bd0574c153f507 *<scratch>/hpg_emul3/home/gqh_backtest_results.tgz
+-rw------- 1 hoang 197609 1.6M Oct  3 21:53 <scratch>/hpg_emul3/home/gqh_backtest_results.tgz
+copy to the PC (Git Bash there):  mkdir -p /c/gqh_hpg_results && scp hoang@hpg.rc.ufl.edu:<scratch>/hpg_emul3/home/gqh_backtest_results.tgz /c/gqh_hpg_results/
+private run folder kept: <scratch>/hpg_emul3/home/private/gqh/runs/local-20261004T014926Z (CLEAN_PRIVATE=1 removes ~/private/gqh)
+
+real	3m52.213s
+user	0m3.274s
+sys	0m3.662s
+exit=0

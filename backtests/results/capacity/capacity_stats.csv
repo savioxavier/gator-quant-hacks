@@ -1,0 +1,7 @@
+item,value,unit,n_days
+"TLT median daily dollar volume, OOS window",2753.4,USD m,501
+TLT largest E1 position for $10m capital as % of that median,0.41,%,501
+"UUP median daily dollar volume, OOS window",32.6,USD m,501
+UUP largest E1 position for $10m capital as % of that median,11.49,%,501
+"ZT contracts per minute, 14:30-16:00 ET, 2023-2026 conference days: median",2108.0,contracts,30
+"ZT contracts per minute, same window: 10th percentile",528.6000000000001,contracts,30

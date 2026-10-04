@@ -1,0 +1,13 @@
+{
+  "id": "trend_momentum_index_mac5_reversal",
+  "sources": [
+    "https://www3.nd.edu/~zda/Indexing.pdf"
+  ],
+  "variant": "V2",
+  "rule": "V1 signal on ETF proxies SPY QQQ IWM DIA, book 10%, gross<=2, next_open (true NYSE open), ETF costs + borrow",
+  "is_window": "2006-01-17..2024-10-02",
+  "series_start": "2006-01-17",
+  "series_end": "2026-10-02",
+  "columns": "daily excess returns over T-bill: net_1x (realistic costs), net_2x (2x costs), gross",
+  "in_sample_end": "2024-10-02"
+}

@@ -1,0 +1,34 @@
+run                                window            kit    ours  engine      corr  mad bp   exact  mad bp refused decisions
+S3_project_margin_1e9              in_sample      0.6287  0.5054  0.5106  0.999962   0.160  0.5098   0.135       0 identical
+S3_project_margin_1e9              out_of_sample  1.1571  0.6982  0.7002  0.999943   0.209  0.6975   0.179       0 identical
+S3_project_cash_1e9                in_sample      0.6287  0.5054  0.5106  0.999961   0.404  0.5098   0.387       0 identical
+S3_project_cash_1e9                out_of_sample  1.1570  0.6981  0.7002  0.999943   0.437  0.6975   0.411       0 identical
+S3_project_cash_100k               in_sample      0.6287  0.5055  0.5106  0.999961   0.404  0.5098   0.388       0 identical
+S3_project_cash_100k               out_of_sample  1.1577  0.6989  0.7002  0.999942   0.434  0.6975   0.411       0 identical
+S3_guide_margin_1e9                in_sample      0.6085  0.4853  0.4929  0.999961   0.163  0.4896   0.136       0 identical
+S3_guide_margin_1e9                out_of_sample  1.1324  0.6736  0.6785  0.999943   0.212  0.6729   0.181       0 identical
+S3_guide_cash_1e9                  in_sample      0.6085  0.4852  0.4929  0.999961   0.406  0.4896   0.388       0 identical
+S3_guide_cash_1e9                  out_of_sample  1.1324  0.6736  0.6785  0.999942   0.439  0.6729   0.413       0 identical
+S3_guide_cash_100k                 in_sample      0.6085  0.4852  0.4929  0.999961   0.406  0.4896   0.389       0 identical
+S3_guide_cash_100k                 out_of_sample  1.1326  0.6738  0.6785  0.999941   0.444  0.6729   0.416       0 identical
+S3_kit_as_shipped                  in_sample      0.6415  0.5183  0.5214  0.999961   0.402  0.5223   0.387       0 identical
+S3_kit_as_shipped                  out_of_sample  1.1729  0.7139  0.7143  0.999943   0.437  0.7134   0.410       0 identical
+S3_replay_engine_weights           in_sample      0.6287  0.5054  0.5106  0.999962   0.160  0.5098   0.135       0 -
+S3_replay_engine_weights           out_of_sample  1.1571  0.6982  0.7002  0.999943   0.209  0.6975   0.179       0 -
+BH5_project_margin_1e9             in_sample      0.4850  0.3865  0.3941  0.999970   0.261  0.3889   0.212       0 identical
+BH5_project_margin_1e9             out_of_sample  1.2394  0.8152  0.8171  0.999971   0.225  0.8154   0.194       0 identical
+BH5_project_cash_1e9               in_sample      0.4849  0.3865  0.3941  0.999969   0.668  0.3889   0.638       0 identical
+BH5_project_cash_1e9               out_of_sample  1.2394  0.8152  0.8171  0.999971   0.505  0.8154   0.479       0 identical
+BH5_project_cash_100k              in_sample      0.4848  0.3863  0.3941  0.999970   0.669  0.3889   0.639       0 identical
+BH5_project_cash_100k              out_of_sample  1.2376  0.8135  0.8171  0.999970   0.503  0.8154   0.476       0 identical
+BH5_guide_margin_1e9               in_sample      0.4787  0.3802  0.3902  0.999970   0.266  0.3827   0.214       0 identical
+BH5_guide_margin_1e9               out_of_sample  1.2307  0.8065  0.8111  0.999971   0.228  0.8067   0.196       0 identical
+BH5_guide_cash_1e9                 in_sample      0.4786  0.3802  0.3902  0.999969   0.672  0.3827   0.639       0 identical
+BH5_guide_cash_1e9                 out_of_sample  1.2306  0.8065  0.8111  0.999971   0.508  0.8067   0.481       0 identical
+BH5_guide_cash_100k                in_sample      0.4786  0.3802  0.3902  0.999969   0.672  0.3827   0.639       0 identical
+BH5_guide_cash_100k                out_of_sample  1.2291  0.8050  0.8111  0.999970   0.510  0.8067   0.481       0 identical
+BH5_kit_as_shipped                 in_sample      0.4891  0.3907  0.3964  0.999969   0.667  0.3930   0.638       0 identical
+BH5_kit_as_shipped                 out_of_sample  1.2452  0.8209  0.8211  0.999972   0.501  0.8212   0.477       0 identical
+BH5_replay_engine_weights          in_sample      0.4850  0.3865  0.3941  0.999970   0.261  0.3889   0.212       0 -
+BH5_replay_engine_weights          out_of_sample  1.2394  0.8152  0.8171  0.999971   0.225  0.8154   0.194       0 -
+wrote <scratch>\kit_native\final_run\recheck_gtaa\check_gtaa.json

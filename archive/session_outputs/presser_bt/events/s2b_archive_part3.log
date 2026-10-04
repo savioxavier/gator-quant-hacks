@@ -1,0 +1,19 @@
+20200315 [('CNBC', 0, None, None, None), ('FBC', 0, None, None, None)]
+20241107 [('CNBC', 37, 35.5, 2.9, 365.9), ('FBC', 39, 65.2, 0.8, 49.4)]
+station             CNBC   FBC
+off_median_s count   1.0   1.0
+             mean   35.5  65.2
+             std     NaN   NaN
+             min    35.5  65.2
+             25%    35.5  65.2
+             50%    35.5  65.2
+             75%    35.5  65.2
+             max    35.5  65.2
+off_mad_s    count   1.0   1.0
+             mean    2.9   0.8
+             std     NaN   NaN
+             min     2.9   0.8
+             25%     2.9   0.8
+             50%     2.9   0.8
+             75%     2.9   0.8
+             max     2.9   0.8

@@ -1,0 +1,118 @@
+{
+ "stage_folder_name": "backtest_h234_local",
+ "note1_presence": {
+  "20190501": {
+   "drop_timing": 1,
+   "vtt_median_offset_s": -172.786,
+   "qa_ok": false,
+   "h2_ok": false,
+   "h3_ok": false,
+   "h2_exclusion": "qa_failed",
+   "h3_exclusion": "qa_failed",
+   "n_caption_answers": 25,
+   "in_any_baseline": false,
+   "answers_with_zA": 0,
+   "answers_with_U": 0,
+   "valid_chunks_in_record_table": 97,
+   "answer_trades_rows": 0,
+   "h4_rows": 0,
+   "in_h4_training_fit": {
+    "answer_ZT": false,
+    "meeting_ZT": false,
+    "answer_ES": false,
+    "meeting_ES": false
+   },
+   "note": "chunks in the record table are not used: meeting gated out (h2_ok/h3_ok false)",
+   "outside_features_baselines_fits_trades": true
+  },
+  "20230614": {
+   "drop_timing": 1,
+   "vtt_median_offset_s": NaN,
+   "qa_ok": false,
+   "h2_ok": false,
+   "h3_ok": false,
+   "h2_exclusion": "qa_failed;no_caption_timed_answers",
+   "h3_exclusion": "qa_failed;no_caption_timed_answers",
+   "n_caption_answers": 0,
+   "in_any_baseline": false,
+   "answers_with_zA": 0,
+   "answers_with_U": 0,
+   "valid_chunks_in_record_table": 0,
+   "answer_trades_rows": 0,
+   "h4_rows": 0,
+   "in_h4_training_fit": {
+    "answer_ZT": false,
+    "meeting_ZT": false,
+    "answer_ES": false,
+    "meeting_ES": false
+   },
+   "note": "chunks in the record table are not used: meeting gated out (h2_ok/h3_ok false)",
+   "outside_features_baselines_fits_trades": true
+  }
+ },
+ "note1_checks": {
+  "H2_mean_matches": true,
+  "H2_p_matches": true,
+  "H4_refit_equals_frozen_fit_C": true,
+  "H4_t_matches": true,
+  "H4_p_one_matches": true,
+  "H4_wcb_matches": true,
+  "holm_matches": {
+   "H2": true,
+   "H3": true,
+   "H4": true
+  },
+  "rows_equal_main": {
+   "20190501": true,
+   "20230614": true
+  }
+ },
+ "strategy_reconciliation": {
+  "h4_logret_equals_stage_y": true,
+  "sign_C_C0_n_and_mean_match": true,
+  "sign_C_C2_n_and_mean_match": true,
+  "sign_C_C4_n_and_mean_match": true,
+  "sign_T_C0_n_and_mean_match": true,
+  "sign_T_C2_n_and_mean_match": true,
+  "sign_T_C4_n_and_mean_match": true,
+  "h2_copy_of_one_trade_equals_stage": true,
+  "net1x_equals_stage_CMF_where_measured": true,
+  "trades_without_measured_half_spread": {}
+ },
+ "strategy_sizing": [
+  {
+   "strategy": "H2 sign(z_A), ZT +1 min",
+   "sizing_window": "2019-10-30..2022-12-30",
+   "sizing_days": 799,
+   "sizing_trades": 247,
+   "ann_vol_one_contract": 1.4211924736458994e-05,
+   "N_exact": 7036.344608796158,
+   "N": 7036,
+   "ann_vol_with_N": 0.09999510244572549
+  },
+  {
+   "strategy": "H4 sign(yC) (combined), ZT +1 min",
+   "sizing_window": "2019-10-30..2022-12-30",
+   "sizing_days": 799,
+   "sizing_trades": 247,
+   "ann_vol_one_contract": 1.212816037409136e-05,
+   "N_exact": 8245.273554728368,
+   "N": 8245,
+   "ann_vol_with_N": 0.09999668228438326
+  },
+  {
+   "strategy": "H4 sign(yT) (text-only reference), ZT +1 min",
+   "sizing_window": "2019-10-30..2022-12-30",
+   "sizing_days": 799,
+   "sizing_trades": 247,
+   "ann_vol_one_contract": 1.4406905709241633e-05,
+   "N_exact": 6941.115741172149,
+   "N": 6941,
+   "ann_vol_with_N": 0.09999833252784618
+  }
+ ],
+ "capital_usd": 10000000.0,
+ "target_vol": 0.1,
+ "fee_usd_per_side": 2.0,
+ "calendar": "gqh/index_daily.parquet ^GSPC trading days"
+}

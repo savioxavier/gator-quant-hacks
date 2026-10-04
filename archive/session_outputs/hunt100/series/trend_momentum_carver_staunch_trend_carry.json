@@ -1,0 +1,77 @@
+{
+  "id": "trend_momentum_carver_staunch_trend_carry",
+  "headline_variant": "V2",
+  "rule": "Equal 0.25 weights on the four rules, trailing pooled FDM; as V1",
+  "all_variants": {
+    "V1": "pysystemtrade chapter-15 config: EWMAC16/64 0.21, 32/128 0.08, 64/256 0.21, carry (ewm com 90, scalar 30) 0.50, FDM 1.31, cap 20; w=(F/10)*0.10/sigma/N, book to 10% daily, 10% buffer, next_close",
+    "V2": "Equal 0.25 weights on the four rules, trailing pooled FDM; as V1",
+    "V3": "Trend-only part of V1 (EWMAC weights 0.42/0.16/0.42), trailing FDM; as V1"
+  },
+  "selection": "headline = highest in-sample net Sharpe (1x) of 3 pre-declared variants",
+  "sources": [
+    "https://raw.githubusercontent.com/robcarver17/pysystemtrade/master/systems/provided/futures_chapter15/futuresconfig.yaml",
+    "https://qoppac.blogspot.com/2025/04/annual-performance-update-returneth.html",
+    "https://github.com/robcarver17/pysystemtrade"
+  ],
+  "source_reported": "Carver live account (net, 2014/15-2024/25, Sharpe 0.76 rf=0, CAGR 12.0%); config is his published 6-instrument example system",
+  "window": {
+    "is_start": "2011-08-16",
+    "is_end": "2024-10-02",
+    "later": "2024-10-03..2026-10-02 (descriptive)"
+  },
+  "columns": {
+    "net_1x": "daily excess return over T-bill, realistic cost map",
+    "net_2x": "same at 2x costs",
+    "gross": "before costs"
+  },
+  "cost_bps_one_way": {
+    "ES": 1.0,
+    "NQ": 1.0,
+    "YM": 1.0,
+    "RTY": 2.0,
+    "ZT": 0.5,
+    "ZF": 0.7,
+    "ZN": 1.0,
+    "ZB": 1.5,
+    "UB": 1.5,
+    "6E": 1.0,
+    "6J": 1.0,
+    "6B": 1.0,
+    "6A": 1.0,
+    "6C": 1.0,
+    "6S": 1.0,
+    "CL": 2.0,
+    "GC": 2.0,
+    "SI": 2.0,
+    "HG": 2.0,
+    "NG": 3.0,
+    "HO": 3.0,
+    "RB": 3.0,
+    "PL": 3.0,
+    "ZC": 4.0,
+    "ZS": 4.0,
+    "ZW": 4.0,
+    "ZL": 4.0,
+    "ZM": 4.0,
+    "LE": 4.0,
+    "HE": 4.0
+  },
+  "exec": "next_close, daily decisions with 10% buffer",
+  "vol": "book scaled to 10% ex-ante daily (trailing 252d cov), gross<=3",
+  "spec": "<scratch>\\hunt100\\bt_0\\trend_momentum_carver_staunch_trend_carry\\SPEC.md",
+  "script": "<scratch>\\hunt100\\bt_0\\run_carver.py",
+  "carver_live_tax_years": {
+    "2014/15": 0.595,
+    "2015/16": 0.281,
+    "2016/17": 0.024,
+    "2017/18": 0.02,
+    "2018/19": 0.045,
+    "2019/20": 0.338,
+    "2020/21": -0.017,
+    "2021/22": 0.258,
+    "2022/23": -0.076,
+    "2023/24": 0.206,
+    "2024/25": -0.147
+  },
+  "carry_source": "edges/carry/contracts.parquet (Databento .v.0/.v.1 closes + free symbology)"
+}

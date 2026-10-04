@@ -1,0 +1,57 @@
+Source URL list - allocation_rotation hunt (collected 2026-10-03)
+
+Primary papers / author pages
+- Keller (2022) Bold Asset Allocation, SSRN 4166845 (text read from mirror): https://thechartist.com.au/wp-content/uploads/2024/12/5369/SSRN-id4166845.pdf ; https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4166845
+- Keller & Keuning (2017) VAA, SSRN 3002624: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3002624
+- Keller & Keuning (2018) DAA, SSRN 3212862: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3212862
+- Keller & Keuning (2016) PAA, SSRN 2759734: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2759734
+- Keller & Keuning (2023) HAA, SSRN 4346906: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4346906
+- Keller (2020) Resilient Asset Allocation, SSRN 3752294 (via Allocate Smartly)
+- Antonacci (2012/2016) Risk Premia Harvesting Through Dual Momentum, SSRN 2042750
+- Butler, Philbrick, Gordillo, Varadi (2012) Adaptive Asset Allocation: A Primer, SSRN 2328254
+- Faber (2007, 2013, JPM 2018 revisit) GTAA: https://allocatortraining.com/wp-content/uploads/2023/06/A-Quantitative-Approach-to-Tactical-Asset-Allocation.pdf
+- Faber (2010) Relative Strength Strategies for Investing, SSRN 1585517
+- Clare, Seaton, Smith, Thomas, The Trend is Our Friend (SSRN 2126478; J. Asset Management 2016)
+- Lopez de Prado (2016) Building Diversified Portfolios that Outperform Out of Sample (HRP), JPM; summary: https://en.wikipedia.org/wiki/Hierarchical_Risk_Parity
+- Philosophical Economics (2016) Growth-Trend Timing (archived): http://web.archive.org/web/2019id_/http://www.philosophicaleconomics.com/2016/01/gtt/
+- Kipnis (2019) KDA asset allocation: https://www.r-bloggers.com/2019/01/right-now-its-kdaasset-allocation/
+- Petit (2026) GEM replication on free data 1971-2026: https://github.com/Petitmarius/Backtest_Strategies
+- pyTAA strategy rule summaries: https://github.com/oronimbus/tactical-asset-allocation (src/pytaa/strategy/README.md, saved as pytaa_strategy_README.md)
+
+Independent replication / tracking
+- PortfolioDB (third-party ETF backtests with annual returns to 2026; parsed into pdb_annual.json / pdb_postpub_summary.csv): https://www.portfoliodb.com/portfolios  (pages saved under pdb/)
+- Allocate Smartly strategy pages:
+  https://allocatesmartly.com/bold-asset-allocation/
+  https://allocatesmartly.com/hybrid-asset-allocation/
+  https://allocatesmartly.com/vigilant-asset-allocation-dr-wouter-keller-jw-keuning/
+  https://allocatesmartly.com/protective-asset-allocation/
+  https://allocatesmartly.com/keuning-kellers-generalized-protective-momentum/
+  https://allocatesmartly.com/ilya-kipnis-defensive-adaptive-asset-allocation/
+  https://allocatesmartly.com/adam-butler-gestaltu-adaptive-asset-allocation/
+  https://allocatesmartly.com/taa-strategy-combining-risk-parity-trend-following/
+  https://allocatesmartly.com/tactical-permanent-portfolio-gestaltu-investresolve/
+  https://allocatesmartly.com/classical-asset-allocation-combining-markowitz-momentum/
+  https://allocatesmartly.com/antonaccis-composite-dual-momentum/
+  https://allocatesmartly.com/taa-strategy-accelerating-dual-momentum/
+  https://allocatesmartly.com/accelerating-dual-momentum-redux-longer-history-tempered-expectations/
+  https://allocatesmartly.com/aggressive-global-tactical-asset-allocation/
+  https://allocatesmartly.com/portfoliocharts-golden-butterfly/
+  https://allocatesmartly.com/paul-novells-tactical-bond-strategy/
+  https://allocatesmartly.com/philosophical-economics-growth-trend-timing/
+  https://allocatesmartly.com/philosophical-economics-growth-trend-timing-redux/
+  https://allocatesmartly.com/blending-buy-hold-with-tactical-a-lethargic-approach-to-asset-allocation/
+  https://allocatesmartly.com/kellers-resilient-asset-allocation/
+  https://allocatesmartly.com/carlsons-defense-first/
+  https://allocatesmartly.com/testing-a-risk-premium-value-strategy/
+  https://allocatesmartly.com/meb-fabers-12-month-high-switch/
+  https://allocatesmartly.com/sector-rotation-fama-french-alphas/
+  https://allocatesmartly.com/testing-popular-portfolio-optimization-techniques/
+  https://allocatesmartly.com/tactical-asset-allocation-performance-during-the-2022-bear-market/
+  https://allocatesmartly.com/comparing-tactical-asset-allocation-etfs-to-public-taa-strategies/
+  https://allocatesmartly.com/the-10-most-popular-taa-strategies-ranked/
+  (full post list: web/as_urls.txt)
+- CXO Advisory: https://www.cxoadvisory.com/momentum-strategy (SACEMS, tracked since 2010) ; https://www.cxoadvisory.com/value-strategy/ (SACEVS) ; https://www.cxoadvisory.com/strategic-allocation/multi-class-momentum-portfolio-with-canary-crash-protection/ (DAA) ; https://www.cxoadvisory.com/?p=43934 (BAA)
+- QuantConnect HAA replication thread: https://www.quantconnect.com/forum/discussion/14842/hybrid-asset-allocation/
+- yagogarcia TAA tracking (HAA/BAA/PAA/DAA/GPM summaries): https://yagogarcia.substack.com/p/seguimiento-carteras-taa-febrero
+- Finary community digest of Allocate Smartly stats: https://community.finary.com/t/essai-de-selection-de-strategies-presentees-site-allocatesmartly-com/23444
+- PortfolioDB VAA-G4 page (annual returns): https://www.portfoliodb.com/portfolios/vigilant-asset-allocation-g4-aggressive

@@ -1,0 +1,33 @@
+root,comparison,sample,n_days,corr,mad_bp,median_ad_bp,share_absdiff_gt_5bp,n_absdiff_gt_5bp,max_absdiff_bp,mean_diff_bp,std_hourly_bp,std_ref_bp
+ES,hourly 16:00->16:00 vs ref 16:00 (ES16/ZN16 excess),full,4103,0.99999,0.0324808,2.498e-12,0.00146234,6,16.3584,-0.000633208,107.932,107.915
+ES,hourly 16:00->16:00 vs ref 16:00 (ES16/ZN16 excess),in_sample,3602,0.999989,0.0359296,2.50451e-12,0.00166574,6,16.3584,-0.000713795,108.871,108.852
+ES,hourly 16:00->16:00 vs ref 16:00 (ES16/ZN16 excess),later_2024-10-03_on,501,1,0.00768581,2.41127e-12,0,0,1.02896,-5.38127e-05,101.02,101.019
+ES,hourly 16:00->16:00 vs ref 16:00 (ES16/ZN16 excess),full_ex_roll_and_nan_days,4037,0.999992,0.0137901,2.43729e-12,0.000990835,4,16.3584,0.000966579,107.837,107.836
+ES,hourly 16:00->16:00 vs F_ (futures_daily excess),full,4103,0.937533,20.8212,12.7461,0.780648,3203,754.379,0.0207688,107.932,106.864
+ES,hourly 16:00->16:00 vs F_ (futures_daily excess),in_sample,3602,0.940492,20.5102,12.774,0.778734,2805,754.379,0.02748,108.871,106.794
+ES,hourly 16:00->16:00 vs F_ (futures_daily excess),later_2024-10-03_on,501,0.917447,23.0568,12.4295,0.794411,398,362.588,-0.0274826,101.02,107.476
+ES,hourly 16:00->16:00 vs F_ (futures_daily excess),full_ex_roll_and_nan_days,4037,0.942087,20.7094,12.7583,0.780282,3150,754.379,0.255092,107.837,107.078
+ES,hourly 00:00UTC->00:00UTC vs F_ (like-for-like window),full,4100,0.999999,0.0137785,2.40259e-12,0,0,3.80828,0.00349532,106.909,106.903
+ES,hourly 00:00UTC->00:00UTC vs F_ (like-for-like window),in_sample,3599,0.999999,0.0156966,2.39392e-12,0,0,3.80828,0.00398188,106.845,106.838
+ES,hourly 00:00UTC->00:00UTC vs F_ (like-for-like window),later_2024-10-03_on,501,1,2.88093e-12,2.47632e-12,0,0,1.11369e-11,-9.97022e-14,107.476,107.476
+ES,hourly 00:00UTC->00:00UTC vs F_ (like-for-like window),full_ex_roll_and_nan_days,4034,1,2.84735e-12,2.39392e-12,0,0,1.54564e-11,-1.06769e-13,107.118,107.118
+ES,ref 16:00 vs F_ (daily references against each other),full,4103,0.937652,20.8171,12.7252,0.780161,3201,754.379,0.021402,107.915,106.864
+ES,ref 16:00 vs F_ (daily references against each other),in_sample,3602,0.940627,20.5051,12.7731,0.778179,2803,754.379,0.0281938,108.852,106.794
+ES,ref 16:00 vs F_ (daily references against each other),later_2024-10-03_on,501,0.917435,23.0599,12.4295,0.794411,398,362.588,-0.0274288,101.019,107.476
+ES,ref 16:00 vs F_ (daily references against each other),full_ex_roll_and_nan_days,4037,0.942082,20.7078,12.7583,0.780035,3149,754.379,0.254125,107.836,107.078
+ZN,hourly 16:00->16:00 vs ref 16:00 (ES16/ZN16 excess),full,4106,0.99996,0.0237495,2.39067e-12,0.000487092,2,9.97879,0.00161463,33.6831,33.685
+ZN,hourly 16:00->16:00 vs ref 16:00 (ES16/ZN16 excess),in_sample,3605,0.999959,0.0242918,2.38524e-12,0.000554785,2,9.97879,0.00225017,34.1007,34.1033
+ZN,hourly 16:00->16:00 vs ref 16:00 (ES16/ZN16 excess),later_2024-10-03_on,501,0.999968,0.0198473,2.40259e-12,0,0,4.22707,-0.00295845,30.4739,30.4709
+ZN,hourly 16:00->16:00 vs ref 16:00 (ES16/ZN16 excess),full_ex_roll_and_nan_days,4041,0.999978,0.00493847,2.3332e-12,0.000494927,2,9.97879,-3.07635e-07,33.688,33.6881
+ZN,hourly 16:00->16:00 vs F_ (futures_daily excess),full,4106,0.959389,6.3877,4.70033,0.457867,1880,114.913,-0.00333779,33.6831,33.5199
+ZN,hourly 16:00->16:00 vs F_ (futures_daily excess),in_sample,3605,0.962282,6.28632,4.65143,0.447712,1614,97.1831,-0.00052262,34.1007,33.8761
+ZN,hourly 16:00->16:00 vs F_ (futures_daily excess),later_2024-10-03_on,501,0.933685,7.11719,5.60459,0.530938,266,114.913,-0.0235947,30.4739,30.8021
+ZN,hourly 16:00->16:00 vs F_ (futures_daily excess),full_ex_roll_and_nan_days,4041,0.959291,6.3847,4.69621,0.457065,1847,114.913,0.00187302,33.688,33.525
+ZN,hourly 00:00UTC->00:00UTC vs F_ (like-for-like window),full,4105,0.999996,0.00476905,2.25189e-12,0,0,2.42085,-0.000598728,33.5229,33.5239
+ZN,hourly 00:00UTC->00:00UTC vs F_ (like-for-like window),in_sample,3604,0.999996,0.00543201,2.25514e-12,0,0,2.42085,-0.000681958,33.8796,33.8808
+ZN,hourly 00:00UTC->00:00UTC vs F_ (like-for-like window),later_2024-10-03_on,501,1,2.7653e-12,2.1619e-12,0,0,1.19002e-11,1.50882e-13,30.8021,30.8021
+ZN,hourly 00:00UTC->00:00UTC vs F_ (like-for-like window),full_ex_roll_and_nan_days,4040,1,2.73269e-12,2.2508e-12,0,0,1.39624e-11,-7.09627e-14,33.5292,33.5292
+ZN,ref 16:00 vs F_ (daily references against each other),full,4106,0.959389,6.38797,4.70664,0.457623,1879,114.913,-0.00495243,33.685,33.5199
+ZN,ref 16:00 vs F_ (daily references against each other),in_sample,3605,0.962305,6.28387,4.65235,0.447434,1613,97.1831,-0.00277279,34.1033,33.8761
+ZN,ref 16:00 vs F_ (daily references against each other),later_2024-10-03_on,501,0.933476,7.137,5.60459,0.530938,266,114.913,-0.0206362,30.4709,30.8021
+ZN,ref 16:00 vs F_ (daily references against each other),full_ex_roll_and_nan_days,4041,0.959291,6.3847,4.69621,0.457065,1847,114.913,0.00187333,33.6881,33.525

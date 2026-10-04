@@ -1,0 +1,978 @@
+[
+  {
+    "name": "12-month-cycle-in-cross-section-of-stocks-returns.py",
+    "path": "static/strategies/12-month-cycle-in-cross-section-of-stocks-returns.py",
+    "sha": "f2d23c41a42beda5e534fe071f9703e5ef6b0f1a",
+    "size": 6242,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/12-month-cycle-in-cross-section-of-stocks-returns.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/12-month-cycle-in-cross-section-of-stocks-returns.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/f2d23c41a42beda5e534fe071f9703e5ef6b0f1a",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/12-month-cycle-in-cross-section-of-stocks-returns.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/12-month-cycle-in-cross-section-of-stocks-returns.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/f2d23c41a42beda5e534fe071f9703e5ef6b0f1a",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/12-month-cycle-in-cross-section-of-stocks-returns.py"
+    }
+  },
+  {
+    "name": "52-weeks-high-effect-in-stocks.py",
+    "path": "static/strategies/52-weeks-high-effect-in-stocks.py",
+    "sha": "56838a6ad7ca1638f769348fad26d2028c9d97ab",
+    "size": 8438,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/52-weeks-high-effect-in-stocks.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/52-weeks-high-effect-in-stocks.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/56838a6ad7ca1638f769348fad26d2028c9d97ab",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/52-weeks-high-effect-in-stocks.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/52-weeks-high-effect-in-stocks.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/56838a6ad7ca1638f769348fad26d2028c9d97ab",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/52-weeks-high-effect-in-stocks.py"
+    }
+  },
+  {
+    "name": "accrual-anomaly.py",
+    "path": "static/strategies/accrual-anomaly.py",
+    "sha": "ad2151c51930f7fba98ee27d5ba0ed5592416e17",
+    "size": 7511,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/accrual-anomaly.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/accrual-anomaly.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/ad2151c51930f7fba98ee27d5ba0ed5592416e17",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/accrual-anomaly.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/accrual-anomaly.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/ad2151c51930f7fba98ee27d5ba0ed5592416e17",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/accrual-anomaly.py"
+    }
+  },
+  {
+    "name": "asset-class-momentum-rotational-system.py",
+    "path": "static/strategies/asset-class-momentum-rotational-system.py",
+    "sha": "5303a7ea9ea42e8b76785c0902271cffed3460fd",
+    "size": 1685,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/asset-class-momentum-rotational-system.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/asset-class-momentum-rotational-system.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/5303a7ea9ea42e8b76785c0902271cffed3460fd",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/asset-class-momentum-rotational-system.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/asset-class-momentum-rotational-system.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/5303a7ea9ea42e8b76785c0902271cffed3460fd",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/asset-class-momentum-rotational-system.py"
+    }
+  },
+  {
+    "name": "asset-class-trend-following.py",
+    "path": "static/strategies/asset-class-trend-following.py",
+    "sha": "713467a53137d49084d4fd4b5569b31299072d3f",
+    "size": 1789,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/asset-class-trend-following.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/asset-class-trend-following.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/713467a53137d49084d4fd4b5569b31299072d3f",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/asset-class-trend-following.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/asset-class-trend-following.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/713467a53137d49084d4fd4b5569b31299072d3f",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/asset-class-trend-following.py"
+    }
+  },
+  {
+    "name": "asset-growth-effect.py",
+    "path": "static/strategies/asset-growth-effect.py",
+    "sha": "b1e0736c1debbe302005f95e62bc6d6e292cf1be",
+    "size": 4674,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/asset-growth-effect.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/asset-growth-effect.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/b1e0736c1debbe302005f95e62bc6d6e292cf1be",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/asset-growth-effect.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/asset-growth-effect.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/b1e0736c1debbe302005f95e62bc6d6e292cf1be",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/asset-growth-effect.py"
+    }
+  },
+  {
+    "name": "betting-against-beta-factor-in-country-equity-indexes.py",
+    "path": "static/strategies/betting-against-beta-factor-in-country-equity-indexes.py",
+    "sha": "b38b9cb04ffaa1263e3e6c5b7087c61b9f28375f",
+    "size": 6537,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/betting-against-beta-factor-in-country-equity-indexes.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/betting-against-beta-factor-in-country-equity-indexes.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/b38b9cb04ffaa1263e3e6c5b7087c61b9f28375f",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/betting-against-beta-factor-in-country-equity-indexes.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/betting-against-beta-factor-in-country-equity-indexes.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/b38b9cb04ffaa1263e3e6c5b7087c61b9f28375f",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/betting-against-beta-factor-in-country-equity-indexes.py"
+    }
+  },
+  {
+    "name": "betting-against-beta-factor-in-stocks.py",
+    "path": "static/strategies/betting-against-beta-factor-in-stocks.py",
+    "sha": "511dc559e338c59046828d7acf8b9392fb6f7120",
+    "size": 7250,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/betting-against-beta-factor-in-stocks.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/betting-against-beta-factor-in-stocks.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/511dc559e338c59046828d7acf8b9392fb6f7120",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/betting-against-beta-factor-in-stocks.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/betting-against-beta-factor-in-stocks.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/511dc559e338c59046828d7acf8b9392fb6f7120",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/betting-against-beta-factor-in-stocks.py"
+    }
+  },
+  {
+    "name": "combining-fundamental-fscore-and-equity-short-term-reversals.py",
+    "path": "static/strategies/combining-fundamental-fscore-and-equity-short-term-reversals.py",
+    "sha": "e2a2329346baf0de1a31817e28c684dcd69ff649",
+    "size": 12570,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/combining-fundamental-fscore-and-equity-short-term-reversals.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/combining-fundamental-fscore-and-equity-short-term-reversals.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/e2a2329346baf0de1a31817e28c684dcd69ff649",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/combining-fundamental-fscore-and-equity-short-term-reversals.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/combining-fundamental-fscore-and-equity-short-term-reversals.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/e2a2329346baf0de1a31817e28c684dcd69ff649",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/combining-fundamental-fscore-and-equity-short-term-reversals.py"
+    }
+  },
+  {
+    "name": "combining-smart-factors-momentum-and-market-portfolio.py",
+    "path": "static/strategies/combining-smart-factors-momentum-and-market-portfolio.py",
+    "sha": "21bfe3bcf5d03eabdd90b1d447b38bf333e8005e",
+    "size": 9285,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/combining-smart-factors-momentum-and-market-portfolio.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/combining-smart-factors-momentum-and-market-portfolio.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/21bfe3bcf5d03eabdd90b1d447b38bf333e8005e",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/combining-smart-factors-momentum-and-market-portfolio.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/combining-smart-factors-momentum-and-market-portfolio.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/21bfe3bcf5d03eabdd90b1d447b38bf333e8005e",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/combining-smart-factors-momentum-and-market-portfolio.py"
+    }
+  },
+  {
+    "name": "consistent-momentum-strategy.py",
+    "path": "static/strategies/consistent-momentum-strategy.py",
+    "sha": "043b680b47fdc7f78b503cf39fbedde514ef48ea",
+    "size": 6510,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/consistent-momentum-strategy.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/consistent-momentum-strategy.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/043b680b47fdc7f78b503cf39fbedde514ef48ea",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/consistent-momentum-strategy.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/consistent-momentum-strategy.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/043b680b47fdc7f78b503cf39fbedde514ef48ea",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/consistent-momentum-strategy.py"
+    }
+  },
+  {
+    "name": "crude-oil-predicts-equity-returns.py",
+    "path": "static/strategies/crude-oil-predicts-equity-returns.py",
+    "sha": "4edf99eb33d7cb5672895a9d63122e637ad4f711",
+    "size": 16384,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/crude-oil-predicts-equity-returns.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/crude-oil-predicts-equity-returns.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/4edf99eb33d7cb5672895a9d63122e637ad4f711",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/crude-oil-predicts-equity-returns.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/crude-oil-predicts-equity-returns.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/4edf99eb33d7cb5672895a9d63122e637ad4f711",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/crude-oil-predicts-equity-returns.py"
+    }
+  },
+  {
+    "name": "currency-momentum-factor.py",
+    "path": "static/strategies/currency-momentum-factor.py",
+    "sha": "3186f8cc3ba23cd664d6d9867c208172e7512b16",
+    "size": 3956,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/currency-momentum-factor.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/currency-momentum-factor.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/3186f8cc3ba23cd664d6d9867c208172e7512b16",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/currency-momentum-factor.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/currency-momentum-factor.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/3186f8cc3ba23cd664d6d9867c208172e7512b16",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/currency-momentum-factor.py"
+    }
+  },
+  {
+    "name": "currency-value-factor-ppp-strategy.py",
+    "path": "static/strategies/currency-value-factor-ppp-strategy.py",
+    "sha": "31a8966f506625164f94fcc0b03d34d06e1b27da",
+    "size": 5086,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/currency-value-factor-ppp-strategy.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/currency-value-factor-ppp-strategy.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/31a8966f506625164f94fcc0b03d34d06e1b27da",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/currency-value-factor-ppp-strategy.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/currency-value-factor-ppp-strategy.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/31a8966f506625164f94fcc0b03d34d06e1b27da",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/currency-value-factor-ppp-strategy.py"
+    }
+  },
+  {
+    "name": "dispersion-trading.py",
+    "path": "static/strategies/dispersion-trading.py",
+    "sha": "d0a6597ec11a5bc749d0c3c93ea5ad7e24871f81",
+    "size": 7359,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/dispersion-trading.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/dispersion-trading.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/d0a6597ec11a5bc749d0c3c93ea5ad7e24871f81",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/dispersion-trading.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/dispersion-trading.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/d0a6597ec11a5bc749d0c3c93ea5ad7e24871f81",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/dispersion-trading.py"
+    }
+  },
+  {
+    "name": "dollar-carry-trade.py",
+    "path": "static/strategies/dollar-carry-trade.py",
+    "sha": "c4975b5002bbd7d8819fb9614c024c159aef2295",
+    "size": 5073,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/dollar-carry-trade.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/dollar-carry-trade.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/c4975b5002bbd7d8819fb9614c024c159aef2295",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/dollar-carry-trade.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/dollar-carry-trade.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/c4975b5002bbd7d8819fb9614c024c159aef2295",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/dollar-carry-trade.py"
+    }
+  },
+  {
+    "name": "earnings-announcement-premium.py",
+    "path": "static/strategies/earnings-announcement-premium.py",
+    "sha": "d52bc71a870b7bef109dbbb8754f707bb2e7b40b",
+    "size": 8486,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/earnings-announcement-premium.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/earnings-announcement-premium.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/d52bc71a870b7bef109dbbb8754f707bb2e7b40b",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/earnings-announcement-premium.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/earnings-announcement-premium.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/d52bc71a870b7bef109dbbb8754f707bb2e7b40b",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/earnings-announcement-premium.py"
+    }
+  },
+  {
+    "name": "earnings-announcements-combined-with-stock-repurchases.py",
+    "path": "static/strategies/earnings-announcements-combined-with-stock-repurchases.py",
+    "sha": "e579032edb483ffa3c70531f82b233425287a693",
+    "size": 8417,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/earnings-announcements-combined-with-stock-repurchases.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/earnings-announcements-combined-with-stock-repurchases.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/e579032edb483ffa3c70531f82b233425287a693",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/earnings-announcements-combined-with-stock-repurchases.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/earnings-announcements-combined-with-stock-repurchases.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/e579032edb483ffa3c70531f82b233425287a693",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/earnings-announcements-combined-with-stock-repurchases.py"
+    }
+  },
+  {
+    "name": "earnings-quality-factor.py",
+    "path": "static/strategies/earnings-quality-factor.py",
+    "sha": "03786a5c516fcd1168267a0e40df1fbb1b009844",
+    "size": 11502,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/earnings-quality-factor.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/earnings-quality-factor.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/03786a5c516fcd1168267a0e40df1fbb1b009844",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/earnings-quality-factor.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/earnings-quality-factor.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/03786a5c516fcd1168267a0e40df1fbb1b009844",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/earnings-quality-factor.py"
+    }
+  },
+  {
+    "name": "esg-factor-momentum-strategy.py",
+    "path": "static/strategies/esg-factor-momentum-strategy.py",
+    "sha": "89d7c22a034c7afc20d9751f8ff08f22075dca1e",
+    "size": 8889,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/esg-factor-momentum-strategy.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/esg-factor-momentum-strategy.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/89d7c22a034c7afc20d9751f8ff08f22075dca1e",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/esg-factor-momentum-strategy.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/esg-factor-momentum-strategy.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/89d7c22a034c7afc20d9751f8ff08f22075dca1e",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/esg-factor-momentum-strategy.py"
+    }
+  },
+  {
+    "name": "fed-model.py",
+    "path": "static/strategies/fed-model.py",
+    "sha": "add4c8c78f5bf7c014e996c66bdc84f9731424c5",
+    "size": 5506,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/fed-model.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/fed-model.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/add4c8c78f5bf7c014e996c66bdc84f9731424c5",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/fed-model.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/fed-model.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/add4c8c78f5bf7c014e996c66bdc84f9731424c5",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/fed-model.py"
+    }
+  },
+  {
+    "name": "fx-carry-trade.py",
+    "path": "static/strategies/fx-carry-trade.py",
+    "sha": "f5752afba0acaf6caa203e38e640cc71cbd036f9",
+    "size": 4776,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/fx-carry-trade.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/fx-carry-trade.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/f5752afba0acaf6caa203e38e640cc71cbd036f9",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/fx-carry-trade.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/fx-carry-trade.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/f5752afba0acaf6caa203e38e640cc71cbd036f9",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/fx-carry-trade.py"
+    }
+  },
+  {
+    "name": "how-to-use-lexical-density-of-company-filings.py",
+    "path": "static/strategies/how-to-use-lexical-density-of-company-filings.py",
+    "sha": "5b1a89826ba813f6e35dc10776708e72db1186f3",
+    "size": 10467,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/how-to-use-lexical-density-of-company-filings.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/how-to-use-lexical-density-of-company-filings.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/5b1a89826ba813f6e35dc10776708e72db1186f3",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/how-to-use-lexical-density-of-company-filings.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/how-to-use-lexical-density-of-company-filings.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/5b1a89826ba813f6e35dc10776708e72db1186f3",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/how-to-use-lexical-density-of-company-filings.py"
+    }
+  },
+  {
+    "name": "intraday-seasonality-in-bitcoin.py",
+    "path": "static/strategies/intraday-seasonality-in-bitcoin.py",
+    "sha": "a9739ad7618c5576da10211a4faeefdb0186136c",
+    "size": 1788,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/intraday-seasonality-in-bitcoin.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/intraday-seasonality-in-bitcoin.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/a9739ad7618c5576da10211a4faeefdb0186136c",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/intraday-seasonality-in-bitcoin.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/intraday-seasonality-in-bitcoin.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/a9739ad7618c5576da10211a4faeefdb0186136c",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/intraday-seasonality-in-bitcoin.py"
+    }
+  },
+  {
+    "name": "january-barometer.py",
+    "path": "static/strategies/january-barometer.py",
+    "sha": "7762a9a35d30d1a6246c32f944cccd9e730e8bc6",
+    "size": 2076,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/january-barometer.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/january-barometer.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/7762a9a35d30d1a6246c32f944cccd9e730e8bc6",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/january-barometer.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/january-barometer.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/7762a9a35d30d1a6246c32f944cccd9e730e8bc6",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/january-barometer.py"
+    }
+  },
+  {
+    "name": "low-volatility-factor-effect-in-stocks.py",
+    "path": "static/strategies/low-volatility-factor-effect-in-stocks.py",
+    "sha": "b3fc633ad9ea35804a51d177c5f880b0e5fa90b6",
+    "size": 4866,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/low-volatility-factor-effect-in-stocks.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/low-volatility-factor-effect-in-stocks.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/b3fc633ad9ea35804a51d177c5f880b0e5fa90b6",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/low-volatility-factor-effect-in-stocks.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/low-volatility-factor-effect-in-stocks.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/b3fc633ad9ea35804a51d177c5f880b0e5fa90b6",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/low-volatility-factor-effect-in-stocks.py"
+    }
+  },
+  {
+    "name": "market-sentiment-and-an-overnight-anomaly.py",
+    "path": "static/strategies/market-sentiment-and-an-overnight-anomaly.py",
+    "sha": "3d26c83d302752762d0a03930ff61742e3a08431",
+    "size": 4367,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/market-sentiment-and-an-overnight-anomaly.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/market-sentiment-and-an-overnight-anomaly.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/3d26c83d302752762d0a03930ff61742e3a08431",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/market-sentiment-and-an-overnight-anomaly.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/market-sentiment-and-an-overnight-anomaly.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/3d26c83d302752762d0a03930ff61742e3a08431",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/market-sentiment-and-an-overnight-anomaly.py"
+    }
+  },
+  {
+    "name": "momentum-and-reversal-combined-with-volatility-effect-in-stocks.py",
+    "path": "static/strategies/momentum-and-reversal-combined-with-volatility-effect-in-stocks.py",
+    "sha": "75120f9f9b1bb545c81cc32b5278218ddfb0a6ea",
+    "size": 8902,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/momentum-and-reversal-combined-with-volatility-effect-in-stocks.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/momentum-and-reversal-combined-with-volatility-effect-in-stocks.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/75120f9f9b1bb545c81cc32b5278218ddfb0a6ea",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/momentum-and-reversal-combined-with-volatility-effect-in-stocks.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/momentum-and-reversal-combined-with-volatility-effect-in-stocks.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/75120f9f9b1bb545c81cc32b5278218ddfb0a6ea",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/momentum-and-reversal-combined-with-volatility-effect-in-stocks.py"
+    }
+  },
+  {
+    "name": "momentum-effect-in-commodities.py",
+    "path": "static/strategies/momentum-effect-in-commodities.py",
+    "sha": "65919141c55f8a41949271b109c6665ac2f52b2c",
+    "size": 5491,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/momentum-effect-in-commodities.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/momentum-effect-in-commodities.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/65919141c55f8a41949271b109c6665ac2f52b2c",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/momentum-effect-in-commodities.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/momentum-effect-in-commodities.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/65919141c55f8a41949271b109c6665ac2f52b2c",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/momentum-effect-in-commodities.py"
+    }
+  },
+  {
+    "name": "momentum-factor-and-style-rotation-effect.py",
+    "path": "static/strategies/momentum-factor-and-style-rotation-effect.py",
+    "sha": "818ba439c369a4914208a17e23748d8e7e26622b",
+    "size": 2988,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/momentum-factor-and-style-rotation-effect.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/momentum-factor-and-style-rotation-effect.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/818ba439c369a4914208a17e23748d8e7e26622b",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/momentum-factor-and-style-rotation-effect.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/momentum-factor-and-style-rotation-effect.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/818ba439c369a4914208a17e23748d8e7e26622b",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/momentum-factor-and-style-rotation-effect.py"
+    }
+  },
+  {
+    "name": "momentum-factor-combined-with-asset-growth-effect.py",
+    "path": "static/strategies/momentum-factor-combined-with-asset-growth-effect.py",
+    "sha": "44ef9824efa7b6614f4fbcc5eba5e1328f0978f2",
+    "size": 8965,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/momentum-factor-combined-with-asset-growth-effect.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/momentum-factor-combined-with-asset-growth-effect.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/44ef9824efa7b6614f4fbcc5eba5e1328f0978f2",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/momentum-factor-combined-with-asset-growth-effect.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/momentum-factor-combined-with-asset-growth-effect.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/44ef9824efa7b6614f4fbcc5eba5e1328f0978f2",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/momentum-factor-combined-with-asset-growth-effect.py"
+    }
+  },
+  {
+    "name": "momentum-factor-effect-in-stocks.py",
+    "path": "static/strategies/momentum-factor-effect-in-stocks.py",
+    "sha": "072952d0dd2e37bc0675afc30fe0675f0599b068",
+    "size": 4886,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/momentum-factor-effect-in-stocks.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/momentum-factor-effect-in-stocks.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/072952d0dd2e37bc0675afc30fe0675f0599b068",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/momentum-factor-effect-in-stocks.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/momentum-factor-effect-in-stocks.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/072952d0dd2e37bc0675afc30fe0675f0599b068",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/momentum-factor-effect-in-stocks.py"
+    }
+  },
+  {
+    "name": "momentum-in-mutual-fund-returns.py",
+    "path": "static/strategies/momentum-in-mutual-fund-returns.py",
+    "sha": "92b8d88724e3487e5b40683b32df2970c027896c",
+    "size": 4757,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/momentum-in-mutual-fund-returns.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/momentum-in-mutual-fund-returns.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/92b8d88724e3487e5b40683b32df2970c027896c",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/momentum-in-mutual-fund-returns.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/momentum-in-mutual-fund-returns.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/92b8d88724e3487e5b40683b32df2970c027896c",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/momentum-in-mutual-fund-returns.py"
+    }
+  },
+  {
+    "name": "option-expiration-week-effect.py",
+    "path": "static/strategies/option-expiration-week-effect.py",
+    "sha": "edf6c32bd5059ce52242b6bc91e5103acc314d1a",
+    "size": 1387,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/option-expiration-week-effect.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/option-expiration-week-effect.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/edf6c32bd5059ce52242b6bc91e5103acc314d1a",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/option-expiration-week-effect.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/option-expiration-week-effect.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/edf6c32bd5059ce52242b6bc91e5103acc314d1a",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/option-expiration-week-effect.py"
+    }
+  },
+  {
+    "name": "paired-switching.py",
+    "path": "static/strategies/paired-switching.py",
+    "sha": "baa7cff96e9eb13ee0fddca556d079b80893d17c",
+    "size": 2900,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/paired-switching.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/paired-switching.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/baa7cff96e9eb13ee0fddca556d079b80893d17c",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/paired-switching.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/paired-switching.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/baa7cff96e9eb13ee0fddca556d079b80893d17c",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/paired-switching.py"
+    }
+  },
+  {
+    "name": "pairs-trading-with-country-etfs.py",
+    "path": "static/strategies/pairs-trading-with-country-etfs.py",
+    "sha": "98f94201408f7162e748243b430ad9bfb8f07358",
+    "size": 9680,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/pairs-trading-with-country-etfs.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/pairs-trading-with-country-etfs.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/98f94201408f7162e748243b430ad9bfb8f07358",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/pairs-trading-with-country-etfs.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/pairs-trading-with-country-etfs.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/98f94201408f7162e748243b430ad9bfb8f07358",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/pairs-trading-with-country-etfs.py"
+    }
+  },
+  {
+    "name": "pairs-trading-with-stocks",
+    "path": "static/strategies/pairs-trading-with-stocks",
+    "sha": "4112a3fc4708d26f7bc0a8151118071e29325e0a",
+    "size": 8920,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/pairs-trading-with-stocks?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/pairs-trading-with-stocks",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/4112a3fc4708d26f7bc0a8151118071e29325e0a",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/pairs-trading-with-stocks",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/pairs-trading-with-stocks?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/4112a3fc4708d26f7bc0a8151118071e29325e0a",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/pairs-trading-with-stocks"
+    }
+  },
+  {
+    "name": "payday-anomaly.py",
+    "path": "static/strategies/payday-anomaly.py",
+    "sha": "c1770db86bbf18de089197c529bdddbff973fe75",
+    "size": 1591,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/payday-anomaly.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/payday-anomaly.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/c1770db86bbf18de089197c529bdddbff973fe75",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/payday-anomaly.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/payday-anomaly.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/c1770db86bbf18de089197c529bdddbff973fe75",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/payday-anomaly.py"
+    }
+  },
+  {
+    "name": "rd-expenditures-and-stock-returns.py",
+    "path": "static/strategies/rd-expenditures-and-stock-returns.py",
+    "sha": "05b3741ad3b4b44c491a7daa9c7ada34fe01fdfd",
+    "size": 6834,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/rd-expenditures-and-stock-returns.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/rd-expenditures-and-stock-returns.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/05b3741ad3b4b44c491a7daa9c7ada34fe01fdfd",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/rd-expenditures-and-stock-returns.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/rd-expenditures-and-stock-returns.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/05b3741ad3b4b44c491a7daa9c7ada34fe01fdfd",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/rd-expenditures-and-stock-returns.py"
+    }
+  },
+  {
+    "name": "rebalancing-premium-in-cryptocurrencies.py",
+    "path": "static/strategies/rebalancing-premium-in-cryptocurrencies.py",
+    "sha": "80a6eed6be35e9c4b6083c6ad9a287ff94b39ea6",
+    "size": 5508,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/rebalancing-premium-in-cryptocurrencies.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/rebalancing-premium-in-cryptocurrencies.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/80a6eed6be35e9c4b6083c6ad9a287ff94b39ea6",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/rebalancing-premium-in-cryptocurrencies.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/rebalancing-premium-in-cryptocurrencies.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/80a6eed6be35e9c4b6083c6ad9a287ff94b39ea6",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/rebalancing-premium-in-cryptocurrencies.py"
+    }
+  },
+  {
+    "name": "residual-momentum-factor.py",
+    "path": "static/strategies/residual-momentum-factor.py",
+    "sha": "ce65ff21e7566823a8b2cf1599d1301695d1b32f",
+    "size": 11702,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/residual-momentum-factor.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/residual-momentum-factor.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/ce65ff21e7566823a8b2cf1599d1301695d1b32f",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/residual-momentum-factor.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/residual-momentum-factor.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/ce65ff21e7566823a8b2cf1599d1301695d1b32f",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/residual-momentum-factor.py"
+    }
+  },
+  {
+    "name": "return-asymmetry-effect-in-commodity-futures.py",
+    "path": "static/strategies/return-asymmetry-effect-in-commodity-futures.py",
+    "sha": "0db16ee42948b2f0ce9485cbbded08c2006e90e3",
+    "size": 8390,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/return-asymmetry-effect-in-commodity-futures.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/return-asymmetry-effect-in-commodity-futures.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/0db16ee42948b2f0ce9485cbbded08c2006e90e3",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/return-asymmetry-effect-in-commodity-futures.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/return-asymmetry-effect-in-commodity-futures.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/0db16ee42948b2f0ce9485cbbded08c2006e90e3",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/return-asymmetry-effect-in-commodity-futures.py"
+    }
+  },
+  {
+    "name": "reversal-during-earnings-announcements.py",
+    "path": "static/strategies/reversal-during-earnings-announcements.py",
+    "sha": "14c261e03609cf7ae01ed3797701bba97931a166",
+    "size": 9702,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/reversal-during-earnings-announcements.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/reversal-during-earnings-announcements.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/14c261e03609cf7ae01ed3797701bba97931a166",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/reversal-during-earnings-announcements.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/reversal-during-earnings-announcements.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/14c261e03609cf7ae01ed3797701bba97931a166",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/reversal-during-earnings-announcements.py"
+    }
+  },
+  {
+    "name": "roa-effect-within-stocks.py",
+    "path": "static/strategies/roa-effect-within-stocks.py",
+    "sha": "98a726c1d8a6b106ca6f3644207658adc9c98b1b",
+    "size": 4835,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/roa-effect-within-stocks.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/roa-effect-within-stocks.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/98a726c1d8a6b106ca6f3644207658adc9c98b1b",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/roa-effect-within-stocks.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/roa-effect-within-stocks.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/98a726c1d8a6b106ca6f3644207658adc9c98b1b",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/roa-effect-within-stocks.py"
+    }
+  },
+  {
+    "name": "sector-momentum-rotational-system.py",
+    "path": "static/strategies/sector-momentum-rotational-system.py",
+    "sha": "c63d421bfe2906be110c8d5cd050e653a8ed6583",
+    "size": 2858,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/sector-momentum-rotational-system.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/sector-momentum-rotational-system.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/c63d421bfe2906be110c8d5cd050e653a8ed6583",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/sector-momentum-rotational-system.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/sector-momentum-rotational-system.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/c63d421bfe2906be110c8d5cd050e653a8ed6583",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/sector-momentum-rotational-system.py"
+    }
+  },
+  {
+    "name": "short-interest-effect-long-short-version.py",
+    "path": "static/strategies/short-interest-effect-long-short-version.py",
+    "sha": "d102ad8f08dc00741f3eff246092769c41deda61",
+    "size": 4827,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/short-interest-effect-long-short-version.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/short-interest-effect-long-short-version.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/d102ad8f08dc00741f3eff246092769c41deda61",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/short-interest-effect-long-short-version.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/short-interest-effect-long-short-version.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/d102ad8f08dc00741f3eff246092769c41deda61",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/short-interest-effect-long-short-version.py"
+    }
+  },
+  {
+    "name": "short-term-reversal-in-stocks.py",
+    "path": "static/strategies/short-term-reversal-in-stocks.py",
+    "sha": "62a3d0ab119ad3a1a51673dd6bcd4a6090656897",
+    "size": 5944,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/short-term-reversal-in-stocks.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/short-term-reversal-in-stocks.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/62a3d0ab119ad3a1a51673dd6bcd4a6090656897",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/short-term-reversal-in-stocks.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/short-term-reversal-in-stocks.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/62a3d0ab119ad3a1a51673dd6bcd4a6090656897",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/short-term-reversal-in-stocks.py"
+    }
+  },
+  {
+    "name": "short-term-reversal-with-futures.py",
+    "path": "static/strategies/short-term-reversal-with-futures.py",
+    "sha": "129bc653c80530794f4ffc23384ecbada455b277",
+    "size": 12454,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/short-term-reversal-with-futures.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/short-term-reversal-with-futures.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/129bc653c80530794f4ffc23384ecbada455b277",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/short-term-reversal-with-futures.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/short-term-reversal-with-futures.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/129bc653c80530794f4ffc23384ecbada455b277",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/short-term-reversal-with-futures.py"
+    }
+  },
+  {
+    "name": "skewness-effect-in-commodities.py",
+    "path": "static/strategies/skewness-effect-in-commodities.py",
+    "sha": "4899d47b9b9829cacc81a775461edb7d4cb0e972",
+    "size": 6608,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/skewness-effect-in-commodities.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/skewness-effect-in-commodities.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/4899d47b9b9829cacc81a775461edb7d4cb0e972",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/skewness-effect-in-commodities.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/skewness-effect-in-commodities.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/4899d47b9b9829cacc81a775461edb7d4cb0e972",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/skewness-effect-in-commodities.py"
+    }
+  },
+  {
+    "name": "small-capitalization-stocks-premium-anomaly.py",
+    "path": "static/strategies/small-capitalization-stocks-premium-anomaly.py",
+    "sha": "dd388802a8158d696d39cf5accdeba9e67f11f35",
+    "size": 3452,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/small-capitalization-stocks-premium-anomaly.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/small-capitalization-stocks-premium-anomaly.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/dd388802a8158d696d39cf5accdeba9e67f11f35",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/small-capitalization-stocks-premium-anomaly.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/small-capitalization-stocks-premium-anomaly.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/dd388802a8158d696d39cf5accdeba9e67f11f35",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/small-capitalization-stocks-premium-anomaly.py"
+    }
+  },
+  {
+    "name": "soccer-clubs-stocks-arbitrage.py",
+    "path": "static/strategies/soccer-clubs-stocks-arbitrage.py",
+    "sha": "a1823ddd6009de7589821e8eaee6442d3caea533",
+    "size": 3392,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/soccer-clubs-stocks-arbitrage.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/soccer-clubs-stocks-arbitrage.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/a1823ddd6009de7589821e8eaee6442d3caea533",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/soccer-clubs-stocks-arbitrage.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/soccer-clubs-stocks-arbitrage.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/a1823ddd6009de7589821e8eaee6442d3caea533",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/soccer-clubs-stocks-arbitrage.py"
+    }
+  },
+  {
+    "name": "synthetic-lending-rates-predict-subsequent-market-return.py",
+    "path": "static/strategies/synthetic-lending-rates-predict-subsequent-market-return.py",
+    "sha": "a06330697a23b228799d65cd191ad1041a06ee1d",
+    "size": 3298,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/synthetic-lending-rates-predict-subsequent-market-return.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/synthetic-lending-rates-predict-subsequent-market-return.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/a06330697a23b228799d65cd191ad1041a06ee1d",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/synthetic-lending-rates-predict-subsequent-market-return.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/synthetic-lending-rates-predict-subsequent-market-return.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/a06330697a23b228799d65cd191ad1041a06ee1d",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/synthetic-lending-rates-predict-subsequent-market-return.py"
+    }
+  },
+  {
+    "name": "term-structure-effect-in-commodities.py",
+    "path": "static/strategies/term-structure-effect-in-commodities.py",
+    "sha": "3e2e08526c395df3c66dc39dc9394df76d14d80d",
+    "size": 8320,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/term-structure-effect-in-commodities.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/term-structure-effect-in-commodities.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/3e2e08526c395df3c66dc39dc9394df76d14d80d",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/term-structure-effect-in-commodities.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/term-structure-effect-in-commodities.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/3e2e08526c395df3c66dc39dc9394df76d14d80d",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/term-structure-effect-in-commodities.py"
+    }
+  },
+  {
+    "name": "time-series-momentum-effect.py",
+    "path": "static/strategies/time-series-momentum-effect.py",
+    "sha": "981d6d51c541ca716ada8598360b2a2bde55e8b3",
+    "size": 10850,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/time-series-momentum-effect.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/time-series-momentum-effect.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/981d6d51c541ca716ada8598360b2a2bde55e8b3",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/time-series-momentum-effect.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/time-series-momentum-effect.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/981d6d51c541ca716ada8598360b2a2bde55e8b3",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/time-series-momentum-effect.py"
+    }
+  },
+  {
+    "name": "trading-wti-brent-spread.py",
+    "path": "static/strategies/trading-wti-brent-spread.py",
+    "sha": "e6b91888df2fcde5fd1dbef4f047ec3a87215163",
+    "size": 3508,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/trading-wti-brent-spread.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/trading-wti-brent-spread.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/e6b91888df2fcde5fd1dbef4f047ec3a87215163",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/trading-wti-brent-spread.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/trading-wti-brent-spread.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/e6b91888df2fcde5fd1dbef4f047ec3a87215163",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/trading-wti-brent-spread.py"
+    }
+  },
+  {
+    "name": "trend-following-effect-in-stocks.py",
+    "path": "static/strategies/trend-following-effect-in-stocks.py",
+    "sha": "5cd79b82b75ea1716d2ed2143b195bfdb9307cb6",
+    "size": 5122,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/trend-following-effect-in-stocks.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/trend-following-effect-in-stocks.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/5cd79b82b75ea1716d2ed2143b195bfdb9307cb6",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/trend-following-effect-in-stocks.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/trend-following-effect-in-stocks.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/5cd79b82b75ea1716d2ed2143b195bfdb9307cb6",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/trend-following-effect-in-stocks.py"
+    }
+  },
+  {
+    "name": "turn-of-the-month-in-equity-indexes.py",
+    "path": "static/strategies/turn-of-the-month-in-equity-indexes.py",
+    "sha": "9c128fbe783702d3335f2c737b8abf3d1458cbbe",
+    "size": 1147,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/turn-of-the-month-in-equity-indexes.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/turn-of-the-month-in-equity-indexes.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/9c128fbe783702d3335f2c737b8abf3d1458cbbe",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/turn-of-the-month-in-equity-indexes.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/turn-of-the-month-in-equity-indexes.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/9c128fbe783702d3335f2c737b8abf3d1458cbbe",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/turn-of-the-month-in-equity-indexes.py"
+    }
+  },
+  {
+    "name": "value-and-momentum-factors-across-asset-classes.py",
+    "path": "static/strategies/value-and-momentum-factors-across-asset-classes.py",
+    "sha": "ded2667e72ce4d6ffcfb2210375b3fc9500e3966",
+    "size": 14383,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/value-and-momentum-factors-across-asset-classes.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/value-and-momentum-factors-across-asset-classes.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/ded2667e72ce4d6ffcfb2210375b3fc9500e3966",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/value-and-momentum-factors-across-asset-classes.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/value-and-momentum-factors-across-asset-classes.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/ded2667e72ce4d6ffcfb2210375b3fc9500e3966",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/value-and-momentum-factors-across-asset-classes.py"
+    }
+  },
+  {
+    "name": "value-book-to-market-factor.py",
+    "path": "static/strategies/value-book-to-market-factor.py",
+    "sha": "de006b7e74df99fac0eb856dd79df17d4ca444b1",
+    "size": 3723,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/value-book-to-market-factor.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/value-book-to-market-factor.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/de006b7e74df99fac0eb856dd79df17d4ca444b1",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/value-book-to-market-factor.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/value-book-to-market-factor.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/de006b7e74df99fac0eb856dd79df17d4ca444b1",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/value-book-to-market-factor.py"
+    }
+  },
+  {
+    "name": "value-factor-effect-within-countries.py",
+    "path": "static/strategies/value-factor-effect-within-countries.py",
+    "sha": "b8701f758beb3727ff9f8550d883635281b07db5",
+    "size": 6877,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/value-factor-effect-within-countries.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/value-factor-effect-within-countries.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/b8701f758beb3727ff9f8550d883635281b07db5",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/value-factor-effect-within-countries.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/value-factor-effect-within-countries.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/b8701f758beb3727ff9f8550d883635281b07db5",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/value-factor-effect-within-countries.py"
+    }
+  },
+  {
+    "name": "volatility-risk-premium-effect.py",
+    "path": "static/strategies/volatility-risk-premium-effect.py",
+    "sha": "ef94979ad266172618eb95210ee76f7d78748283",
+    "size": 3569,
+    "url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/volatility-risk-premium-effect.py?ref=main",
+    "html_url": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/volatility-risk-premium-effect.py",
+    "git_url": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/ef94979ad266172618eb95210ee76f7d78748283",
+    "download_url": "https://raw.githubusercontent.com/paperswithbacktest/awesome-systematic-trading/main/static/strategies/volatility-risk-premium-effect.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/contents/static/strategies/volatility-risk-premium-effect.py?ref=main",
+      "git": "https://api.github.com/repos/paperswithbacktest/awesome-systematic-trading/git/blobs/ef94979ad266172618eb95210ee76f7d78748283",
+      "html": "https://github.com/paperswithbacktest/awesome-systematic-trading/blob/main/static/strategies/volatility-risk-premium-effect.py"
+    }
+  }
+]

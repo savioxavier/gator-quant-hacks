@@ -1,0 +1,158 @@
+{
+  "calendar": {
+    "their_n": 3712,
+    "our_n": 3712,
+    "only_theirs": [],
+    "only_ours": []
+  },
+  "TLT": {
+    "their_adjopen_vs_open_x_adjfactor_max_rel": 6.661338147750939e-16,
+    "their_ret_equals_adjopen_o2o_max_abs": 5.360295540768334e-16,
+    "their_adj_factor_first_last": [
+      0.6107330913040022,
+      0.9152620071166014
+    ],
+    "ann_total_minus_price_return_o2o": 0.027448209378194425,
+    "n_common": 3712,
+    "close_ratio_theirs_over_ours_median": 1.0,
+    "close_ratio_max_dev_bp": 0.018508654326954144,
+    "open_ratio_max_dev_bp": 0.018508654326954144,
+    "unadjusted_close_vs_ours_last_day": [
+      97.66000366210938,
+      89.3844985961914
+    ],
+    "o2o_ret_diff_max_abs_bp": 0.024186540294526826,
+    "o2o_ret_diff_n_gt_0p5bp": 0,
+    "o2o_ret_diff_mean_bp_per_year": -0.0004244079134532723,
+    "o2o_ret_corr": 0.9999999984007475,
+    "largest_diffs_bp": {
+      "2010-03-24": 0.024186540294526826,
+      "2011-05-19": 0.023702418147728693,
+      "2010-07-28": 0.022176334900344055,
+      "2011-04-18": 0.021867167400730497,
+      "2010-03-23": 0.021827515207083897
+    }
+  },
+  "UUP": {
+    "their_adjopen_vs_open_x_adjfactor_max_rel": 6.661338147750939e-16,
+    "their_ret_equals_adjopen_o2o_max_abs": 5.212844045310305e-16,
+    "their_adj_factor_first_last": [
+      0.8354005569424704,
+      0.9252210615046108
+    ],
+    "ann_total_minus_price_return_o2o": 0.0068011609237631394,
+    "n_common": 3712,
+    "close_ratio_theirs_over_ours_median": 1.0,
+    "close_ratio_max_dev_bp": 0.003000202813963071,
+    "open_ratio_max_dev_bp": 0.003000202813963071,
+    "unadjusted_close_vs_ours_last_day": [
+      28.420000076293945,
+      26.294782638549805
+    ],
+    "o2o_ret_diff_max_abs_bp": 0.0048856264840213895,
+    "o2o_ret_diff_n_gt_0p5bp": 0,
+    "o2o_ret_diff_mean_bp_per_year": -1.4255943115250433e-05,
+    "o2o_ret_corr": 0.9999999996923026,
+    "largest_diffs_bp": {
+      "2014-11-21": 0.0048856264840213895,
+      "2015-02-17": 0.004596818631574795,
+      "2013-08-20": 0.004180659935082605,
+      "2012-09-28": 0.0041768384669818755,
+      "2013-02-11": 0.004169200624448959
+    }
+  },
+  "what_if_price_basis": {
+    "adjusted_opens": {
+      "sharpe_1x": 0.20531181548436497,
+      "sharpe_tlt_1x": 0.21406893647344846
+    },
+    "UNADJUSTED_opens": {
+      "sharpe_1x": 0.25042404502057014,
+      "sharpe_tlt_1x": 0.27904699803179134
+    }
+  },
+  "DGS2": {
+    "their_range": [
+      "2010-01-04",
+      "2024-10-02"
+    ],
+    "n_common": 3692,
+    "max_abs_diff_pct_pts": 0.0,
+    "n_diff_gt_0": 0,
+    "their_nan": 1
+  },
+  "FOMC": {
+    "n_dates": 117,
+    "per_year": {
+      "2011": 8,
+      "2012": 9,
+      "2013": 8,
+      "2014": 8,
+      "2015": 8,
+      "2016": 8,
+      "2017": 8,
+      "2018": 8,
+      "2019": 9,
+      "2020": 13,
+      "2021": 8,
+      "2022": 8,
+      "2023": 8,
+      "2024": 6
+    },
+    "non_decision_press_release_dates_in_file": [
+      "2012-10-23",
+      "2019-10-11",
+      "2020-03-19",
+      "2020-03-23",
+      "2020-03-31",
+      "2020-08-27"
+    ],
+    "non_session_dates": [
+      "2020-03-15"
+    ]
+  },
+  "speeches": {
+    "n_docs": 825,
+    "n_kept": 378,
+    "n_kept_is": 368,
+    "n_kept_after_is": 10,
+    "last_kept_date": "2024-12-03",
+    "last_doc_date": "2024-12-03",
+    "HD_median_all_docs": 3.0,
+    "s_recomputed_from_H_D_max_abs_diff": 1.1102230246251565e-16,
+    "kept_mean_s_by_year": {
+      "2011": -0.585,
+      "2012": -0.598,
+      "2013": -0.593,
+      "2014": -0.492,
+      "2015": -0.325,
+      "2016": -0.521,
+      "2017": -0.227,
+      "2018": -0.404,
+      "2019": -0.514,
+      "2020": -0.628,
+      "2021": -0.487,
+      "2022": 0.194,
+      "2023": 0.291,
+      "2024": -0.309
+    },
+    "kept_n_by_year": {
+      "2011": 24,
+      "2012": 20,
+      "2013": 21,
+      "2014": 16,
+      "2015": 20,
+      "2016": 26,
+      "2017": 26,
+      "2018": 18,
+      "2019": 38,
+      "2020": 20,
+      "2021": 34,
+      "2022": 24,
+      "2023": 38,
+      "2024": 53
+    },
+    "same_date_multi_docs": 37,
+    "weekend_dated_kept": 17
+  }
+}

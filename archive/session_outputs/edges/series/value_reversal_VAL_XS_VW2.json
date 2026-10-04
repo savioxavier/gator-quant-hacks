@@ -1,0 +1,18 @@
+{
+  "candidate": "value_reversal_VAL_XS_VW2",
+  "rule": "(a) variant: as VW1 with signal log(level t-60m) - log(level t)",
+  "spec": "edges/value_reversal/SPEC.md",
+  "columns": "daily excess return over the 3-month T-bill (futures index return includes T-bill accrual; rf subtracted)",
+  "costs": "realistic one-way bp: ES/NQ/YM 0.75, RTY 1.0, ZN 1.0, FX 0.75, CL/GC/SI/HG 1.5, NG/HO/RB/PL 2.5, ZC/ZS/ZW/ZL/ZM/LE/HE 4.0, IEF 3.0; roll days add one round trip; net_2x doubles every cost",
+  "execution": "decision at month-end close d, filled at the close of d+1 (engine next_close)",
+  "vol_scaling": "10% annualised ex-ante vol at each monthly decision using the sample covariance of the trailing 252 daily excess returns (min 60); instrument risk units use EWMA vol (centre of mass 60); gross <= 5",
+  "in_sample": [
+    "2016-01-05",
+    "2024-10-02"
+  ],
+  "later_window_descriptive": [
+    "2024-10-03",
+    "2026-10-02"
+  ],
+  "primary": false
+}

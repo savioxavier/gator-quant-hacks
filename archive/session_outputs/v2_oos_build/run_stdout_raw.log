@@ -1,0 +1,30 @@
+{
+ "chosen": "T4xE1",
+ "selection_sharpe_net1x": 0.15373040268964683,
+ "validation_sharpe_net1x": 0.6868265090540633,
+ "full_is_sharpe_net2x": 0.38717212451165833,
+ "decision_rule_passed": false
+}
+Decision rule failed (verdict stands); deviation D-3: out-of-sample evaluated once for reporting.
+OOS (evaluated once): {
+ "chosen": "T4xE1",
+ "window": [
+  "2024-10-03",
+  "2026-10-02"
+ ],
+ "evaluated_once_utc": "2026-10-04T01:22:57.194710+00:00",
+ "is_consistency_max_abs_diff": 0.0,
+ "start": "2024-10-03",
+ "end": "2026-10-02",
+ "n_days": 501,
+ "sharpe_net1x": 0.6073365581248797,
+ "sharpe_net2x": 0.5435449927490899,
+ "sharpe_gross": 0.6865896933635945,
+ "ann_excess_arith": 0.03824334967367566,
+ "ann_excess_geo": 0.036929613895262836,
+ "vol": 0.06296895709975048,
+ "max_dd_excess": -0.06647745134678906,
+ "nw_t": 0.8418206935738645,
+ "turnover_per_year": 17.661913591053864,
+ "authorised_by": "deviation D-3 (v2_DEVIATION_D3_OOS.md, sha256 97585d3ca3e7f5764d16e24787486c51ca298dd95ca57ad82d27e1ba30af1c69): reported once although the decision rule failed; the failed verdict stands"
+}

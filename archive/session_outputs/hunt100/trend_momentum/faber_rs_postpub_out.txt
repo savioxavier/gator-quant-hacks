@@ -1,0 +1,37 @@
+== Faber sample 1928-01..2009-12
+   EW10 excess          SR 0.43 (mu 7.9%, vol 18.5%, n=984)
+   Faber top3 excess    SR 0.59 (mu 10.9%, vol 18.6%, n=984)
+   top3 minus EW10      SR 0.43 (mu 3.0%, vol 7.1%, n=984)
+   top3 hedged excess   SR 0.66 (mu 9.6%, vol 14.5%, n=984)
+   MG 6m top3-bottom3   SR 0.41 (mu 5.4%, vol 13.2%, n=984)
+== MG sample 1963-07..1995-07
+   EW10 excess          SR 0.40 (mu 5.9%, vol 14.6%, n=385)
+   Faber top3 excess    SR 0.54 (mu 8.1%, vol 15.0%, n=385)
+   top3 minus EW10      SR 0.42 (mu 2.3%, vol 5.4%, n=385)
+   top3 hedged excess   SR 0.52 (mu 6.6%, vol 12.7%, n=385)
+   MG 6m top3-bottom3   SR 0.42 (mu 4.2%, vol 10.1%, n=385)
+== post-MG 1999-08..2026
+   EW10 excess          SR 0.55 (mu 8.2%, vol 14.9%, n=325)
+   Faber top3 excess    SR 0.64 (mu 10.4%, vol 16.2%, n=325)
+   top3 minus EW10      SR 0.25 (mu 2.2%, vol 8.8%, n=325)
+   top3 hedged excess   SR 0.72 (mu 9.3%, vol 13.0%, n=325)
+   MG 6m top3-bottom3   SR 0.25 (mu 4.1%, vol 16.6%, n=325)
+== post-Faber 2010-01..2026
+   EW10 excess          SR 0.84 (mu 12.3%, vol 14.5%, n=200)
+   Faber top3 excess    SR 0.89 (mu 14.8%, vol 16.5%, n=200)
+   top3 minus EW10      SR 0.30 (mu 2.5%, vol 8.3%, n=200)
+   top3 hedged excess   SR 0.70 (mu 10.0%, vol 14.1%, n=200)
+   MG 6m top3-bottom3   SR 0.18 (mu 2.9%, vol 15.8%, n=200)
+== 2016-01..2024-09
+   EW10 excess          SR 0.73 (mu 11.9%, vol 16.2%, n=105)
+   Faber top3 excess    SR 0.86 (mu 16.1%, vol 18.7%, n=105)
+   top3 minus EW10      SR 0.47 (mu 4.2%, vol 9.0%, n=105)
+   top3 hedged excess   SR 0.72 (mu 11.2%, vol 15.6%, n=105)
+   MG 6m top3-bottom3   SR 0.47 (mu 7.8%, vol 16.6%, n=105)
+== 2003-2024-09 (our ETF IS span)
+   EW10 excess          SR 0.70 (mu 10.5%, vol 15.0%, n=261)
+   Faber top3 excess    SR 0.82 (mu 13.4%, vol 16.2%, n=261)
+   top3 minus EW10      SR 0.37 (mu 2.8%, vol 7.7%, n=261)
+   top3 hedged excess   SR 0.90 (mu 11.7%, vol 13.1%, n=261)
+   MG 6m top3-bottom3   SR 0.35 (mu 5.2%, vol 14.7%, n=261)
+last month in data: 2026-08

@@ -1,0 +1,91 @@
+### 01 Abstract.html
+In this tutorial, we implement an intraday arbitrage strategy that capitalizes on deviations between two closely correlated 
+ index ETFs. Even though at times both ETFs may hold different constituents and different weights of securities while tracking 
+ the index, they are both highly correlated and extremely liquid. Researchers have shown these two properties are essential to 
+ an arbitrage system's success. The algorithm we implement here is inspired by the work of Kakushadze and Serur (2018) and 
+ Marshall, Nguyen, and Visaltanachoti (2010).
+### 03 Method.html
+Universe Selection 
+ We implement a manual universe selection model that includes our two ETFs, SPY and IVV. The attached research notebook finds 
+ the correlation of daily returns to be >0.99.
+tickers = ['IVV', 'SPY']
+symbols = [ Symbol.Create(t, SecurityType.Equity, Market.USA) for t in tickers ]
+self.SetUniverseSelection( ManualUniverseSelectionModel(symbols) )
+Spread Adjustments 
+ Plotting the ratio of the security prices shows its trending behavior.
+ Without adjusting this ratio over time, an arbitrage system would be stuck in a single trade for majority of the backtest. To 
+ resolve this, we subtract a trailing mean from each data point.
+ Both of the above plots can be reproduced in the attached research notebook. During backtesting, this adjustment is done 
+ during trading by setting up a 
+ QuoteBarConsolidator for each security in our 
+ universe. On each new consolidated QuoteBar , we 
+ update the trailing window of L1 data, then calculate the latest spread adjustment values.
+# In OnSecuritiesChanged
+for symbol in self.symbols:
+ self.consolidators[symbol] = QuoteBarConsolidator(1)
+ self.consolidators[symbol].DataConsolidated += self.CustomDailyHandler
+ algorithm.SubscriptionManager.AddConsolidator(symbol, self.consolidators[symbol])
+def CustomDailyHandler(self, sender, consolidated):
+ # Add new data point to history while removing expired history
+ self.history[consolidated.Symbol]['bids'] = np.append(self.history[consolidated.Symbol]['bids'][1:], consolidated.Bid.Close)
+ self.history[consolidated.Symbol]['asks'] = np.append(self.history[consolidated.Symbol]['asks'][1:], consolidated.Ask.Close)
+ self.update_spread_adjusters()
+def update_spread_adjusters(self):
+ for i in range(2):
+ numerator_history = self.history[self.symbols[i]]['bids']
+ denominator_history = self.history[self.symbols[abs(i-1)]]['asks']
+ self.spread_adjusters[i] = (numerator_history / denominator_history).mean()
+Alpha Construction 
+ The ArbitrageAlphaModel monitors the intraday bid and ask prices of the securities in the universe. In the constructor, we 
+ can specify the model parameters. In this tutorial, we select a shorter window an arbitrage opportunity must be active before 
+ we act on it by setting `order_delay` to 3.
+class ArbitrageAlphaModel(AlphaModel):
+ symbols = [] # IVV, SPY
+ entry_timer = [0, 0]
+ exit_timer = [0, 0]
+ spread_adjusters = [0, 0]
+ long_side = -1
+ consolidators = {}
+ history = {}
+ def __init__(self, order_delay = 3, profit_pct_threshold = 0.02, window_size = 400):
+ self.order_delay = order_delay
+ self.pct_threshold = profit_pct_threshold / 100
+ self.window_size = window_size
+Trade Signals 
+ To emit insights, we check if either side of the arbitrage strategy warrants an entry. If no new entries are to be made, the 
+ algorithm then looks to exit any current positions. With this design, we can flip our long/short bias without first 
+ flattening our position. We use a practically-infinite insight durations as we do not know how long the algorithm will be in 
+ an arbitrage trade.
+# Search for entries
+for i in range(2):
+ if quotebars[abs(i-1)].Bid.Close / quotebars[i].Ask.Close - self.spread_adjusters[abs(i-1)] >= self.pct_threshold:
+ self.entry_timer[i] += 1
+ if self.entry_timer[i] == self.order_delay:
+ self.exit_timer = [0, 0]
+ if self.long_side == i:
+ return []
+ self.long_side = i
+ return [Insight.Price(self.symbols[i], timedelta(days=9999), InsightDirection.Up),
+ Insight.Price(self.symbols[abs(i-1)], timedelta(days=9999), InsightDirection.Down)]
+ else:
+ return []
+ self.entry_timer[i] = 0
+# Search for an exit
+if self.long_side >= 0: # In a position
+ if quotebars[self.long_side].Bid.Close / quotebars[abs(self.long_side-1)].Ask.Close - self.spread_adjusters[self.long_side] >= 0: # Exit signal
+ self.exit_timer[self.long_side] += 1
+ if self.exit_timer[self.long_side] == self.order_delay: # Exit signal lasted long enough
+ self.exit_timer[self.long_side] = 0
+ i = self.long_side
+ self.long_side = -1
+ return [Insight.Price(self.symbols[i], timedelta(days=9999), InsightDirection.Flat),
+ Insight.Price(self.symbols[abs(i-1)], timedelta(days=9999), InsightDirection.Flat)]
+ else:
+ return []
+return []
+Portfolio Construction & Trade Execution 
+ Following the guidelines of Alpha Streams 
+ and the Quant League competition, we 
+ utilize the 
+ EqualWeightingPortfolioConstructionModel and the 
+ ImmediateExecutionModel .

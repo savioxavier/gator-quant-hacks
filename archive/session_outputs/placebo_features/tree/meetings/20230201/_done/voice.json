@@ -1,0 +1,15 @@
+{
+  "stage": "voice",
+  "presser_id": "20230201",
+  "status": "ok",
+  "outputs": [
+    "voice/voice_chunks.parquet"
+  ],
+  "notes": {
+    "n_chunks": 202,
+    "n_identity_ok": 176
+  },
+  "run_id": "PLACEBO",
+  "placebo": "PLACEBO: synthetic tree, not package output",
+  "finished_utc": "2026-10-03T23:44:11+00:00"
+}

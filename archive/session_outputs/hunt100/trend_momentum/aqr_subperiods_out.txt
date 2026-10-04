@@ -1,0 +1,19 @@
+vme_factors.xlsx ['VME Factors', 'Definitions', 'Data Sources', 'Disclosures']
+== VME momentum by asset class (gross, AMP 2013 sample ends 2011-07)
+  IS 1972-01..2011-07          MOM^AA 0.43 | MOMLS_VME_EQ 0.58 | MOMLS_VME_FX 0.33 | MOMLS_VME_FI 0.14 | MOMLS_VME_COM 0.52
+  post-pub 2013-07..end        MOM^AA -0.08 | MOMLS_VME_EQ 0.13 | MOMLS_VME_FX -0.04 | MOMLS_VME_FI 0.10 | MOMLS_VME_COM -0.20
+  2011-08..end                 MOM^AA -0.09 | MOMLS_VME_EQ 0.08 | MOMLS_VME_FX -0.13 | MOMLS_VME_FI 0.12 | MOMLS_VME_COM -0.14
+  2016-01..2024-09             MOM^AA -0.38 | MOMLS_VME_EQ -0.02 | MOMLS_VME_FX -0.21 | MOMLS_VME_FI -0.02 | MOMLS_VME_COM -0.47
+  2024-10..end                 MOM^AA na | MOMLS_VME_EQ na | MOMLS_VME_FX na | MOMLS_VME_FI na | MOMLS_VME_COM na
+century.xlsx ['Century of Factor Premia', 'Definition', 'Data Sources', 'Disclosures']
+== Century momentum by asset class (gross)
+  1981-01..2011-12             Equity indices Momentum 0.72 | Fixed income Momentum 0.09 | Currencies Momentum 0.20 | Commodities Momentum 0.36 | All Macro Momentum 0.58
+  2012-01..end                 Equity indices Momentum 0.35 | Fixed income Momentum -0.16 | Currencies Momentum -0.14 | Commodities Momentum -0.02 | All Macro Momentum -0.01
+  2016-01..2024-09             Equity indices Momentum 0.02 | Fixed income Momentum -0.23 | Currencies Momentum -0.27 | Commodities Momentum -0.32 | All Macro Momentum -0.34
+  2024-10..end                 Equity indices Momentum 4.25 | Fixed income Momentum -0.82 | Currencies Momentum 1.00 | Commodities Momentum 1.76 | All Macro Momentum 0.26
+tsmom.xlsx ['TSMOM Factors', 'Definitions', 'Data Sources', 'Disclosures']
+== AQR TSMOM factor (gross)
+  1985-01..2009-12             TSMOM 1.41 | TSMOM^CM 1.01 | TSMOM^EQ 0.83 | TSMOM^FI 0.71 | TSMOM^FX 0.78
+  post-pub 2012-05..end        TSMOM 0.39 | TSMOM^CM 0.20 | TSMOM^EQ 0.19 | TSMOM^FI 0.33 | TSMOM^FX 0.23
+  2016-01..2024-09             TSMOM 0.03 | TSMOM^CM -0.17 | TSMOM^EQ -0.20 | TSMOM^FI 0.35 | TSMOM^FX -0.06
+  2024-10..end                 TSMOM 0.97 | TSMOM^CM 1.22 | TSMOM^EQ 0.83 | TSMOM^FI -0.54 | TSMOM^FX 0.12

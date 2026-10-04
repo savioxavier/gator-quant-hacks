@@ -1,0 +1,13 @@
+pressers 83 answers 1911
+answer duration s: median 71  p25 47 p75 107
+           n  gap_med  conc_mean  max_conc  end_last  frac_next_starts_before_entry
+count  83.00    83.00      83.00     83.00     83.00                          83.00
+mean   23.02    28.66       3.78      4.29   3133.66                           0.51
+std     5.34     5.75       1.15      0.97    491.51                           0.17
+min     9.00    17.08       1.57      2.00    862.99                           0.07
+25%    19.50    25.12       2.82      4.00   2865.02                           0.40
+50%    23.00    27.81       3.71      4.00   3130.10                           0.52
+75%    27.50    33.43       4.67      5.00   3434.22                           0.64
+max    34.00    46.26       6.76      7.00   4557.48                           0.82
+median gap answer end -> next answer start (s): 28.1
+share of answers whose H1 window (end+30..end+300) overlaps >=1 other answer's H1 window: 0.0

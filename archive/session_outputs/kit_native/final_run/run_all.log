@@ -1,0 +1,17 @@
+f1_flow_clock    guide    in_sample      kit +0.3439 ours +0.2696 ann  +2.36% dd -17.94% turn   81.6 refused 0 | same-cost engine corr 0.96134 6.39 bp
+f1_flow_clock    guide    out_of_sample  kit -0.6834 ours -1.0546 ann  -4.67% dd -14.73% turn   96.0 refused 0 | same-cost engine corr 0.93731 7.57 bp
+f1_flow_clock    project  in_sample      kit +1.0928 ours +1.0197 ann  +8.32% dd -11.68% turn   81.6 refused 0 | same-cost engine corr 0.99624 1.99 bp
+f1_flow_clock    project  out_of_sample  kit +0.3211 ours -0.0589 ann  +1.91% dd  -9.07% turn   96.0 refused 0 | same-cost engine corr 0.99387 2.35 bp
+s2_equity_trend  guide    in_sample      kit +0.1291 ours +0.1210 ann  +0.79% dd -22.86% turn   25.3 refused 0 | same-cost engine corr 0.99522 2.13 bp
+s2_equity_trend  guide    out_of_sample  kit +0.1975 ours +0.0828 ann  +1.45% dd -17.34% turn   23.6 refused 0 | same-cost engine corr 0.99580 2.05 bp
+s2_equity_trend  project  in_sample      kit +0.5043 ours +0.4962 ann  +4.60% dd -18.25% turn   25.3 refused 0 | same-cost engine corr 0.99957 0.83 bp
+s2_equity_trend  project  out_of_sample  kit +0.5528 ours +0.4372 ann  +4.98% dd -16.01% turn   23.6 refused 0 | same-cost engine corr 0.99960 0.85 bp
+s3_gtaa          guide    in_sample      kit +0.6085 ours +0.4852 ann  +4.66% dd -15.92% turn    2.6 refused 0 | same-cost engine corr 0.99996 0.41 bp
+s3_gtaa          guide    out_of_sample  kit +1.1324 ours +0.6736 ann  +7.81% dd  -6.40% turn    2.8 refused 0 | same-cost engine corr 0.99994 0.44 bp
+s3_gtaa          project  in_sample      kit +0.6287 ours +0.5054 ann  +4.83% dd -15.86% turn    2.6 refused 0 | same-cost engine corr 0.99996 0.40 bp
+s3_gtaa          project  out_of_sample  kit +1.1570 ours +0.6981 ann  +7.99% dd  -6.36% turn    2.8 refused 0 | same-cost engine corr 0.99994 0.44 bp
+bh5_buy_hold     guide    in_sample      kit +0.4786 ours +0.3802 ann  +6.06% dd -45.82% turn    1.5 refused 0 | same-cost engine corr 0.99997 0.67 bp
+bh5_buy_hold     guide    out_of_sample  kit +1.2306 ours +0.8065 ann +11.59% dd -10.44% turn    1.3 refused 0 | same-cost engine corr 0.99997 0.51 bp
+bh5_buy_hold     project  in_sample      kit +0.4849 ours +0.3865 ann  +6.16% dd -45.72% turn    1.5 refused 0 | same-cost engine corr 0.99997 0.67 bp
+bh5_buy_hold     project  out_of_sample  kit +1.2394 ours +0.8152 ann +11.68% dd -10.43% turn    1.3 refused 0 | same-cost engine corr 0.99997 0.51 bp
+wrote <solo-repo>\results\validation\starter_kit

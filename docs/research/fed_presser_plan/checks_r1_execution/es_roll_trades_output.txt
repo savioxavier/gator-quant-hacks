@@ -1,0 +1,5 @@
+20120913: trades ES.v.0 291035  ES.v.1 90425  ratio v1/v0 0.31
+20150917: trades ES.v.0 458107  ES.v.1 70240  ratio v1/v0 0.15
+20190619: trades ES.v.0 93742  ES.v.1 24677  ratio v1/v0 0.26
+20190918: trades ES.v.0 112933  ES.v.1 30242  ratio v1/v0 0.27
+20141217: trades ES.v.0 284024  ES.v.1 43232  ratio v1/v0 0.15

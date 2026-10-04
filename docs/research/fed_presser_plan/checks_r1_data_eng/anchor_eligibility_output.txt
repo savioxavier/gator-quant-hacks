@@ -1,0 +1,21 @@
+                              n  anchored
+grp               scheduled              
+2016-2022         False       2         0
+                  True       43        38
+confirm_2023_2026 True       27        20
+warsh             True        3         3
+not anchored, confirmation: ['20230201', '20230614', '20230726', '20231101', '20231213', '20240320', '20251210']
+not anchored, 2016-2022 scheduled: ['20171213', '20190501', '20210317', '20221102', '20221214']
+VTT overrun > 10 s: 2016+ 13; confirmation ['20230201', '20230920', '20240131', '20240918', '20241107', '20250319', '20251029']
+VTT overrun > 20 s: 2016+ 9; confirmation ['20230201', '20240131', '20240918', '20251029']
+2016+ median VTT greeting_s 11.5
+confirmation VTT greeting_s > 30 s:
+    date  greeting_s  overrun_s
+20230201      54.976      175.8
+20240131      64.416       77.9
+20240918      47.166       54.0
+n=27: power one-sided 5% r=0.2 0.26, r=0.3 0.45; MDE r 0.47
+n=20: power one-sided 5% r=0.2 0.21, r=0.3 0.36; MDE r 0.54
+n=72: power one-sided 5% r=0.2 0.52, r=0.3 0.82; MDE r 0.29
+n=70: power one-sided 5% r=0.2 0.51, r=0.3 0.81; MDE r 0.29
+n=58: power one-sided 5% r=0.2 0.44, r=0.3 0.74; MDE r 0.32

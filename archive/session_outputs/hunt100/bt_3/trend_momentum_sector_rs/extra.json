@@ -1,0 +1,38 @@
+{
+  "risk_off_share_IS": 0.20444444444444446,
+  "risk_off_share_LATER": 0.125,
+  "diagnostics": {
+    "EW9": {
+      "IS": {
+        "sharpe_net_1x": 0.5394878807909167,
+        "ann_return": 0.10214171444588938,
+        "ann_vol": 0.18933087856606606,
+        "max_dd": -0.5322716009996618
+      },
+      "LATER": {
+        "sharpe_net_1x": 0.610489468215496,
+        "ann_return": 0.0807026287766512,
+        "ann_vol": 0.132193318604743,
+        "max_dd": -0.16835041123646988
+      },
+      "headline_minus_this_IS_sharpe": -0.09281978450380615,
+      "headline_minus_this_LATER_sharpe": 0.2702947824147467
+    },
+    "SPY": {
+      "IS": {
+        "sharpe_net_1x": 0.5313702403641967,
+        "ann_return": 0.1035453804222149,
+        "ann_vol": 0.19486484668626863,
+        "max_dd": -0.5615074534495375
+      },
+      "LATER": {
+        "sharpe_net_1x": 0.831796815152235,
+        "ann_return": 0.1375223719420197,
+        "ann_vol": 0.16533168850478278,
+        "max_dd": -0.1921700566690817
+      },
+      "headline_minus_this_IS_sharpe": -0.09870929413521547,
+      "headline_minus_this_LATER_sharpe": -0.3379375242956551
+    }
+  }
+}

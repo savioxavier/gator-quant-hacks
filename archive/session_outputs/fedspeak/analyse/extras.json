@@ -1,0 +1,8 @@
+{
+  "volume_counterfactual_OOS": {
+    "mean_z_actual_OOS": -1.102083512667723,
+    "mean_z_actual_C_with_IS_moments": -1.249435049467233,
+    "mean_z_if_C_used_IS_avg_count_with_IS_moments": -0.29378271782371207,
+    "note": "C/N x IS-mean N, standardised with IS mean/std of C: the OOS level the frozen z would have had at IS speech volume; compare with mean_z_actual_C_with_IS_moments (same standardisation)"
+  }
+}

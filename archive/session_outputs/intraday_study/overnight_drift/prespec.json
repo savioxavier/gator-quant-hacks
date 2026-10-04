@@ -1,0 +1,320 @@
+{
+ "doc": "Overnight vs intraday returns and the 'overnight drift' in ES and ZN (hourly study).\n\nPre-specification (fixed before any return in the panel was looked at; written to prespec.json on every run):\n\nLiterature\n  Boyarchenko, Larsen & Whelan, \"The Overnight Drift\", FRBNY Staff Report 917, first public version\n  February 2020 (revised August 2022). ES futures earn most of their close-to-close return overnight, concentrated\n  in the European-open hours (largest in 02:00-03:00 ET; positive in almost every interval 01:00-04:00 ET).\n  Their strategies: CT C (16:15->16:15), CT O (16:15->09:30; 16:15->08:30 in Table IX), OT C (09:30->16:15),\n  OD (02:00->03:00), OD+ (01:30->03:30), BtD (OD+ only after a negative closing order imbalance). They report the\n  OD/OD+ Sharpe falls from about 1.1/1.3 gross to -0.5/0.3 after bid-ask costs. The older overnight-vs-intraday\n  papers (Cliff, Cooper & Gulen 2008; Kelly & Clark 2011) predate this sample, so the only usable\n  publication split is February 2020: pre = 2010-06-08..2020-01-31, post = 2020-02-01..2024-10-02.\n  ZN has no overnight-drift paper in hand: it is run as an out-of-literature check of the same mechanism.\n\nHourly approximations (the data has hourly bars whose timestamp is the bar START)\n  close 16:00 ET = close of the bar starting 15:00 ET; the 09:30 cash open is not a bar boundary, so the\n  overnight/day split is at 09:00 ET (primary: the 09:00-10:00 bar straddles the open and Boyarchenko et al.\n  report negative 'opening hour' returns there) or 10:00 ET (variant). OD+ 01:30-03:30 is not available; the\n  closest hourly windows are 01:00-04:00 (primary, as briefed) and 02:00-03:00 (OD hour, variant).\n\nPrimary strategies per root (one round trip per day)\n  ON_16_09   long from 16:00 ET (prev NYSE day) to 09:00 ET (day d), flat otherwise\n  EU_01_04   long 01:00 -> 04:00 ET on day d\n  DAY_09_16  long 09:00 -> 16:00 ET on day d\n  BH         buy-and-hold (16:00 -> 16:00), costs only at contract rolls\nVariants (all reported)\n  ON entry {15,16,17}:00 x exit {08,09,10}:00; EU {01-04, 02-03, 02-04}; DAY entry {08,09,10} x exit {15,16};\n  conditional (Boyarchenko asymmetric reversal / BtD, closing order flow proxied by price because the data has no\n  signed volume): EU_01_04 and ON_17_09 only after (i) a negative 15:00-16:00 ET return or (ii) a negative\n  16:00->16:00 day return, both known at 16:00 ET of the previous NYSE day (ON entry moved to 17:00 so the trade\n  happens at a later bar than the signal);\n  exposure tilts (does timing add to buy-and-hold?): hold w_on overnight (16->09) and 1 during the day,\n  w_on in {0.5, 1.5, 2, 3}; hold w_eu during 01-04 and 1 otherwise, w_eu in {0, 0.5, 1.5, 2, 3}.\nCosts: one-way per unit notional traded, ES 1.0 bp, ZN 1.5 bp; levels gross, 1x, 2x, plus a tick sensitivity\n  (one tick per one-way at the entry price: ES 0.25 pt, ZN 1/64 pt). A window that spans a contract roll pays one\n  extra round trip; buy-and-hold pays one round trip per roll.\nInference: Newey-West t (Bartlett, lag floor(4 (T/100)^(2/9))), Sharpe SE sqrt((1+SR^2/2)/years), paired circular\n  block bootstrap (block 21 days, 5000 draws) for Sharpe differences, mean-variance spanning regression of each\n  timed strategy on buy-and-hold (alpha > 0 net of cost <=> adding it raises the attainable Sharpe).\nSamples: in-sample = day d <= 2024-10-02; later window 2024-10-03..2026-10-02 is descriptive only. Every choice\n  among variants uses in-sample data only.\n",
+ "variants": [
+  {
+   "name": "ON_15_08",
+   "family": "overnight",
+   "sday": "prev",
+   "sh": 15,
+   "eday": "same",
+   "eh": 8,
+   "cond": null,
+   "primary": false
+  },
+  {
+   "name": "ON_15_09",
+   "family": "overnight",
+   "sday": "prev",
+   "sh": 15,
+   "eday": "same",
+   "eh": 9,
+   "cond": null,
+   "primary": false
+  },
+  {
+   "name": "ON_15_10",
+   "family": "overnight",
+   "sday": "prev",
+   "sh": 15,
+   "eday": "same",
+   "eh": 10,
+   "cond": null,
+   "primary": false
+  },
+  {
+   "name": "ON_16_08",
+   "family": "overnight",
+   "sday": "prev",
+   "sh": 16,
+   "eday": "same",
+   "eh": 8,
+   "cond": null,
+   "primary": false
+  },
+  {
+   "name": "ON_16_09",
+   "family": "overnight",
+   "sday": "prev",
+   "sh": 16,
+   "eday": "same",
+   "eh": 9,
+   "cond": null,
+   "primary": true
+  },
+  {
+   "name": "ON_16_10",
+   "family": "overnight",
+   "sday": "prev",
+   "sh": 16,
+   "eday": "same",
+   "eh": 10,
+   "cond": null,
+   "primary": false
+  },
+  {
+   "name": "ON_17_08",
+   "family": "overnight",
+   "sday": "prev",
+   "sh": 17,
+   "eday": "same",
+   "eh": 8,
+   "cond": null,
+   "primary": false
+  },
+  {
+   "name": "ON_17_09",
+   "family": "overnight",
+   "sday": "prev",
+   "sh": 17,
+   "eday": "same",
+   "eh": 9,
+   "cond": null,
+   "primary": false
+  },
+  {
+   "name": "ON_17_10",
+   "family": "overnight",
+   "sday": "prev",
+   "sh": 17,
+   "eday": "same",
+   "eh": 10,
+   "cond": null,
+   "primary": false
+  },
+  {
+   "name": "EU_01_04",
+   "family": "eu_open",
+   "sday": "same",
+   "sh": 1,
+   "eday": "same",
+   "eh": 4,
+   "cond": null,
+   "primary": true
+  },
+  {
+   "name": "EU_02_03",
+   "family": "eu_open",
+   "sday": "same",
+   "sh": 2,
+   "eday": "same",
+   "eh": 3,
+   "cond": null,
+   "primary": false
+  },
+  {
+   "name": "EU_02_04",
+   "family": "eu_open",
+   "sday": "same",
+   "sh": 2,
+   "eday": "same",
+   "eh": 4,
+   "cond": null,
+   "primary": false
+  },
+  {
+   "name": "DAY_08_15",
+   "family": "day_session",
+   "sday": "same",
+   "sh": 8,
+   "eday": "same",
+   "eh": 15,
+   "cond": null,
+   "primary": false
+  },
+  {
+   "name": "DAY_08_16",
+   "family": "day_session",
+   "sday": "same",
+   "sh": 8,
+   "eday": "same",
+   "eh": 16,
+   "cond": null,
+   "primary": false
+  },
+  {
+   "name": "DAY_09_15",
+   "family": "day_session",
+   "sday": "same",
+   "sh": 9,
+   "eday": "same",
+   "eh": 15,
+   "cond": null,
+   "primary": false
+  },
+  {
+   "name": "DAY_09_16",
+   "family": "day_session",
+   "sday": "same",
+   "sh": 9,
+   "eday": "same",
+   "eh": 16,
+   "cond": null,
+   "primary": true
+  },
+  {
+   "name": "DAY_10_15",
+   "family": "day_session",
+   "sday": "same",
+   "sh": 10,
+   "eday": "same",
+   "eh": 15,
+   "cond": null,
+   "primary": false
+  },
+  {
+   "name": "DAY_10_16",
+   "family": "day_session",
+   "sday": "same",
+   "sh": 10,
+   "eday": "same",
+   "eh": 16,
+   "cond": null,
+   "primary": false
+  },
+  {
+   "name": "BH",
+   "family": "buy_hold",
+   "sday": "prev",
+   "sh": 16,
+   "eday": "same",
+   "eh": 16,
+   "cond": null,
+   "primary": true
+  },
+  {
+   "name": "EU_01_04|lasthour_neg",
+   "family": "conditional",
+   "sday": "same",
+   "sh": 1,
+   "eday": "same",
+   "eh": 4,
+   "cond": "lasthour_neg",
+   "primary": false
+  },
+  {
+   "name": "EU_01_04|dayret_neg",
+   "family": "conditional",
+   "sday": "same",
+   "sh": 1,
+   "eday": "same",
+   "eh": 4,
+   "cond": "dayret_neg",
+   "primary": false
+  },
+  {
+   "name": "ON_17_09|lasthour_neg",
+   "family": "conditional",
+   "sday": "prev",
+   "sh": 17,
+   "eday": "same",
+   "eh": 9,
+   "cond": "lasthour_neg",
+   "primary": false
+  },
+  {
+   "name": "ON_17_09|dayret_neg",
+   "family": "conditional",
+   "sday": "prev",
+   "sh": 17,
+   "eday": "same",
+   "eh": 9,
+   "cond": "dayret_neg",
+   "primary": false
+  },
+  {
+   "name": "TILT_ON_w0.5",
+   "family": "tilt_overnight",
+   "w": 0.5,
+   "primary": false
+  },
+  {
+   "name": "TILT_ON_w1.5",
+   "family": "tilt_overnight",
+   "w": 1.5,
+   "primary": false
+  },
+  {
+   "name": "TILT_ON_w2",
+   "family": "tilt_overnight",
+   "w": 2.0,
+   "primary": false
+  },
+  {
+   "name": "TILT_ON_w3",
+   "family": "tilt_overnight",
+   "w": 3.0,
+   "primary": false
+  },
+  {
+   "name": "TILT_EU_w0",
+   "family": "tilt_eu",
+   "w": 0.0,
+   "primary": false
+  },
+  {
+   "name": "TILT_EU_w0.5",
+   "family": "tilt_eu",
+   "w": 0.5,
+   "primary": false
+  },
+  {
+   "name": "TILT_EU_w1.5",
+   "family": "tilt_eu",
+   "w": 1.5,
+   "primary": false
+  },
+  {
+   "name": "TILT_EU_w2",
+   "family": "tilt_eu",
+   "w": 2.0,
+   "primary": false
+  },
+  {
+   "name": "TILT_EU_w3",
+   "family": "tilt_eu",
+   "w": 3.0,
+   "primary": false
+  }
+ ],
+ "costs_oneway": {
+  "ES": 0.0001,
+  "ZN": 0.00015
+ },
+ "tick": {
+  "ES": 0.25,
+  "ZN": 0.015625
+ },
+ "samples": {
+  "IS_full": [
+   "2010-06-08",
+   "2024-10-02"
+  ],
+  "IS_pre_pub": [
+   "2010-06-08",
+   "2020-01-31"
+  ],
+  "IS_post_pub": [
+   "2020-02-01",
+   "2024-10-02"
+  ],
+  "later_descriptive": [
+   "2024-10-03",
+   "2026-10-02"
+  ]
+ },
+ "publication_split": "2020-02-01 (Boyarchenko, Larsen & Whelan, FRBNY Staff Report 917, Feb 2020)",
+ "bootstrap": {
+  "B": 5000,
+  "block_days": 21
+ }
+}

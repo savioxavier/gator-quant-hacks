@@ -1,0 +1,532 @@
+[
+ {
+  "id": "intraday_micro_imom_gao_es",
+  "name": "Market intraday momentum: first-hour signal, last-hour trade (ES)",
+  "family": "intraday momentum",
+  "sources": [
+   "Gao, Han, Li, Zhou (2018 JFE) Market intraday momentum",
+   "Rosa (2022 J Futures Markets) Understanding intraday momentum strategies",
+   "Limkriangkrai, Chai, Zheng (2023 PBFJ) Market intraday momentum: APAC evidence",
+   "Baltussen, Da, Lammers, Martens (2021 JFE) Table 6 (eta(r_ONFH))"
+  ],
+  "source_types": [
+   "journal",
+   "journal_replication"
+  ],
+  "exact_rule": "ES front contract, hourly marks (P(H) = close of the bar starting H-1:00 ET). Signal r1(d) = P_d(10:00)/P_{d-1}(16:00) - 1 (Gao's first half-hour: previous close to 10:00). At 15:00 ET take position sign(r1) (+1/-1; 0 if r1 = 0); exit at 16:00 ET (settlement/MOC). One round trip per session, 1 bp per side. Variants (pre-declared): V1 base; V2 trade only if |r1| > median |r1| of the trailing 252 sessions (threshold filter, Rosa 2022); V3 trade only if the prior-day ^VIX close > its trailing 252-day median (Gao: stronger on volatile days). Unit position scaled to 10% ex-ante vol with L_d = min(5, 0.10/sigma_hat_{d-1}), sigma_hat from EWMA(com 60) of the raw daily strategy returns.",
+  "instruments": "ES (hourly front contract)",
+  "data_needed": "hourly ES/ZN bars databento_raw/glbx_ohlcv1h_v01_es_zn.parquet (have; ts_event = UTC bar start, convert to America/New_York); index_daily ^VIX (have)",
+  "external_evidence": "Gao et al. SPY 1993-2013: timing strategy 6.67%/yr, vol 6.19%, Sharpe 1.08 gross (predictive R2 1.6%); also 10 other ETFs. Baltussen et al. equity index futures 1974-2020 using the same signal: 4.21%/yr, vol 3.95%, Sharpe 1.07 gross. Rosa (2022): the overnight-return signal's predictability disappears out of sample; threshold filters help. APAC replication (2023): only China and Japan, weaker in COVID. Gross edge is about 2.6 bp/day versus our 2 bp round trip.",
+  "evidence_score": 3,
+  "implementable": true,
+  "adaptation_note": "Trades the last full hour (15:00-16:00) instead of the last half-hour (15:30-16:00); the half-hour version needs minute data. The hour includes Gao's 12th half-hour, which they also found predicted by r1.",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "intraday_micro_imom_rod_es",
+  "name": "Rest-of-day intraday momentum with gamma filter (ES)",
+  "family": "intraday momentum / gamma hedging",
+  "sources": [
+   "Baltussen, Da, Lammers, Martens (2021 JFE) Hedging demand and market intraday momentum",
+   "Dim, Eraker, Vilkov (2024) 0DTEs: trading, gamma risk and volatility propagation",
+   "SqueezeMetrics DIX/GEX free history (gamma proxy)"
+  ],
+  "source_types": [
+   "journal",
+   "working_paper",
+   "practitioner_data"
+  ],
+  "exact_rule": "ES front. r_ROD(d) = P_d(15:00)/P_{d-1}(16:00) - 1. Position sign(r_ROD) from 15:00 to 16:00 ET, 1 bp per side. Variants: V1 base; V2 trade only when sign(r1) = sign(r_ROD) with r1 = P_d(10:00)/P_{d-1}(16:00) - 1, flat otherwise (Baltussen eta(r_ONFH, r_ROD)); V3 trade V1 only when SqueezeMetrics GEX dated d-1 is below its trailing 252-day 25th percentile (dealers likely short gamma; GEX starts 2011-05, so V3 in-sample starts 2012-05). Scale to 10% ex-ante vol (min(5, 0.10/sigma_hat)).",
+  "instruments": "ES (hourly)",
+  "data_needed": "hourly ES/ZN bars databento_raw/glbx_ohlcv1h_v01_es_zn.parquet (have; ts_event = UTC bar start, convert to America/New_York); squeeze_DIX.csv saved in this folder (free, 2011-05..2026-10-02)",
+  "external_evidence": "Baltussen et al. Table 6, equity index futures 1974-2020 (1/N): eta(r_ROD) 6.86%/yr, vol 3.96%, Sharpe 1.73 gross, hit 55%; sign-agreement version 5.47%/yr, Sharpe 1.60. S&P 500 1996-2020: beta_ROD 6.63 (t 4.78) when net gamma < 0 versus 0.82 (t 1.03) when >= 0. Authors state a positive net Sharpe in ES at one tick of cost; the effect reverts over the next days. 0DTE studies (2022-2024) report counter-directional dealer hedging and muted intraday momentum.",
+  "evidence_score": 3,
+  "implementable": true,
+  "adaptation_note": "ROD ends one hour before the close (not 30 minutes) and the trade is the last full hour, because bars are hourly. OptionMetrics net gamma is replaced by the free SqueezeMetrics GEX estimate, whose history may be recomputed by the vendor (not certified point-in-time).",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "intraday_micro_imom_rod_zn",
+  "name": "Rest-of-day intraday momentum in 10-year note futures (ZN)",
+  "family": "intraday momentum",
+  "sources": [
+   "Baltussen, Da, Lammers, Martens (2021 JFE) Table 6 Panel B (government bond futures)"
+  ],
+  "source_types": [
+   "journal"
+  ],
+  "exact_rule": "ZN front; session close = 15:00 ET (CBOT settlement). r_ROD(d) = P_d(14:00)/P_{d-1}(15:00) - 1; position sign(r_ROD) from 14:00 to 15:00 ET; intraday ZN cost 1.5 bp per side. Variants: V1 base; V2 trade only if sign(r_ONFH) = sign(r_ROD) with r_ONFH = P_d(09:00)/P_{d-1}(15:00) - 1 (bond pit open 08:20 ET, first-hour proxy); V3 trade only if |r_ROD| > trailing 252-session median |r_ROD|. Scale to 10% ex-ante vol.",
+  "instruments": "ZN (hourly)",
+  "data_needed": "hourly ES/ZN bars databento_raw/glbx_ohlcv1h_v01_es_zn.parquet (have; ts_event = UTC bar start, convert to America/New_York)",
+  "external_evidence": "Baltussen et al. government bond futures 1974-2020: eta(r_ROD) 2.16%/yr, vol 1.33%, Sharpe 1.62 gross; sign-agreement 1.57%/yr, Sharpe 1.42; bond LETF share strengthens it. Gross is about 0.9 bp/day per unit versus our 3 bp intraday ZN round trip, so the net result is expected to be negative unless a filter concentrates the edge.",
+  "evidence_score": 3,
+  "implementable": true,
+  "adaptation_note": "Last full hour before the 15:00 ET settlement instead of the last 30 minutes; minute data would allow the 14:30-15:00 window.",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "intraday_micro_noise_area_es",
+  "name": "Noise-area intraday breakout with VWAP trailing stop (Beat the Market, ES hourly)",
+  "family": "intraday momentum / breakout",
+  "sources": [
+   "Zarattini, Aziz, Barbon (2024) Beat the Market: an effective intraday momentum strategy for S&P500 ETF (SPY), SFI RP 24-97",
+   "github.com/giovannibrusco/zarattini-2024-momentum-spy (independent replication, SPY + ES)",
+   "github.com/PazSheimy/spy-intraday-momentum-oos (independent out-of-sample test)",
+   "Mesfin (2026 arXiv 2605.04004) MNQ falsification study"
+  ],
+  "source_types": [
+   "working_paper",
+   "github_replication",
+   "preprint"
+  ],
+  "exact_rule": "ES front, hourly. O_d = open of the 09:00-10:00 ET bar (proxy for the 09:30 open); C_{d-1} = P_{d-1}(16:00). For check times h in {10:00,...,15:00}: sigma_{d,h} = mean over the previous 14 sessions of |P_{d-i}(h)/O_{d-i} - 1|. UB = max(O_d, C_{d-1})*(1+sigma), LB = min(O_d, C_{d-1})*(1-sigma). Session VWAP_h = sum(typical price*volume)/sum(volume) over bars from 09:00 ET to h. At each h: flat -> long if P(h) > UB, short if P(h) < LB; long -> exit if P(h) < max(UB, VWAP) and reverse to short if P(h) < LB (mirror for shorts); flat at 16:00. Exposure min(4, 0.02/sigma_14d) where sigma_14d = stdev of the last 14 daily close-to-close returns (paper sizing), then rescaled to 10% ex-ante vol with the trailing scaler. 1 bp per side per unit traded. Variants: V1 as stated; V2 opposite band as the stop (paper's base model, no VWAP); V3 anchor O_d = P_d(10:00) with checks 11:00-15:00 (avoids the 09:00 proxy).",
+  "instruments": "ES (hourly)",
+  "data_needed": "hourly ES/ZN bars databento_raw/glbx_ohlcv1h_v01_es_zn.parquet (have; ts_event = UTC bar start, convert to America/New_York) (volume needed for VWAP)",
+  "external_evidence": "Paper, SPY 2007-2024: 19.6%/yr, vol 14.3%, Sharpe 1.33, max DD 25%, net of $0.0035/share commission + $0.001 slippage (about 0.1-0.2 bp per side); base band-stop model Sharpe 0.61; band + VWAP stop Sharpe 1.24 before vol sizing. Independent replications: SPY/ES 2020-2026 Sharpe 1.11 with ES/SPY correlation 0.97 but Sharpe about 0 since 2025, parameter optimisation and walk-forward did not help; IQFeed replication Sharpe 1.34 in-sample (2015-2024), 0.39 out of sample May 2024-Mar 2026 (4.8%/yr). MNQ 2021-2025: no OHLCV intraday momentum family passed after 2-point costs.",
+  "evidence_score": 3,
+  "implementable": true,
+  "adaptation_note": "Hourly instead of 30-minute checks and 1-minute VWAP; the 09:30 open is proxied by the 09:00 bar open (V3 uses 10:00). Faithful version needs minute data. Our 1 bp/side is about 5-10x the paper's cost, which is the main risk.",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "intraday_micro_orb_es_hourly",
+  "name": "Opening-range breakout, hourly adaptation (ES)",
+  "family": "intraday breakout",
+  "sources": [
+   "Zarattini, Aziz (2023) Can day trading really be profitable? ORB on QQQ (SSRN 4416622)",
+   "github.com/giovannibrusco/zarattini-2023-orb-qqq (independent replication with cost stress)",
+   "Mesfin (2026 arXiv 2605.04004)"
+  ],
+  "source_types": [
+   "working_paper",
+   "github_replication",
+   "preprint"
+  ],
+  "exact_rule": "Opening bar = ES 09:00-10:00 ET bar (contains the 09:30 cash open). If close > open go long at 10:00 ET, if close < open go short; no trade if |close-open| < 0.1*(high-low). Stop = bar low (long) / bar high (short); target = entry +/- 10*|entry - stop|. Scan the 10:00-15:00 ET bars: exit at the stop if the bar breaches it (if a bar touches both stop and target assume the stop; a gap through fills at that bar's open), at the target if reached, else at 16:00. Notional = min(4, 0.01/(|entry-stop|/entry)) (1% risk per trade, 4x cap), then rescaled to 10% ex-ante vol. 1 bp per side. Variants: V1 as stated; V2 no stop/target, hold 10:00-16:00 in the opening bar's direction; V3 V1 long-only.",
+  "instruments": "ES (hourly)",
+  "data_needed": "hourly ES/ZN bars databento_raw/glbx_ohlcv1h_v01_es_zn.parquet (have; ts_event = UTC bar start, convert to America/New_York)",
+  "external_evidence": "Paper, QQQ 5-minute ORB Feb 2016 - Feb 2023 with commissions only and no slippage (replicated Sharpe 1.06 vs paper 1.12, 1,775 trades). Independent stress test: net P&L crosses zero at about 2.2 cents/share slippage (QQQ spread is about 1 cent); 76% of the NQ-filtered P&L came from 2022. MNQ 5-minute 2021-2025: ORB long t = 0.88, unstable by year.",
+  "evidence_score": 2,
+  "implementable": true,
+  "adaptation_note": "5-minute opening range replaced by the 09:00-10:00 ET hourly bar, so 30 minutes of pre-open are included; the faithful test needs 5-minute data.",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "intraday_micro_vwap_trend_es",
+  "name": "Session-VWAP trend following, hourly adaptation (ES)",
+  "family": "intraday trend",
+  "sources": [
+   "Zarattini, Aziz (2023) Volume weighted average price (VWAP): the holy grail for day trading systems"
+  ],
+  "source_types": [
+   "working_paper",
+   "practitioner"
+  ],
+  "exact_rule": "ES front. Session VWAP_h = sum((H+L+C)/3 * volume)/sum(volume) over hourly bars from 09:00 ET to h. At each h in {10:00,...,15:00} set position +1 if P(h) > VWAP_h else -1, held to the next mark; flat at 16:00. 1 bp per side on every change. Variants: V1 as stated; V2 decisions only at 10:00, 12:00 and 14:00 (lower turnover); V3 long-only (flat instead of short).",
+  "instruments": "ES (hourly)",
+  "data_needed": "hourly ES/ZN bars databento_raw/glbx_ohlcv1h_v01_es_zn.parquet (have; ts_event = UTC bar start, convert to America/New_York)",
+  "external_evidence": "Authors, QQQ 1-minute bars Jan 2018 - Sep 2023, reversing on every VWAP cross with 100% of equity: 671% total return, max DD 9.4%, Sharpe 2.1 (TQQQ 8,242%); no slippage stated. No independent net replication found; the 1-minute version implies hundreds of crossings a month.",
+  "evidence_score": 1,
+  "implementable": true,
+  "adaptation_note": "Hourly decisions instead of 1-minute crossings (minute data needed for the faithful rule); ES instead of QQQ.",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "intraday_micro_open_gap_fade_es",
+  "name": "Fade large opening moves until the last hour (ES)",
+  "family": "intraday reversal",
+  "sources": [
+   "Grant, Wolf, Yu (2005 JBF) Intraday price reversals in the US stock index futures market: a 15-year study",
+   "Mesfin (2026 arXiv 2605.04004) (gap continuation short closest to passing in MNQ)"
+  ],
+  "source_types": [
+   "journal",
+   "preprint"
+  ],
+  "exact_rule": "ES front. g(d) = P_d(10:00)/P_{d-1}(16:00) - 1; sigma_g = stdev of g over the trailing 60 sessions (through d-1). If |g| > k*sigma_g take position -sign(g) at 10:00 ET and exit at 15:00 ET (before the last hour, to stay clear of the intraday-momentum window). 1 bp per side. Variants: V1 k = 1; V2 k = 2; V3 k = 1 with exit at 16:00.",
+  "instruments": "ES (hourly)",
+  "data_needed": "hourly ES/ZN bars databento_raw/glbx_ohlcv1h_v01_es_zn.parquet (have; ts_event = UTC bar start, convert to America/New_York)",
+  "external_evidence": "Grant-Wolf-Yu, S&P 500 futures Nov 1987 - Sep 2002: highly significant intraday reversals after large opening price changes (stronger after large up opens), but significance is sharply reduced after a bid-ask cost proxy. MNQ 2021-2025: gap continuation (short) had gross +16.5 points, t = 1.46, failing year stability, which argues the opposite sign recently.",
+  "evidence_score": 2,
+  "implementable": true,
+  "adaptation_note": "Opening move measured to 10:00 ET (overnight + first 30 minutes) because the 09:30 price is inside an hourly bar.",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "intraday_micro_lasthour_reversal_es",
+  "name": "Next-day reversal of the last-hour move (ES)",
+  "family": "short-horizon reversal",
+  "sources": [
+   "Baltussen, Da, Lammers, Martens (2021 JFE) reversal tests (next 1-3 day returns on r_LH)"
+  ],
+  "source_types": [
+   "journal"
+  ],
+  "exact_rule": "ES front. r_LH(d) = P_d(16:00)/P_d(15:00) - 1. Enter -sign(r_LH) at 17:00 ET (close of the 16:00-17:00 bar, one bar after the signal; ES trades until 17:00) and exit at 16:00 ET on d+1. 1 bp per side. Variants: V1 every day; V2 only when |r_LH| > trailing 252-session 80th percentile of |r_LH|; V3 as V1 but exit at 10:00 ET on d+1 (overnight leg only).",
+  "instruments": "ES (hourly)",
+  "data_needed": "hourly ES/ZN bars databento_raw/glbx_ohlcv1h_v01_es_zn.parquet (have; ts_event = UTC bar start, convert to America/New_York)",
+  "external_evidence": "Baltussen et al. pooled 1974-2020 regressions of next 1/2/3-day returns on the last half-hour return: negative (reversal) for equity, bond and commodity futures, insignificant for currencies; read as price pressure from hedging. No standalone trading test published.",
+  "evidence_score": 2,
+  "implementable": true,
+  "adaptation_note": "Last hour instead of last half-hour; entry delayed one hourly bar to avoid trading at the signal price.",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "intraday_micro_overnight_drift_selloff_es",
+  "name": "Overnight drift at the European open, after US sell-offs (ES)",
+  "family": "overnight / liquidity provision",
+  "sources": [
+   "Boyarchenko, Larsen, Whelan (2023 RFS) The overnight drift (NY Fed SR 917)",
+   "Liberty Street Economics (2021) The overnight drift in US equity returns",
+   "Liberty Street Economics (2026-07) The disappearing overnight drift"
+  ],
+  "source_types": [
+   "journal",
+   "central_bank_blog"
+  ],
+  "exact_rule": "ES front, hourly. V1 unconditional: long ES during the hour that starts at 08:00 Europe/Berlin local time (02:00-03:00 ET; 03:00-04:00 ET in the weeks of asynchronous US/EU daylight time), every session. V2 conditional: long 01:00-04:00 ET only when the prior US session close-to-close return P_{d-1}(16:00)/P_{d-2}(16:00) - 1 is in the bottom tercile of its trailing 252-session distribution (proxy for negative end-of-day order imbalance). V3 as V2 but 18:00-04:00 ET (Asian + European hours). Entries/exits at the hourly closes; 1 bp per side; scale to 10% ex-ante vol using the active-day convention L = min(5, 0.10/(sigma_active*sqrt(f))).",
+  "instruments": "ES (hourly)",
+  "data_needed": "hourly ES/ZN bars databento_raw/glbx_ohlcv1h_v01_es_zn.parquet (have; ts_event = UTC bar start, convert to America/New_York)",
+  "external_evidence": "BLW, ES 1998-2019/2020: the 02:00-03:00 ET hour earns 3.6-3.7%/yr (1.5 bp/hour, t 7.1), over 60% of the 5.9% close-to-close return; long 02:00-03:00 Sharpe 1.1 gross but -0.5 after bid-ask; 01:30-03:30 Sharpe 1.3 gross, 0.3 net. After bottom-tercile imbalances the 02:00-03:00 return is 7.5% annualised, none after rallies. NY Fed 2026: about zero since 2021 in ES/NQ/YM as close-imbalance dispersion fell from 6.5% to 2.9%; NightShares overnight ETFs closed after 14 months.",
+  "evidence_score": 2,
+  "implementable": true,
+  "adaptation_note": "Signed end-of-day order imbalance (tick data) is replaced by the prior close-to-close return; window widened to whole hours.",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "intraday_micro_eu_open_window_es",
+  "name": "Four-hour window around the European open (ES)",
+  "family": "overnight / time-of-day",
+  "sources": [
+   "Bondarenko, Muravyev (2023 JFQA) Market return around the clock: a puzzle"
+  ],
+  "source_types": [
+   "journal"
+  ],
+  "exact_rule": "ES front, hourly. V1: long ES from 00:00 to 04:00 ET every session (approximates the paper's 23:30-03:30 EU-open window). V2: long 23:00-03:00 ET. V3: V1 plus short ES 08:00-10:00 ET (paper: US-open window negative). 1 bp per side per leg; scale to 10% ex-ante vol (min(5, 0.10/sigma_hat)).",
+  "instruments": "ES (hourly)",
+  "data_needed": "hourly ES/ZN bars databento_raw/glbx_ohlcv1h_v01_es_zn.parquet (have; ts_event = UTC bar start, convert to America/New_York)",
+  "external_evidence": "ES tick data 2004-2018: the 23:30-03:30 ET window earns 7.6%/yr, Sharpe 1.67, t 6.4, i.e. 100% of the market return (rest of day -0.8%/yr); the authors report it survives transaction costs and was stronger in the 2020 COVID period; US open 08:30-10:00 ET -3.9%/yr gross. Out of sample: overlaps the 02:00-03:00 drift that NY Fed reports as about zero since 2021.",
+  "evidence_score": 3,
+  "implementable": true,
+  "adaptation_note": "Half-hour window edges rounded to whole hours. Highly correlated with intraday_micro_overnight_drift_selloff_es V1.",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "intraday_micro_overnight_hold_es",
+  "name": "Close-to-open overnight holding (ES)",
+  "family": "overnight",
+  "sources": [
+   "Cliff, Cooper, Gulen (2008) Return differences between trading and non-trading hours: like night and day",
+   "Kelly, Clark (2011) Returns in trading versus non-trading hours: the difference is day and night",
+   "Boyarchenko, Larsen, Whelan (2023 RFS) (ES overnight decomposition)",
+   "NightShares ETF launch and closure (2022-2023)"
+  ],
+  "source_types": [
+   "working_paper",
+   "journal",
+   "practitioner"
+  ],
+  "exact_rule": "Long ES from the 16:00 ET settlement (TAS/MOC) to 10:00 ET next session (close of the 09:00 bar), flat 10:00-16:00. 1 bp per side. Variants: V1 every night; V2 only after sessions with negative close-to-close return; V3 V1 excluding Friday-to-Monday holds. Scale to 10% ex-ante vol.",
+  "instruments": "ES (hourly)",
+  "data_needed": "hourly ES/ZN bars databento_raw/glbx_ohlcv1h_v01_es_zn.parquet (have; ts_event = UTC bar start, convert to America/New_York)",
+  "external_evidence": "SPY close-to-open has delivered the bulk of total return over ~30 years in practitioner tallies (Cliff-Cooper-Gulen, Kelly-Clark document the night effect; Lou-Polk-Skouras for the cross-section). ES 1998-2019: overnight 16:15-09:30 earned 2.6%/yr of the 4.3% close-to-close return (NY Fed). NightShares NSPY/NIWM (close-to-open futures exposure) closed after 14 months. At 1 bp per side the unconditional version costs about 5%/yr per unit, more than the documented futures overnight premium.",
+  "evidence_score": 3,
+  "implementable": true,
+  "adaptation_note": "Exit at 10:00 instead of the 09:30 open (inside an hourly bar).",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "intraday_micro_pre_fomc_drift_es",
+  "name": "Pre-FOMC announcement drift, 24-hour window (ES)",
+  "family": "event / FOMC",
+  "sources": [
+   "Lucca, Moench (2015 JF) The pre-FOMC announcement drift",
+   "Kurov, Wolfe, Gilbert (2021 FRL) The disappearing pre-FOMC announcement drift",
+   "Ai, Bansal, Guo (2023 NBER w31923) Macroeconomic announcement premium"
+  ],
+  "source_types": [
+   "journal",
+   "working_paper",
+   "github_replication"
+  ],
+  "exact_rule": "Scheduled FOMC statement days (day0 from edges/calendar/fomc_scheduled.csv; unscheduled meetings excluded). Long ES from 14:00 ET on the session before day0 to the last hourly mark before the statement: 14:00 ET (statement 14:00 from 2013, 14:15 before) or 12:00 ET for the 12:30 statements of press-conference meetings Apr 2011 - Dec 2012. 1 bp per side. Variants: V1 as stated; V2 entry at the 16:00 ET close of day-1 (paper's close-to-2pm window); V3 V1 only for meetings with a scheduled press conference (quarterly 2011-2018, all from 2019). Scale with the active-day convention.",
+  "instruments": "ES (hourly)",
+  "data_needed": "hourly ES/ZN bars databento_raw/glbx_ohlcv1h_v01_es_zn.parquet (have; ts_event = UTC bar start, convert to America/New_York); fomc_scheduled.csv (have, edges/calendar)",
+  "external_evidence": "Lucca-Moench, SPX 1994-2011: 49 bp average 2pm-to-2pm excess return before scheduled FOMC, FOMC-only strategy Sharpe 1.14; close-to-2pm Sharpe 1.43. Kurov-Wolfe-Gilbert: the drift essentially disappeared after 2015 (sample to 2019). Ai-Bansal-Guo: announcement-day premium (incl. FOMC) back above average Jan 2020 - Aug 2023 at 16.3 bp per announcement.",
+  "evidence_score": 3,
+  "implementable": true,
+  "adaptation_note": "None beyond using the hourly mark just before each statement time.",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "intraday_micro_fomc_reversal_es",
+  "name": "FOMC-day afternoon reversal of the pre-announcement move (ES)",
+  "family": "event / FOMC",
+  "sources": [
+   "Insper thesis 'Essays in Financial Economics' (search-result abstract only; full text not accessible)"
+  ],
+  "source_types": [
+   "thesis"
+  ],
+  "exact_rule": "On scheduled FOMC days: pre = P(mark)/P_{day-1}(14:00) - 1 where mark is the last hourly mark before the statement (as in the pre-FOMC rule). At the mark take position -sign(pre); exit at 16:00 ET day0. 1 bp per side. Variants: V1 every meeting; V2 only if |pre| > 0.5%; V3 V1 with exit at 16:00 ET on day+1.",
+  "instruments": "ES (hourly)",
+  "data_needed": "hourly ES/ZN bars databento_raw/glbx_ohlcv1h_v01_es_zn.parquet (have; ts_event = UTC bar start, convert to America/New_York); fomc_scheduled.csv",
+  "external_evidence": "Search-result abstract: buying (selling) E-mini just before the announcement when the pre-FOMC return is negative (positive) and closing at the end of the day gave a Sharpe about 2.5 times that of the pre-FOMC drift, 1997-2020. Unverified (source page returned 403).",
+  "evidence_score": 1,
+  "implementable": true,
+  "adaptation_note": "Entry at the hourly mark before the statement; the statement falls inside the 14:00-15:00 bar.",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "intraday_micro_macro_ann_premium_es",
+  "name": "Macroeconomic announcement-day premium (ES)",
+  "family": "event / macro releases",
+  "sources": [
+   "Savor, Wilson (2013 JFQA) How much do investors care about macroeconomic risk?",
+   "Ai, Bansal (2018 Econometrica) Risk preferences and the macroeconomic announcement premium",
+   "Ai, Bansal, Guo (2023 NBER w31923) Macroeconomic announcement premium"
+  ],
+  "source_types": [
+   "journal",
+   "working_paper"
+  ],
+  "exact_rule": "Daily. Long ES over return day d (close d-1 to close d) when d is a scheduled release day of: FOMC statement, Employment Situation, the earlier of CPI/PPI that month, GDP advance and third estimates, ISM manufacturing (first business day); flat otherwise. With engine.simulate(exec='next_close') the decision for day d is made at close d-2 (calendars are published in advance). Cost 1 bp per side. Variants: V1 the five types; V2 Savor-Wilson set (CPI, PPI, employment, FOMC); V3 V1 excluding FOMC days. Scale with the active-day convention.",
+  "instruments": "ES (futures_daily F_ES)",
+  "data_needed": "futures_daily (have); release dates: BLS schedule archives (bls.gov/schedule/<year>/home.htm) or ALFRED first-vintage dates for PAYEMS, CPIAUCSL, PPIFIS/PPIACO, GDP (free, no key); ISM by rule; FOMC csv (have)",
+  "external_evidence": "Savor-Wilson 1958-2009: 11.4 bp on announcement days vs 1.1 bp otherwise. Ai-Bansal-Guo 1961-2023: 44 days/yr earn 10.68 bp (t 5.36) vs 0.93 bp, 4.65%/yr of a 6.59% premium; FOMC days 17.6 bp, non-FOMC 8.65 bp; Jan 2020 - Aug 2023 16.3 bp per announcement day; FOMC premium low 2016-2019.",
+  "evidence_score": 4,
+  "implementable": true,
+  "adaptation_note": "Futures close-to-close instead of CRSP market; release-date table must be built point-in-time from schedules.",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "intraday_micro_bond_ann_premium_zn",
+  "name": "Bond announcement-day premium on payroll and CPI days (ZN)",
+  "family": "event / macro releases",
+  "sources": [
+   "Jones, Lamont, Lumsdaine (1998 JFE) Macroeconomic news and bond market volatility",
+   "Faust, Wright (2008/2011) on bond futures excess returns at announcement times; FEDS 2014-100 Jumps in bond yields at known times",
+   "Savor, Wilson (2013); Ai, Bansal, Guo (2023)"
+  ],
+  "source_types": [
+   "journal",
+   "working_paper"
+  ],
+  "exact_rule": "Daily. Long ZN over return days that are Employment Situation or CPI release days (08:30 ET), flat otherwise; decision at close d-2 via engine next_close; 1 bp per side. Variants: V1 payroll + CPI; V2 payroll only; V3 the Ai-Bansal-Guo five-type set (adds FOMC, GDP, ISM, PPI when earlier than CPI). Scale with the active-day convention.",
+  "instruments": "ZN (futures_daily F_ZN)",
+  "data_needed": "futures_daily (have); BLS/ALFRED release dates as in intraday_micro_macro_ann_premium_es",
+  "external_evidence": "JLL 1979-1993: Treasury excess returns over bills are large on employment/PPI release days and about zero on other days. Faust-Wright: bond futures excess returns accrue at scheduled announcement times. Savor-Wilson and Ai-Bansal-Guo: note/bond announcement premium rises with maturity, none in bills. No recent net trading test found.",
+  "evidence_score": 3,
+  "implementable": true,
+  "adaptation_note": "ZN futures instead of cash Treasury returns.",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "intraday_micro_fomc_window_zn",
+  "name": "Long Treasuries in the three-day FOMC window (ZN)",
+  "family": "event / FOMC",
+  "sources": [
+   "Hillenbrand (2025 RFS) The Fed and the secular decline in interest rates"
+  ],
+  "source_types": [
+   "journal",
+   "practitioner_summary"
+  ],
+  "exact_rule": "Daily. Long ZN over return days FOMC day-1, day0 and day+1 (scheduled meetings; trading-day offsets on the CBOT calendar), flat otherwise; decision at close d-2; 1 bp per side. Variants: V1 ZN; V2 UB (1.5 bp); V3 ZN over day0 and day+1 only. Scale with the active-day convention.",
+  "instruments": "ZN, UB (futures_daily)",
+  "data_needed": "futures_daily (have); fomc_scheduled.csv (have)",
+  "external_evidence": "Hillenbrand: essentially the entire secular decline in long-term Treasury yields (1980/1989-2017) was realised in the 3-day window around FOMC meetings, mostly via the expected short-rate path; the same window accounts for the decline in equity yields. No published net strategy or post-2017 test found.",
+  "evidence_score": 2,
+  "implementable": true,
+  "adaptation_note": "None.",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "intraday_micro_post_fomc_drift_zn",
+  "name": "Post-FOMC drift in Treasury yields after target changes (ZN)",
+  "family": "event / FOMC",
+  "sources": [
+   "Brooks, Katz, Lustig (NBER w25127, 2018/2019) Post-FOMC announcement drift in U.S. bond markets"
+  ],
+  "source_types": [
+   "working_paper"
+  ],
+  "exact_rule": "Daily. Event = scheduled FOMC day0 with a fed funds target change (FRED DFEDTAR to 2008-12-15, then DFEDTARU; value on day0+1 vs day0-1). Position -sign(change) in ZN (hike -> short, cut -> long) over return days day0+2 .. day0+51 (decision at close day0, engine next_close); a newer event replaces an open one; 1 bp per side. Variants: V1 50 days; V2 20 days; V3 event = scheduled FOMC with |ZT day0 close-to-close return| > 1x its trailing 60-day stdev, position sign(ZT day0 return) in ZN for 20 days (surprise proxy). Scale to 10% ex-ante vol.",
+  "instruments": "ZN, ZT (futures_daily)",
+  "data_needed": "futures_daily (have); FRED DFEDTAR/DFEDTARU (free CSV); fomc_scheduled.csv",
+  "external_evidence": "BKL, 1989-2008 scheduled meetings: a 10 bp fed funds surprise moves 10-year yields 1.7 bp on the day and 14 bp after 50 days, driven by target changes (mutual-fund outflows); predictability raises the attainable Sharpe of bond-fund timing from 0.48 to 0.98 at 50 days. No post-2008 test found; 2010-2024 contains about 25 target changes.",
+  "evidence_score": 2,
+  "implementable": true,
+  "adaptation_note": "Target-change sign instead of the Kuttner fed funds futures surprise (no ZQ data); V3 uses the ZT reaction as the surprise proxy.",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "intraday_micro_tsy_auction_cycle",
+  "name": "Treasury auction cycle: short before, long after coupon auctions",
+  "family": "event / Treasury supply",
+  "sources": [
+   "Lou, Yan, Zhang (2013 RFS) Anticipated and repeated shocks in liquid markets",
+   "Fleming, Liu, Nguyen (NY Fed SR 1188, 2026) Intraday price pressure and order flow around U.S. Treasury auctions",
+   "AEA 2022 programme paper on the permanent component of auction yield changes"
+  ],
+  "source_types": [
+   "journal",
+   "central_bank_working_paper"
+  ],
+  "exact_rule": "Daily. For each coupon auction in treasury_auctions (Note/Bond incl. reopenings; TIPS/FRN excluded) map original term to a future: 2y,3y -> ZT; 5y -> ZF; 7y,10y -> ZN; 20y -> ZB; 30y -> UB. Short the mapped future over return days -5..-1 relative to auction day 0, flat on day 0, long over return days +1..+5; the short leg starts no earlier than the first close after announcemt_date. Net overlapping positions per contract. Costs per root table. Variants: V1 ZN only for 10-year auctions; V2 all tenors, equal risk per event; V3 all tenors, pre-auction short leg only. Scale to 10% ex-ante vol.",
+  "instruments": "ZT, ZF, ZN, ZB, UB (futures_daily)",
+  "data_needed": "futures_daily and treasury_auctions (have; auction_date and announcemt_date)",
+  "external_evidence": "LYZ 1980-2008: on-the-run yields rise 2.5-2.7 bp in the 5 days before 2y/5y auctions and fall about the same after; 5-day post-minus-pre return 22.5 bp (5y, t 3.67) and 23.8 bp (10y, t 1.78); hedged 2y strategy Sharpe 1.08 (1.44 in 1998-2008, close to 1 after spreads); holds in all subsamples. Post-2010: the permanent yield decline over auctions vanished (AEA 2022 paper) while transitory pressure persists; NY Fed 2026 finds pre-auction pressure has not increased recently.",
+  "evidence_score": 3,
+  "implementable": true,
+  "adaptation_note": "Directional futures instead of the duration-hedged on-the-run cash note; day 0 excluded as in the authors' robustness check.",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "intraday_micro_tsy_auction_intraday_zn",
+  "name": "Intraday Treasury auction concession and recovery (ZN hourly)",
+  "family": "event / Treasury supply",
+  "sources": [
+   "Fleming, Liu, Nguyen (NY Fed SR 1188, 2026) Intraday price pressure and order flow around U.S. Treasury auctions",
+   "Robeco (2025) Quant chart: US Treasuries up for auction"
+  ],
+  "source_types": [
+   "central_bank_working_paper",
+   "practitioner"
+  ],
+  "exact_rule": "ZN hourly; coupon auction results at 13:00 ET. V1 on 10-year and 30-year auction days (incl. reopenings): short ZN from 09:00 ET to 13:00 ET, then long 13:00-15:00 ET. V2 same on every coupon auction day (2/3/5/7/10/20/30-year) using ZN. V3 short leg only, from the prior 15:00 ET close to 13:00 ET. Auction dates from treasury_auctions (announced about a week ahead). Intraday ZN cost 1.5 bp per side (V1/V2 four sides per event). Scale with the active-day convention.",
+  "instruments": "ZN (hourly)",
+  "data_needed": "hourly ES/ZN bars databento_raw/glbx_ohlcv1h_v01_es_zn.parquet (have; ts_event = UTC bar start, convert to America/New_York); treasury_auctions (have)",
+  "external_evidence": "Robeco, intraday data 1983-2024: 10-year note futures fall about 6 bp (price) ahead of auctions and recover in the following hours; used as a signal in their dynamic duration fund (no standalone performance disclosed). NY Fed 33-year intraday study: yields rise in the hours before auctions and reverse after; pressure larger when dealers are constrained and has not increased recently.",
+  "evidence_score": 2,
+  "implementable": true,
+  "adaptation_note": "Pre-auction window starts at 09:00 ET (hourly marks); ZN proxies for tenors other than 10-year.",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "intraday_micro_gsci_roll_frontrun",
+  "name": "Front-running the GSCI roll with calendar spreads",
+  "family": "futures roll window",
+  "sources": [
+   "Mou (2010/2011) Limits to arbitrage and commodity index investment: front-running the Goldman roll",
+   "Two Sigma Street View (2017) The commodity futures roll return tax",
+   "S&P GSCI roll period methodology (5th-9th business day, 20% per day)"
+  ],
+  "source_types": [
+   "working_paper",
+   "practitioner"
+  ],
+  "exact_rule": "Daily, commodities in our set that the S&P GSCI holds (CL, HO, RB, NG, GC, SI, HG, ZC, ZW, ZS, LE, HE). Each month find the contracts the GSCI rolls from (T1) and into (T2) on business days 5-9 (GSCI contract schedule); resolve .v.0/.v.1 instrument_ids to raw symbols with the free databento symbology call and use a commodity only if T1 = .v.0 and T2 = .v.1 throughout the window. Spread = short T1, long T2, built 20% per day; return per day = -(change in (F1 - F2))/((F1 + F2)/2) on the open fraction. V1 (Strategy 1) build on business days -10..-6 before the first roll day, unwind 20% per day on roll days 5-9; V2 (Strategy 2) build on days -5..-1; V3 V2 energy only (CL, HO, RB, NG). Equal weight across active commodities; costs per root on both legs. Scale to 10% ex-ante vol.",
+  "instruments": "CL HO RB NG GC SI HG ZC ZW ZS LE HE front and second (glbx_ohlcv1d_v01 .v.0/.v.1)",
+  "data_needed": "databento_raw/glbx_ohlcv1d_v01.parquet (have) + free symbology.resolve; GSCI contract roll schedule (public methodology)",
+  "external_evidence": "Mou, 2000 - Mar 2010: Strategy 1 sector Sharpe 1.09-2.75 (energy 4.43%/yr unlevered, Sharpe 2.2), up to 4.39 for Strategy 2 when annualised per active period; no abnormal returns before 2000. Later evidence: roll-period abnormal price changes turned negative 2004-2010 and a follow-up found no abnormal profit after costs; Two Sigma (2017) doubts a decade-long persistence. Our sample (2010-06 onward) is entirely post-publication.",
+  "evidence_score": 2,
+  "implementable": true,
+  "adaptation_note": "Only front/second daily closes are available, so commodities whose GSCI deferred contract is not .v.1 are skipped that month.",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "intraday_micro_opex_week_es",
+  "name": "Monthly option-expiration week (ES)",
+  "family": "calendar / gamma",
+  "sources": [
+   "Stivers, Sun (2013 JBF) Returns and option activity over the option-expiration week for S&P 100 stocks",
+   "CXO Advisory and Quantpedia write-ups"
+  ],
+  "source_types": [
+   "journal",
+   "practitioner"
+  ],
+  "exact_rule": "Daily. Option-expiration week = the 5 trading days ending on the monthly expiration (third Friday; Thursday if Friday is a holiday). Long ES over those return days (from the close of the prior Friday), flat otherwise; decision at close d-2 via engine next_close; 1 bp per side. Variants: V1 long expiration week; V2 V1 plus short the following week (Stivers-Sun: modest underperformance); V3 quarterly months (Mar, Jun, Sep, Dec) only. Scale with the active-day convention.",
+  "instruments": "ES (futures_daily)",
+  "data_needed": "futures_daily (have)",
+  "external_evidence": "Stivers-Sun: S&P 500 option-expiration-week returns relatively high 1983-2008; 28 large optionable stocks 0.45%/week vs 0.12% other weeks, weekly Sharpe 0.57 vs 0.07 (1996-2008); the following week underperforms modestly; attributed to market-maker delta-hedge rebalancing and falling implied volatility. No post-2008 index test found.",
+  "evidence_score": 2,
+  "implementable": true,
+  "adaptation_note": "Index futures instead of S&P 100 stocks.",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "intraday_micro_hour_periodicity",
+  "name": "Time-of-day periodicity learned on trailing data (ES, ZN)",
+  "family": "intraday seasonality",
+  "sources": [
+   "Heston, Korajczyk, Sadka (2010 JF) Intraday patterns in the cross-section of stock returns",
+   "Bondarenko, Muravyev (2023 JFQA) (hour-of-day ES returns)"
+  ],
+  "source_types": [
+   "journal"
+  ],
+  "exact_rule": "Hourly slots s = the 23 hourly bars of the CME session (18:00-17:00 ET, maintenance hour excluded). V1 ES: each session, compute for every contiguous 4-slot block the sum of mean slot returns over sessions d-252..d-1; hold long during the block with the largest positive trailing sum (one round trip per day), flat if none positive. V2 same rule on ZN (1.5 bp per side). V3 ES HKS-style: position in the 15:00-16:00 ET slot = sign of the sum of that slot's returns at lags 1..20 sessions. Scale to 10% ex-ante vol.",
+  "instruments": "ES, ZN (hourly)",
+  "data_needed": "hourly ES/ZN bars databento_raw/glbx_ohlcv1h_v01_es_zn.parquet (have; ts_event = UTC bar start, convert to America/New_York)",
+  "external_evidence": "HKS (TAQ stocks, early 2000s): returns in a given half-hour continue at the same half-hour for at least 40 trading days (cross-sectional). For index futures, Bondarenko-Muravyev find the return concentrated in the EU-open hours; no net time-series test of trailing-learned time-of-day rules found.",
+  "evidence_score": 1,
+  "implementable": true,
+  "adaptation_note": "Hourly slots instead of half-hours; time-series application to futures rather than the stock cross-section.",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "intraday_micro_monday_reversal_es",
+  "name": "Monday intraday rebound after weekend declines (ES)",
+  "family": "day-of-week",
+  "sources": [
+   "French (1980 JFE) Stock returns and the weekend effect",
+   "Harris (1986 JFE) A transaction data study of weekly and intradaily patterns in stock returns",
+   "Boston Fed WP 98-6 (weekend effect after 1987)"
+  ],
+  "source_types": [
+   "journal",
+   "central_bank_working_paper"
+  ],
+  "exact_rule": "ES hourly. w = P_Mon(10:00)/P_Fri(16:00) - 1 (first session of the week vs last session of the prior week). V1: if w < -1x trailing 52-week stdev of w, long ES Monday 10:00-16:00 ET; V2: long every Monday 10:00-16:00 ET; V3: if the prior week's last session fell more than 2% and w < 0, long from Monday 10:00 to Tuesday 16:00 ET. 1 bp per side; scale with the active-day convention.",
+  "instruments": "ES (hourly)",
+  "data_needed": "hourly ES/ZN bars databento_raw/glbx_ohlcv1h_v01_es_zn.parquet (have; ts_event = UTC bar start, convert to America/New_York)",
+  "external_evidence": "French/Harris (pre-1987): the weekend decline occurred between Friday close and early Monday, with Monday's first 45 minutes negative and prices recovering over the rest of Monday; post-1987 studies find no weekend drift. Practitioner tally: of 18 cases since 1996 with a 2% Friday loss and a Monday gap down, only 3 had negative two-day returns (tiny sample).",
+  "evidence_score": 1,
+  "implementable": true,
+  "adaptation_note": "Monday 10:00 ET used as the post-open mark.",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "intraday_micro_letf_close_es",
+  "name": "Leveraged-ETF rebalancing pressure into the close on large-move days (ES)",
+  "family": "intraday momentum / flow",
+  "sources": [
+   "Cheng, Madhavan (2009/2010) The dynamics of leveraged and inverse exchange-traded funds",
+   "Shum, Hejazi, Haryanto, Rodier (2015/2016) on intraday volatility and leveraged ETF rebalancing",
+   "Baltussen, Da, Lammers, Martens (2021 JFE) section 4.2 (LETF share strengthens intraday momentum)"
+  ],
+  "source_types": [
+   "journal"
+  ],
+  "exact_rule": "ES front. r_ROD = P_d(15:00)/P_{d-1}(16:00) - 1 (proxy for the day's return that leveraged ETFs must rebalance at the close). V1: position sign(r_ROD) from 15:00 to 16:00 ET only when |r_ROD| > 1.0%; V2: position clip(r_ROD/sigma_ROD, -2, 2) every day, sigma_ROD = trailing 60-session stdev of r_ROD; V3: V1 with a 1.5% threshold. 1 bp per side per unit traded; scale with the active-day convention.",
+  "instruments": "ES (hourly)",
+  "data_needed": "hourly ES/ZN bars databento_raw/glbx_ohlcv1h_v01_es_zn.parquet (have; ts_event = UTC bar start, convert to America/New_York)",
+  "external_evidence": "Cheng-Madhavan (Feb 2009): LETF rebalancing was 16.8% of market-on-close volume on a 1% move day and 50.2% on a 5% day; Shum et al.: hedging may start 30 minutes before the close; Baltussen et al. 2006-2020: markets and periods with larger LETF share (x^2 - x weighted) show stronger last-half-hour momentum in equity and bond futures.",
+  "evidence_score": 2,
+  "implementable": true,
+  "adaptation_note": "LETF AUM data not available, so only the move-size condition is used; last hour instead of last half-hour.",
+  "reuse_existing_series": ""
+ },
+ {
+  "id": "intraday_micro_imom_commodity_fx",
+  "name": "Rest-of-day intraday momentum in commodity and currency futures",
+  "family": "intraday momentum",
+  "sources": [
+   "Baltussen, Da, Lammers, Martens (2021 JFE) Table 6 Panels C-D"
+  ],
+  "source_types": [
+   "journal"
+  ],
+  "exact_rule": "For CL, GC, HG, ZC, ZS, 6E, 6J: r_ROD = previous common-hours close to 30 minutes before today's close; position sign(r_ROD) over the last 30 minutes, equal weight across contracts, per-root costs per side.",
+  "instruments": "CL GC HG ZC ZS 6E 6J (intraday)",
+  "data_needed": "Intraday (minute or hourly) bars for non-ES/ZN roots; not in our data and Databento timeseries calls are not allowed",
+  "external_evidence": "Baltussen et al. 1974-2020: commodity futures eta(r_ROD) 4.34%/yr, vol 3.05%, Sharpe 1.42 gross; currency futures 0.85%/yr, vol 0.98%, Sharpe 0.87; reversal over the next days for commodities.",
+  "evidence_score": 3,
+  "implementable": false,
+  "adaptation_note": "Needs intraday data for these roots; listed for completeness and possible later data access.",
+  "reuse_existing_series": ""
+ }
+]

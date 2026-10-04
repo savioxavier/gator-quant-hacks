@@ -1,0 +1,72 @@
+{
+  "bridge": [
+    {
+      "step": "0 standalone gross (open->open, rf=0)",
+      "n": 3208,
+      "ann_mean": 0.02651604161602777,
+      "ann_vol": 0.10410823925247988,
+      "sharpe": 0.25469685979149015,
+      "note": "their definition; reproduces 0.2547"
+    },
+    {
+      "step": "1 re-booked by day: w[t-1]*r_co(t) + w[t]*r_oc(t)",
+      "n": 3209,
+      "ann_mean": 0.026400830768788228,
+      "ann_vol": 0.11157926986177538,
+      "sharpe": 0.23661053528575363,
+      "note": "additive split, adds 2024-10-02"
+    },
+    {
+      "step": "2 + engine compounding (= engine gross, rf=0)",
+      "n": 3209,
+      "ann_mean": 0.026695087119400978,
+      "ann_vol": 0.11156873020473675,
+      "sharpe": 0.23927033202236458,
+      "note": ""
+    },
+    {
+      "step": "3a gross - their |dw| costs",
+      "n": 3209,
+      "ann_mean": 0.02155585590677915,
+      "ann_vol": 0.11156822332380018,
+      "sharpe": 0.19320784417457662,
+      "note": ""
+    },
+    {
+      "step": "3b gross - engine drift-adjusted trading costs",
+      "n": 3209,
+      "ann_mean": 0.02132472102591886,
+      "ann_vol": 0.1115693075612127,
+      "sharpe": 0.19113429573109986,
+      "note": ""
+    },
+    {
+      "step": "4 - short borrow 30 bp/yr (= engine net, rf=0)",
+      "n": 3209,
+      "ann_mean": 0.01978818763196986,
+      "ann_vol": 0.1115689917136054,
+      "sharpe": 0.1773627898580065,
+      "note": "their-definition Sharpe in our engine"
+    },
+    {
+      "step": "5 engine net with T-bill cash, excess over T-bill",
+      "n": 3209,
+      "ann_mean": 0.02341648094446513,
+      "ann_vol": 0.1115878647874023,
+      "sharpe": 0.20984791660883842,
+      "note": "our definition = sum w_i (r_i - rf) - costs"
+    }
+  ],
+  "engine_crosscheck_max_abs": {
+    "gross_rf0": 0.0,
+    "net_rf0": 6.938893903907228e-18,
+    "net_tbill": 6.938893903907228e-18
+  },
+  "extra": {
+    "turnover_their_def": 23.437352007603526,
+    "turnover_engine_def": 24.50118165738282,
+    "share_of_TLT_var_overnight": 0.51489033074271,
+    "mean_rf_ann_IS": 0.013202306014334681,
+    "mean_rf_ann_2022_2024": 0.03991997105643994
+  }
+}

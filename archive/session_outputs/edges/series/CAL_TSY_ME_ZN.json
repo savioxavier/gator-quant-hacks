@@ -1,0 +1,25 @@
+{
+  "candidate": "CAL_TSY_ME_ZN",
+  "rule": "Long ZN16 over return days T-2..T (enter close T-3, exit close T), no issuance sizing",
+  "literature": "Hartley & Schwarz (2019, Predictable End-of-Month Treasury Returns; 1990-2018); repository sleeve C (HYPOTHESES.md s.1)",
+  "instrument": "ZN16",
+  "columns": {
+    "net_1x": "daily excess return over T-bill, net of realistic one-way cost 1.0 bp per unit notional (+ engine roll round trip)",
+    "net_2x": "same at 2x costs",
+    "gross": "no costs"
+  },
+  "scaling": "L = min(5, 0.10 / (sigma_hat * sqrt(f_hat))) inside windows, fixed per window from the decision date two sessions before the first return day; sigma_hat = sqrt(252*EWMA_com60(r^2)) of the instrument's daily excess returns; f_hat = share of trailing 252 sessions in the rule's windows",
+  "execution": "engine.simulate exec=next_close (weight held over day t decided at close t-2); calendar offsets on the planned NYSE calendar",
+  "is_window": [
+    "2010-09-28",
+    "2024-10-02"
+  ],
+  "later_window": [
+    "2024-10-03",
+    "2026-10-02"
+  ],
+  "spec": "edges/calendar/SPEC.md",
+  "script": "edges/calendar/run_calendar.py",
+  "verdict": "real_edge",
+  "notes": "Same idea as sleeve C inside F2: daily correlation 0.97 with the F2 C_F stream, 0.74 with F2. It adds nothing new to F2 but is the strongest standalone calendar sleeve. Mean leverage 4.6x in a window; the 5x cap binds on 61% of window days."
+}

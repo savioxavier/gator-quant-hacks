@@ -1,0 +1,34 @@
+{
+  "as_of": "2026-10-07",
+  "forward_start": "2026-10-06",
+  "primary": "S2",
+  "strategies": {
+    "S1": {
+      "n_days": 2,
+      "cumulative_return": 0.009560549007674446,
+      "sharpe_standard_error": 11.224972160321824,
+      "weekly_corr_DBMF": null,
+      "weekly_corr_AQMIX": null
+    },
+    "S2": {
+      "n_days": 2,
+      "cumulative_return": -0.0018985862460632053,
+      "sharpe_standard_error": 11.224972160321824
+    },
+    "S3": {
+      "n_days": 2,
+      "cumulative_return": 0.00913198377921387,
+      "sharpe_standard_error": 11.224972160321824
+    },
+    "ES_10VOL": {
+      "n_days": 2,
+      "cumulative_return": -0.011737409225429984,
+      "sharpe_standard_error": 11.224972160321824
+    },
+    "BH5": {
+      "n_days": 2,
+      "cumulative_return": 0.009400915976145896,
+      "sharpe_standard_error": 11.224972160321824
+    }
+  }
+}

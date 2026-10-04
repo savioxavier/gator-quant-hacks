@@ -1,0 +1,14 @@
+{
+  "placebo": true,
+  "what": "POSITIVE CONTROL: placebo tree with a planted look-ahead signal",
+  "generator": "placebo_features/make_positive_control_tree.py",
+  "seed": 70032026,
+  "planted": {
+    "20190731": "vtt_offset",
+    "20200729": "wav_gap",
+    "20210616": "diarize_failed",
+    "20220316": "face_enroll_failed"
+  },
+  "market_data_used": false,
+  "positive_control": true
+}

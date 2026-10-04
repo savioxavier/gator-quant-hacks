@@ -1,0 +1,21 @@
+{
+  "stage": "diarize",
+  "presser_id": "20190130",
+  "status": "ok",
+  "outputs": [
+    "diarize/chair_check.parquet"
+  ],
+  "notes": {
+    "method": "ecapa_verify",
+    "enroll_end_s": 581.392,
+    "n_chunks": 756,
+    "threshold": 0.38,
+    "threshold_source": "opening_loo",
+    "enroll_s": 567.0,
+    "n_enroll": 189,
+    "answer_verified_frac": 0.9453
+  },
+  "run_id": "PLACEBO",
+  "placebo": "PLACEBO: synthetic tree, not package output",
+  "finished_utc": "2026-10-03T23:43:49+00:00"
+}

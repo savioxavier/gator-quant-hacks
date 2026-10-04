@@ -1,0 +1,129 @@
+{
+  "mode": "run (chrono walk-forward stance scores)",
+  "prereg_sha256": "464f8a5bad37e6466ccde42e8941fa1836323600324792d4d53dcc0c50eb8a2e",
+  "first_valid_z": {
+    "T0f": "2011-12-30",
+    "T0v2": "2015-12-31",
+    "T1": "2015-12-31",
+    "T2": "2015-12-31",
+    "T3": "2015-12-31",
+    "T4": "2015-12-31"
+  },
+  "first_position_dates": {
+    "T1xE1": "2015-12-31",
+    "T1xE2": "2016-01-04",
+    "T2xE1": "2015-12-31",
+    "T2xE2": "2016-01-04",
+    "T3xE1": "2015-12-31",
+    "T3xE2": "2016-01-04",
+    "T4xE1": "2015-12-31",
+    "T4xE2": "2016-01-04",
+    "T0fxE1": "2011-12-30",
+    "T0v2xE1": "2015-12-31"
+  },
+  "chosen": "T4xE1",
+  "selection_sharpe_net1x": 0.15373040268964683,
+  "validation_sharpe_net1x": 0.6868265090540633,
+  "full_is_sharpe_net2x": 0.38717212451165833,
+  "decision_rule_passed": false,
+  "validation_vs_target_0.7": -0.013173490945936672,
+  "falsifiers": {
+    "selection_sharpe_le_0.2": true,
+    "validation_le_0": false,
+    "share_full_is_pnl_from_2022": 0.7392861992972787,
+    "full_is_pnl_sum": 0.43651622479807883,
+    "pnl_2022_sum": 0.32271042076256823,
+    "share_2022_gt_half": true,
+    "full_is_net2x_sharpe": 0.38717212451165833,
+    "net2x_le_0": false,
+    "T3_vs_T1_T2": {
+      "T1xE1": {
+        "selection": -0.581910735060309,
+        "validation": 0.9735104046143921,
+        "full_is": 0.195718864121412
+      },
+      "T1xE2": {
+        "selection": -0.35758945835328637,
+        "validation": 0.6596220387860641,
+        "full_is": 0.1973552118644396
+      },
+      "T2xE1": {
+        "selection": -0.34603543908133966,
+        "validation": 0.824665050160902,
+        "full_is": 0.24552457855294674
+      },
+      "T2xE2": {
+        "selection": -0.17714716536132083,
+        "validation": 0.4560559830189317,
+        "full_is": 0.1707215124199562
+      },
+      "T3xE1": {
+        "selection": -0.2047650988210773,
+        "validation": 0.8037213806682433,
+        "full_is": 0.26865376560282606
+      },
+      "T3xE2": {
+        "selection": -0.0652157329201009,
+        "validation": 0.6345576015219944,
+        "full_is": 0.2977803388658105
+      }
+    },
+    "corr_zT2_zT3_full_is": 0.975405624906696,
+    "corr_CT2_M_full_is": 0.1861723788254718,
+    "T3_beta_last": 0.4343546889018253
+  },
+  "dsr": {
+    "trial_sharpes_used": [
+      -0.581910735060309,
+      -0.35758945835328637,
+      -0.34603543908133966,
+      -0.17714716536132083,
+      -0.2047650988210773,
+      -0.0652157329201009,
+      0.15373040268964683,
+      0.15114074866569271,
+      0.413358347581611,
+      0.205311815484367,
+      0.205311815484367
+    ],
+    "n_trials": 11,
+    "var_sr_ann": 0.0932297090809461,
+    "note": "8 combos (selection-window net Sharpe) + Variant A's 3 logged trials (sharpe_1x column; row 3 repeats row 2)",
+    "selection_window": {
+      "dsr": 0.22251105731227083,
+      "sr0_ann": 0.4953151994522045,
+      "n_trials": 11
+    },
+    "full_is": {
+      "dsr": 0.43605701337111313,
+      "sr0_ann": 0.4953151994522045,
+      "n_trials": 11
+    },
+    "sens_n10_dedup": {
+      "dsr": 0.2323154779737321,
+      "sr0_ann": 0.4807806088532623,
+      "n_trials": 10
+    },
+    "sens_var_from_8_combos_only": {
+      "dsr": 0.280469384152798,
+      "sr0_ann": 0.4137844159403128,
+      "n_trials": 11
+    },
+    "psr_vs_0_selection": {
+      "dsr": 0.634472174508885,
+      "sr0_ann": 0.0,
+      "n_trials": 1
+    }
+  },
+  "corr_chosen_vs_core_ER_6_full_is": 0.024998700048290953,
+  "portfolio_info": {
+    "core_first": "2011-04-04",
+    "rebuild_max_abs_diff_vs_PORT_core_ER_6": 0.0,
+    "rebuild_n_compared": 3397,
+    "fed_sleeve_first_live_multiplier": "2016-07-05"
+  },
+  "prereg_sha256_checked": "464f8a5bad37e6466ccde42e8941fa1836323600324792d4d53dcc0c50eb8a2e",
+  "doc_scores": "<scratch>\\tamper\\backtests\\v2\\score\\doc_scores.parquet",
+  "doc_scores_sha256": "0e0c1ca7c0fd5ed0b229db2ae745039c383e8e50f64ba524ad3c688d59873ba0",
+  "reproduction_of": "backtests/results/v2_oos/run/oos_chosen.json"
+}

@@ -1,0 +1,13 @@
+{
+  "placebo": true,
+  "what": "synthetic fedpress-schema tables for pipeline testing; NOT features",
+  "generator": "placebo_features/make_placebo_tree.py",
+  "seed": 70032026,
+  "planted": {
+    "20190731": "vtt_offset",
+    "20200729": "wav_gap",
+    "20210616": "diarize_failed",
+    "20220316": "face_enroll_failed"
+  },
+  "market_data_used": false
+}

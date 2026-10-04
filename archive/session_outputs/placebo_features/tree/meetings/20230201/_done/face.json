@@ -1,0 +1,20 @@
+{
+  "stage": "face",
+  "presser_id": "20230201",
+  "status": "ok",
+  "outputs": [
+    "face/face_frames.parquet",
+    "face/face_turns.parquet",
+    "face/enroll.json"
+  ],
+  "notes": {
+    "fps": 1.0,
+    "enroll_ok": true,
+    "identity_method": "sface",
+    "identity_threshold": 0.363,
+    "gated_frac": 0.688125
+  },
+  "run_id": "PLACEBO",
+  "placebo": "PLACEBO: synthetic tree, not package output",
+  "finished_utc": "2026-10-03T23:44:12+00:00"
+}

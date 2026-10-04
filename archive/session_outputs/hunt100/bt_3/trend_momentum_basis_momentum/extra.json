@@ -1,0 +1,267 @@
+{
+  "r1_vs_F_index_corr": {
+    "F_CL": 0.9999958689054466,
+    "F_HO": 0.9999942064104037,
+    "F_RB": 0.9999945464901496,
+    "F_NG": 0.9999975378665636,
+    "F_GC": 0.9999768203755175,
+    "F_SI": 0.9999938824031036,
+    "F_PL": 0.9999910319283247,
+    "F_HG": 0.9999877837266313,
+    "F_ZC": 0.999988592097801,
+    "F_ZS": 0.9999829845035276,
+    "F_ZW": 0.9999926313878176,
+    "F_ZL": 0.9999882305285183,
+    "F_ZM": 0.9999877959429316,
+    "F_LE": 0.9999734137891556,
+    "F_HE": 0.9999912248774452
+  },
+  "share_days_v1_expires_before_v0": {
+    "CL": 0.0515,
+    "GC": 0.2023,
+    "HE": 0.2303,
+    "HG": 0.0464,
+    "HO": 0.26,
+    "LE": 0.2532,
+    "NG": 0.0845,
+    "PL": 0.0609,
+    "RB": 0.3123,
+    "SI": 0.0471,
+    "ZC": 0.2485,
+    "ZL": 0.3647,
+    "ZM": 0.373,
+    "ZS": 0.2262,
+    "ZW": 0.1425
+  },
+  "median_month_gap_v1_minus_v0": {
+    "CL": 1.0,
+    "GC": 2.0,
+    "HE": 2.0,
+    "HG": 2.0,
+    "HO": 1.0,
+    "LE": 2.0,
+    "NG": 1.0,
+    "PL": 3.0,
+    "RB": 1.0,
+    "SI": 2.0,
+    "ZC": 2.0,
+    "ZL": 1.0,
+    "ZM": 1.0,
+    "ZS": 2.0,
+    "ZW": 2.0
+  },
+  "roll_stats": {
+    "CL": {
+      "r1": {
+        "n": 4233,
+        "roll": 196,
+        "roll_found": 196,
+        "missing": 0
+      },
+      "r2": {
+        "n": 4233,
+        "roll": 438,
+        "roll_found": 147,
+        "missing": 291
+      }
+    },
+    "HO": {
+      "r1": {
+        "n": 4233,
+        "roll": 210,
+        "roll_found": 209,
+        "missing": 1
+      },
+      "r2": {
+        "n": 4232,
+        "roll": 530,
+        "roll_found": 208,
+        "missing": 322
+      }
+    },
+    "RB": {
+      "r1": {
+        "n": 4233,
+        "roll": 254,
+        "roll_found": 254,
+        "missing": 0
+      },
+      "r2": {
+        "n": 4232,
+        "roll": 528,
+        "roll_found": 253,
+        "missing": 275
+      }
+    },
+    "NG": {
+      "r1": {
+        "n": 4233,
+        "roll": 200,
+        "roll_found": 200,
+        "missing": 0
+      },
+      "r2": {
+        "n": 4233,
+        "roll": 586,
+        "roll_found": 179,
+        "missing": 407
+      }
+    },
+    "GC": {
+      "r1": {
+        "n": 4232,
+        "roll": 81,
+        "roll_found": 81,
+        "missing": 0
+      },
+      "r2": {
+        "n": 4227,
+        "roll": 359,
+        "roll_found": 70,
+        "missing": 289
+      }
+    },
+    "SI": {
+      "r1": {
+        "n": 4232,
+        "roll": 84,
+        "roll_found": 83,
+        "missing": 1
+      },
+      "r2": {
+        "n": 4219,
+        "roll": 355,
+        "roll_found": 71,
+        "missing": 284
+      }
+    },
+    "PL": {
+      "r1": {
+        "n": 4233,
+        "roll": 66,
+        "roll_found": 66,
+        "missing": 0
+      },
+      "r2": {
+        "n": 4209,
+        "roll": 213,
+        "roll_found": 65,
+        "missing": 148
+      }
+    },
+    "HG": {
+      "r1": {
+        "n": 4232,
+        "roll": 82,
+        "roll_found": 82,
+        "missing": 0
+      },
+      "r2": {
+        "n": 4228,
+        "roll": 188,
+        "roll_found": 81,
+        "missing": 107
+      }
+    },
+    "ZC": {
+      "r1": {
+        "n": 4113,
+        "roll": 105,
+        "roll_found": 98,
+        "missing": 7
+      },
+      "r2": {
+        "n": 4113,
+        "roll": 335,
+        "roll_found": 97,
+        "missing": 238
+      }
+    },
+    "ZS": {
+      "r1": {
+        "n": 4113,
+        "roll": 95,
+        "roll_found": 92,
+        "missing": 3
+      },
+      "r2": {
+        "n": 4113,
+        "roll": 310,
+        "roll_found": 89,
+        "missing": 221
+      }
+    },
+    "ZW": {
+      "r1": {
+        "n": 4113,
+        "roll": 92,
+        "roll_found": 90,
+        "missing": 2
+      },
+      "r2": {
+        "n": 4113,
+        "roll": 292,
+        "roll_found": 90,
+        "missing": 202
+      }
+    },
+    "ZL": {
+      "r1": {
+        "n": 4113,
+        "roll": 105,
+        "roll_found": 101,
+        "missing": 4
+      },
+      "r2": {
+        "n": 4113,
+        "roll": 374,
+        "roll_found": 95,
+        "missing": 279
+      }
+    },
+    "ZM": {
+      "r1": {
+        "n": 4113,
+        "roll": 126,
+        "roll_found": 116,
+        "missing": 10
+      },
+      "r2": {
+        "n": 4113,
+        "roll": 368,
+        "roll_found": 114,
+        "missing": 254
+      }
+    },
+    "LE": {
+      "r1": {
+        "n": 4106,
+        "roll": 158,
+        "roll_found": 153,
+        "missing": 5
+      },
+      "r2": {
+        "n": 4106,
+        "roll": 463,
+        "roll_found": 149,
+        "missing": 314
+      }
+    },
+    "HE": {
+      "r1": {
+        "n": 4106,
+        "roll": 155,
+        "roll_found": 155,
+        "missing": 0
+      },
+      "r2": {
+        "n": 4106,
+        "roll": 535,
+        "roll_found": 151,
+        "missing": 384
+      }
+    }
+  },
+  "mean_abs_bm_cross_section": 0.08358586639777311,
+  "diagnostics": {}
+}

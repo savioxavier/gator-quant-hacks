@@ -1,0 +1,27 @@
+{
+  "candidate": "V1_all_t5",
+  "task_label": "futures_test",
+  "rule": "Outright: short the auctioned maturity's future over return days [A-4, A], long over [A+1, A+5]; 2y ZT, 5y ZF, 7y ZN, 10y ZN, 20y ZB, 30y UB; 10% ex-ante per maturity sleeve, equal risk, announcement-gated",
+  "diagnostic": false,
+  "columns": {
+    "net_1x": "daily excess return over T-bill, realistic one-way costs ZT 0.5 / ZF 0.7 / ZN 1.0 / ZB, UB 1.5 / ES 1.0 bp (+ engine roll round trip)",
+    "net_2x": "same at 2x costs",
+    "gross": "no costs"
+  },
+  "execution": "engine.simulate exec=next_close (held on return day t decided at close t-2); auctions gated by announcement date <= t-2",
+  "avg_cost_bp": 0.7518680468225364,
+  "selection_window": [
+    "2010-06-07",
+    "2020-12-31"
+  ],
+  "validation_window": [
+    "2021-01-01",
+    "2024-10-02"
+  ],
+  "later_descriptive": [
+    "2024-10-03",
+    "2026-10-02"
+  ],
+  "spec": "auction/futures_test/SPEC.md",
+  "script": "auction/futures_test/auction_futures.py"
+}

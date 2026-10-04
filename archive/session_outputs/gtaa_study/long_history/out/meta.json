@@ -1,0 +1,7 @@
+{
+ "timed_variants": 80,
+ "bh_baselines": 16,
+ "rows": 1536,
+ "bootstrap_reps": 2000,
+ "seconds": 39.6
+}

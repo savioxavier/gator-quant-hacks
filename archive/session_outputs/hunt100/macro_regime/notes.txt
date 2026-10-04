@@ -1,0 +1,18 @@
+macro_regime search notes (2026-10-03)
+
+Files: candidates.json (30 candidates, exact rules, 3 pre-declared variants max, A = primary), urls.txt (sources + verified free data endpoints), pdf/ (downloaded papers and text extracts used for numbers), data/ (FRED/Fed/Shiller downloads used to check availability only; nothing computed yet).
+
+Data caveats found while checking availability:
+- fred_daily BAMLH0A0HYM2 (ICE BofA HY OAS) only starts 2023-10-03 (FRED truncated ICE history). Use Moody's BAA10Y (1986+), AAA10Y, HYG/IEF or the Fed EBP csv instead.
+- Fed EBP csv (1973-01..2026-07) is re-estimated each release: not point-in-time.
+- NFCI/ANFCI current vintage is renormalised weekly: needs ALFRED vintages for a point-in-time test.
+- Shiller ie_data at the old wsimg URL was last saved 2024-09: a current copy is needed for CAPE/D-P after mid-2024.
+- VIX3M starts 2006-07, VIX9D 2011; VIXCLS (FRED) from 1990 for longer VRP histories.
+- UNRATE and CPIAUCNS: small revisions; use release dates (UNRATE first Friday, CPI mid-month).
+- ff_daily ends 2026-08-31.
+
+Evidence quality: no candidate in this family has a long live net record; best-supported (score 3) are the volatility-managed variants (downside vol, conditional vol targeting, Moreira-Muir), Treasury BAB, low-vol sectors, dollar carry, GTT, US macro momentum adaptation, CAPE value+momentum and combination forecasts. Several sources report gross, in-sample or single-study results (scores 1-2).
+
+Overlap with the edge-search series (no verifier verdicts in the journal yet, so no reuse claimed): rpm_ES_MM = Moreira-Muir A; rpm_SB_STATIC = base of the stock/bond correlation switch; carry_ts_fx related to dollar carry; carry_ts_rates / carry_xs_rates related to term-spread timing and Treasury BAB.
+
+WebSearch session budget ran out near the end; remaining lookups used the DuckDuckGo tool and direct fetches.

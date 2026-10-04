@@ -1,0 +1,1542 @@
+
+=== PAGE 1 ===
+ 
+ 
+ISSN 0956-8549-684 
+ 
+ 
+Anticipated and Repeated  
+Shocks in Liquid Markets 
+  
+By 
+ 
+Dong Lou 
+Hongjun Yan 
+Jinfan Zhang 
+ 
+THE PAUL WOOLLEY CENTRE  
+WORKING PAPER SERIES NO 25 
+ 
+FINANCIAL MARKETS GROUP 
+DISCUSSION PAPER NO 684 
+ 
+ 
+ 
+June 2011 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Dong Lou has been teaching at the London School of Economics since July 2009. He 
+earned his PhD in Finance from Yale Univ ersity and a B.S. in Computer Science from 
+Columbia University.  His research mostly focuses on understanding market 
+inefficiencies, and their distortionary effects on resource allocation in the real economy. 
+Hongjun Yan is an Associate Professor of Finance at the Yale School of Management.  
+He received his PhD from the London Business School in 2005.  The focus of his current 
+research is to better understand the behaviour of asset prices by incorporating bounded 
+rationality, heterogeneous beliefs, reputation,  learning and market imperfections etc. 
+into standard asset pricing framework. Ji nfan Zhang is currently a PhD candidate in 
+Finance from Yale University. He earned his PhD and B.S. both in Electrical 
+Engineering from Tsinghua University (China ). Zhang’s research mostly focuses on the 
+institutional origins of asset market liqui dity and its impact on asset pricing and 
+financial crisis. Any opinions expressed here are those of the authors and not necessarily 
+those of the FMG. The research findings reported in this paper are the result of the 
+independent research of the authors and do not necessarily reflect the views of the LSE.   
+  
+=== PAGE 2 ===
+ 
+ 
+ 
+ 
+ 
+Anticipated and Repeated Shocks in Liquid Markets* 
+ 
+ 
+ 
+ 
+Dong Lou 
+London School of Economics 
+d.lou@lse.ac.uk 
+ 
+ 
+Hongjun Yan 
+Yale School of Management 
+hongjun.yan@yale.edu 
+ 
+ 
+Jinfan Zhang 
+Yale School of Management 
+jinfan.zhang@yale.edu 
+ 
+ 
+ 
+ 
+ 
+ 
+This Draft: June 15, 2011 
+ 
+ 
+ 
+  
+                                                             
+* We thank Viral Acharya, Nick Barberis, Mikhail Chernov, Greg Duffee, Darrell Duffie, Michael Fleming, 
+David Goldreich, Robin Greenwood, Peter Kondor, Arvind Krishnamurthy, Andrew Metrick, Lasse 
+Pedersen, Christopher Polk, Tyrone Smith, Jeremy Stein, Dimitri Vayanos, Lei Xie, Tong Yu, and 
+seminar participants at UC Irvine, LSE, Yale, and Econometric Society Meetings for helpful comments. 
+We are also grateful to Pengjie Gao, Andrea Vedolin, and Tong Yu for their generous help with some of 
+the data used in this paper. Lou acknowledges financial support from the Paul Woolley center at the 
+London School of Economics. Yan received support from a Whitebox Advisors research grant 
+administered through the Yale International Center for Finance. Please direct all correspondence to 
+Hongjun Yan. 
+=== PAGE 3 ===
+ 
+ 
+ 
+Anticipated and Repeated Shocks in Liquid Markets 
+ 
+ 
+ 
+ 
+Abstract 
+ 
+ 
+We show that Treasury security prices in the secondary market decrease significantly 
+before subsequent auctions and recover shortly after. This price pattern implies a large 
+issuance cost for the Treasury Department, which is estimated to be between 9 and 18 
+basis points of the auction size. For example,  this cost amounts to over half a billion 
+dollars for issuing Treasury notes alone in 2007. Our results appear to be consistent with 
+the hypothesis of primary dealers’ limited  risk-bearing capacity and the imperfect 
+capital mobility of end investors in the Treasury market (e.g., federal agencies, 
+sovereign wealth funds, pension funds, and etc.), highlighting the important role of 
+capital mobility even in the most liquid financial markets. 
+ 
+ 
+ 
+ 
+JEL Classification Numbers: G12. 
+ 
+Keywords: Liquidity, Slow-moving capital, Supply shocks, Treasury auctions. 
+  
+=== PAGE 4 ===
+1 
+ 
+I. Introduction 
+In this paper, we empirically examine how anticipated and frequently repeated supply 
+shocks are absorbed in liquid financial markets. In particular, we examine the temporary 
+price impacts of Treasury security auctions on the secondary Treasury, repo, and equity 
+markets. This may appear as a surprising agenda: Treasury auctions are conducted 
+every month, of which the exact dates and am ounts are announced in advance, so these 
+events are largely anticipated; in addition, Treasury auctions are usually accompanied 
+by the maturity of similar Treasury securities , so the net supply effect is likely small. 
+Given the size and liquidity of the U.S. Tr easury, repo, and equity markets, one might 
+expect no appreciable price impacts from these anticipated events.
+1 In sharp contrast to 
+this conventional view, our evidence reveals significant temporary price effects in all 
+three markets around Treasury auctions. 
+Specifically, we find that Treasury auctions exert significant price pressure in the 
+secondary Treasury market during the 5 to 10 days leading up to these auctions and 
+that this price pressure gradually dissipates in the subsequent 5 to 10 days. An intuitive 
+way to describe this price dip and recovery  pattern is to compare Treasury returns 
+around auctions: For example, the 5-day cumulative return of the on-the-run 2-year 
+Treasury note before the subsequent 2-ye ar note auction is, on average, 8.89 ( t=2.93) 
+basis points lower than the 5-day post-auction return of the same security. 2 Similarly, 
+this 5-day return differential is, on average, 22.54 ( t=3.67) basis points for 5-year notes 
+around subsequent 5-year note auctions, and 23.84 ( t=1.78) basis points for 10-year 
+notes around subsequent 10-year note auctions. 
+These findings have important economic implications. First of all, they suggest 
+that the cost of security issuance borne by the Treasury Department is an order of 
+magnitude larger than auction markups estimated in prior literature, which compares 
+                                                             
+1 In 2008, the total size of Treasury securities outstanding is $10 trillion (from Treasury Department 
+website), the total U.S. stock market capitalization is $14 trillion (from CRSP), and the estimated size of 
+the repo market is over $10 trillion (Gorton and Metrick (2010)). 
+2 An on-the-run Treasury security is the most recently issued security of a given maturity. The first off-
+the-run and the second off-the-run securities are the second and third most recently issued securities of a 
+given maturity, respectively.   
+=== PAGE 5 ===
+2 
+ 
+the auction price with a benchmark price on the auction day , and often finds the 
+markup to be around 1 basis point of the auction size. 3 Our findings suggest that, 
+because of the price impact of Treasury auctions, these benchmark prices on auction 
+days are already depressed. Therefore, while the traditional approach is appropriate for 
+measuring auction underpricing, it does not re flect the total issuance cost borne by the 
+Treasury Department.  
+To incorporate price impacts into our cost measure, we take the average price in 
+the secondary Treasury market on the 
+tth day before and the tth day after each auction 
+as the benchmark price, with t ranging from 1 to 10. 4 That is, our measure reflects the 
+amount of money the Treasury Department could have saved were it able to issue 
+Treasury securities at the secondary market prices several days before and after auctions. 
+For t=5, for example, our estimates of Treasury issuance costs for 2-, 5-, and 10-year 
+notes are 9.07, 16.81, and 18.43 basis points of the auction size, respectively. According 
+to these estimates, the total cost of issuing Treasury notes alone in 2007 is $643 million. 
+This cost is likely to be substantially higher in the near future when the U.S. 
+government faces an unprecedented budget de ficit. While it is by no means clear 
+whether part of the estimated cost can be saved through better designs of the Treasury 
+selling mechanism, recognizing such a cost is a necessary first step to understand and 
+improve its efficiency.5  
+Second, our findings suggest that the frictions behind investors’ slow responses to 
+demand/supply shocks are of first-order importance even in the most liquid financial 
+markets. A simple long-short strategy that exploits these large and reoccurring swings in 
+Treasury returns around auction days yields a Sharpe ratio that is higher than many 
+well-known asset pricing anomalies, such as currency carry trades and price momentum. 
+For example, by going short in the on-the-run 2-year note and long in a duration-
+                                                             
+3 See, for example, Nyborg and Sundaresan (1996) and Goldreich (2007).  
+4 This is likely a conservative estimate since the auctioned security will become “on-the-run” in a few days 
+and should be worth more than the soon-to-become-off-the-run note, as suggested by the well-known on-
+the-run-off-the-run phenomenon (e.g., Amihud and Mendelson (1991), Krishnamurthy (2002)). 
+5 Motivated by our empirical evidence, Jin and Yan (2011) analyze a model of optimal security selling 
+mechanism when capital is slow-moving.  
+=== PAGE 6 ===
+3 
+ 
+matched portfolio comprising the on-the-run 6-month Treasury bill and 10-year note 
+during the 10 days before each 2-year note  auction, and holding reversed positions 
+during the 10 days after, an investor can achieve an annualized Sharpe ratio of 1.08. In 
+comparison, the Sharpe ratios are around 0.59—0.95 for currency carry trades, and 0.47—
+0.75 for price momentum strategies in the U.S. stock market.
+6 These results also hold in 
+the more recent period when trading costs in the Treasury market are minimal. For 
+example, in the period of 1998-2008, the Sharp e ratio of our strategy is 1.44; even after 
+accounting for the bid-ask spread, it remains close to 1. Moreover, the documented 
+return pattern implies large swings in bo nd premium around auction days each month. 
+Even our most conservative estimate impl ies that the post-auction annualized bond 
+premium is 2.3% higher than its pre-auction counterpart. This difference is economically 
+significant given that the unconditional bond premium is only 1.4% in our sample, thus 
+posing a big challenge for asset pricing models. 
+Finally, the shocks analyzed here are small relative to the size of Treasury 
+markets. In the last 10 years, the average auction size of Treasury notes is merely 0.3% 
+of the Treasury market size.7 If one takes into account the amount of Treasury securities 
+maturing in each month, the net supply shock is even smaller. In addition, the timing 
+and size of Treasury auctions are announced  in advance, making Treasury auctions a 
+clean setting to analyze temporary price ef fects of supply shocks. Our evidence that 
+markets are unable to quickly absorb these anticipated small shocks, repeatedly, 
+suggests that capital mobility is perhaps more limited than previously thought, even in 
+the most developed financial market.
+8 It is thus reasonable to expect that similar effects 
+play an even bigger role in less liquid mark ets, such as corporate bond and structured 
+product markets. 
+                                                             
+6 See, e.g., Brunnermeir, Nagel, and Pedersen (2009), Lustig, Roussanov, and Verdelhan (2009), Asness, 
+Moskowitz, and Pedersen (2008), and Burnside, Eichenbaum, Kleshchelski, and Rebelo (2010). 
+7 In contrast, the demand shocks analyzed in Shleifer (1986) are close to 3% of the shares outstanding.  
+8 In a recent study, Fleckenstein, Longstaff, and Lustig (2010) provide another piece of evidence on the 
+imperfection of the Treasury markets: Nominal Treasury bonds are significantly underpriced relative to a 
+portfolio of TIPS and inflation swaps.  
+=== PAGE 7 ===
+4 
+ 
+The documented return pattern is consis tent with two factors working in the 
+Treasury market.9 First, primary dealers, who are required to participate actively and to 
+submit competitive bids in all Treasury au ctions, have limited ri sk-bearing capacity.10 
+They hence hedge part of the risk they are about to acquire in Treasury auctions by 
+short selling the same or similar securities in the secondary market before these auctions. 
+For example, Fleming and Rosenberg (2007) show that primary dealers take short 
+positions in both the secondary Treasury  market and when-issued market before 
+Treasury auctions.
+11 Consistent with this interpretation, we find that the price impact in 
+the secondary Treasury market is more pronounced precisely when the total risk to be 
+acquired by primary dealers is larger; for in stance, when the auction size is larger and 
+when Treasury returns are more volatile (as implied by options on Treasury securities). 
+The limited risk bearing capacity of prim ary dealers alone, however, is unable to 
+explain the whole phenomenon: Primary dealer s’ short selling in secondary Treasury 
+markets would not have a price impact, we re there enough arbitrage capital or end-
+investors to supply liquidity. It should not come as a surprise that arbitrage capital is 
+likely insufficient to absorb the entire suppl y due to Treasury auctions, which is in the 
+magnitude of tens of billions of dollars. Ye t for primary dealers’ shorting to have a 
+material price impact, we must also have end-investors’ capital be slow-moving. This 
+point is particularly important since a large amount — sometimes even larger than the 
+                                                             
+9 An alternative interpretation is that Treasury auctions have information contents. Although Treasury 
+auctions are fully anticipated, their outcomes are likely to contain information about economic conditions. 
+However, if uncertainty about these auctions is resolved gradually in the days leading up to these auctions, 
+the pre-auction Treasury returns should be higher than post-auction ones, opposite to our findings. 
+10 According to Administration of Relationships with Primary Dealers, available from the website of the 
+Federal Reserve Bank of New York, http://www.ny.frb.org/markets/pridealers_policies.html, “Primary 
+dealers are also required to participate in all auctions of U.S. government debt and to make reasonable 
+markets for the New York Fed when it transacts on behalf of its foreign official account-holders.” 
+According to Fleming (2007), primary dealers alone purchased 70.9% of Treasury securities sold to the 
+public (and another 21.6% on behalf of their institutional clients) during July 30, 2001 to December 28, 
+2005. 
+11 Fleming and Rosenberg (2007) also find a price increase in the week subsequent to the auction, and 
+interpret the price appreciation as a compensation for dealers’ bearing the risk associated with their 
+inventory changes. 
+=== PAGE 8 ===
+5 
+ 
+offering amount — of Treasury securities are maturing around these auctions — i.e., end 
+investors do have enough capital to absorb the supply.12 
+Major investors in Treasury markets are indeed likely unresponsive to transient 
+demand/supply shocks. Although the total size of Treasury securities outstanding is 
+around $10 trillion, over 40% of them are nonmarketable and held by Federal 
+Government accounts.13 The Federal Reserve holds another 8% to 9%, most of which is 
+obtained through noncompetitive bids at auctions. “Private holdings” constitute the rest, 
+of which foreign investors and state and local governments account for more than half. 
+While there are no publicly available data on  these public or private holdings, it seems 
+reasonable to expect that many of them do not have the intention, or resources, to 
+engage in short-term arbitrage trades. In addition, insurance companies and bond 
+mutual funds, which account for around 13% of private holdings, are also likely to be 
+unresponsive to the temporary price movements around auctions. For example, we find 
+70% of the insurance companies in the U.S. make less than 5 trades a year in Treasury 
+markets. Index bond mutual funds, due to co ncerns of tracking errors, are likely to 
+avoid newly issued securities before they are included in the indices they are tracking. 14  
+Our interpretation has a number of further predictions. First, it implies that repo 
+rates tend to be lower before auctions. To take short positions in the secondary 
+Treasury market, primary dealers need to borrow Treasury securities, which is often 
+fulfilled through “reverse repo”  transactions. In these transactions, primary dealers 
+effectively lend to their counterparties and take Treasury securities as collateral, which 
+they then short-sell in secondary markets. Primary dealers’ strong demand for these 
+transactions implies that they would be willing to accept lower interest rates on their 
+lending, thus leading to lower repo rates befo re auctions. Since this hedging activity is 
+expected to last only for a few days, its im pact should be stronger for overnight repo 
+                                                             
+12 For example, on June 1, 2004, the Treasury Department issued around $25 billion 2-year notes, but 
+there were $27 billion worth of Treasury securities maturing on the previous day.  
+13 The data on the ownership of Treasury securities are from http://fms.treas.gov/bulletin/index.html. 
+14 Many fixed-income indices usually adjust their composition at the end of each month. For example, 
+Barclays US Treasury Bond Index adjusts its composition on the last calendar day of each month; see, 
+https://ecommerce.barcap.com/indices. 
+=== PAGE 9 ===
+6 
+ 
+rates than for long-term repo rates. Consistent  with this conjecture, we find that the 
+average overnight general-collateral repo rates during the 5 days before 2-year note 
+auctions is 6.75 ( t=4.83) basis points lower than that during the 5 days after. The 
+pattern for one-week term repo rates is slightly weaker, with a rate differential of 4.39 
+(
+t=4.36) basis points, while that for one-month repo rates is virtually absent. 
+Second, since off-the-run notes are close substitutes to on-the-run ones, our 
+interpretation implies that the price impact around auctions should also arise for off-
+the-run securities. Indeed, we find that the return pattern of off-the-run notes is almost 
+identical to that of on-the-run notes. Third, auctions of Treasury securities with one 
+maturity should also affect prices of other maturities, and the impact should be stronger 
+if the maturity differential is smaller. Consis tent with this prediction, we find a similar 
+price pattern of 10-year notes around both 2- year and 5-year note auctions, even when 
+there is no 10-year note auction in surrounding  days. Moreover, relative to 2-year note 
+auctions, 5-year note auctions have a much stronger price impact on 10-year notes. 
+Finally, since Treasury yields affect the discount and borrowing rates in other 
+financial markets, one might expect the Trea sury yield movements documented in this 
+paper to also affect prices in other markets,  such as the equity market. To our surprise, 
+we find very large equity price moveme nts around Treasury auctions: The average 
+cumulative return of the value-weighted CRSP index in the 5 days before 2-year note 
+auctions is 49 (
+t=3.11) basis points lower than that after these auctions. Put differently, 
+in the past three decades, the average stock market return is negative during the 5 days 
+before 2-year note auctions, and is more than twice the unconditional average during 
+the 5 days after. We further show that this  return pattern is not driven by calendar-
+time effects (e.g., the turn-of-the week, turn -of-the-month, and turn-of-the-year effects). 
+While the stock return pattern is broadly consistent with our interpretation, the exact 
+underlying mechanism for such a large price impact remains unclear.  
+The rest of the paper is organized as follows: Section II reviews the related 
+literature and Section III describes the data. Section IV analyzes the impacts of 
+Treasury auctions on the secondary Treasury market. Section V presents the 
+=== PAGE 10 ===
+7 
+ 
+interpretation and further analysis implied by the interpretation. Sections VI and VII 
+analyze the impact on the repo and stock markets, respectively. Section VIII concludes.  
+ 
+II. Related Literature 
+Our paper is closely related to the growing literature on the temporary price impact of 
+supply/demand shocks in financial markets. Since the seminal paper by Shleifer (1986), 
+there has been a proliferation of research examining the effect of uninformed demand 
+shocks on stock returns. For example, Kaul, Mehrotra, and Morck (2000), Wurgler and 
+Zhuravskaya (2002), Mitchell, Pulvino, and Stafford (2004), Greenwood (2005), Coval 
+and Stafford (2007), Frazzini and Lamont (2008), and Lou (2010) analyze the 
+temporary price effects of index additions/deletions, short-selling induced by mergers 
+and acquisitions, and mutual fund flow-induced trading in the stock market. The 
+contribution of our paper lies in that we provide evidence for temporary price pressure 
+in a cleaner setting where the small supply shocks that we analyze are both well 
+anticipated and frequently repeated. This un ique feature helps highlight the first-order 
+importance of market frictions to our understanding of asset price formation and 
+evolution. 
+ Our results also complement prior research on the supply effect in the Treasury 
+market. One strand of this research examines the 
+level effect. For example, Simon (1991, 
+1994), Duffee (1996), Fleming (2002), Kr ishnamurthy (2002), Kuttner (2006), 
+Greenwood and Vayanos (2010a), and Kris hnamurthy and Vissing-Jorgensen (2010) 
+document a positive correlation between the (residual) supply of individual Treasury 
+securities and their idiosyncratic yields. Another strand of research in this literature 
+analyzes the supply effect by looking at changes in Treasury yields around various 
+policy announcements. For example, Garbad e and Rutherford (2007), Gagnon, Raskin, 
+Remache and Sack (2010), Greenwood and Vayanos (2010b), D’Amico and King (2011), 
+Krishnamurthy and Vissing-Jorgensen (2011), and Swanson (2011) report significant 
+drops in Treasury yields on 
+announcements of large buy-back programs initiated by the 
+Treasury and Federal Reserve. Our paper diff ers from these prior studies in that it 
+=== PAGE 11 ===
+8 
+ 
+examines Treasury auctions’ temporary price impact in the secondary Treasury markets, 
+both before and after auctions taking place, as well as their spillover effects across 
+maturities and across markets.15 
+Our results are generally consistent with the market segmentation view modeled 
+in Vayanos and Vila (2009). Preferred-habitat investors cause market segmentation and 
+make local demand and supply, in our part icular case, the short-selling by primary 
+dealers, matter for idiosyncratic Treasury yields. Arbitrageurs, in the meanwhile, take 
+away part of the profits and maintain a smooth yield curve, but are constrained by their 
+risk/capital capacity. End investors (e.g.,  federal agencies, sovereign wealth funds, 
+pension funds, and etc.), who have sufficient capital to absorb the supply, are slow in 
+responding to these shocks. As a result, part of the price effect remains in the data. 
+Finally, our results highlight the key role of not only primary dealers’ and 
+arbitrageurs’ limited risk-bearing capacity, but more importantly, end-investors’ slow-
+moving capital. Hence, our study contributes to the recent theoretical literature that 
+starts to incorporate limitations in capital mobility to asset pricing models (e.g., 
+Acharya, Shin, and Yorulmazer (2009), He  and Xiong (2009), Duffie (2010), Malliaris 
+and Yan (2010)).  
+ 
+III. Data 
+A. Institutional background of Treasury auctions 
+In our sample period of 1980-2008, the U.S. Treasury Department auctioned, on average, 
+$2.35 trillion worth of securities each year; the total amount auctioned was $6.7 trillion 
+in 2008. The participants of these auctions  include primary dealers, institutional 
+investors, foreign central banks, the Federa l Reserve, and a small number of individual 
+investors. The Treasury Department usually schedules the auction dates several months 
+                                                             
+15 D’Amico and King (2011) also analyze Treasury yield changes on the days when purchase operations by 
+the Federal Reserve actually occur, and document a temporary price increase that is largely reversed on 
+the following day. However, they focus on a specific, short, period of time, from March to October 2009, 
+when the quantitative easing program (QE1) took place. 
+=== PAGE 12 ===
+9 
+ 
+in advance and announces the auction si ze several days before each auction. 
+Immediately after the announcement, dealers and investors in the Treasury market start 
+to trade forward contracts on the soon-to- be-issued Treasury security in the “when-
+issued” market.  
+In each auction, primary dealers and other competitive bidders submit sealed 
+bids of rate-quantity pairs that specify th e amount to be purchased at each minimum 
+yield. Two auction mechanisms have been employed in Treasury auctions: multiple-price 
+and single-price auctions. Under both mechan isms, the clearing price is identified by 
+equating the aggregate demand submitted by competitive bidders to the total issue 
+amount minus the total demand from noncompe titive bidders (i.e., those who submit 
+market orders). The difference between the two mechanisms lies in that, while in 
+multiple-price auctions, competitive bidders pay for their allocated shares at their 
+submitted rates, in single-price auctions, a ll winning bidders pay the same price. While 
+almost all Treasury auctions in the 1980s were  multiple-price auctions, the single-price 
+mechanism is the dominant form in the more recent two decades.
+16  
+B. Data sample 
+From the U.S. Treasury Department website, we collect detailed information regarding 
+individual auctions for Treasury notes, with maturities ranging from 2 to 10 years. Such 
+information includes the auction date, issue date, auction mechanism, bids submitted, 
+total tender amount received, total tender amount accepted, lowest and highest winning 
+rates, etc. Our sample spans from January 1980 to June 2008, during which period 2-
+year Treasury notes are issued on a monthly basis and 10-year notes are issued on a 
+quarterly basis. The issuing frequency of 5-ye ar notes varied a few times in this period. 
+In total, we have 332 2-year note auctions, 210 5-year note auctions, and 132 10-year 
+note auctions.
+17 We then match our auction data with the CRSP daily U.S. Treasury 
+database to obtain daily Treasury security prices and carried interests. Throughout our 
+                                                             
+16 For more detailed discussions of these two auction mechanisms see, e.g., Goldreich (2007). 
+17 The Treasury also issued 3-, 4-, and 7-year notes roughly at a quarterly frequency. Their issuance, 
+however, was interrupted in the period of 1998-2003 for 3-year notes, 1990-2008 for 4-year notes, and 
+1993-2008 for 7-year notes.  
+=== PAGE 13 ===
+10 
+ 
+analysis, we use the average of the bid and ask prices from CRSP as our measure of 
+clean prices.  
+ We supplement our Treasury auction and yield data with five additional data 
+sources. First, we obtain daily repo rates from Bloomberg. Second, to examine insurance 
+companies’ trading activities in Treasury markets, we get their trading records from 
+their annual reports to National Association of Insurance Commissioners (NAIC). In 
+particular, Schedule D of these reports includes trades by insurance companies in each 
+year and their holdings at the end of the year.
+18 Third, we obtain daily stock returns 
+from the CRSP daily stock files. Fourth, we collect from TrimTabs, for the period of 
+1998-2008, daily investment flows to three major mutual fund classes: bond mutual 
+funds, equity funds, and hybrid funds. Finall y, from Mueller, Vedolin, and Yen (2011), 
+we obtain the daily model-free estimates of  maturity-weighted implied volatility of 
+nearest-to-expiry at-the-money options on the 30-year, 10-year, and 5-year Treasury 
+securities. 
+Table I presents some descriptive statistics of our sample. Panel A reports the 
+summary statistics associated with Treasury  auctions, and Panels B and C report those 
+for all other main variables. The average size of Treasury auctions across all maturities 
+is well over $10 billion. The average daily Tr easury note return ranges from 1.96 (for 2-
+year notes) to 2.31 (for 10-year notes) basi s points. The average daily return of the 
+value- and equal-weighted CRSP indices and the value-weighted S&P 500 index are 4.45, 
+8.15, and 3.53 basis points, respectively. The average daily flows to bond, equity, and 
+hybrid mutual funds reported by TrimTabs are 0.4, -0.92, and -0.19 basis points per 
+day.
+19  Finally, the average maturity-weighted Treasury-auction implied volatility is 
+around 8% in our sample. 
+ 
+                                                             
+18 See Jiang, Yan, and Yu (2010) for detailed descriptions of this dataset. 
+19 See Edelen and Warner (2001) and Greene and Hodges (2002) for a description of the construction of 
+flows and its potential issues. 
+=== PAGE 14 ===
+11 
+ 
+IV. Price Impact on Secondary Markets 
+To analyze the impact of Treasury auctions on the secondary Treasury market, we first 
+examine yields-to-maturity of 2-year notes, the most frequently issued Treasury notes, 
+around subsequent 2-year note auctions. Specif ically, for each 2-year note auction, we 
+calculate daily yields to maturity of the on-the-run 2-year note during both the 10 days 
+before and 10 days after the auction and compare them with the yield on the auction 
+day.
+20 Since there is a 2-year note auction almost every month in our sample, these 20-
+day event windows around auctions cover virtually all trading days in our sample period. 
+The pattern in Treasury yields around auctio ns can be easily seen in Figure 1. 
+The upper-left panel plots the time series average of Y( t)-Y(0), where Y(t) is the yield 
+of the on-the-run 2-year note on day t and Y(0) is the yield of the same security on the 
+auction day. There is a clear inverted-V sh aped pattern: yields tend to go up before 
+auctions and then decrease afterward. More detailed results are presented in Table II: 
+The yield differences, Y( t)-Y(0), are negative in the entire 20-day event window 
+surrounding each auction, and are statistica lly significant in the 4 days immediately 
+before the auctions and 6 days after the auctions. More specifically, the yield of 2-year 
+notes increases, on average, by 2.53 basis points during the 5-day period before the 
+auctions, but decreases by 2.32 basis points during the 5-day period afterward. 
+These results suggest that 2-year note auctions exert temporary price pressure on 
+the existing 2-year notes; secondary market prices are lower on auction days than in 
+surrounding days. Another way to see this price impact is to compare 2-year note 
+returns before and after these auctions. This approach effectively integrates the pre- and 
+post-auction impacts into one measure and so increases the statistical power in detecting 
+such price impact. As shown in Table III, th e return of the on-the-run 2-year note on 
+the day prior to the subsequent auction is, on  average, 3.68 basis points lower than the 
+return of the same note on the day immediately after the auction, with a t-statistic of 
+3.90. The return difference is positive and statistically significant in the entire 20-day 
+window: The average cumulative return during the 10 days after auctions is 9.20 basis 
+                                                             
+20 We track the same 2-year note throughout the 20-day window around each auction, even though this 
+security becomes off-the-run immediately after the auction. 
+=== PAGE 15 ===
+12 
+ 
+points higher than that during the 10 days before, with a t-statistic of 2.02. The return 
+differential achieves its maximum on day 6, with a point estimate of 10.2 basis points 
+and a t-statistic of 3.62. 
+The documented yield and return pattern around subsequent auctions is not 
+unique to 2-year notes. A very similar patter n exists for other maturities. For example, 
+as shown in Table II, the yield of the on-the-run 5-/10-year notes increases by 2.67/1.57 
+basis points during the 5 days before auctions, and decreases by 2.73/2.00 basis points 
+in the 5 days after. Moreover, as shown in Table III, the cumulative 5-day return of the 
+on-the-run 5-year Treasury note before a 5-year note auction is, on average, 22.54 
+(
+t=3.67) basis points lower than the 5-day return of the same note after the auction. 
+This return difference is 23.84 (t=1.78) basis points for 10-year notes.   
+A. Economic significance 
+The temporary movements in Treasury yi elds around subsequent auctions have a 
+number of important implications. First, they represent a substantial issuance cost 
+borne by the Treasury Department, which has been largely ignored in prior literature. 
+Second, they imply a potentially large tradin g profit, even after taking into account 
+transaction costs. Finally, these large swings in average Treasury returns provide useful 
+guidance for future asset-pricing models. We examine these issues in more detail in this 
+section. 
+A.1. Large issuance costs  
+In prior literature, Treasury  auction markups are usually measured as the difference 
+between the auction price and some benchmark traded price 
+on auction days (e.g., the 
+secondary market price or the forward price in the when-issue market). While this is 
+perhaps a clean measure of auction underpricing due to winner’s curse, it does not 
+reflect the total cost borne by the Treasury Department, as our previous results suggest 
+that the secondary market prices on auctio n days have already been driven down by 
+these auctions.  
+To take into account the price pressure effect resulting from Treasury auctions, 
+we take as the benchmark price the average secondary Treasury market prices around 
+=== PAGE 16 ===
+13 
+ 
+each auction (rather than on the auction day). We then calculate the amount of money 
+the Treasury Department could have saved were  it able to issue Treasury notes at this 
+benchmark price. We note that this is likel y a conservative estimate since the auctioned 
+security will become “on-the-run” in several days and should be worth more than the 
+soon-to-be-off-the-run security in the secondary market, as suggested by the well-known 
+on-the-run-off-the-run phenomenon (e.g., Amihud and Mendelson (1991), 
+Krishnamurthy (2002)). Table IV shows that Treasury issues notes at yields that are 
+significantly higher than those in the secondary market. Panel A reports ሻ, 
+where ሻ is the auction yield and ሻ is the average of the on-the-run note yields on 
+the 
+tth day before and tth day after the auction, with t ranging from 1 to 10. The results 
+suggest that auction yields are significantly higher than yields in the secondary market 
+around auctions. Take 2-year notes, for example: the yield difference measure, ሻ െ
+ሻ,  for t=1, 5, and 10 are 3.63 (t=5.77), 4.90 (t=4.62), and 5.05 (t=3.42) basis points, 
+respectively. The results are similar for 5- and 10-year notes. For t equal to 5, the yield 
+difference is 4.04 ( t=4.70) basis points for 5-year notes and 2.66 ( t=3.12) basis points 
+for 10-year notes.  
+Based on these yield differences, we further compute the implied cost borne by 
+the Treasury Department both as a fraction of total issuance size and in dollar terms. 
+As shown in Panel B, based on the yield difference for t=5, the issuance costs for 2-, 5-, 
+and 10- year notes are 9.07, 16.81, and 18.43 basis points of the auction size, 
+respectively. These figures translate into large dollar amounts. For 2007, the last full 
+year in our sample, the implied total cost of  issuing Treasury notes amounts to $649 
+million. Based on the yield difference ሻ,  for
+ t ≥ 8, the implied costs are well 
+above $700 million. 
+While it is by no means clear how part of the above estimated issuance cost can 
+be saved through better designs of the Treasury issuance mechanism, recognizing this 
+cost is undoubtedly an essential first step to assess and improve the efficiency of the 
+mechanism. Motivated by our empirical result s, Jin and Yan (2011) analyze a model of 
+security issuance when issuance has a price impact in the secondary market. In 
+=== PAGE 17 ===
+14 
+ 
+particular, they analyze the potential benefi ts and costs when the seller increases the 
+frequency of auctions and hence reduce the lumpiness of the supply shocks.     
+A.2. Trading profits  
+The documented return pattern around Treasury auctions also implies potentially large 
+trading profits. For example, to take ad vantage of the price movements around 2-year 
+note auctions that happen almost every month in our sample, one can short the on-the-
+run 2-year note in the t days before each auction, and long a duration-matched portfolio 
+comprising the on-the-run 6-month T-bill a nd 10-year note to hedge out the interest 
+rate risk. Then one can switch to the reversed positions, long the 2-year note and short 
+the 6-month bill and 10-year note, in the t days after the auction. As shown in Table V, 
+this simple long-short portfolio generates significant profits. Panel A reports the results 
+based on the full sample. The portfolio return is significant and positive for all t ranging 
+from 1 to 10, with 9 out of the 10 return estimates being significant at the 1% level. For 
+t=10, for instance, the average return of this trading strategy is 8.62 ( t=3.65) basis 
+points, with an annualized Sharpe ratio of 1.08. For reference, the Sharpe ratios for 
+currency carry trades and stock price mome ntum are around 0.59-0.95 and 0.47-0.75, 
+respectively (see, e.g., Brunnermeir, Nagel, and Pedersen (2009), Lustig, Roussanov, and 
+Verdelhan (2009) and Asness, Moskowitz, and Pedersen (2008)). 
+The strategy requires large turnover: one needs to complete two “round trips” 
+each month for both their long and short positions, and hence to pay twice the bid-ask 
+spreads. To examine whether transaction costs have a material impact on the 
+documented trading profits, we start by ex ploiting time-series variations in bid-ask 
+spreads in our sample period. We estimate from the CRSP dataset that the average bid-
+ask spread for 2-year on-the-run notes drops from 9 basis points in the first 10 years of 
+our sample to 1.7 basis points in the last 10 years, a general trend consistent with prior 
+evidence based on various data sources (e.g., Amihud and Mendelson (1991), Jegadeesh 
+(1993), Fleming (2003)). If trading costs play a significant role in explaining our return 
+pattern, we would expect to observe a decreasing trend in the profitability of this 
+strategy. However, as shown in Panel B of Table V, the average returns to our simple 
+strategy in the last 10 years of the sample are similar in economic magnitude to those 
+=== PAGE 18 ===
+15 
+ 
+based on the full sample, and with a much higher Sharpe ratio. Take t=10, for example: 
+the annualized Sharpe ratio of the strategy in  the last 10 years is 1.44, compared with 
+1.08 achieved in the full sample. 
+To more directly assess the Sharpe ratio net of transaction costs, we take bid-ask 
+spread estimates from Fleming (2003), who calculates daily interdealer bid-ask spreads 
+for on-the-run Treasury securities using firm/market quotes from GovPX for the period 
+of December 1996 to March 2000.
+ 21 Based on these estimates, the overall bid-ask spread 
+for our long-short portfolio is 1.46 basis points.22 Since our trading strategy requires two 
+round trips each month, the total transaction cost is 35.04 (=1.46×2×12) basis points per 
+year. In other words, after taking into account transaction costs, the Sharpe ratio of the 
+strategy is still as high as 0.95 during the last 10 years of our sample. 
+A.3.  Implications for theoretical models 
+The large Sharpe ratio of our trading strategy calls for a search for additional risk 
+factors that the strategy may be exposed to and, perhaps more likely, the trading 
+frictions beyond bid-ask spreads (e.g., the cost of shorting Treasury securities) that may 
+prevent arbitrageurs from exploiting this opportunity.  
+Moreover, the large swings in Treasury returns between the pre- and post-auction 
+periods pose a significant challenge to asset-pricing models. Our most conservative 
+estimate, based on the entire 20-day window around each auction, implies an increase in 
+annualized expected 2-year note return by 2.3% from the pre-auction to post-auction 
+period. For reference, the average 2-year note return premium (over 3-month T-bill 
+returns) is 1.4% in our sample. This result is hard to explain by existing asset-pricing 
+theories, especially given the recurring nature of this phenomenon. 
+                                                             
+21 It has been noticed that the CRSP indicative bid-ask spread data has various problems, especially for 
+the early sample period (see, e.g., Duffee (1996)). 
+22 Fleming (2003) shows that the average bid-ask spreads for 10-year, 2-year, and 6-month Treasury 
+securities are 2.44, 0.66, and 0.37 basis points, respectively. According to our duration estimates, the 
+hedge portfolio has 20% in 10-year notes and 80% in 6-month T-bills. Thus the bid-ask spread for the 
+whole portfolio is 0.66+2.44×0.2+0.37×0.8=1.46 basis points. 
+=== PAGE 19 ===
+16 
+ 
+B. Robustness 
+The phenomenon documented here is not unique to on-the-run securities. As shown in 
+the lower row of Figure 1, the yield pattern for off-the-run notes is almost the same as 
+that for the on-the-run securities. We repeat ed the analysis in Tables II and III for off-
+the-run notes and get very similar results. We also conduct a number of additional tests 
+to examine the robustness of our results. First, we repeat our analysis on three 
+subsamples: 1980-1990, 1991-2000, and 2001-2008. The main results hold for all 
+subsamples and appear to be stronger for th e more recent two decades. Second, since 
+auctions usually take place in the middle of a day, it is unclear whether the return on 
+the auction day itself should be classified as pre-auction or post-auction. We repeat our 
+analysis by excluding auction day returns and the results are by and large unchanged. 
+Finally, since Treasury securities accumulate interest payments on each calendar day 
+(rather than trading day), we accordingly adjust for the effect of weekends and holidays 
+on our return patterns. The results, omitted for brevity, are virtually identical to those 
+reported in Tables II and III.  
+ 
+V. Interpretations  
+It seems natural to try to link this phenome non to the information contents in auctions. 
+Although the date and amount of auctions can be almost perfectly anticipated, auction 
+outcomes, such as the bid-to-cover ratio and coupon rate, are likely to be informative 
+signals about the Treasury markets and the overall economic conditions. If the 
+uncertainty about auctions is resolved gr adually during the days leading to these 
+auctions, we should expect that the average Treasury returns before auctions be higher 
+than those after. This prediction, however, is opposite to what we find in the data. 
+A more plausible interpretation is that Treasury auctions exert significant 
+temporary price impacts in secondary Treasury markets. A telltale sign of this 
+interpretation is that there is a strong return reversal in Treasury returns around 
+auctions. For the portfolio examined in Table V, for example, the correlation between 
+the 10-day pre-auction return and the 10-day post-auction return is 0.22, with a 
+p-value 
+=== PAGE 20 ===
+17 
+ 
+of 0.002. This implies return reversal in 2- year notes since the strategy is short in the 2-
+year note before auctions, but is long in the 2-year note after auctions.   
+More precisely, our interpretation has two ingredients. First, primary dealers 
+have limited risk-bearing capacity. In the U.S. Treasury market, primary dealers are 
+expected to participate actively in all auctions and submit meaningful bids. Put 
+differently, primary dealers are expected to  acquire large positions in these auctioned 
+securities. Due to limited risk-bearing capa city, the dealers need to hedge this to-be-
+acquired large exposure by shorting similar securities in the secondary Treasury market 
+as well as shorting in the when-issued market. These short-selling activities exert 
+significant downward pressure on secondary market prices.23  
+The second ingredient of our interpretati on is that end-investors in Treasury 
+markets are likely constrained from providing liquidity instantly. This point is 
+particularly important since a large amount — relative to auction size — of Treasury 
+securities are also maturing around auctions, indicating that end-investors indeed have 
+enough capital to absorb the supply shock from these auctions. For primary dealers’ 
+shorting activities to have any significant pr ice impact, end-investors’ capital has to be 
+slow moving. Our interpretation has a number of further implications, which we explore 
+next. 
+A. Limited risk-bearing capacity  
+Primary dealers’ limited risk-bearing capacity has the following two additional 
+predictions. First, given the similarities among Treasury notes across maturities, the 
+price pressure resulting from Treasury auctions of one maturity should naturally spill 
+over to Treasury securities with different ma turities, and this impact should be stronger 
+if the maturity differential is smaller. Seco nd, the price impact of Treasury auctions 
+should be stronger when the total risk expe cted to be acquired by primary dealers is 
+higher; for instance, when the auction size is  larger and in periods with higher implied 
+Treasury return volatilities. 
+                                                             
+23 Primary dealers’ short selling in the when-issued market can also depress spot Treasury prices, if the 
+counterparties with long positions in the when-issued market hedge their exposure in the secondary 
+Treasury market.  
+=== PAGE 21 ===
+18 
+ 
+To test the first prediction, we examine the yield patterns of 10-year notes 
+around 2- and 5-year note auctions. We explicit ly exclude observations where there is a 
+10-year note auction within 10 days of a 2- or 5-year note auction, to ensure that we are 
+not picking up the effect of own auctions.
+24 Consistent with our prediction, Table VI 
+shows that an inverted V-shaped yield pattern also arises for 10-year notes around 2- or 
+5-year note auctions. 10-year note yields increase significantly before both 2- and 5-year 
+note auctions and decrease afterward. Not surprisingly, because of the large difference in 
+maturity between 2-year and 10-year notes, the yield change resulting from 2-year note 
+auctions is small, hovering around one basis point, and is statistically significant in only 
+a few days surrounding auction days. In contrast, 5-year note auctions have a much 
+stronger impact on 10-year yields. The magnitude of the impact is around 3 basis points, 
+and 6 out of the 10 point estimates are significant at the 5% level. 
+In testing the second prediction, we conduc t a simple time-series regression. The 
+dependent variable is the cumulative return of the long-short portfolio defined in Table 
+V during the 20-day window around auctions, which is meant to measure the price 
+impact of Treasury auctions. The independent variables include the offering size and 
+Treasury options implied return volatilities, both of which reflect the risk primary 
+dealers are expected to acquire at auctions. We use Mueller, Vedolin, and Yen (2011)’s 
+model-free estimates of maturity-weighted average implied volatilities of nearest-to-
+expiry at-the-money options on the 30-year,  10-year, and 5-year Treasury securities at 
+the end of the previous month. The results are  similar if we use different weights (e.g., 
+equal weights). We also include year fixed ef fects to de-trend offering size. The results 
+are summarized in Table VII. Consistent wi th the prediction, we find that the price 
+impact of Treasury auctions is substantiall y more pronounced when the offering size is 
+larger and when the Treasury market is more volatile. Specifically, as shown in Panel A, 
+the coefficient estimate on offering size is 4.58 (
+t=1.71) and that on the implied 
+volatility is 1.68 ( t=2.28). In other words, one-standard-deviation increases in offering 
+                                                             
+24 This requirement significantly limits our potential choices of combinations. For example, we cannot 
+examine the yield patterns of 2-year notes around auctions of 5- and 10-year note auctions, as there are 
+only a small number of 5- and 10-year note auctions that are not within one week of any 2-year note 
+auction. 
+=== PAGE 22 ===
+19 
+ 
+size and Treasury options implied volatility lead to 1.79 (=4.58 ×0.39) and 2.94 
+(=1.68×1.75) basis points increases in the long-short portfolio return.  
+The marginal significance of offering size is likely due to the fact that auctions of 
+other maturities also occur in the vicinity of 2-year note auctions. For instance, in a 
+large part of our sample, there is a 5-year note auction within a few days following each 
+2-year note auction. Due to the across-maturity  spillover effect (Table VI), these 5-year 
+note auctions can mitigate (or sometimes stre ngthen) the price impact of 2-year note 
+auctions. To better capture the price effect of Treasury auctions of all maturities, we 
+construct a measure of “offering size imbalance,” ሻ , which is defined as the 
+logarithm of the aggregate offering amount from all Treasury note auctions of any 
+maturity during the 
+t days prior to the day in question (i.e., day 0) minus that during 
+the t days following day 0. The idea is that if more Treasury securities are auctioned in 
+the next few days, the price pressure implies a low return today. On the other hand, if 
+more securities are auctioned in the previous  a few days, the recovery from that price 
+pressure implies a high return for today. That is, our price pressure interpretation 
+implies a positive coefficient on ሻ. To address time variat ions in expected bond 
+returns, we use the daily 2-year note return minus the average 2-year return in the 
+surrounding 20 days as the dependent variable. 25 Consistent with our prediction, as 
+shown in Panel B, the coefficients estimates on ሻ are significantly positive. For 
+example, the coefficient is 0.029 ( t=2.79) for ሺ5ሻ, and 0.046 ( t=3.83) for ሺ10ሻ. 
+Put differently, an increase in ሺ5ሻ by the average size of a 2-year note auction (i.e., 
+$20 billion) is associated with an increase in daily 2-year note returns of 0.69 
+(=0.029
+×log(20B)) basis points.  
+Taken together, the evidence lends further support to our hypothesis that, due to 
+limited risk-bearing capacity, primary dealers hedge the risk they are expected to 
+acquire at auctions by short selling similar securities, and thus causing downward price 
+pressure in secondary markets before auctions . In addition, such price impact is more 
+                                                             
+25 Alternatively, we also use unadjusted daily returns as the dependent variable with and without month-
+fixed effects. The results remain similar. 
+=== PAGE 23 ===
+20 
+ 
+pronounced for Treasury securities with closer maturities to those auctioned securities, 
+when the auction amount is larger, and when Treasury markets are more volatile. 
+B. Slow-moving end-investors  
+The second ingredient in our interpretation is end-investors’ slow responses to transitory 
+yield changes in the Treasury market. Major investors in Treasury markets are indeed 
+likely to be unresponsive to transient demand/supply shocks. According to data 
+compiled by the Treasury Department, although the total size of the Treasury securities 
+outstanding is around $10 trillion toward th e end of our sample, over 40% of them are 
+nonmarketable and held by Federal Govern ment accounts. The Federal Reserve holds 
+another 8% to 9% of outstanding Treasury securities, most of which is obtained through 
+noncompetitive bids at auctions. Given th e mandates of the Federal Reserve, it is 
+unlikely that either would respond to transient movements in Treasury yields. “Private 
+holdings” account for the rest, of which state and local governments and foreign 
+investors hold more than half. While there are no publicly available data on these 
+investors’ trading behavior, it seems reasonable to expect that many of them do not 
+have the intention, or resources, to adjust th eir positions on a daily basis to exploit the 
+opportunity from transitory price movements.  
+In addition, we have two pieces of furthe r evidence on the slow responses of two 
+other major investors in Treasury securities. First, insurance companies collectively hold 
+about $160 billion of Treasury securities at the end of our sample, which amounts to 3.3% 
+of the private holdings. We gather data on their trading and holdings from Schedule D 
+of their reports to National Association of Insurance Companies (NAIC). Our analyses 
+suggest that insurance companies trade very infrequently in the Treasury market. For 
+example, close to 70% of all insurance companies make less than five trades, and in any 
+given year, around 14% of them do not make an y trade. While this finding is consistent 
+with insurance companies’ general objective to maintain a low turnover, it suggests that 
+insurance companies are unlikely to absorb sudden supply changes in the Treasury 
+market.  
+=== PAGE 24 ===
+21 
+ 
+Second, we also examine the behavior of bond mutual funds. At the end of our 
+sample, bond mutual funds collectively ho ld close to 500 billion dollars’ worth of 
+Treasury securities, which accounts for aro und 10% of all private holdings. Index bond 
+mutual funds are likely to avoid newly issued securities due to concerns of tracking 
+errors. Many fixed-income indices usually ad just their composition at the end of each 
+month. As a result, index bond mutual fund managers are likely to be reluctant to 
+purchase the new securities before they are in cluded in the indices they are tracking. In 
+other words, rather than exploiting the yield changes around auctions, index fund might 
+be part of the cause of the phenomenon.  
+For active bond mutual funds, while we do not directly observe their trading, we 
+gauge their ability to absorb sudden increase s in Treasury supply by examining their 
+capital flow patterns around Treasury auctions . Specifically, we obtain a daily series of 
+total net assets and investment returns for three fund classes — bond funds, equity funds, 
+and hybrid funds (which invest in both bo nds and equities), from TrimTabs. We then 
+compute the daily investment flow to each fund class in day 
+t as the percentage change 
+in total net assets from t-1 to t, after adjusting for the investment return in day t. 
+Similar to the tests for bond return patterns around auctions, we compare the difference 
+between the cumulative capital flow to each fund class during the t days subsequent to 
+an auction and the cumulative flow during the t days prior to the auction. We focus on 
+2-year Treasury note auctions in this test since the flow data are not available before 
+1998 and there are too few observations for other maturities in the post-1998 period.  
+The results are shown in Table VIII. Columns 1 and 2 present the flow pattern 
+for bond mutual funds around 2-year note auct ions. Overall, ther e are significantly 
+larger capital inflows to bond mutual funds after Treasury auctions than before these 
+auctions. The difference in cumulative capital flows to bond funds keeps drifting upward 
+after the auction day and peaks on days 9 and 10. During the 10 days after a 2-year 
+note auction, the cumulative capital inflow to bond mutual funds is about 16 (
+t=3.02) 
+basis points higher than that during the 10 days prior to the auction. For reference, the 
+average daily flow to bond mutual funds in ou r sample period is only 0.4 basis points 
+each day. The evidence that investors move  their capital into bond mutual funds at a 
+=== PAGE 25 ===
+22 
+ 
+higher rate after Treasury auctions than before these auctions suggests that mutual fund 
+investors  are slow in reallocating their capital across asset classes, perhaps due to 
+limited attention.26 Consistent with this view, in fu rther analyses, we find that capital 
+flows to equity and hybrid mutual funds af ter auctions are generally lower than those 
+before auctions, albeit with marginal statistical significance.  
+ 
+VI. The Impact on Repo Markets 
+Our interpretation also implies that auctions may exert a large impact on the repo 
+markets. Recall that, anticipating the large positions that they will assume at auctions, 
+primary dealers would short in the secondary market to hedge the risk. To take short 
+positions, they need to borrow Treasury securities through “reverse repo” transactions, 
+which is essentially primary dealers lending cash to their counterparties and taking 
+Treasury securities as collateral, so they can sell those Treasury securities short. From 
+the perspective of their counterparties, these are repo transactions. Naturally, primary 
+dealers have stronger incentives to initiate th ese reverse-repo transactions shortly before 
+Treasury auctions than in other periods. As a result, they would be willing to accept 
+lower interest rates in these transactions, leading to lower repo rates before auctions. 
+Moreover, since this hedging activity is expect ed to last only for a few days, the impact 
+should be stronger for overnight repo rates than for long-term repo rates.  
+To test this idea, we obtain daily data on overnight, one-week, and one-month 
+repo rates from Bloomberg. Since our prediction is that repo rates decrease before 
+auctions due to the scarcity of Treasury security collaterals, our analysis is focused on 
+general-collateral repo rates, which are the interest rates in repo contracts backed by 
+Government General Collaterals. Since the repo data are available only for the post-
+1992 period, we center our analysis around the most frequent 2-year note auctions for 
+statistical power reasons.  
+                                                             
+26 The evidence does not pin down how investors are attracted to bond mutual funds after auctions. It 
+could be that investors have more exposure to media coverage about Treasury securities around auctions, 
+which induces them to invest. Alternatively, some institutional investors may prefer to keep a low 
+turnover and adjust their positions infrequently. The higher yields around auctions can only attract these 
+institutional investors slowly over time.  
+=== PAGE 26 ===
+23 
+ 
+We compare the average repo rates after 2-year note auctions with those before. 
+The results are reported in Table IX. Consistent with our prediction, repo rates in the 
+pre-auction period are significantly lower than those in the post-auction period. For 
+example, as shown in columns 1 and 2, the average overnight repo rate during the 10 
+days before auctions is, on average, 3.47 basis points lower than during the 10-day 
+period after the auctions, with a 
+t-statistic of 2.21. This rate differential is positive for 
+the entire 20-day window around auction days and reaches its maximum on day 5, with 
+a point estimate of 6.75 basis points and a t-statistic of 4.83. There is a similar but 
+slightly weaker pattern in one-week term repo rates (columns 3 and 4). For example, 
+the average 5-day pre-auction one-week rate is 4.39 ( t=4.36) basis points lower than 
+that during the post-auction 5-day period. This pattern almost completely disappears 
+for one-month term repo rates, for which most of the point estimates are 
+indistinguishable from 0. These results are co nsistent with the hypothesis that primary 
+dealers hedge their risk in the a few days before Treasury auctions, and thus drive down 
+short-term repo rates. We also repeat our analysis on reverse repo rates. Since the 
+relationship between repo and reverse repo rates are similar to that between bid and ask 
+prices, the results based on reverse repo rates, omitted for brevity, are almost identical 
+to those based on repo rates.  
+ 
+VII. The Impact on Stock Returns 
+More broadly, since Treasury yields are the basis for pricing assets in other financial 
+markets, and given the magnitude of fluctuat ions in Treasury yields around auctions, 
+one may expect these Treasury auctions to also significantly affect the prices in other 
+markets, such as the U.S. equity market. We examine three market indices: the value-
+weighted CRSP index, the equal-weighted CRSP index, and the value-weighted S&P 
+500 index. For each index, we compute ሻ, the cumulative market return during 
+the 
+t days after each auction minus that during the t days before the auction. The 
+results are reported in Table X. Columns 1 and 2 present the average of ሻ based 
+on the value-weighted CRSP index around 2-year Treasury note auctions. ሻ is 
+significantly positive for all t ranging from 4 to 9, and peaks on day 6. For example, 
+=== PAGE 27 ===
+24 
+ 
+ሺ5ሻ is 49 (t=3.11) basis points; that is, the cumulative CRSP value-weighted market 
+return in the 5 days after a 2-year Treasury note auction is, on average, 49 basis points 
+higher than that during the 5 days before these auctions. This is a substantial difference 
+since the unconditional expected return of the value-weighted CRSP index is 4.45 basis 
+points per day. In other words, the annualized expected return in the 5 days before each 
+auction is -1.1%, while that based on the 5 days after an auction is 23.4%. This return 
+pattern is similar for equal-weighted CRSP returns, as reported in columns 3 and 4. 
+Interestingly, this return pattern also arises for the value-weighted S&P 500 index 
+(columns 5 and 6), suggesting the observed phenomenon is not driven by small stocks 
+only.  
+The stock return effect documented here is not specific to 2-year note auctions. 
+In unreported analysis, we find a similar stock return pattern around 5-year note 
+auctions. but due to substantial reduction in sample size, the estimate based on 10-year 
+auctions is statistically insignificant. To analyze the price impact resulting from 
+Treasury auctions of all maturities simultaneously, we conduct a similar analysis to that 
+reported in Panel B of Table VII. Specifically, we regress excess daily stock market 
+returns on offering size imbalance. Our results, omitted for brevity, show that stock 
+returns tend to be higher (lower) if more Treasury notes are auctioned in the previous 
+(subsequent) 5 to 10 days. 
+We also consider a number of alternative explanations for the stock return 
+pattern. First, one might suspect that the higher post-auction returns are compensation 
+for higher volatility. However, we find that stock market returns, based on all three 
+market indices, are slightly more volatile before Treasury auctions than after, thus 
+inconsistent with this hypothesis. In addi tion, our findings cannot be attributed to 
+previously known calendar-time return effects such as turn-of-the-month and turn-of-
+the-year effects. We exclude all Treasury auctions from our analyses that take place 
+between the 25
+th of a month to the 5 th of the following month, or in the first or last 
+month of a year, and the results are very similar.  
+One possible interpretation of our finding is that the temporary drop in Treasury 
+prices before auctions induces some investors , such as asset allocation mutual funds and 
+=== PAGE 28 ===
+25 
+ 
+hedge funds, to move their capital from the equity market to the Treasury market. Such 
+cross-market arbitrage trades can then lead to a temporary price effect in the equity 
+market. While direct tests of this mechanism, which require detailed daily trading data 
+of hedge funds and mutual funds in both markets, are not feasible, we provide some 
+circumstantial evidence consistent with this  hypothesis. In unreported analysis, we find 
+that the stock return pattern is substant ially stronger among stocks with higher 
+idiosyncratic volatilities, higher effective bid-ask spreads, and higher institutional 
+ownership. While this interpretation is po tentially consistent with our findings, the 
+exact underlying mechanism for such a large price impact remains unclear. 
+ 
+VIII. Conclusion 
+Our empirical evidence suggests that anticipa ted and frequently repeated supply shocks 
+such as Treasury auctions can have first-order impacts on the secondary Treasury, repo, 
+and equity markets. These results suggest significant issuance costs borne by the 
+Treasury Department, which are an order of magnitude larger than the estimated 
+auction markups in prior literature. For instance, the estimated cost of issuing Treasury 
+notes alone is over half a billion dollars in 2007. Our results further call for theoretical 
+and empirical studies to analyze and improve the efficiency of the Treasury security-
+selling mechanism in settings in which anticipated supply shocks can affect market 
+prices. 
+Our results also pose significant challenges to existing asset-pricing theories and 
+suggest that market frictions are playing an important role even in the most liquid and 
+well-developed financial markets. Hence, explicitly modeling the risk-bearing capacity of 
+broker-dealers in financial markets and the slow responses of some classes of large 
+investors might be fruitful directions for future research. 
+  
+=== PAGE 29 ===
+26 
+ 
+References 
+Acharya, Viral, Hyun-Song Shin, and Tanj u Yorulmazer, 2009, A Theory of Slow 
+Moving Capital and Contagion, working paper. 
+Amihud, Yakov, Haim Mendelson, 1991, Liquid ity, maturity, and the yields on U.S. 
+Treasury securities, Journal of Finance 46, 31—53. 
+Asness, Cliff, Tobias Moskowitz, and Lasse Pedersen, 2008, Value and Momentum 
+Everywhere, working paper. 
+Bikhchandani S., and Huang, C., Auctions with resale markets: A model of Treasury bill 
+markets, Review of Financial Studies 2, 311-339, 1989. 
+Brunnermeir, M., Nagel, S. and Pedersen, L., 2009 Carry Trades and Currency Crashes, 
+working paper. 
+Burnside, Craig, Martin Eichenbaum, Isaac Kleshchelski, and Sergio Rebelo, 2010, Do 
+Peso Problems Explain the Returns to the Carry Trade? Review of Financial 
+Studies, forthcoming. 
+Coval, Joshua, and Erik Stafford, 2007, Asset fire sales (and purchases) in equity 
+markets, Journal of Financial Economics 86, 479—512. 
+Duffee, Gregory, 1996, Idiosyncratic variation of Treasury bill yields, Journal of Finance 
+51, 527-552. 
+Duffie, Darrell, 2010, Asset Price Dynamics with Slow-Moving Capital, Journal of 
+Finance, forthcoming.  
+Edelen, R. and Warner, J. 2001, Aggregate pric e effects of institutional trading: a study 
+of mutual fund flow and market returns, Journal of Financial Economics 59, 195—
+220. 
+Fleckenstein, Matthias, Francis Longstaff and Hanno Lustig, 2010. Why Does the 
+Treasury Issue TIPS? The TIPS-Treasury Bond Puzzle, working paper. 
+Fleming, Michael, 2002, Are Larger Issues More Liquid? Evidence from Bill Reopenings, 
+Journal of Money, Credit and Banking, 34, 707-735. 
+Fleming, Michael, 2003. Measuring Treasury Market Liquidity, FRBNY Economic 
+Policy Review (September) 83-108. 
+Fleming, Michael, 2007, Who Buys Treasury Securities at Auction? Federal Reserve 
+Bank of New York Current Issues in Economics and Finance 13, no. 1. 
+Fleming, Michael and Joshua V. Rosenberg, 2007, How do Treasury dealers manage 
+their positions?, working paper. 
+Frazzini, Andrea, and Owen A. Lamont, 20 08, Dumb Money: Mutual Fund Flows and 
+the Cross-Section of Stock Returns, Journal of Financial Economics 88, 299-322. 
+Garbade, K. and M. Rutherford, 2007, Buybacks in Treasury Cash and Debt 
+Management, Staff®Report 304, Federal Reserve Bank of New York. 
+=== PAGE 30 ===
+27 
+ 
+Goldreich D., 2007, Underpricing in Discriminatory and Uniform-Price Treasury 
+Auctions, Journal of Financial and Quantitative Analysis, 443-466. 
+Gorton, Gary and Andrew Metrick, 2010, Securitized Banking and the Run on Repo, 
+working paper. 
+Greene, J. and Hodges, C., 2002. The dilution impact of daily fund flows on open-end 
+mutual funds. Journal of Financial Economics 65, 131—158. 
+Greenwood, Robin, 2005, Short and long term demand curves for stocks: Theory and 
+evidence, Journal of Financial Economics 75, 607—650. 
+Greenwood, Robin and Dimitri Vayanos, 2010a, Bond Supply and Excess Bond Returns, 
+working paper. 
+Greenwood, Robin and Dimitri Vayanos, 2010b, Price Pressure in the Government 
+Bond Market, American Economic Review, Papers and Proceedings, 585-590. 
+He, Zhiguo, and Wei Xiong, 2009, Multi-market Delegated Asset Management, working 
+paper. 
+Jegadeesh, N., 1993, Treasury auction bids and the Salomon squeeze, Journal of Finance 
+48, 1403-1419. 
+Jiang, Wenxi, Hongjun Yan, and Tong Yu, 2010, Trading during Financial Crisis: 
+Evidence from Insurance Companies, working paper. 
+Jin, Jiaqi and Hongjun Yan, 2011, Selling to slow-moving investors, working paper. 
+Kaul, Aditya, Vikas Mehrotra, and Randall Morck, 2000, Demand curves for stocks do 
+slope down: New evidence from an index weights adjustment, Journal of Finance 
+55, 893—912. 
+Krishnamurthy, Arvind, 2002, The Bond/Old-Bond Spread, Journal of Financial 
+Economics, 66, 463-506. 
+Krishnamurthy, Arvind, and Annette Vissing-Jorgensen, 2010, The Aggregate Demand 
+for Treasury Debt, working paper. 
+Kuttner, K., 2006, Can Central Banks Target Bond Prices?, working paper 12454, 
+National Bureau of Economic Research. 
+Lou, Dong, 2010, A flow-based explanation for return predictability, Working paper,  
+Lustig, Hanno, Nikolai Roussanov, and Adri en Verdelhan, 2009, Common Risk Factors 
+in Currency Markets, working paper. 
+Malliaris, Steven and Hongjun Yan, 20 10, Reputation Concerns and Slow-Moving 
+Capital, working paper 
+Mitchell, Mark, Lasse Pedersen, and Todd Pulvino, 2007, Slow Moving Capital, 
+American Economic Review, Papers and Proceedings 97, 215-220. 
+Mitchell, Mark, Todd Pulvino, and Erik Staf ford, 2004, Price pressure around mergers, 
+Journal of Finance 59, 31—63. 
+=== PAGE 31 ===
+28 
+ 
+Mueller, P., A. Vedolin and Y. Yen, 2011, Bond Variance Risk Premia, working paper. 
+Nyborg, Kjell and Suresh Sundaresan, 1996, Discriminatory versus Uniform Treasury 
+Auctions: Evidence from When-Issued Transactions, Journal of Financial 
+Economics, 42, 63-104. 
+Shleifer, Andrei, 1986, Do demand curves for stocks slope down? Journal of Finance 41, 
+579—590. 
+Simon, D., 1991, Segmentation in the Treasury Bill Market: Evidence from Cash 
+Management Bills, Journal of Financial and Quantitative Analysis, 26, 97-108. 
+Simon, D., 1994, Further Evidence on Se gmentation in the Treasury Bill Market, 
+Journal of Banking and Finance, 18, 139-151. 
+Wurgler, Jeffrey, and Ekaterina Zhuravsk aya, 2002, Does arbitrage flatten demand 
+curves for stocks? Journal of Business 75, 583—608. 
+Vayanos, Dimitri and Jean-Luc Vila, 2009, A Preferred-Habitat Model of the Term-
+Structure of Interest Rates, working paper, London School of Economics. 
+=== PAGE 32 ===
+29 
+ 
+Table I. Summary Statistics 
+ 
+Panel A reports the summary statistics of Treasury note auctions. Maturity is the 
+number of years to maturity of a Treasury note. Under Auction Type , “Multiple” 
+denotes a multiple-price auction and “Sin gle” denotes a single-price auction. No. of 
+Issues is the total number of issues in our sample. Amount is the face value issued at 
+each auction. Bid-to-Cover Ratio is the ratio of total value bid in an auction to the total 
+face value issued to all competitive bidders. Auction Yield  is the maximum winning 
+yield for a single-price auction, and is the weighted-average yield based on the amount 
+issued at each winning yield for a multiple-price auction. Panel B reports the summary 
+statistics for Treasury notes and stocks. d aily return is the change in daily price levels 
+including coupon distributions. duration is the modified duration (expressed in years) of 
+the on-the-run security on the subsequent auction day. vwght daily return is the value-
+weighted portfolio return, and ewght daily return is the equal-weighted portfolio return. 
+The sample period for Panels A and B is January 1980 to June 2008. Panel C reports 
+the summary statistics for other data. Treasury options implied volatility  is the model-
+free maturity-weighted implied volatility of  nearest-to-expiry at-the-money options on 
+the 30-year, 10-year, and 5-year Treasury securities from January 1982 to June 2008. 
+daily flow is the daily percentage flow to mutual funds from January 1998 to June 2008. 
+The sample period for repo rates is from January 1992 to June 2008. Yields, returns, 
+and daily flows are expressed in basis points. 
+ 
+Panel A: Summary statistics of Treasury auctions (1980-2008) 
+Maturity Auction  No. of  Amount ($ Billions) Bid-to-Cover Ratio Auction Yield (%)
+ Type Issues Mean Stdev Mean Stdev Mean Stdev  
+2 Multiple 150 10.13 3.24 2.68 0.56 9.26 2.59 
+2 Single  182 22.93 6.21 2.61 0.4 5.09 1.28 
+2 Total 332 17.13  8.16  2.64 0.48  6.36 2.62 
+5 Multiple 64 7.66 2.41 2.78 0.49 8.78 2.61 
+5 Single  146 14.83 2.84 2.57 0.38 4.68 0.66 
+5 Total 210 12.64 4.27 2.63 0.43 7.01 2.86 
+10 Multiple 75 9.92 3.65 2.44 0.34 7.76 3.19 
+10 Single  57 13.03 4.01 2.38 0.43 5.29 0.64 
+10 Total 132 11.27 4.1 2.41 0.38 7.57 3.14 
+ 
+ 
+=== PAGE 33 ===
+30 
+ 
+ 
+ 
+Panel B: Summary statistics of Treasury notes and stocks (1980-2008) 
+Variables Mean Standard 
+Deviation 25th Median 75th 
+Summary statistics of Treasury note returns (basis point) 
+daily return (2-year) 2.85 16.24 -4.24 2.34 9.63 
+daily return (5-year) 3.33 34.48 -13.65 3.08 20.58 
+daily return (10-year) 3.36 49.75 -23.16 3.33 30.45 
+Summary statistics of Treasury note durations (year) 
+duration (2-year) 1.78 0.07 1.74 1.79 1.83 
+duration (5-year) 4.16 0.27 4.04 4.19 4.34 
+duration (10-year) 6.98 0.88 6.40 7.07 7.74 
+Summary statistics of stock returns (basis point) 
+CRSP vwght daily return 4.45 105.70 -42.39 7.71 54.01 
+CRSP ewght daily return 8.15 82.99 -24.17 14.52 47.10 
+SP500 vwght daily return 3.53 111.69 -48.26 4.81 56.90 
+ 
+ 
+Panel C: Other data 
+Summary statistics of Treasury options implied volatilities (%) (1982-2008) 
+Implied Volatility  8.00 1.75 6.99 7.75 8.82 
+Summary statistics of daily mutual fund flows (basis point) (1998-2008) 
+daily flow to bond funds 0.40 15.31 -3.24 -0.02 3.33 
+daily flow to equity funds -0.92 10.27 -5.09 -1.72 1.87 
+daily flow to hybrid funds -0.19 11.06 -3.95 -0.06 3.49 
+Summary statistics of General Collateral Repo rates (%) (1992-2008) 
+overnight 3.97  1.63  2.90  4.49  5.31  
+one week 3.96  1.63  2.92  4.53  5.30  
+one month 3.97  1.63  2.90  4.52  5.30  
+ 
+ 
+ 
+=== PAGE 34 ===
+31 
+ 
+Table II. Treasury Yields Around Subsequent Auctions 
+ 
+This table reports the time-series average of ሺ0ሻ, which is the yield of an on-the-
+run n-year Treasury note (n=2,5,10) on day t (where t ranges from -10 to 10) minus the 
+yield of the same note on the day when a subsequent n-year note auction is conducted. 
+(More precisely, the note is on-the-run befo re the auction and becomes off-the-run after 
+the auction.) The sample period is from January 1980 to June 2008. All yields are 
+expressed in basis points. T-statistics are based on standard errors that are Newey-West 
+adjusted up to 12 lags, and are reported in parentheses. ***, **, and * indicate 
+significance levels of 1%, 5%, and 10%, respectively. 
+ 
+ 
+Treasury yields around subsequent auctions: ሺ0ሻ 
+ 2-year notes 5-year notes 10-year notes 
+t  Mean t-value Mean t-value Mean t-value 
+-10 -1.16 (-0.59) -2.68* (-1.87) -0.79 (-0.39) 
+-9 -1.82 (-0.98) -2.50 (-1.60) -2.14 (-1.21) 
+-8 -2.86 (-1.50) -3.35** (-2.43) -1.64 (-0.95) 
+-7 -3.04* (-1.68) -2.61* (-1.95) -0.10 (-0.06) 
+-6 -2.64* (-1.83) -2.07 (-1.54) -1.03 (-0.71) 
+-5 -2.53* (-1.50) -2.67** (-2.50) -1.57 (-1.11) 
+-4 -2.81* (-1.77) -2.96*** (-3.08) -2.76** (-2.02) 
+-3 -3.01** (-2.21) -1.56* (-1.80) -2.25** (-2.04) 
+-2 -2.06** (-2.03) -0.64 (-1.14) -0.41 (-0.52) 
+-1 -1.77*** (-3.18) 0.30 (0.67) -0.78 (-1.20) 
+1 -0.36 (-1.11) -0.77** (-2.02) -0.56 (-1.21) 
+2 -0.67 (-1.09) -1.74*** (-2.88) -1.23 (-1.40) 
+3 -0.87 (-0.97) -2.46*** (-2.97) -1.87* (-1.70) 
+4 -1.92* (-1.94) -1.96** (-2.37) -2.01 (-1.62) 
+5 -2.32** (-2.18) -2.74*** (-2.63) -2.00 (-1.51) 
+6 -3.19** (-2.61) -2.11 (-1.58) -1.48 (-1.32) 
+7 -2.93** (-2.14) -2.75 (-1.58) -2.78* (-1.70) 
+8 -2.77 (-1.60) -3.41** (-2.10) -3.42* (-1.90) 
+9 -3.19* (-1.74) -3.09* (-1.95) -4.47** (-2.07) 
+10 -3.91** (-2.13) -2.95* (-1.88) -4.68** (-2.00) 
+No. Obs. 332 210 132 
+=== PAGE 35 ===
+32 
+ 
+ 
+Table III. Treasury Returns Around Subsequent Auctions 
+ 
+This table reports the time-series average of ሻ, which is the cumulative return of 
+an on-the-run n-year Treasury note ( n=2,5,10) during the t days after a subsequent n-
+year note auction minus the cumulative return of the same n-year note during the t 
+days before the auction, where t ranges from 1 to 10. (More precisely, the note is on-the-
+run before the auction and becomes off-the-r un after the auction.) The sample period is 
+from January 1980 to June 2008. All returns are expressed in basis points. T-statistics 
+are based on standard errors that are Newey-West adjusted up to 12 lags, and are 
+reported in parentheses. ***, **, and * indicate significance levels of 1%, 5%, and 10%, 
+respective. 
+ 
+ 
+Treasury note returns around subsequent auctions: ሻ 
+ 2-year notes 5-year notes 10-year notes 
+t Mean t-value Mean t-value Mean t-value 
+1 3.68*** (3.90) 1.98 (0.99) 8.61 (1.53) 
+2 3.54** (2.21) 9.94*** (4.03) 10.87 (1.13) 
+3 6.15** (2.42) 16.86*** (4.28) 26.37** (2.31) 
+4 8.66*** (2.87) 20.86*** (4.34) 31.61*** (2.75) 
+5 8.89*** (2.69) 22.54*** (3.67) 23.84* (1.78) 
+6 10.20*** (3.62) 17.12** (2.07) 16.44 (1.31) 
+7 9.42*** (2.63) 21.21** (2.20) 17.44 (1.01) 
+8 9.61** (2.28) 27.59*** (3.01) 30.4* (1.67) 
+9 9.08** (2.23) 22.85** (2.43) 40.68** (2.02) 
+10 9.20** (2.02) 22.77** (2.53) 32.45 (1.39) 
+No. Obs. 332 210 132 
+ 
+  
+=== PAGE 36 ===
+33 
+ 
+Table IV. Costs of Issuing Treasury Notes 
+ 
+Panel A of this table presents the time-series average of ሻ, where ሻ is the 
+auction yield of the newly issued Treasury notes, and ሻ is the average of the yield of 
+the on-the-run n-year note ( n=2,5,10) on day t before the subsequent auction and the 
+yield of the same note on day t after the auction, with t ranging from 1 to 10. (More 
+precisely, the note is on-the-run before th e auction and becomes off-the-run after the 
+auction.) The auction yield is the maximum winning yield for single-price auctions, and 
+is the weighted-average yield based on the amount issued at each winning yield for 
+multiple-price auctions. The sample period is from January 1980 to June 2008. Yields 
+are expressed in basis points. Panel B of this table presents the estimated cost of issuing 
+Treasury notes. The percentage cost is calculated as the product of ሻ and the 
+duration of the notes and is expressed in basi s points. The dollar amount cost is based 
+on the Treasury securities issuance in 2007, the last full year in our sample, and is 
+expressed in millions. T-statistics based on  standard errors that are Newey-West 
+adjusted up to 12 lags, are reported in parentheses. ***, **, and * indicate significance 
+levels of 1%, 5%, and 10%, respectively.  
+ 
+ 
+Panel A: Yield difference ሺܣܻതሻ  
+ 2-year notes 5-year notes 10-year notes 
+t Mean t-value Mean t-value Mean t-value 
+1 3.63*** (5.77) 1.58** (2.63) 1.36* (1.84) 
+2 3.90*** (5.40) 2.52*** (3.65) 1.52 (1.58) 
+3 4.50*** (5.07) 3.42*** (4.36) 2.84** (2.26) 
+4 4.84*** (4.88) 3.86*** (4.52) 3.19*** (3.13) 
+5 4.90*** (4.62) 4.04*** (4.70) 2.66*** (3.12) 
+6 5.33*** (5.98) 3.44*** (3.34) 2.21** (2.34) 
+7 5.42*** (5.17) 3.95*** (3.01) 2.43* (1.65) 
+8 5.38*** (4.18) 4.69*** (3.82) 3.59* (1.90) 
+9 5.03*** (3.82) 4.06*** (3.41) 4.39** (2.07) 
+10 5.05*** (3.42) 4.05*** (3.59) 3.85* (1.71) 
+No. Obs. 332 210 132 
+  
+=== PAGE 37 ===
+34 
+ 
+ 
+ 
+Panel B: Costs of issuance based on the average yield on days -t and t 
+ 2-year notes 5-year notes 10-year notes All notes 
+t Percentage  
+(basis points) 
+Amount  
+(Millions) 
+Percentage 
+(basis points)
+Amount 
+(Millions)
+Percentage 
+(basis points)
+Amount 
+(Millions) 
+Amount 
+(Millions)
+1 6.72 172 6.57 103 9.42 79 354 
+2 7.22 185 10.48 164 10.53 88 437 
+3 8.33 213 14.23 222 19.68 165 600 
+4 8.95 229 16.06 251 22.11 186 665 
+5 9.07 232 16.81 262 18.43 155 649 
+6 9.86 252 14.31 223 15.32 129 604 
+7 10.03 257 16.43 256 16.84 141 654 
+8 9.95 255 19.51 304 24.88 209 768 
+9 9.31 238 16.89 263 30.42 256 757 
+10 9.34 239 16.85 263 26.68 224 726 
+ 
+ 
+ 
+ 
+ 
+  
+=== PAGE 38 ===
+35 
+ 
+ 
+Table V. Hedge Portfolio Returns 
+ 
+This table presents ሻ, the cumulative return to a hedge strategy from t days 
+before an auction to t days after, where t ranges from 1 to 10. On the tth day before 
+each auction, we construct a hedge portfolio by going short in the on-the-run 2-year 
+note, and going long in a duration-matched portfolio of the on-the-run 6-month T-bill 
+and 10-year note. We hold this hedge portfolio until the auction day, and then reverse 
+our positions: We now go 
+long in the same 2-year note (which just becomes the first off-
+the-run note) and go short in the duration-matched portfolio of the on-the-run 6-month 
+T-bill and on-the-run 10-year note. We hold this portfolio until the tth day after the 
+auction. The full sample period is from January 1980 to June 2008. Returns are 
+expressed in basis points. Sharpe Ratio is the annualized Sharpe ratio for this trading 
+strategy. T-statistics based on standard errors that are Newey-West adjusted up to 12 
+lags, and are reported in parentheses. ***, **, and * indicate significance levels of 1%, 
+5%, and 10%, respectively.  
+ 
+ 
+ 
+ 
+Panel A: Hedge portfolio returns ሻ Panel B: Hedge portfolio returns ሻ
+ in the full sample (1980-2008)  in the period of 1998-2008 
+t Mean t-value Sharpe Ratio t Mean t-value Sharpe Ratio
+1 1.04* (1.67) 0.34 1 -0.40 (-0.47) -0.14 
+2 2.40*** (2.89) 0.66 2 1.37 (1.60) 0.50 
+3 4.41*** (3.35) 0.94 3 2.61*** (2.68) 0.84 
+4 4.96*** (3.30) 0.98 4 4.15*** (4.01) 1.05 
+5 5.87*** (3.10) 0.95 5 4.78*** (3.48) 1.06 
+6 6.39*** (3.95) 1.05 6 6.85*** (4.66) 1.32 
+7 8.17*** (4.00) 1.20 7 8.02*** (5.14) 1.56 
+8 8.10*** (3.88) 1.12 8 7.62*** (4.64) 1.41 
+9 8.24*** (3.60) 1.08 9 8.13*** (5.08) 1.44 
+10 8.62*** (3.65) 1.08 10 8.52*** (4.95) 1.44 
+No. Obs 319 No. Obs 116 
+  
+=== PAGE 39 ===
+36 
+ 
+ 
+Table VI. On-the-Run 10-Year Treasury Yields Around 2- and 5-Year Auctions 
+ 
+This table reports the time-series average of ሺ0ሻ, which is the yield of an on-the-
+run 10-year Treasury note on day t (where t ranges from -5 to 5) minus the yield of the 
+same note on the day when a subsequent n-year note ( n=2,5) auction is conducted. 
+(More precisely, the note is on-the-run befo re the auction and becomes off-the-run after 
+the auction.) We exclude 2- and 5- year note auctions that are within one week of any 
+10-year note auction. The sample period is from January 1980 to June 2008. All yields 
+are expressed in basis points. T-statistics based on standard errors that are Newey-West 
+adjusted up to 12 lags, and are reported in parentheses. ***, **, and * indicate 
+significance levels of 1%, 5%, and 10%, respectively. 
+ 
+ 
+ 
+10-year Treasury yields around 2- and 5-year note auctions: ሺ0ሻ 
+ around 2-year note auctions around 5-year note auctions 
+t Mean t-value Mean t-value 
+-5 -1.48 (-1.50) -2.71** (-2.26) 
+-4 -1.44 (-1.61) -2.89** (-2.51) 
+-3 -1.41* (-1.72) -1.57 (-1.60) 
+-2 -0.96 (-1.63) -0.69 (-1.00) 
+-1 -1.20*** (-2.70) 0.01 (0.01) 
+1 -0.74* (-1.93) -0.22 (-0.42) 
+2 -0.44 (-0.67) -2.12*** (-2.98) 
+3 0.23 (0.22) -3.08*** (-4.18) 
+4 -0.68 (-0.60) -2.31*** (-2.90) 
+5 -0.8 (-0.61) -3.22*** (-3.00) 
+No. Obs. 275 144 
+ 
+ 
+  
+=== PAGE 40 ===
+37 
+ 
+ 
+Table VII. The Effect of Dealers’ Risk-Bearing Capacity and Auction Size 
+ 
+This table presents the effect of dealers’ risk-bearing capacity and auction size on 
+Treasury security returns around subsequent auctions. The dependent variable in Panel 
+A, ሺ10ሻ, is described in Table V. Offering Amount is the logarithm of the amount 
+in dollars offered by the Treasury De partment in the 2-year note auction. Implied 
+Volatility is the model-free maturity-weighted implied volatility of nearest-to-expiry at-
+the-money options on the 30-year, 10-year, and 5-year Treasury securities at the end of 
+the previous month. The dependent variable in Panel B is the daily return of on-the-run 
+2-year Treasury notes, adjusted by the average daily return in the 20-day windows 
+surrounding it. ሻ  is the logarithm of the aggregate offering amount from 
+all 
+Treasury note auctions of any maturity type during the t days prior to the return date 
+minus that during the t days subsequent to the return date. The sample period is 
+January 1982 to June 2008 for Panel A and is January 1980 to June 2008 Panel B. T-
+statistics based on standard errors that are  Newey-West adjusted up to 12 lags, and are 
+reported in parentheses. ***, **, and * indicate significance levels of 1%, 5%, and 10%, 
+respectively. 
+ 
+ 
+Panel A: Dependent Variable = ሺ10ሻ 
+ Coefficient (*10000) t-value 
+Offering Amount 4.58* (1.71) 
+Implied Volatility 1.68** (2.28) 
+ 
+ 
+ 
+Panel B: Dependent Variable = daily 2-year note return 
+ Coefficient (*10000) t-value 
+Dependent Variable = daily 2-year note return 
+ሺ5ሻ 0.029*** (2.79) 
+ 
+Dependent Variable = daily 2-year note return 
+ሺ10ሻ 0.046*** (3.83) 
+ 
+ 
+  
+=== PAGE 41 ===
+38 
+ 
+ 
+Table VIII. Daily Mutual Fund Flows Around Treasury Auctions 
+ 
+This table reports the time-series average of ሻ, which is the cumulative daily 
+investment flows during the t days subsequent to a 2-year Treasury note auction minus 
+that during the t days prior to the auction, where t ranges from 1 to 10. The sample 
+period is from January 1998 to June 2008. We examine capital flows to three types of 
+mutual funds: bond mutual funds, equity mutual funds, and hybrid mutual funds. T-
+statistics based on standard errors that are  Newey-West adjusted up to 12 lags, and are 
+reported in parentheses. ***, **, and * indicate significance levels of 1%, 5%, and 10%, 
+respectively. 
+ 
+ 
+ 
+Mutual fund flows around 2-year Treasury note auctions: ሻ 
+ bond funds equity funds hybrid funds 
+t Mean t-value Mean t-value Mean t-value 
+1 -0.03%** (-2.22) 0.00% (-0.37) -0.03%*** (-2.60) 
+2 -0.02% (-1.11) 0.01% (0.52) -0.02% (-1.58) 
+3 0.03%** (2.03) -0.01% (-0.32) -0.02% (-1.21) 
+4 0.05%*** (3.01) -0.01% (-0.55) -0.01% (-0.73) 
+5 0.06%*** (3.06) -0.02% (-0.84) -0.03% (-1.32) 
+6 0.14%*** (2.82) -0.03% (-1.30) -0.05%* (-1.86) 
+7 0.15%*** (2.87) -0.03% (-1.05) -0.05%* (-1.81) 
+8 0.15%*** (2.95) -0.02% (-0.89) -0.05%* (-1.74) 
+9 0.16%*** (3.15) -0.03% (-1.05) -0.04% (-1.14) 
+10 0.16%*** (3.02) -0.04% (-1.29) -0.09%** (-2.16) 
+No. Obs. 120 120 120 
+ 
+ 
+  
+=== PAGE 42 ===
+39 
+ 
+ 
+Table IX. Repo Rates Around Treasury Auctions 
+ 
+This table reports the time-series average of ሻ, which is the average repo rate 
+during the t days subsequent to a 2-year Treasury note auction minus that during the t 
+days prior to the auction, where t ranges from 1 to 10. The sample period is from 
+January 1992 to June 2008. All repo contracts are backed by Government General 
+Collaterals. Repo rates are expressed in basis points. T-statistics based on standard 
+errors that are Newey-West adjusted up to 12 lags, and are reported in parentheses. ***, 
+**, and * indicate significance levels of 1%, 5%, and 10%, respectively. 
+ 
+ 
+ 
+Average repo rate around auctions: ሻ 
+ Overnight  One-week One-month 
+t Mean t-value Mean t-value Mean t-value 
+1 1.38 (0.99) 1.33 (1.50) -0.70* (-1.65) 
+2 3.69** (2.39) 2.43*** (2.72) 0.11 (0.27) 
+3 5.09*** (3.29) 3.78*** (3.84) 0.78 (1.62) 
+4 6.53*** (4.53) 4.47*** (4.31) 1.11* (1.78) 
+5 6.75*** (4.83) 4.39*** (4.36) 1.41** (2.03) 
+6 6.50*** (4.67) 3.94*** (3.80) 1.08 (1.30) 
+7 5.85*** (4.26) 3.41*** (3.22) 0.81 (0.86) 
+8 4.85*** (3.49) 2.78** (2.28) 0.43 (0.37) 
+9 4.13*** (2.79) 2.19 (1.59) 0.11 (0.08) 
+10 3.47** (2.21) 1.68 (1.10) -0.19 (-0.12) 
+No. Obs. 198 198 198 
+ 
+  
+=== PAGE 43 ===
+40 
+ 
+Table X. Stock Market Returns Around Treasury Auctions 
+ 
+This table reports the time-series average of ሻ, which is the cumulative return of 
+the stock market during the t days after a 2-year Treasury note auction minus the 
+cumulative return of the stock market during the t days before the auction, where t 
+ranges from 1 to 10. Three types of market returns are examined here: the value-
+weighted CRSP return, equal-weighted CRSP return, and value-weighted S&P500 index 
+return. The sample period is from January 1980 to June 2008. All returns are expressed 
+in basis points. T-statistics based on standa rd errors that are Newey-West adjusted up 
+to 12 lags, and are reported in parentheses. ***, **, and * indicate significance levels of 
+1%, 5%, and 10%, respectively. 
+ 
+ 
+ 
+Stock market returns around 2-year note auctions: ሻ  
+ value-weighted CRSP equal-weighted CRSP value-weighted S&P500 
+t Mean t-value Mean t-value Mean t-value 
+1 -0.07% (-0.90) 0.04% (0.70) -0.10% (-1.17) 
+2 0.03% (0.33) 0.35%*** (4.93) -0.06% (-0.49) 
+3 0.16% (1.27) 0.44%*** (4.88) 0.07% (0.54) 
+4 0.33%** (2.35) 0.39%*** (3.69) 0.28%* (1.86) 
+5 0.49%*** (3.11) 0.50%*** (4.04) 0.41%** (2.50) 
+6 0.52%*** (3.03) 0.65%*** (4.71) 0.40%** (2.28) 
+7 0.48%*** (2.57) 0.79%*** (5.14) 0.32%* (1.68) 
+8 0.46%** (2.31) 0.73%*** (4.19) 0.30% (1.49) 
+9 0.45%** (2.19) 0.65%*** (3.52) 0.31% (1.46) 
+10 0.29% (1.30) 0.55%*** (2.71) 0.13% (0.57) 
+No. Obs. 332 332 332 
+ 
+  
+=== PAGE 44 ===
+41 
+ 
+ 
+Figure 1. Treasury Yields Around Auctions 
+ 
+Solid lines in these figures correspond to the time-series average of ሺ0ሻ, which is 
+the yield of the n-year Treasury note (n=2,5,10) on day t (where t ranges from -5 to 5) 
+minus the yield of the same note on the day when a subsequent n-year note auction is 
+conducted. (More precisely, the note is on-the-run before the auction and becomes off-
+the-run after the auction.) The dotted line s are the 95% confidence interval. The top 
+three figures are for on-the-run Treasury no tes, and the bottom three figures are for the 
+first off-the-run notes. The sample period is from January 1980 to June 2008. All yields 
+are expressed in basis points. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

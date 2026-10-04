@@ -1,0 +1,27 @@
+== 0  build placebo chrono outputs
+placebo chrono root written: <scratch>\placebo_chain\chrono
+== 1  chrono run complete?
+chrono run complete: 36/36 models, 12/12 years scored, 5225 documents, run.log clean
+== 2  merge (--no-publish)
+20260617         0.000000  0.035854  0.035854                  24
+20260729         1.000000 -0.081303 -1.081303                  20
+20260916         0.142857  0.162949  0.020092                  16
+== 3  adapters
+wrote <scratch>\placebo_chain\v2_score\doc_scores.parquet: 1098 documents; chrono vs v2 splitter unit counts equal for 3.8%
+wrote <scratch>\placebo_chain\presser_text: 2026 answers (1864 scorable), 75 meetings (75 with H1); cross-check {'max_abs_diff': 0.0, 'nan_pattern_mismatch': 0}
+== 4  fedspeak_v2 backtest
+{
+ "chosen": "T4xE1",
+ "selection_sharpe_net1x": 0.3167487361403528,
+ "validation_sharpe_net1x": 0.6667264496431308,
+ "full_is_sharpe_net2x": 0.41879296008238714,
+ "decision_rule_passed": false
+}
+Decision rule failed: out-of-sample NOT evaluated.
+== 5  press-conference H1 backtest
+ "wb_p_two": 0.3899,
+ "designated_side": "one(>0)"
+}
+== 6  combined summary
+wrote <scratch>\placebo_chain\results_final\summary.json and <scratch>\placebo_chain\results_final\summary.md
+done (placebo): <scratch>/placebo_chain/results_final/summary.md

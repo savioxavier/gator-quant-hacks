@@ -1,0 +1,63 @@
+{
+  "id": "trend_momentum_mop_tsmom12",
+  "headline_variant": "V1",
+  "rule": "Month-end s_i = sign(12-month (252-session) cumulative excess return); w_i = s_i*0.40/sigma_i/N (sigma EWMA com 60); book to 10% ex-ante (252d cov), gross<=3; next_close",
+  "all_variants": {
+    "V1": "Month-end s_i = sign(12-month (252-session) cumulative excess return); w_i = s_i*0.40/sigma_i/N (sigma EWMA com 60); book to 10% ex-ante (252d cov), gross<=3; next_close",
+    "V2": "As V1 with skip-month 12-1 signal (sessions t-252..t-21)",
+    "V3": "As V1 without vol scaling: w_i = s_i/N equal notional, then book to 10%"
+  },
+  "selection": "headline = highest in-sample net Sharpe (1x) of 3 pre-declared variants",
+  "sources": [
+    "https://w4.stern.nyu.edu/facdir/lpederse/papers/TimeSeriesMomentum.pdf",
+    "https://www.aqr.com/-/media/AQR/Documents/Insights/Data-Sets/Time-Series-Momentum-Factors-Monthly.xlsx",
+    "https://www.aqr.com/Insights/Research/Journal-Article/Demystifying-Managed-Futures"
+  ],
+  "source_reported": "MOP 2012 58 futures 1985-2009 strongly significant; AQR TSMOM factor gross Sharpe 1.41 1985-2009, 0.39 2012-05..2026-05, 0.03 2016-01..2024-09, 0.97 2024-10..2026-05; AQMIX ~0.26 net since 2010; SG Trend 0.30 net",
+  "window": {
+    "is_start": "2011-09-02",
+    "is_end": "2024-10-02",
+    "later": "2024-10-03..2026-10-02 (descriptive)"
+  },
+  "columns": {
+    "net_1x": "daily excess return over T-bill, realistic cost map",
+    "net_2x": "same at 2x costs",
+    "gross": "before costs"
+  },
+  "cost_bps_one_way": {
+    "ES": 1.0,
+    "NQ": 1.0,
+    "YM": 1.0,
+    "RTY": 2.0,
+    "ZT": 0.5,
+    "ZF": 0.7,
+    "ZN": 1.0,
+    "ZB": 1.5,
+    "UB": 1.5,
+    "6E": 1.0,
+    "6J": 1.0,
+    "6B": 1.0,
+    "6A": 1.0,
+    "6C": 1.0,
+    "6S": 1.0,
+    "CL": 2.0,
+    "GC": 2.0,
+    "SI": 2.0,
+    "HG": 2.0,
+    "NG": 3.0,
+    "HO": 3.0,
+    "RB": 3.0,
+    "PL": 3.0,
+    "ZC": 4.0,
+    "ZS": 4.0,
+    "ZW": 4.0,
+    "ZL": 4.0,
+    "ZM": 4.0,
+    "LE": 4.0,
+    "HE": 4.0
+  },
+  "exec": "next_close",
+  "vol": "book scaled to 10% ex-ante (trailing 252d cov)",
+  "spec": "<scratch>\\hunt100\\bt_0\\trend_momentum_mop_tsmom12\\SPEC.md",
+  "script": "<scratch>\\hunt100\\bt_0\\run_tsmom.py"
+}

@@ -1,0 +1,12 @@
+EQ/ES STATIC proxy SR 0.72 futures SR 0.75 daily corr 0.922
+EQ/ES CV     proxy SR 0.75 futures SR 0.77 daily corr 0.931
+EQ/ES MM     proxy SR 0.91 futures SR 0.87 daily corr 0.931
+EQ/ES FB     proxy SR 0.73 futures SR 0.64 daily corr 0.925
+BOND/ZN STATIC proxy SR -0.02 futures SR -0.02 daily corr 0.907
+BOND/ZN CV     proxy SR 0.07 futures SR 0.05 daily corr 0.906
+BOND/ZN MM     proxy SR 0.11 futures SR 0.10 daily corr 0.896
+BOND/ZN FB     proxy SR 0.17 futures SR 0.26 daily corr 0.856
+SB/SB STATIC proxy SR 0.58 futures SR 0.64 daily corr 0.909
+SB/SB CV     proxy SR 0.74 futures SR 0.75 daily corr 0.907
+SB/SB MM     proxy SR 0.81 futures SR 0.83 daily corr 0.903
+SB/SB FB     proxy SR 0.80 futures SR 0.81 daily corr 0.882

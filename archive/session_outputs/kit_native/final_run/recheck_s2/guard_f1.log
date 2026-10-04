@@ -1,0 +1,28 @@
+2026-10-03 14:44:11.131 INFO webull.main [Backtest] strategy=gqh_flow_clock symbols=['SPY', 'QQQ', 'IWM', 'EFA', 'EEM', 'TLT', 'IEF', 'LQD', 'HYG', 'TIP', 'GLD', 'SLV', 'DBC', 'UUP', 'VNQ'] params={}
+2026-10-03 14:44:11.132 INFO webull.main [Backtest] starting cash: 1000000000.00
+Traceback (most recent call last):
+  File "<solo-repo>\validation\starter_kit\run_in_starter.py", line 656, in <module>
+    main()
+  File "<solo-repo>\validation\starter_kit\run_in_starter.py", line 592, in main
+    cerebro, strat, metrics, side_bps = run_backtest(kit, su, RecorderAnalyzer)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<solo-repo>\validation\starter_kit\run_in_starter.py", line 548, in run_backtest
+    results = cerebro.run(runonce=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<home>\.venvs\gqh-systematic\Lib\site-packages\backtrader\cerebro.py", line 1132, in run
+    runstrat = self.runstrategies(iterstrat)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<home>\.venvs\gqh-systematic\Lib\site-packages\backtrader\cerebro.py", line 1303, in runstrategies
+    self._runnext(runstrats)
+  File "<home>\.venvs\gqh-systematic\Lib\site-packages\backtrader\cerebro.py", line 1635, in _runnext
+    strat._next()
+  File "<home>\.venvs\gqh-systematic\Lib\site-packages\backtrader\strategy.py", line 347, in _next
+    super(Strategy, self)._next()
+  File "<home>\.venvs\gqh-systematic\Lib\site-packages\backtrader\lineiterator.py", line 273, in _next
+    self.nextstart()  # only called for the 1st value
+    ^^^^^^^^^^^^^^^^
+  File "<home>\.venvs\gqh-systematic\Lib\site-packages\backtrader\lineiterator.py", line 347, in nextstart
+    self.next()
+  File "<solo-repo>\validation\starter_kit\strategies\gqh_flow_clock.py", line 500, in next
+    raise ValueError(f"feeds start {day}, not at the first cached session {self.real[0].date()}: the "
+ValueError: feeds start 2010-01-04, not at the first cached session 2005-01-03: the warm-ups need the whole history (keep the harness's default --start)

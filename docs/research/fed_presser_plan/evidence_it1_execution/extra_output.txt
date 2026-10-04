@@ -1,0 +1,10 @@
+SR/event 0 P(pass 8-event positive-mean gate)=0.50
+SR/event 0.1 P(pass 8-event positive-mean gate)=0.61
+SR/event 0.2 P(pass 8-event positive-mean gate)=0.71
+SR/event 0.3 P(pass 8-event positive-mean gate)=0.80
+SR/event 0.5 P(pass 8-event positive-mean gate)=0.92
+2016+ presser-window SPFUT n 73 sd 0.751% mean|r| 0.530% ratio 0.71 (normal 0.80) kurt 2.6
+sep_rt        23.02
+maxconc        4.29
+net_rt_all    12.26
+net_rt_z1      5.51

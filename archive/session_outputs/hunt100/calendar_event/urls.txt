@@ -1,0 +1,62 @@
+# calendar_event hunt: sources consulted (2026-10-03)
+# format: candidate id(s) | source | URL
+
+tom_es | Lakonishok & Smidt 1988 RFS; McConnell & Xu 2008 FAJ (via edges SPEC) | https://doi.org/10.2469/faj.v64.n2.11
+tom_es | Maberly & Waggoner 2000, Atlanta Fed WP 2000-11 (TOM in S&P futures disappears after 1990) | https://www.atlantafed.org/research/publications/wp/2000/11.aspx
+dash_for_cash | Etula, Rinne, Suominen, Vaittinen 2020 RFS "Dash for Cash" (paper read) | https://beta.aalto.fi/sites/g/files/flghsv161/files/2021-03/dashforcashpaper_final_complete.pdf
+dash_for_cash | RFS landing page | https://academic.oup.com/rfs/article/33/1/75/5494694
+tsy_month_end_curve | Hartley & Schwarz 2019 "Predictable End-of-Month Treasury Returns" (paper read) | https://rodneywhitecenter.wharton.upenn.edu/wp-content/uploads/2019/12/17-19.Schwarz.pdf
+tsy_month_end_curve | CXO summary | https://www.cxoadvisory.com/bonds/term-premium-end-of-month-effect/
+preholiday_rty | Ko & Yang 2021, Critical Finance Review replication of Ariel 1990 (paper read) | https://cfr.ivo-welch.info/published/papers/ko2021pre.pdf
+pre_fomc_drift | Lucca & Moench 2015 JF (NY Fed SR512) | https://www.newyorkfed.org/medialibrary/media/research/staff_reports/sr512.pdf
+pre_fomc_drift | Kurov, Wolfe & Gilbert 2021 FRL "The disappearing pre-FOMC announcement drift" | https://ideas.repec.org/a/eee/finlet/v40y2021ics1544612320315956.html
+pre_fomc_drift, fomc_cycle | Knox & Vissing-Jorgensen 2026, FEDS 2026-023 survey (paper read) | https://www.federalreserve.gov/econres/feds/files/2026023pap.pdf
+fomc_cycle | Cieslak, Morse & Vissing-Jorgensen 2019 JF | https://papers.ssrn.com/abstract=2687614
+fomc_reversal | Baglioni & Ribeiro 2022 WP "The FOMC announcement reversal" (CXO summary) | https://cxoadvisory.com/calendar-effects/stock-market-return-reversal-after-fomc-announcements
+fomc_reversal | Insper repository listing | https://repositorio.insper.edu.br/handle/11224/7532
+macro_announcement_es/bonds | Savor & Wilson 2013 JFQA (draft read) | https://faculty.wharton.upenn.edu/wp-content/uploads/2012/04/Draft20111128p_edited.pdf
+macro_announcement_es | Ernst, Gilbert & Hrdlicka 2021 WP "More than 100% of the equity premium" | https://aeaweb.org/conference/2022/preliminary/paper/ktNibY2Y
+macro_announcement_es | Ai & Bansal 2018 Econometrica | https://people.duke.edu/~rb7/bio/announcement_premium_econometrica.pdf
+macro_announcement_bonds | Jones, Lamont & Lumsdaine 1998 JFE | https://econpapers.repec.org/RePEc:wop:chispw:333
+announcement_beta | Savor & Wilson 2014 JFE "Asset pricing: a tale of two days" | https://faculty.wharton.upenn.edu/wp-content/uploads/2013/06/draft20130612pp-full.pdf
+fomc_fx | Mueller, Tahbaz-Salehi & Vedolin 2017 JF (paper read) | https://researchonline.lse.ac.uk/id/eprint/77256/2/Vedoli_exchange%20rates%20and%20monetary%201.pdf
+fomc_window_treasury | Hillenbrand 2025 RFS "The Fed and the Secular Decline in Interest Rates" | https://papers.ssrn.com/abstract=3550593
+fomc_window_treasury | Quantpedia replication note | https://quantpedia.com/?p=6950
+fomc_global_equity | Brusa, Savor & Wilson 2020 RoF "One central bank to rule them all" | https://ideas.repec.org/a/oup/revfin/v24y2020i2p263-304..html
+tsy_auction_cycle | Lou, Yan & Zhang 2013 RFS (FMG DP684, paper read) | https://www.fmg.ac.uk/sites/default/files/publications/DP684.pdf
+tsy_auction_cycle | Sigaux 2023 JBF / ECB WP 2208 "Trading ahead of Treasury auctions" | https://ideas.repec.org/p/ecb/ecbwps/20182208.html
+tsy_auction_cycle | EFMA 2020 TIPS auction-cycle paper | https://www.efmaefm.org/0EFMAMEETINGS/EFMA%20ANNUAL%20MEETINGS/2021-Leeds/papers/EFMA%202020_stage-1301_question-Full%20Paper_id-406.pdf
+opex_week | Stivers & Sun 2013 JBF | https://ideas.repec.org/a/eee/jbfina/v37y2013i11p4226-4240.html
+opex_week | CXO drill-down | https://cxoadvisory.com/calendar-effects/option-expiration-week-stock-return-drill-down
+opex_week | QuantifiedStrategies SPY 1993-2025 (practitioner) | https://quantifiedstrategies.substack.com/p/the-options-expiration-week-effect-aa2
+halloween | Andrade, Chhaochharia & Fuerst 2013 FAJ (out-of-sample) | https://ideas.repec.org/a/taf/ufajxx/v69y2013i4p94-105.html
+halloween | CXO summary of the OOS test | https://cxoadvisory.com/calendar-effects/sell-in-may-still-working
+halloween | Jacobsen & Zhang, Halloween indicator everywhere and all the time | https://www.bnains.org/backtest/periode/The_Halloween_Indicator_everywhere_and_all_the_time_-_Ben_Jacobsen_%26_Cherry_Y._Zhang.pdf
+halloween | Dichtl & Drobetz 2015 IRFA (counter-evidence) | https://ideas.repec.org/a/eee/finana/v38y2015icp29-43.html
+turn_of_year | Moller & Zilca 2008 JBF "The evolution of the January effect" | https://ideas.repec.org/a/eee/jbfina/v32y2008i3p447-457.html
+seasonality | Keloharju, Linnainmaa & Nyberg 2016 JF "Return seasonalities" | https://www.nber.org/papers/w20815.pdf
+seasonality | Baltas 2016 BMI "Multi-asset seasonality and trend-following strategies" | https://ideas.repec.org/a/rbq/journl/i140p47-62.html
+seasonality | arXiv 2609.12227 (2026) seasonal trading in commodity futures, OOS 2016-2024 null | https://arxiv.org/abs/2609.12227
+seasonality | Heston & Sadka 2010 JFQA international seasonality | https://ideas.repec.org/a/cup/jfinqa/v45y2010i05p1133-1160_00.html
+seasonality | Quantpedia front-running seasonality in US sectors / country ETFs | https://quantpedia.com/front-running-seasonality-in-us-stock-sectors/
+seasonality | Quantpedia front-running in country ETFs | https://quantpedia.com/front-running-in-country-etfs-or-how-to-spot-and-leverage-seasonality/
+overnight_drift | Boyarchenko, Larsen & Whelan 2023 RFS (NY Fed SR917, paper read) | https://www.newyorkfed.org/medialibrary/media/research/staff_reports/sr917.pdf
+overnight_drift | Liberty Street Economics blog | https://libertystreeteconomics.newyorkfed.org/2021/05/the-overnight-drift-in-us-equity-returns
+intraday_momentum | Baltussen, Da, Lammers & Martens 2021 JFE (paper read) | https://www3.nd.edu/~zda/intramom.pdf
+intraday_momentum | Gao, Han, Li & Zhou 2018 JFE (Alpha Architect summary) | https://alphaarchitect.com/2014/08/attention-prop-traders-the-first-half-hour-of-trading-predicts-the-last-half-hour/
+rebalancing_flow | Harvey, Mazzoleni & Melone 2025 NBER w33554 | https://www.nber.org/papers/w33554
+rebalancing_flow | Independent replication (Quant Returns substack) | https://quantreturns.substack.com/p/front-running-the-rebalancers
+fx_month_end | Melvin & Prins 2015 JFM (ECB workshop version read) | https://ecb.eu/events/pdf/conferences/131216/Third_FX_Workshop_MELVIN_PRINS_Equity%20hedging%20and%20exchange%20rates%20Nov%202013.pdf
+goldman_roll | Mou 2011 SSRN 1716841 | https://papers.ssrn.com/abstract=1716841
+goldman_roll | Wikipedia summary incl. post-2004 decline | https://en.wikipedia.org/wiki/Goldman_roll
+goldman_roll | Peterson NCCC-134 2013 roll-period price impact | https://ageconsearch.umn.edu/record/285790/files/Peterson_NCCC-134_2013.pdf
+corn_weather | Janzen 2021 farmdoc daily: weather risk premium in new-crop corn | https://farmdocdaily.illinois.edu/2021/06/the-weather-risk-premium-in-new-crop-corn-futures-prices.html
+corn_weather | Janzen 2021 farmdoc daily: absence in soybeans | https://farmdocdaily.illinois.edu/2021/06/the-absence-of-a-weather-risk-premium-in-new-crop-soybean-futures-prices.html
+payday | Ma & Pratt, Payday anomaly (Quantpedia) | https://quantpedia.com/strategies/payday-anomaly
+russell_recon | Madhavan 2003 FAJ "The Russell reconstitution effect" | https://doi.org/10.2469/faj.v59.n4.2545
+data | BLS Employment Situation release archive | https://www.bls.gov/bls/news-release/empsit.htm
+data | BLS CPI release archive | https://www.bls.gov/bls/news-release/cpi.htm
+data | BLS PPI release archive | https://www.bls.gov/bls/news-release/ppi.htm
+data | Fed FOMC calendars (already in edges/calendar/fomc_scheduled.csv) | https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
+data | S&P GSCI methodology (roll schedule, contract months) | https://www.spglobal.com/spdji/en/indices/commodities/sp-gsci/
+github | GitHub repository search (unauthenticated API): only 4 small pre-FOMC replication repos, 1 dash-for-cash repo; no evidence value | https://api.github.com/search/repositories?q=pre-FOMC+drift

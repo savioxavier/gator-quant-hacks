@@ -1,0 +1,7 @@
+n=70, 11 years, reps 2000, bootstrap 399; two-sided 5% false-GO of the pooled s coefficient (null true)
+  s AR(1) 0.94                               icc 0.00: i.i.d. WRE (registered) 0.045 | year-cluster WCR (Webb) 0.055
+  s AR(1) 0.94                               icc 0.05: i.i.d. WRE (registered) 0.079 | year-cluster WCR (Webb) 0.072
+  s AR(1) 0.94                               icc 0.10: i.i.d. WRE (registered) 0.080 | year-cluster WCR (Webb) 0.052
+  i.i.d. s + per-year vintage shift (sd 0.5) icc 0.00: i.i.d. WRE (registered) 0.057 | year-cluster WCR (Webb) 0.058
+  i.i.d. s + per-year vintage shift (sd 0.5) icc 0.05: i.i.d. WRE (registered) 0.058 | year-cluster WCR (Webb) 0.056
+  i.i.d. s + per-year vintage shift (sd 0.5) icc 0.10: i.i.d. WRE (registered) 0.054 | year-cluster WCR (Webb) 0.052

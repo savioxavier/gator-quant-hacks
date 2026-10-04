@@ -1,0 +1,27 @@
+{
+  "candidate": "V5_ZN_10y_id",
+  "task_label": "futures_test",
+  "rule": "10-year auction days: ZN short 09:00-13:00 ET, long 13:00-16:00 ET (hourly), 4 one-way ZN costs per event, L=min(5, 0.10/(sigma sqrt f))",
+  "diagnostic": false,
+  "columns": {
+    "net_1x": "daily excess return over T-bill, realistic one-way costs ZT 0.5 / ZF 0.7 / ZN 1.0 / ZB, UB 1.5 / ES 1.0 bp (+ engine roll round trip)",
+    "net_2x": "same at 2x costs",
+    "gross": "no costs"
+  },
+  "execution": "hourly ZN panel, intraday only, 4 one-way costs per event",
+  "avg_cost_bp": 1.0,
+  "selection_window": [
+    "2010-06-07",
+    "2020-12-31"
+  ],
+  "validation_window": [
+    "2021-01-01",
+    "2024-10-02"
+  ],
+  "later_descriptive": [
+    "2024-10-03",
+    "2026-10-02"
+  ],
+  "spec": "auction/futures_test/SPEC.md",
+  "script": "auction/futures_test/auction_futures.py"
+}

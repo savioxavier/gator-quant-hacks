@@ -1,0 +1,40 @@
+{
+ "side_bps": {
+  "SPY": 0.0,
+  "QQQ": 0.0,
+  "IWM": 0.0,
+  "EFA": 0.0,
+  "EEM": 0.0,
+  "TLT": 0.0,
+  "IEF": 0.0,
+  "LQD": 0.0,
+  "HYG": 0.0,
+  "TIP": 0.0,
+  "GLD": 0.0,
+  "SLV": 0.0,
+  "DBC": 0.0,
+  "UUP": 0.0,
+  "VNQ": 0.0
+ },
+ "symbols": [
+  "SPY",
+  "QQQ",
+  "IWM",
+  "EFA",
+  "EEM",
+  "TLT",
+  "IEF",
+  "LQD",
+  "HYG",
+  "TIP",
+  "GLD",
+  "SLV",
+  "DBC",
+  "UUP",
+  "VNQ"
+ ],
+ "extra": false,
+ "extra_totals": null,
+ "desync": 0,
+ "refused": 0
+}

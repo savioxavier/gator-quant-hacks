@@ -1,0 +1,1970 @@
+[
+ {
+  "url": "https://www.federalreserve.gov/json/ne-speeches.json",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 445075
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bernanke20110915a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 88371
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20211119a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 102329
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/brainard20210524a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 110255
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/yellen20170323a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 92861
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20241120a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 111851
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20221004a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 93274
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/fischer20160622a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 99026
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/duke20110107a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 110434
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/duke20120327a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 104965
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/powell20211129a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 88912
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/yellen20150506a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 109181
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240403a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 116284
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/brainard20190223a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 93536
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/brainard20200901a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 110463
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/fischer20151119a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 111033
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20221006a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 101305
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/quarles20180627a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 103428
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/fischer20170417a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 111186
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/yellen20160826a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 131048
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/brainard20210113a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 111770
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/quarles20190926a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 98717
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20230524a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 98043
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20240513a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 101764
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bernanke20110928a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 123303
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/fischer20161104a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 88162
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/brainard20151201a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 115392
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/clarida20190513a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 99859
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/powell20160628a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 112613
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/brainard20191126a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 116294
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/yellen20130416a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 93100
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240930a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 97667
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/brainard20200221a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 111012
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/brainard20180912a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 113849
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/yellen20111021a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 113662
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/fischer20170928a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 128854
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/quarles20201020a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 101528
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/powell20200827a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 126467
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/yellen20170119a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 136154
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/duke20130308a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 125991
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20231026a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 88398
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/kugler20241203a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 101298
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20241202a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 96661
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20241122a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 107942
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20241120a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 102666
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/powell20241114a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 88871
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/kugler20241114a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 118544
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20241112a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 99764
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20241023a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 92573
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20241018a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 98595
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20241014a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 103140
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20241011a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 111231
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20241010a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 111189
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20241009a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 114679
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20241008a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 120807
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/kugler20241008a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 114829
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20241002a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 130195
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20241001a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 106140
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/powell20240930a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 88340
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20240926a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 104838
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20240926a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 100719
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/powell20240926a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 89502
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240926a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 97726
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/kugler20240925a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 107629
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240924a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 97694
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240920a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 85820
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240910a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 115158
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20240910a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 106927
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20240906a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 98567
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20240828a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 96824
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/powell20240823a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 113021
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240820a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 107012
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20240819a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 92817
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240810a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 120202
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240724a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 91594
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240718a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 114546
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20240717a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 100048
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/kugler20240716a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 117632
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20240710a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 105520
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240710a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 87552
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240709a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 97714
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20240709a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 104238
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240627a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 106112
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240626a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 106494
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240625b.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 91437
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20240625a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 99582
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240625a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 118442
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20240624a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 87603
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/kugler20240618a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 104793
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20240617a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 92799
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240617a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 110303
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20240614a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 91240
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20240607a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 91928
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240528a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 115554
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20240524a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 111882
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20240521a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 97706
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20240520a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 97972
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20240520a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 106266
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20240520a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 94209
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/powell20240519a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 96485
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/kugler20240518a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 95426
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240517a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 112364
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20240517a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 98410
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240515a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 100520
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20240514a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 97234
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20240510a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 91846
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240510a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 113459
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20240508a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 102678
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20240504a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 96553
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240503a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 89462
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240418a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 93963
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20240416a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 114154
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240405a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 126062
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/kugler20240404a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 100859
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/kugler20240403a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 104779
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/powell20240403a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 92412
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240402a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 110670
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20240401a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 87785
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20240327a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 100030
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20240325a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 114211
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240307a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 98704
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240305a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 102385
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/kugler20240301a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 120888
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20240301a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 111147
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240227a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 120990
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20240227a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 98894
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20240222a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 99200
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20240222a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 106522
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20240222a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 105017
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20240216a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 106313
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20240215a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 104369
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240215a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 107526
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20240214a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 102783
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240212a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 108953
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240207a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 101519
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/kugler20240207a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 103268
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240202a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 107661
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20240117a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 89875
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240117a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 111869
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20240116a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 100913
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20240108a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 110774
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/miran20251215a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 114492
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/powell20251201a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 88371
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20251121a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 105207
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20251121a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 88179
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20251120a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 115786
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/miran20251119a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 99104
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20251118a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 113769
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20251117a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 104725
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20251117a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 91492
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20251111a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 100810
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/miran20251107a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 103773
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20251107a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 97435
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20251103a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 96372
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20251030a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 95115
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20251023a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 92009
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20251022b.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 91598
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20251022a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 90174
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20251021a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 95740
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20251016a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 90840
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20251016a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 113297
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20251016a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 103852
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20251015a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 98817
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/powell20251014a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 116213
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20251009b.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 96793
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20251009a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 98765
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20251009a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 90756
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/powell20251009a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 87951
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20251008b.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 97350
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20251008a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 98634
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20251007a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 94004
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20251003a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 100955
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20250930a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 103847
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20250929a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 99742
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20250926a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 120123
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20250925a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 117315
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/powell20250923a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 90752
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20250923a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 100825
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/miran20250922a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 119589
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20250828a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 103645
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/powell20250822a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 115477
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20250820a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 98145
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20250819a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 105580
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20250809a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 109467
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20250801a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 88418
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20250801a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 86167
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/powell20250722a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 89186
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20250717a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 104017
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20250717a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 106665
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/kugler20250717a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 108114
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20250716a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 112331
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20250715a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 103018
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20250715a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 92618
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20250710a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 111850
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20250626a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 98425
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20250624a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 87814
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/kugler20250623a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 86754
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20250623a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 116943
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20250623a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 88439
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20250606a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 111055
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/kugler20250605a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 101973
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20250604a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 86071
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20250603a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 92612
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/powell20250602a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 94589
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20250601a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 108472
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/kugler20250529a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 88685
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/powell20250525a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 92649
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20250523a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 111724
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/kugler20250520a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 94760
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20250519a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 108864
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20250515a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 99883
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/powell20250515a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 109550
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20250514a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 94537
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20250514a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 103712
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/kugler20250512a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 103999
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20250509a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 92841
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20250509a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 96549
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/kugler20250509a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 112908
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20250509a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 118859
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20250503a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 92970
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20250423a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 86450
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/kugler20250422a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 110743
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20250422a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 106279
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20250417a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 99840
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/powell20250416a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 88248
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20250415a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 91712
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20250414a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 103409
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/kugler20250407a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 91025
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20250404a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 99491
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/powell20250404a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 88590
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20250403a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 118635
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20250403a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 106004
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/kugler20250402a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 117096
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/kugler20250325a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 96239
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20250324a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 101839
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20250321a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 84615
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/powell20250307a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 88796
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/kugler20250307a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 113799
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20250307a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 105771
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20250227a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 108296
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20250227a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 95560
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20250225a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 116734
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20250221a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 118850
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/kugler20250220a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 119716
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20250220a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 127488
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20250219a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 115096
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20250218a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 126065
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20250217a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 99509
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20250217a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 128996
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20250212a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 103243
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20250205a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 111604
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/kugler20250207a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 106848
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20250205a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 115080
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20250204a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 101971
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20250131a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 122623
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20250109a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 112076
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20250108a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 106740
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20250106a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 109975
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20261001a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 100539
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20261001a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 97881
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20261001a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 92475
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20260930a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 106761
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20260928a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 99708
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20260929a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 102293
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20260929a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 92675
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20260928a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 106801
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20260923a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 115917
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20260922a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 100228
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20260918a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 104735
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20260918b.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 92816
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20260903a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 100516
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20260901a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 113875
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/warsh20260828a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 115735
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20260805a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 99420
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20260716a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 104956
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20260715a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 95366
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20260714a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 93951
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20260714a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 111061
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20260713a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 103191
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20260713a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 96646
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20260707a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 88141
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20260706a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 92186
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20260624a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 92637
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20260622a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 91044
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20260606a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 115834
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/powell20260531a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 91316
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20260529a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 115296
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20260527a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 86501
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20260527a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 110910
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20260522a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 103922
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20260520a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 100667
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20260514a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 117993
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20260514a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 96701
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20260508a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 98813
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20260508a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 91416
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20260508a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 112545
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20260505a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 97144
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20260501a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 94367
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20260421a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 107140
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20260417a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 105257
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20260414a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 110404
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20260407a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 102944
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20260331a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 92958
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20260331a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 87843
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20260326a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 91404
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20260326a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 99496
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/miran20260326a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 99461
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20260326a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 107378
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20260324a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 103307
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/powell20260321a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 88691
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20260312a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 101455
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20260303a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 92184
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20260226a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 99992
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20260224a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 93080
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20260224a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 100914
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20260223a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 101031
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20260219a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 94587
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/barr20260217a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 125007
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20260216a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 98819
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20260206a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 102354
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/cook20260204a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 99042
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20260130a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 94788
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/waller20260130a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 85072
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20260116a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 104210
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20260116a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 108096
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/miran20260114a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 113540
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/powell20260111a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 87942
+ },
+ {
+  "url": "https://www.federalreserve.gov/newsevents/speech/bowman20260107a.htm",
+  "status": 200,
+  "attempt": 1,
+  "bytes": 111488
+ }
+]

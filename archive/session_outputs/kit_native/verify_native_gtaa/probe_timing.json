@@ -1,0 +1,38 @@
+{
+ "S3_project_margin": {
+  "fills": 17872,
+  "orders": 17875,
+  "wrong_exec_day_or_type": 0,
+  "open_price_mismatch": 0,
+  "max_open_price_rel_err": 2.1378676456885738e-16,
+  "commission_mismatch": 0,
+  "max_comm_rel_err": 3.3561368433832943e-16,
+  "refused": 0,
+  "days_with_unfilled_orders_excl_last": 0
+ },
+ "S3_guide_cash100k": {
+  "fills": 14130,
+  "orders": 14132,
+  "wrong_exec_day_or_type": 0,
+  "open_price_mismatch": 0,
+  "max_open_price_rel_err": 0.0,
+  "commission_mismatch": 0,
+  "max_comm_rel_err": 3.1563342605634095e-16,
+  "refused": 0,
+  "mean_slip_bp": 4.707435344239984,
+  "share_full_5bp": 0.9046001415428166,
+  "min_slip_bp": -2.220446049250313e-12,
+  "days_with_unfilled_orders_excl_last": 0
+ },
+ "BH5_project_cash100k": {
+  "fills": 21794,
+  "orders": 21799,
+  "wrong_exec_day_or_type": 0,
+  "open_price_mismatch": 0,
+  "max_open_price_rel_err": 2.0034010054187292e-16,
+  "commission_mismatch": 0,
+  "max_comm_rel_err": 2.785901711503737e-16,
+  "refused": 0,
+  "days_with_unfilled_orders_excl_last": 0
+ }
+}

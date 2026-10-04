@@ -1,0 +1,359 @@
+{
+ "placebo_tree": true,
+ "n_meetings": 62,
+ "h2_ok": 52,
+ "h3_ok": 52,
+ "h2_excluded": [
+  [
+   "2019-07-31",
+   "qa_failed"
+  ],
+  [
+   "2020-07-29",
+   "qa_failed"
+  ],
+  [
+   "2021-06-16",
+   "diarize_failed;voice_missing"
+  ],
+  [
+   "2022-12-14",
+   "qa_failed;no_caption_timed_answers"
+  ],
+  [
+   "2023-06-14",
+   "qa_failed;no_caption_timed_answers"
+  ],
+  [
+   "2023-07-26",
+   "qa_failed;no_caption_timed_answers"
+  ],
+  [
+   "2023-11-01",
+   "qa_failed;no_caption_timed_answers"
+  ],
+  [
+   "2023-12-13",
+   "qa_failed;no_caption_timed_answers"
+  ],
+  [
+   "2024-03-20",
+   "qa_failed;no_caption_timed_answers"
+  ],
+  [
+   "2025-12-10",
+   "qa_failed;no_caption_timed_answers"
+  ]
+ ],
+ "h3_excluded": [
+  [
+   "2019-07-31",
+   "qa_failed"
+  ],
+  [
+   "2020-07-29",
+   "qa_failed"
+  ],
+  [
+   "2022-03-16",
+   "face_enrolment_failed;gated_frames_below_20"
+  ],
+  [
+   "2022-12-14",
+   "qa_failed;no_caption_timed_answers"
+  ],
+  [
+   "2023-06-14",
+   "qa_failed;no_caption_timed_answers"
+  ],
+  [
+   "2023-07-26",
+   "qa_failed;no_caption_timed_answers"
+  ],
+  [
+   "2023-11-01",
+   "qa_failed;no_caption_timed_answers"
+  ],
+  [
+   "2023-12-13",
+   "qa_failed;no_caption_timed_answers"
+  ],
+  [
+   "2024-03-20",
+   "qa_failed;no_caption_timed_answers"
+  ],
+  [
+   "2025-12-10",
+   "qa_failed;no_caption_timed_answers"
+  ]
+ ],
+ "answers_with_zA": 1226,
+ "answers_with_U": 1262,
+ "pkg_causal_z_match": true,
+ "kill": {
+  "H2": {
+   "killed": false,
+   "reasons": [],
+   "g4_share_arousal": 0.0,
+   "g4_n_post_burnin": 48,
+   "g4_share_dominance_descriptive": 0.0,
+   "source_invariance": {
+    "status": "source invariance not checked",
+    "icc31": null
+   },
+   "labels": [
+    "exploratory, post-NO-GO; cannot rescue G3; no trading claim",
+    "source invariance not checked"
+   ]
+  },
+  "H3": {
+   "killed": false,
+   "reasons": [],
+   "g4": {
+    "BD": {
+     "share": 0.0,
+     "n_post_burnin": 48
+    },
+    "BI": {
+     "share": 0.0,
+     "n_post_burnin": 48
+    },
+    "ES": {
+     "share": 0.0,
+     "n_post_burnin": 48
+    }
+   },
+   "av_skew": "not estimated, not corrected (A-33; cannot break causality)",
+   "labels": [
+    "exploratory, post-NO-GO; cannot rescue G3; no trading claim"
+   ]
+  },
+  "placebo_tree": true
+ }
+}
+{
+ "placebo_features": true,
+ "H2": {
+  "eligible": 1124,
+  "eligible_primary": 582,
+  "h1": 1066,
+  "h1_primary": 542,
+  "h1_primary_meetings": 20,
+  "h5": 354,
+  "h5_primary": 161,
+  "h5_primary_meetings": 20,
+  "h15": 139,
+  "h15_primary": 62,
+  "h15_primary_meetings": 20,
+  "meetings_eligible": 44,
+  "meetings_eligible_primary": 20
+ },
+ "H3": {
+  "eligible": 1137,
+  "eligible_primary": 591,
+  "h1": 1073,
+  "h1_primary": 548,
+  "h1_primary_meetings": 20,
+  "h5": 357,
+  "h5_primary": 163,
+  "h5_primary_meetings": 20,
+  "h15": 140,
+  "h15_primary": 62,
+  "h15_primary_meetings": 20,
+  "meetings_eligible": 44,
+  "meetings_eligible_primary": 20
+ },
+ "H2D": {
+  "eligible": 1124,
+  "eligible_primary": 582,
+  "h1": 1066,
+  "h1_primary": 542,
+  "h1_primary_meetings": 20,
+  "h5": 354,
+  "h5_primary": 161,
+  "h5_primary_meetings": 20,
+  "h15": 139,
+  "h15_primary": 62,
+  "h15_primary_meetings": 20,
+  "meetings_eligible": 44,
+  "meetings_eligible_primary": 20
+ },
+ "H2V": {
+  "eligible": 1034,
+  "eligible_primary": 571,
+  "h1": 991,
+  "h1_primary": 538,
+  "h1_primary_meetings": 20,
+  "h5": 332,
+  "h5_primary": 161,
+  "h5_primary_meetings": 20,
+  "h15": 129,
+  "h15_primary": 61,
+  "h15_primary_meetings": 20,
+  "meetings_eligible": 41,
+  "meetings_eligible_primary": 20
+ },
+ "H4": {
+  "eligible": 1101,
+  "eligible_primary": 582,
+  "h1": 1043,
+  "h1_primary": 542,
+  "h1_primary_meetings": 20,
+  "meetings_eligible": 43
+ },
+ "known_at_qa": {
+  "voice_media_end_le_E_all": true,
+  "voice_tau_minus_pkg_known_at_s_median": 23.8338605,
+  "face_tau_minus_pkg_known_at_s_median": 22.4369999995,
+  "note": "package known_at (greeting anchor + 30 s) recorded as comparison only; fills use tau_k_upper"
+ }
+}
+{
+ "answer_ZT": {
+  "n": 501,
+  "n_meetings": 23,
+  "coef_T": {
+   "const": 0.05369230634210647,
+   "s_tilde": 0.02298855514209008
+  },
+  "coef_C": {
+   "const": 0.05369230634210647,
+   "s_tilde": 0.03597811737159615,
+   "zA": 0.1068154961241679,
+   "U": 0.5034468493433294
+  }
+ },
+ "meeting_ZT": {
+  "n": 23,
+  "n_meetings": 23,
+  "coef_T": {
+   "const": 0.41268121300926647,
+   "s_tilde_m": -0.4206823193716006
+  },
+  "coef_C": {
+   "const": 0.41268121300926647,
+   "s_tilde_m": -0.4832053327745539,
+   "zA_m": 0.03274344959529554,
+   "U_m": -0.1702378925362009
+  }
+ },
+ "answer_ES": {
+  "n": 501,
+  "n_meetings": 23,
+  "coef_T": {
+   "const": 0.34208871149871967,
+   "s_tilde": -0.3387520701684877
+  },
+  "coef_C": {
+   "const": 0.34208871149871967,
+   "s_tilde": -0.4062174144176821,
+   "zA": 0.6028763996891089,
+   "U": 0.12258272893754392
+  }
+ },
+ "meeting_ES": {
+  "n": 23,
+  "n_meetings": 23,
+  "coef_T": {
+   "const": -13.43778460860162,
+   "s_tilde_m": -11.624237862843415
+  },
+  "coef_C": {
+   "const": -13.43778460860162,
+   "s_tilde_m": -5.938720972138309,
+   "zA_m": -7.208701348300891,
+   "U_m": 10.92467718497777
+  }
+ }
+}
+fit sha256 501117caefde1b4a66afc825828a9d77d45023dfbc30b9b6617ae002ee353403
+{
+ "H2": {
+  "status": "run",
+  "p_raw": 0.0001,
+  "p_used": 0.0001,
+  "n_answers": 542,
+  "n_meetings": 20,
+  "mean_ticks": 1.3560885608856088,
+  "bb_ci90": [
+   1.0286333067365783,
+   1.6841710838331707
+  ],
+  "reasons": [],
+  "labels": [
+   "exploratory, post-NO-GO; cannot rescue G3; no trading claim",
+   "source invariance not checked"
+  ],
+  "p_holm": 0.0002,
+  "holm_significant_at_0.05": true,
+  "wording": "exploratory association, post-NO-GO"
+ },
+ "H3": {
+  "status": "run",
+  "p_raw": 0.0001,
+  "p_used": 0.0001,
+  "n_answers": 548,
+  "n_meetings": 20,
+  "mean_ticks": 1.7262773722627738,
+  "bb_ci90": [
+   1.443254350169387,
+   2.025463835434638
+  ],
+  "reasons": [],
+  "labels": [
+   "exploratory, post-NO-GO; cannot rescue G3; no trading claim"
+  ],
+  "p_holm": 0.0002,
+  "holm_significant_at_0.05": true,
+  "wording": "exploratory association, post-NO-GO"
+ },
+ "H4": {
+  "status": "run",
+  "p_raw": 3.710212315155559e-08,
+  "p_used": 3.710212315155559e-08,
+  "n_answers": 542,
+  "n_meetings": 20,
+  "labels": [
+   "exploratory, post-NO-GO; cannot rescue G3; no trading claim"
+  ],
+  "p_holm": 1.1130636945466676e-07,
+  "holm_significant_at_0.05": true,
+  "wording": "exploratory association, post-NO-GO"
+ },
+ "note": "Holm m = 3 across H2, H3, H4 (new exploratory family; the locked register keeps them at p = 1, R2-26). A killed or unrunnable primary enters with p = 1.",
+ "features": "PLACEBO FEATURES (synthetic; not a result)"
+}
+{
+ "answer_ZT": {
+  "n": 542,
+  "n_clusters": 20,
+  "mean_f": 0.6851001939459648,
+  "t": 8.445834409057436,
+  "p_one": 3.710212315155559e-08,
+  "oos_r2_C_vs_T": 0.4912759013806458
+ },
+ "answer_ES": {
+  "n": 542,
+  "n_clusters": 20,
+  "mean_f": 1.4974135171183935,
+  "t": 3.2669736215631686,
+  "p_one": 0.002027971266206796,
+  "oos_r2_C_vs_T": 0.02353634095701307
+ },
+ "meeting_ZT": {
+  "n": 20,
+  "n_clusters": 20,
+  "mean_f": -0.22466955729059995,
+  "t": -1.1387567737101103,
+  "p_one": 0.8655201949489733,
+  "oos_r2_C_vs_T": -0.010091356658312511
+ },
+ "meeting_ES": {
+  "n": 20,
+  "n_clusters": 20,
+  "mean_f": -252.44273835904886,
+  "t": -1.4883685720709696,
+  "p_one": 0.9234679430656911,
+  "oos_r2_C_vs_T": -0.1465655161760493
+ }
+}

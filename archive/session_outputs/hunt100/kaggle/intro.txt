@@ -1,0 +1,1909 @@
+ 
+ __notebook__ 
+ Summary ¶ 
+ This notebook shows how to download, process, describe and analyze macro quantamental data through the Macrosynergy package . 
+ Macro quantamental indicators are mostly time series of information states of economic trends, balance sheets, and conditions. They are particularly suitable for backtesting and operating financial market trading strategies. The primary source of macro quantamental indicators is the J.P. Morgan - Macrosynergy Quantamental System ("JPMaQS"). The format has a few specifics that make it easy to discover investment values: 
+ All values are point-in-time, meaning they represent the latest value of a concept at the end of the date for which they have been recorded. 
+ The point-in-time format means that they can be related easily to time series of financial returns; many types of financial returns are also included in the system. 
+ Data are organized in panels, i.e., one type of quantamental indicator ("category") time series is available over a range of tradable markets or countries. 
+ Each observation of an indicator does not just contain a value but also information on the time that has elapsed since the recorded activity has taken place and the quantity of the replication of the historic information state. 
+ The Macrosynergy package contains convenience functions to handle this specific format and arrive quickly at conclusions for the investment process. It is not designed to compete with general statistics and graphics packages but merely serves as a shortcut to quick results and a guide to the type of operations and analyses that one can swiftly conduct on JPMaQS data. 
+ Packages and data ¶ 
+ Import packages ¶ 
+ In [1]: 
+ %%capture 
+ ! pip install git + https : // github . com / macrosynergy / macrosynergy @develop 
+ In [2]: 
+ %%capture 
+ import numpy as np 
+ import pandas as pd 
+ import matplotlib.pyplot as plt 
+ import seaborn as sns 
+ import math 
+ import os 
+ import macrosynergy.management as msm 
+ import macrosynergy.panel as msp 
+ import macrosynergy.signal as mss 
+ import macrosynergy.pnl as msn 
+ from macrosynergy.download import JPMaQSDownload 
+ from timeit import default_timer as timer 
+ from datetime import timedelta , date , datetime 
+ import warnings 
+ warnings . simplefilter ( "ignore" ) 
+ Download JPMaQS example data set ¶ 
+ For later use in the notebook, we define cross-sections (currency areas) and categories separately: 
+ In [3]: 
+ cids_dm = [ "AUD" , "CAD" , "CHF" , "EUR" , "GBP" , "JPY" , "NOK" , "NZD" , "SEK" , "USD" ] 
+ cids_em = [ 
+ "CLP" , 
+ "COP" , 
+ "CZK" , 
+ "HUF" , 
+ "IDR" , 
+ "ILS" , 
+ "INR" , 
+ "KRW" , 
+ "MXN" , 
+ "PLN" , 
+ "THB" , 
+ "TRY" , 
+ "TWD" , 
+ "ZAR" , 
+ ] 
+ cids = cids_dm + cids_em 
+ In [4]: 
+ ecos = [ 
+ "CPIC_SA_P1M1ML12" , 
+ "CPIC_SJA_P3M3ML3AR" , 
+ "CPIC_SJA_P6M6ML6AR" , 
+ "CPIH_SA_P1M1ML12" , 
+ "CPIH_SJA_P3M3ML3AR" , 
+ "CPIH_SJA_P6M6ML6AR" , 
+ "INFTEFF_NSA" , 
+ "INTRGDP_NSA_P1M1ML12_3MMA" , 
+ "INTRGDPv5Y_NSA_P1M1ML12_3MMA" , 
+ "PCREDITGDP_SJA_D1M1ML12" , 
+ "RGDP_SA_P1Q1QL4_20QMA" , 
+ "RYLDIRS02Y_NSA" , 
+ "RYLDIRS05Y_NSA" , 
+ "PCREDITBN_SJA_P1M1ML12" , 
+ ] 
+ mkts = [ 
+ "DU02YXR_NSA" , 
+ "DU05YXR_NSA" , 
+ "DU02YXR_VT10" , 
+ "DU05YXR_VT10" , 
+ "EQXR_NSA" , 
+ "EQXR_VT10" , 
+ "FXXR_NSA" , 
+ "FXXR_VT10" , 
+ "FXCRR_NSA" , 
+ "FXTARGETED_NSA" , 
+ "FXUNTRADABLE_NSA" , 
+ ] 
+ xcats = ecos + mkts 
+ In [5]: 
+ df = pd . read_csv ( '../input/fixed-income-returns-and-macro-trends/JPMaQS_Quantamental_Indicators.csv' , index_col = 0 , parse_dates = [ 'real_date' ]) 
+ display ( df . head ( 3 )) 
+ cid 
+ xcat 
+ real_date 
+ value 
+ grading 
+ 0 
+ AUD 
+ CPIC_SA_P1M1ML12 
+ 2000-01-03 
+ 1.244168 
+ 2.0 
+ 1 
+ AUD 
+ CPIC_SA_P1M1ML12 
+ 2000-01-04 
+ 1.244168 
+ 2.0 
+ 2 
+ AUD 
+ CPIC_SA_P1M1ML12 
+ 2000-01-05 
+ 1.244168 
+ 2.0 
+ The JPMaQSDownload class in Macrosynergy is used for downloading JPMaQS data via DataQuery and standardizing it into a "long" pandas data frame. It is faster and more convenient than the standard DataQuery API due to multi-threading and standardization. 
+ To download JPMaQS data, we use the JPMaQSDownload Object together with OAuth authentication credentials (default). For instructions please see README 
+If users don't have JPMaQS access, they can still run a version of the notebook using a Kaggle version . 
+ The Macrosynergy package works with data frames of a standard JPMaQS format, i.e. long data frames with at least four columns containing cross-section ( cid ), extended category ( xcat ), real-time dates ( real_date ), and value . Other potentially useful columns contain grades of observations ( grading ), lags to the end of the observation period ( eop_lag ), and lags to the median of observation period ( mop_lag ). 
+ Describing ¶ 
+ View available data history with check_availability ¶ 
+ The convenience function check_availability() visualizes start years and the number of missing values at or before the end date of all selected cross-sections and across a list of categories. It also displays unavailable indicators as gray fields and color codes the starting year of each series with darker colors indicating more recent starting years. If we are interested only in availability starting with a particular date, we pass this option as "start". 
+ In [6]: 
+ msm . check_availability ( 
+ df , 
+ xcats = ecos + [ "EQXR_NSA" ], 
+ cids = cids_em , 
+ start = "2000-01-01" , 
+ ) 
+[img]
+[img]
+ Detect missing categories or cross-sections with missing_in_df ¶ 
+ The function missing_in_df() is complimentary to check_availability and simply displays (1) categories that are missing across all expected cross-sections for a given category name list, and (2) cross-sections that are missing within a category. 
+ In [7]: 
+ cats_exp = [ "EQCRR_NSA" , "FXCRR_NSA" , "INTRGDP_NSA_P1M1ML12_3MMA" , "RUBBISH" ] 
+ msm . missing_in_df ( df , xcats = cats_exp , cids = cids ) 
+ Missing xcats across df: {'INTRGDP_NSA_P1M1ML12_3MMA', 'RUBBISH', 'EQCRR_NSA'}
+Missing cids for FXCRR_NSA: {'USD'}
+ Visualize panel distributions with view_ranges ¶ 
+ For an overview of long-term distributions of series in a panel, the convenience function view_ranges() uses standard bar plots and box plots of the Seaborn package to quickly and conveniently fit the JPMaQS format. 
+ For example, choosing kind='bar' displays a barplot that focuses on means and standard deviations of one or more categories across sections for a given sample period. One can define the start and the end date of the time series. The default would be the earliest available date as the start and the latest available as the end date. 
+ In [8]: 
+ xcats_sel = [ "CPIC_SJA_P6M6ML6AR" , "CPIH_SJA_P6M6ML6AR" ] 
+ msp . view_ranges ( 
+ df , 
+ xcats = xcats_sel , 
+ kind = "bar" , 
+ sort_cids_by = "mean" , # countries sorted by mean of the first category 
+ title = "Means and standard deviations of inflation trends across all major markets since 2000" , 
+ ylab = " % a nnualized" , 
+ start = "2000-01-01" , 
+ end = "2020-01-01" , 
+ ) 
+[img]
+ Choosing kind='box' gives a barplot that visualizes 25%, 50% (median), and 75% quantiles as well as outliers beyond a normal range. Chart title, y-axis label, size, and category labels can be customized as shown below: 
+ In [9]: 
+ xcats_sel = [ "RYLDIRS02Y_NSA" ] 
+ msp . view_ranges ( 
+ df , 
+ xcats = xcats_sel , 
+ kind = "box" , 
+ start = "2012-01-01" , 
+ sort_cids_by = "std" , # here sorted by standard deviations 
+ title = "Real interest rates sorted by volatility" , 
+ ylab = "% monthly return" , 
+ xcat_labels = [ "Real 2-year IRS rate" ], 
+ size = ( 12 , 5 ), 
+ ) 
+[img]
+ Visualize panel time series with view_timelines ¶ 
+ The convenience function view_timelines() displays a facet grid of timeline charts of one or more categories.
+The size of the charts is governed jointly by aspect and height . 
+ The cs_mean=True option adds a timeline of the cross-sectional average of a single category to each plot in the facet, emphasizing cross-sectional deviations. 
+ In [10]: 
+ msp . view_timelines ( 
+ df , 
+ xcats = [ "PCREDITBN_SJA_P1M1ML12" ], 
+ cids = cids_dm , 
+ ncol = 4 , 
+ start = "1995-01-01" , 
+ title = "Private credit growth, %o ya" , 
+ same_y = False , 
+ cs_mean = True , 
+ aspect = 2 , 
+ height = 3 , # de-facto determines plot size relative to texts 
+ title_adj = 1.02 , # below 1 reduces facet high to make space for the title 
+ label_adj = 0.08 , 
+ xcat_labels = [ "Credit growth" , "Global average" ], 
+ ) 
+[img]
+ Arguments can be set according to the nature of the data and the intention of the plot. The following are important choices: 
+ For asset returns and similarly volatile series, it is often desirable to display cumulative sums, with cumsum=True . 
+ The default setting same_y=True shows all lines on the same scale for comparability of size. 
+ For large facets xticks=True the time (x-) axis is printed under each chart, not just the bottom row. 
+ The xcat_labels argument is used to customize the category labels (the default is just category tickers). 
+ In [11]: 
+ cids_sel = [ "AUD" , "NZD" , "GBP" , "BRL" , "MXN" , "PLN" , "ZAR" , "KRW" , "INR" ] 
+ msp . view_timelines ( 
+ df , 
+ xcats = [ "FXXR_NSA" , "FXXR_VT10" ], 
+ cids = cids_sel , 
+ ncol = 3 , 
+ cumsum = True , 
+ start = "2010-01-01" , 
+ same_y = False , 
+ aspect = 2 , 
+ height = 3 , 
+ all_xticks = True , 
+ title = "Cumulative FX returns" , 
+ title_adj = 1.05 , 
+ xcat_labels = [ "FX returns" , "FX forward return for 10% vol target" ], 
+ label_adj = 0.08 , 
+ ) 
+[img]
+ One can display a single chart by passing a single-string list to xcats . The size of the single-line chart is set by size . 
+ In [12]: 
+ msp . view_timelines ( 
+ df , 
+ xcats = [ "CPIC_SJA_P6M6ML6AR" , "CPIH_SJA_P6M6ML6AR" ], 
+ cids = [ "USD" ], 
+ start = "2000-01-01" , 
+ size = ( 10 , 6 ), 
+ title = "U.S. CPI inflation trends, %6m/6m, saar" , 
+ title_adj = 0.95 , 
+ xcat_labels = [ "Core" , "Headline" ], 
+ label_adj = 0.2 , 
+ ) 
+[img]
+ Setting single_chart=True allows plotting a single category for various cross-sections in one plot. The size argument determines width and height. 
+ In [13]: 
+ cids_sel = [ "AUD" , "NZD" , "GBP" ] 
+ msp . view_timelines ( 
+ df , 
+ xcats = [ "CPIC_SJA_P6M6ML6AR" ], 
+ cids = cids_sel , 
+ cumsum = False , 
+ start = "2000-01-01" , 
+ same_y = False , 
+ size = ( 10 , 4 ), 
+ all_xticks = False , 
+ title = "Cumulative FX returns" , 
+ title_adj = 0.95 , 
+ xcat_labels = [ "FX returns" , "FX forward return for 10% vol target" ], 
+ label_adj = 0.08 , 
+ single_chart = True , 
+ ) 
+[img]
+ Visualize vintage qualities with heatmap_grades ¶ 
+ The visualization function heatmap_grades() displays a colored table of grading quality of indicators by categories and cross-sections as an average for a given start date. Darker colors represent lower grading. 
+ This function visualizes the grades of the vintages based on which quantamental series have been calculated. JPMaQS uses vintages, i.e. time sequences of time series to replicate the information of the market in the past. Vintages arise from data revisions, extension, and re-estimation of parameters of any underlying model. JPMaQS grades vintage time series from 1 (highest quality, either original record of the time series available on that date or a series that is marginally different from the original for storage reasons or publication conventions) to grade 3 (rough estimate of the information status). More details on vintages and grades are here 
+ In [14]: 
+ xcats_sel = [ "INTRGDPv5Y_NSA_P1M1ML12_3MMA" , "CPIC_SJA_P6M6ML6AR" , "FXXR_NSA" ] 
+ msp . heatmap_grades ( 
+ df , 
+ xcats = xcats_sel , 
+ cids = cids_em + cids_dm , 
+ start = "2000-01-01" , 
+ size = ( 15 , 2 ), 
+ ) 
+[img]
+ Pre-processing ¶ 
+ Create new category panels with panel_calculator ¶ 
+ The panel_calculator() function in the macrosynergy.panel module simplifies applying transformations to each cross-section of a panel using a string-based formula. This function is very flexible and saves a lot of code when creating trading signals across multiple countries. To use the function, consider the category ticker as a panel dataframe and use standard Python and pandas expressions. 
+ Panel category names that are not at the beginning or end of the string must always have a space before and after the name. Calculated category and panel operations must be separated by '='. Examples: "NEWCAT = ( OLDCAT1 + 0.5) * OLDCAT2" "NEWCAT = np.log( OLDCAT1 ) - np.abs( OLDCAT2 ) ** 1/2" 
+ Note that the argument cids contains the list of cross-sections for which the new categories are to be calculated. If a cross-section is missing for any of the categories used, none of the new categories will be produced. This means if a specific calculation should be made for a smaller or larger set of cross-sections one must make a separate call to the function. 
+ Below we calculate plausible metrics of indicators or signals, which can be used for analysis: 
+ excess inflation versus a country's effective inflation target 
+ excess real interest rate 
+ combination of the newly created indicators 
+ In [15]: 
+ cids_sel = [ "AUD" , "CHF" , "GBP" , "SEK" , "EUR" , "USD" ] 
+ calcs = [ 
+ "XINF = CPIH_SA_P1M1ML12 - INFTEFF_NSA" , # excess inflation 
+ "XRYLD = RYLDIRS05Y_NSA - INTRGDPv5Y_NSA_P1M1ML12_3MMA" , # excess real interest rate 
+ "XXRYLD = XRYLD - XINF" , # newly created panels can be used subsequently 
+ ] 
+ dfa = msp . panel_calculator ( df , calcs = calcs , cids = cids_sel ) 
+ xcats_sel = [ "XRYLD" , "XINF" ] 
+ df = msm . update_df ( df , dfa ) 
+ msp . view_timelines ( 
+ df , 
+ xcats = xcats_sel , 
+ cids = cids_sel , 
+ ncol = 3 , 
+ start = "2000-01-01" , 
+ same_y = False , 
+ aspect = 1.5 , 
+ height = 3 , 
+ label_adj = 0.12 , 
+ ) 
+[img]
+ The panel_calculator function is also suitable for computing cross-section-specific relative economic performance, by using a loop and f-strings. For example, here we calculate absolute target deviations for a range of CPI inflation metrics for all markets. 
+ In [16]: 
+ infs = [ "CPIH_SA_P1M1ML12" , "CPIH_SJA_P6M6ML6AR" , "CPIH_SJA_P3M3ML3AR" ] 
+ for inf in infs : 
+ calcs = [ 
+ f " { inf } vIET = ( { inf } - INFTEFF_NSA )" , 
+ ] 
+ dfa = msp . panel_calculator ( df , calcs = calcs , cids = cids ) 
+ df = msm . update_df ( df , dfa ) 
+ xcats_sel = [ "CPIH_SA_P1M1ML12vIET" , "CPIH_SJA_P3M3ML3ARvIET" ] 
+ msp . view_timelines ( 
+ df , 
+ xcats = xcats_sel , 
+ cids = cids_dm , 
+ ncol = 4 , 
+ cumsum = False , 
+ start = "2000-01-01" , 
+ same_y = False , 
+ aspect = 1.75 , 
+ size = ( 12 , 12 ), 
+ all_xticks = True , 
+ title_adj = 1.05 , 
+ label_adj = 0.05 , 
+ title = "CPI inflation rates, %a r, versus effective inflation target, market information state" , 
+ xcat_labels = [ " % o ver a year ago" , "% 3m/3m, saar" ], 
+ ) 
+[img]
+ Panel calculation can use individual series by prepending an i to the ticker name. This ticker can have a cross-sections identifier that is not in the selection defined by cids 
+ In [17]: 
+ cids_sel = cids_dm [: 6 ] 
+ calcs = [ "RYLDvUSD = RYLDIRS05Y_NSA - iUSD_RYLDIRS05Y_NSA" ] 
+ dfa = msp . panel_calculator ( df , calcs = calcs , cids = cids_sel ) 
+ df = msm . update_df ( df , dfa ) 
+ msp . view_timelines ( 
+ df , 
+ xcats = [ "RYLDvUSD" ], 
+ cids = cids_sel , 
+ ncol = 3 , 
+ start = "2000-01-01" , 
+ same_y = False , 
+ aspect = 1.5 , 
+ height = 3 , 
+ label_adj = 0.12 , 
+ ) 
+[img]
+ Exclude series sections with make_blacklist ¶ 
+ The make_blacklist() helper function creates a standardized dictionary of blacklist periods, i.e. periods that affect the validity of an indicator, based on standardized panels of binary categories, where values of 1 indicate a cause for blacklisting. 
+ Put simply, this function allows converting category variables into blacklist dictionaries that can then be passed to other functions. Below we picked two indicators for FX tradability and flexibility. FXTARGETED_NSA is an exchange rate target dummy, which takes a value of 1 if the exchange rate is targeted through a peg or any regime that significantly reduces exchange rate flexibility and 0 otherwise. FXUNTRADABLE_NSA is also a dummy variable that takes the value 1 if liquidity in the main FX forward market is limited or there is a distortion between tradable offshore and untradable onshore contracts. 
+ Details on both categories are here (password protected) or a slightly shorter version is on Kaggle under the JPMaQS dataset description 
+ In [18]: 
+ dfb = df [ df [ "xcat" ] . isin ([ "FXTARGETED_NSA" , "FXUNTRADABLE_NSA" ])] . loc [ 
+ :, [ "cid" , "xcat" , "real_date" , "value" ] 
+ ] 
+ dfba = ( 
+ dfb . groupby ([ "cid" , "real_date" ]) 
+ . aggregate ( value = pd . NamedAgg ( column = "value" , aggfunc = "max" )) 
+ . reset_index () 
+ ) 
+ dfba [ "xcat" ] = "FXBLACK" 
+ fxblack = msp . make_blacklist ( dfba , "FXBLACK" ) 
+ fxblack 
+ Out[18]: 
+ {'CHF': (Timestamp('2011-05-02 00:00:00'), Timestamp('2016-06-30 00:00:00')),
+ 'CZK': (Timestamp('2014-01-01 00:00:00'), Timestamp('2017-07-31 00:00:00')),
+ 'ILS': (Timestamp('2000-01-03 00:00:00'), Timestamp('2005-12-30 00:00:00')),
+ 'INR': (Timestamp('2000-01-03 00:00:00'), Timestamp('2004-12-31 00:00:00')),
+ 'THB': (Timestamp('2007-01-01 00:00:00'), Timestamp('2008-11-28 00:00:00')),
+ 'TRY_1': (Timestamp('2000-01-03 00:00:00'), Timestamp('2003-09-30 00:00:00')),
+ 'TRY_2': (Timestamp('2020-01-01 00:00:00'), Timestamp('2023-01-31 00:00:00'))} 
+ Since 2000, roughly more than a third of the currencies covered by JPMaQS have seen their FX forward market affected either by an official exchange rate target, illiquidity, or convertibility-related distortions. The above output shows periods of disruptions for (primarily) emerging currencies. A notable developed market exception here is CHF, which was pegged between 2011 and 2016. 
+ A standard blacklist dictionary can be passed to several package functions that exclude the blacklisted periods from related analyses.
+If one wishes to just exclude the blacklisted periods from a dataframe independent of specific applications, one can use the reduce_df() helper function. 
+ In [19]: 
+ dffx = df [ df [ "xcat" ] == "FXXR_NSA" ] 
+ print ( "Original shape: " , dffx . shape ) 
+ dffxx = msm . reduce_df ( dffx , blacklist = fxblack ) 
+ print ( "Reduced shape: " , dffxx . shape ) 
+ Original shape: (138506, 5)
+Reduced shape: (131071, 5)
+ Concatenate dataframes with update_df ¶ 
+ The update_df function in the management module concatenates two JPMaQS data frames and offers two conveniences. 
+ It replaces duplicated tickers in the base data frame with those in the added data frame and re-indexes the output data frame. 
+ Additionally, you can replace categories in the base data frame by setting xcat_replace=True. This is useful when re-calculating the data panel of a category but not including all cross-sections of the original panel, and wanting to avoid confusion by having two different calculation methods under the same category name. 
+ In [20]: 
+ dfa = msp . panel_calculator ( 
+ df , calcs = [ "RYLD52 = RYLDIRS05Y_NSA - RYLDIRS02Y_NSA" ], cids = cids_dm 
+ ) 
+ df = msm . update_df ( df = df , df_add = dfa ) # composite extended data frame 
+ df [ "xcat" ] . unique () # checking if the newly created RYLD52 is in the dataframe 
+ Out[20]: 
+ array(['CPIC_SA_P1M1ML12', 'CPIC_SJA_P3M3ML3AR', 'CPIC_SJA_P6M6ML6AR',
+ 'CPIH_SA_P1M1ML12', 'CPIH_SA_P1M1ML12vIET', 'CPIH_SJA_P3M3ML3AR',
+ 'CPIH_SJA_P3M3ML3ARvIET', 'CPIH_SJA_P6M6ML6AR',
+ 'CPIH_SJA_P6M6ML6ARvIET', 'DU02YXR_NSA', 'DU02YXR_VT10',
+ 'DU05YXR_NSA', 'DU05YXR_VT10', 'EQXR_NSA', 'EQXR_VT10',
+ 'FXCRR_NSA', 'FXTARGETED_NSA', 'FXUNTRADABLE_NSA', 'FXXR_NSA',
+ 'FXXR_VT10', 'INFTEFF_NSA', 'INTRGDPv10Y_NSA_P1M1ML12_3MMA',
+ 'INTRGDPv5Y_NSA_P1M1ML12_3MMA', 'PCREDITBN_SJA_P1M1ML12',
+ 'PCREDITGDP_SJA_D1M1ML12', 'RGDP_SA_P1Q1QL4_20QMA', 'RYLD52',
+ 'RYLDIRS02Y_NSA', 'RYLDIRS05Y_NSA', 'RYLDvUSD', 'XINF', 'XRYLD',
+ 'XXRYLD'], dtype=object) 
+ Compute panels versus basket with make_relative_value ¶ 
+ The make_relative_value() function generates a data frame of relative values for a given list of categories. In this case, "relative" means that the original value is compared to a basket average. By default, the basket consists of all available cross-sections, and the relative value is calculated by subtracting the basket average from individual cross-section values. 
+ By default, the function assumes that complete_cross=False , meaning that basket averages do not require the full set of cross-sections to be calculated for a specific date, but are always based on the ones available at the time. 
+ In [21]: 
+ cids_sel = cids_dm [: 6 ] 
+ xcats_sel = [ "PCREDITGDP_SJA_D1M1ML12" ] 
+ dfy = msp . make_relative_value ( 
+ df , 
+ xcats = [ "PCREDITGDP_SJA_D1M1ML12" ], 
+ cids = cids_sel , 
+ start = "2000-01-01" , 
+ blacklist = fxblack , # cross-sections can be blacklisted for calculation and basket use 
+ rel_meth = "subtract" , 
+ complete_cross = False , # cross-sections do not have to be complete for basket calculation 
+ postfix = "_vDM" , 
+ ) 
+ df = msm . update_df ( df = df , df_add = dfy ) # composite extended data frame 
+ dfj = pd . concat ([ df [ df [ "xcat" ] . isin ( xcats_sel )], dfy ]) 
+ xcats_sel = [ "PCREDITGDP_SJA_D1M1ML12" , "PCREDITGDP_SJA_D1M1ML12_vDM" ] 
+ msp . view_timelines ( 
+ dfj , 
+ xcats = xcats_sel , 
+ cids = cids_sel , 
+ ncol = 3 , 
+ start = "2000-01-01" , 
+ same_y = True , 
+ aspect = 1.5 , 
+ height = 3 , 
+ label_adj = 0.15 , 
+ ) 
+[img]
+ By default, the basket is composed of all available cross-sections for every period, as defined by the cids argument. However, it is possible to limit the basket to a subset or a single cross-section by using the basket=[...] argument. 
+ In the make_relative_value() function, an important decision is the use of the blacklist argument. This argument takes a dictionary of cross-sections and date ranges that should be excluded from the output, created by the make_blacklist() function. Excluding invalid or distorted data is crucial when calculating relative values because a single cross-section's distortion can invalidate all cross-sectional relative values. 
+ Apart from standard arguments, such as dataframe , cids , and xcats , the function takes several optional parameters: 
+ cumsum - boolean argument (the default is False), plots the cumulative sum of the values \
+ aspect determines the aspect ratio of each facet, so that aspect * height gives the width of each facet in inches. The default value is 1.7\
+ height determines the height (in inches) of each facet. The default value is 3\
+ label_adj sets the distance of the legend to the bottom of the charts. The default value is 0.05. If the chart has x-labels, increase the value to 0.15-0.2 to avoid text overlapping (x-labels with legend) 
+ In [22]: 
+ cids_sel = [ "USD" , "EUR" , "GBP" ] 
+ xcats_sel = [ "CPIC_SA_P1M1ML12" ] 
+ dfx = msp . make_relative_value ( 
+ df , 
+ xcats = xcats_sel , 
+ cids = cids_sel , 
+ start = "2000-01-01" , 
+ blacklist = fxblack , # remove invalid observations 
+ basket = [ "EUR" , "USD" ], # basket does not use all cross-sections 
+ rel_meth = "subtract" , 
+ postfix = "vG2" , 
+ ) 
+ dfj = pd . concat ([ df [ df [ "xcat" ] . isin ( xcats_sel )], dfx ]) 
+ msp . view_timelines ( 
+ dfj , 
+ xcats = [ "CPIC_SA_P1M1ML12" , "CPIC_SA_P1M1ML12vG2" ], 
+ cids = cids_sel , 
+ ncol = 3 , 
+ start = "2000-01-01" , 
+ same_y = True , 
+ aspect = 2 , 
+ height = 2 , 
+ # label_adj=0.2, 
+ ) 
+[img]
+ Normalize panels with make_zn_scores ¶ 
+ The make_zn_scores() function is a method for normalizing values across different categories. This is particularly important when summing or averaging categories with different units and time series properties. The function computes z-scores for a category panel around a specified neutral level that may be different from the mean. The term "zn-score" refers to the normalized distance from the neutral value. 
+ The default mode of the function calculates scores based on sequential estimates of means and standard deviations, using only past information. This is controlled by the sequential=True argument, and the minimum number of observations required for meaningful estimates is set with the min_obs argument. By default, the function calculates zn-scores for the initial sample period defined by min_obs on an in-sample basis to avoid losing history. 
+ The means and standard deviations are re-estimated daily by default, but the frequency of re-estimation can be controlled with the est_freq argument, which can be set to weekly, monthly, or quarterly. 
+ In [23]: 
+ dfzn = msp . make_zn_scores ( 
+ df , 
+ xcat = "CPIH_SJA_P6M6ML6AR" , 
+ cids = cids_em + cids_dm , 
+ sequential = True , 
+ min_obs = 261 * 3 , # minimum requirement is 3 years of daily data 
+ neutral = "zero" , 
+ pan_weight = 1 , 
+ thresh = None , 
+ postfix = "ZN" , 
+ est_freq = "w" , 
+ ) 
+ msp . view_ranges ( 
+ dfzn , 
+ xcats = [ "CPIH_SJA_P6M6ML6ARZN" ], 
+ kind = "bar" , 
+ sort_cids_by = "mean" , 
+ start = "2000-01-01" , 
+ size = ( 12 , 4 ), 
+ ) 
+[img]
+ Important parameters that shape the nature of the zn-scores are: 
+ neutral , which sets the level that divides positive and negative scores. It can be set to 'zero' , 'mean' , or 'median' . 
+ pan_weight , which sets the importance of the panel versus the individual cross-sections for scaling the zn-scores. If the category is assumed to be homogeneous across countries in respect to its signal the weight can be close to 1 (whole panel data are the basis for the parameters). If countries are not comparable in respect to category means and/or standard deviation and panel weight close to zero is preferable (parameters are all specific to cross-section). The default value is 1. 
+ thresh sets the cutoff value (threshold) for winsorization in terms of standard deviations. The minimum value is 1. Setting thresh to values close to 1 will exclude particular high volatility periods from the sample. For the example above only TRY will be affected by applying the threshold of 2. 
+ In [24]: 
+ xcat = "CPIH_SJA_P6M6ML6AR" 
+ cids_sel = [ "ZAR" , "HUF" , "PLN" , "AUD" , "JPY" ] 
+ dict_ps = { # dictionary of zn-score specs 
+ 1 : { 
+ "neutral" : "zero" , 
+ "pan_weight" : 1 , 
+ "thresh" : None , 
+ "postfix" : "ZNPZ" , 
+ "label" : "panel-based scores around zero" , 
+ }, 
+ 2 : { 
+ "neutral" : "mean" , 
+ "pan_weight" : 1 , 
+ "thresh" : None , 
+ "postfix" : "ZNPM" , 
+ "label" : "panel-based scores around mean" , 
+ }, 
+ 3 : { 
+ "neutral" : "mean" , 
+ "pan_weight" : 0 , 
+ "thresh" : None , 
+ "postfix" : "ZNCM" , 
+ "label" : "country-based scores around mean" , 
+ }, 
+ 4 : { 
+ "neutral" : "zero" , 
+ "pan_weight" : 1 , 
+ "thresh" : 1.5 , 
+ "postfix" : "ZNPW" , 
+ "label" : "panel-based winsorized scores around zero" , 
+ }, 
+ } 
+ dfx = pd . DataFrame ( columns = dfx . columns ) 
+ for dvs in dict_ps . values (): 
+ dfa = msp . make_zn_scores ( 
+ df , 
+ xcat = xcat , 
+ cids = cids_sel , 
+ sequential = True , 
+ neutral = dvs [ "neutral" ], 
+ pan_weight = dvs [ "pan_weight" ], 
+ thresh = dvs [ "thresh" ], 
+ postfix = dvs [ "postfix" ], 
+ est_freq = "m" , 
+ ) 
+ dfx = msm . update_df ( dfx , dfa ) 
+ dfx = msm . update_df ( dfx , dfa ) 
+ compares = [( 1 , 2 ), ( 2 , 3 ), ( 1 , 4 )] 
+ for comps in compares : 
+ print ( comps ) 
+ dv1 = dict_ps [ comps [ 0 ]] 
+ dv2 = dict_ps [ comps [ 1 ]] 
+ msp . view_ranges ( 
+ dfx , 
+ xcats = [ f " { xcat }{ dv1 [ 'postfix' ] } " , f " { xcat }{ dv2 [ 'postfix' ] } " ], 
+ kind = "box" , 
+ sort_cids_by = "mean" , 
+ start = "2000-01-01" , 
+ size = ( 12 , 4 ), 
+ title = f " { xcat } : { dv1 [ 'label' ] } vs. { dv2 [ 'label' ] } " , 
+ ) 
+ (1, 2)
+[img]
+ (2, 3)
+[img]
+ (1, 4)
+[img]
+ Estimate asset return elasticities with return_beta ¶ 
+ The function return_beta() estimates betas (elasticities) of a return category to a benchmark. It returns either just the betas or also hedged returns of the cross-sections. Hedged returns are returns on a composite position on the principal contract and the benchmark to offset the elasticity of the former in respect to the latter. At present, the only method used to calculate the beta is a simple ols regression. If oos is set to True (default), the function calculates hedge ratios out of sample, i.e. for each period based on estimates up to the previous period. The related re-estimation frequency is set with refreq (default monthly). The re-estimation is conducted at the end of the period and used as a hedge ratio for all days in the following period. The argument min_obs sets the minimum number of observations, after which the hedging ratio is to be calculated initially. If the betas are estimated out of sample betas are only estimated for periods after the minimum number of periods are available. 
+ In [25]: 
+ dfx = df [[ "cid" , "xcat" , "real_date" , "value" ]] 
+ cids_sel = [ "AUD" , "CAD" , "CHF" , "EUR" , "GBP" , "JPY" , "NOK" , "NZD" , "SEK" ] 
+ dfh = msp . return_beta ( 
+ dfx , 
+ xcat = "FXXR_NSA" , 
+ cids = cids_sel , 
+ benchmark_return = "USD_EQXR_NSA" , 
+ oos = False , 
+ hedged_returns = True , 
+ start = "2002-01-01" , 
+ refreq = "m" , 
+ ) 
+ dfh 
+ dfx = msm . update_df ( df = dfx , df_add = dfh ) 
+ dfx [ "xcat" ] . unique () 
+ Out[25]: 
+ array(['CPIC_SA_P1M1ML12', 'CPIC_SJA_P3M3ML3AR', 'CPIC_SJA_P6M6ML6AR',
+ 'CPIH_SA_P1M1ML12', 'CPIH_SA_P1M1ML12vIET', 'CPIH_SJA_P3M3ML3AR',
+ 'CPIH_SJA_P3M3ML3ARvIET', 'CPIH_SJA_P6M6ML6AR',
+ 'CPIH_SJA_P6M6ML6ARvIET', 'DU02YXR_NSA', 'DU02YXR_VT10',
+ 'DU05YXR_NSA', 'DU05YXR_VT10', 'EQXR_NSA', 'EQXR_VT10',
+ 'FXCRR_NSA', 'FXTARGETED_NSA', 'FXUNTRADABLE_NSA', 'FXXR_NSA',
+ 'FXXR_NSA_H', 'FXXR_NSA_HR', 'FXXR_VT10', 'INFTEFF_NSA',
+ 'INTRGDPv10Y_NSA_P1M1ML12_3MMA', 'INTRGDPv5Y_NSA_P1M1ML12_3MMA',
+ 'PCREDITBN_SJA_P1M1ML12', 'PCREDITGDP_SJA_D1M1ML12',
+ 'PCREDITGDP_SJA_D1M1ML12_vDM', 'RGDP_SA_P1Q1QL4_20QMA', 'RYLD52',
+ 'RYLDIRS02Y_NSA', 'RYLDIRS05Y_NSA', 'RYLDvUSD', 'XINF', 'XRYLD',
+ 'XXRYLD'], dtype=object) 
+ The auxiliary function hedge_ratio_display() visualizes the hedge ratios that were estimated by the hedge_ratio() function. 
+ In [26]: 
+ sns . set ( rc = { "figure.figsize" : ( 12 , 4 )}) 
+ msp . beta_display ( dfh ) 
+[img]
+ Hedged returns vs un-hedged returns can be displayed using view_timelines() function: 
+ In [27]: 
+ xcats_sel = [ "FXXR_NSA" , "FXXR_NSA_H" ] 
+ msp . view_timelines ( 
+ dfx , 
+ xcats = xcats_sel , 
+ cids = cids_sel , 
+ ncol = 3 , 
+ cumsum = True , 
+ start = "2000-01-01" , 
+ same_y = False , 
+ aspect = 2 , 
+ size = ( 12 , 12 ), 
+ all_xticks = False , 
+ title_adj = 1.02 , 
+ label_adj = 0.1 , 
+ title = "Unhedged vs hedged cumulative FX forward returns, % o f notional: dominant cross" , 
+ xcat_labels = [ "Unedged" , "Hedged" ], 
+ height = 3 , 
+ ) 
+[img]
+ Generate returns (and carry) of a group of contracts with Basket ¶ 
+ Instantiation ¶ 
+ The Basket class supports the calculation of returns and carry of groups of financial contracts using
+various weighting methods. The main argument is a list of contracts. It is very important to specify any invalid blacklisted periods associated with any of the cross-sections, as these invalid numbers would contaminate the whole basket. 
+ In the below example, we instantiate a Basket object for a group of FX forward returns. 
+ In [28]: 
+ cids_fxcry = [ "AUD" , "INR" , "NZD" , "PLN" , "TWD" , "ZAR" ] 
+ ctrs_fxcry = [ cid + "_FX" for cid in cids_fxcry ] 
+ basket_fxcry = msp . Basket ( 
+ dfx , 
+ contracts = ctrs_fxcry , 
+ ret = "XR_NSA" , 
+ cry = "CRR_NSA" , 
+ start = "2010-01-01" , 
+ end = "2023-01-01" , 
+ blacklist = fxblack , 
+ ) 
+ for attribute , value in basket_fxcry . __dict__ . items (): 
+ if not isinstance ( 
+ value , ( pd . DataFrame , dict ) 
+ ): # print all non-df and non-dictionary attributes 
+ print ( attribute , " = " , value ) 
+ contracts = ['AUD_FX', 'INR_FX', 'NZD_FX', 'PLN_FX', 'TWD_FX', 'ZAR_FX']
+ret = XR_NSA
+ticks_ret = ['AUD_FXXR_NSA', 'INR_FXXR_NSA', 'NZD_FXXR_NSA', 'PLN_FXXR_NSA', 'TWD_FXXR_NSA', 'ZAR_FXXR_NSA']
+cry_flag = True
+ticks_cry = ['AUD_FXCRR_NSA', 'INR_FXCRR_NSA', 'NZD_FXCRR_NSA', 'PLN_FXCRR_NSA', 'TWD_FXCRR_NSA', 'ZAR_FXCRR_NSA']
+cry = ['CRR_NSA']
+wgt_flag = False
+ticks_wgt = []
+dfws_wgt = None
+tickers = ['AUD_FXXR_NSA', 'INR_FXXR_NSA', 'NZD_FXXR_NSA', 'PLN_FXXR_NSA', 'TWD_FXXR_NSA', 'ZAR_FXXR_NSA', 'AUD_FXCRR_NSA', 'INR_FXCRR_NSA', 'NZD_FXCRR_NSA', 'PLN_FXCRR_NSA', 'TWD_FXCRR_NSA', 'ZAR_FXCRR_NSA']
+start = 2010-01-01
+end = 2023-01-01
+ Calculate basket performances with .make_basket ¶ 
+ The make_basket method calculates and stores all performance metrics, i.e. returns and carry, for a specific weighting method of the basket. The different weighting options available provide flexibility in constructing a composite measure that meets specific needs or objectives: 
+ equal : all contracts with non-NA returns have the same weight (default value)\
+ fixed : the weights are proportionate to a single list of values provided. This allows for more customization in the weighting of each contract based on specific preferences or criteria\
+ invsd : the weights based on inverse to standard deviations of recent returns. This can be useful for creating a measure that gives more weight to contracts with more stable returns over time . The lookback period is per default 21 observations, but can be changed with lback_periods . The default method is Exponential MA, it can be changed to a simple moving average, "ma" under lback_meth \
+ values : the weights proportionate to a panel of values of exogenous weight category. This allows for weighting based on external factors that may be relevant to the specific contracts in the basket\
+ inv_values : weights are inversely proportionate to the values of an exogenous weight category. This can be useful for creating a measure that gives less weight to contracts with high values in the external factor, which may indicate greater risk or volatility. 
+ In [29]: 
+ basket_fxcry . make_basket ( weight_meth = "equal" , basket_name = "GLB_FXCRY" ) 
+ basket_fxcry . make_basket ( weight_meth = "invsd" , basket_name = "GLB_FXCRYVW" ) 
+ basket_fxcry . make_basket ( 
+ weight_meth = "fixed" , 
+ weights = [ 1 / 3 , 1 / 6 , 1 / 12 , 1 / 6 , 1 / 3 , 1 / 12 ], 
+ basket_name = "GLB_FXCRYFW" , 
+ ) 
+ Return the performance data with .return_basket ¶ 
+ The return_basket method returns basket performance data in a standardized format. The basket names for which the performance data are calculated can be limited by using the basket_names argument. 
+ In [30]: 
+ dfb = basket_fxcry . return_basket () 
+ print ( dfb . tail ()) 
+ utiks = list (( dfb [ "cid" ] + "_" + dfb [ "xcat" ]) . unique ()) 
+ f "Unique basket tickers: { utiks } " 
+ cid xcat real_date value
+20341 GLB FXCRYFW_XR_NSA 2022-12-26 0.003002
+20342 GLB FXCRYFW_XR_NSA 2022-12-27 -0.105906
+20343 GLB FXCRYFW_XR_NSA 2022-12-28 0.200006
+20344 GLB FXCRYFW_XR_NSA 2022-12-29 0.178766
+20345 GLB FXCRYFW_XR_NSA 2022-12-30 0.020504
+ Out[30]: 
+ "Unique basket tickers: ['GLB_FXCRY_CRR_NSA', 'GLB_FXCRY_XR_NSA', 'GLB_FXCRYVW_CRR_NSA', 'GLB_FXCRYVW_XR_NSA', 'GLB_FXCRYFW_CRR_NSA', 'GLB_FXCRYFW_XR_NSA']" 
+ Return and visualize weights with return_weights and weight visualizer ¶ 
+ The return_weights method returns the effective weights used in a basket for all contracts. This can be useful if the same weights are to be used for a basket of predictive features. 
+ In [31]: 
+ dfb = basket_fxcry . return_weights () 
+ print ( dfb . head ()) 
+ print ( dfb [ "cid" ] . unique ()) 
+ print ( dfb [ "xcat" ] . unique ()) 
+ dfbw = dfb . pivot_table ( 
+ index = "real_date" , columns = [ "xcat" , "cid" ], values = "value" 
+ ) . replace ( 0 , np . nan ) 
+ dfbw . tail ( 3 ) . round ( 2 ) 
+ cid xcat real_date value
+0 AUD FX_GLB_FXCRY_WGT 2010-01-01 0.166667
+1 AUD FX_GLB_FXCRY_WGT 2010-01-04 0.166667
+2 AUD FX_GLB_FXCRY_WGT 2010-01-05 0.166667
+3 AUD FX_GLB_FXCRY_WGT 2010-01-06 0.166667
+4 AUD FX_GLB_FXCRY_WGT 2010-01-07 0.166667
+['AUD' 'INR' 'NZD' 'PLN' 'TWD' 'ZAR']
+['FX_GLB_FXCRY_WGT' 'FX_GLB_FXCRYVW_WGT' 'FX_GLB_FXCRYFW_WGT']
+ Out[31]: 
+ xcat 
+ FX_GLB_FXCRYFW_WGT 
+ FX_GLB_FXCRYVW_WGT 
+ FX_GLB_FXCRY_WGT 
+ cid 
+ AUD 
+ INR 
+ NZD 
+ PLN 
+ TWD 
+ ZAR 
+ AUD 
+ INR 
+ NZD 
+ PLN 
+ TWD 
+ ZAR 
+ AUD 
+ INR 
+ NZD 
+ PLN 
+ TWD 
+ ZAR 
+ real_date 
+ 2022-12-28 
+ 0.29 
+ 0.14 
+ 0.07 
+ 0.14 
+ 0.29 
+ 0.07 
+ 0.09 
+ 0.25 
+ 0.09 
+ 0.23 
+ 0.26 
+ 0.07 
+ 0.17 
+ 0.17 
+ 0.17 
+ 0.17 
+ 0.17 
+ 0.17 
+ 2022-12-29 
+ 0.29 
+ 0.14 
+ 0.07 
+ 0.14 
+ 0.29 
+ 0.07 
+ 0.09 
+ 0.26 
+ 0.09 
+ 0.23 
+ 0.26 
+ 0.07 
+ 0.17 
+ 0.17 
+ 0.17 
+ 0.17 
+ 0.17 
+ 0.17 
+ 2022-12-30 
+ 0.29 
+ 0.14 
+ 0.07 
+ 0.14 
+ 0.29 
+ 0.07 
+ 0.09 
+ 0.26 
+ 0.09 
+ 0.23 
+ 0.27 
+ 0.07 
+ 0.17 
+ 0.17 
+ 0.17 
+ 0.17 
+ 0.17 
+ 0.17 
+ The weights used in a basket for the contracts can be plotted using the weight_visualizer method: 
+ In [32]: 
+ basket_fxcry . weight_visualiser ( basket_name = "GLB_FXCRYVW" , facet_grid = True ) 
+[img]
+ In [33]: 
+ basket_fxcry . weight_visualiser ( basket_name = "GLB_FXCRYVW" , subplots = False ) 
+[img]
+ In [34]: 
+ basket_fxcry . weight_visualiser ( 
+ basket_name = "GLB_FXCRYVW" , subplots = True , 
+ ) 
+[img]
+ Calculate linear combinations of panels with linear_composite ¶ 
+ The linear_composite() function is designed to calculate linear combinations of different categories. It can produces a composite even if some of the component data are missing. This flexibility is valuable because it enables to work with the available information rather than discarding it entirely. This behavior is desirable if one works with a composite of a set of categories that capture a similar underlying factor. 
+ In the example below, the linear_composite() function is used to calculate the average of two inflation trend metrics. If one of the two constituents is missing, the composite is equal to the remaining. 
+ In [35]: 
+ weights = [ 1 , 1 ] 
+ signs = [ 1 , 1 ] 
+ cids_sel = [ "EUR" , "USD" , "INR" , "ZAR" ] 
+ xcats_sel = [ "CPIC_SJA_P6M6ML6AR" , "CPIH_SJA_P6M6ML6AR" ] 
+ dflc = msp . linear_composite ( 
+ df = df , 
+ xcats = xcats_sel , 
+ cids = cids_sel , 
+ weights = weights , 
+ signs = signs , 
+ complete_xcats = False , 
+ new_xcat = "Composite" , 
+ ) 
+ df = msm . update_df ( df , dflc ) 
+ msp . view_timelines ( 
+ df , 
+ xcats = xcats_sel + [ "Composite" ], 
+ cids = cids_sel , 
+ ncol = 4 , 
+ start = "1995-01-01" , 
+ same_y = False , 
+ aspect = 1.5 , 
+ size = ( 10 , 4 ), 
+ title_adj = 1.05 , 
+ label_adj = 0.2 , 
+ ) 
+ WARNING: weights do not sum to 1 and will be coerced to 1. w←w/∑w
+[img]
+ Relating ¶ 
+ Investigate relations between panels with CategoryRelations ¶ 
+ Instantiation ¶ 
+ CategoryRelations is a tool that allows for quick visualization and analysis of __two categories , i.e. two time-series panels. To use this tool, the user needs to set up certain arguments upfront that determine the period and type of aggregation for which the relation is being analyzed. Here are some of the key arguments: 
+ The two-element list xcats sets the categories to be related. For predictive relation, the first is considered the predictive feature category, and the second is the target. 
+ The argument freq determines the base period of the analysis, typically set as monthly or quarterly. Since JPMaQS data frames are daily this requires aggregation of both categories. These are set with xcat_aggs and can use any of pandas' aggregation methods, such as sum or last . The default is mean . 
+ The argument lag sets the lag (delay of arrival) of the first (feature) category in base periods. A positive value means that the feature is related to subsequent targets and - thus - allows analyzing its predictive power. 
+ The feature category can be modified by differencing or calculating percentage changes with xcat1_chg1 argument and the auxiliary n_periods argument. 
+ A useful argument is xcat_trims , which removes observations above a maximum for the first and the second category in case the dataset contains invalid outliers. It trims the dataset and does not winsorize. Large values are interpreted as invalid and removed, not set to a limit. 
+ fwin can be used to transform the target category into forward-moving averages of the base period. This is useful for smoothing out volatility, but should not be used for formal inference. 
+ blacklist excludes invalid periods from the analysis. 
+ Based on the above explanation, the following instantiation prepares the analysis of the predictive power of a quarterly change of an inflation metric and the subsequent quarterly 5-year IRS returns, while excluding quarterly values above 10: 
+ In [36]: 
+ cr = msp . CategoryRelations ( 
+ df , 
+ xcats = [ "CPIC_SJA_P6M6ML6AR" , "DU05YXR_VT10" ], 
+ cids = cids_dm , 
+ xcat1_chg = "diff" , 
+ n_periods = 1 , 
+ freq = "Q" , 
+ lag = 1 , 
+ fwin = 1 , # default forward window is one 
+ xcat_aggs = [ 
+ "last" , 
+ "sum" , 
+ ], # the first method refers to the first item in xcats list, the second - to the second 
+ start = "2000-01-01" , 
+ xcat_trims = [ 10 , 10 ], 
+ ) 
+ for attribute , value in cr . __dict__ . items (): 
+ print ( attribute , " = " , value ) 
+ xcats = ['CPIC_SJA_P6M6ML6AR', 'DU05YXR_VT10']
+cids = ['AUD', 'CAD', 'CHF', 'EUR', 'GBP', 'JPY', 'NOK', 'NZD', 'SEK', 'USD']
+val = value
+freq = Q
+lag = 1
+years = None
+aggs = ['last', 'sum']
+xcat1_chg = diff
+n_periods = 1
+xcat_trims = [10, 10]
+slip = 0
+df = CPIC_SJA_P6M6ML6AR DU05YXR_VT10
+real_date cid 
+2002-12-31 NZD 0.709325 1.954803
+2003-03-31 NZD -0.369984 3.524437
+2003-06-30 NZD -0.506767 6.141561
+2003-09-30 NZD 0.151097 -6.572984
+2003-12-31 NZD 0.147540 -1.460031
+... ... ...
+2021-09-30 GBP -0.956878 -8.002061
+2021-12-31 GBP 0.613687 -5.596784
+2022-06-30 GBP 0.940009 -8.430787
+2022-12-30 GBP 0.446491 2.740647
+2023-03-31 GBP -0.008492 5.782642
+[724 rows x 2 columns]
+ Visualize the relation with reg_scatter ¶ 
+ The .reg_scatter() method is convenient for visualizing the relationship between two categories, including the strength of the linear association and any potential outliers. By default, it includes a regression line with a 95% confidence interval, which can help assess the significance of the relationship. 
+ The reg_scatter() method allows to split the analysis by cross-section ( cid ) or year , which is useful for examining how the relationship between the two categories varies across different markets or over time. This can be especially interesting in cases where the relationship between the two categories is not constant over time or across different markets. 
+ The coef_box parameter of the reg_scatter() method provides details about the relationship, such as correlation coefficient and probability of significance, which can help users assess the strength and statistical significance of the relationship. 
+ The prob_est argument in this context is used to specify which type of estimator to use for calculating the probability of a significant relationship between the feature category and the target category. 
+ The default value for prob_est is "pool", which means that all cross-sections are pooled together, and the probability is based on that pool. This approach can potentially lead to issues with "pseudo-replication" if there is a correlation between the analyzed markets. 
+ An alternative option for prob_est is "map", which stands for "Macrosynergy panel test". Often cross-sectional experiences are not independent and subject to common factors. Simply stacking data can lead to “pseudo-replication” and overestimated significance of correlation. A better method is to check significance through panel regression models with period-specific random effects. This technique adjusts targets and features of the predictive regression for common (global) influences. The stronger these global effects, the greater the weight of deviations from the period-mean in the regression. In the presence of dominant global effects, the test for the significance of a feature would rely mainly upon its ability to explain cross-sectional target differences. Conveniently, the method automatically accounts for the similarity of experiences across sections when assessing the significance and, hence, can be applied to a wide variety of features and targets. View a related research post here that provides more information on this approach. 
+ In [37]: 
+ cr = msp . CategoryRelations ( 
+ df , 
+ xcats = [ "CPIC_SJA_P6M6ML6AR" , "DU05YXR_VT10" ], 
+ cids = cids_dm , 
+ n_periods = 1 , 
+ freq = "Q" , 
+ lag = 1 , # delay of arrival of first (explanatory) category in periods as set by freq 
+ xcat_aggs = [ "last" , "sum" ], 
+ start = "2000-01-01" , 
+ ) 
+ cr . reg_scatter ( 
+ title = "Short-term inflation trends and subsequent quarterly IRS returns" , 
+ labels = False , 
+ prob_est = "map" , 
+ xlab = "CPI, % 6m/6m ar, adjusted for seasonal effects outliers, diff over 1 quarter" , 
+ ylab = "Net quarter's 5-yearIRS return" , 
+ coef_box = "lower left" , 
+ size = ( 12 , 6 ), 
+ ) 
+[img]
+ The years parameter specifies the number of years to aggregate the data for the scatterplot, and when combined with labels=true , it can be used to visualize medium-term concurrent relations. This parameter overrides the freq parameter and doesn't allow lags, meaning that only the 3-year aggregated feature is compared to the 3-year aggregated target. This can be useful for identifying medium-term concurrent relations. 
+ In [38]: 
+ cids_sel = cids_dm [: 5 ] 
+ cr = msp . CategoryRelations ( 
+ df , 
+ xcats = [ "FXCRR_NSA" , "FXXR_NSA" ], 
+ cids = cids_sel , 
+ freq = "M" , 
+ years = 3 , 
+ lag = 0 , 
+ xcat_aggs = [ "mean" , "sum" ], 
+ start = "2005-01-01" , 
+ blacklist = fxblack , 
+ ) 
+ cr . reg_scatter ( 
+ title = "Real FX carry and returns (3-year periods)" , 
+ labels = True , 
+ prob_est = "map" , 
+ xlab = "Real carry, % a r" , 
+ ylab = "Returns, % c umulative" , 
+ coef_box = "upper left" , 
+ size = ( 12 , 6 ), 
+ ) 
+[img]
+ The separator argument in the .reg_scatter() method supports visualization of the stability of the feature-target relation for different sub-periods and cross-sections. When the separator is set to a year integer, it splits the data into two sub-samples with the second one starting from the separation year. As a result, regression lines and scatter plots are shown separately for each sub-sample, allowing to visually assess the stability of the feature-target relation before and after the separation year. 
+ In [40]: 
+ cr = msp . CategoryRelations ( 
+ df , 
+ xcats = [ "FXCRR_NSA" , "FXXR_NSA" ], 
+ cids = list ( set ( cids_em ) - set ([ "ILS" , "CLP" ])), 
+ freq = "Q" , 
+ years = None , 
+ lag = 1 , 
+ xcat_aggs = [ "last" , "sum" ], 
+ start = "2000-01-01" , 
+ blacklist = fxblack , 
+ xcat_trims = [ 40 , 20 ], 
+ ) 
+ cr . reg_scatter ( 
+ title = "Real FX carry and returns (excluding extreme periods)" , 
+ reg_order = 1 , 
+ labels = False , 
+ xlab = "Real carry, % a r" , 
+ ylab = "Next month's return" , 
+ coef_box = "lower right" , 
+ prob_est = "map" , 
+ separator = 2010 , 
+ size = ( 10 , 6 ), 
+ ) 
+[img]
+ If the separator argument is set to "cids", the relationship is shown separately for all cross-sections of the panel. This allows to examine whether the relationship is consistent across markets. 
+ In [41]: 
+ cr . reg_scatter ( 
+ title = "Real FX carry and returns (excluding extreme periods)" , 
+ reg_order = 1 , 
+ labels = False , 
+ xlab = "Real carry, % a r" , 
+ ylab = "Next month's return" , 
+ separator = "cids" , 
+ title_adj = 1.01 , 
+ ) 
+[img]
+ Summarizing pooled regression analysis with ols_table ¶ 
+ The basic statistics of a standard pooled linear regression analysis, combining all features and targets of the panel without further structure and effects, can be displayed based on a statsmodels function by calling the method .ols_table() . For a detailed interpretation of the results from the .ols_table() output, please view this article , which provides a general overview of interpreting linear regression results using the statsmodels summary table. 
+ In [42]: 
+ cr = msp . CategoryRelations ( 
+ df , 
+ xcats = [ "CPIC_SJA_P6M6ML6AR" , "DU05YXR_VT10" ], 
+ cids = cids_dm , 
+ xcat1_chg = "diff" , 
+ n_periods = 1 , 
+ freq = "M" , 
+ lag = 1 , 
+ xcat_aggs = [ "last" , "sum" ], 
+ start = "2000-01-01" , 
+ ) 
+ cr . ols_table () 
+ OLS Regression Results 
+==============================================================================
+Dep. Variable: DU05YXR_VT10 R-squared: 0.001
+Model: OLS Adj. R-squared: 0.001
+Method: Least Squares F-statistic: 2.477
+Date: Thu, 11 May 2023 Prob (F-statistic): 0.116
+Time: 16:49:25 Log-Likelihood: -7153.9
+No. Observations: 2606 AIC: 1.431e+04
+Df Residuals: 2604 BIC: 1.432e+04
+Df Model: 1 
+Covariance Type: nonrobust 
+======================================================================================
+ coef std err t P>|t| [0.025 0.975]
+--------------------------------------------------------------------------------------
+const 0.2746 0.074 3.710 0.000 0.129 0.420
+CPIC_SJA_P6M6ML6AR -0.5422 0.345 -1.574 0.116 -1.218 0.133
+==============================================================================
+Omnibus: 201.128 Durbin-Watson: 1.756
+Prob(Omnibus): 0.000 Jarque-Bera (JB): 889.797
+Skew: -0.234 Prob(JB): 6.07e-194
+Kurtosis: 5.824 Cond. No. 4.67
+==============================================================================
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+ Visualize relations across sections or categories with correl_matrix ¶ 
+ The correl_matrix() function visualizes two types of Pearson correlations: 
+ correlations within a single category across different cross-sections, or 
+ correlations across different categories. 
+ A key argument is freq , which downsamples the standard JPMaQS frequency of business daily data to weekly ('W'), monthly ('M'), or quarterly ('Q'), aggregate by mean. 
+ Additionally, the user can set the cluster argument to True to order the correlated series by proximity based on hierarchical clustering. This can help visualize groups of related variables, making it easier to identify patterns and relationships within the correlation matrix. 
+ In [43]: 
+ cids = cids_dm + cids_em 
+ msp . correl_matrix ( 
+ df , xcats = "FXXR_NSA" , freq = "Q" , cids = cids , size = ( 15 , 10 ), cluster = True 
+ ) 
+[img]
+ To display correlations across categories, one can pass a list of categories to the xcats argument of the correl_matrix() function. The resulting output will be a matrix of correlation coefficients between the categories. The freq and cluster arguments can also be used in this case to downsample the frequency of the data and to cluster the categories based on their proximity, respectively. 
+ In [44]: 
+ xcats_sel = ecos 
+ msp . correl_matrix ( 
+ df , 
+ xcats = xcats_sel , 
+ cids = cids , 
+ freq = "M" , 
+ start = "2003-01-01" , 
+ size = ( 15 , 10 ), 
+ cluster = True , 
+ ) 
+[img]
+ Signaling ¶ 
+ SignalReturnRelations ¶ 
+ Instantiation ¶ 
+ The SignalReturnRelations class from the macrosynergy.signal module is specifically designed to analyze, visualize and compare the relationships between panels of trading signals and panels of subsequent returns. 
+ Here are some key aspects and usage details of the SignalReturnRelations class: 
+ sig - the main signal category is specified using the sig argument. This represents the primary signal that is being analyzed in relation to subsequent returns.\ 
+ Alternative signals can be assigned to the rival_sigs argument, allowing for comparison and analysis of multiple signals in relation to returns.\ 
+ sig_neg - if set to True puts the signal in negative terms for all analysis. The default is False 
+ ret specifies the panel of subsequent returns that will be analyzed in relation to the specified signal category.\ 
+ freq denotes the frequency at which the series are sampled. The default is 'M' for monthly. The return series will always be summed over the sample period. The signal series will be aggregated according to the value of agg_sig 
+ agg_sig specifies the aggregation method applied to the signal values in down-sampling. The default is "last". 
+ Unlike the CategoryRelations class, here the focus is on a range of measures of association between signals and returns based on categorization (positive and negative returns) and parameteric and nonparameteric correlation. 
+ This class applies frequency conversion, corresponding to a trading or rebalancing frequency. It also takes into account whether the signal is expected to predict returns positively or negatively. This is important for the interpretation of the output. One should also note that there is no regression analysis involved. This means that features should be entered with a meaningful zero value since the sign of the feature is critical for accuracy statistics. 
+ In [45]: 
+ # 1. Create plausible signal categories 
+ calcs = [ "XGHI = ( INTRGDPv5Y_NSA_P1M1ML12_3MMA + CPIH_SA_P1M1ML12vIET ) / 2" ] 
+ dfa = msp . panel_calculator ( df , calcs , cids = cids_dm ) 
+ df = msm . update_df ( df , dfa ) 
+ feats = [ 
+ "XGHI" , 
+ "INTRGDPv5Y_NSA_P1M1ML12_3MMA" , 
+ "CPIH_SA_P1M1ML12vIET" , 
+ "CPIH_SJA_P3M3ML3ARvIET" , 
+ ] 
+ # 2. Instantiate signal-return relations 
+ srr = mss . SignalReturnRelations ( 
+ df , 
+ cids = [ "CHF" , "EUR" , "GBP" , "NOK" , "SEK" ], 
+ sig = feats [ 0 ], 
+ rival_sigs = list ( set ( feats ) - set ([ feats [ 0 ]])), 
+ sig_neg = True , 
+ ret = "DU02YXR_VT10" , 
+ freq = "M" , 
+ start = "2000-01-01" , 
+ ) 
+ Summary tables ¶ 
+ The .summary_table() of the SignalReturnRelations class gives a short high-level snapshot of the strength and stability of the main signal relation. Unless sig_neg had been set to True at instantiation, the relation is assumed to be positive. 
+ The columns of the summary table generally have the following interpretations: 
+ accuracy is the ratio of correct predictions of the sign of returns to all predictions. It measures the overall accuracy of the signal's predictions, regardless of the class imbalance between positive and negative returns. 
+ bal_accuracy is the balanced accuracy, which takes into account the class imbalance of the dataset. It is the average of the ratios of correctly detected positive returns and correctly detected negative returns. The best value is 1 and the worst value is 0. This measure avoids inflated performance estimates on imbalanced datasets and is calculated as the average of sensitivity (true positive rate) and specificity (true negative rate). The formula with references is described here 
+ pos_sigr is the ratio of positive signals to all predictions. It indicates the long bias of the signal, or the percentage of time the signal is predicting a positive return. The value is between 0 (no positive signals) and 1 (all signals are positive). 
+ pos_retr is the ratio of positive returns to all observed returns. It indicates the positive bias of the returns, or the percentage of time the returns are positive. The value is between 0 (no positive returns) and 1 (all returns are positive). 
+ pos_prec is the positive precision, which measures the ratio of correct positive return predictions to all positive predictions. It indicates how well the positive predictions of the signal have fared. The best value is 1 and the worst value is 0. A high positive precision can be easily achieved if the ratio of positive returns is high, so it is important to consider this measure in conjunction with other measures such as bal_accuracy. See more info here 
+ neg_prec is the negative precision, which measures the ratio of correct negative return predictions to all negative predictions. It indicates how well the negative predictions of the signal have fared. Generally, good positive precision is hard to accomplish if the ratio of negative returns has been high. The best value is 1 and the worst value is 0. See more info here 
+ pearson is the Pearson correlation coefficient between signal and subsequent return. Like other correlation coefficients, Pearson varies between -1 and +1 with 0 implying no correlation. Correlations of -1 or +1 imply an exact linear relationship. 
+ pearson_pval is the probability that the (positive) correlation has been accidental, assuming that returns are independently distributed. Strictly speaking, this value returns a 2-tailed p-value for the null hypothesis that the correlation is 0. The p-value roughly indicates the probability of an uncorrelated system producing datasets that have a Pearson correlation at least as extreme as the one computed from these datasets. The p-values are not entirely reliable but are reasonable for large datasets. This statistic would be invalid for forward-moving averages. 
+ kendall is the Kendall rank correlation coefficient between signal and subsequent return. It is a non-parametric hypothesis test for statistical dependence. For those, who want to refresh their statistical knowledge, please read here 
+ kendall_pval is the probability that the (positive) correlation has been accidental, assuming that returns are independently distributed. As before, the test is a two-sided p-value for the null hypothesis that the correlation is 0. P-value below chosen threshold (usually 0.01 or 0.05) will allow us to reject the null hypothesis. This statistic would be invalid for forward-moving averages and for autocorrelated data. 
+ The rows have the following meaning: 
+ Panel refers to the whole panel of cross-sections and sample period, excluding unavailable and blacklisted periods. 
+ Mean years is the mean of the statistic across all years. 
+ Mean cids is the mean of the statistic across all sections. 
+ Positive ratio represents the ratio of years, if following "Mean years" (or cross-sections - if following "Mean cids") for which the corresponding statistic was above its neutral level. The neutral level is defined as 0.5 for classification ratios (such as accuracy and balanced accuracy) and positive correlation probabilities, and 0 for correlation coefficients (such as Pearson and Kendall). For example, if the Positive ratio for accuracy is 0.7, it means that out of all the years (or cross-sections) analyzed, the correct sign of returns was predicted for 70% of them. Similarly, if the Positive ratio for Pearson is 0.6, it means that out of all the years (or cross-sections) analyzed, there was a positive correlation between the signal and returns for 60% of them. 
+ In [46]: 
+ srr . summary_table () 
+ Out[46]: 
+ accuracy 
+ bal_accuracy 
+ pos_sigr 
+ pos_retr 
+ pos_prec 
+ neg_prec 
+ pearson 
+ pearson_pval 
+ kendall 
+ kendall_pval 
+ Panel 
+ 0.55531 
+ 0.55481 
+ 0.50664 
+ 0.53835 
+ 0.59243 
+ 0.51719 
+ 0.13577 
+ 0.00000 
+ 0.09223 
+ 0.00000 
+ Mean years 
+ 0.53159 
+ 0.49022 
+ 0.48461 
+ 0.55706 
+ 0.49358 
+ 0.43060 
+ -0.01462 
+ 0.44561 
+ -0.01536 
+ 0.46307 
+ Positive ratio 
+ 0.75000 
+ 0.54167 
+ 0.45833 
+ 0.66667 
+ 0.62500 
+ 0.37500 
+ 0.45833 
+ 0.29167 
+ 0.41667 
+ 0.12500 
+ Mean cids 
+ 0.55566 
+ 0.55624 
+ 0.50631 
+ 0.53851 
+ 0.59393 
+ 0.51855 
+ 0.14120 
+ 0.06457 
+ 0.09677 
+ 0.08258 
+ Positive ratio 
+ 1.00000 
+ 1.00000 
+ 0.60000 
+ 1.00000 
+ 1.00000 
+ 0.80000 
+ 1.00000 
+ 1.00000 
+ 1.00000 
+ 1.00000 
+ For a comparative overview of the signal-return relationship across the main and rival signals, one can use the signals_table() method. 
+ In [47]: 
+ srr . signals_table () 
+ Out[47]: 
+ accuracy 
+ bal_accuracy 
+ pos_sigr 
+ pos_retr 
+ pos_prec 
+ neg_prec 
+ pearson 
+ pearson_pval 
+ kendall 
+ kendall_pval 
+ XGHI_NEG 
+ 0.55531 
+ 0.55481 
+ 0.506637 
+ 0.538348 
+ 0.592431 
+ 0.51719 
+ 0.135766 
+ 0.000001 
+ 0.092231 
+ 0.0 
+ CPIH_SA_P1M1ML12vIET_NEG 
+ 0.536136 
+ 0.535089 
+ 0.514012 
+ 0.538348 
+ 0.572453 
+ 0.497724 
+ 0.080503 
+ 0.003012 
+ 0.047996 
+ 0.008105 
+ INTRGDPv5Y_NSA_P1M1ML12_3MMA_NEG 
+ 0.570593 
+ 0.568887 
+ 0.523775 
+ 0.539137 
+ 0.604749 
+ 0.533026 
+ 0.121804 
+ 0.000006 
+ 0.090308 
+ 0.000001 
+ CPIH_SJA_P3M3ML3ARvIET_NEG 
+ 0.50885 
+ 0.509303 
+ 0.4941 
+ 0.538348 
+ 0.547761 
+ 0.470845 
+ 0.066813 
+ 0.013863 
+ 0.023907 
+ 0.187231 
+ The cross_section_table() method summarizes accuracy and correlation-relate measures for the panel, the mean, and the individual cross-sections. It also gives a "positive ratio", i.e. the ratio of countries with evidence of positive relations, either in terms of above 50% accuracy, positive correlation, or - more restrictively - high positive correlation probabilities. 
+ In [48]: 
+ srr . cross_section_table () 
+ Out[48]: 
+ accuracy 
+ bal_accuracy 
+ pos_sigr 
+ pos_retr 
+ pos_prec 
+ neg_prec 
+ pearson 
+ pearson_pval 
+ kendall 
+ kendall_pval 
+ Panel 
+ 0.555 
+ 0.555 
+ 0.507 
+ 0.538 
+ 0.592 
+ 0.517 
+ 0.136 
+ 0.000 
+ 0.092 
+ 0.000 
+ Mean 
+ 0.556 
+ 0.556 
+ 0.506 
+ 0.539 
+ 0.594 
+ 0.519 
+ 0.141 
+ 0.065 
+ 0.097 
+ 0.083 
+ PosRatio 
+ 1.000 
+ 1.000 
+ 0.600 
+ 1.000 
+ 1.000 
+ 0.800 
+ 1.000 
+ 1.000 
+ 1.000 
+ 1.000 
+ CHF 
+ 0.562 
+ 0.555 
+ 0.652 
+ 0.540 
+ 0.578 
+ 0.531 
+ 0.093 
+ 0.124 
+ 0.071 
+ 0.081 
+ EUR 
+ 0.575 
+ 0.577 
+ 0.488 
+ 0.548 
+ 0.626 
+ 0.527 
+ 0.227 
+ 0.000 
+ 0.178 
+ 0.000 
+ GBP 
+ 0.536 
+ 0.548 
+ 0.341 
+ 0.522 
+ 0.585 
+ 0.511 
+ 0.132 
+ 0.029 
+ 0.096 
+ 0.017 
+ NOK 
+ 0.533 
+ 0.532 
+ 0.533 
+ 0.507 
+ 0.537 
+ 0.527 
+ 0.084 
+ 0.166 
+ 0.042 
+ 0.298 
+ SEK 
+ 0.572 
+ 0.570 
+ 0.518 
+ 0.576 
+ 0.643 
+ 0.496 
+ 0.171 
+ 0.004 
+ 0.097 
+ 0.017 
+ The yearly_table() method is useful for analyzing how the performance of a trading signal varies over time, by providing a breakdown of performance metrics for each year. This can help identify whether the signal has been consistently strong over time, or if its performance has been driven by specific market conditions. 
+ In [49]: 
+ srr . yearly_table () 
+ Out[49]: 
+ accuracy 
+ bal_accuracy 
+ pos_sigr 
+ pos_retr 
+ pos_prec 
+ neg_prec 
+ pearson 
+ pearson_pval 
+ kendall 
+ kendall_pval 
+ Panel 
+ 0.555 
+ 0.555 
+ 0.507 
+ 0.538 
+ 0.592 
+ 0.517 
+ 0.136 
+ 0.000 
+ 0.092 
+ 0.000 
+ Mean 
+ 0.532 
+ 0.490 
+ 0.485 
+ 0.557 
+ 0.494 
+ 0.431 
+ -0.015 
+ 0.446 
+ -0.015 
+ 0.463 
+ PosRatio 
+ 0.750 
+ 0.542 
+ 0.458 
+ 0.667 
+ 0.625 
+ 0.375 
+ 0.458 
+ 0.292 
+ 0.417 
+ 0.125 
+ 2000 
+ 0.455 
+ 0.521 
+ 0.182 
+ 0.591 
+ 0.625 
+ 0.417 
+ 0.036 
+ 0.815 
+ 0.002 
+ 0.984 
+ 2001 
+ 0.375 
+ 0.357 
+ 0.583 
+ 0.583 
+ 0.464 
+ 0.250 
+ -0.132 
+ 0.373 
+ -0.092 
+ 0.355 
+ 2002 
+ 0.712 
+ 0.614 
+ 0.932 
+ 0.712 
+ 0.727 
+ 0.500 
+ 0.097 
+ 0.466 
+ 0.032 
+ 0.719 
+ 2003 
+ 0.567 
+ 0.520 
+ 0.717 
+ 0.617 
+ 0.628 
+ 0.412 
+ -0.014 
+ 0.917 
+ -0.037 
+ 0.674 
+ 2004 
+ 0.483 
+ 0.493 
+ 0.450 
+ 0.600 
+ 0.593 
+ 0.394 
+ -0.169 
+ 0.197 
+ -0.090 
+ 0.308 
+ 2005 
+ 0.517 
+ 0.497 
+ 0.217 
+ 0.467 
+ 0.462 
+ 0.532 
+ 0.092 
+ 0.482 
+ 0.032 
+ 0.721 
+ 2006 
+ 0.683 
+ 0.366 
+ 0.067 
+ 0.250 
+ 0.000 
+ 0.732 
+ -0.170 
+ 0.195 
+ -0.121 
+ 0.172 
+ 2007 
+ 0.517 
+ 0.452 
+ 0.267 
+ 0.383 
+ 0.312 
+ 0.591 
+ 0.010 
+ 0.939 
+ 0.014 
+ 0.878 
+ 2008 
+ 0.517 
+ 0.562 
+ 0.317 
+ 0.600 
+ 0.684 
+ 0.439 
+ 0.220 
+ 0.091 
+ 0.166 
+ 0.061 
+ 2009 
+ 0.600 
+ 0.600 
+ 1.000 
+ 0.600 
+ 0.600 
+ 0.000 
+ -0.103 
+ 0.436 
+ -0.088 
+ 0.320 
+ 2010 
+ 0.733 
+ 0.730 
+ 0.700 
+ 0.600 
+ 0.738 
+ 0.722 
+ 0.423 
+ 0.001 
+ 0.286 
+ 0.001 
+ 2011 
+ 0.533 
+ 0.540 
+ 0.467 
+ 0.600 
+ 0.643 
+ 0.438 
+ 0.135 
+ 0.304 
+ 0.059 
+ 0.507 
+ 2012 
+ 0.583 
+ 0.500 
+ 0.750 
+ 0.667 
+ 0.667 
+ 0.333 
+ -0.289 
+ 0.025 
+ -0.168 
+ 0.057 
+ 2013 
+ 0.400 
+ 0.399 
+ 0.517 
+ 0.517 
+ 0.419 
+ 0.379 
+ -0.149 
+ 0.255 
+ -0.112 
+ 0.207 
+ 2014 
+ 0.517 
+ 0.551 
+ 0.417 
+ 0.700 
+ 0.760 
+ 0.343 
+ 0.157 
+ 0.229 
+ 0.056 
+ 0.524 
+ 2015 
+ 0.533 
+ 0.452 
+ 0.783 
+ 0.617 
+ 0.596 
+ 0.308 
+ -0.038 
+ 0.771 
+ -0.088 
+ 0.320 
+ 2016 
+ 0.517 
+ 0.519 
+ 0.683 
+ 0.500 
+ 0.512 
+ 0.526 
+ 0.037 
+ 0.781 
+ 0.054 
+ 0.540 
+ 2017 
+ 0.567 
+ 0.579 
+ 0.350 
+ 0.517 
+ 0.619 
+ 0.538 
+ 0.009 
+ 0.946 
+ -0.038 
+ 0.665 
+ 2018 
+ 0.467 
+ 0.366 
+ 0.067 
+ 0.500 
+ 0.250 
+ 0.482 
+ -0.093 
+ 0.481 
+ -0.025 
+ 0.779 
+ 2019 
+ 0.517 
+ 0.521 
+ 0.717 
+ 0.500 
+ 0.512 
+ 0.529 
+ -0.157 
+ 0.232 
+ -0.104 
+ 0.241 
+ 2020 
+ 0.667 
+ 0.339 
+ 0.983 
+ 0.683 
+ 0.678 
+ 0.000 
+ -0.153 
+ 0.242 
+ -0.098 
+ 0.267 
+ 2021 
+ 0.550 
+ 0.538 
+ 0.467 
+ 0.317 
+ 0.357 
+ 0.719 
+ 0.134 
+ 0.307 
+ 0.070 
+ 0.429 
+ 2022 
+ 0.750 
+ 0.750 
+ 0.000 
+ 0.250 
+ 0.000 
+ 0.750 
+ -0.121 
+ 0.359 
+ -0.077 
+ 0.386 
+ 2023 
+ 0.000 
+ 0.000 
+ 0.000 
+ 1.000 
+ 0.000 
+ 0.000 
+ -0.116 
+ 0.853 
+ 0.000 
+ 1.000 
+ correlation_bars ¶ 
+ The method .correlation_bars() visualizes positive correlation probabilities based on parametric (Pearson) and non-parametric (Kendall) correlation statistics and compares signals between each other, across counties, or years. 
+ The type argument in the .correlation_bars() method determines how the correlation probabilities are grouped and visualized: 
+ If type='signals' , the method will plot the correlation probabilities for each signal (main and rivals), comparing them against each other. 
+ If type='cross_section' , the method will plot the correlation probabilities for each cross-section (e.g. county), comparing them against each other. 
+ If type='years' , the method will plot the correlation probabilities for each year, comparing them against each other. 
+ In [50]: 
+ srr . correlation_bars ( type = "signals" , size = ( 15 , 3 )) 
+[img]
+ In [51]: 
+ srr . correlation_bars ( type = "cross_section" , size = ( 15 , 3 )) 
+[img]
+ In [52]: 
+ srr . correlation_bars ( type = "years" , size = ( 15 , 3 )) 
+[img]
+ accuracy_bars ¶ 
+ The accuracy_bars method operates analogously to the correlation_bars method. Only it shows accuracy and balanced accuracy of the predicted relationship. 
+ In [53]: 
+ srr . accuracy_bars ( type = "cross_section" , size = ( 15 , 3 )) 
+[img]
+ Backtesting ¶ 
+ NaivePnL ¶ 
+ Instantiation ¶ 
+ NaivePnl() class is designed to provide a quick and simple overview of a stylized PnL profile of a set of trading signals. The class carries the label naive because its methods do not take into account transaction costs or position limitations, such as risk management considerations. This is deliberate because costs and limitations are specific to trading size, institutional rules, and regulations. 
+ The class allows a single target return category to be assigned to the ret argument, which is defined as the return on a position that corresponds to one unit in the signal. A set of signal categories can be assigned as a list of categories to the sigs argument. If the user wishes to evaluate the PnL using benchmark returns, these can be passed as a list of full tickers to the bms argument. The instantiation of the class determines the target and the scope of all subsequent analyses, i.e. the period and the set of eligible countries. All other choices can be made subsequently. 
+ In [54]: 
+ cids_sel = [ "AUD" , "CAD" , "CHF" , "EUR" , "GBP" , "JPY" , "SEK" , "USD" ] 
+ sigs = [ 
+ "XGHI" , 
+ "INTRGDPv5Y_NSA_P1M1ML12_3MMA" , 
+ "CPIH_SA_P1M1ML12vIET" , 
+ "CPIH_SJA_P3M3ML3ARvIET" , 
+ ] 
+ naive_pnl = msn . NaivePnL ( 
+ df , 
+ ret = "EQXR_VT10" , 
+ sigs = sigs , 
+ cids = cids_sel , 
+ start = "2000-01-01" , 
+ bms = [ "USD_EQXR_VT10" ], 
+ ) 
+ make_pnl ¶ 
+ The make_pnl() method calculates a daily PnL for a specific signal category and adds it to the main dataframe of the class instance. Indeed a single signaling category can result in a wide array of actual signals depending on the choices of its final form. 
+ In particular, the signal transformation option ( sig_op ) manages the distribution of the traded signal and gives the following options: 
+ zn_score_pan transforms raw signals into z-scores around zero value based on the whole panel. The neutral level & standard deviation will use the cross-section of panels. zn-score here means standardized score with zero being the neutral level and standardization through division by mean absolute value. See make_zn_scores() function explained in this notebook 
+ zn_score_cs transforms raw signals into z-scores around zero value based on cross-section alone 
+ binary transforms the category values into simple long/shorts (1/-1) signals. 
+ Other important choices include: 
+ the signal direction parameter sig_neg can be set to True if the negative value of the transformed signal should be used for PnL calculation, 
+ rebalancing frequency ( rebal_freq ) for positions according to signal must be one of 'daily' (default), 'weekly' or 'monthly', 
+ rebalancing slippage ( rebal_slip ) in days, where the default is 1, which means that it takes one day to rebalance the position and that the new position produces PnL from the second day after the signal has been recorded, 
+ threshold value ( thresh ) beyond which scores are winsorized, i.e. contained at that threshold. This is often realistic, as risk management and the potential of signal value distortions typically preclude outsized and concentrated positions within a strategy. 
+ The method also allows ex-post scaling of PnL to an annualized volatility by assigning an annualized standard deviation of the aggregate PnL to the vol_scale argument. This is for comparative visualization only and very different from apriori volatility targeting. 
+ Method calls add specified PnLs to the class instance for subsequent analysis. 
+ In [55]: 
+ for sig in sigs : 
+ naive_pnl . make_pnl ( 
+ sig , 
+ sig_neg = True , 
+ sig_op = "zn_score_pan" , 
+ rebal_freq = "monthly" , 
+ vol_scale = 10 , 
+ rebal_slip = 1 , 
+ thresh = 2 , 
+ pnl_name = sig + "_NEGPZN" , 
+ ) 
+ for sig in sigs : 
+ naive_pnl . make_pnl ( 
+ sig , 
+ sig_neg = True , 
+ sig_op = "binary" , 
+ rebal_freq = "monthly" , 
+ vol_scale = 10 , 
+ rebal_slip = 1 , 
+ thresh = 2 , 
+ pnl_name = sig + "_NEGBN" , 
+ ) 
+ make_long_pnl ¶ 
+ Based on the provided information, the pnl.make_long_pnl function adds a daily long-only PnL with an equal position signal across markets and time. This can serve as a baseline for comparison against the signal-adjusted returns. The vol_scale parameter is an ex-post scaling factor that adjusts the PnL to the annualized volatility given. This is likely used for comparative visualization to assess the performance of the trading strategy relative to its level of risk. 
+ In [56]: 
+ naive_pnl . make_long_pnl ( vol_scale = 10 , label = "Long_Only" ) 
+ plot_pnls ¶ 
+ One can check the available naive PnLs through the pnl_names attribute. 
+ In [57]: 
+ naive_pnl . pnl_names 
+ Out[57]: 
+ ['XGHI_NEGPZN',
+ 'INTRGDPv5Y_NSA_P1M1ML12_3MMA_NEGPZN',
+ 'CPIH_SA_P1M1ML12vIET_NEGPZN',
+ 'CPIH_SJA_P3M3ML3ARvIET_NEGPZN',
+ 'XGHI_NEGBN',
+ 'INTRGDPv5Y_NSA_P1M1ML12_3MMA_NEGBN',
+ 'CPIH_SA_P1M1ML12vIET_NEGBN',
+ 'CPIH_SJA_P3M3ML3ARvIET_NEGBN',
+ 'Long_Only'] 
+ The plot_pnls() method of the NaivePnl() class is used to plot a line chart of cumulative PnL. The method can plot: 
+ A single PnL category for a single cross-section, where the user can assign a single cross-section or "ALL" to the pnl_cids argument, and a single PnL category to the pnl_cat s argument. 
+ Multiple cross-sections per PnL type, where the user can assign a list of cross-sections to the pnl_cids argument, and a single PnL category to the pnl_cats argument. 
+ Multiple PnL types per cross-section, where the user can assign a list of PnL categories to the pnl_cats argument, and a single cross-section or "ALL" to the pnl_cids argument. 
+ In [58]: 
+ naive_pnl . plot_pnls ( 
+ pnl_cats = [ 
+ "XGHI_NEGBN" , 
+ "XGHI_NEGPZN" , 
+ "Long_Only" , 
+ ], 
+ pnl_cids = [ "ALL" ], 
+ start = "2020-01-01" , 
+ end = "2020-12-31" , 
+ ) 
+[img]
+ In [59]: 
+ cids_sel = [ "EUR" , "GBP" , "USD" ] 
+ naive_pnl . plot_pnls ( 
+ pnl_cats = [ "XGHI_NEGPZN" ], 
+ pnl_cids = cids_sel , 
+ start = "2020-01-01" , 
+ end = "2021-01-01" , 
+ ) 
+[img]
+ evaluate_pnls ¶ 
+ The method evaluate_pnls() returns a small dataframe of key PnL statistics. For definitions of Sharpe and Sortino ratios please see here 
+ The table can only have multiple PnL categories or multiple cross-sections, not both at the same time. The table also shows the daily benchmark correlation of PnLs. 
+ In [60]: 
+ pnls = [ "Long_Only" ] + [ sig + "_NEGPZN" for sig in sigs ] 
+ df_eval = naive_pnl . evaluate_pnls ( 
+ pnl_cats = pnls , pnl_cids = [ "EUR" ], start = "2020-01-01" , end = "2021-01-01" 
+ ) 
+ display ( df_eval . astype ( "float" ) . round ( 2 )) 
+ xcat 
+ CPIH_SA_P1M1ML12vIET_NEGPZN 
+ CPIH_SJA_P3M3ML3ARvIET_NEGPZN 
+ INTRGDPv5Y_NSA_P1M1ML12_3MMA_NEGPZN 
+ XGHI_NEGPZN 
+ Return (pct ar) 
+ 1.89 
+ 2.33 
+ 1.58 
+ 1.43 
+ St. Dev. (pct ar) 
+ 2.27 
+ 2.25 
+ 3.12 
+ 2.93 
+ Sharpe Ratio 
+ 0.83 
+ 1.04 
+ 0.51 
+ 0.49 
+ Sortino Ratio 
+ 1.26 
+ 1.68 
+ 0.73 
+ 0.70 
+ Max 21-day draw 
+ -1.17 
+ -1.22 
+ -2.96 
+ -2.68 
+ Max 6-month draw 
+ -0.27 
+ -0.19 
+ -0.72 
+ -0.78 
+ USD_EQXR_VT10 correl 
+ 0.42 
+ 0.43 
+ 0.53 
+ 0.53 
+ Traded Months 
+ 13.00 
+ 13.00 
+ 13.00 
+ 13.00 
+ In [61]: 
+ df_eval = naive_pnl . evaluate_pnls ( 
+ pnl_cats = [ "XGHI_NEGPZN" ], 
+ pnl_cids = naive_pnl . cids , 
+ start = "2020-01-01" , 
+ end = "2021-01-01" , 
+ ) 
+ display ( df_eval . astype ( "float" ) . round ( 3 )) 
+ cid 
+ AUD 
+ CAD 
+ CHF 
+ EUR 
+ GBP 
+ JPY 
+ SEK 
+ USD 
+ Return (pct ar) 
+ 1.903 
+ 3.519 
+ 2.212 
+ 1.427 
+ -0.005 
+ 5.123 
+ 2.356 
+ 3.906 
+ St. Dev. (pct ar) 
+ 2.943 
+ 2.775 
+ 3.180 
+ 2.931 
+ 2.853 
+ 3.112 
+ 3.256 
+ 3.309 
+ Sharpe Ratio 
+ 0.647 
+ 1.268 
+ 0.696 
+ 0.487 
+ -0.002 
+ 1.646 
+ 0.724 
+ 1.180 
+ Sortino Ratio 
+ 0.888 
+ 1.806 
+ 1.004 
+ 0.702 
+ -0.002 
+ 2.704 
+ 1.014 
+ 1.564 
+ Max 21-day draw 
+ -3.145 
+ -1.490 
+ -2.634 
+ -2.681 
+ -2.721 
+ -2.553 
+ -3.322 
+ -2.669 
+ Max 6-month draw 
+ -1.330 
+ 0.306 
+ -0.332 
+ -0.780 
+ -2.236 
+ -0.515 
+ -0.600 
+ -0.120 
+ USD_EQXR_VT10 correl 
+ 0.304 
+ 0.230 
+ 0.495 
+ 0.532 
+ 0.489 
+ 0.152 
+ 0.607 
+ 0.432 
+ Traded Months 
+ 13.000 
+ 13.000 
+ 13.000 
+ 13.000 
+ 13.000 
+ 13.000 
+ 13.000 
+ 13.000 
+ signal_heatmap ¶ 
+ The signal_heatmap() method is used to create a heatmap of signals for a specific PnL across time and sections. The time axis refers to period averages, and the default frequency is monthly (specified with freq='m'), but quarterly is also an option (freq='q'). 
+ The heatmap displays each signal as a colored square, with the color representing the signal value. The user can specify the particular strategy by specifying "pnl_name". By default, the method plots all available cross-sections. 
+The heatmap provides an intuitive representation of the signal values, allowing the user to identify the patterns and trends across time and sections. 
+ The signal_heatmap() method includes a color bar legend that shows the signal values and their corresponding color. If a threshold value is provided in the make_pnl() function, the signal_heatmap() method limits the largest contribution to the specified threshold value. This truncation ensures that any signals with extreme values greater than the threshold will not dominate the visualization, which is important from a risk management perspective. 
+ In [62]: 
+ naive_pnl . signal_heatmap ( 
+ pnl_name = pnls [ 1 ], 
+ freq = "q" , 
+ start = "2000-01-01" , 
+ ) 
+[img]
+ agg_signal_bars ¶ 
+ The method agg_signal_bars() indicates the strength and direction of the aggregate signal. If metric='direction' is chosen it just adds up the signal across all sections. Long and short signals cancel each other out. If metric='strength' is chosen the aggregate absolute signal is displayed and there is no offset. The method allows for visually understanding the overall direction of the aggregate signal but also gaining insight into the proportional exposure to the respective signal by measuring the absolute value, the size of the signal. The question asked here is: "Is the PnL value generated by large returns or a large signal?" 
+ In [63]: 
+ naive_pnl . agg_signal_bars ( 
+ pnl_name = pnls [ 1 ], 
+ freq = "q" , 
+ metric = "direction" , 
+ ) 
+[img]
+ In [64]: 
+ naive_pnl . agg_signal_bars ( 
+ pnl_name = pnls [ 1 ], 
+ freq = "q" , 
+ metric = "strength" , 
+ ) 
+[img]
+ THE END 

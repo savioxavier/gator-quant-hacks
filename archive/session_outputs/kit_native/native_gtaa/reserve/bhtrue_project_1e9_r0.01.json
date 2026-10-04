@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "harness": "validation/starter_kit/run_in_starter.py",
+    "strategy": "gqh_gtaa",
+    "strategy_class": "FaberGTAA",
+    "module": "validation/starter_kit/strategies/gqh_gtaa.py",
+    "params": {
+      "buy_and_hold": true,
+      "reserve": 0.01
+    },
+    "symbols": [
+      "SPY",
+      "EFA",
+      "IEF",
+      "VNQ",
+      "DBC"
+    ],
+    "start": "2005-01-03",
+    "end": "2026-10-02",
+    "is_start": "2005-11-01",
+    "costs": "project",
+    "cost_bps_per_side": {
+      "SPY": 3.0,
+      "EFA": 3.0,
+      "IEF": 3.0,
+      "VNQ": 5.0,
+      "DBC": 5.0
+    },
+    "guide_slippage": 0.0,
+    "extra_costs": true,
+    "margin": false,
+    "leverage": 1.0,
+    "cash": 1000000000.0,
+    "exec": "next_open",
+    "cheat_on_close": false,
+    "checksubmit": true,
+    "backtrader_version": "1.9.78.123",
+    "kit": "gqh-webull-backtrader-starter",
+    "data_dir": "gqh",
+    "fwd_data_end": "2026-10-02",
+    "git_head": "4ea63fe",
+    "sharpe_definitions": {
+      "kit_sharpe_rf0": "mean / population std of daily backtrader returns x sqrt(252) (the kit's SharpeRatio analyzer); backtrader pays no interest on cash",
+      "our_sharpe_excess": "mean / sample std of (backtrader return - net weight held x T-bill) x sqrt(252): our definition, cash at the T-bill, borrowed cash paying it"
+    },
+    "runtime_s": 6.0
+  },
+  "kit_metrics": {
+    "starting_value": 1000000000.0,
+    "final_value": 3852039100.0,
+    "pnl": 2852039100.0,
+    "pnl_pct": 285.20391,
+    "max_drawdown_pct": 45.715054,
+    "max_drawdown_money": 633244220.0,
+    "sharpe_ratio": 0.51898774,
+    "total_trades": 5,
+    "won": 0,
+    "lost": 0,
+    "win_rate": 0.0,
+    "net_pnl": 0.0
+  },
+  "windows": {
+    "in_sample": {
+      "start": "2005-11-01",
+      "end": "2024-10-02",
+      "n_days": 4761,
+      "kit_sharpe_rf0": 0.48492679,
+      "our_sharpe_excess": 0.38648622,
+      "sharpe_total_sample_std": 0.48487586,
+      "ann_return": 0.061580051,
+      "ann_vol": 0.14497623,
+      "max_drawdown": -0.45715054,
+      "mean_tbill_ann": 0.01493327,
+      "mean_net_weight": 0.9786465,
+      "mean_gross_weight": 0.9786465,
+      "max_gross_weight": 0.99000011,
+      "orders": 23533,
+      "refused_orders": 0,
+      "canceled_orders": 0,
+      "extra_costs_ann": 0.0
+    },
+    "out_of_sample": {
+      "start": "2024-10-03",
+      "end": "2026-10-02",
+      "n_days": 501,
+      "kit_sharpe_rf0": 1.239367,
+      "our_sharpe_excess": 0.81517531,
+      "sharpe_total_sample_std": 1.2381295,
+      "ann_return": 0.11678634,
+      "ann_vol": 0.092687806,
+      "max_drawdown": -0.10430199,
+      "mean_tbill_ann": 0.039591816,
+      "mean_net_weight": 0.99,
+      "mean_gross_weight": 0.99,
+      "max_gross_weight": 0.99000011,
+      "orders": 2505,
+      "refused_orders": 0,
+      "canceled_orders": 0,
+      "extra_costs_ann": 0.0
+    },
+    "full": {
+      "start": "2005-01-03",
+      "end": "2026-10-02",
+      "n_days": 5472,
+      "kit_sharpe_rf0": 0.51898774,
+      "our_sharpe_excess": 0.40309796,
+      "sharpe_total_sample_std": 0.51894031,
+      "ann_return": 0.064075877,
+      "ann_vol": 0.13810591,
+      "max_drawdown": -0.45715054,
+      "mean_tbill_ann": 0.017771985,
+      "mean_net_weight": 0.94212829,
+      "mean_gross_weight": 0.94212829,
+      "max_gross_weight": 0.99000011,
+      "orders": 26042,
+      "refused_orders": 0,
+      "canceled_orders": 0,
+      "extra_costs_ann": 0.0
+    }
+  },
+  "orders": {
+    "total": 26042,
+    "completed": 26037,
+    "refused": 0,
+    "by_status": {
+      "Completed": 26037,
+      "Submitted": 5
+    }
+  },
+  "extra_costs_money": {
+    "roll": 0.0,
+    "borrow": 0.0,
+    "close_fill_slippage": 0.0,
+    "coc_slippage_correction": 0.0
+  }
+}

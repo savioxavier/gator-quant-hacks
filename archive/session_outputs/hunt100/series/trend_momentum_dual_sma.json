@@ -1,0 +1,114 @@
+{
+  "id": "trend_momentum_dual_sma",
+  "variant": "V3",
+  "rule": "Each future s in {+1,-1} on the excess-return index: V1 weekly SMA50 vs SMA200; V2 monthly month-end price vs 10-month SMA (incl. current); V3 weekly sign(close - midpoint of 250-session max/min); w = s*0.40/sigma_EWMA/N, book to 10% (trailing 252 cov), gross<=3, next_close.",
+  "sources": [
+    "https://ideas.repec.org/a/eee/jbfina/v34y2010i2p409-426.html",
+    "https://openaccess.city.ac.uk/id/eprint/17846/1/COMMODITY%20pAPER.pdf",
+    "https://research.cbs.dk/en/publications/which-trend-is-your-friend/"
+  ],
+  "window": {
+    "is": "2011-06-21..2024-10-02",
+    "later": "2024-10-03..2026-10-02"
+  },
+  "columns": {
+    "net_1x": "daily excess return net of the realistic cost map",
+    "net_2x": "2x costs",
+    "gross": "before costs"
+  },
+  "cost_bps_one_way": {
+    "F_ES": 1.0,
+    "F_NQ": 1.0,
+    "F_RTY": 2.0,
+    "F_YM": 1.0,
+    "F_ZT": 0.5,
+    "F_ZF": 0.7,
+    "F_ZN": 1.0,
+    "F_ZB": 1.5,
+    "F_UB": 1.5,
+    "F_CL": 2.0,
+    "F_HO": 3.0,
+    "F_RB": 3.0,
+    "F_NG": 3.0,
+    "F_GC": 2.0,
+    "F_SI": 2.0,
+    "F_PL": 3.0,
+    "F_HG": 2.0,
+    "F_ZC": 4.0,
+    "F_ZS": 4.0,
+    "F_ZW": 4.0,
+    "F_ZL": 4.0,
+    "F_ZM": 4.0,
+    "F_LE": 4.0,
+    "F_HE": 4.0,
+    "F_6E": 1.0,
+    "F_6J": 1.0,
+    "F_6B": 1.0,
+    "F_6A": 1.0,
+    "F_6C": 1.0,
+    "F_6S": 1.0
+  },
+  "metrics": {
+    "is_window": "2011-06-21..2024-10-02",
+    "is_net_sharpe_1x": 0.1938894075395786,
+    "is_net_sharpe_2x": 0.09745475306912386,
+    "is_gross_sharpe": 0.29031444628995806,
+    "ann_return": 0.016618756400799996,
+    "ann_vol": 0.08571255444889436,
+    "max_dd": -0.1899554100686115,
+    "worst_year": -0.12347709215334668,
+    "worst_year_label": 2023,
+    "pct_positive_years": 0.5714285714285714,
+    "rolling2y_p10": -0.6974875840313055,
+    "turnover": 55.32811999990774,
+    "nw_t": 0.7121409631233442,
+    "corr_es": -0.19450992899140732,
+    "corr_s1": 0.7784088315112866,
+    "corr_f2": 0.22817350562871683,
+    "later_net_sharpe_1x": 0.329536120833966,
+    "later_net_sharpe_2x": 0.21790287229751046,
+    "later_max_dd": -0.10940331557143967,
+    "later_ann_return": 0.029422694987724637,
+    "full_net_sharpe_1x": 0.21221365365592193,
+    "yearly": {
+      "2011": -0.043447255949499164,
+      "2012": -0.0484407166401607,
+      "2013": 0.016641691597224062,
+      "2014": 0.12329854654174843,
+      "2015": 0.037942246709064875,
+      "2016": -0.09003947409334412,
+      "2017": -0.04284572122041019,
+      "2018": 0.036494191612017834,
+      "2019": -0.026848301623568438,
+      "2020": 0.15391122208944052,
+      "2021": 0.008156460018054368,
+      "2022": 0.21632278841059738,
+      "2023": -0.12347709215334668,
+      "2024": 0.010090639375525123
+    },
+    "avg_gross_leverage": 2.931566263387882
+  },
+  "all_variants": {
+    "V1": {
+      "is_net_sharpe_1x": -0.07917024417651966,
+      "is_net_sharpe_2x": -0.15999394590871052,
+      "is_gross_sharpe": 0.0016901120814900102,
+      "later_net_sharpe_1x": 0.04754476765796299,
+      "turnover": 44.11447287844573
+    },
+    "V2": {
+      "is_net_sharpe_1x": 0.039387502929473794,
+      "is_net_sharpe_2x": -0.040452796582720656,
+      "is_gross_sharpe": 0.11926756121918328,
+      "later_net_sharpe_1x": -0.2226074440781289,
+      "turnover": 46.98410403415772
+    },
+    "V3": {
+      "is_net_sharpe_1x": 0.1938894075395786,
+      "is_net_sharpe_2x": 0.09745475306912386,
+      "is_gross_sharpe": 0.29031444628995806,
+      "later_net_sharpe_1x": 0.329536120833966,
+      "turnover": 55.32811999990774
+    }
+  }
+}

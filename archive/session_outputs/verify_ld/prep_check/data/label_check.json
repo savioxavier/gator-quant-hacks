@@ -1,0 +1,229 @@
+{
+  "dataset": "gtfintechlab/fomc_communication",
+  "revision": "6b0283f55f0005a6d38d49f271d795c21fccc1a3",
+  "files": {
+    "train": {
+      "sha256": "3c9ec066b7bbdedc60d553b48e74ae6ca36715b5de2f9000a82e76e909bd76b7",
+      "bytes": 422592
+    },
+    "test": {
+      "sha256": "c4b6a660a3cd67f940f59b1b77fc4d2f1b99e56c94eaf54b9298a37647ecfbac",
+      "bytes": 103896
+    }
+  },
+  "n_rows": 2480,
+  "card_mapping": {
+    "2": "neutral",
+    "1": "hawkish",
+    "0": "dovish"
+  },
+  "mapping_used": {
+    "0": "dove",
+    "1": "hawk",
+    "2": "neut"
+  },
+  "hawk_cue_counts": {
+    "dove": 12,
+    "hawk": 51,
+    "neut": 8
+  },
+  "dove_cue_counts": {
+    "dove": 60,
+    "hawk": 23,
+    "neut": 31
+  },
+  "hawk_cues": [
+    "\\btighten",
+    "\\bremov\\w*\\s+(?:some\\s+|the\\s+)?(?:policy\\s+)?accommodation",
+    "\\b(?:raise|raising|increase|increasing)\\s+(?:the\\s+)?(?:target|federal funds rate|interest rates|policy rate)",
+    "\\bfirming\\b"
+  ],
+  "dove_cues": [
+    "\\b(?:lower|lowering|reduce|reducing|cut|cutting)\\s+(?:the\\s+)?(?:target|federal funds rate|interest rates|policy rate)",
+    "\\basset purchases\\b",
+    "\\bdownside risks?\\b",
+    "\\beas(?:e|ing)\\b",
+    "\\bstimul"
+  ],
+  "examples": {
+    "dove": [
+      "The first driver is the long-term increase in the demand for currency and reserves.",
+      "Members saw the persistence of a relatively vigorous expansion in overall economic activity as a likely prospect in the context of continuing stimulus from fiscal and monetary policies, accommodative financial conditions, growing business optimism, favorable consumer sentiment, and robust increases in productivity.",
+      "If the outlook for the labor market does not improve substantially, the Committee will continue its purchases of agency mortgage-backed securities, undertake additional asset purchases, and employ its other policy tools as appropriate until such improvement is achieved in a context of price stability."
+    ],
+    "hawk": [
+      "Inflation averaging doesn't define how much above 2 percent is moderate and how long some value of elevated inflation should be tolerated.",
+      "The Federal Reserve\u2019s response is guided by our mandate to promote maximum employment and stable prices for the American people, along with our responsibilities to promote the stability of the financial system.",
+      "There is much about the inflation process that we do not understand, and I have been surprised at the extent of the pickup in core inflation this year."
+    ],
+    "neut": [
+      "Indeed, an oft-quoted quip by economist Robert Solow held that, as of the late 1980s, \"computers are everywhere except in the productivity statistics.",
+      "Committee Policy Action Members viewed the information on U. S. economic activity received over the intermeeting period as suggesting that the economy had been expanding moderately and generally agreed that the economic outlook was broadly similar to that at the time of their March meeting.",
+      "You\u2019ll never get inflation to 2 percent.\u201d Some of our critics now who say inflation\u2019s too tight\u2014too high were the same ones who were saying, \u201cYou\u2019ll never get to 2 percent.\u201d Well, but anyway, that\u2019s what happened."
+    ]
+  },
+  "rows_by_year_label": {
+    "1996": {
+      "dove": 15,
+      "hawk": 13,
+      "neut": 25
+    },
+    "1997": {
+      "dove": 15,
+      "hawk": 26,
+      "neut": 51
+    },
+    "1998": {
+      "dove": 19,
+      "hawk": 15,
+      "neut": 45
+    },
+    "1999": {
+      "dove": 23,
+      "hawk": 25,
+      "neut": 56
+    },
+    "2000": {
+      "dove": 25,
+      "hawk": 29,
+      "neut": 51
+    },
+    "2001": {
+      "dove": 27,
+      "hawk": 14,
+      "neut": 41
+    },
+    "2002": {
+      "dove": 17,
+      "hawk": 15,
+      "neut": 33
+    },
+    "2003": {
+      "dove": 24,
+      "hawk": 33,
+      "neut": 46
+    },
+    "2004": {
+      "dove": 41,
+      "hawk": 32,
+      "neut": 72
+    },
+    "2005": {
+      "dove": 38,
+      "hawk": 32,
+      "neut": 71
+    },
+    "2006": {
+      "dove": 25,
+      "hawk": 33,
+      "neut": 53
+    },
+    "2007": {
+      "dove": 23,
+      "hawk": 27,
+      "neut": 65
+    },
+    "2008": {
+      "dove": 21,
+      "hawk": 14,
+      "neut": 25
+    },
+    "2009": {
+      "dove": 6,
+      "hawk": 16,
+      "neut": 19
+    },
+    "2010": {
+      "dove": 10,
+      "hawk": 14,
+      "neut": 20
+    },
+    "2011": {
+      "dove": 16,
+      "hawk": 14,
+      "neut": 27
+    },
+    "2012": {
+      "dove": 28,
+      "hawk": 17,
+      "neut": 22
+    },
+    "2013": {
+      "dove": 28,
+      "hawk": 16,
+      "neut": 36
+    },
+    "2014": {
+      "dove": 19,
+      "hawk": 17,
+      "neut": 28
+    },
+    "2015": {
+      "dove": 23,
+      "hawk": 14,
+      "neut": 27
+    },
+    "2016": {
+      "dove": 26,
+      "hawk": 15,
+      "neut": 24
+    },
+    "2017": {
+      "dove": 32,
+      "hawk": 24,
+      "neut": 43
+    },
+    "2018": {
+      "dove": 16,
+      "hawk": 12,
+      "neut": 34
+    },
+    "2019": {
+      "dove": 33,
+      "hawk": 31,
+      "neut": 52
+    },
+    "2020": {
+      "dove": 30,
+      "hawk": 37,
+      "neut": 91
+    },
+    "2021": {
+      "dove": 36,
+      "hawk": 41,
+      "neut": 93
+    },
+    "2022": {
+      "dove": 34,
+      "hawk": 30,
+      "neut": 74
+    }
+  },
+  "label_year_rule": "true",
+  "label_dates": {
+    "path": "label_dates.parquet",
+    "sha256": "16a54100d531e9ab933671f4c0e541b1c202be1630fd5f3aa6b4a5c26a558dfe",
+    "n_rows": 2480,
+    "n_dated": 2480,
+    "by_method": {
+      "exact": 2281,
+      "annotated-sheet join": 192,
+      "normalised-whitespace": 7
+    }
+  },
+  "train_rows_per_test_year": {
+    "2015": 1606,
+    "2016": 1673,
+    "2017": 1738,
+    "2018": 1836,
+    "2019": 1901,
+    "2020": 2016,
+    "2021": 2184,
+    "2022": 2344,
+    "2023": 2480,
+    "2024": 2480,
+    "2025": 2480,
+    "2026": 2480
+  },
+  "n_duplicate_sentences": 61
+}

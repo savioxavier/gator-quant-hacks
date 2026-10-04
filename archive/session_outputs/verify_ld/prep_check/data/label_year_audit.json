@@ -1,0 +1,1663 @@
+{
+  "rule_in_use": "true",
+  "min_words": 8,
+  "leak_min_words": 4,
+  "docs": "docs_to_score.parquet",
+  "label_dates": {
+    "path": "label_dates.parquet",
+    "sha256": "16a54100d531e9ab933671f4c0e541b1c202be1630fd5f3aa6b4a5c26a558dfe",
+    "n_rows": 2480,
+    "n_dated": 2480,
+    "by_method": {
+      "exact": 2281,
+      "annotated-sheet join": 192,
+      "normalised-whitespace": 7
+    }
+  },
+  "n_rows": 2480,
+  "n_found_in_corpus": 802,
+  "n_year_moved": 613,
+  "per_test_year": {
+    "2015": {
+      "rows_true": 1606,
+      "leak_true": 21,
+      "first_true": 21,
+      "rows_dataset": 1608,
+      "leak_dataset": 491,
+      "first_dataset": 491,
+      "rows_redated": 1123,
+      "leak_redated": 9,
+      "first_redated": 9
+    },
+    "2016": {
+      "rows_true": 1673,
+      "leak_true": 18,
+      "first_true": 3,
+      "rows_dataset": 1672,
+      "leak_dataset": 473,
+      "first_dataset": 459,
+      "rows_redated": 1219,
+      "leak_redated": 23,
+      "first_redated": 9
+    },
+    "2017": {
+      "rows_true": 1738,
+      "leak_true": 23,
+      "first_true": 2,
+      "rows_dataset": 1737,
+      "leak_dataset": 455,
+      "first_dataset": 437,
+      "rows_redated": 1306,
+      "leak_redated": 27,
+      "first_redated": 9
+    },
+    "2018": {
+      "rows_true": 1836,
+      "leak_true": 23,
+      "first_true": 2,
+      "rows_dataset": 1836,
+      "leak_dataset": 422,
+      "first_dataset": 405,
+      "rows_redated": 1435,
+      "leak_redated": 25,
+      "first_redated": 8
+    },
+    "2019": {
+      "rows_true": 1901,
+      "leak_true": 29,
+      "first_true": 2,
+      "rows_dataset": 1898,
+      "leak_dataset": 392,
+      "first_dataset": 368,
+      "rows_redated": 1533,
+      "leak_redated": 31,
+      "first_redated": 7
+    },
+    "2020": {
+      "rows_true": 2016,
+      "leak_true": 24,
+      "first_true": 2,
+      "rows_dataset": 2014,
+      "leak_dataset": 353,
+      "first_dataset": 333,
+      "rows_redated": 1684,
+      "leak_redated": 27,
+      "first_redated": 7
+    },
+    "2021": {
+      "rows_true": 2184,
+      "leak_true": 30,
+      "first_true": 2,
+      "rows_dataset": 2172,
+      "leak_dataset": 251,
+      "first_dataset": 223,
+      "rows_redated": 1952,
+      "leak_redated": 31,
+      "first_redated": 3
+    },
+    "2022": {
+      "rows_true": 2344,
+      "leak_true": 12,
+      "first_true": 1,
+      "rows_dataset": 2342,
+      "leak_dataset": 130,
+      "first_dataset": 119,
+      "rows_redated": 2224,
+      "leak_redated": 12,
+      "first_redated": 1
+    },
+    "2023": {
+      "rows_true": 2480,
+      "leak_true": 8,
+      "first_true": 1,
+      "rows_dataset": 2480,
+      "leak_dataset": 8,
+      "first_dataset": 1,
+      "rows_redated": 2479,
+      "leak_redated": 7,
+      "first_redated": 0
+    },
+    "2024": {
+      "rows_true": 2480,
+      "leak_true": 6,
+      "first_true": 0,
+      "rows_dataset": 2480,
+      "leak_dataset": 6,
+      "first_dataset": 0,
+      "rows_redated": 2480,
+      "leak_redated": 6,
+      "first_redated": 0
+    },
+    "2025": {
+      "rows_true": 2480,
+      "leak_true": 5,
+      "first_true": 0,
+      "rows_dataset": 2480,
+      "leak_dataset": 5,
+      "first_dataset": 0,
+      "rows_redated": 2480,
+      "leak_redated": 5,
+      "first_redated": 0
+    },
+    "2026": {
+      "rows_true": 2480,
+      "leak_true": 4,
+      "first_true": 0,
+      "rows_dataset": 2480,
+      "leak_dataset": 4,
+      "first_dataset": 0,
+      "rows_redated": 2480,
+      "leak_redated": 4,
+      "first_redated": 0
+    }
+  },
+  "leaks": {
+    "2015": [
+      {
+        "sentence": "When the Committee decides to begin to remove policy accommodation, it will take a balanced approach consistent with its longer-run goals of maximum employment and inflation of 2 percent. \"",
+        "source_date": "2013-01-03",
+        "dataset_year": 2009,
+        "corpus_last_doc": "minutes_20151028",
+        "corpus_n_docs": 15
+      },
+      {
+        "sentence": "As always, each participant\u2019s projections are conditioned on his or her own view of appropriate monetary policy.",
+        "source_date": "2013-06-19",
+        "dataset_year": 2018,
+        "corpus_last_doc": "presser_20160615",
+        "corpus_n_docs": 5
+      },
+      {
+        "sentence": "When the Committee decides to begin to remove policy accommodation, it will take a balanced approach consistent with its longer-run goals of maximum employment and inflation of 2 percent.",
+        "source_date": "2013-01-03",
+        "dataset_year": 2009,
+        "corpus_last_doc": "minutes_20151028",
+        "corpus_n_docs": 15
+      },
+      {
+        "sentence": "The System Open Market Account Manager and the Secretary will keep the Committee informed of ongoing developments regarding the System's balance sheet that could affect the attainment over time of the Committee's objectives of maximum employment and price stability. \"",
+        "source_date": "2009-01-06",
+        "dataset_year": 2002,
+        "corpus_last_doc": "minutes_20151028",
+        "corpus_n_docs": 8
+      },
+      {
+        "sentence": "The longer-run projections represent each participant's assessment of the rate to which each variable would be expected to converge, over time, under appropriate monetary policy and in the absence of further shocks to the economy.",
+        "source_date": "2012-05-16",
+        "dataset_year": 2010,
+        "corpus_last_doc": "minutes_20160316",
+        "corpus_n_docs": 6
+      },
+      {
+        "sentence": "Measures of inflation compensation were little changed on net.",
+        "source_date": "2007-02-21",
+        "dataset_year": 2006,
+        "corpus_last_doc": "minutes_20260128",
+        "corpus_n_docs": 2
+      },
+      {
+        "sentence": "Longer-term inflation expectations have remained stable.",
+        "source_date": "2010-11-23",
+        "dataset_year": 2019,
+        "corpus_last_doc": "minutes_20151028",
+        "corpus_n_docs": 19
+      },
+      {
+        "sentence": "At the conclusion of the discussion, the Committee voted to authorize and direct the Federal Reserve Bank of New York, until it was instructed otherwise, to execute transactions in the SOMA in accordance with the following domestic policy directive: \"Consistent with its statutory mandate, the Federal Open Market Committee seeks monetary and financial conditions that will foster maximum employment and price stability.",
+        "source_date": "2014-02-19",
+        "dataset_year": 2016,
+        "corpus_last_doc": "minutes_20151028",
+        "corpus_n_docs": 8
+      },
+      {
+        "sentence": "survey-based measures of longer-term inflation expectations have remained stable.",
+        "source_date": "2014-11-19",
+        "dataset_year": 2020,
+        "corpus_last_doc": "minutes_20151028",
+        "corpus_n_docs": 18
+      },
+      {
+        "sentence": "Survey-based measures of longer-term inflation expectations remained stable,",
+        "source_date": "2014-11-19",
+        "dataset_year": 2000,
+        "corpus_last_doc": "minutes_20251210",
+        "corpus_n_docs": 5
+      },
+      {
+        "sentence": "At the conclusion of the discussion, the Committee voted to authorize and direct the Federal Reserve Bank of New York, until it was instructed otherwise, to execute transactions in the SOMA in accordance with the following domestic policy directive: \"Consistent with its statutory mandate, the Federal Open Market Committee seeks monetary and financial conditions that will foster maximum employment and price stability.",
+        "source_date": "2014-02-19",
+        "dataset_year": 2016,
+        "corpus_last_doc": "minutes_20151028",
+        "corpus_n_docs": 8
+      },
+      {
+        "sentence": "Consistent with its statutory mandate, the Committee seeks to foster maximum employment and price stability.",
+        "source_date": "2010-11-23",
+        "dataset_year": 1996,
+        "corpus_last_doc": "minutes_20200315",
+        "corpus_n_docs": 106
+      },
+      {
+        "sentence": "However, if incoming information indicates faster progress toward the Committee's employment and inflation objectives than the Committee now expects, then increases in the target range for the federal funds rate are likely to occur sooner than currently anticipated.",
+        "source_date": "2014-11-19",
+        "dataset_year": 2007,
+        "corpus_last_doc": "minutes_20150128",
+        "corpus_n_docs": 3
+      },
+      {
+        "sentence": "This assessment will take into account a wide range of information, including measures of labor market conditions, indicators of inflation pressures and inflation expectations, and readings on financial developments.",
+        "source_date": "2014-04-09",
+        "dataset_year": 2004,
+        "corpus_last_doc": "minutes_20141217",
+        "corpus_n_docs": 1
+      },
+      {
+        "sentence": "The Committee currently anticipates that, even after employment and inflation are near mandate-consistent levels, economic conditions may, for some time, warrant keeping the target federal funds rate below levels the Committee views as normal in the longer run. \"",
+        "source_date": "2014-04-09",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20151028",
+        "corpus_n_docs": 16
+      },
+      {
+        "sentence": "Market-based measures of inflation compensation have declined somewhat",
+        "source_date": "2014-11-19",
+        "dataset_year": 2020,
+        "corpus_last_doc": "minutes_20141217",
+        "corpus_n_docs": 1
+      },
+      {
+        "sentence": "At the conclusion of the discussion, the Committee voted to authorize and direct the Federal Reserve Bank of New York, until it was instructed otherwise, to execute transactions in the SOMA in accordance with the following domestic policy directive: \"Consistent with its statutory mandate, the Federal Open Market Committee seeks monetary and financial conditions that will foster maximum employment and price stability.",
+        "source_date": "2014-02-19",
+        "dataset_year": 2016,
+        "corpus_last_doc": "minutes_20151028",
+        "corpus_n_docs": 8
+      },
+      {
+        "sentence": "The System Open Market Account manager and the secretary will keep the Committee informed of ongoing developments regarding the System's balance sheet that could affect the attainment over time of the Committee's objectives of maximum employment and price stability. \"",
+        "source_date": "2009-01-06",
+        "dataset_year": 2010,
+        "corpus_last_doc": "minutes_20151028",
+        "corpus_n_docs": 8
+      },
+      {
+        "sentence": "When the Committee decides to begin to remove policy accommodation, it will take a balanced approach consistent with its longer-run goals of maximum employment and inflation of 2 percent. \"",
+        "source_date": "2013-01-03",
+        "dataset_year": 2009,
+        "corpus_last_doc": "minutes_20151028",
+        "corpus_n_docs": 15
+      },
+      {
+        "sentence": "The unemployment rate ticked down to 5.",
+        "source_date": "2005-01-04",
+        "dataset_year": 2003,
+        "corpus_last_doc": "minutes_20151216",
+        "corpus_n_docs": 1
+      },
+      {
+        "sentence": "Home prices continued to rise briskly.",
+        "source_date": "2004-05-06",
+        "dataset_year": 2019,
+        "corpus_last_doc": "minutes_20210317",
+        "corpus_n_docs": 1
+      }
+    ],
+    "2016": [
+      {
+        "sentence": "Market-based measures of inflation compensation remained low",
+        "source_date": "2015-04-08",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 21
+      },
+      {
+        "sentence": "Market-based measures of inflation compensation remained low",
+        "source_date": "2015-04-08",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 21
+      },
+      {
+        "sentence": "As always, each participant\u2019s projections are conditioned on his or her own view of appropriate monetary policy.",
+        "source_date": "2013-06-19",
+        "dataset_year": 2018,
+        "corpus_last_doc": "presser_20160615",
+        "corpus_n_docs": 5
+      },
+      {
+        "sentence": "The longer-run projections represent each participant's assessment of the rate to which each variable would be expected to converge, over time, under appropriate monetary policy and in the absence of further shocks to the economy.",
+        "source_date": "2012-05-16",
+        "dataset_year": 2010,
+        "corpus_last_doc": "minutes_20160316",
+        "corpus_n_docs": 6
+      },
+      {
+        "sentence": "Market-based measures of inflation compensation remain low",
+        "source_date": "2015-04-08",
+        "dataset_year": 2020,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 57
+      },
+      {
+        "sentence": "Total U. S. consumer prices, as measured by the PCE price index, increased 1.",
+        "source_date": "2015-02-18",
+        "dataset_year": 1998,
+        "corpus_last_doc": "minutes_20190501",
+        "corpus_n_docs": 10
+      },
+      {
+        "sentence": "Measures of inflation compensation were little changed on net.",
+        "source_date": "2007-02-21",
+        "dataset_year": 2006,
+        "corpus_last_doc": "minutes_20260128",
+        "corpus_n_docs": 2
+      },
+      {
+        "sentence": "This assessment will take into account a wide range of information, including measures of labor market conditions, indicators of inflation pressures and inflation expectations, and readings on financial and international developments. \"",
+        "source_date": "2015-02-18",
+        "dataset_year": 2015,
+        "corpus_last_doc": "minutes_20200729",
+        "corpus_n_docs": 115
+      },
+      {
+        "sentence": "Survey-based measures of longer-term inflation expectations remained stable,",
+        "source_date": "2014-11-19",
+        "dataset_year": 2000,
+        "corpus_last_doc": "minutes_20251210",
+        "corpus_n_docs": 5
+      },
+      {
+        "sentence": "Total nonfarm payroll employment expanded at a solid pace in July and August.",
+        "source_date": "2015-10-08",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20190918",
+        "corpus_n_docs": 2
+      },
+      {
+        "sentence": "Consistent with its statutory mandate, the Committee seeks to foster maximum employment and price stability.",
+        "source_date": "2010-11-23",
+        "dataset_year": 1996,
+        "corpus_last_doc": "minutes_20200315",
+        "corpus_n_docs": 106
+      },
+      {
+        "sentence": "This assessment will take into account a wide range of information, including measures of labor market conditions, indicators of inflation pressures and inflation expectations, and readings on financial and international developments.",
+        "source_date": "2015-02-18",
+        "dataset_year": 2015,
+        "corpus_last_doc": "minutes_20200729",
+        "corpus_n_docs": 115
+      },
+      {
+        "sentence": "Market-based measures of inflation compensation remained low",
+        "source_date": "2015-04-08",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 21
+      },
+      {
+        "sentence": "market-based measures of inflation compensation remained low.",
+        "source_date": "2015-04-08",
+        "dataset_year": 2000,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 21
+      },
+      {
+        "sentence": "Market-based measures of inflation compensation remained low",
+        "source_date": "2015-04-08",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 21
+      },
+      {
+        "sentence": "This assessment will take into account a wide range of information, including measures of labor market conditions, indicators of inflation pressures and inflation expectations, and readings on financial and international developments.",
+        "source_date": "2015-02-18",
+        "dataset_year": 2015,
+        "corpus_last_doc": "minutes_20200729",
+        "corpus_n_docs": 115
+      },
+      {
+        "sentence": "The unemployment rate ticked down to 5.",
+        "source_date": "2005-01-04",
+        "dataset_year": 2003,
+        "corpus_last_doc": "minutes_20151216",
+        "corpus_n_docs": 1
+      },
+      {
+        "sentence": "Home prices continued to rise briskly.",
+        "source_date": "2004-05-06",
+        "dataset_year": 2019,
+        "corpus_last_doc": "minutes_20210317",
+        "corpus_n_docs": 1
+      }
+    ],
+    "2017": [
+      {
+        "sentence": "most survey-based measures of longer-term inflation expectations were little changed, on balance, in recent months.",
+        "source_date": "2016-07-06",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20161214",
+        "corpus_n_docs": 3
+      },
+      {
+        "sentence": "Survey-based measures of longer-run inflation expectations were little changed, on balance, in recent months,",
+        "source_date": "2016-04-06",
+        "dataset_year": 2000,
+        "corpus_last_doc": "minutes_20200315",
+        "corpus_n_docs": 5
+      },
+      {
+        "sentence": "survey-based measures of longer-term inflation expectations had changed little on balance.",
+        "source_date": "2016-11-23",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20171213",
+        "corpus_n_docs": 4
+      },
+      {
+        "sentence": "survey-based measures of longer-term inflation expectations are little changed.",
+        "source_date": "2016-02-17",
+        "dataset_year": 2020,
+        "corpus_last_doc": "minutes_20200315",
+        "corpus_n_docs": 77
+      },
+      {
+        "sentence": "Market-based measures of inflation compensation remained low",
+        "source_date": "2015-04-08",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 21
+      },
+      {
+        "sentence": "most survey-based measures of longer-term inflation expectations were little changed, on balance, in recent months.",
+        "source_date": "2016-07-06",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20161214",
+        "corpus_n_docs": 3
+      },
+      {
+        "sentence": "Market-based measures of inflation compensation remained low",
+        "source_date": "2015-04-08",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 21
+      },
+      {
+        "sentence": "Market-based measures of inflation compensation remain low",
+        "source_date": "2015-04-08",
+        "dataset_year": 2020,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 57
+      },
+      {
+        "sentence": "Total U. S. consumer prices, as measured by the PCE price index, increased 1.",
+        "source_date": "2015-02-18",
+        "dataset_year": 1998,
+        "corpus_last_doc": "minutes_20190501",
+        "corpus_n_docs": 10
+      },
+      {
+        "sentence": "In light of the current shortfall of inflation from 2 percent, the Committee will carefully monitor actual and expected progress toward its inflation goal.",
+        "source_date": "2016-01-06",
+        "dataset_year": 2004,
+        "corpus_last_doc": "minutes_20170201",
+        "corpus_n_docs": 23
+      },
+      {
+        "sentence": "Measures of inflation compensation were little changed on net.",
+        "source_date": "2007-02-21",
+        "dataset_year": 2006,
+        "corpus_last_doc": "minutes_20260128",
+        "corpus_n_docs": 2
+      },
+      {
+        "sentence": "This assessment will take into account a wide range of information, including measures of labor market conditions, indicators of inflation pressures and inflation expectations, and readings on financial and international developments. \"",
+        "source_date": "2015-02-18",
+        "dataset_year": 2015,
+        "corpus_last_doc": "minutes_20200729",
+        "corpus_n_docs": 115
+      },
+      {
+        "sentence": "survey-based measures of longer-term inflation expectations were little changed.",
+        "source_date": "2016-02-17",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20241107",
+        "corpus_n_docs": 26
+      },
+      {
+        "sentence": "Survey-based measures of longer-term inflation expectations remained stable,",
+        "source_date": "2014-11-19",
+        "dataset_year": 2000,
+        "corpus_last_doc": "minutes_20251210",
+        "corpus_n_docs": 5
+      },
+      {
+        "sentence": "Total nonfarm payroll employment expanded at a solid pace in July and August.",
+        "source_date": "2015-10-08",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20190918",
+        "corpus_n_docs": 2
+      },
+      {
+        "sentence": "Consistent with its statutory mandate, the Committee seeks to foster maximum employment and price stability.",
+        "source_date": "2010-11-23",
+        "dataset_year": 1996,
+        "corpus_last_doc": "minutes_20200315",
+        "corpus_n_docs": 106
+      },
+      {
+        "sentence": "This assessment will take into account a wide range of information, including measures of labor market conditions, indicators of inflation pressures and inflation expectations, and readings on financial and international developments.",
+        "source_date": "2015-02-18",
+        "dataset_year": 2015,
+        "corpus_last_doc": "minutes_20200729",
+        "corpus_n_docs": 115
+      },
+      {
+        "sentence": "Market-based measures of inflation compensation remained low",
+        "source_date": "2015-04-08",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 21
+      },
+      {
+        "sentence": "market-based measures of inflation compensation remained low.",
+        "source_date": "2015-04-08",
+        "dataset_year": 2000,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 21
+      },
+      {
+        "sentence": "Market-based measures of inflation compensation remained low",
+        "source_date": "2015-04-08",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 21
+      },
+      {
+        "sentence": "This assessment will take into account a wide range of information, including measures of labor market conditions, indicators of inflation pressures and inflation expectations, and readings on financial and international developments.",
+        "source_date": "2015-02-18",
+        "dataset_year": 2015,
+        "corpus_last_doc": "minutes_20200729",
+        "corpus_n_docs": 115
+      },
+      {
+        "sentence": "survey-based measures of longer-term inflation expectations had changed little on balance.",
+        "source_date": "2016-11-23",
+        "dataset_year": 2020,
+        "corpus_last_doc": "minutes_20171213",
+        "corpus_n_docs": 4
+      },
+      {
+        "sentence": "Home prices continued to rise briskly.",
+        "source_date": "2004-05-06",
+        "dataset_year": 2019,
+        "corpus_last_doc": "minutes_20210317",
+        "corpus_n_docs": 1
+      }
+    ],
+    "2018": [
+      {
+        "sentence": "Survey-based measures of longer-run inflation expectations were little changed, on balance, in recent months,",
+        "source_date": "2016-04-06",
+        "dataset_year": 2000,
+        "corpus_last_doc": "minutes_20200315",
+        "corpus_n_docs": 5
+      },
+      {
+        "sentence": "survey-based measures of longer-term inflation expectations had changed little on balance.",
+        "source_date": "2016-11-23",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20171213",
+        "corpus_n_docs": 4
+      },
+      {
+        "sentence": "survey-based measures of longer-term inflation expectations are little changed.",
+        "source_date": "2016-02-17",
+        "dataset_year": 2020,
+        "corpus_last_doc": "minutes_20200315",
+        "corpus_n_docs": 77
+      },
+      {
+        "sentence": "Market-based measures of inflation compensation had remained low,",
+        "source_date": "2017-04-05",
+        "dataset_year": 2020,
+        "corpus_last_doc": "minutes_20190501",
+        "corpus_n_docs": 5
+      },
+      {
+        "sentence": "Market-based measures of inflation compensation remained low",
+        "source_date": "2015-04-08",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 21
+      },
+      {
+        "sentence": "Market-based measures of inflation compensation remained low",
+        "source_date": "2015-04-08",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 21
+      },
+      {
+        "sentence": "Market-based measures of inflation compensation remain low",
+        "source_date": "2015-04-08",
+        "dataset_year": 2020,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 57
+      },
+      {
+        "sentence": "Total U. S. consumer prices, as measured by the PCE price index, increased 1.",
+        "source_date": "2015-02-18",
+        "dataset_year": 1998,
+        "corpus_last_doc": "minutes_20190501",
+        "corpus_n_docs": 10
+      },
+      {
+        "sentence": "Measures of inflation compensation were little changed on net.",
+        "source_date": "2007-02-21",
+        "dataset_year": 2006,
+        "corpus_last_doc": "minutes_20260128",
+        "corpus_n_docs": 2
+      },
+      {
+        "sentence": "This assessment will take into account a wide range of information, including measures of labor market conditions, indicators of inflation pressures and inflation expectations, and readings on financial and international developments. \"",
+        "source_date": "2015-02-18",
+        "dataset_year": 2015,
+        "corpus_last_doc": "minutes_20200729",
+        "corpus_n_docs": 115
+      },
+      {
+        "sentence": "survey-based measures of longer-term inflation expectations were little changed.",
+        "source_date": "2016-02-17",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20241107",
+        "corpus_n_docs": 26
+      },
+      {
+        "sentence": "Survey-based measures of longer-term inflation expectations remained stable,",
+        "source_date": "2014-11-19",
+        "dataset_year": 2000,
+        "corpus_last_doc": "minutes_20251210",
+        "corpus_n_docs": 5
+      },
+      {
+        "sentence": "Total nonfarm payroll employment expanded at a solid pace in July and August.",
+        "source_date": "2015-10-08",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20190918",
+        "corpus_n_docs": 2
+      },
+      {
+        "sentence": "Consistent with its statutory mandate, the Committee seeks to foster maximum employment and price stability.",
+        "source_date": "2010-11-23",
+        "dataset_year": 1996,
+        "corpus_last_doc": "minutes_20200315",
+        "corpus_n_docs": 106
+      },
+      {
+        "sentence": "This assessment will take into account a wide range of information, including measures of labor market conditions, indicators of inflation pressures and inflation expectations, and readings on financial and international developments.",
+        "source_date": "2015-02-18",
+        "dataset_year": 2015,
+        "corpus_last_doc": "minutes_20200729",
+        "corpus_n_docs": 115
+      },
+      {
+        "sentence": "Market-based measures of inflation compensation remained low",
+        "source_date": "2015-04-08",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 21
+      },
+      {
+        "sentence": "maintaining low and stable inflation.",
+        "source_date": "2017-01-19",
+        "dataset_year": 2001,
+        "corpus_last_doc": "speech_powell20180620a",
+        "corpus_n_docs": 3
+      },
+      {
+        "sentence": "market-based measures of inflation compensation remained low.",
+        "source_date": "2015-04-08",
+        "dataset_year": 2000,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 21
+      },
+      {
+        "sentence": "Market-based measures of inflation compensation remained low",
+        "source_date": "2015-04-08",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 21
+      },
+      {
+        "sentence": "This assessment will take into account a wide range of information, including measures of labor market conditions, indicators of inflation pressures and inflation expectations, and readings on financial and international developments.",
+        "source_date": "2015-02-18",
+        "dataset_year": 2015,
+        "corpus_last_doc": "minutes_20200729",
+        "corpus_n_docs": 115
+      },
+      {
+        "sentence": "survey-based measures of longer-term inflation expectations had changed little on balance.",
+        "source_date": "2016-11-23",
+        "dataset_year": 2020,
+        "corpus_last_doc": "minutes_20171213",
+        "corpus_n_docs": 4
+      },
+      {
+        "sentence": "Near-term risks to the economic outlook appear roughly balanced, but the Committee is monitoring inflation developments closely.",
+        "source_date": "2017-07-05",
+        "dataset_year": 2006,
+        "corpus_last_doc": "minutes_20180321",
+        "corpus_n_docs": 18
+      },
+      {
+        "sentence": "Home prices continued to rise briskly.",
+        "source_date": "2004-05-06",
+        "dataset_year": 2019,
+        "corpus_last_doc": "minutes_20210317",
+        "corpus_n_docs": 1
+      }
+    ],
+    "2019": [
+      {
+        "sentence": "Survey-based measures of longer-run inflation expectations were little changed, on balance, in recent months,",
+        "source_date": "2016-04-06",
+        "dataset_year": 2000,
+        "corpus_last_doc": "minutes_20200315",
+        "corpus_n_docs": 5
+      },
+      {
+        "sentence": "survey-based measures of longer-term inflation expectations are little changed.",
+        "source_date": "2016-02-17",
+        "dataset_year": 2020,
+        "corpus_last_doc": "minutes_20200315",
+        "corpus_n_docs": 77
+      },
+      {
+        "sentence": "Market-based measures of inflation compensation had remained low,",
+        "source_date": "2017-04-05",
+        "dataset_year": 2020,
+        "corpus_last_doc": "minutes_20190501",
+        "corpus_n_docs": 5
+      },
+      {
+        "sentence": "Market-based measures of inflation compensation remained low",
+        "source_date": "2015-04-08",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 21
+      },
+      {
+        "sentence": "Market-based measures of inflation compensation remained low",
+        "source_date": "2015-04-08",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 21
+      },
+      {
+        "sentence": "Indicators of longer-term inflation expectations were little changed, on balance.",
+        "source_date": "2018-07-05",
+        "dataset_year": 2014,
+        "corpus_last_doc": "minutes_20181219",
+        "corpus_n_docs": 5
+      },
+      {
+        "sentence": "Risks to the inflation projection also were seen as balanced.",
+        "source_date": "2018-04-11",
+        "dataset_year": 2010,
+        "corpus_last_doc": "minutes_20190501",
+        "corpus_n_docs": 10
+      },
+      {
+        "sentence": "Risks to the inflation projection also were seen as balanced.",
+        "source_date": "2018-04-11",
+        "dataset_year": 2010,
+        "corpus_last_doc": "minutes_20190501",
+        "corpus_n_docs": 10
+      },
+      {
+        "sentence": "Market-based measures of inflation compensation remain low",
+        "source_date": "2015-04-08",
+        "dataset_year": 2020,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 57
+      },
+      {
+        "sentence": "Indicators of longer-term inflation expectations are little changed, on balance.",
+        "source_date": "2018-07-05",
+        "dataset_year": 2014,
+        "corpus_last_doc": "minutes_20181219",
+        "corpus_n_docs": 13
+      },
+      {
+        "sentence": "In determining the timing and size of future adjustments to the target range for the federal funds rate, the Committee will assess realized and expected economic conditions relative to its maximum employment objective and its symmetric 2 percent inflation objective.",
+        "source_date": "2018-07-05",
+        "dataset_year": 2001,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 40
+      },
+      {
+        "sentence": "Total U. S. consumer prices, as measured by the PCE price index, increased 1.",
+        "source_date": "2015-02-18",
+        "dataset_year": 1998,
+        "corpus_last_doc": "minutes_20190501",
+        "corpus_n_docs": 10
+      },
+      {
+        "sentence": "Measures of inflation compensation were little changed on net.",
+        "source_date": "2007-02-21",
+        "dataset_year": 2006,
+        "corpus_last_doc": "minutes_20260128",
+        "corpus_n_docs": 2
+      },
+      {
+        "sentence": "Risks to the inflation projection also were seen as balanced.",
+        "source_date": "2018-04-11",
+        "dataset_year": 2010,
+        "corpus_last_doc": "minutes_20190501",
+        "corpus_n_docs": 10
+      },
+      {
+        "sentence": "This assessment will take into account a wide range of information, including measures of labor market conditions, indicators of inflation pressures and inflation expectations, and readings on financial and international developments. \"",
+        "source_date": "2015-02-18",
+        "dataset_year": 2015,
+        "corpus_last_doc": "minutes_20200729",
+        "corpus_n_docs": 115
+      },
+      {
+        "sentence": "Risks to the inflation projection also were seen as balanced.",
+        "source_date": "2018-04-11",
+        "dataset_year": 2018,
+        "corpus_last_doc": "minutes_20190501",
+        "corpus_n_docs": 10
+      },
+      {
+        "sentence": "Risks to the inflation projection also were seen as balanced.",
+        "source_date": "2018-04-11",
+        "dataset_year": 2018,
+        "corpus_last_doc": "minutes_20190501",
+        "corpus_n_docs": 10
+      },
+      {
+        "sentence": "survey-based measures of longer-term inflation expectations were little changed.",
+        "source_date": "2016-02-17",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20241107",
+        "corpus_n_docs": 26
+      },
+      {
+        "sentence": "Survey-based measures of longer-term inflation expectations remained stable,",
+        "source_date": "2014-11-19",
+        "dataset_year": 2000,
+        "corpus_last_doc": "minutes_20251210",
+        "corpus_n_docs": 5
+      },
+      {
+        "sentence": "Total nonfarm payroll employment expanded at a solid pace in July and August.",
+        "source_date": "2015-10-08",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20190918",
+        "corpus_n_docs": 2
+      },
+      {
+        "sentence": "Consistent with its statutory mandate, the Committee seeks to foster maximum employment and price stability.",
+        "source_date": "2010-11-23",
+        "dataset_year": 1996,
+        "corpus_last_doc": "minutes_20200315",
+        "corpus_n_docs": 106
+      },
+      {
+        "sentence": "In determining the timing and size of future adjustments to the target range for the federal funds rate, the Committee will assess realized and expected economic conditions relative to its maximum employment objective and its symmetric 2 percent inflation objective.",
+        "source_date": "2018-07-05",
+        "dataset_year": 2001,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 40
+      },
+      {
+        "sentence": "This assessment will take into account a wide range of information, including measures of labor market conditions, indicators of inflation pressures and inflation expectations, and readings on financial and international developments.",
+        "source_date": "2015-02-18",
+        "dataset_year": 2015,
+        "corpus_last_doc": "minutes_20200729",
+        "corpus_n_docs": 115
+      },
+      {
+        "sentence": "Market-based measures of inflation compensation remained low",
+        "source_date": "2015-04-08",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 21
+      },
+      {
+        "sentence": "market-based measures of inflation compensation remained low.",
+        "source_date": "2015-04-08",
+        "dataset_year": 2000,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 21
+      },
+      {
+        "sentence": "Market-based measures of inflation compensation remained low",
+        "source_date": "2015-04-08",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 21
+      },
+      {
+        "sentence": "This assessment will take into account a wide range of information, including measures of labor market conditions, indicators of inflation pressures and inflation expectations, and readings on financial and international developments.",
+        "source_date": "2015-02-18",
+        "dataset_year": 2015,
+        "corpus_last_doc": "minutes_20200729",
+        "corpus_n_docs": 115
+      },
+      {
+        "sentence": "Indicators of longer-term inflation expectations were little changed on balance.",
+        "source_date": "2018-07-05",
+        "dataset_year": 2014,
+        "corpus_last_doc": "minutes_20181219",
+        "corpus_n_docs": 5
+      },
+      {
+        "sentence": "Home prices continued to rise briskly.",
+        "source_date": "2004-05-06",
+        "dataset_year": 2019,
+        "corpus_last_doc": "minutes_20210317",
+        "corpus_n_docs": 1
+      }
+    ],
+    "2020": [
+      {
+        "sentence": "Survey-based measures of longer-run inflation expectations were little changed, on balance, in recent months,",
+        "source_date": "2016-04-06",
+        "dataset_year": 2000,
+        "corpus_last_doc": "minutes_20200315",
+        "corpus_n_docs": 5
+      },
+      {
+        "sentence": "survey-based measures of longer-term inflation expectations are little changed.",
+        "source_date": "2016-02-17",
+        "dataset_year": 2020,
+        "corpus_last_doc": "minutes_20200315",
+        "corpus_n_docs": 77
+      },
+      {
+        "sentence": "Market-based measures of inflation compensation remained low",
+        "source_date": "2015-04-08",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 21
+      },
+      {
+        "sentence": "Market-based measures of inflation compensation remained low",
+        "source_date": "2015-04-08",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 21
+      },
+      {
+        "sentence": "Market-based measures of inflation compensation remain low",
+        "source_date": "2015-04-08",
+        "dataset_year": 2020,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 57
+      },
+      {
+        "sentence": "In determining the timing and size of future adjustments to the target range for the federal funds rate, the Committee will assess realized and expected economic conditions relative to its maximum employment objective and its symmetric 2 percent inflation objective.",
+        "source_date": "2018-07-05",
+        "dataset_year": 2001,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 40
+      },
+      {
+        "sentence": "Job gains had been solid, on average, in recent months, and the unemployment rate had remained low.",
+        "source_date": "2019-04-10",
+        "dataset_year": 2005,
+        "corpus_last_doc": "minutes_20200315",
+        "corpus_n_docs": 8
+      },
+      {
+        "sentence": "The staff continued to view the uncertainty around its projections for real GDP growth, the unemployment rate, and inflation as generally similar to the average of the past 20 years.",
+        "source_date": "2019-08-21",
+        "dataset_year": 1998,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 5
+      },
+      {
+        "sentence": "Measures of inflation compensation were little changed on net.",
+        "source_date": "2007-02-21",
+        "dataset_year": 2006,
+        "corpus_last_doc": "minutes_20260128",
+        "corpus_n_docs": 2
+      },
+      {
+        "sentence": "This assessment will take into account a wide range of information, including measures of labor market conditions, indicators of inflation pressures and inflation expectations, and readings on financial and international developments. \"",
+        "source_date": "2015-02-18",
+        "dataset_year": 2015,
+        "corpus_last_doc": "minutes_20200729",
+        "corpus_n_docs": 115
+      },
+      {
+        "sentence": "Job gains had been solid, on average, in recent months, and the unemployment rate had remained low.",
+        "source_date": "2019-04-10",
+        "dataset_year": 2005,
+        "corpus_last_doc": "minutes_20200315",
+        "corpus_n_docs": 8
+      },
+      {
+        "sentence": "survey-based measures of longer-term inflation expectations were little changed.",
+        "source_date": "2016-02-17",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20241107",
+        "corpus_n_docs": 26
+      },
+      {
+        "sentence": "Survey-based measures of longer-term inflation expectations remained stable,",
+        "source_date": "2014-11-19",
+        "dataset_year": 2000,
+        "corpus_last_doc": "minutes_20251210",
+        "corpus_n_docs": 5
+      },
+      {
+        "sentence": "Consistent with its statutory mandate, the Committee seeks to foster maximum employment and price stability.",
+        "source_date": "2010-11-23",
+        "dataset_year": 1996,
+        "corpus_last_doc": "minutes_20200315",
+        "corpus_n_docs": 106
+      },
+      {
+        "sentence": "The staff continued to view the uncertainty around its projections for real GDP growth, the unemployment rate, and inflation as generally similar to the average of the past 20 years.",
+        "source_date": "2019-08-21",
+        "dataset_year": 1998,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 5
+      },
+      {
+        "sentence": "In determining the timing and size of future adjustments to the target range for the federal funds rate, the Committee will assess realized and expected economic conditions relative to its maximum employment objective and its symmetric 2 percent inflation objective.",
+        "source_date": "2018-07-05",
+        "dataset_year": 2001,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 40
+      },
+      {
+        "sentence": "This assessment will take into account a wide range of information, including measures of labor market conditions, indicators of inflation pressures and inflation expectations, and readings on financial and international developments.",
+        "source_date": "2015-02-18",
+        "dataset_year": 2015,
+        "corpus_last_doc": "minutes_20200729",
+        "corpus_n_docs": 115
+      },
+      {
+        "sentence": "Market-based measures of inflation compensation remained low",
+        "source_date": "2015-04-08",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 21
+      },
+      {
+        "sentence": "Participants agreed that the labor market had remained strong over the intermeeting period and that economic activity had risen at a moderate rate.",
+        "source_date": "2019-08-21",
+        "dataset_year": 2004,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 5
+      },
+      {
+        "sentence": "market-based measures of inflation compensation remained low.",
+        "source_date": "2015-04-08",
+        "dataset_year": 2000,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 21
+      },
+      {
+        "sentence": "Market-based measures of inflation compensation remained low",
+        "source_date": "2015-04-08",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20200129",
+        "corpus_n_docs": 21
+      },
+      {
+        "sentence": "This assessment will take into account a wide range of information, including measures of labor market conditions, indicators of inflation pressures and inflation expectations, and readings on financial and international developments.",
+        "source_date": "2015-02-18",
+        "dataset_year": 2015,
+        "corpus_last_doc": "minutes_20200729",
+        "corpus_n_docs": 115
+      },
+      {
+        "sentence": "U.S. inflation remains muted.",
+        "source_date": "2019-10-18",
+        "dataset_year": 2000,
+        "corpus_last_doc": "speech_clarida20200225a",
+        "corpus_n_docs": 4
+      },
+      {
+        "sentence": "Home prices continued to rise briskly.",
+        "source_date": "2004-05-06",
+        "dataset_year": 2019,
+        "corpus_last_doc": "minutes_20210317",
+        "corpus_n_docs": 1
+      }
+    ],
+    "2021": [
+      {
+        "sentence": "To this end, the new statement conveys the Committee's judgment that, in order to anchor expectations at the 2 percent level consistent with price stability, it \"seeks to achieve inflation that averages 2 percent over time,\" and\u00e2\u20ac\u201din the same sentence\u00e2\u20ac\u201dthat therefore \"following periods when inflation has been running persistently below 2 percent, appropriate monetary policy will likely aim to achieve inflation moderately above 2 percent for some time.\"",
+        "source_date": "2020-10-14",
+        "dataset_year": 2007,
+        "corpus_last_doc": "speech_clarida20210224a",
+        "corpus_n_docs": 3
+      },
+      {
+        "sentence": "Following the GFC, it took more than eight years for employment and inflation to return to similar mandate-consistent levels.",
+        "source_date": "2020-10-14",
+        "dataset_year": 1996,
+        "corpus_last_doc": "speech_clarida20210224a",
+        "corpus_n_docs": 4
+      },
+      {
+        "sentence": "With regard to our price-stability mandate,",
+        "source_date": "2020-10-14",
+        "dataset_year": 2005,
+        "corpus_last_doc": "speech_clarida20211012a",
+        "corpus_n_docs": 6
+      },
+      {
+        "sentence": "They noted that economic activity and employment had continued to recover",
+        "source_date": "2020-11-25",
+        "dataset_year": 1996,
+        "corpus_last_doc": "minutes_20201216",
+        "corpus_n_docs": 2
+      },
+      {
+        "sentence": "The Committee's assessments will take into account a wide range of information, including readings on public health, labor market conditions, inflation pressures and inflation expectations, and financial and international developments. \"",
+        "source_date": "2020-10-07",
+        "dataset_year": 2004,
+        "corpus_last_doc": "minutes_20221214",
+        "corpus_n_docs": 57
+      },
+      {
+        "sentence": "The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committee's goals.",
+        "source_date": "2020-10-07",
+        "dataset_year": 1998,
+        "corpus_last_doc": "minutes_20260429",
+        "corpus_n_docs": 138
+      },
+      {
+        "sentence": "Participants agreed that the path of the economy would depend significantly on the course of the virus and that the ongoing public health crisis would continue to weigh on economic activity, employment, and inflation in the near term.",
+        "source_date": "2020-11-25",
+        "dataset_year": 2004,
+        "corpus_last_doc": "minutes_20201216",
+        "corpus_n_docs": 2
+      },
+      {
+        "sentence": "Consistent with the Committee's decision to leave the target range for the federal funds rate unchanged, the Board of Governors voted unanimously to leave the interest rates on required and excess reserve balances at 0.",
+        "source_date": "2020-05-20",
+        "dataset_year": 1996,
+        "corpus_last_doc": "minutes_20210428",
+        "corpus_n_docs": 9
+      },
+      {
+        "sentence": "With regard to our price-stability mandate,",
+        "source_date": "2020-10-14",
+        "dataset_year": 2000,
+        "corpus_last_doc": "speech_clarida20211012a",
+        "corpus_n_docs": 6
+      },
+      {
+        "sentence": "With inflation running persistently below this longer-run goal, the Committee will aim to achieve inflation moderately above 2 percent for some time so that inflation averages 2 percent over time and longer-term inflation expectations remain well anchored at 2 percent.",
+        "source_date": "2020-10-07",
+        "dataset_year": 1999,
+        "corpus_last_doc": "minutes_20210428",
+        "corpus_n_docs": 18
+      },
+      {
+        "sentence": "In our new framework, we acknowledge that policy decisions going forward will be based on the FOMC's estimates of \"shortfalls [emphasis added] of employment from its maximum level\"\u00e2\u20ac\u201dnot \"deviations.",
+        "source_date": "2020-10-14",
+        "dataset_year": 2006,
+        "corpus_last_doc": "speech_clarida20210512a",
+        "corpus_n_docs": 5
+      },
+      {
+        "sentence": "Indeed, I would argue that over the past eight years, the framework served us well and supported the Federal Reserve's efforts after the Global Financial Crisis (GFC) first to achieve and then, for several years, to sustain\u00e2\u20ac\u201duntil cut short this spring by the COVID-19 pandemic\u00e2\u20ac\u201dthe operation of the economy at or close to both our statutorily assigned goals of maximum employment and price stability in what became the longest economic expansion in U.S. history.",
+        "source_date": "2020-08-31",
+        "dataset_year": 2006,
+        "corpus_last_doc": "speech_clarida20210113a",
+        "corpus_n_docs": 2
+      },
+      {
+        "sentence": "the new statement maintains our definition that the longer-run goal for inflation is 2 percent, it elevates the importance\u00e2\u20ac\u201dand the challenge\u00e2\u20ac\u201dof keeping inflation expectations well anchored at 2 percent in a world in which an effective-lower-bound constraint is, in downturns, binding on the federal funds rate.",
+        "source_date": "2020-10-14",
+        "dataset_year": 2000,
+        "corpus_last_doc": "speech_clarida20210512a",
+        "corpus_n_docs": 5
+      },
+      {
+        "sentence": "Measures of inflation compensation were little changed on net.",
+        "source_date": "2007-02-21",
+        "dataset_year": 2006,
+        "corpus_last_doc": "minutes_20260128",
+        "corpus_n_docs": 2
+      },
+      {
+        "sentence": "The Committee decided to keep the target range for the federal funds rate at 0 to 1/4 percent and expects it will be appropriate to maintain this target range until labor market conditions have reached levels consistent with the Committee's assessments of maximum employment and inflation has risen to 2 percent and is on track to moderately exceed 2 percent for some time.",
+        "source_date": "2020-10-07",
+        "dataset_year": 2001,
+        "corpus_last_doc": "minutes_20211103",
+        "corpus_n_docs": 30
+      },
+      {
+        "sentence": "Members expected to maintain an accommodative stance of monetary policy until those outcomes were achieved.",
+        "source_date": "2020-11-25",
+        "dataset_year": 2009,
+        "corpus_last_doc": "minutes_20211103",
+        "corpus_n_docs": 9
+      },
+      {
+        "sentence": "remained well below their levels at the beginning of the year, and that weaker demand and earlier declines in oil prices had been holding down consumer price inflation.",
+        "source_date": "2020-11-25",
+        "dataset_year": 1996,
+        "corpus_last_doc": "minutes_20201216",
+        "corpus_n_docs": 2
+      },
+      {
+        "sentence": "survey-based measures of longer-term inflation expectations were little changed.",
+        "source_date": "2016-02-17",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20241107",
+        "corpus_n_docs": 26
+      },
+      {
+        "sentence": "The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committee's goals.",
+        "source_date": "2020-10-07",
+        "dataset_year": 1998,
+        "corpus_last_doc": "minutes_20260429",
+        "corpus_n_docs": 138
+      },
+      {
+        "sentence": "Members agreed that the Federal Reserve was committed to using its full range of tools to support the U. S. economy in this challenging time, thereby promoting its maximum-employment and price-stability goals.",
+        "source_date": "2020-05-20",
+        "dataset_year": 2003,
+        "corpus_last_doc": "minutes_20211215",
+        "corpus_n_docs": 14
+      },
+      {
+        "sentence": "Survey-based measures of longer-term inflation expectations remained stable,",
+        "source_date": "2014-11-19",
+        "dataset_year": 2000,
+        "corpus_last_doc": "minutes_20251210",
+        "corpus_n_docs": 5
+      },
+      {
+        "sentence": "With regard to our price-stability mandate,",
+        "source_date": "2020-10-14",
+        "dataset_year": 2000,
+        "corpus_last_doc": "speech_clarida20211012a",
+        "corpus_n_docs": 6
+      },
+      {
+        "sentence": "The Committee decided to keep the target range for the federal funds rate at 0 to 1/4 percent and expects it will be appropriate to maintain this target range until labor market conditions have reached levels consistent with the Committee's assessments of maximum employment and inflation has risen to 2 percent and is on track to moderately exceed 2 percent for some time.",
+        "source_date": "2020-10-07",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20211103",
+        "corpus_n_docs": 30
+      },
+      {
+        "sentence": "the new statement maintains our definition that the longer-run goal for inflation is 2 percent, it elevates the importance\u00e2\u20ac\u201dand the challenge\u00e2\u20ac\u201dof keeping inflation expectations well anchored at 2 percent in a world in which an effective-lower-bound constraint is, in downturns, binding on the federal funds rate.",
+        "source_date": "2020-10-14",
+        "dataset_year": 2000,
+        "corpus_last_doc": "speech_clarida20210512a",
+        "corpus_n_docs": 5
+      },
+      {
+        "sentence": "Members agreed that the Federal Reserve was committed to using its full range of tools to support the U. S. economy in this challenging time, thereby promoting its maximum-employment and price-stability goals.",
+        "source_date": "2020-05-20",
+        "dataset_year": 2003,
+        "corpus_last_doc": "minutes_20211215",
+        "corpus_n_docs": 14
+      },
+      {
+        "sentence": "The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committee's goals.",
+        "source_date": "2020-10-07",
+        "dataset_year": 1998,
+        "corpus_last_doc": "minutes_20260429",
+        "corpus_n_docs": 138
+      },
+      {
+        "sentence": "To this end, the new statement conveys the Committee's judgment that, in order to anchor expectations at the 2 percent level consistent with price stability, it \"seeks to achieve inflation that averages 2 percent over time,\" and\u00e2\u20ac\u201din the same sentence\u00e2\u20ac\u201dthat therefore \"following periods when inflation has been running persistently below 2 percent, appropriate monetary policy will likely aim to achieve inflation moderately above 2 percent for some time.\"",
+        "source_date": "2020-10-14",
+        "dataset_year": 2019,
+        "corpus_last_doc": "speech_clarida20210224a",
+        "corpus_n_docs": 3
+      },
+      {
+        "sentence": "To this end, the new statement conveys the Committee's judgment that, in order to anchor expectations at the 2 percent level consistent with price stability, it \"seeks to achieve inflation that averages 2 percent over time,\" and\u00e2\u20ac\u201din the same sentence\u00e2\u20ac\u201dthat therefore \"following periods when inflation has been running persistently below 2 percent, appropriate monetary policy will likely aim to achieve inflation moderately above 2 percent for some time.\"",
+        "source_date": "2020-10-14",
+        "dataset_year": 2007,
+        "corpus_last_doc": "speech_clarida20210224a",
+        "corpus_n_docs": 3
+      },
+      {
+        "sentence": "Home prices continued to rise briskly.",
+        "source_date": "2004-05-06",
+        "dataset_year": 2019,
+        "corpus_last_doc": "minutes_20210317",
+        "corpus_n_docs": 1
+      },
+      {
+        "sentence": "The Committee's assessments will take into account a wide range of information, including readings on public health, labor market conditions, inflation pressures and inflation expectations, and financial and international developments. \"",
+        "source_date": "2020-10-07",
+        "dataset_year": 2004,
+        "corpus_last_doc": "minutes_20221214",
+        "corpus_n_docs": 57
+      }
+    ],
+    "2022": [
+      {
+        "sentence": "Participants' Views on Current Economic Conditions and the Economic Outlook In conjunction with this FOMC meeting, participants submitted their projections of the most likely outcomes for real GDP growth, the unemployment rate, and inflation for each year from 2021 through 2024 and over the longer run based on their individual assessments of appropriate monetary policy, including the path of the federal funds rate.",
+        "source_date": "2021-10-13",
+        "dataset_year": 1999,
+        "corpus_last_doc": "minutes_20211215",
+        "corpus_n_docs": 2
+      },
+      {
+        "sentence": "The Committee's assessments will take into account a wide range of information, including readings on public health, labor market conditions, inflation pressures and inflation expectations, and financial and international developments. \"",
+        "source_date": "2020-10-07",
+        "dataset_year": 2004,
+        "corpus_last_doc": "minutes_20221214",
+        "corpus_n_docs": 57
+      },
+      {
+        "sentence": "The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committee's goals.",
+        "source_date": "2020-10-07",
+        "dataset_year": 1998,
+        "corpus_last_doc": "minutes_20260429",
+        "corpus_n_docs": 138
+      },
+      {
+        "sentence": "Measures of inflation compensation were little changed on net.",
+        "source_date": "2007-02-21",
+        "dataset_year": 2006,
+        "corpus_last_doc": "minutes_20260128",
+        "corpus_n_docs": 2
+      },
+      {
+        "sentence": "survey-based measures of longer-term inflation expectations were little changed.",
+        "source_date": "2016-02-17",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20241107",
+        "corpus_n_docs": 26
+      },
+      {
+        "sentence": "The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committee's goals.",
+        "source_date": "2020-10-07",
+        "dataset_year": 1998,
+        "corpus_last_doc": "minutes_20260429",
+        "corpus_n_docs": 138
+      },
+      {
+        "sentence": "Members agreed that the Federal Reserve was committed to using its full range of tools to support the U. S. economy in this challenging time, thereby promoting its maximum-employment and price-stability goals.",
+        "source_date": "2020-05-20",
+        "dataset_year": 2003,
+        "corpus_last_doc": "minutes_20211215",
+        "corpus_n_docs": 14
+      },
+      {
+        "sentence": "Survey-based measures of longer-term inflation expectations remained stable,",
+        "source_date": "2014-11-19",
+        "dataset_year": 2000,
+        "corpus_last_doc": "minutes_20251210",
+        "corpus_n_docs": 5
+      },
+      {
+        "sentence": "Participants' Views on Current Economic Conditions and the Economic Outlook In conjunction with this FOMC meeting, participants submitted their projections of the most likely outcomes for real GDP growth, the unemployment rate, and inflation for each year from 2021 through 2024 and over the longer run based on their individual assessments of appropriate monetary policy, including the path of the federal funds rate.",
+        "source_date": "2021-10-13",
+        "dataset_year": 1999,
+        "corpus_last_doc": "minutes_20211215",
+        "corpus_n_docs": 2
+      },
+      {
+        "sentence": "Members agreed that the Federal Reserve was committed to using its full range of tools to support the U. S. economy in this challenging time, thereby promoting its maximum-employment and price-stability goals.",
+        "source_date": "2020-05-20",
+        "dataset_year": 2003,
+        "corpus_last_doc": "minutes_20211215",
+        "corpus_n_docs": 14
+      },
+      {
+        "sentence": "The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committee's goals.",
+        "source_date": "2020-10-07",
+        "dataset_year": 1998,
+        "corpus_last_doc": "minutes_20260429",
+        "corpus_n_docs": 138
+      },
+      {
+        "sentence": "The Committee's assessments will take into account a wide range of information, including readings on public health, labor market conditions, inflation pressures and inflation expectations, and financial and international developments. \"",
+        "source_date": "2020-10-07",
+        "dataset_year": 2004,
+        "corpus_last_doc": "minutes_20221214",
+        "corpus_n_docs": 57
+      }
+    ],
+    "2023": [
+      {
+        "sentence": "The Committee's assessments will take into account a wide range of information, including readings on public health, labor market conditions, inflation pressures and inflation expectations, and financial and international developments. \"",
+        "source_date": "2020-10-07",
+        "dataset_year": 2004,
+        "corpus_last_doc": "minutes_20221214",
+        "corpus_n_docs": 57
+      },
+      {
+        "sentence": "The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committee's goals.",
+        "source_date": "2020-10-07",
+        "dataset_year": 1998,
+        "corpus_last_doc": "minutes_20260429",
+        "corpus_n_docs": 138
+      },
+      {
+        "sentence": "Measures of inflation compensation were little changed on net.",
+        "source_date": "2007-02-21",
+        "dataset_year": 2006,
+        "corpus_last_doc": "minutes_20260128",
+        "corpus_n_docs": 2
+      },
+      {
+        "sentence": "survey-based measures of longer-term inflation expectations were little changed.",
+        "source_date": "2016-02-17",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20241107",
+        "corpus_n_docs": 26
+      },
+      {
+        "sentence": "The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committee's goals.",
+        "source_date": "2020-10-07",
+        "dataset_year": 1998,
+        "corpus_last_doc": "minutes_20260429",
+        "corpus_n_docs": 138
+      },
+      {
+        "sentence": "Survey-based measures of longer-term inflation expectations remained stable,",
+        "source_date": "2014-11-19",
+        "dataset_year": 2000,
+        "corpus_last_doc": "minutes_20251210",
+        "corpus_n_docs": 5
+      },
+      {
+        "sentence": "The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committee's goals.",
+        "source_date": "2020-10-07",
+        "dataset_year": 1998,
+        "corpus_last_doc": "minutes_20260429",
+        "corpus_n_docs": 138
+      },
+      {
+        "sentence": "The Committee's assessments will take into account a wide range of information, including readings on public health, labor market conditions, inflation pressures and inflation expectations, and financial and international developments. \"",
+        "source_date": "2020-10-07",
+        "dataset_year": 2004,
+        "corpus_last_doc": "minutes_20221214",
+        "corpus_n_docs": 57
+      }
+    ],
+    "2024": [
+      {
+        "sentence": "The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committee's goals.",
+        "source_date": "2020-10-07",
+        "dataset_year": 1998,
+        "corpus_last_doc": "minutes_20260429",
+        "corpus_n_docs": 138
+      },
+      {
+        "sentence": "Measures of inflation compensation were little changed on net.",
+        "source_date": "2007-02-21",
+        "dataset_year": 2006,
+        "corpus_last_doc": "minutes_20260128",
+        "corpus_n_docs": 2
+      },
+      {
+        "sentence": "survey-based measures of longer-term inflation expectations were little changed.",
+        "source_date": "2016-02-17",
+        "dataset_year": 2013,
+        "corpus_last_doc": "minutes_20241107",
+        "corpus_n_docs": 26
+      },
+      {
+        "sentence": "The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committee's goals.",
+        "source_date": "2020-10-07",
+        "dataset_year": 1998,
+        "corpus_last_doc": "minutes_20260429",
+        "corpus_n_docs": 138
+      },
+      {
+        "sentence": "Survey-based measures of longer-term inflation expectations remained stable,",
+        "source_date": "2014-11-19",
+        "dataset_year": 2000,
+        "corpus_last_doc": "minutes_20251210",
+        "corpus_n_docs": 5
+      },
+      {
+        "sentence": "The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committee's goals.",
+        "source_date": "2020-10-07",
+        "dataset_year": 1998,
+        "corpus_last_doc": "minutes_20260429",
+        "corpus_n_docs": 138
+      }
+    ],
+    "2025": [
+      {
+        "sentence": "The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committee's goals.",
+        "source_date": "2020-10-07",
+        "dataset_year": 1998,
+        "corpus_last_doc": "minutes_20260429",
+        "corpus_n_docs": 138
+      },
+      {
+        "sentence": "Measures of inflation compensation were little changed on net.",
+        "source_date": "2007-02-21",
+        "dataset_year": 2006,
+        "corpus_last_doc": "minutes_20260128",
+        "corpus_n_docs": 2
+      },
+      {
+        "sentence": "The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committee's goals.",
+        "source_date": "2020-10-07",
+        "dataset_year": 1998,
+        "corpus_last_doc": "minutes_20260429",
+        "corpus_n_docs": 138
+      },
+      {
+        "sentence": "Survey-based measures of longer-term inflation expectations remained stable,",
+        "source_date": "2014-11-19",
+        "dataset_year": 2000,
+        "corpus_last_doc": "minutes_20251210",
+        "corpus_n_docs": 5
+      },
+      {
+        "sentence": "The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committee's goals.",
+        "source_date": "2020-10-07",
+        "dataset_year": 1998,
+        "corpus_last_doc": "minutes_20260429",
+        "corpus_n_docs": 138
+      }
+    ],
+    "2026": [
+      {
+        "sentence": "The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committee's goals.",
+        "source_date": "2020-10-07",
+        "dataset_year": 1998,
+        "corpus_last_doc": "minutes_20260429",
+        "corpus_n_docs": 138
+      },
+      {
+        "sentence": "Measures of inflation compensation were little changed on net.",
+        "source_date": "2007-02-21",
+        "dataset_year": 2006,
+        "corpus_last_doc": "minutes_20260128",
+        "corpus_n_docs": 2
+      },
+      {
+        "sentence": "The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committee's goals.",
+        "source_date": "2020-10-07",
+        "dataset_year": 1998,
+        "corpus_last_doc": "minutes_20260429",
+        "corpus_n_docs": 138
+      },
+      {
+        "sentence": "The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committee's goals.",
+        "source_date": "2020-10-07",
+        "dataset_year": 1998,
+        "corpus_last_doc": "minutes_20260429",
+        "corpus_n_docs": 138
+      }
+    ]
+  },
+  "examples": [
+    {
+      "dataset_year": 2011,
+      "first_doc": "minutes_20220615",
+      "year_redated": 2022,
+      "sentence": "Broad equity price indexes fell sharply over the intermeeting period on net."
+    },
+    {
+      "dataset_year": 2011,
+      "first_doc": "20170920_a00",
+      "year_redated": 2017,
+      "sentence": "But I want to emphasize that we do have a commitment to raising inflation to 2 percent."
+    },
+    {
+      "dataset_year": 2002,
+      "first_doc": "speech_powell20200827a",
+      "year_redated": 2020,
+      "sentence": "Our new statement explicitly acknowledges the challenges posed by the proximity of interest rates to the effective lower bound."
+    },
+    {
+      "dataset_year": 2007,
+      "first_doc": "speech_clarida20211012a",
+      "year_redated": 2021,
+      "sentence": "That said, the data also indicate that a surge in COVID-19 cases in the summer and supply-chain bottlenecks held back economic activity in the third quarter."
+    },
+    {
+      "dataset_year": 2015,
+      "first_doc": "20201216_a08",
+      "year_redated": 2020,
+      "sentence": "And, and that\u2019s why we have adopted the flexible average inflation-targeting framework."
+    },
+    {
+      "dataset_year": 2000,
+      "first_doc": "speech_clarida20211012a",
+      "year_redated": 2021,
+      "sentence": "But I continue to believe that the underlying rate inflation in the U.S. economy is hovering close to our 2 percent longer-run objective and, thus, that the unwelcome surge in inflation this year, onc"
+    },
+    {
+      "dataset_year": 2012,
+      "first_doc": "20190501_a24",
+      "year_redated": 2019,
+      "sentence": "Last year, we had 1.9 percent productivity, which is much higher."
+    },
+    {
+      "dataset_year": 2007,
+      "first_doc": "speech_clarida20201014a",
+      "year_redated": 2020,
+      "sentence": "To this end, the new statement conveys the Committee's judgment that, in order to anchor expectations at the 2 percent level consistent with price stability, it \"seeks to achieve inflation that averag"
+    },
+    {
+      "dataset_year": 2015,
+      "first_doc": "20210127_a14",
+      "year_redated": 2021,
+      "sentence": "There was a lot of pent-up demand."
+    },
+    {
+      "dataset_year": 2009,
+      "first_doc": "minutes_20141217",
+      "year_redated": 2015,
+      "sentence": "When the Committee decides to begin to remove policy accommodation, it will take a balanced approach consistent with its longer-run goals of maximum employment and inflation of 2 percent. \""
+    }
+  ]
+}

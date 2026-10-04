@@ -1,0 +1,76 @@
+macro_regime source URL list (collected 2026-10-03; PDFs/text extracts in ./pdf where downloadable)
+
+VOLATILITY / VIX / VRP
+https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2548050   Johnson (2017) Risk Premia and the VIX Term Structure (JFQA) [403 to fetch; abstract via search]
+https://www.mdpi.com/1911-8074/12/3/113   Fassas & Hourvouliades (2019) VIX Futures as a Market Timing Indicator, JRFM 12(3) [pdf: https://mdpi-res.com/d_attachment/jrfm/jrfm-12-00113/article_deploy/jrfm-12-00113-v2.pdf ; sample 2010-01-04..2017-12-29]
+https://www.thetrading.tools/manuals/vix-term-structure   practitioner VIX/VIX3M backwardation episode statistics 2010-2026
+https://papers.ssrn.com/abstract=948309   Bollerslev, Tauchen & Zhou (2009) Expected Stock Returns and Variance Risk Premia (RFS)
+https://research.ou.nl/en/publications/a-comprehensive-look-at-the-return-predictability-of-variance-ris/   Byun, Frijns & Roh (2018) JFM 38(4)
+https://www.ivo-welch.org/home/card-eqpredict.html   Goyal, Welch & Zafirov (2024) RFS 37(11) predictor survival table
+https://www.cxoadvisory.com/technical-trading/a-few-notes-on-short-term-trading-strategies-that-work/   Connors & Alvarez (2008) short-term strategies (VIX stretch) notes
+https://www.nber.org/papers/22208   Moreira & Muir (2017) Volatility-Managed Portfolios (JF)
+https://www.lehigh.edu/~xuy219/research/COWY.pdf   Cederburg, O'Doherty, Wang & Yan (2020) JFE
+https://www.lehigh.edu/~xuy219/research/Downside.pdf   Wang & Yan (2021) Downside risk and the performance of volatility-managed portfolios, JBF 131:106198 [pdf/downside.txt]
+https://repub.eur.nl/pub/130215/Bongaerts-Kang-van-Dijk-Conditional-volatility-targeting-2020-FAJ.pdf   Bongaerts, Kang & van Dijk (2020) FAJ 76(4) [pdf/cvt.txt]
+https://ideas.repec.org/a/eee/finana/v95y2024ipas1057521924002850.html   Bozovic (2024) VIX-managed portfolios, IRFA 95:103353 (SSRN 4507634)
+
+CREDIT / RATES / FED
+https://fred.stlouisfed.org/series/BAA10Y   Moody's Baa minus 10y (1986+, daily) -- substitute for truncated ICE BofA HY OAS
+https://www.federalreserve.gov/econres/notes/feds-notes/ebp_csv.csv   Gilchrist-Zakrajsek GZ spread / excess bond premium (monthly 1973+, revised)
+https://www.nber.org/papers/w9178.pdf (search hit, GZ-related); Gilchrist & Zakrajsek (2012) AER "Credit Spreads and Business Cycle Fluctuations"
+https://counterpointfunds.com/high-yield-and-changes-in-credit-spread/   practitioner credit-spread trend
+https://insightinvestment.com/globalassets/documents/us-redesign-documents/perspectives/high-yield---time-in-the-market-beats-timing-the-market-2025.pdf   counter-evidence (HY range timing)
+https://rpc.cfainstitute.org/research/financial-analysts-journal/2002/using-the-yield-curve-to-time-the-stock-market   Resnick & Shoesmith (2002) FAJ 58(3)
+https://quantpedia.com/avoid-equity-bear-markets-with-a-market-timing-strategy-part-3/   Quantpedia YC + trend + macro 1927-2022
+https://awealthofcommonsense.com/2019/08/you-probably-cant-use-the-yield-curve-to-time-the-market/   counter-evidence
+https://ideas.repec.org/a/taf/ufajxx/v61y2005i1p70-79.html   Conover, Jensen, Johnson & Mercer (2005) FAJ "Is Fed Policy Still Relevant for Investors?"
+https://rpc.cfainstitute.org/research/foundation/2000/the-role-of-monetary-policy-in-investment-management   Jensen, Johnson & Mercer (2000) CFA RF monograph
+https://www.cxoadvisory.com/?p=1509   Conover et al. (2007) sector rotation by monetary regime
+https://business.columbia.edu/sites/default/files-efs/imce-uploads/gbekaert/papers/stockreturn.pdf   Ang & Bekaert (2007) RFS short rate predictability
+https://www.nber.org/papers/w3247   Ang/Bekaert-related "Short Rates and Expected Asset Returns" (search hit)
+
+MACRO / REGIME
+https://smallake.kr/wp-content/uploads/2017/10/A-Half-Century-of-Macro-Momentum.pdf   Brooks (2017) AQR A Half Century of Macro Momentum [pdf/macromom.txt]
+https://www.aqr.com/library/aqr-publications/a-half-century-of-macro-momentum
+https://www.evidenceinvestor.com/wp-content/uploads/2021/12/SSRN-id3813202.pdf   Neville, Draaisma, Funnell, Harvey & Van Hemert (2021) The Best Strategies for Inflationary Times (JPM 47(8))
+https://www.aqr.com/Insights/Research/Journal-Article/A-Changing-Stock-Bond-Correlation   Brixton et al. (2023) JPM
+https://top1000funds.com/wp-content/uploads/2024/11/Empirical-Evidence-on-the-Stock-Bond-Correlation.pdf
+https://www.philosophicaleconomics.com/?p=6785   Growth and Trend (GTT) original post
+https://www.philosophicaleconomics.com/?p=7644   In Search of the Perfect Recession Indicator
+https://www.cxoadvisory.com/equity-premium/optimizing-the-combination-of-economic-growth-and-price-trends/   Keller (2019) GT out-of-sample 1981-2019
+https://blog.thinknewfound.com/tag/gtt/   Newfound international growth-trend tests
+https://chesler.us/resources/academia/stop%20losses.pdf   Kaminski & Lo (2014) When Do Stop-Loss Rules Stop Losses? (JFM 18) [pdf/kl.txt]
+https://papers.ssrn.com/sol3/papers.cfm?abstract_id=968338
+https://portfoliooptimizer.io/blog/the-turbulence-index-measuring-financial-risk/   turbulence replication
+https://rpc.cfainstitute.org/research/financial-analysts-journal/2010/skulls-financial-turbulence-and-risk-management   Kritzman & Li (2010) FAJ 66(5)
+https://globalmarkets.statestreet.com/research/portal/insights/article/2a8e282a-343b-443c-b362-1634c71d2d26   Kritzman, Li, Page & Rigobon (2011) JPM absorption ratio
+https://github.com/luigi-piva/turbulence-index   look-ahead-free turbulence implementation (GitHub)
+https://github.com/hugogobato/Absorption_ratio-Mark-Kritzman-Yuanzhen-Li-Sebastien-Page-Roberto-Rigobon-2010-   absorption ratio code (GitHub)
+https://www.cxoadvisory.com/economic-indicators/exploiting-chicago-fed-nfsi-predictive-power/   NFCI weekly-change timing 1993-2020
+https://fred.stlouisfed.org/series/NFCI
+
+DEFENSIVE / LOW RISK
+http://docs.lhpedersen.com/BettingAgainstBeta.pdf   Frazzini & Pedersen (2014) JFE 111(1) [pdf/bab.txt; Treasury BAB Table 6]
+https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2210003   Baker, Bradley & Taliaferro (2014) FAJ 70(2) low-risk macro/micro decomposition
+
+DOLLAR / FX / COMMODITY LINKS
+https://www.nber.org/system/files/working_papers/w16427/revisions/w16427.rev1.pdf   Lustig, Roussanov & Verdelhan (2014) JFE 111(3) Countercyclical Currency Risk Premia
+https://quantpedia.com/strategies/dollar-carry-trade   dollar carry statistics 1983-2009
+https://www.nber.org/digest/jul08/w13901.html   Chen, Rogoff & Rossi (2010) QJE Can Exchange Rates Forecast Commodity Prices?
+https://www.nber.org/system/files/working_papers/w13901/w13901.pdf
+https://sentimentrader.com/blog/using-metals-to-trade-bonds   Kaeppel gold/copper MA rule for 10y notes 1982-2021
+https://thesis.eur.nl/pub/53697/BSc-Thesis-Sebastiaan-Oort-Final-version.pdf   copper/gold ratio predictability 1988-2020 incl. OOS
+https://repub.eur.nl/pub/1017   Driesprong, Jacobsen & Maat (2008) JFE Striking Oil
+https://dro.deakin.edu.au/articles/journal_contribution/Has_oil_price_predicted_stock_returns_for_over_a_century_/20915227/1   Narayan & Gupta (2015)
+https://www.capitalspectator.com/?p=4128   counter-evidence (recent decay)
+https://people.duke.edu/~charvey/Media/2013/WSJ_June_28_2013.pdf   Erb & Harvey Golden Dilemma coverage
+
+VALUATION / FORECAST COMBINATION
+https://www.aqr.com/-/media/AQR/Documents/Insights/White-Papers/Market-Timing-Sin-a-Little.pdf   Asness, Ilmanen & Maloney (2017) JOIM 15(3) [pdf/sin.txt]
+https://ideas.repec.org/a/oup/rfinst/v23y2010i2p821-862.html   Rapach, Strauss & Zhou (2010) RFS 23(2)
+https://ideas.repec.org/a/oup/rfinst/v37y2024i11p3490-3557..html   Goyal, Welch & Zafirov (2024) RFS
+
+FREE DATA ENDPOINTS VERIFIED 2026-10-03 (downloaded to ./data)
+https://fred.stlouisfed.org/graph/fredgraph.csv?id=<ID>   BAA10Y AAA10Y DFII10 T10YIE T10Y3M NFCI UNRATE CPIAUCNS DFEDTARU DFF SAHMREALTIME ICSA (all returned full history)
+https://www.federalreserve.gov/econres/notes/feds-notes/ebp_csv.csv   (1973-01..2026-07)
+https://img1.wsimg.com/blobby/go/e5e77e0b-59d1-44d9-ab25-4763ac982e53/downloads/ie_data.xls   Shiller ie_data (file last saved 2024-09; a current copy is needed for 2024-2026)

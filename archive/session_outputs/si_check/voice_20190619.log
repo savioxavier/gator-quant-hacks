@@ -1,0 +1,5 @@
+20:59:19 I fedpress.voice: stage.start stage=voice presser_id=20190619 run_id=20261003T205919-BLADEMASTER resource=gpu
+20:59:32 I fedpress.voice: voice.done stage=voice presser_id=20190619 run_id=20261003T205919-BLADEMASTER chunks=189 identity_ok=162
+20:59:32 I fedpress.voice: stage.done stage=voice presser_id=20190619 run_id=20261003T205919-BLADEMASTER elapsed_s=12.775 rows={'voice_chunks': 189}
+20:59:32 I fedpress.cli: run.summary stage=voice run_id=20261003T205919-BLADEMASTER meetings=1 done=1
+Skip loading CUDA and cuDNN DLLs since torch is imported.

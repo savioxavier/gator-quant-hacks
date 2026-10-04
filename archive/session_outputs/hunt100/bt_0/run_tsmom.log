@@ -1,0 +1,13 @@
+trend_momentum_mop_tsmom12 V1 IS 2011-09-02..2024-10-02: net1x 0.154 net2x 0.079 gross 0.230 | ret 1.307% vol 8.465% MDD -23.0% worst yr -13.0% (2016) pos yrs 43% roll2y p10 -0.55 TO 41.7x gross notional 2.91 NW t 0.54 | corr ES -0.14 S1 0.74 F2 0.34 | later net1x 0.309 MDD -13.7%
+   AQR TSMOM same months: IS 2011-10..2024-09 AQR 0.34 ours(gross, monthly) 0.31 corr 0.82 | later AQR 0.97 ours 0.02 corr 0.84
+trend_momentum_mop_tsmom12 V2 IS 2011-09-02..2024-10-02: net1x -0.008 net2x -0.086 gross 0.070 | ret -0.065% vol 8.214% MDD -27.5% worst yr -13.7% (2016) pos yrs 50% roll2y p10 -0.69 TO 41.9x gross notional 2.90 NW t -0.03 | corr ES 0.02 S1 0.51 F2 0.30 | later net1x 0.545 MDD -11.5%
+   AQR TSMOM same months: IS 2011-10..2024-09 AQR 0.34 ours(gross, monthly) 0.16 corr 0.78 | later AQR 0.97 ours 0.32 corr 0.74
+trend_momentum_mop_tsmom12 V3 IS 2011-09-02..2024-10-02: net1x 0.058 net2x -0.024 gross 0.140 | ret 0.630% vol 10.852% MDD -34.7% worst yr -20.0% (2016) pos yrs 43% roll2y p10 -0.78 TO 36.5x gross notional 1.89 NW t 0.21 | corr ES -0.07 S1 0.67 F2 0.28 | later net1x 0.243 MDD -18.1%
+   AQR TSMOM same months: IS 2011-10..2024-09 AQR 0.34 ours(gross, monthly) 0.21 corr 0.72 | later AQR 0.97 ours 0.13 corr 0.75
+HOP V1 cross-check: max |forward2.s1_decisions - re-implementation| = 0.0
+trend_momentum_hop_1_3_12 V1 IS 2011-09-02..2024-10-02: net1x -0.069 net2x -0.164 gross 0.026 | ret -0.641% vol 9.332% MDD -33.2% worst yr -10.8% (2023) pos yrs 43% roll2y p10 -0.66 TO 60.4x gross notional 2.76 NW t -0.24 | corr ES -0.13 S1 1.00 F2 0.26 | later net1x 0.202 MDD -11.4%
+   AQR TSMOM same months: IS 2011-10..2024-09 AQR 0.34 ours(gross, monthly) 0.09 corr 0.59 | later AQR 0.97 ours 0.16 corr 0.46
+trend_momentum_hop_1_3_12 V2 IS 2011-08-16..2024-10-02: net1x 0.102 net2x -0.052 gross 0.255 | ret 0.942% vol 9.269% MDD -28.8% worst yr -13.7% (2016) pos yrs 57% roll2y p10 -1.01 TO 101.6x gross notional 2.77 NW t 0.39 | corr ES -0.20 S1 0.81 F2 0.16 | later net1x -0.004 MDD -13.3%
+   AQR TSMOM same months: IS 2011-09..2024-09 AQR 0.28 ours(gross, monthly) 0.26 corr 0.61 | later AQR 0.97 ours -0.07 corr 0.44
+trend_momentum_hop_1_3_12 V3 IS 2011-09-02..2024-10-02: net1x 0.031 net2x -0.054 gross 0.117 | ret 0.309% vol 9.944% MDD -35.7% worst yr -14.2% (2019) pos yrs 50% roll2y p10 -0.59 TO 57.4x gross notional 2.69 NW t 0.11 | corr ES -0.11 S1 0.97 F2 0.26 | later net1x 0.343 MDD -10.4%
+   AQR TSMOM same months: IS 2011-10..2024-09 AQR 0.34 ours(gross, monthly) 0.17 corr 0.57 | later AQR 0.97 ours 0.48 corr 0.53

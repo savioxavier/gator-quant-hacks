@@ -1,0 +1,10 @@
+### 01 Introduction.html
+Sector rotation is a popular strategy with which capital is actively reallocated from one sector to another based upon changing market conditions.
+### 02 Method.html
+This algorithm is an adaptation of asset class momentum. Instead of rotating ETFs in different asset classes,
+the sector momentum algorithm picks 10 sector ETFs and pick 3 ETFs with the strongest 12-month momentum into
+the portfolio and weight them equally. The portfolio is rebalanced at the start of each month.
+### 03 Algorithm.html
+
+### 04 Source.html
+Quantpedia - Sector Momentum

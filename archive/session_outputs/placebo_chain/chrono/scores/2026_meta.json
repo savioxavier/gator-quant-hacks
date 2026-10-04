@@ -1,0 +1,17 @@
+{
+  "year": 2026,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "label_year_rule": "true",
+  "max_epochs": 8,
+  "placebo": true,
+  "seed_val_macro_f1": {},
+  "n_docs": 445,
+  "n_sentences": 9665,
+  "partial": false,
+  "sources": "all",
+  "limit_docs": 0
+}

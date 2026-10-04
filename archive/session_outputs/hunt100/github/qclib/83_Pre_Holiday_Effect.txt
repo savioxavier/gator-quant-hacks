@@ -1,0 +1,25 @@
+### 01 Introduction.html
+Pre-holiday days on the market are often characterized with lower liquidity as a lot of market participants are not involved in the market or they lower their exposure.
+ Historical research shows that stock prices often behave in a specific manner in each of the two trading days preceding these holidays.
+ This anomaly in equities is often called the pre-holiday effect. It is the market in-efficiency for short-term traders to gain on the final trading day before a holiday.
+ In this algorithm, we'll construct a simple strategy to exploit this pre-holiday effect in the equity market.
+### 02 Method.html
+TradingCalendar class can help us find all the available holidays during a period of time.
+ GetDaysByType returns trading days of the specified TradingDayType that contains trading events associated with the range of dates.
+ Here we choose the type to be TradingDayType.PublicHoliday and list all holidays from today to the next two days. As PublicHoliday includes weekends,
+ we use the type TradingDayType.Weekend to subtract weekend holidays.
+ def OnData(self, data):
+ calendar1 = self.TradingCalendar.GetDaysByType(TradingDayType.PublicHoliday, self.Time, self.Time+timedelta(days=2))
+ calendar2 = self.TradingCalendar.GetDaysByType(TradingDayType.Weekend, self.Time, self.Time+timedelta(days=2))
+ holidays = [i.Date for i in calendar1]
+ weekends = [i.Date for i in calendar2]
+ public_holidays = list(set(holidays) - set(weekends))
+ The investment vehicle is SPDR S&P500 ETF. The algorithm will trade the ETF if there are holidays within the next two days and stays in cash during other trading days.
+if not self.Portfolio.Invested and len(holidays)>0:
+ self.SetHoldings("SPY", 1)
+elif self.Portfolio.Invested and len(holidays)==0:
+ self.Liquidate()
+### 03 Algorithm.html
+
+### 04 Source.html
+Quantpedia - Pre-Holiday Effect

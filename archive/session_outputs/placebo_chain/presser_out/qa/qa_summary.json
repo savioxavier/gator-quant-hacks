@@ -1,0 +1,19 @@
+{
+  "instrument_id_changes_in_window": 0,
+  "instrument_id_mismatch_across_schemas": 0,
+  "caption_agreement_flags": [],
+  "caption_greeting_max_abs_diff_s": 1.3200000000000003,
+  "tau_ok_ge_answers_all": true,
+  "tau_order_ok_scheduled": 73,
+  "n_scheduled": 73,
+  "entry_before_1559_scheduled": 73,
+  "tau_src_counts": {
+    "tv_anchored": 62,
+    "fallback_end_est": 11
+  },
+  "a07_corr": {
+    "presser": -0.9956175543447404,
+    "statement": -0.9954273964891138
+  },
+  "a07_flags": []
+}

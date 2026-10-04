@@ -1,0 +1,333 @@
+Mebane T. Faber                             APRIL 2010
+Portfolio Manager
+CAMBRIA INVESTMENT MANAGEMENT, INC.
+
+Relative Strength Strategies for Investing
+
+                           First Draft
+                           April 2010
+
+                                                           ABSTRACT
+
+The purpose of this paper is to present simple quantitative methods that improve risk-adjusted returns for
+investing in US equity sector and global asset class portfolios. A relative strength model is tested on the
+French-Fama US equity sector data back to the 1920s that results in increased absolute returns with equity-like
+risk. The relative strength portfolios outperform the buy and hold benchmark in approximately 70% of all years
+and returns are persistent across time. The addition of a trendfollowing parameter to dynamically hedge the
+portfolio decreases both volatility and drawdown. The relative strength model is then tested across a portfolio
+of global asset classes with supporting results.
+
+                                                  mf@cambriainvestments.com
+                                             http://www.cambriainvestments.com/
+
+                                                     www.mebanefaber.com
+
+2321 ROSECRANS AVE., SUITE 4210
+EL SEGUNDO, CA 90245
+(310) 606-5555
+
+                                        Electronic copy available at: http://ssrn.com/abstract=1585517
+MOMENTUM
+
+Momentum based strategies, in which we group both trendfollowing and relative strength techniques, have been
+applied as investment strategies for over a century. Momentum has been one of the most widely discussed and
+researched investment strategies (some academics would prefer the term "anomaly").
+
+This paper is not an attempt to summarize the momentum literature. There are numerous sources that have
+done a fine job on that front already including:
+
+On the Nature and Origins of Trendfollowing - Stig Ostgaard
+The Case for Momentum Investing - AQR Website
+Bringing Real World Testing to Relative Strength - John Lewis
+Global Investment Returns Yearbook - Dimson, Marsh, Staunton
+Appendix in Smarter Investing in Any Economy - Michael Carr
+Trendfollowing - Michael Covel
+The Capitalism Distribution - BlackStar Funds
+Annotated Bibliography of Selected Momentum Research Papers - AQR Website
+
+Nor is this paper an attempt to publish an original and unique method for momentum investing. Similar
+systems and techniques to those that follow in this paper have been utilized for decades. Rather, our intent is to
+describe some simple methods that an everyday investor can use to implement momentum models in trading.
+The focus is on the practitioner with real world applicability.
+
+www.cambriainvestments.com                                                                               2
+
+Electronic copy available at: http://ssrn.com/abstract=1585517
+DATA
+
+This research report utilizes the French-Fama CRSP Data Library since it has the longest history and is widely
+relied upon and accepted in the research community. Specifically, we are using the 10 Industry Portfolios with
+monthly returns from July 1926 through December 2009, encompassing over eight decades of US equity sector
+returns. Our study begins in 1928 since a year is needed for a ranking period. We utilize the value weighted
+groupings rather than the less realistic equal weighted portfolios, and the sectors are described below:
+
+Consumer Non-Durables -- Food, Tobacco, Textiles, Apparel, Leather, Toys
+Consumer Durables -- Cars, TV's, Furniture, Household Appliances
+Manufacturing -- Machinery, Trucks, Planes, Chemicals, Office Furniture, Paper, Commercial Printing
+Energy -- Oil, Gas, and Coal Extraction and Products
+Technology -- Computers, Software, and Electronic Equipment
+Telecommunications -- Telephone and Television Transmission
+Shops -- Wholesale, Retail, and Some Services (Laundries, Repair Shops)
+Health -- Healthcare, Medical Equipment, and Drugs
+Utilities
+Other -- Mines, Construction, Transportation, Hotels, Business Services, Entertainment, Finance
+
+Data for the global asset classes are obtained from Global Financial Data and described in the Appendix.
+
+www.cambriainvestments.com  3
+SECTOR RETURNS
+In the United States the 20th Century experienced strong returns for an equity investor.
+
+                                Exhibit 1 - US Equity Sector Total Returns, 1928-2009
+
+www.cambriainvestments.com                                                                4
+Exhibit 2 - US Equity Sector Total Returns, 1928-2009
+
+For comparison we have included a portfolio that is equal weighted among the ten sectors, rebalanced monthly,
+as well as the S&P 500.
+
+                                     Exhibit 3 - US Equity Total Returns, 1928-2009
+
+www.cambriainvestments.com                             5
+Investors received strong returns for equities, but they were not without risk. Volatility and massive drawdowns
+were commonplace. Below we will examine a method for momentum investing, specifically relative strength.
+Below are the buy and sell rules for the system.
+
+RANKING
+
+Each month the ten sectors are ranked on trailing total return including dividends. We use varying periods of
+measurement ranging from one to twelve months, as well as a combination of multiple months.
+
+For example: If we are examining relative strength at the one month interval on December 31st 2009, we would
+simply sort the ten sectors by their prior month (December 2009) total returns including dividends. For the
+three month period, we would sort the ten sectors by their three month (October 2009-December 2009) total
+returns including dividends.
+
+BUY RULE
+The system invests in the top X sectors. For Top 1, the system is 100% invested in the top ranked sector. For
+Top 2, the system is 50% invested in each of the top two sectors. For Top 3, the system is 33% invested in each
+of the top three sectors.
+
+SELL RULE
+
+Since the system is a simple ranking, the top X sectors are held and if a sector falls out of the top X sectors it is
+sold at the monthly rebalance and replaced with the sector in the top X.
+
+www.cambriainvestments.com  6
+1. All entry and exit prices are on the day of the signal at the close. The model is only updated once a month
+on the last day of the month. Price fluctuations during the rest of the month are ignored.
+2. All data series are total return series including dividends, updated monthly.
+3. Taxes, commissions, and slippage are excluded (see the Real World Implementation section later in the
+paper).
+
+Below are summaries of the various ranking periods and returns for the portfolios. The 1, 3, 6, 9, and 12 month
+combination simply takes an average of the five rolling returns for each sector every month to sort the 10
+sectors.
+
+www.cambriainvestments.com  7
+Exhibit 4.1 - 1 Month Relative Strength Portfolios, 1928-2009
+
+Exhibit 4.2 - 3 Month Relative Strength Portfolios, 1928-2009
+
+Exhibit 4.3 - 6 Month Relative Strength Portfolios, 1928-2009
+
+Exhibit 4.4 - 9 Month Relative Strength Portfolios, 1928-2009
+
+Exhibit 4.5 - 12 Month Relative Strength Portfolios, 1928-2009
+
+www.cambriainvestments.com                                      8
+          Exhibit 4.6 - Combination 1, 3, 6, 9 and 12 Month Relative Strength Portfolios, 1928-2009
+
+From the above tables it is apparent that the relative strength method works on all of the measurement periods
+from one month to twelve months, as well as a combination of the 1, 3, 6, 9, and 12 month time periods. More
+interesting is that the system outperforms buy and hold in roughly 70% of all years. Below is an equity curve
+for the combination measurement system. A rough estimate of 300-600 basis points of outperformance per year
+is reasonable.
+
+www.cambriainvestments.com  9
+Exhibit 5 - Relative Strength Portfolios, 1928-2009
+
+www.cambriainvestments.com                           10
+Exhibit 6 shows the outperformance by decade for the relative strength strategy on a yearly compounded basis.
+For example, the Top 1 beat the buy and hold portfolio by 2.68% a year in the 1930s.
+
+            Exhibit 6 - Relative Strength Portfolios, CAGR Outperformance by Decade 1928-2009
+
+SOLUTIONS TO THE DRAWBACKS OF RELATIVE STRENGTH SYSTEMS
+
+The biggest drawback of a relative strength system is that the portfolio is long-only and fully invested, thus
+leaving the portfolio exposed to the risks of that particular asset beta. In this case the investor is exposed
+primarily to US stock risk. This detail can be seen in the volatility and drawdowns of all of the portfolios.
+There are two possible solutions to control for the losses and drawdowns while using a relative strength rotation
+system: (1) hedging and, (2) adding non-correlated asset classes.
+
+Solution 1: Hedging (either moving to cash or hedging with shorts). Hedging can be done on a sector basis
+
+or on a portfolio wide asset class basis. An investor could utilize a static hedge that always hedges a percentage
+
+of the portfolio, or possibly the entire portfolio (market neutral). This hedging technique has the drawback of
+
+hedging the portfolio when the market is appreciating, but also protects against all declines and shocks. An
+
+www.cambriainvestments.com                               11
+investor could also use options to gain short exposure (essentially acting as insurance), with a cost, to the
+portfolio.
+
+Another hedging option is a dynamic hedging technique that attempts to hedge when conditions are more
+favorable to market declines. Consistent with research we published in "A Quantitative Approach to Tactical
+Asset Allocation", using a long term moving average to hedge a portfolio results in a reduction in volatility and
+drawdown versus buy and hold. This approach can be seen in this research piece we published on trading
+Fidelity Sector Funds, "Combining Rotation and Timing Systems". Below we examine the combination of the
+1, 3, 6, 9, and 12 month sector rotation portfolios when they are dynamically hedged. The portfolios move
+entirely to 100% cash (T-Bills) when the S&P 500 is below its 10 month Simple Moving Average (SMA).
+(Note: This system could also be run individually on the sectors with similar results.)
+
+                       Exhibit 7 - Dynamically Hedged Combination 1, 3, 6, 9 and 12 Month
+                                          Relative Strength Portfolios, 1928-2009
+
+By adding the dynamic hedge, most portfolios preserve their returns (although the Top 1 takes a 150 basis point
+hit), but have the added benefit of reduced volatility and drawdowns. While an approximate 40-50% drawdown
+is still large, it is more tolerable than a 70-80% drawdown.
+
+www.cambriainvestments.com  12
+Solution 2: Addition of non-correlated asset classes. The second possible solution to the drawback of single
+asset class exposure inherent in the US sector rotation strategy is to add non-correlated global asset classes to
+the portfolio. Just as we have demonstrated above that a momentum strategy works in US equity sectors, so too
+does momentum work across global asset classes. We detailed this method in our book The Ivy Portfolio with a
+global rotation system that adds foreign stocks, bonds, REITs, and commodities to the portfolio. Other asset
+classes and spreads could be included to further diversify the portfolio, but examining this simple five asset
+class portfolio is instructive.
+
+Below are the returns of the five asset classes we examine in this paper since 1973. The buy and hold
+benchmark is an equal-weighted portfolio of the five asset classes, rebalanced monthly.
+
+                               Exhibit 8 - Global Asset Class Total Returns, 1973-2009
+
+www.cambriainvestments.com  13
+Exhibit 9 - Global Asset Class Total Returns, 1973-2009
+
+Below are summaries of the various ranking periods and returns for the portfolios.
+
+www.cambriainvestments.com                                                          14
+Exhibit 10.1 - 1 Month Relative Strength Portfolios, 1973-2009
+Exhibit 10.2 - 3 Month Relative Strength Portfolios, 1973-2009
+Exhibit 10.3 - 6 Month Relative Strength Portfolios, 1973-2009
+Exhibit 10.4 - 9 Month Relative Strength Portfolios, 1973-2009
+
+www.cambriainvestments.com                                      15
+                          Exhibit 10.5 - 12 Month Relative Strength Portfolios, 1973-2009
+
+         Exhibit 10.6 - Combination 1, 3, 6, 9, and 12 Month Relative Strength Portfolios, 1973-2009
+
+From the above tables it is apparent that the relative strength method works on all of the measurement periods
+from one month to twelve months, as well as a combination of time periods. More interesting is that the system
+outperforms buy and hold in roughly 70% of all years. A rough estimate of 300-600 basis points of
+outperformance per year is reasonable. Below is an equity curve:
+
+www.cambriainvestments.com  16
+Exhibit 11 - Combination 1, 3, 6, 9, and 12 Month Relative Strength Portfolios, 1973-2009
+
+Exhibit 12 shows the outperformance by decade for the relative strength strategy on a yearly compounded basis.
+For example, the Top 1 beat the buy and hold portfolio by 6% a year in the 1990s.
+
+www.cambriainvestments.com                                                                 17
+ Exhibit 12 - Combination 1, 3, 6, 9, and 12 Month Relative Strength Portfolios, CAGR Outperformance
+                                                      by Decade 1973-2009
+
+What about combination both solutions? Below we report the results of rotation among global asset classes but
+only investing in the asset class if it is trading above its 10 month SMA (otherwise that portion is invested in T-
+Bills).
+The results are slightly improved Sharpe Ratios and similar absolute returns, but with marked reductions in
+drawdown. The effect is most seen in the portfolios that utilized more asset classes.
+
+         Exhibit 10.6 - Combination 1, 3, 6, 9, and 12 Month Relative Strength Portfolios, 1973-2009
+
+www.cambriainvestments.com  18
+REAL WORLD IMPLEMENTATION
+
+While this paper is meant to be an instructive base case scenario, care must be observed when translating theory
+into real world trading. While most industries over the period examined were represented by a robust amount
+of underlying companies, a few (Telecom and Health specifically) had less than twenty companies until the
+1950s. The persistence of the momentum strategy by decade goes to show that this was not simply a property
+of markets 80 years ago, but continues to work today.
+
+Obviously US sector funds did not exist in the 1920s. Attempting to transact in shares of the underlying
+companies would have been far too expensive to actively manage the portfolio in the early part of the 20th
+Century as turnover of 100% to 400% is very high for transactions in exchange traded securities. However,
+even assuming a round trip cost of 1% to the portfolio would still allow for excess momentum profits to the
+portfolios.
+
+The practitioner today can choose from thousands of mutual funds, ETFs, and closed-end funds. Many of these
+funds can be traded for $8 a trade or less, and many mutual funds and ETFs are now commission free at some
+online brokers. Mutual funds also avoid any bid ask spread and market impact costs, but also typically have
+higher management fees than ETFs and can be subject to redemption fees if held for short periods of time
+(many Fidelity funds require a holding period of 30 days). Some ETFs can be painfully illiquid so care must be
+taken when selecting funds.
+
+www.cambriainvestments.com  19
+To reduce trading frequency and possible transaction costs an investor could implement a sell filter. Assuming
+a universe of ten funds, the investor could buy the top three funds and sell them when the funds drop out of the
+top five funds. This approach would lower the turnover to sub-100% levels.
+As with any strategy, taxes are a very real consideration and the strategy should be traded in a tax deferred
+account. It is difficult to estimate the impact an investor would experience due to varying tax rates by income
+bracket and over time, but an increase from 5-20% turnover to 70-100% turnover could result in an increase in
+taxes of 50-150 bps.
+
+CONCLUSION
+
+The purpose of this paper was to demonstrate a simple-to-follow method for utilizing relative strength in
+investing in US equities and global asset classes. The results showed robust performance across measurement
+periods as well as over the past eight decades. While absolute returns were improved, volatility and drawdown
+remained high. Various methods were examined that could be used as solutions to a long only rotation system
+including hedging and adding non-correlated asset classes.
+
+www.cambriainvestments.com  20
+APPENDIX A - DATA SOURCES
+
+From the French-Fama website:
+
+Detail for 10 Industry Portfolios
+
+Daily Returns:    July 1, 1963-December 31, 2009
+
+Monthly Returns:  July 1926-December 2009
+
+Annual Returns:   1927-2009
+
+Portfolios:       Download industry definitions
+
+We assign each NYSE, AMEX, and NASDAQ stock to an industry portfolio at the end of June of year t based
+on its four-digit SIC code at that time. (We use Compustat SIC codes for the fiscal year ending in calendar year
+t-1. Whenever Compustat SIC codes are not available, we use CRSP SIC codes for June of year t.) We then
+compute returns from July of t to June of t+1.
+
+Fama and French update the research data at least once a year, but we may update them at other times. Unlike
+the benchmark portfolios, (1) we reform almost all these portfolios annually (UMD is formed monthly), (2) we
+do not include a hold range, and (3) we ignore transaction costs. In addition, we reconstruct the full history of
+returns each time we update the portfolios. (Historical returns can change, for example, if CRSP revises its
+database.) Although the portfolios include all NYSE, AMEX, and NASDAQ firms with the necessary data, the
+breakpoints use only NYSE firms.
+
+S&P 500 Index - A capitalization-weighted index of 500 stocks that is designed to mirror the performance of
+the United States economy. Total return series is provided by Global Financial Data and results pre-1971 are
+constructed by GFD. Data from 1900-1971 uses the S&P Composite Price Index and dividend yields supplied
+by the Cowles Commission and from S&P itself.
+
+www.cambriainvestments.com                        21
+MSCI EAFE Index (Europe, Australasia, Far East) - A free float-adjusted market capitalization index that is
+designed to measure the equity market performance of developed markets, excluding the US and Canada. As of
+June 2007 the MSCI EAFE Index consisted of the following 21 developed market country indices: Australia,
+Austria, Belgium, Denmark, Finland, France, Germany, Greece, Hong Kong, Ireland, Italy, Japan, the
+Netherlands, New Zealand, Norway, Portugal, Singapore, Spain, Sweden, Switzerland, and the United
+Kingdom. Total return series is provided by Morgan Stanley.
+
+U.S. Government 10-Year Bonds - Total return series is provided by Global Financial Data.
+
+Goldman Sachs Commodity Index (GSCI) - Represents a diversified basket of commodity futures that is
+unlevered and long only. Total return series is provided by Goldman Sachs.
+
+National Association of Real Estate Investment Trusts (NAREIT) - An index that reflects the performance of
+publicly traded REITs. Total return series is provided by the NAREIT.
+
+www.cambriainvestments.com  22
+

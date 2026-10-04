@@ -1,0 +1,165 @@
+{
+ "stage_folder_name": "backtest_h234_local",
+ "note1_presence": {
+  "20190501": {
+   "drop_timing": 1,
+   "vtt_median_offset_s": -172.786,
+   "qa_ok": false,
+   "h2_ok": false,
+   "h3_ok": false,
+   "h2_exclusion": "qa_failed",
+   "h3_exclusion": "qa_failed",
+   "n_caption_answers": 25,
+   "in_any_baseline": false,
+   "answers_with_zA": 0,
+   "answers_with_U": 0,
+   "valid_chunks_in_record_table": 97,
+   "answer_trades_rows": 0,
+   "h4_rows": 0,
+   "in_h4_training_fit": {
+    "answer_ZT": false,
+    "meeting_ZT": false,
+    "answer_ES": false,
+    "meeting_ES": false
+   },
+   "note": "chunks in the record table are not used: meeting gated out (h2_ok/h3_ok false)",
+   "outside_features_baselines_fits_trades": true
+  },
+  "20230614": {
+   "drop_timing": 1,
+   "vtt_median_offset_s": NaN,
+   "qa_ok": false,
+   "h2_ok": false,
+   "h3_ok": false,
+   "h2_exclusion": "qa_failed;no_caption_timed_answers",
+   "h3_exclusion": "qa_failed;no_caption_timed_answers",
+   "n_caption_answers": 0,
+   "in_any_baseline": false,
+   "answers_with_zA": 0,
+   "answers_with_U": 0,
+   "valid_chunks_in_record_table": 0,
+   "answer_trades_rows": 0,
+   "h4_rows": 0,
+   "in_h4_training_fit": {
+    "answer_ZT": false,
+    "meeting_ZT": false,
+    "answer_ES": false,
+    "meeting_ES": false
+   },
+   "note": "chunks in the record table are not used: meeting gated out (h2_ok/h3_ok false)",
+   "outside_features_baselines_fits_trades": true
+  }
+ },
+ "note1_checks": {
+  "H2_mean_matches": "True",
+  "H2_p_matches": "True",
+  "H4_refit_equals_frozen_fit_C": true,
+  "H4_t_matches": "True",
+  "H4_p_one_matches": "True",
+  "H4_wcb_matches": "True",
+  "holm_matches": {
+   "H2": "True",
+   "H3": "True",
+   "H4": "True"
+  },
+  "rows_equal_main": {
+   "20190501": true,
+   "20230614": true
+  }
+ },
+ "strategy_reconciliation": {
+  "h4_logret_equals_stage_y": true,
+  "sign_C_C0_n_and_mean_match": true,
+  "sign_C_C2_n_and_mean_match": true,
+  "sign_C_C4_n_and_mean_match": true,
+  "sign_T_C0_n_and_mean_match": true,
+  "sign_T_C2_n_and_mean_match": true,
+  "sign_T_C4_n_and_mean_match": true,
+  "h2_copy_of_one_trade_equals_stage": true,
+  "net1x_equals_stage_CMF_where_measured": true,
+  "trades_without_measured_half_spread": {}
+ },
+ "strategy_sizing": [
+  {
+   "strategy": "H2 sign(z_A), ZT +1 min",
+   "sizing_window": "2019-10-30..2022-12-30",
+   "sizing_days": 799,
+   "sizing_trades": 247,
+   "ann_vol_one_contract": 1.4211924736458994e-05,
+   "N_exact": 7036.344608796158,
+   "N": 7036,
+   "ann_vol_with_N": 0.09999510244572549
+  },
+  {
+   "strategy": "H4 sign(yC) (combined), ZT +1 min",
+   "sizing_window": "2019-10-30..2022-12-30",
+   "sizing_days": 799,
+   "sizing_trades": 247,
+   "ann_vol_one_contract": 1.212816037409136e-05,
+   "N_exact": 8245.273554728368,
+   "N": 8245,
+   "ann_vol_with_N": 0.09999668228438326
+  },
+  {
+   "strategy": "H4 sign(yT) (text-only reference), ZT +1 min",
+   "sizing_window": "2019-10-30..2022-12-30",
+   "sizing_days": 799,
+   "sizing_trades": 247,
+   "ann_vol_one_contract": 1.4406905709241633e-05,
+   "N_exact": 6941.115741172149,
+   "N": 6941,
+   "ann_vol_with_N": 0.09999833252784618
+  }
+ ],
+ "capital_usd": 10000000.0,
+ "target_vol": 0.1,
+ "fee_usd_per_side": 2.0,
+ "calendar": "gqh/index_daily.parquet ^GSPC trading days"
+}
+                      row test       status    n  n_meetings  mean_ticks     t_cr1  p_wcb_two    p_used   ci90_lo   ci90_hi  train_n  train_meetings      cw_t     p_one     p_two  wcb_p_one  oos_r2_C_vs_T  oos_r2_C_vs_zero  oos_r2_T_vs_zero  sign_hit_C  sign_hit_T    p_holm
+0  main (nothing dropped)   H2          run  268          10   -0.085821 -0.814511     0.4382  0.438200 -0.261538  0.068345      NaN             NaN       NaN       NaN       NaN        NaN            NaN               NaN               NaN         NaN         NaN  0.876400
+1  main (nothing dropped)   H3  killed (G4)  272          10    0.011029  0.067085     0.9507  1.000000 -0.176056  0.216730      NaN             NaN       NaN       NaN       NaN        NaN            NaN               NaN               NaN         NaN         NaN  1.000000
+2  main (nothing dropped)   H4          run  268          10         NaN       NaN        NaN  0.244227       NaN       NaN    247.0            12.0  0.722296  0.244227  0.488455     0.2576      -0.004279         -0.029219         -0.024834     0.49763    0.488152  0.732682
+3        without 20190501   H2          run  268          10   -0.085821 -0.814511     0.4382  0.438200 -0.261538  0.068345      NaN             NaN       NaN       NaN       NaN        NaN            NaN               NaN               NaN         NaN         NaN  0.876400
+4        without 20190501   H3  killed (G4)  272          10    0.011029  0.067085     0.9507  1.000000 -0.176056  0.216730      NaN             NaN       NaN       NaN       NaN        NaN            NaN               NaN               NaN         NaN         NaN  1.000000
+5        without 20190501   H4          run  268          10         NaN       NaN        NaN  0.244227       NaN       NaN    247.0            12.0  0.722296  0.244227  0.488455     0.2576      -0.004279         -0.029219         -0.024834     0.49763    0.488152  0.732682
+6        without 20230614   H2          run  268          10   -0.085821 -0.814511     0.4382  0.438200 -0.261538  0.068345      NaN             NaN       NaN       NaN       NaN        NaN            NaN               NaN               NaN         NaN         NaN  0.876400
+7        without 20230614   H3  killed (G4)  272          10    0.011029  0.067085     0.9507  1.000000 -0.176056  0.216730      NaN             NaN       NaN       NaN       NaN        NaN            NaN               NaN               NaN         NaN         NaN  1.000000
+8        without 20230614   H4          run  268          10         NaN       NaN        NaN  0.244227       NaN       NaN    247.0            12.0  0.722296  0.244227  0.488455     0.2576      -0.004279         -0.029219         -0.024834     0.49763    0.488152  0.732682
+                                        strategy                                                              window   cost  N_contracts  n_trades  n_meetings  ann_return   ann_vol    sharpe  max_drawdown  mean_ticks_per_trade  hit_rate
+0                        H2 sign(z_A), ZT +1 min                          training window (sizing; H4 in-sample fit)  gross         7036       247          12    0.013869  0.099995  0.138701     -0.077699              0.032389  0.307692
+1                        H2 sign(z_A), ZT +1 min                          training window (sizing; H4 in-sample fit)  net1x         7036       247          12   -0.640533  0.344266 -1.860575     -2.030897             -1.495806  0.133603
+2                        H2 sign(z_A), ZT +1 min                          training window (sizing; H4 in-sample fit)  net2x         7036       247          12   -1.294936  0.675098 -1.918146     -4.105770             -3.024000  0.048583
+3                        H2 sign(z_A), ZT +1 min                       TEST window 2023-02-01..2026-04-29 (headline)  gross         7036       268          10   -0.039188  0.083209 -0.470961     -0.207533             -0.085821  0.380597
+4                        H2 sign(z_A), ZT +1 min                       TEST window 2023-02-01..2026-04-29 (headline)  net1x         7036       268          10   -0.739830  0.421188 -1.756530     -2.386831             -1.620209  0.179104
+5                        H2 sign(z_A), ZT +1 min                       TEST window 2023-02-01..2026-04-29 (headline)  net2x         7036       268          10   -1.440471  0.815501 -1.766363     -4.647234             -3.154597  0.037313
+6                        H2 sign(z_A), ZT +1 min  competition IS: first trade..2024-10-02 (includes training trades)  gross         7036       303          14    0.015652  0.081269  0.192596     -0.077699              0.046205  0.336634
+7                        H2 sign(z_A), ZT +1 min  competition IS: first trade..2024-10-02 (includes training trades)  net1x         7036       303          14   -0.502697  0.310327 -1.619895     -2.471593             -1.483947  0.151815
+8                        H2 sign(z_A), ZT +1 min  competition IS: first trade..2024-10-02 (includes training trades)  net2x         7036       303          14   -1.021046  0.615771 -1.658159     -5.020142             -3.014099  0.042904
+9                        H2 sign(z_A), ZT +1 min          competition OOS: 2024-10-03..2026-10-02 (test trades only)  gross         7036       212           8   -0.080182  0.104079 -0.770394     -0.214378             -0.136792  0.358491
+10                       H2 sign(z_A), ZT +1 min          competition OOS: 2024-10-03..2026-10-02 (test trades only)  net1x         7036       212           8   -0.978895  0.488515 -2.003819     -1.946136             -1.670019  0.165094
+11                       H2 sign(z_A), ZT +1 min          competition OOS: 2024-10-03..2026-10-02 (test trades only)  net2x         7036       212           8   -1.877607  0.931845 -2.014935     -3.732862             -3.203245  0.042453
+12             H4 sign(yC) (combined), ZT +1 min                          training window (sizing; H4 in-sample fit)  gross         8245       247          12    0.052821  0.099997  0.528229     -0.064235              0.105263  0.319838
+13             H4 sign(yC) (combined), ZT +1 min                          training window (sizing; H4 in-sample fit)  net1x         8245       247          12   -0.714028  0.377380 -1.892069     -2.263922             -1.422931  0.141700
+14             H4 sign(yC) (combined), ZT +1 min                          training window (sizing; H4 in-sample fit)  net2x         8245       247          12   -1.480877  0.767400 -1.929733     -4.695321             -2.951126  0.052632
+15             H4 sign(yC) (combined), ZT +1 min                       TEST window 2023-02-01..2026-04-29 (headline)  gross         8245       268          10   -0.013976  0.112274 -0.124482     -0.224842             -0.026119  0.391791
+16             H4 sign(yC) (combined), ZT +1 min                       TEST window 2023-02-01..2026-04-29 (headline)  net1x         8245       268          10   -0.835009  0.485828 -1.718735     -2.693899             -1.560507  0.190299
+17             H4 sign(yC) (combined), ZT +1 min                       TEST window 2023-02-01..2026-04-29 (headline)  net2x         8245       268          10   -1.656042  0.946035 -1.750509     -5.342708             -3.094896  0.044776
+18             H4 sign(yC) (combined), ZT +1 min  competition IS: first trade..2024-10-02 (includes training trades)  gross         8245       303          14    0.060265  0.092464  0.651770     -0.064235              0.151815  0.353135
+19             H4 sign(yC) (combined), ZT +1 min  competition IS: first trade..2024-10-02 (includes training trades)  net1x         8245       303          14   -0.547152  0.332734 -1.644411     -2.690163             -1.378337  0.161716
+20             H4 sign(yC) (combined), ZT +1 min  competition IS: first trade..2024-10-02 (includes training trades)  net2x         8245       303          14   -1.154569  0.691475 -1.669720     -5.676631             -2.908488  0.052805
+21             H4 sign(yC) (combined), ZT +1 min          competition OOS: 2024-10-03..2026-10-02 (test trades only)  gross         8245       212           8   -0.087480  0.123346 -0.709221     -0.251101             -0.127358  0.363208
+22             H4 sign(yC) (combined), ZT +1 min          competition OOS: 2024-10-03..2026-10-02 (test trades only)  net1x         8245       212           8   -1.140619  0.579739 -1.967469     -2.267658             -1.660585  0.174528
+23             H4 sign(yC) (combined), ZT +1 min          competition OOS: 2024-10-03..2026-10-02 (test trades only)  net2x         8245       212           8   -2.193758  1.099468 -1.995290     -4.361399             -3.193811  0.042453
+24  H4 sign(yT) (text-only reference), ZT +1 min                          training window (sizing; H4 in-sample fit)  gross         6941       247          12    0.085514  0.099998  0.855152     -0.040915              0.202429  0.344130
+25  H4 sign(yT) (text-only reference), ZT +1 min                          training window (sizing; H4 in-sample fit)  net1x         6941       247          12   -0.560053  0.298055 -1.879029     -1.775725             -1.325765  0.153846
+26  H4 sign(yT) (text-only reference), ZT +1 min                          training window (sizing; H4 in-sample fit)  net2x         6941       247          12   -1.205620  0.624705 -1.929904     -3.822582             -2.853960  0.056680
+27  H4 sign(yT) (text-only reference), ZT +1 min                       TEST window 2023-02-01..2026-04-29 (headline)  gross         6941       268          10   -0.068914  0.122966 -0.560427     -0.244020             -0.152985  0.384328
+28  H4 sign(yT) (text-only reference), ZT +1 min                       TEST window 2023-02-01..2026-04-29 (headline)  net1x         6941       268          10   -0.760095  0.446965 -1.700570     -2.452212             -1.687373  0.164179
+29  H4 sign(yT) (text-only reference), ZT +1 min                       TEST window 2023-02-01..2026-04-29 (headline)  net2x         6941       268          10   -1.451277  0.832523 -1.743227     -4.682095             -3.221761  0.029851
+30  H4 sign(yT) (text-only reference), ZT +1 min  competition IS: first trade..2024-10-02 (includes training trades)  gross         6941       303          14    0.041911  0.088646  0.472790     -0.102287              0.125413  0.356436
+31  H4 sign(yT) (text-only reference), ZT +1 min  competition IS: first trade..2024-10-02 (includes training trades)  net1x         6941       303          14   -0.469440  0.295250 -1.589972     -2.308078             -1.404739  0.155116
+32  H4 sign(yT) (text-only reference), ZT +1 min  competition IS: first trade..2024-10-02 (includes training trades)  net2x         6941       303          14   -0.980790  0.595382 -1.647330     -4.822216             -2.934891  0.049505
+33  H4 sign(yT) (text-only reference), ZT +1 min          competition OOS: 2024-10-03..2026-10-02 (test trades only)  gross         6941       212           8   -0.079099  0.145238 -0.544621     -0.200621             -0.136792  0.377358
+34  H4 sign(yT) (text-only reference), ZT +1 min          competition OOS: 2024-10-03..2026-10-02 (test trades only)  net1x         6941       212           8   -0.965678  0.500224 -1.930489     -1.919859             -1.670019  0.165094
+35  H4 sign(yT) (text-only reference), ZT +1 min          competition OOS: 2024-10-03..2026-10-02 (test trades only)  net2x         6941       212           8   -1.852256  0.932979 -1.985313     -3.682461             -3.203245  0.033019

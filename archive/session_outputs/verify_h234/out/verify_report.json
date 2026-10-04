@@ -1,0 +1,1240 @@
+{
+ "checks": [
+  {
+   "name": "H2: feature zA in the selection table equals answers_h234.parquet (exact, round-trip parse)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "H2: ZT position = +sign(zA) for all 515 selected answers",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "H3: feature U in the selection table equals answers_h234.parquet (exact, round-trip parse)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "H3: ZT position = +sign(U) for all 524 selected answers",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "H4: zA in answer_sel_H4_h1 equals the feature table (exact, round-trip parse)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "H4: U in answer_sel_H4_h1 equals the feature table (exact, round-trip parse)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "H4: s_tilde equals the frozen H1 H1__resid (exact)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "H2: selection re-derived (h=1) equals answer_sel_H2_h1 (515 answers)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "H3: selection re-derived (h=1) equals answer_sel_H3_h1 (524 answers)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "H4: selection re-derived equals answer_sel_H4_h1 (515 answers)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "H2 primary n answers",
+   "mine": 268.0,
+   "run": 268.0,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H2 primary n meetings",
+   "mine": 10.0,
+   "run": 10.0,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H2 primary mean gross ticks (ZT, +1 min)",
+   "mine": -0.08582089552238806,
+   "run": -0.085820895522388,
+   "rel_diff": 6.468255882598738e-16,
+   "ok": true
+  },
+  {
+   "name": "H2 primary CR1 SE",
+   "mine": 0.1053649038412457,
+   "run": 0.1053649038412457,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H2 primary CR1 t",
+   "mine": -0.8145112119277897,
+   "run": -0.8145112119277896,
+   "rel_diff": 1.3630543181811756e-16,
+   "ok": true
+  },
+  {
+   "name": "H2 primary wild-cluster p two-sided (seed 20261003, 9,999 draws)",
+   "mine": 0.4382,
+   "run": 0.4382,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H2 Holm input p_raw = recomputed p",
+   "mine": 0.4382,
+   "run": 0.4382,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H2 family mean_ticks = recomputed mean",
+   "mine": -0.08582089552238806,
+   "run": -0.08582089552238806,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H2: same trade set as the run's trade log (268 vs 268)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "H2: per-trade entry/exit prices, position and gross ticks equal the run's trade log",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "H3 primary n answers",
+   "mine": 272.0,
+   "run": 272.0,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H3 primary n meetings",
+   "mine": 10.0,
+   "run": 10.0,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H3 primary mean gross ticks (ZT, +1 min)",
+   "mine": 0.011029411764705883,
+   "run": 0.0110294117647058,
+   "rel_diff": 7.549516567451064e-15,
+   "ok": true
+  },
+  {
+   "name": "H3 primary CR1 SE",
+   "mine": 0.16440837231205985,
+   "run": 0.1644083723120598,
+   "rel_diff": 3.37641875840078e-16,
+   "ok": true
+  },
+  {
+   "name": "H3 primary CR1 t",
+   "mine": 0.06708546292138459,
+   "run": 0.0670854629213845,
+   "rel_diff": 1.448071019030485e-15,
+   "ok": true
+  },
+  {
+   "name": "H3 primary wild-cluster p two-sided (seed 20261003, 9,999 draws)",
+   "mine": 0.9507,
+   "run": 0.9507,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H3: same trade set as the run's trade log (272 vs 272)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "H3: per-trade entry/exit prices, position and gross ticks equal the run's trade log",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "H4 training n answers",
+   "mine": 247.0,
+   "run": 247.0,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H4 training n meetings",
+   "mine": 12.0,
+   "run": 12.0,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H4 training meetings equal fit.json list",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "H4 training dates all <= 2022-12-31",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "H4 fit standardise mean s_tilde",
+   "mine": -0.03437918725848512,
+   "run": -0.03437918725848512,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H4 fit standardise sd s_tilde",
+   "mine": 0.21831304838310392,
+   "run": 0.21831304838310392,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H4 fit standardise mean zA",
+   "mine": 0.8175137420345456,
+   "run": 0.8175137420345456,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H4 fit standardise sd zA",
+   "mine": 1.1342284123373896,
+   "run": 1.1342284123373896,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H4 fit standardise mean U",
+   "mine": 0.2656273923296755,
+   "run": 0.2656273923296755,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H4 fit standardise sd U",
+   "mine": 0.4754925054131252,
+   "run": 0.4754925054131252,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H4 fit coef_T.const (refit from market data)",
+   "mine": 0.07327107274243974,
+   "run": 0.07327107274243971,
+   "rel_diff": 3.788067319990588e-16,
+   "ok": true
+  },
+  {
+   "name": "H4 fit coef_T.s_tilde (refit from market data)",
+   "mine": -0.015470774424473836,
+   "run": -0.01547077442447383,
+   "rel_diff": 3.363871959568964e-16,
+   "ok": true
+  },
+  {
+   "name": "H4 fit coef_C.const (refit from market data)",
+   "mine": 0.07327107274243976,
+   "run": 0.0732710727424397,
+   "rel_diff": 7.576134639981174e-16,
+   "ok": true
+  },
+  {
+   "name": "H4 fit coef_C.s_tilde (refit from market data)",
+   "mine": 0.012565505840705404,
+   "run": 0.012565505840705437,
+   "rel_diff": 2.6230337609479754e-15,
+   "ok": true
+  },
+  {
+   "name": "H4 fit coef_C.zA (refit from market data)",
+   "mine": -0.021777935773349015,
+   "run": -0.021777935773349015,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H4 fit coef_C.U (refit from market data)",
+   "mine": -0.08357884312069719,
+   "run": -0.08357884312069726,
+   "rel_diff": 8.302213388963382e-16,
+   "ok": true
+  },
+  {
+   "name": "H4 test n answers",
+   "mine": 268.0,
+   "run": 268.0,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H4 test n meetings (G)",
+   "mine": 10.0,
+   "run": 10.0,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H4 CW mean f",
+   "mine": 0.008298241082750124,
+   "run": 0.008298241082750124,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H4 CW CR1 SE",
+   "mine": 0.011488705017339392,
+   "run": 0.01148870501733939,
+   "rel_diff": 1.509938216151138e-16,
+   "ok": true
+  },
+  {
+   "name": "H4 CW t",
+   "mine": 0.7222955999153915,
+   "run": 0.7222955999153916,
+   "rel_diff": 1.53707571353779e-16,
+   "ok": true
+  },
+  {
+   "name": "H4 CW p one-sided t(G-1)",
+   "mine": 0.24422731404678433,
+   "run": 0.24422731404678433,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H4 CW p two-sided t(G-1)",
+   "mine": 0.4884546280935687,
+   "run": 0.48845462809356865,
+   "rel_diff": 1.1364648431711464e-16,
+   "ok": true
+  },
+  {
+   "name": "H4 CW wild bootstrap p one-sided",
+   "mine": 0.2576,
+   "run": 0.2576,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H4 CW wild bootstrap p two-sided",
+   "mine": 0.5001,
+   "run": 0.5001,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H4 OOS R2 C vs T",
+   "mine": -0.00427856863017384,
+   "run": -0.00427856863017384,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H4 OOS R2 C vs zero",
+   "mine": -0.029219004597726084,
+   "run": -0.029219004597726084,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H4 OOS R2 T vs zero",
+   "mine": -0.024834181218833296,
+   "run": -0.024834181218833296,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H4 sign hit C",
+   "mine": 0.4976303317535545,
+   "run": 0.4976303317535545,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H4 sign hit T",
+   "mine": 0.4881516587677725,
+   "run": 0.4881516587677725,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H4 Holm input p_raw = recomputed CW p one-sided",
+   "mine": 0.24422731404678433,
+   "run": 0.24422731404678433,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H4: per-answer y, yT, yC equal h4_answer_rows (n matched 268 of 268)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "H4 sign(yC) gross mean ticks",
+   "mine": -0.026119402985074626,
+   "run": -0.026119402985074626,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H4 sign(yC) gross wild p two-sided",
+   "mine": 0.8384,
+   "run": 0.8384,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H4 sign(yC) C2 mean ticks",
+   "mine": -4.026119402985074,
+   "run": -4.026119402985074,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H4 sign(yC) C4 mean ticks",
+   "mine": -8.026119402985074,
+   "run": -8.026119402985074,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H4 sign(yT) gross mean ticks",
+   "mine": -0.15298507462686567,
+   "run": -0.15298507462686567,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H4 sign(yT) gross wild p two-sided",
+   "mine": 0.3358,
+   "run": 0.3358,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H4 sign(yT) C2 mean ticks",
+   "mine": -4.152985074626866,
+   "run": -4.152985074626866,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "H4 sign(yT) C4 mean ticks",
+   "mine": -8.152985074626866,
+   "run": -8.152985074626866,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "Holm adjusted p H2",
+   "mine": 0.8764,
+   "run": 0.8764,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "Holm adjusted p H3",
+   "mine": 1.0,
+   "run": 1.0,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "Holm adjusted p H4",
+   "mine": 0.732681942140353,
+   "run": 0.732681942140353,
+   "rel_diff": 0.0,
+   "ok": true
+  },
+  {
+   "name": "qa: every file still matches its manifest hash",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "features: every file still matches its manifest hash",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "positions: every file still matches its manifest hash",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "fit.json records the current positions manifest hash",
+   "ok": true,
+   "detail": "22d7eab9f703395c44d08ad21ea399dcfb3749a604573f4dd85e6907ba4d2a75"
+  },
+  {
+   "name": "fit.json records the current features manifest hash",
+   "ok": true,
+   "detail": "16fd2ac3ba2a0ee475eedeff7e5c39dd1d1e9fc52c6ade75a7c7bcf0dd2705a4"
+  },
+  {
+   "name": "fit.json records the current qa manifest hash",
+   "ok": true,
+   "detail": "d7f4f5a4d4bb5c0908b750155e9aee70024d3d830dac297de35cfb4818d09d07"
+  },
+  {
+   "name": "fit.sha256 file matches fit.json",
+   "ok": true,
+   "detail": "8a864d7722916f6f9bb8bf488235a1b3835fd0e2090a4b35c01f3b684e34a8a1"
+  },
+  {
+   "name": "run_meta and h4_results carry the same fit hash",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "run_meta positions/features manifests equal the frozen manifests",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "fit.json text_chrono answers hash equals the pre-registered 146f281a...",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "H1 code files unchanged since the fit",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "mtime order: features manifest < positions manifest < fit.json <= fit.sha256 < every results file",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "positions manifest is the last file written in positions/",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "no file in qa/, features/, positions/, h4_fit/ modified after the first results file",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "s1 and s2 never construct Bars/Quotes (no market data before positions are hashed)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "s3 evaluates bars only for rows with sample additional_2018_2022 (asserted <= 2022-12-31)",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "bar_log: every h4 training-tag bar event is dated <= 2022-12-31",
+   "ok": true,
+   "detail": {
+    "n_train_tag_events": 0
+   }
+  },
+  {
+   "name": "stage log prints the fit hash before the Holm family output",
+   "ok": true,
+   "detail": {
+    "i_fit": 7272,
+    "i_holm": 7733
+   }
+  },
+  {
+   "name": "20230614: no voice/face value in any feature, baseline, position, fit or trade",
+   "ok": true,
+   "detail": {
+    "feature_answer_rows": 0,
+    "feature_answer_rows_with_any_voice_face_value": 0,
+    "feature_answer_rows_with_counts_or_times_only": 0,
+    "chunk_rows_valid_in_answers": 0,
+    "meeting_feature_values": 0,
+    "h2_ok": [
+     false
+    ],
+    "h3_ok": [
+     false
+    ],
+    "chunk_record_rows": 0,
+    "chunk_rows_valid": 0,
+    "chunk_rows_with_answer_id": 0,
+    "chunk_rows_with_valence_resid": 0,
+    "baseline_rows": 0,
+    "positions_rows_with_zA_or_U": 0,
+    "positions_meeting_feature": 0,
+    "selected_rows": 0,
+    "in_any_fit": false,
+    "answer_trades": 0,
+    "meeting_trades": 0,
+    "h4_rows": 0,
+    "package_tables_read": [
+     "20230614/diarize/chair_check.parquet",
+     "20230614/turns/turns.parquet"
+    ]
+   }
+  },
+  {
+   "name": "20190501: no voice/face value in any feature, baseline, position, fit or trade",
+   "ok": true,
+   "detail": {
+    "feature_answer_rows": 25,
+    "feature_answer_rows_with_any_voice_face_value": 0,
+    "feature_answer_rows_with_counts_or_times_only": 21,
+    "chunk_rows_valid_in_answers": 97,
+    "meeting_feature_values": 0,
+    "h2_ok": [
+     false
+    ],
+    "h3_ok": [
+     false
+    ],
+    "chunk_record_rows": 176,
+    "chunk_rows_valid": 164,
+    "chunk_rows_with_answer_id": 105,
+    "chunk_rows_with_valence_resid": 0,
+    "baseline_rows": 0,
+    "positions_rows_with_zA_or_U": 0,
+    "positions_meeting_feature": 0,
+    "selected_rows": 0,
+    "in_any_fit": false,
+    "answer_trades": 0,
+    "meeting_trades": 0,
+    "h4_rows": 0,
+    "package_tables_read": [
+     "20190501/diarize/chair_check.parquet",
+     "20190501/face/face_frames.parquet",
+     "20190501/turns/turns.parquet",
+     "20190501/voice/voice_chunks.parquet"
+    ]
+   }
+  },
+  {
+   "name": "20200303: no voice/face value in any feature, baseline, position, fit or trade",
+   "ok": true,
+   "detail": {
+    "feature_answer_rows": 0,
+    "feature_answer_rows_with_any_voice_face_value": 0,
+    "feature_answer_rows_with_counts_or_times_only": 0,
+    "chunk_rows_valid_in_answers": 0,
+    "meeting_feature_values": 0,
+    "h2_ok": [],
+    "h3_ok": [],
+    "chunk_record_rows": 0,
+    "chunk_rows_valid": 0,
+    "chunk_rows_with_answer_id": 0,
+    "chunk_rows_with_valence_resid": 0,
+    "baseline_rows": 0,
+    "positions_rows_with_zA_or_U": 0,
+    "positions_meeting_feature": 0,
+    "selected_rows": 0,
+    "in_any_fit": false,
+    "answer_trades": 0,
+    "meeting_trades": 0,
+    "h4_rows": 0,
+    "package_tables_read": []
+   }
+  },
+  {
+   "name": "20200315: no voice/face value in any feature, baseline, position, fit or trade",
+   "ok": true,
+   "detail": {
+    "feature_answer_rows": 0,
+    "feature_answer_rows_with_any_voice_face_value": 0,
+    "feature_answer_rows_with_counts_or_times_only": 0,
+    "chunk_rows_valid_in_answers": 0,
+    "meeting_feature_values": 0,
+    "h2_ok": [],
+    "h3_ok": [],
+    "chunk_record_rows": 0,
+    "chunk_rows_valid": 0,
+    "chunk_rows_with_answer_id": 0,
+    "chunk_rows_with_valence_resid": 0,
+    "baseline_rows": 0,
+    "positions_rows_with_zA_or_U": 0,
+    "positions_meeting_feature": 0,
+    "selected_rows": 0,
+    "in_any_fit": false,
+    "answer_trades": 0,
+    "meeting_trades": 0,
+    "h4_rows": 0,
+    "package_tables_read": []
+   }
+  },
+  {
+   "name": "20260617: no voice/face value in any feature, baseline, position, fit or trade",
+   "ok": true,
+   "detail": {
+    "feature_answer_rows": 0,
+    "feature_answer_rows_with_any_voice_face_value": 0,
+    "feature_answer_rows_with_counts_or_times_only": 0,
+    "chunk_rows_valid_in_answers": 0,
+    "meeting_feature_values": 0,
+    "h2_ok": [],
+    "h3_ok": [],
+    "chunk_record_rows": 0,
+    "chunk_rows_valid": 0,
+    "chunk_rows_with_answer_id": 0,
+    "chunk_rows_with_valence_resid": 0,
+    "baseline_rows": 0,
+    "positions_rows_with_zA_or_U": 0,
+    "positions_meeting_feature": 0,
+    "selected_rows": 0,
+    "in_any_fit": false,
+    "answer_trades": 0,
+    "meeting_trades": 0,
+    "h4_rows": 0,
+    "package_tables_read": []
+   }
+  },
+  {
+   "name": "20260729: no voice/face value in any feature, baseline, position, fit or trade",
+   "ok": true,
+   "detail": {
+    "feature_answer_rows": 0,
+    "feature_answer_rows_with_any_voice_face_value": 0,
+    "feature_answer_rows_with_counts_or_times_only": 0,
+    "chunk_rows_valid_in_answers": 0,
+    "meeting_feature_values": 0,
+    "h2_ok": [],
+    "h3_ok": [],
+    "chunk_record_rows": 0,
+    "chunk_rows_valid": 0,
+    "chunk_rows_with_answer_id": 0,
+    "chunk_rows_with_valence_resid": 0,
+    "baseline_rows": 0,
+    "positions_rows_with_zA_or_U": 0,
+    "positions_meeting_feature": 0,
+    "selected_rows": 0,
+    "in_any_fit": false,
+    "answer_trades": 0,
+    "meeting_trades": 0,
+    "h4_rows": 0,
+    "package_tables_read": []
+   }
+  },
+  {
+   "name": "20260916: no voice/face value in any feature, baseline, position, fit or trade",
+   "ok": true,
+   "detail": {
+    "feature_answer_rows": 0,
+    "feature_answer_rows_with_any_voice_face_value": 0,
+    "feature_answer_rows_with_counts_or_times_only": 0,
+    "chunk_rows_valid_in_answers": 0,
+    "meeting_feature_values": 0,
+    "h2_ok": [],
+    "h3_ok": [],
+    "chunk_record_rows": 0,
+    "chunk_rows_valid": 0,
+    "chunk_rows_with_answer_id": 0,
+    "chunk_rows_with_valence_resid": 0,
+    "baseline_rows": 0,
+    "positions_rows_with_zA_or_U": 0,
+    "positions_meeting_feature": 0,
+    "selected_rows": 0,
+    "in_any_fit": false,
+    "answer_trades": 0,
+    "meeting_trades": 0,
+    "h4_rows": 0,
+    "package_tables_read": []
+   }
+  },
+  {
+   "name": "every meeting in selections and baselines passed QA (h2_ok or h3_ok)",
+   "ok": true,
+   "detail": []
+  },
+  {
+   "name": "zA: recomputed causal z equals the feature table (rel <= 1e-9, same missing pattern)",
+   "ok": true,
+   "detail": {
+    "max_rel": 0.0,
+    "n": 543,
+    "burn_in": [
+     "20180321",
+     "20190130",
+     "20190320",
+     "20190731"
+    ],
+    "floor_binds": "0/22"
+   }
+  },
+  {
+   "name": "zA: no excluded meeting in its baseline order",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "zD: recomputed causal z equals the feature table (rel <= 1e-9, same missing pattern)",
+   "ok": true,
+   "detail": {
+    "max_rel": 0.0,
+    "n": 543,
+    "burn_in": [
+     "20180321",
+     "20190130",
+     "20190320",
+     "20190731"
+    ],
+    "floor_binds": "0/22"
+   }
+  },
+  {
+   "name": "zD: no excluded meeting in its baseline order",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "zBD: recomputed causal z equals the feature table (rel <= 1e-9, same missing pattern)",
+   "ok": true,
+   "detail": {
+    "max_rel": 0.0,
+    "n": 570,
+    "burn_in": [
+     "20180321",
+     "20190130",
+     "20190320",
+     "20190731"
+    ],
+    "floor_binds": "0/22"
+   }
+  },
+  {
+   "name": "zBD: no excluded meeting in its baseline order",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "zBI: recomputed causal z equals the feature table (rel <= 1e-9, same missing pattern)",
+   "ok": true,
+   "detail": {
+    "max_rel": 0.0,
+    "n": 570,
+    "burn_in": [
+     "20180321",
+     "20190130",
+     "20190320",
+     "20190731"
+    ],
+    "floor_binds": "22/22"
+   }
+  },
+  {
+   "name": "zBI: no excluded meeting in its baseline order",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "zES: recomputed causal z equals the feature table (rel <= 1e-9, same missing pattern)",
+   "ok": true,
+   "detail": {
+    "max_rel": 0.0,
+    "n": 570,
+    "burn_in": [
+     "20180321",
+     "20190130",
+     "20190320",
+     "20190731"
+    ],
+    "floor_binds": "0/22"
+   }
+  },
+  {
+   "name": "zES: no excluded meeting in its baseline order",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "U recomputed = mean(zBD, zBI, zES) equals the feature table",
+   "ok": true,
+   "detail": null
+  },
+  {
+   "name": "run folder trade logs, HiPerGator trade-log paths and rerun/ are git-ignored",
+   "ok": true,
+   "detail": [
+    ".gitignore:6:backtests/presser/backtest_h234_local/\tbacktests/presser/backtest_h234_local/results/answer_trades.csv",
+    ".gitignore:6:backtests/presser/backtest_h234_local/\tbacktests/presser/backtest_h234_local/results/meeting_trades.csv",
+    ".gitignore:7:backtests/presser/backtest_h234*/results/answer_trades.csv\tbacktests/presser/backtest_h234/results/answer_trades.csv",
+    ".gitignore:8:backtests/presser/backtest_h234*/results/meeting_trades.csv\tbacktests/presser/backtest_h234/results/meeting_trades.csv",
+    "backtests/.gitignore:2:rerun/\tbacktests/rerun/h234_run_all_stdout.log"
+   ]
+  },
+  {
+   "name": "no file under backtest_h234_local or backtest_h234 is tracked",
+   "ok": true,
+   "detail": []
+  }
+ ],
+ "mismatches": [],
+ "csv_default_parser_max_rel_dev": {
+  "H2.zA": 4.152749324213673e-14,
+  "H3.U": 9.95114293481576e-15,
+  "H4.zA": 4.152749324213673e-14,
+  "H4.U": 9.95114293481576e-15
+ },
+ "H2_primary": {
+  "n": 268,
+  "meetings": 10,
+  "mean_ticks": -0.08582089552238806,
+  "sum_ticks": -23.0,
+  "mean_usd": -0.6704757462686567,
+  "se_cr1": 0.1053649038412457,
+  "t_cr1": -0.8145112119277897,
+  "wcb_p_two": 0.4382,
+  "wcb_p_two_other_seed_99999_draws": 0.43428,
+  "run": {
+   "mean": -0.085820895522388,
+   "t": -0.8145112119277896,
+   "p": 0.4382
+  }
+ },
+ "H3_primary": {
+  "n": 272,
+  "meetings": 10,
+  "mean_ticks": 0.011029411764705883,
+  "sum_ticks": 3.0,
+  "mean_usd": 0.0861672794117647,
+  "se_cr1": 0.16440837231205985,
+  "t_cr1": 0.06708546292138459,
+  "wcb_p_two": 0.9507,
+  "wcb_p_two_other_seed_99999_draws": 0.94905,
+  "run": {
+   "mean": 0.0110294117647058,
+   "t": 0.0670854629213845,
+   "p": 0.9507
+  }
+ },
+ "H4_primary": {
+  "n": 268,
+  "G": 10,
+  "mean_f": 0.008298241082750124,
+  "se_cr1": 0.011488705017339392,
+  "t": 0.7222955999153915,
+  "df": 9,
+  "p_one": 0.24422731404678433,
+  "p_two": 0.4884546280935687,
+  "wcb_p_one": 0.2576,
+  "wcb_p_two": 0.5001,
+  "wcb_p_one_other_seed_99999": 0.24939,
+  "wcb_p_two_other_seed_99999": 0.49609,
+  "oos_r2_C_vs_T": -0.00427856863017384,
+  "oos_r2_C_vs_zero": -0.029219004597726084,
+  "oos_r2_T_vs_zero": -0.024834181218833296,
+  "sign_hit_C": 0.4976303317535545,
+  "sign_hit_T": 0.4881516587677725,
+  "n_nonzero_y": 211
+ },
+ "H4_sign_C_gross": {
+  "n": 268,
+  "meetings": 10,
+  "mean_ticks": -0.026119402985074626,
+  "sum_ticks": -7.0,
+  "t_cr1": -0.21253078710374193,
+  "wcb_p_two": 0.8384,
+  "hit": 0.3917910447761194
+ },
+ "H4_sign_T_gross": {
+  "n": 268,
+  "meetings": 10,
+  "mean_ticks": -0.15298507462686567,
+  "sum_ticks": -41.0,
+  "t_cr1": -1.0037796246830792,
+  "wcb_p_two": 0.3358,
+  "hit": 0.3843283582089552
+ },
+ "holm": {
+  "H4": 0.732681942140353,
+  "H2": 0.8764,
+  "H3": 1.0
+ },
+ "manifest_sha256": {
+  "qa": "d7f4f5a4d4bb5c0908b750155e9aee70024d3d830dac297de35cfb4818d09d07",
+  "features": "16fd2ac3ba2a0ee475eedeff7e5c39dd1d1e9fc52c6ade75a7c7bcf0dd2705a4",
+  "positions": "22d7eab9f703395c44d08ad21ea399dcfb3749a604573f4dd85e6907ba4d2a75"
+ },
+ "mtimes_utc": {
+  "qa/manifest": "2026-10-04T01:19:01.854206+00:00",
+  "features/manifest": "2026-10-04T01:19:01.877063+00:00",
+  "positions/manifest": "2026-10-04T01:19:03.371566+00:00",
+  "h4_fit/fit.json": "2026-10-04T01:19:04.257464+00:00",
+  "h4_fit/fit.sha256": "2026-10-04T01:19:04.258464+00:00",
+  "results first (answer_trades.csv)": "2026-10-04T01:19:14.916206+00:00",
+  "results last (run_meta.json)": "2026-10-04T01:19:35.373127+00:00",
+  "positions latest file": "2026-10-04T01:19:03.371566+00:00"
+ },
+ "excluded_meetings_checked": [
+  "20230614",
+  "20190501",
+  "20200303",
+  "20200315",
+  "20260617",
+  "20260729",
+  "20260916"
+ ],
+ "excluded_detail": {
+  "20230614": {
+   "feature_answer_rows": 0,
+   "feature_answer_rows_with_any_voice_face_value": 0,
+   "feature_answer_rows_with_counts_or_times_only": 0,
+   "chunk_rows_valid_in_answers": 0,
+   "meeting_feature_values": 0,
+   "h2_ok": [
+    false
+   ],
+   "h3_ok": [
+    false
+   ],
+   "chunk_record_rows": 0,
+   "chunk_rows_valid": 0,
+   "chunk_rows_with_answer_id": 0,
+   "chunk_rows_with_valence_resid": 0,
+   "baseline_rows": 0,
+   "positions_rows_with_zA_or_U": 0,
+   "positions_meeting_feature": 0,
+   "selected_rows": 0,
+   "in_any_fit": false,
+   "answer_trades": 0,
+   "meeting_trades": 0,
+   "h4_rows": 0,
+   "package_tables_read": [
+    "20230614/diarize/chair_check.parquet",
+    "20230614/turns/turns.parquet"
+   ]
+  },
+  "20190501": {
+   "feature_answer_rows": 25,
+   "feature_answer_rows_with_any_voice_face_value": 0,
+   "feature_answer_rows_with_counts_or_times_only": 21,
+   "chunk_rows_valid_in_answers": 97,
+   "meeting_feature_values": 0,
+   "h2_ok": [
+    false
+   ],
+   "h3_ok": [
+    false
+   ],
+   "chunk_record_rows": 176,
+   "chunk_rows_valid": 164,
+   "chunk_rows_with_answer_id": 105,
+   "chunk_rows_with_valence_resid": 0,
+   "baseline_rows": 0,
+   "positions_rows_with_zA_or_U": 0,
+   "positions_meeting_feature": 0,
+   "selected_rows": 0,
+   "in_any_fit": false,
+   "answer_trades": 0,
+   "meeting_trades": 0,
+   "h4_rows": 0,
+   "package_tables_read": [
+    "20190501/diarize/chair_check.parquet",
+    "20190501/face/face_frames.parquet",
+    "20190501/turns/turns.parquet",
+    "20190501/voice/voice_chunks.parquet"
+   ]
+  },
+  "20200303": {
+   "feature_answer_rows": 0,
+   "feature_answer_rows_with_any_voice_face_value": 0,
+   "feature_answer_rows_with_counts_or_times_only": 0,
+   "chunk_rows_valid_in_answers": 0,
+   "meeting_feature_values": 0,
+   "h2_ok": [],
+   "h3_ok": [],
+   "chunk_record_rows": 0,
+   "chunk_rows_valid": 0,
+   "chunk_rows_with_answer_id": 0,
+   "chunk_rows_with_valence_resid": 0,
+   "baseline_rows": 0,
+   "positions_rows_with_zA_or_U": 0,
+   "positions_meeting_feature": 0,
+   "selected_rows": 0,
+   "in_any_fit": false,
+   "answer_trades": 0,
+   "meeting_trades": 0,
+   "h4_rows": 0,
+   "package_tables_read": []
+  },
+  "20200315": {
+   "feature_answer_rows": 0,
+   "feature_answer_rows_with_any_voice_face_value": 0,
+   "feature_answer_rows_with_counts_or_times_only": 0,
+   "chunk_rows_valid_in_answers": 0,
+   "meeting_feature_values": 0,
+   "h2_ok": [],
+   "h3_ok": [],
+   "chunk_record_rows": 0,
+   "chunk_rows_valid": 0,
+   "chunk_rows_with_answer_id": 0,
+   "chunk_rows_with_valence_resid": 0,
+   "baseline_rows": 0,
+   "positions_rows_with_zA_or_U": 0,
+   "positions_meeting_feature": 0,
+   "selected_rows": 0,
+   "in_any_fit": false,
+   "answer_trades": 0,
+   "meeting_trades": 0,
+   "h4_rows": 0,
+   "package_tables_read": []
+  },
+  "20260617": {
+   "feature_answer_rows": 0,
+   "feature_answer_rows_with_any_voice_face_value": 0,
+   "feature_answer_rows_with_counts_or_times_only": 0,
+   "chunk_rows_valid_in_answers": 0,
+   "meeting_feature_values": 0,
+   "h2_ok": [],
+   "h3_ok": [],
+   "chunk_record_rows": 0,
+   "chunk_rows_valid": 0,
+   "chunk_rows_with_answer_id": 0,
+   "chunk_rows_with_valence_resid": 0,
+   "baseline_rows": 0,
+   "positions_rows_with_zA_or_U": 0,
+   "positions_meeting_feature": 0,
+   "selected_rows": 0,
+   "in_any_fit": false,
+   "answer_trades": 0,
+   "meeting_trades": 0,
+   "h4_rows": 0,
+   "package_tables_read": []
+  },
+  "20260729": {
+   "feature_answer_rows": 0,
+   "feature_answer_rows_with_any_voice_face_value": 0,
+   "feature_answer_rows_with_counts_or_times_only": 0,
+   "chunk_rows_valid_in_answers": 0,
+   "meeting_feature_values": 0,
+   "h2_ok": [],
+   "h3_ok": [],
+   "chunk_record_rows": 0,
+   "chunk_rows_valid": 0,
+   "chunk_rows_with_answer_id": 0,
+   "chunk_rows_with_valence_resid": 0,
+   "baseline_rows": 0,
+   "positions_rows_with_zA_or_U": 0,
+   "positions_meeting_feature": 0,
+   "selected_rows": 0,
+   "in_any_fit": false,
+   "answer_trades": 0,
+   "meeting_trades": 0,
+   "h4_rows": 0,
+   "package_tables_read": []
+  },
+  "20260916": {
+   "feature_answer_rows": 0,
+   "feature_answer_rows_with_any_voice_face_value": 0,
+   "feature_answer_rows_with_counts_or_times_only": 0,
+   "chunk_rows_valid_in_answers": 0,
+   "meeting_feature_values": 0,
+   "h2_ok": [],
+   "h3_ok": [],
+   "chunk_record_rows": 0,
+   "chunk_rows_valid": 0,
+   "chunk_rows_with_answer_id": 0,
+   "chunk_rows_with_valence_resid": 0,
+   "baseline_rows": 0,
+   "positions_rows_with_zA_or_U": 0,
+   "positions_meeting_feature": 0,
+   "selected_rows": 0,
+   "in_any_fit": false,
+   "answer_trades": 0,
+   "meeting_trades": 0,
+   "h4_rows": 0,
+   "package_tables_read": []
+  }
+ },
+ "g4_recomputed": {
+  "zA": "0/22",
+  "zD": "0/22",
+  "zBD": "0/22",
+  "zBI": "22/22",
+  "zES": "0/22"
+ },
+ "price_scan": {
+  "files_not_ignored": 923,
+  "scanned": 708,
+  "rates_level_value_hits": {
+   "backtest_snapshot/presser_bt/backtest/results/summary_long.csv": 20,
+   "backtests/results/presser_h1/summary_long.csv": 20,
+   "strategies/01/data/processed/markets.csv": 1
+  },
+  "es_trade_price_value_hits": {
+   "backtest_snapshot/presser_bt/backtest/results/benchr_trades.csv": 1,
+   "backtest_snapshot/presser_bt/backtest/results/h1primary_trades.csv": 19,
+   "backtest_snapshot/presser_bt/backtest/results/spreads_by_presser_phase.csv": 2,
+   "backtest_snapshot/presser_bt/backtest/results/summary_long.csv": 2,
+   "backtest_snapshot/presser_bt/backtest/tables/lexicon_h1primary_per_meeting_ES.csv": 1,
+   "backtests/results/presser_h1/h1primary_trades.csv": 19,
+   "backtests/results/presser_h1/spreads_by_presser_phase.csv": 2,
+   "backtests/results/presser_h1/summary_long.csv": 2,
+   "backtests/results/presser_h1/tables/lexicon_h1primary_per_meeting_ES.csv": 1,
+   "backtests/results/presser_strategy/per_trade.csv": 1
+  },
+  "price_like_column_names": {
+   "backtest_snapshot/presser_bt/events/events.csv": [
+    "tv_open_cnbc_s",
+    "tv_open_fbc_s",
+    "n_stretched_open"
+   ],
+   "backtests/presser/events/events.csv": [
+    "tv_open_cnbc_s",
+    "tv_open_fbc_s",
+    "n_stretched_open"
+   ],
+   "strategies/01/data/processed/markets.csv": [
+    "TLT_open",
+    "TLT_close",
+    "UUP_open",
+    "UUP_close",
+    "IEF_open",
+    "IEF_close"
+   ]
+  }
+ },
+ "git_check_ignore": [
+  ".gitignore:6:backtests/presser/backtest_h234_local/\tbacktests/presser/backtest_h234_local/results/answer_trades.csv",
+  ".gitignore:6:backtests/presser/backtest_h234_local/\tbacktests/presser/backtest_h234_local/results/meeting_trades.csv",
+  ".gitignore:7:backtests/presser/backtest_h234*/results/answer_trades.csv\tbacktests/presser/backtest_h234/results/answer_trades.csv",
+  ".gitignore:8:backtests/presser/backtest_h234*/results/meeting_trades.csv\tbacktests/presser/backtest_h234/results/meeting_trades.csv",
+  "backtests/.gitignore:2:rerun/\tbacktests/rerun/h234_run_all_stdout.log"
+ ],
+ "run_folder_price_columns": {
+  "results\\answer_trades.csv": [
+   "entry_px",
+   "exit_px"
+  ],
+  "results\\meeting_trades.csv": [
+   "entry_px",
+   "exit_px"
+  ]
+ },
+ "h234_extra_out_scan": {},
+ "inputs": {
+  "run": "team_push\\backtests\\presser\\backtest_h234_local",
+  "fit_sha256": "8a864d7722916f6f9bb8bf488235a1b3835fd0e2090a4b35c01f3b684e34a8a1",
+  "market_1m_sha256": "268aa049e1c3cc5076809d3add3e3376b49a357687c24165f75dc946818baefa",
+  "python": "3.12.10",
+  "pandas": "3.0.6",
+  "numpy": "2.5.3"
+ },
+ "n_checks": 110,
+ "n_mismatch": 0
+}

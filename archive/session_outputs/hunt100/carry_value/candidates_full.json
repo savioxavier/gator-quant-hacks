@@ -1,0 +1,557 @@
+{
+  "candidates": [
+    {
+      "id": "carry_value_comm_curve_spread",
+      "name": "Commodity curve carry spread: long deferred, short front contract",
+      "family": "commodity term structure / calendar spread",
+      "sources": [
+        "Szymanowska, de Roon, Nijman, van den Goorbergh (2014), An Anatomy of Commodity Futures Risk Premia, Journal of Finance 69(1): https://ideas.repec.org/a/bla/jfinan/v69y2014i1p453-482.html",
+        "QIS_Commodities (GitHub, jjj1231978), carry sleeve F3-F0 / F6-F0: https://github.com/jjj1231978/QIS_Commodities",
+        "Boons & Porras Prado (2019), Basis-Momentum, Journal of Finance 74(1) (spreading returns): https://4nations.albertjmenkveld.com/papers/boonsprado17.pdf",
+        "Two Sigma Street View (Oct 2017), The commodity futures roll return tax: https://www.twosigma.com/wp-content/uploads/SV_10_17.pdf"
+      ],
+      "source_types": [
+        "journal",
+        "github",
+        "practitioner"
+      ],
+      "exact_rule": "Legs per root: near = earlier-delivery and far = later-delivery of the two most liquid contracts (STD near/far legs); daily spread return s = r_far - r_near (same-contract close-to-close; the T-bill cancels). Decision at the last NYSE session of each month, exec next_close. V1 (primary): long far / short near in every eligible COM15 root; spread notional per root = (0.10/N)/sigma_s with sigma_s the EWMA(com 60) vol of s; book rescaled to 10% ex-ante vol with the trailing 252-session covariance of the spread returns (min 60), scale cap 4, per-leg notional cap 3x NAV per root. V2: as V1 but a root is held only when its 21-session mean annualised carry (P_near/P_far)^(1/dt)-1 is negative (contango), else flat. V3: beta-hedged, short-leg notional = beta x long-leg notional with beta the trailing 252-session OLS slope of r_far on r_near. Costs: each leg at the outright one-way map, one extra round trip per leg on roll days; 2x stress.",
+      "instruments": "COM15 (CL HO RB NG GC SI PL HG ZC ZS ZW ZL ZM LE HE), two contracts each",
+      "data_needed": "databento_raw/glbx_ohlcv1d_v01.parquet .v.0/.v.1 closes with instrument_id; delivery months from edges/carry/contracts.parquet (symbology already resolved); futures_daily for eligibility; rf_daily",
+      "external_evidence": "Independent GitHub backtest (QIS_Commodities: 17 CME BCOM roots, Databento, 2015-06-08..2026-05-04, net of modelled costs, static long F3 / short F0, BCOM weights): Sharpe 1.15, 7.7%/yr, vol 6.7%, max DD -7.2%. The repo cites an unnamed bank QIS report with F3-F0 1.75, F6-F0 1.58, F6-F0 beta-hedged 1.86. Szymanowska et al. (1986-2010): term premia from spreading strategies of 1-3%/yr. Backtests only, no live record; our data has only the F1-F0 pair.",
+      "evidence_score": 3,
+      "implementable": true,
+      "adaptation_note": "Deferred leg is the second contract (no F3/F6 in our data), so the premium per unit of spread is smaller; near/far assigned by delivery month because volume ranks swap around rolls. Spread vol is small (metals about 1-3%/yr), hence the notional cap.",
+      "reuse_existing_series": ""
+    },
+    {
+      "id": "carry_value_comm_bm_spread",
+      "name": "Basis-momentum spreading returns (curve-neutral, Boons-Porras Prado)",
+      "family": "commodity term structure / basis-momentum",
+      "sources": [
+        "Boons & Porras Prado (2019), Basis-Momentum, Journal of Finance 74(1), 239-279: https://4nations.albertjmenkveld.com/papers/boonsprado17.pdf",
+        "Sakkas & Tessaromatis (2020), Factor based commodity investing, JBF 115: https://climateinstitute.edhec.edu/system/files/publications/factor_based_commodity_investing_1.pdf",
+        "Jiang & Liu (2024), Factor momentum in commodity futures markets (EFMA): https://www.efmaefm.org/0EFMAMEETINGS/EFMA%20ANNUAL%20MEETINGS/2024-Lisbon/papers/Manuscript350.pdf",
+        "ddxmy/Basis-Momentum (GitHub replication): https://github.com/ddxmy/Basis-Momentum"
+      ],
+      "source_types": [
+        "journal",
+        "conference_paper",
+        "github"
+      ],
+      "exact_rule": "Signal per root at month-end: BM = product over the last 252 sessions of (1 + r_near) minus product of (1 + r_far), same-contract daily returns of the near and far legs (STD; at least 200 valid days). Rank eligible COM15 roots. V1 (primary, paper Table 1 Panel B): High4 = 4 highest BM, hold long near / short far (spread return r_near - r_far); Low4 = 4 lowest, hold short near / long far; each spread at 0.10/sigma_s, book rescaled to 10% ex-ante (252-session covariance, cap 4, per-leg cap 3x NAV); monthly, exec next_close. V2: KMPV rank weights on BM across all eligible roots, same spread legs. V3: V1 plus the same spread book on FX6, EQ4 and RATES5 (the paper's out-of-sample classes), equal risk across class books, rescaled to 10%. Costs: both legs at the outright map.",
+      "instruments": "COM15 near and far contracts (V3 adds FX6, EQ4, RATES5)",
+      "data_needed": "glbx_ohlcv1d_v01 .v.0/.v.1 closes + edges/carry/contracts.parquet delivery months; futures_daily for eligibility",
+      "external_evidence": "Boons & Porras Prado (21 commodities, 1960-08..2014-02): High4-minus-Low4 spreading return 4.08%/yr (t 6.43) and nearby return 18.38%/yr (t 6.73), Sharpe about 0.9 for both, robust before and after 1986. Independent outright-BM replications: Sakkas & Tessaromatis (38 commodities, 1970-2018) long-short Sharpe 0.93; Jiang & Liu (1985-2022) 0.43; ddxmy Goldman-style F0/F6 2008-01..2026-07 Sharpe 0.65 at 5 bp but annual Sharpe 2019-2025 of -1.35, 1.01, -1.04, 0.17, 0.31, 0.21, 0.76 (about 0.1 after publication); QIS_Commodities 63-day variant 2015-2026 -0.41. No independent test of the spread version found.",
+      "evidence_score": 2,
+      "implementable": true,
+      "adaptation_note": "Outright BM is already candidate trend_momentum_basis_momentum; this is the curve-neutral spread version. Far leg = second most liquid contract (paper: nearest contracts expiring after t+2).",
+      "reuse_existing_series": ""
+    },
+    {
+      "id": "carry_value_comm_ts_mom_double_sort",
+      "name": "Term-structure x momentum double sort (Fuertes-Miffre-Rallis 2010)",
+      "family": "commodity carry + momentum",
+      "sources": [
+        "Fuertes, Miffre & Rallis (2010), Tactical allocation in commodity futures markets: combining momentum and term structure signals, JBF 34(10): https://openaccess.city.ac.uk/id/eprint/6416/1/Fuertes_Miffre_Rallis_JBF2010(CRO).pdf",
+        "Quantpedia, Term structure effect in commodities: https://quantpedia.com/strategies/term-structure-effect-in-commodities"
+      ],
+      "source_types": [
+        "journal",
+        "practitioner"
+      ],
+      "exact_rule": "Monthly. Roll return RR_i = (P_near/P_far)^(1/dt) - 1 at month-end (last valid observation within 5 sessions; near/far legs STD). Sort eligible COM15 roots into terciles by RR (5/5/5 when 15 are eligible). Within the top tercile, rank by mean daily excess return (futures_daily) over the past R months and keep the top floor(n/2) (High-Winner); within the bottom tercile keep the bottom floor(n/2) by past return (Low-Loser). Long High-Winner, short Low-Loser, each at 0.10/sigma_i, book 10% ex-ante (STD); exec next_close. V1 (primary): R = 12 months (TS1-Mom12-1). V2: R = 3. V3: R = 1.",
+      "instruments": "COM15 front total-return index (futures_daily) with near/far prices for the signal",
+      "data_needed": "futures_daily; glbx_ohlcv1d_v01 .v.0/.v.1 + contracts.parquet for roll return",
+      "external_evidence": "FMR (37 commodities, 1979-2007): double-sort strategies average 21.32%/yr (abnormal return 21.02%) vs 10.53% momentum-only and 12.28% term-structure-only; a 2007-2008 holdout gave reward-to-risk 0.86-1.23 (as summarised in the repo research notes). Quantpedia: TS-only (FMR TS1) 1979-2004 Sharpe 0.49. Post-publication context: AQR VME commodity momentum 2013-07..2025-01 Sharpe -0.20; edge study commodity carry XS_comm_C1_M (carry only) IS 0.21 / later 1.04 net.",
+      "evidence_score": 2,
+      "implementable": true,
+      "adaptation_note": "15 commodities give 2-name legs; FMR used equal weights, we use equal risk; roll return from the two most liquid contracts.",
+      "reuse_existing_series": ""
+    },
+    {
+      "id": "carry_value_comm_value_ma",
+      "name": "Commodity-only value: deviation from 1-5 year moving averages",
+      "family": "commodity value / long-term reversal",
+      "sources": [
+        "QIS_Commodities (GitHub) value sleeve: https://github.com/jjj1231978/QIS_Commodities",
+        "Asness, Moskowitz & Pedersen (2013), Value and Momentum Everywhere, JF 68(3); AQR VME factor data: https://www.aqr.com/-/media/AQR/Documents/Insights/Data-Sets/Value-and-Momentum-Everywhere-Factors-Monthly.xlsx",
+        "Sakkas & Tessaromatis (2020), JBF 115: https://climateinstitute.edhec.edu/system/files/publications/factor_based_commodity_investing_1.pdf"
+      ],
+      "source_types": [
+        "github",
+        "journal",
+        "dataset"
+      ],
+      "exact_rule": "Level P = unadjusted close of the near contract (STD legs) on NYSE dates. At month-end t, for w in {1,2,3,4,5} years: dev_w = P_t / mean(P over the last 252w sessions) - 1 (at least half the window present). Signal = minus the average of the available dev_w (cheap = high). V1 (primary): long the 4 highest-signal and short the 4 lowest-signal eligible COM15 roots, each at 0.10/sigma_i, book 10% ex-ante (STD); P&L from futures_daily; monthly, exec next_close. V2: AMP signal log(mean P over month-ends t-66..t-54) - log(P_t), same 4/4 legs. V3: V1 signal with KMPV rank weights in risk units across all eligible roots.",
+      "instruments": "COM15",
+      "data_needed": "glbx_ohlcv1d_v01 .v.0 closes (level), futures_daily (returns)",
+      "external_evidence": "QIS_Commodities (17 CME roots, 1-5y MA deviation, 6 long / 6 short, 2015-06..2026-05, net): Sharpe 0.64, 6.7%/yr, max DD -23.1%. AQR VME commodity value: pre-publication (1972-2013-06) Sharpe 0.27, post-publication (2013-07..2025-01) 0.57 (verifier calculation on AQR data). Sakkas & Tessaromatis (1970-2018): value long-short Sharpe 0.14. Edge-study verifier diagnostic (not a declared series): commodity-only AMP value sleeve IS 0.45 (t 1.28) / later -0.63.",
+      "evidence_score": 3,
+      "implementable": true,
+      "adaptation_note": "Near-contract price as the spot proxy (as AMP). The edge study's VAL_XS mixes COM, FX and EQ, so this commodity-only book with the MA-average signal is not reusable from it.",
+      "reuse_existing_series": ""
+    },
+    {
+      "id": "carry_value_comm_hedging_pressure",
+      "name": "Hedging pressure double sort (Basu-Miffre 2013), CFTC legacy COT",
+      "family": "positioning / hedging pressure",
+      "sources": [
+        "Basu & Miffre (2013), Capturing the risk premium of commodity futures: the role of hedging pressure, JBF 37(7): https://climateinstitute.edhec.edu/publications/capturing-risk-premium-commodity-futures-role-hedging-pressure",
+        "Sakkas & Tessaromatis (2020), JBF 115: https://climateinstitute.edhec.edu/system/files/publications/factor_based_commodity_investing_1.pdf",
+        "Jiang & Liu (2024): https://www.efmaefm.org/0EFMAMEETINGS/EFMA%20ANNUAL%20MEETINGS/2024-Lisbon/papers/Manuscript350.pdf"
+      ],
+      "source_types": [
+        "journal",
+        "conference_paper"
+      ],
+      "exact_rule": "Data: CFTC legacy futures-only COT, weekly (Tuesday positions); a report is usable from the first NYSE session after its release (STD COT rule). Per root and report: HPh = commercial long / (commercial long + commercial short); HPs = non-commercial long / (non-commercial long + non-commercial short); average each over the last R reports. At month-end: score = z_cs(HPs) - z_cs(HPh), cross-sectional z-scores across eligible COM15. Long the 4 highest scores (speculators net long, hedgers net short), short the 4 lowest, each at 0.10/sigma_i, book 10% ex-ante (STD); monthly, exec next_close. V1 (primary): R = 52. V2: R = 26. V3: R = 4. CFTC codes in notes.md.",
+      "instruments": "COM15",
+      "data_needed": "CFTC deacot{YYYY}.zip (free) or HF ZipLime/commitments-of-traders (release_at); futures_daily",
+      "external_evidence": "Basu & Miffre (27 commodities, about 1992-2011): long-short hedging-pressure portfolios Sharpe 0.27-0.63 (average 0.51) vs 0.05 for equal-weight long-only and 0.20 for the S&P GSCI. Independent: Sakkas & Tessaromatis (1970-2018) HP long-short Sharpe 0.24 (4.95%/yr, vol 20.4%); Jiang & Liu (1994-2022) hedging-pressure factor Sharpe 0.08, i.e. weak in recent data.",
+      "evidence_score": 2,
+      "implementable": true,
+      "adaptation_note": "15 CME roots and 4-name legs instead of 27 commodities and quantile portfolios.",
+      "reuse_existing_series": ""
+    },
+    {
+      "id": "carry_value_cot_speculative_pressure",
+      "name": "Speculative pressure everywhere (Fan-Fernandez-Perez-Fuertes-Miffre 2020)",
+      "family": "positioning / speculative pressure",
+      "sources": [
+        "Fan, Fernandez-Perez, Fuertes & Miffre (2020), Speculative Pressure, Journal of Futures Markets 40(4), 575-597: https://openaccess.city.ac.uk/23283/1/FINAL_JFM__Accepted_27Nov2019_SSRN.pdf",
+        "CXO Advisory summary: https://cxoadvisory.com/equity-premium/net-speculators-position-as-futures-return-predictor"
+      ],
+      "source_types": [
+        "journal",
+        "practitioner"
+      ],
+      "exact_rule": "Legacy futures-only COT non-commercial long NCL and short NCS per market (usable from the first NYSE session after release). SP_i = mean over the last 52 weekly reports of (NCL - NCS)/(NCL + NCS). At each month-end, within each class: z_i = (SP_i - class mean)/class std across eligible members; raw position z_i x 0.10/sigma_i; class book rescaled to 10% ex-ante vol (STD). V1 (primary): equal-risk combination of the COM15, FX6 and EQ4 class books, rescaled to 10%. V2: V1 plus RATES5 as a fourth class. V3: COM15 only. Monthly, exec next_close.",
+      "instruments": "COM15, FX6, EQ4 (V2 adds RATES5)",
+      "data_needed": "CFTC legacy COT history or HF ZipLime COT; futures_daily",
+      "external_evidence": "Fan et al. (84 futures, 1992-09..2018-05): long-short SP Sharpe 0.61 commodities (4.12%/yr, t 2.62), 0.47 currencies (2.51%/yr, t 2.45), 0.50 equity indices (4.03%/yr, t 2.29), -0.28 fixed income; cross-class mean-variance portfolio 0.55 gross. Consistent with Basu-Miffre for commodities. No evidence after the 2018 sample end found; 2018-2026 is out of sample for the paper.",
+      "evidence_score": 2,
+      "implementable": true,
+      "adaptation_note": "Equity class has only 4 US indices (paper 19) and FX 6 (paper 11). Paper splits notional 50/50 long/short; we use risk units.",
+      "reuse_existing_series": ""
+    },
+    {
+      "id": "carry_value_cot_liquidity_provision",
+      "name": "Weekly hedger position-change contrarian (Kang-Rouwenhorst-Tang 2020)",
+      "family": "positioning / short-term liquidity provision",
+      "sources": [
+        "Kang, Rouwenhorst & Tang (2020), A Tale of Two Premiums: The Role of Hedgers and Speculators in Commodity Futures Markets, JF 75(1): https://www7.uc.cl/economia/finance_uc/docs/conferences/11th/Rouwenhorst-Tale%20of%20two%20premiums.pdf",
+        "https://ideas.repec.org/a/bla/jfinan/v75y2020i1p377-417.html"
+      ],
+      "source_types": [
+        "journal"
+      ],
+      "exact_rule": "Weekly. For each COM15 root at each COT report: Q = (commercial net_t - commercial net_{t-1}) / total open interest_t, with net = long - short (legacy futures-only). Decide on the release session (normally Friday, per release_at) with exec=next_open (the report appears at 15:30 ET, after settlement). Rank roots by Q; long the 3 largest (hedgers buying, speculators selling), short the 3 smallest, each at 0.10/sigma_i; each weekly cohort is held H sessions and the live book is the average of the overlapping cohorts, rescaled to 10% ex-ante vol (STD). V1 (primary): H = 10. V2: H = 5. V3: signal = minus the non-commercial net change / OI, H = 10.",
+      "instruments": "COM15",
+      "data_needed": "HF ZipLime COT (release_at) or CFTC legacy zips; futures_daily (open and close)",
+      "external_evidence": "KRT (26 commodities, 1994-01..2014-10, Tuesday quintile sort on hedger position change): top-minus-bottom spread 0.21% over days 1-4 (before the report is public, not tradable), 0.30% over days 5-10 (t 3.62), 0.15% over days 11-20 (t 1.23); about 9%/yr over days 1-20, of which about 0.45% per 15 days is available after release, before costs. Jiang & Liu (1994-2022) hedging-pressure factor Sharpe 0.08.",
+      "evidence_score": 2,
+      "implementable": true,
+      "adaptation_note": "15 roots with 3-name legs instead of 26 in quintiles; weekly turnover makes the 4 bp grain and livestock costs binding.",
+      "reuse_existing_series": ""
+    },
+    {
+      "id": "carry_value_cot_open_interest_growth",
+      "name": "Aggregate commodity open-interest growth timing (Hong-Yogo 2012)",
+      "family": "positioning / open interest",
+      "sources": [
+        "Hong & Yogo (2012), What does futures market interest tell us about the macroeconomy and asset prices?, JFE 105(3): https://www.nber.org/system/files/working_papers/w16712/w16712.pdf",
+        "Sakkas & Tessaromatis (2020), open-interest factor: https://climateinstitute.edhec.edu/system/files/publications/factor_based_commodity_investing_1.pdf"
+      ],
+      "source_types": [
+        "journal"
+      ],
+      "exact_rule": "Monthly. OI_i = total open interest from the latest legacy COT report usable at the decision. g_i = log(OI_i,t / OI_i 52 weeks earlier); G = mean of g_i over eligible COM15. Base book: long every eligible COM15 root at 0.10/sigma_i/N, rescaled to 10% ex-ante vol (STD). V1 (primary): position = base book x clip(zG, -1, 1), zG = (G - trailing 60-month mean of G)/trailing 60-month std of G. V2: base book when G is above its trailing 60-month median, else flat. V3: cross-sectional, long the 4 highest g_i and short the 4 lowest at equal risk. Exec next_close.",
+      "instruments": "COM15",
+      "data_needed": "CFTC legacy COT open interest (free); futures_daily",
+      "external_evidence": "Hong & Yogo (1965-2008): growth in commodity-market open interest predicts commodity returns (also bond returns and the short rate) in time-series regressions after controlling for standard predictors; in-sample only. Cross-sectional OI sorts are flat: Sakkas & Tessaromatis (1970-2018) OI long-short -0.45%/yr, Sharpe -0.03.",
+      "evidence_score": 1,
+      "implementable": true,
+      "adaptation_note": "Hong-Yogo aggregate dollar open interest over many markets; we use equal-weighted log growth of contract OI over 15 roots.",
+      "reuse_existing_series": ""
+    },
+    {
+      "id": "carry_value_eia_crude_inventory",
+      "name": "Crude oil inventory vs 5-year seasonal norm (EIA weekly) on CL",
+      "family": "inventory / theory of storage",
+      "sources": [
+        "Gorton, Hayashi & Rouwenhorst (2013), The Fundamentals of Commodity Futures Returns, Review of Finance: https://www.nber.org/papers/w13249.pdf",
+        "EIA weekly crude stocks ex-SPR (WCESTUS1): https://www.eia.gov/dnav/pet/hist_xls/WCESTUS1w.xls"
+      ],
+      "source_types": [
+        "journal",
+        "data"
+      ],
+      "exact_rule": "Data: EIA weekly US commercial crude oil stocks excluding SPR (WCESTUS1, week ending Friday), released Wednesday 10:30 ET (Thursday in holiday weeks; release dates from the EIA schedule or the weekday rule). dev_t = log(S_t) - log(mean of S for the same ISO week (+-1 week) in each of the previous 5 years). Decision at the close of the release day (the release precedes the 14:30 ET settlement), exec next_close; weekly. V1 (primary): CL position = -sign(dev_t) x 0.10/sigma_CL. V2: CL position = -clip(dev_t / std of dev over the trailing 156 weeks, -1, 1) x 0.10/sigma_CL. V3: product book, CL with crude stocks, HO with distillate stocks (WDISTUS1) and RB with gasoline stocks (WGTSTUS1), each V1-style, equal risk, rescaled to 10% ex-ante (STD).",
+      "instruments": "CL (V3: CL, HO, RB)",
+      "data_needed": "EIA weekly xls (free, checked reachable); futures_daily",
+      "external_evidence": "Gorton, Hayashi & Rouwenhorst (31 commodities, 1969-2006): risk premia rise as inventories fall, shown through price-based inventory proxies (basis long-short about 10.2%/yr, momentum 13.4%/yr), not through a weekly EIA rule. No out-of-sample test of this rule found; the analogous natural-gas study (thetrading.tools, 2015-2026) found no directional edge from storage surprises.",
+      "evidence_score": 1,
+      "implementable": true,
+      "adaptation_note": "Direct inventory data replace the paper's price-based proxies; weekly decisions.",
+      "reuse_existing_series": ""
+    },
+    {
+      "id": "carry_value_eia_natgas_storage",
+      "name": "Natural gas storage vs 5-year seasonal norm (EIA weekly) on NG",
+      "family": "inventory / theory of storage",
+      "sources": [
+        "thetrading.tools, natural gas storage study (2015-2026): https://www.thetrading.tools/gas-storage",
+        "EIA weekly Lower-48 working gas: https://www.eia.gov/dnav/ng/hist_xls/NW2_EPG0_SWO_R48_BCFw.xls",
+        "Gorton, Hayashi & Rouwenhorst (2013): https://www.nber.org/papers/w13249.pdf"
+      ],
+      "source_types": [
+        "practitioner",
+        "data",
+        "journal"
+      ],
+      "exact_rule": "Data: EIA weekly Lower-48 working gas in storage, released Thursday 10:30 ET (holiday shifts per the EIA schedule). dev_t = S_t / mean(S for the same ISO week (+-1) in each of the previous 5 years) - 1. Decision at the release-day close, exec next_close; weekly. V1 (primary): NG position = -sign(dev_t) x 0.10/sigma_NG. V2: NG position = -clip(dev_t / 0.10, -1, 1) x 0.10/sigma_NG. V3: long NG at 0.10/sigma_NG only when dev_t < -0.05, else flat (threshold taken from a 2015-2026 practitioner study, so V3 is descriptive only and may not be selected).",
+      "instruments": "NG",
+      "data_needed": "EIA weekly xls (free); futures_daily",
+      "external_evidence": "thetrading.tools (613 EIA reports, 2015-01..2026-09, UNG): weekly surprises vs the seasonal norm show no directional edge (next month: tighter -1.29%, in line +1.23%, looser -3.36%); only deep deficits (>5.3% below the 5-year average) beat the baseline (+1.23% next month) and their 3-month median is -1.5%. Chiou-Wei et al. (2013): storage surprises move prices contemporaneously (2002-2011).",
+      "evidence_score": 1,
+      "implementable": true,
+      "adaptation_note": "Same-week 5-year norm handles seasonality; NG costs 3 bp and strong roll drag.",
+      "reuse_existing_series": ""
+    },
+    {
+      "id": "carry_value_crush_spread_mr",
+      "name": "Soybean board-crush mean reversion (Simon 1999)",
+      "family": "inter-commodity spread value",
+      "sources": [
+        "Simon (1999), The soybean crush spread: empirical evidence and trading strategies, Journal of Futures Markets 19(3): https://ideas.repec.org/a/wly/jfutmk/v19y1999i3p271-289.html",
+        "Mitchell (2010), Soybean futures crush spread arbitrage: trading strategies and market efficiency, JRFM 3(1): https://ideas.repec.org/a/gam/jjrfmx/v3y2010i1p63-96d28369.html"
+      ],
+      "source_types": [
+        "journal"
+      ],
+      "exact_rule": "Daily. Board crush per bushel C = 0.022 x ZM ($/short ton) + 0.11 x ZL (cents/lb) - ZS ($/bu) on near-contract closes; skip days when any leg rolls or the legs' delivery months differ by more than 2 months. Dev_t = C_t - mean(C_{t-5..t-1}) (Simon's 5-day MA); s_t = std of Dev over the trailing 60 sessions. Long crush (long ZM and ZL, short ZS in board-crush notional proportions 0.022xZM : 0.11xZL : 1xZS per bushel) when Dev_t < -k x s_t; short crush when Dev_t > k x s_t; exit when Dev changes sign or after 10 sessions. Package scaled to 10% ex-ante vol of its own trailing 60-session returns. Decision at close, exec next_close. V1 (primary) k = 1.0; V2 k = 1.5; V3 k = 2.0. Costs 4 bp per leg per side.",
+      "instruments": "ZS, ZM, ZL",
+      "data_needed": "glbx_ohlcv1d_v01 near-contract closes + contracts.parquet; futures_daily",
+      "external_evidence": "Simon (1985-01..1995-02): the crush spread reverts toward its 5-day moving average with a half-life of about 3 days; band rules ($100-300) were profitable after $103.50 round-trip costs, about two-thirds of trades winning. Mitchell (2010), longer sample and more bands: profitability of these rules is unstable. No later evidence found.",
+      "evidence_score": 1,
+      "implementable": true,
+      "adaptation_note": "Volume-ranked near contracts rather than matched crush months; thresholds in units of the trailing std instead of dollars.",
+      "reuse_existing_series": ""
+    },
+    {
+      "id": "carry_value_crack_spread_mr",
+      "name": "3:2:1 crack spread mean reversion (Girma-Paulson 1999)",
+      "family": "inter-commodity spread value",
+      "sources": [
+        "Girma & Paulson (1999), Risk arbitrage opportunities in petroleum futures spreads, Journal of Futures Markets 19(8) (summarised via search; not read in full)",
+        "Spread trading in the energy sector (IIM Calcutta working paper, literature review): https://ir.iimcal.ac.in:8443/jspui/bitstream/123456789/4974/1/Spread%20Trading%20in%20Energy%20Sector.pdf"
+      ],
+      "source_types": [
+        "journal",
+        "working_paper"
+      ],
+      "exact_rule": "Daily. Crack K ($/bbl) = (2 x 42 x RB + 42 x HO - 3 x CL)/3, RB and HO in $/gal, CL in $/bbl, near-contract closes; skip roll days. Dev_t = K_t - mean(K_{t-5..t-1}); s_t = std of Dev over 60 sessions. Long crack (long RB and HO, short CL in 2:1:3 barrel proportions) when Dev_t < -k x s_t; short crack when Dev_t > k x s_t; exit on a sign change of Dev or after 10 sessions; package at 10% ex-ante vol (trailing 60 sessions). Decision at close, exec next_close. V1 (primary) k = 1.0; V2 k = 1.5; V3 k = 2.0. Costs CL 2 bp, HO/RB 3 bp per side.",
+      "instruments": "CL, HO, RB",
+      "data_needed": "glbx_ohlcv1d_v01 near-contract closes; futures_daily",
+      "external_evidence": "Girma & Paulson (NYMEX, 1983-1994): crack spreads mean-revert around their moving averages and MA-band rules (5-day MA exit) earned profits after costs in-sample. No post-publication test found (the web search budget ran out before a replication check).",
+      "evidence_score": 1,
+      "implementable": true,
+      "adaptation_note": "Front contracts by volume, no matched delivery months; std-based thresholds.",
+      "reuse_existing_series": ""
+    },
+    {
+      "id": "carry_value_fx_dollar_carry",
+      "name": "Dollar carry trade (Lustig-Roussanov-Verdelhan 2014)",
+      "family": "FX carry (time-series, basket)",
+      "sources": [
+        "Lustig, Roussanov & Verdelhan (2014), Countercyclical currency risk premia, JFE 111(3) (NBER w16427): https://www.nber.org/papers/w16427.pdf",
+        "Daniel, Hodrick & Lu (2017), The carry trade: risks and drawdowns, Critical Finance Review: https://business.columbia.edu/sites/default/files-efs/pubfiles/6378/Daniel.Hodrick.Lu.Carry%20Trade.Critical%20Finance%20Review.2017.pdf",
+        "Quantpedia, Dollar carry trade: https://quantpedia.com/strategies/dollar-carry-trade"
+      ],
+      "source_types": [
+        "journal",
+        "practitioner"
+      ],
+      "exact_rule": "Monthly. c_i = 21-session mean of the annualised near/far basis carry of FX future i, (P_near/P_far)^(1/dt) - 1, approximately r_foreign - r_USD (the edge study's C1 signal). AFD = mean of c_i over 6E 6J 6B 6A 6C 6S. V1 (primary): if AFD > 0 long all six FX futures, else short all six, each at 0.10/sigma_i/6, book rescaled to 10% ex-ante (STD). V2: AFD from OECD 3-month interbank rates (IR3TIB, previous month) minus the US 3-month T-bill (fred_daily DTB3 at d-1). V3: V1 book x clip(AFD / trailing 60-month std of AFD, -1, 1). Exec next_close.",
+      "instruments": "FX6",
+      "data_needed": "glbx_ohlcv1d_v01 + contracts.parquet (basis carry; or edges/carry/signal_C1.parquet); OECD SDMX for V2; futures_daily",
+      "external_evidence": "LRV (1983-11..2010): dollar carry on developed currencies 5.60%/yr, Sharpe 0.66 net of bid-ask (all currencies 4.28%, 0.56), weakly correlated with standard carry. Daniel, Hodrick & Lu (1976-2013): a diversified dynamic dollar strategy beats the G10 carry trade (Sharpe 0.78) with minimal skew. No post-2013 published update found. Related edge result (per-currency sign, not the basket rule): TS_fx_C1_M IS -0.01 / later 0.65 net.",
+      "evidence_score": 2,
+      "implementable": true,
+      "adaptation_note": "Six FX futures instead of 10-15 forwards; carry from futures basis.",
+      "reuse_existing_series": ""
+    },
+    {
+      "id": "carry_value_fx_ppp_value",
+      "name": "FX real-exchange-rate value (Asness-Moskowitz-Pedersen; Menkhoff et al. 2017)",
+      "family": "FX value",
+      "sources": [
+        "Asness, Moskowitz & Pedersen (2013), Value and Momentum Everywhere, JF 68(3): https://www.johnhcochrane.com/s/Value-and-Momentum-Everywhere.pdf",
+        "Menkhoff, Sarno, Schmeling & Schrimpf (2017), Currency Value, RFS 30(2): https://ideas.repec.org/p/cpr/ceprdp/11324.html"
+      ],
+      "source_types": [
+        "journal",
+        "dataset"
+      ],
+      "exact_rule": "Monthly. S_i = month-end price of FX future i (USD per foreign unit, front contract); CPI from OECD SDMX (US, euro-area HICP, Japan, UK, Canada, Switzerland monthly; Australia quarterly forward-filled), lagged 2 months. q_i = log S_i + log CPI_foreign - log CPI_US. V1 (primary, AMP published form): value_i = log(mean of exp(q_i) over months t-66..t-54) - q_i,t. V2 (AMP manuscript): value_i = q_i,t-60 - q_i,t. V3 (PPP level): value_i = mean of q_i over all months from 1995 through t minus q_i,t. KMPV rank weights in risk units across FX6, book 10% ex-ante (STD); exec next_close.",
+      "instruments": "FX6",
+      "data_needed": "futures_daily and glbx front closes; OECD SDMX CPI (free, reachable); FRED CSV was unreachable on 2026-10-03",
+      "external_evidence": "AQR VME currency value factor: Sharpe 0.45 before publication (1972-2013-06) and -0.19 after (2013-07..2025-01), verifier calculation on AQR data. Menkhoff et al. (2017): real-exchange-rate value adjusted for fundamentals earns significant excess returns in a broad cross-section (figures not re-verified here).",
+      "evidence_score": 1,
+      "implementable": true,
+      "adaptation_note": "Futures price as spot proxy; CPI lagged 2 months; only 6 currencies, so the spread is noisy.",
+      "reuse_existing_series": ""
+    },
+    {
+      "id": "carry_value_fx_rate_change",
+      "name": "FX yield-curve predictors: change in rate-level differential (Ang-Chen 2010)",
+      "family": "FX term structure",
+      "sources": [
+        "Ang & Chen (2010), Yield Curve Predictors of Foreign Exchange Returns (working paper, 13 March 2010): https://drupalgsb-test.paas.cc.columbia.edu/sites/default/files-efs/pubfiles/3957/Yield%20Cuve%20Predictors%20of%20Foreign%20Exchange%20Returns.pdf"
+      ],
+      "source_types": [
+        "working_paper"
+      ],
+      "exact_rule": "Monthly. Level_i = (y10_i + r3m_i)/2 - (y10_US + r3m_US)/2 from OECD monthly long-term government bond yields (IRLT) and 3-month interbank rates (IR3TIB) (euro area: Germany 10y and euro 3m); one-month publication lag, so the signal at month-end t uses months t-1 and t-2. V1 (primary, Change): signal_i = Level_i,t-1 - Level_i,t-2; long the 2 highest and short the 2 lowest of FX6 (Ang-Chen top/bottom thirds), each at 0.10/sigma_i, book 10% ex-ante (STD). V2 (long-rate change): signal_i = monthly change in (y10_i - y10_US). V3 (term spread, reversed): signal_i = -[(y10_i - r3m_i) - (y10_US - r3m_US)]. Exec next_close.",
+      "instruments": "FX6",
+      "data_needed": "OECD SDMX monthly interest rates (free); futures_daily",
+      "external_evidence": "Ang & Chen (1975-01..2009-07, equal-weighted top/bottom thirds): Change signal Sharpe 0.470 for developed currencies and 0.449 for G10, correlation 0.06 with carry; long-rate change 0.548 / 0.519; term spread reversed 0.809 / 0.667 but correlation 0.73 with carry; carry 0.673 / 0.567. No post-publication test found.",
+      "evidence_score": 2,
+      "implementable": true,
+      "adaptation_note": "Monthly OECD averages instead of month-end rates; 6 currencies so each third is 2 names.",
+      "reuse_existing_series": ""
+    },
+    {
+      "id": "carry_value_tsy_curve_carry_par",
+      "name": "Treasury curve carry and roll-down from the par curve (KMPV; Beekhuizen et al.)",
+      "family": "bond carry / roll-down",
+      "sources": [
+        "Koijen, Moskowitz, Pedersen & Vrugt (2018), Carry, JFE 127(2): https://www.nber.org/papers/w19325",
+        "Beekhuizen, Duyvesteyn, Martens & Zomerdijk (2019), Carry investing on the yield curve, FAJ (EFMA 2017 version): https://www.efmaefm.org/0EFMAMEETINGS/EFMA%20ANNUAL%20MEETINGS/2017-Athens/papers/EFMA2017_0407_fullpaper.pdf"
+      ],
+      "source_types": [
+        "journal"
+      ],
+      "exact_rule": "Monthly. Par yields from the treasury.gov daily par curve as of d-1. Maturity map ZT 2y, ZF 5y, ZN 7y, ZB 20y, UB 30y. D_m = modified duration of a par bond, (1 - (1 + y/2)^(-2m))/y; roll-down Delta_m = y_m - y_(m - 1/12) with y_(m - 1/12) linearly interpolated on the par curve; annualised carry per unit duration c_m = (y_m - y_3M)/D_m + 12 x Delta_m. V1 (primary): KMPV rank weights on c_m across the five contracts, risk units 0.10/sigma_i, book 10% ex-ante (STD). V2 (Beekhuizen, duration-neutral): long the 2 highest-c_m contracts and short the 2 lowest at equal ex-ante risk per leg. V3: V1 on the trailing 12-month mean of c_m (KMPV carry1-12 analog). Exec next_close.",
+      "instruments": "RATES5 (ZT ZF ZN ZB UB)",
+      "data_needed": "treasury.gov par curve CSV 1990+ (free, reachable); futures_daily",
+      "external_evidence": "KMPV: US Treasuries across maturities carry Sharpe 0.68 (carry1m) and 0.78 (carry1-12), 1983-2012, gross. Beekhuizen et al. (10 countries): global curve carry Sharpe 0.68 with Eurocurrency funding (1.13 with T-bill); US alone 0.11 / 0.52. Verified edge result with the futures-basis carry signal (related, not identical): carry_xs_rates IS 0.42 net / later 0.01; its verifier found it is mostly a static tilt (mean ZT -9.6x NAV; static average tilt Sharpe 0.37-0.39).",
+      "evidence_score": 3,
+      "implementable": true,
+      "adaptation_note": "Par curve replaces bond-index yields; CTD and delivery-option effects ignored in the signal but present in returns. Expect overlap with carry_xs_rates; report the correlation.",
+      "reuse_existing_series": ""
+    },
+    {
+      "id": "carry_value_tsy_bab_curve",
+      "name": "Betting-against-beta along the Treasury futures curve (Frazzini-Pedersen 2014)",
+      "family": "bond curve / low risk",
+      "sources": [
+        "Frazzini & Pedersen (2014), Betting Against Beta, JFE 111(1) (Treasury BAB section)",
+        "Beekhuizen et al. (2019), Carry investing on the yield curve (BAB vs curve carry): https://www.efmaefm.org/0EFMAMEETINGS/EFMA%20ANNUAL%20MEETINGS/2017-Athens/papers/EFMA2017_0407_fullpaper.pdf"
+      ],
+      "source_types": [
+        "journal"
+      ],
+      "exact_rule": "Monthly. Market M = equal-notional portfolio of ZT ZF ZN ZB UB excess returns. beta_i = rho_i,M x sigma_i/sigma_M with sigma from the trailing 252 daily returns and rho from the trailing 1,260 (min 504) overlapping 3-day returns; shrunk beta_s = 0.6 beta + 0.4. Rank by beta_s: below-median contracts form the low leg and above-median the high leg, rank weights normalised to sum 1 within each leg; position = low leg / beta_L - high leg / beta_H (beta-neutral), then rescale the book to 10% ex-ante vol (STD). V1 (primary) as stated. V2: two-asset version, long ZT and short ZB at equal ex-ante vol. V3: V1 with a 252-day correlation window. Exec next_close.",
+      "instruments": "RATES5",
+      "data_needed": "futures_daily",
+      "external_evidence": "Frazzini & Pedersen: Treasury BAB across maturities Sharpe about 0.8 over 1952-2012 (figure as recalled, not re-verified this session). Beekhuizen et al.: curve BAB results depend on the funding rate and add nothing for an investor already holding curve carry. Futures embed repo financing, which removes the funding-rate question.",
+      "evidence_score": 2,
+      "implementable": true,
+      "adaptation_note": "Five futures instead of maturity-bucket bond portfolios.",
+      "reuse_existing_series": ""
+    },
+    {
+      "id": "carry_value_tsy_term_spread_timing",
+      "name": "Duration timing by term spread (Campbell-Shiller / Fama-Bliss)",
+      "family": "bond term premium timing",
+      "sources": [
+        "Thornton & Valente (2012), Out-of-sample predictions of bond excess returns and forward rates, RFS 25(10): https://ideas.repec.org/a/oup/rfinst/v25y2012i10p3141-3168.html",
+        "Fama & Bliss (1987), AER; Campbell & Shiller (1991), Review of Economic Studies (classic sources, not re-read)"
+      ],
+      "source_types": [
+        "journal"
+      ],
+      "exact_rule": "Monthly. TS = y10 - y3M (fred_daily DGS10 - DTB3, or the treasury.gov par curve) as of d-1. V1 (primary): ZN position = 0.10/sigma_ZN if TS > 0, else 0. V2: ZN position = clip(TS / trailing 10-year std of TS, -1, 1) x 0.10/sigma_ZN. V3 (Fama-Bliss): FS = f(4,5) - y1 from Fed GSW zero yields (feds200628.csv SVENY01..05) as of d-1; ZF position = sign(FS) x 0.10/sigma_ZF. Exec next_close.",
+      "instruments": "ZN (V3: ZF)",
+      "data_needed": "fred_daily (local); Fed GSW CSV for V3 (free); futures_daily",
+      "external_evidence": "Fama-Bliss and Campbell-Shiller: forward and term spreads predict bond excess returns in-sample. Thornton & Valente: forward-rate models give no systematic out-of-sample economic value in dynamic allocation, and their relative performance deteriorates over time. Verified edge result (related, demeaned spread): BOND_B2 IS -0.08 / later -0.79.",
+      "evidence_score": 1,
+      "implementable": true,
+      "adaptation_note": "Undemeaned spread level, distinct from the edge study's B2 (spread minus its 5-year mean).",
+      "reuse_existing_series": ""
+    },
+    {
+      "id": "carry_value_tsy_cochrane_piazzesi",
+      "name": "Cochrane-Piazzesi forward-rate factor duration timing",
+      "family": "bond term premium timing",
+      "sources": [
+        "Cochrane & Piazzesi (2005), Bond Risk Premia, AER 95(1) (classic source, not re-read)",
+        "Thornton & Valente (2012), RFS: https://files.stlouisfed.org/files/htdocs/wp/2010/2010-034.pdf"
+      ],
+      "source_types": [
+        "journal"
+      ],
+      "exact_rule": "Monthly. Zero yields y(1..5) from the Fed GSW curve (SVENY01..SVENY05) as of d-1; forwards f(n) = n y(n) - (n-1) y(n-1). Expanding-window OLS from 1972 on month-end data of the average (n = 2..5) 1-year log excess return of n-year zeros on [1, y(1), f(2), f(3), f(4), f(5)], using only observations whose 12-month return window has ended by t; E_t = fitted 1-year excess return at t. V1 (primary): ZN position = sign(E_t) x 0.10/sigma_ZN. V2: ZN position = clip(E_t / trailing 10-year std of E_t, -1, 1) x 0.10/sigma_ZN. V3: V1 traded in ZF. Exec next_close.",
+      "instruments": "ZN (V3: ZF)",
+      "data_needed": "Fed GSW zero curve CSV (free); futures_daily",
+      "external_evidence": "Cochrane & Piazzesi (1964-2003): one forward-rate factor explains up to about 44% of 1-year bond excess-return variance in-sample. Thornton & Valente: CP and Fama-Bliss forecasts add no out-of-sample economic value. Later critiques (Bauer & Hamilton 2018) question the robustness of such predictability.",
+      "evidence_score": 1,
+      "implementable": true,
+      "adaptation_note": "GSW zero curve replaces CRSP Fama-Bliss data; strictly point-in-time fits.",
+      "reuse_existing_series": ""
+    },
+    {
+      "id": "carry_value_tsy_slope_mr_2s10s",
+      "name": "2s10s slope mean reversion, vol-neutral ZT/ZN",
+      "family": "yield-curve relative value",
+      "sources": [
+        "Duarte, Longstaff & Yu (2007), Risk and return in fixed-income arbitrage: nickels in front of a steamroller?, RFS 20(3) (as recalled, not re-read)",
+        "LSEG developer article, yield curve PCA and butterfly residuals: https://developers.lseg.com/en/article-catalog/article/yield-curve-principal-component-analysis-with-eikon-data-api"
+      ],
+      "source_types": [
+        "journal",
+        "practitioner"
+      ],
+      "exact_rule": "Weekly (last NYSE session of the week). s = y10 - y2 (fred_daily DGS10 - DGS2 or par curve) as of d-1; z = (s - mean of s over the trailing 252 sessions)/std over 252. V1 (primary): z > +1 enter a flattener (long ZN, short ZT); z < -1 enter a steepener (long ZT, short ZN); legs at equal ex-ante vol (DV01-neutral proxy); exit when z crosses 0; book 10% ex-ante (STD). V2: continuous spread position = -clip(z/2, -1, 1). V3: V1 with a 504-session window. Exec next_close.",
+      "instruments": "ZT, ZN",
+      "data_needed": "fred_daily (local); futures_daily",
+      "external_evidence": "Practitioner relative-value trade; Duarte, Longstaff & Yu report positive risk-adjusted returns for model-based yield-curve arbitrage on the swap curve, 1988-2004 (as recalled). Opposite evidence: Treasury curve momentum at 1-12 months (Durham 2013, information ratio up to 0.79-1.01), which is candidate trend_momentum_durham_curve_xsmom. No academic test of this exact rule found.",
+      "evidence_score": 1,
+      "implementable": true,
+      "adaptation_note": "Equal-vol futures legs instead of exact DV01 matching.",
+      "reuse_existing_series": ""
+    },
+    {
+      "id": "carry_value_tsy_butterfly_mr",
+      "name": "2s5s10s butterfly mean reversion with ZT/ZF/ZN",
+      "family": "yield-curve relative value",
+      "sources": [
+        "Duarte, Longstaff & Yu (2007), RFS 20(3) (yield-curve arbitrage; as recalled)",
+        "BSIC, Catching the butterfly: a relative value approach in OIS curves: https://bsic.it/catching-the-butterfly-a-relative-value-approach-in-ois-curves/",
+        "LSEG developer article: https://developers.lseg.com/en/article-catalog/article/yield-curve-principal-component-analysis-with-eikon-data-api"
+      ],
+      "source_types": [
+        "journal",
+        "practitioner"
+      ],
+      "exact_rule": "Weekly. fly = 2 x y5 - y2 - y10 (treasury.gov par yields, d-1); z = (fly - 252-session mean)/252-session std. V1 (primary): z > +1 (5y cheap) go long ZF and short ZT and ZN, each wing at half the body's ex-ante vol; z < -1 the reverse; exit when z crosses 0; book 10% ex-ante (STD). V2: signal = z-score of the residual of y5 regressed on y2 and y10 over the trailing 252 sessions (PCA-style fair value). V3: V1 with entry at |z| > 1.5. Exec next_close.",
+      "instruments": "ZT, ZF, ZN",
+      "data_needed": "treasury.gov par curve (free); futures_daily",
+      "external_evidence": "Duarte, Longstaff & Yu: yield-curve arbitrage that trades the most mispriced curve points (typically butterflies) earned positive excess returns 1988-2004 (as recalled). Practitioner notes on PCA butterfly residual mean reversion. No out-of-sample test on Treasury futures found. calendar_event_tsy_auction_cycle trades a 2-year auction-cycle butterfly with a different signal.",
+      "evidence_score": 1,
+      "implementable": true,
+      "adaptation_note": "Futures CTD maturities differ from the par points.",
+      "reuse_existing_series": ""
+    },
+    {
+      "id": "carry_value_eq_dy_timing_ct",
+      "name": "Dividend-yield equity timing with Campbell-Thompson restrictions on ES",
+      "family": "equity value timing",
+      "sources": [
+        "Campbell & Thompson (2008), Predicting excess stock returns out of sample, RFS 21(4): https://nber.org/papers/w11468",
+        "Goyal, Welch & Zafirov (2024), A comprehensive 2022 look at the empirical performance of equity premium prediction, RFS 37(11): https://ideas.repec.org/a/oup/rfinst/v37y2024i11p3490-3557..html",
+        "Shiller data: http://www.econ.yale.edu/~shiller/data/ie_data.xls"
+      ],
+      "source_types": [
+        "journal",
+        "data"
+      ],
+      "exact_rule": "Monthly. Shiller ie_data (S&P composite price, 12-month dividends, CAPE, GS10, CPI); a value for month m is used from the end of month m+1. Monthly excess return of the S&P composite total return over the 1-month T-bill (Ken French RF). Expanding OLS from 1927 of r_{m+1} on x_m; if the slope has the wrong sign use the historical mean; forecast mu = max(0, a + b x) (Campbell-Thompson restrictions). Weight w = clip(mu / (3 x sigma2), 0, 1.5) with sigma2 the variance of monthly excess returns over the trailing 60 months. Hold w x ES (futures_daily excess return), rebalanced monthly, exec next_close; a long-history check applies the same w to Shiller/SPY returns from 1950. V1 (primary): x = log(D/P). V2: x = log(E10/P) (1/CAPE). V3: x = excess CAPE yield = 1/CAPE - (GS10 - trailing 10-year CPI inflation).",
+      "instruments": "ES (long-history check on S&P composite / SPY)",
+      "data_needed": "Shiller ie_data.xls (free); Ken French RF (free); futures_daily",
+      "external_evidence": "Campbell & Thompson: with sign restrictions, valuation-ratio predictors beat the historical mean out of sample by a small but economically meaningful margin for a mean-variance investor. Goyal, Welch & Zafirov (data to 2021): most predictors, the dividend-price ratio included, fail out of sample; only a few still work.",
+      "evidence_score": 1,
+      "implementable": true,
+      "adaptation_note": "Natural sizing is the mean-variance weight (0 to 1.5x ES), not 10% vol; report also a 10%-vol-scaled version for comparability.",
+      "reuse_existing_series": ""
+    },
+    {
+      "id": "carry_value_eq_country_dy_value",
+      "name": "Country ETF dividend-yield value",
+      "family": "equity index value (cross-country)",
+      "sources": [
+        "Asness, Moskowitz & Pedersen (2013), country equity value; AQR VME data: https://www.aqr.com/-/media/AQR/Documents/Insights/Data-Sets/Value-and-Momentum-Everywhere-Factors-Monthly.xlsx",
+        "Cambria Global Value ETF (live CAPE country selection since 2014): https://cambriafunds.com/GVAL"
+      ],
+      "source_types": [
+        "journal",
+        "dataset",
+        "live_fund"
+      ],
+      "exact_rule": "Monthly. Universe: SPY plus iShares country ETFs EWA EWC EWD EWG EWH EWI EWJ EWK EWL EWN EWO EWP EWQ EWS EWU EWW EWY EWZ EWT (yfinance), eligible after 12 months of history. DY_i = cash dividends with ex-date in the trailing 365 days / unadjusted month-end close. V1 (primary): long the 4 highest DY, short the 4 lowest, each at 0.10/sigma_i (EWMA com 60 of adjusted-close excess returns), book 10% ex-ante (STD); 10 bp one-way and 30 bp/yr borrow on shorts; exec next_close. V2: signal = DY_i / own trailing 60-month median DY - 1, same legs. V3: long the top 4 DY at equal risk and short the equal-weighted universe at matched ex-ante vol.",
+      "instruments": "Country equity ETFs (about 20) and SPY",
+      "data_needed": "yfinance prices and dividends (free, checked: EWG dividends 1996-2026)",
+      "external_evidence": "AQR VME country equity value factor: Sharpe 0.43 before publication (1972-2013-06), -0.06 after (2013-07..2025-01), verifier calculation. CAPE-based country selection strong in-sample (Faber 2014; Keimling 2016); live Cambria Global Value ETF since 2014-03: 10-year annualised 11.2% to 2026-06 (benchmark-relative figure not verified).",
+      "evidence_score": 1,
+      "implementable": true,
+      "adaptation_note": "Dividend yield replaces BE/ME or CAPE; ETF dividends are lumpy, hence the trailing 365-day sum.",
+      "reuse_existing_series": ""
+    },
+    {
+      "id": "carry_value_eq_country_reversal",
+      "name": "Country ETF 3-year winner-loser reversal (Richards 1997)",
+      "family": "equity index long-term reversal",
+      "sources": [
+        "Richards (1997), Winner-loser reversals in national stock market indices, JF 52(5): https://ideas.repec.org/a/bla/jfinan/v52y1997i5p2129-44.html",
+        "Balvers, Wu & Gilliland (2000), Mean reversion across national stock markets, JF 55(2): https://ideas.repec.org/a/bla/jfinan/v55y2000i2p745-772.html",
+        "Quantpedia, Reversal effect in international equity ETFs: https://quantpedia.com/Screener/Details/16"
+      ],
+      "source_types": [
+        "journal",
+        "practitioner"
+      ],
+      "exact_rule": "Monthly cohorts. Same ETF universe as carry_value_eq_country_dy_value. At month-end rank by trailing 36-month total return (adjusted closes); long the bottom 4, short the top 4, equal risk; each cohort is held 12 months and the book is the average of 12 overlapping cohorts, rescaled to 10% ex-ante (STD); 10 bp one-way and 30 bp/yr borrow; exec next_close. V1 (primary): 36-month formation. V2: 60-month formation. V3: 36-month formation skipping the most recent 12 months (months t-48..t-12).",
+      "instruments": "Country equity ETFs (about 20) and SPY",
+      "data_needed": "yfinance adjusted closes (free)",
+      "external_evidence": "Richards (16 national indices, 1970-1995): 3-year losers beat winners, about 6.4%/yr in the Quantpedia summary; Balvers, Wu & Gilliland (18 markets, 1969-1996): relative index prices mean-revert with a 3-3.5 year half-life. Quantpedia reports its own out-of-sample backtest as significantly negative. AQR country value post-publication Sharpe -0.06.",
+      "evidence_score": 1,
+      "implementable": true,
+      "adaptation_note": "ETF proxies for national indices start 1996-2000.",
+      "reuse_existing_series": ""
+    },
+    {
+      "id": "carry_value_kmpv_carry_everywhere",
+      "name": "KMPV futures carry everywhere (already computed, verified)",
+      "family": "multi-asset carry",
+      "sources": [
+        "Koijen, Moskowitz, Pedersen & Vrugt (2018), Carry, JFE 127(2): https://www.nber.org/papers/w19325",
+        "Edge-search carry study SPEC: scratchpad/edges/carry/SPEC.md"
+      ],
+      "source_types": [
+        "journal",
+        "internal_verified"
+      ],
+      "exact_rule": "As computed by the edge-search study: per root c = (P_near/P_far)^(1/dt) - 1 (FX, rates, commodities, equity indices), C1 = 21-session mean (min 10 valid), C12 = 252-session mean; monthly; XS = KMPV rank weights within each class (FX6, RATES5, COM15, EQ4), positions w_i x 0.10/sigma_i, class books at 10% ex-ante vol, global = equal risk across classes rescaled to 10% (cap 4); TS = sign(C) x 0.10/sigma_i/N; exec next_close. Primary XS_global_C1_M; TS_global_C1_M and the class books are reported variants.",
+      "instruments": "30 CME futures",
+      "data_needed": "already computed",
+      "external_evidence": "KMPV: global carry Sharpe 1.20 gross (1983-2012). After publication: AQR four-asset futures carry about 0.07 gross 2012-02..2026 (verifier calculation); DBV G10 carry ETF negative excess return 2006-2020. Edge study (verifier: confirmed): XS_global_C1_M IS 0.03 net / later 0.30; TS_global_C1_M 0.25 / -0.24; XS_rates_C1_M 0.42 / 0.01; XS_comm_C1_M 0.21 / 1.04; commodity C12 variants about 0.",
+      "evidence_score": 2,
+      "implementable": true,
+      "adaptation_note": "None; reuse the verified series (class books carry_xs_*/carry_ts_* also saved).",
+      "reuse_existing_series": "<scratch>/edges/series/carry_xs_global.parquet"
+    },
+    {
+      "id": "carry_value_amp_value_everywhere",
+      "name": "AMP value everywhere / 5-year reversal (already computed, verified)",
+      "family": "multi-asset value",
+      "sources": [
+        "Asness, Moskowitz & Pedersen (2013), Value and Momentum Everywhere, JF 68(3): https://www.johnhcochrane.com/s/Value-and-Momentum-Everywhere.pdf",
+        "Edge-search value study SPEC: scratchpad/edges/value_reversal/SPEC.md"
+      ],
+      "source_types": [
+        "journal",
+        "internal_verified"
+      ],
+      "exact_rule": "As computed by the edge-search study: monthly; value VW1 = log(mean level over month-ends t-66..t-54) - log(level_t), level = near-contract close for COM15 and the futures excess-return index for FX6 and EQ4; rank weights in risk units within each class; bond sleeve B1 = sign(DGS10 - trailing 1,260-session mean) on ZN; VAL_ALL = equal risk across the four classes rescaled to 10% (gross cap 5); exec next_close. Variants: VAL_XS_VW1 (no bond), COMBO_ALL (0.5 value + 0.5 12-1 momentum per class).",
+      "instruments": "COM15, FX6, EQ4, ZN",
+      "data_needed": "already computed",
+      "external_evidence": "AMP (1972-2011): value plus momentum everywhere Sharpe 1.42 gross. AQR VME after publication (2013-07..2025-01, verifier calculations): all-asset value 0.20, commodity value 0.57, FX value -0.19, bond value -0.18, country equity value -0.06. Edge study (verifier: confirmed): VAL_ALL IS -0.09 / later -1.20; VAL_XS_VW1 0.01 / -0.85; COMBO_ALL 0.23 / -0.60; IS starts 2016-01 because of the 5-year lookback.",
+      "evidence_score": 2,
+      "implementable": true,
+      "adaptation_note": "None; reuse the verified series (value_reversal_VAL_XS_VW1 and value_reversal_COMBO_ALL also saved).",
+      "reuse_existing_series": "<scratch>/edges/series/value_reversal_VAL_ALL.parquet"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+CMU-MultiComp-Lab/OpenFace-3.0 | stars 196 | lic NOASSERTION | pushed 2025-06-10T15:50:06Z | created 2023-09-24T20:52:48Z | archived False | OpenFace 3.0 – open-source toolkit for facial landmark detection, action unit detection, eye-gaze 
+TadasBaltrusaitis/OpenFace | stars 7778 | lic NOASSERTION | pushed 2024-06-01T00:44:07Z | created 2016-03-05T20:08:49Z | archived False | OpenFace – a state-of-the art tool intended for facial landmark detection, head pose estimation, f
+ihp-lab/LibreFace | stars 253 | lic NOASSERTION | pushed 2026-06-19T21:57:02Z | created 2023-05-23T18:40:41Z | archived False | [WACV 2024 & FG 2026] LibreFace: An Open-Source Toolkit for Deep Facial Expression Analysis
+cosanlab/py-feat | stars 388 | lic NOASSERTION | pushed 2026-09-13T21:36:47Z | created 2018-01-22T21:30:03Z | archived False | Facial Expression Analysis Toolbox 
+sb-ai-lab/EmotiEffLib | stars 1064 | lic Apache-2.0 | pushed 2026-06-23T19:29:57Z | created 2021-03-17T05:45:59Z | archived False | Efficient face emotion recognition in photos and videos
+av-savchenko/face-emotion-recognition ERR Moved Permanently
+Talented-Q/POSTER_V2 | stars 177 | lic MIT | pushed 2023-09-18T14:31:55Z | created 2023-01-09T15:22:45Z | archived False | 
+zczcwh/POSTER | stars 77 | lic Apache-2.0 | pushed 2023-08-09T19:58:00Z | created 2022-04-01T23:16:22Z | archived False | code for:  POSTER: A Pyramid Cross-Fusion Transformer Network for Facial Expression Recognition
+yaoing/DAN | stars 194 | lic MIT | pushed 2023-11-04T08:55:58Z | created 2021-08-29T08:55:17Z | archived False | Official implementation of DAN
+deepinsight/insightface | stars 29888 | lic None | pushed 2026-10-03T15:38:32Z | created 2017-09-01T00:36:51Z | archived False | State-of-the-art 2D and 3D Face Analysis Project
+serengil/retinaface | stars 2048 | lic MIT | pushed 2026-10-03T10:27:01Z | created 2021-04-25T20:34:22Z | archived False | RetinaFace: Deep Face Detection Library for Python
+biubug6/Pytorch_Retinaface | stars 2976 | lic MIT | pushed 2023-06-28T07:07:53Z | created 2019-09-15T15:09:04Z | archived False | Retinaface get 80.99% in widerface hard val using mobilenet0.25.
+google-ai-edge/mediapipe | stars 37155 | lic Apache-2.0 | pushed 2026-10-03T03:17:51Z | created 2019-06-13T19:16:41Z | archived False | Cross-platform, customizable ML solutions for live and streaming media.
+akanametov/yolo-face | stars 962 | lic GPL-3.0 | pushed 2026-09-27T18:30:18Z | created 2023-01-23T10:45:45Z | archived False | YOLO Face 🚀 in PyTorch
+deepcam-cn/yolov5-face | stars 2411 | lic GPL-3.0 | pushed 2024-07-22T12:26:33Z | created 2021-04-26T06:55:59Z | archived False | YOLO5Face: Why Reinventing a Face Detector (https://arxiv.org/abs/2105.12931)       ECCV Workshops 2
+derronqi/yolov8-face | stars 833 | lic GPL-3.0 | pushed 2024-10-29T01:43:28Z | created 2023-03-24T10:22:21Z | archived False | yolov8 face detection with landmark
+thohemp/6DRepNet | stars 685 | lic MIT | pushed 2024-07-02T14:10:30Z | created 2022-02-21T13:07:08Z | archived False | Official Pytorch implementation of  6DRepNet: 6D Rotation representation for unconstrained head pose
+Ahmednull/L2CS-Net | stars 529 | lic MIT | pushed 2024-02-02T19:54:06Z | created 2022-02-15T17:59:04Z | archived False | The official PyTorch implementation of L2CS-Net for gaze estimation and tracking
+vitoralbiero/img2pose | stars 613 | lic NOASSERTION | pushed 2022-08-29T23:25:18Z | created 2020-12-11T18:28:37Z | archived False | The official PyTorch implementation of img2pose: Face Alignment and Detection via 6DoF, Face Pose Es
+face-analysis/emonet | stars 363 | lic NOASSERTION | pushed 2024-08-24T13:50:59Z | created 2020-08-26T14:25:07Z | archived False | Official implementation of the paper "Estimation of continuous valence and arousal levels from faces

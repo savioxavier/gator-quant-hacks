@@ -1,0 +1,55 @@
+{
+  "H2": {
+    "status": "run",
+    "p_raw": 0.5373,
+    "p_used": 0.5373,
+    "n_answers": 542,
+    "n_meetings": 20,
+    "mean_ticks": -0.07564575645756458,
+    "bb_ci90": [
+      -0.26160421687791513,
+      0.11659411564940886
+    ],
+    "reasons": [],
+    "labels": [
+      "exploratory, post-NO-GO; cannot rescue G3; no trading claim"
+    ],
+    "p_holm": 1.0,
+    "holm_significant_at_0.05": false,
+    "wording": "not detected (see the 90% CI upper bound)"
+  },
+  "H3": {
+    "status": "run",
+    "p_raw": 0.5865,
+    "p_used": 0.5865,
+    "n_answers": 548,
+    "n_meetings": 20,
+    "mean_ticks": -0.05474452554744526,
+    "bb_ci90": [
+      -0.22486288848263253,
+      0.11351747351747354
+    ],
+    "reasons": [],
+    "labels": [
+      "exploratory, post-NO-GO; cannot rescue G3; no trading claim"
+    ],
+    "p_holm": 1.0,
+    "holm_significant_at_0.05": false,
+    "wording": "not detected (see the 90% CI upper bound)"
+  },
+  "H4": {
+    "status": "run",
+    "p_raw": 0.3427969831804565,
+    "p_used": 0.3427969831804565,
+    "n_answers": 542,
+    "n_meetings": 20,
+    "labels": [
+      "exploratory, post-NO-GO; cannot rescue G3; no trading claim"
+    ],
+    "p_holm": 1.0,
+    "holm_significant_at_0.05": false,
+    "wording": "not detected (see the 90% CI upper bound)"
+  },
+  "note": "Holm m = 3 across H2, H3, H4 (new exploratory family; the locked register keeps them at p = 1, R2-26). A killed or unrunnable primary enters with p = 1.",
+  "features": "PLACEBO FEATURES (synthetic; not a result)"
+}

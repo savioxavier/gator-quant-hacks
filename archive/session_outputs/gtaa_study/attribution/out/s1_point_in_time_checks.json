@@ -1,0 +1,17 @@
+{
+ "replica_equals_frozen_S3": true,
+ "replica_equals_frozen_BH5": true,
+ "IS_loader_last_date": "2024-10-02",
+ "truncated_equals_full_through_IS_END": true,
+ "future_perturbation_cuts": 40,
+ "future_perturbation_violations": 0,
+ "held_equals_decision_shifted_1": true,
+ "decision_change_days": 135,
+ "decision_change_days_where_new_weight_held_same_day": 0,
+ "all_decision_changes_on_month_ends": true,
+ "decomposition_max_abs_err_vs_simulate": 6.938893903907228e-18,
+ "decomposition_max_abs_err_vs_simulate_BH5": 2.7755575615628914e-17,
+ "forward2_returns_equals_simulate": 0.0,
+ "entry_fill_day_open_to_close_only_max_err": 4.336808689942018e-19,
+ "entries_checked": 93
+}

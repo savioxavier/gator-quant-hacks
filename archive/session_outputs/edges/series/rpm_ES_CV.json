@@ -1,0 +1,34 @@
+{
+  "candidate": "rpm_ES_CV",
+  "task_label": "risk_premia",
+  "sleeve": "long F_ES",
+  "overlay": "CV",
+  "rule": "w = 10% / sigma_EWMA (EWMA of squared daily excess returns, com 60); SB: inverse-vol legs scaled to 10% with D R D, R = trailing 252-session correlation",
+  "decisions": "month-end close d, data up to d; filled at next session close (engine exec=next_close); engine re-trades to target every session",
+  "target_vol": "10% annualised ex-ante; gross notional cap 4",
+  "columns": {
+    "net_1x": "daily excess return over T-bill, net of realistic costs",
+    "net_2x": "same with 2x costs",
+    "gross": "before costs"
+  },
+  "cost_bps_one_way_realistic": {
+    "F_ES": 0.75,
+    "F_ZN": 1.0,
+    "F_GC": 1.5
+  },
+  "roll": "one extra round trip of the held position on each roll day",
+  "window": [
+    "2011-09-02",
+    "2026-10-02"
+  ],
+  "in_sample": [
+    "2011-09-02",
+    "2024-10-02"
+  ],
+  "later_descriptive": [
+    "2024-10-03",
+    "2026-10-02"
+  ],
+  "spec": "edges/risk_premia/SPEC.md",
+  "script": "edges/risk_premia/rp_futures.py"
+}

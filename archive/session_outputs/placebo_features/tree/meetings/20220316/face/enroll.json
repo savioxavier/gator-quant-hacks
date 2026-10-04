@@ -1,0 +1,25 @@
+{
+  "method": "sface",
+  "threshold": 0.363,
+  "enroll_frames": 180,
+  "faces": 3,
+  "kept": 3,
+  "self_cos_median": 0.8,
+  "self_cos_p05": 0.62,
+  "embedding": null,
+  "ok": false,
+  "enroll_ranges": [
+    [
+      4.626,
+      184.626
+    ]
+  ],
+  "fps": 1.0,
+  "source": "zip",
+  "models": [
+    "mediapipe_face_landmarker",
+    "emotiefflib_enet_b0_8_va_mtl",
+    "sface_opencv"
+  ],
+  "placebo": true
+}

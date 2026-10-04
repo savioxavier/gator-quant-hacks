@@ -1,0 +1,44 @@
+### 01 Introduction.html
+This tutorial implements a seasonality strategy that trades based on historical same-calendar-month returns. The strategy is
+ derived from the paper Common Factors in Return Seasonalities . 
+ A great deal of research on seasonality effects in algorithmic trading exists. Seasonality patterns are well documented in stock returns across numerous
+ countries and in commodity and country portfolios. The phenomenon’s occurrence is not isolated to specific stocks or monthly time intervals, for example, seasonality is observed at the daily frequency as well. Our implementation reflects the existing research. 
+ In our algorithm, we will first use a coarse selection filter function to narrow down our universe to the top 100 liquid securities with a price greater than $5.
+ Next, for each security in the universe, we will calculate the monthly return for the same-calendar month of the previous year. For example, if we implement this strategy on a backtest for the period of August 2019, we would base our long and short positions on monthly returns from August 2018. We will long the securities with top monthly returns and short those with the bottom monthly returns. 
+ At the end of each month we will rebalance and repeat the strategy. The following section offers further explanation of how to implement each step of the strategy.
+### 02 Method.html
+Step 1: Select our universe 
+ We first select the top 100 liquid securities and ETFs with prices greater than $5 based on Dollar Volume for our universe. Research from "Common Factors" suggests that the U.S. equity, commodity, and index markets are all affected by seasonality patterns. Therefore, we can include any assets in our universe. Note that while this strategy does not require fundamental data for implementation, other strategies in the library do. In those cases we would need to remove ETFs from the universe because we don’t have fundamental data for ETFs.
+ # Sort the securities with prices > 5 in DollarVolume decendingly
+ selected = sorted([x for x in coarse if x.Price > 5],
+ key=lambda x: x.DollarVolume, reverse=True)
+ # Get securities after coarse selection
+ symbols = [x.Symbol for x in selected[:self.num_coarse]]
+Step 2: Calculate the same-calendar month returns of the previous year 
+ "Common Factors" indicates that taking long and short positions based on historical same-calendar month returns earns an average monthly return of 1.88%. Our implementation also selects securities to long and short based on their same-calendar month returns. For each security in the universe, we calculate the monthly return for the same-calendar month of the previous year and choose the symbols as follows:
+ # Get historical close data for coarse-selected symbols of the same calendar month
+ start = self.Time.replace(day = 1, year = self.Time.year-1)
+ end = Expiry.EndOfMonth(start) - timedelta(1)
+ history = self.History(symbols, start, end, Resolution.Daily).close.unstack(level=0)
+ # Get the same calendar month returns for the symbols
+ MonthlyReturn = {ticker: prices.iloc[-1]/prices.iloc[0] for ticker, prices in history.iteritems()}
+ # Sorted the values of monthly return
+ sortedReturn = sorted(MonthlyReturn.items(), key=lambda x:x[1], reverse=True)
+ # Get the symbols to long / short
+ self.longSymbols = [x[0] for x in sortedReturn[:self.num_long]]
+ self.shortSymbols = [x[0] for x in sortedReturn[-self.num_short:]]
+ # Note that self.longSymbols/self.shortSymbols contains strings instead of symbols
+ return [x for x in symbols if str(x) in self.longSymbols + self.shortSymbols]
+Step 3: Rebalance monthly 
+ At the end of each month, we rebalance our portfolio, liquidate the securities that are not part of the new month’s universe, and repeat step 1 and 2. Keep in mind we use equal weights for the long and short positions of securities in our portfolio.
+ '''
+ Rebalance every month based on same-calendar month returns effect
+ '''
+ # Before next rebalance, do nothing
+ if self.Time
+### 03 Results.html
+In backtesting our algorithm achieves a Sharpe ratio of 0.332 relative to S&P 500 (SPY) Sharpe ratio of 0.893 for the past 10 years.
+ The performance indicates using the idea of same-calendar month returns makes sense. Interested users can build upon this implementation by trying the following extensions: 
+Using the same-calendar months of multiple years (e.g. the last 5 years), instead of using the previous year as we did in this tutorial, to get more stable monthly returns. 
+Using discounting to capture time effects in the returns. 
+Creating the initial universe using different criteria such as quarterly, rather than monthly, returns.

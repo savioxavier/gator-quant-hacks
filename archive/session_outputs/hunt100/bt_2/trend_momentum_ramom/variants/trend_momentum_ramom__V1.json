@@ -1,0 +1,4 @@
+{
+  "variant": "V1",
+  "desc": "RAMOM L=252, x=clip(t-stat/2,-1,1)"
+}

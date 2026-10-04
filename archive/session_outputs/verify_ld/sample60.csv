@@ -1,0 +1,61 @@
+row,type,doc,date,method,n_files,in_doc,my_date,date_ok,earliest,earliest_ok,sp_url,ds_year,sent
+132,mm,mm:20011211,2002-01-31,exact,3,True,2002-01-31,True,2002-01-31,True,,2012,Reinforcing this outlook was recent evidence of somewhat faster than anticipated productiv
+2336,mm,mm:20090923,2009-10-14,annotated-sheet join,3,True,2009-10-14,True,2009-10-14,True,,2003,Significant cost cutting by firms was thought to have led to a sizable increase in product
+1536,mm,mm:20130619,2013-07-10,exact,3,True,2013-07-10,True,2013-07-10,True,,2015,"In addition, the Committee reaffirmed its intention to keep the target federal funds rate "
+2386,mm,mm:20160127,2016-02-17,exact,3,True,2016-02-17,True,2016-02-17,True,,2006,Measures of forward inflation compensation based on Treasury Inflation-Protected Securitie
+622,mm,mm:20040810,2004-09-23,exact,3,True,2004-09-23,True,2004-09-23,True,,2010,The U. S. international trade deficit declined somewhat in May after reaching a record hig
+595,mm,mm:20050630,2005-07-21,exact,3,True,2005-07-21,True,2005-07-21,True,,2021,"In their discussion of developments in asset markets, the participants' comments focused o"
+2119,mm,pc:fomcpresconf20200429,2020-04-29,exact,3,True,2020-04-29,True,2020-04-29,True,,2016,"The ongoing public health crisis will weigh heavily on economic activity, employment, and "
+1539,mm,mm:20130130,2013-02-20,exact,3,True,2013-02-20,True,2013-02-20,True,,2009,"At the conclusion of the discussion, the Committee voted to authorize and direct the Feder"
+2068,mm,mm:20171101,2017-11-22,exact,3,True,2017-11-22,True,2017-11-22,True,,2020,The broad index of the foreign exchange value of the dollar rose nearly 3 percent over the
+2229,mm,mm:20030812,2003-09-18,exact,3,True,2003-09-18,True,2003-09-18,True,,2010,Several members reiterated that business spending was the critical factor that would gover
+1021,mm,mm:19961217,1997-02-06,annotated-sheet join,3,True,1997-02-06,True,1997-02-06,True,,2016,"At longer maturities, yields drifted lower over most of the intermeeting period in respons"
+405,mm,mm:20220615,2022-07-06,exact,3,True,2022-07-06,True,2022-07-06,True,,2003,"Since the previous FOMC meeting, spreads on municipal bonds narrowed substantially, on net"
+2232,mm,mm:19991005,1999-11-18,exact,3,True,1999-11-18,True,1999-11-18,True,,2014,"Nonetheless, considerable uncertainty surrounded expectations of rising inflation."
+674,mm,mm:20080625,2008-07-16,exact,3,True,2008-07-16,True,2008-07-16,True,,2009,Members commented that the continued strong increases in energy and other commodity prices
+2111,mm,mm:19990202,1999-04-01,exact,3,True,1999-04-01,True,1999-04-01,True,,1997,"Against this background, the members agreed on the need to continue to monitor the economy"
+220,mm,mm:20010320,2001-05-17,exact,3,True,2001-05-17,True,2001-05-17,True,,1996,"Price inflation had picked up a little but, abstracting from energy, had remained relative"
+497,mm,mm:20130731,2013-08-21,exact,3,True,2013-08-21,True,2013-08-21,True,,2021,The staff's forecast for inflation was little changed from the projection prepared for the
+115,mm,mm:20000516,2000-06-29,exact,3,True,2000-06-29,True,2000-06-29,True,,2020,There were more reports that rising wages and benefits and increasing costs of nonlabor in
+1147,mm,mm:20110126,2011-02-16,exact,3,True,2011-02-16,True,2011-02-16,True,,2016,"Further out, TIPS-based inflation compensation 5 to 10 years ahead edged down slightly on "
+927,mm,mm:20110126,2011-02-16,exact,3,True,2011-02-16,True,2011-02-16,True,,2004,Participants also generally agreed that the recent data had not led them to significantly 
+582,pc,pc:fomcpresconf20220615,2022-06-15,exact,3,True,2022-06-15,True,2022-06-15,True,,2016,That’s probably related to gas prices and also just stock prices to some extent for other 
+1656,pc,pc:fomcpresconf20191030,2019-10-30,exact,3,True,2019-10-30,True,,True,,2022,"But, really, it isn’t monetary policy."
+1279,pc,pc:fomcpresconf20190731,2019-07-31,exact,3,True,2019-07-31,True,2019-07-31,True,,2014,"But, I would say, overall, we’re trying to sustain the expansion and keep, you know, close"
+1828,pc,pc:fomcpresconf20150917,2015-09-17,exact,3,True,2015-09-17,True,2015-09-17,True,,2012,"Returning to monetary policy, we recognize that there has been a great deal of focus on to"
+678,pc,pc:fomcpresconf20190918,2019-09-18,exact,3,True,2019-09-18,True,2019-09-18,True,,2020,"So I think, through all of those channels, monetary policy works."
+2392,pc,pc:fomcpresconf20200129,2020-01-29,exact,3,True,2020-01-29,True,2020-01-29,True,,2020,It would consist of inflation plus—plus productivity growth.
+942,pc,pc:fomcpresconf20201105,2020-11-05,exact,3,True,2020-11-05,True,2020-11-05,True,,2014,"You know, what you hear out there is that demand—you talk to banks, and they’ll say demand"
+767,pc,pc:fomcpresconf20190731,2019-07-31,exact,3,True,2019-07-31,True,2019-07-31,True,,2020,"And it is not—it’s not exactly the same as watching global growth, where you see growth we"
+2457,pc,pc:fomcpresconf20130619,2013-06-19,exact,3,True,2013-06-19,True,2013-06-19,True,,2019,"With unemployment still elevated and inflation below the Committee’s longer-run objective,"
+140,pc,pc:fomcpresconf20120913,2012-09-13,exact,3,True,2012-09-13,True,,True,,2018,It also affects stock prices.
+2434,pc,pc:fomcpresconf20200429,2020-04-29,exact,3,True,2020-04-29,True,2020-04-29,True,,2011,And—but inflation expectations did not move strongly down here in the United States.
+434,pc,pc:fomcpresconf20191211,2019-12-11,exact,3,True,2019-12-11,True,2019-12-11,True,,2022,"And what it is is, it’s an expression of the thinking about individual Committee members a"
+2233,pc,pc:fomcpresconf20110622,2011-06-22,exact,3,True,2011-06-22,True,2011-06-22,True,,2011,"And, in particular, I do personally believe that the slowdown is at least partly temporary"
+1177,pc,pc:fomcpresconf20120125,2012-01-25,exact,3,True,2012-01-25,True,2012-01-25,True,,2011,"But again, in terms of terminology, I guess I would reject that term for the Federal Reser"
+477,pc,pc:fomcpresconf20130619,2013-06-19,exact,3,True,2013-06-19,True,2013-06-19,True,,2018,"As always, each participant’s projections are conditioned on his or her own view of approp"
+2183,pc,pc:fomcpresconf20170614,2017-06-14,exact,3,True,2017-06-14,True,2017-06-14,True,,2012,The recent lower readings on inflation have been driven significantly by what appear to be
+456,pc,pc:fomcpresconf20210728,2021-07-28,exact,3,True,2021-07-28,True,2021-07-28,True,,2021,"To the extent the global economy is weak and the United States is strong, it’ll—we’ll wind"
+917,pc,pc:fomcpresconf20150617,2015-06-17,exact,3,True,2015-06-17,True,2015-06-17,True,,2011,"And obviously there are benefits from a strong economy to every household in the economy, "
+1873,pc,pc:fomcpresconf20200610,2020-06-10,exact,3,True,2020-06-10,True,2020-06-10,True,,2013,"So that’s in the low 20s, and that’s post the May employment report."
+2425,pc,pc:fomcpresconf20191211,2019-12-11,exact,3,True,2019-12-11,True,2019-12-11,True,,2020,"Well, that’s—what’s happening there is the fact that the relationship between resource uti"
+2331,sp,sp:clarida20200616a,2020-06-16,exact,4,True,2020-06-16,True,2020-06-16,True,/newsevents/speech/clarida20200616a.htm,2004,"For example, core CPI (consumer price inflation) prices fell 0.4 percent in April, the lar"
+168,sp,sp:clarida20211119a,2021-11-19,exact,4,True,2021-11-19,True,2021-11-19,True,/newsevents/speech/clarida20211119a.htm,2000,"U.S. monetary policy responded to these global ""headwinds,"" helping stave off actual contr"
+509,sp,sp:clarida20210108a,2021-01-08,exact,4,True,2021-01-08,True,2021-01-08,True,/newsevents/speech/clarida20210108a.htm,2005,The changes to the policy statement that we made over the fall bring our policy guidance i
+1421,sp,sp:20000509,2000-05-09,exact,3,True,2000-05-09,True,2000-05-09,True,/boarddocs/speeches/2000/20000509.htm,2004,Theory also teaches that the increase in the rate of return on capital--even if generated 
+1927,sp,sp:quarles20211020a,2021-10-20,annotated-sheet join,4,True,2021-10-20,True,2021-10-20,True,/newsevents/speech/quarles20211020a.htm,1998,also how far it will fall and if it will fall soon enough to avoid spurring a concerning r
+1026,sp,sp:20010220,2001-02-20,exact,4,True,2001-02-20,True,2001-02-20,True,/boarddocs/speeches/2001/20010220/default.htm,2001,Productivity change for this output concept has increased even more than for traditional c
+22,sp,sp:19970424,1997-04-24,exact,4,True,1997-04-24,True,1997-04-24,True,/boarddocs/speeches/1997/19970424.htm,1999,It is important to recognize the importance of moving interest rates in response to changi
+1321,sp,sp:19970508,1997-05-08,exact,4,True,1997-05-08,True,1997-05-08,True,/boarddocs/speeches/1997/19970508.htm,2021,"Maintaining low inflation rates reduces the levels of future uncertainties and, hence, inc"
+2143,sp,sp:199909082,1999-09-08,exact,4,True,1999-09-08,True,1999-09-08,True,/boarddocs/speeches/1999/199909082.htm,2021,This allows the economy to operate at a higher utilization rate without inflationary conse
+1121,sp,sp:powell20220826a,2022-08-26,exact,4,True,2022-08-26,True,2022-08-26,True,/newsevents/speech/powell20220826a.htm,2006,"If the public expects that inflation will remain low and stable over time, then, absent ma"
+2266,sp,sp:20030203,2003-02-03,exact,4,True,2003-02-03,True,2003-02-03,True,/boarddocs/speeches/2003/20030203/default.htm,2002,"That is, it was thought that by accepting a modest increase in the inflation rate, policy "
+1105,sp,sp:20021122,2002-11-22,exact,4,True,2002-11-22,True,2002-11-22,True,/boarddocs/speeches/2002/20021122/default.htm,2017,The shifting balance of domestic demand and potential supply in each country means that po
+2468,sp,sp:20050527,2005-05-27,exact,4,True,2005-05-27,True,2005-05-27,True,/boarddocs/speeches/2005/20050527/default.htm,2000,"For equities, a stock's price-earnings ratio is a standard benchmark for assessing valuati"
+1687,sp,sp:19990610,1999-06-10,exact,4,True,1999-06-10,True,1999-06-10,True,/boarddocs/speeches/1999/19990610.htm,2004,"But, again underscoring an earlier point, this tightness of the labor market has not manif"
+546,sp,sp:brainard20191126a,2019-11-26,exact,4,True,2019-11-26,True,2019-11-26,True,/newsevents/speech/brainard20191126a.htm,1996,Flexible inflation averaging could bring some of the benefits of a formal average inflatio
+783,sp,sp:warsh20060718a,2006-07-18,exact,4,True,2006-07-18,True,2006-07-18,True,/newsevents/speech/warsh20060718a.htm,2006,"Moreover, the resulting robust gains in labor productivity have been well ahead of compens"
+2426,sp,sp:19990827,1999-08-27,exact,4,True,1999-08-27,True,1999-08-27,True,/boarddocs/speeches/1999/19990827.htm,2022,To anticipate a bubble about to burst requires the forecast of a plunge in the prices of a
+1009,sp,sp:bowman20211013a,2021-10-13,exact,4,True,2021-10-13,True,2021-10-13,True,/newsevents/speech/bowman20211013a.htm,1998,"And I'm pleased to have the opportunity to share with you, the students of South Dakota St"
+240,sp,sp:kohn20070921a,2007-09-21,annotated-sheet join,4,True,2007-09-21,True,2007-09-21,True,/newsevents/speech/kohn20070921a.htm,2004,"The dual mandate seems proper and fitting, given that economic costs are incurred both by "
+2051,sp,sp:waller20220618a,2022-06-18,exact,4,True,2022-06-18,True,2022-06-18,True,/newsevents/speech/waller20220618a.htm,2006,The Summary of Economic Projections by FOMC participants in December 2020 had the unemploy

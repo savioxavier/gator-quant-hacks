@@ -1,0 +1,688 @@
+
+=== page 1 ===
+Revisited 10 Years Later
+A Quantitative Approach to Tactical Asset Allocation
+Meb Faber
+http://jpm.iijournals.com/content/44/2/156
+https://doi.org/10.3905/jpm.2018.44.2.156doi: 
+2017, 44 (2) 156-167JPM 
+This information is current as of August 14, 2018.
+Email Alerts
+http://jpm.iijournals.com/alerts
+Receive free email-alerts when new articles cite this article. Sign up at: 
+© 2017 Institutional Investor LLC. All Rights Reserved 
+New York, NY 10036, Phone: +1 212-224-3589
+1120 Avenue of the Americas, 6th floor,
+Institutional Investor Journals
+ by Alex Ambroz on August 14, 2018http://jpm.iijournals.com/Downloaded from  by Alex Ambroz on August 14, 2018http://jpm.iijournals.com/Downloaded from 
+=== page 2 ===
+156   A QuAn tit At ive ApproAc h  to tAc tic Al Asset AllocAt ion  revisited  10 YeAr s  lAt er  Multi-Asset speciAl issue 2018
+Meb Faber
+is the chief investment 
+officer at Cambria 
+Investment Management, 
+LP, in Los Angeles, CA.
+mf@cambriainvestments.com
+A Quantitative Approach 
+to Tactical Asset Allocation 
+Revisited 10 Years Later
+Meb Faber
+I
+n 2006, we wrote a draft white paper 
+titled “A Simple Approach to Market 
+Timing,” which introduced a basic 
+market-timing strategy. We circulated 
+it among various friends and professionals 
+but quickly found that no one was partic -
+ularly interested in reading it. Eventually, 
+we changed the title to “A Quantitative 
+Approach to Asset Allocation” and pub -
+lished it (Faber [2007]), and shortly there -
+after, the world was rocked by the global 
+financial crisis. The strategy detailed in our 
+paper performed admirably in the turmoil. 
+Likely because of the performance of this 
+simple system, “A Quantitative Approach to 
+Asset Allocation” would go on to become 
+the most downloaded paper of all time on 
+Social Science Research Network (SSRN), 
+with approximately 200,000 downloads.
+Ten years have passed since the article 
+was published, so we thought it would be 
+interesting to examine how well the timing 
+strategy has held up. What lessons have been 
+learned? What might we have done differ -
+ently with the benefit of hindsight? And what 
+possible extensions and deviations exist for 
+further explorations?
+Note that this is not intended to be 
+an expansion of the original article (Faber 
+[2013] published an update to the original 
+article that included substantial new con -
+tent). Rather, this article should be consid -
+ered an accompaniment—a reflection on 
+the performance of the timing model using 
+in- and out-of-sample data in the years since 
+publication.
+THE ORIGINAL SYSTEM
+For those of you who may not have read 
+the original article or would benefit from a 
+refresher, the timing strategy examined was 
+a trend-following strategy. Trend following 
+is one of the oldest market strategies and has 
+been around since at least the time of Charles 
+Dow in the early 20th century.
+The most often-cited long-term mea -
+sure of trend in the technical analysis com -
+munity is the 200-day simple moving average 
+(SMA). Therefore, we decided to use this 
+as our starting point and make no claims of 
+originality.
+We utilized the monthly version of 
+the popular 200-day SMA indicator, the 
+10-month simple moving average. (This was 
+due mainly to the availability of historical 
+market data at the monthly time frame versus 
+daily.) For illustrative purposes, Exhibit  1 
+presents a chart of the S&P 500 total return 
+series and the 10-month SMA overlaid on top.
+The following criteria are necessary 
+for a trend-following model to be simple 
+enough for investors to follow and mechan -
+ical enough to remove emotion and subjec -
+tive decision making:
+1. I t must have simple, purely mechanical 
+logic.
+ by Alex Ambroz on August 14, 2018http://jpm.iijournals.com/Downloaded from 
+=== page 3 ===
+the JournAl of portfolio MAnAg e Me nt   157
+Multi-Asset speciAl issue 2018
+2. T he same model and parameters must be used for 
+every asset class.
+3. I t must be a price-based model.
+Using this logic, we only had one rule for our 
+timing system: Buy the security when it is in an uptrend, 
+and sell when it is in a downtrend—specifically,
+• Buy Rule
+• B uy when monthly price  > 10-month SMA.
+• Sell Rule
+• S ell and move to cash when monthly price  < 
+10-month SMA.
+That’s all there was to the model, but five clari -
+fying bullet points are included below:
+1. A ll entry and exit prices were on the day of the 
+signal at the close. The model was only updated 
+once a month on the last day of the month. Price 
+fluctuations during the rest of the month were 
+ignored.
+2. A ll data series were total return series including 
+dividends, updated monthly.
+3. C ash returns were estimated with 90-day Treasury 
+bills.
+4. T axes, commissions, and slippage were excluded 
+(see the Practical Considerations section later in 
+the article).
+5. U nless otherwise noted, all data series were total 
+return series including dividends and income and 
+are sourced from Global Financial Data.
+Before we examine performance, please note that 
+in the original article, I wrote,
+The attempt is not to build an optimization model 
+(indeed, the chosen parameter is decidedly sub -
+optimal, as evidenced later in the article), but to 
+build a simple trading model that works in most 
+markets. The results suggest that a market-timing 
+solution is a risk reduction technique rather than 
+a return-enhancing one…The empirical results 
+are equity-like returns with bond-like volatility 
+and drawdown. Faber [2007, p.  1]
+It’s important to understand that “beating the 
+market” was never the goal of the model. The intent 
+was to identify a trading system that largely approxi -
+mated market returns, yet did so with significantly less 
+volatility. The reason for this was simple—emotions 
+can wreak havoc on investors’ ability to follow their 
+e x h i b i t  1
+U.S. Stocks and 10-Month SMA, 1990–2016
+ by Alex Ambroz on August 14, 2018http://jpm.iijournals.com/Downloaded from 
+=== page 4 ===
+158   A QuAn tit At ive ApproAc h  to tAc tic Al Asset AllocAt ion  revisited  10 YeAr s  lAt er  Multi-Asset speciAl issue 2018
+stated investment plan. All too often, we fall victim 
+to fear when markets have turned against us and sell at 
+nearly the worst possible time. Although many market 
+historians enjoy pointing toward the healthy long-term 
+average returns of most equity indexes, what good are 
+those long-term averages if fear caused an investor to 
+sell near a market low?
+It was with this question in mind that I sought a 
+model that dramatically reduced volatility and draw -
+downs. The hope was that by implementing such a 
+model, investors could avoid the exaggerated turbu -
+lence that often results in emotion-based, money-losing 
+market decisions.
+So, did the system work as intended? The original 
+article was published with data up through 2005. We’ll 
+examine the historical in-sample results as well as the out-
+of-sample returns in the 11 years since. So before delving 
+into the data, what has transpired in the past decade?
+In the headlines, we’ve seen the Boston Marathon 
+bombing; the Russian invasion of Ukraine; the Afford -
+able Care Act; the continued war with Isis, Ebola, and 
+Zika; one of the most partisan periods ever in American 
+politics, culminating in the election of President Trump; 
+and now the increasing threat of war with North Korea. 
+In the investing world, we’ve seen the global financial 
+crisis and U.S. housing meltdown, followed by the 
+steady march of this historic U.S. bull market, the end 
+of the Fed’s Quantitative Easing program, historic lows 
+in bond yields including some negative global sovereign 
+yields, and multidecade highs and lows in oil prices, 
+among other stories.
+What has all this meant for our asset allocation 
+strategies and our simple model? Have any of these head-
+lines meant “this time it’s different”? Change has always 
+been the constant in markets, and indeed has anything 
+new really been seen in our world of investing? Bubbles, 
+defaults, government interventions, bear markets, and 
+fortunes made and lost—they’ve all happened before.
+1 
+To answer this question, let’s first examine the timing 
+model on U.S. stocks before moving to the perspective 
+of an asset allocation portfolio.
+Now, recall all the many caveats to a study such 
+as this. For most of the early part of the 20th century, 
+there was no way to trade an index such as the S&P 500 
+(because index funds didn’t exist in investable form until 
+the 1970s); and even if you could buy a basket of stocks 
+back then, trading them based on a trend system would 
+have been costly because of commissions and frictions 
+such as the bid–ask spread. However, it is still useful to 
+test the algorithm on historical data to help establish 
+a framework for how a modern system may have per -
+formed in the past.
+e x h i b i t  2
+U.S. Stocks and Timing, 1901–2016
+ by Alex Ambroz on August 14, 2018http://jpm.iijournals.com/Downloaded from 
+=== page 5 ===
+the JournAl of portfolio MAnAg e Me nt   159
+Multi-Asset speciAl issue 2018
+Exhibit  2 shows the performance of the timing 
+model over the past century, largely avoiding the 
+significant bear markets of the 1930s and 2000s. The 
+exhibit also shows that utilizing timing would not have 
+left the investor completely unscathed from the late 
+1920s to early 1930s bear market, nor would it have 
+saved the investor from the sharp drop in 1987.
+Exhibit 3 zooms into the more recent 1990–2016 
+period and is charted on a non-log scale to detail the dif-
+ferences between the two equity curves. A few features 
+of the timing model stand out. First, a trend-following 
+model can underperform buy and hold during a roaring 
+bull market such as the U.S. equity market in the 1990s. 
+On the flip side, the timing model can avoid lengthy and 
+protracted bear markets. Consequently, the value added 
+by timing is evident only over the course of the entire 
+business and market cycles.
+Many investors will look at Exhibits  2 and 3 and 
+think, “They both basically end up in the same place. Is 
+it even worth it?” That is a valid question, and if buy-
+and-hold investors can live through bear markets down 
+40%, 60%, or even 80% and stay the course, then they 
+may not need a trend-following system. However, as 
+earlier noted, many investors cannot handle the draw -
+downs, and as many advisors can attest, investors of all 
+types are tempted to capitulate and sell in bear markets. 
+On the flip side, market timing provides its own set 
+of challenges—namely, whipsaws with the false signals 
+often found in choppy markets; and one of the hardest 
+emotional challenges of investing is looking different 
+than your peers when they are performing well.
+With this historical perspective in mind, let’s now 
+turn to the results of our model since the original pub -
+lication date. Exhibit  4 details the in-sample and out-
+of-sample results for the simple timing model.
+A cursory review reveals that the timing solution 
+improved compounded returns while reducing risk and 
+drawdowns in both periods. Volatility is measured as 
+the annualized standard deviation of monthly returns. 
+Drawdown is the peak-to-trough decline an investor 
+would experience in an investment, and we calculate it 
+here monthly.
+After publication of our article, U.S. stocks were 
+pummeled in the global financial crisis, then continued 
+their upward trajectory. Exhibit 5 shows the yearly returns 
+for U.S. stocks and the timing system, detailing the out-
+of-sample performance. Though the timing system out-
+performed by a significant amount during the 2008–2009 
+bear market, it went on to underperform stocks six of the 
+next eight years. Many investors who had implemented 
+the timing model after the crash likely struggled with 
+staying the course with a tactical approach.
+e x h i b i t  3
+U.S. Stocks and Timing Equity Curves, 1990–2016
+ by Alex Ambroz on August 14, 2018http://jpm.iijournals.com/Downloaded from 
+=== page 6 ===
+160   A QuAn tit At ive ApproAc h  to tAc tic Al Asset AllocAt ion  revisited  10 YeAr s  lAt er  Multi-Asset speciAl issue 2018
+Most investors don’t own only U.S. stocks but 
+instead allocate to a broad spectrum of assets, including 
+bonds, foreign assets, and real assets. Given this, let’s 
+now turn our attention to the performance of the timing 
+system as applied to a diversified global portfolio.
+PORTFOLIO VIEW
+Dimson, Marsh, and Staunton’s [2002] book 
+Triumph of the Optimists: 101 Years of Global Investment  
+Returns illustrates that many global asset classes in the 
+twentieth century produced spectacular gains in wealth 
+for individuals who bought and held those assets for 
+generation-long holding periods. Of course, the assets 
+also went through regular and painful drawdowns, such 
+as in 2008. All the G-7 countries have experienced 
+at least one period in which stocks lost 75% of their 
+value. The unfortunate arithmetic of a 75% decline 
+requires an investor to realize a 300% gain just to get 
+back to even—the equivalent of compounding at 10% 
+for 15 years!
+The solution for most investors is to diversify 
+across uncorrelated asset classes and return streams. 
+Every bear market has a different personality, of course. 
+The 2000–2003 bear was largely confined to the high-
+flying technology stocks, and many asset classes and 
+securities came nowhere close to experiencing the major 
+losses suffered by market-capitalization-weighted U.S. 
+stock indexes.
+Exhibit  6 details the returns of five major asset 
+classes from 1972 to 2005. Although the indexes traveled 
+different routes from start to finish, most finished with 
+similar returns over time. The exception was bonds, 
+which trailed the other asset classes—an expected out -
+come because of their lower volatility and risk. The fact 
+that bonds were even close to the other equity-like asset 
+classes in absolute performance reflects the greater-
+than-twenty-year bull market that took yields from 
+double-digit levels to near 2% today. The returns for a 
+buy-and-hold allocation are referenced as “Global Asset 
+Allocation” or “GAA” and are equally weighted across 
+the five asset classes.
+Higher resolution daily data and longer look-back 
+periods can only increase the drawdown amount. A g ood 
+rule of thumb is that risky asset classes have Sharpe ratios 
+that cluster around 0.2 to 0.3, while a diversified port -
+folio is around 0.4 to 0.6. Exhibit  6 shows that while 
+the various asset classes posted healthy returns, they 
+are coupled with some substantial drawdowns. Except 
+for U.S. government bonds, which declined less than 
+20%, the other four asset classes suffered drawdowns 
+of around 40% to 60%. If an investor was to include 
+inflation or take the data back further, those drawdowns 
+only increase.
+So how did these asset classes perform in the out-
+of-sample period since 2005? Exhibit 7 shows the results. 
+The normal benefits of diversification disappeared in 
+2008, as many noncorrelated asset classes experienced 
+large declines simultaneously. As written above, every 
+bear market has its own personality—and whereas the 
+2000–2003 bear market was largely confined to tech -
+nology stocks, the 2008–2009 bear market was felt on 
+a far broader basis. The GAA asset allocation port -
+folio would have seen a drawdown of twice what it 
+experienced in the in-sample period—a good reminder 
+that the largest drawdown is always in your future.
+e x h i b i t  4
+U.S. Stocks and Timing Model, 1901–2005 
+and 2006–2016
+e x h i b i t  5
+U.S. Stocks and Timing Annual Returns, 2006–2016
+ by Alex Ambroz on August 14, 2018http://jpm.iijournals.com/Downloaded from 
+=== page 7 ===
+the JournAl of portfolio MAnAg e Me nt   161
+Multi-Asset speciAl issue 2018
+Having documented the individual returns of 
+these various asset classes, let’s now evaluate the timing 
+model on an aggregated portfolio level. How might the 
+simplistic market-timing rule work across these various 
+asset classes, as well as in the context of an investor’s 
+portfolio?
+The allocation we’ll evaluate consists of the five 
+global asset classes mentioned above: U.S. stocks, foreign 
+stocks, bonds, real estate, and commodities. The timing 
+model uses equal weightings and treats each asset class 
+independently; it is either long the asset class or its 20% 
+allocation sits in cash. Here we refer to the timing model 
+as Quantitative Tactical Asset Allocation or QTAA.
+Exhibit 8 details the in-sample and out-of-sample 
+equity returns.
+The additional advantages conferred by timing are 
+striking. Timing results in a reduction of volatility to 
+single-digit levels, as well as a single-digit maximum 
+drawdown in both periods. Although returns have 
+been far lower for all assets in the out-of-sample period, 
+timing added value.
+Exhibits 9 and 10 detail the in- and out-of-sample 
+equity curves as well.
+For perspective, Exhibit  11 presents a chart that 
+demonstrates the full period returns.
+It is good to see the simple system work out of 
+sample. But one might wonder, “Are these results in 
+some way skewed or influenced by the specific moving 
+average parameters of our model?”
+Exhibit  12 demonstrates that the choice of the 
+moving average doesn’t really matter all that much, and 
+any of the moving average lengths would have outper -
+formed a buy-and-hold allocation.
+In summation, we found the model performed 
+as expected despite geopolitical conflict, terrorism, 
+global health scares, and other such headline-making 
+news.
+e x h i b i t  6
+Asset Class Returns, 1972–2005
+e x h i b i t  7
+Asset Class Returns, 2006–2016
+e x h i b i t  8
+GAA and QTAA Equity Curves, 1972–2005 
+and 2006–2016
+ by Alex Ambroz on August 14, 2018http://jpm.iijournals.com/Downloaded from 
+=== page 8 ===
+162   A QuAn tit At ive ApproAc h  to tAc tic Al Asset AllocAt ion  revisited  10 YeAr s  lAt er  Multi-Asset speciAl issue 2018
+EXTENSIONS
+Since the publication of the original white paper, 
+we have written six books, ten white papers, over two 
+thousand blog articles, and produced nearly 100 podcast 
+episodes. Some of this content addressed, in varying 
+degrees, how an investor might improve upon or alter 
+this basic system. Although the intent of the original 
+e x h i b i t  9
+GAA and QTAA Equity Curves, 1972–2005
+e x h i b i t  1 0
+GAA and QTAA Equity Curves, 2006–2016
+ by Alex Ambroz on August 14, 2018http://jpm.iijournals.com/Downloaded from 
+=== page 9 ===
+the JournAl of portfolio MAnAg e Me nt   163
+Multi-Asset speciAl issue 2018
+paper was to demonstrate a simple tactical system, an 
+investor can take significant departures to tailor the port-
+folio to his or her own investing temperament. A  few 
+deviations were mentioned in a prior paper update, and 
+we will reexamine a few below. Because these were 
+published in the period after the original white paper, 
+we present the full sample dates (beginning in 1972) so 
+as not to imply they are truly out of sample.
+1. A lternative cash management strategies
+2. A lternate weighting strategies
+3. A dding more asset classes and tilts
+Extension 1—Alternative Cash Management 
+Strategies
+On average, the QTAA portfolio is invested in 
+approximately 30% cash because at any time, one or 
+more asset classes may not be invested because of our 
+trading rules. This is a drag on the portfolio, and many 
+investors employ other means to increase the yield on 
+the cash portion of the portfolio using any number of 
+funds or concepts. Exhibit  13 looks at a simple method 
+of taking on more duration risk by investing the cash 
+portion of the portfolio in 10-year government bonds 
+instead of Treasury bills.
+e x h i b i t  1 1
+GAA and QTAA Equity Curves, 1972–2016
+e x h i b i t  1 2
+Parameter Stability of Various Moving Average 
+Lengths, GAA and QTAA, 2006–2016
+e x h i b i t  1 3
+Asset Allocation and QTAA Portfolios, 1972–2016
+ by Alex Ambroz on August 14, 2018http://jpm.iijournals.com/Downloaded from 
+=== page 10 ===
+164   A QuAn tit At ive ApproAc h  to tAc tic Al Asset AllocAt ion  revisited  10 YeAr s  lAt er  Multi-Asset speciAl issue 2018
+An investor would have realized nearly an addi -
+tional 2% per annum in returns for marginally more 
+volatility and drawdown—but how much of this is 
+attributable to the major bull market in bonds?
+Exhibit 14 demonstrates that taking on additional 
+duration risk still helped during the period of sharply 
+rising interest rates from 1972 to 1981.
+Extension 2—Weighting Strategies
+No two investors are alike. Some investors value 
+wealth preservation with low volatility above all else; 
+others can handle a 50% loss to generate higher gains.
+Next, we look at three different allocations that we 
+will call 1) QTAA Conservative, 2) QTAA Moderate, 
+and 3) QTAA Aggressive. We will name the base case 
+model we have already examined QTAA Moderate.
+QTAA Conservative is an allocation that broadly 
+follows QTAA Moderate but puts a higher weighting 
+on bonds (40% versus 20%). Cash is invested in T-bills.
+The QTAA Aggressive portfolio begins with the 
+asset classes listed in the QTAA Moderate allocation. 
+It then selects the top three out of the five assets as 
+ranked by an average of 1-, 3-, 6-, and 12-month total 
+returns (momentum). This method was detailed in our 
+white paper, “Relative Strength Strategies for Investing” 
+(Faber [2010]). The assets are only included if they are 
+above their long-term moving average, otherwise that 
+portion of the portfolio is moved to cash using T-bills. 
+Exhibit 1 5 examines the results, and as one might expect, 
+QTAA Aggressive posts the highest returns, albeit with 
+increased volatility and drawdowns numbers.
+Extension 3–More Assets and Tilts
+Other than simplicity, there is no reason to focus 
+only on five asset classes. Technically, we believe there 
+are only four main asset classes: stocks, bonds, commodi-
+ties, and currencies. Everything else (such as REITs) is 
+a combination of the prior four.
+At the same time, expanding a portfolio to include 
+allocations with sizes that are less than 5% would have a 
+marginal impact on the entire portfolio’s risk and reward 
+characteristics. (This ignores derivatives and holdings 
+with highly asymmetric payoffs.)
+We also face the challenge that many asset classes 
+and indexes simply have not existed for a very long time. 
+For example, we do not include TIPs, junk, or high-
+yield bonds, emerging bonds, foreign REITs, funda -
+mental indexes, managed futures, currencies, or other 
+asset classes and strategies we might otherwise consider. 
+We found that 13 asset class subgroups will likely cover 
+most of the global market portfolio that we would like 
+to allocate to, while maintaining a large-enough alloca -
+tion size to affect the overall portfolio’s performance.
+Exhibit 16 expands the original portfolio from the 
+original five assets to include these additional assets. We 
+also decided to use tilts that have historically been shown 
+to improve upon market-capitalization weightings. Note 
+that we are including these tilts and adjustments with the 
+full benefit of hindsight; regardless, we believe they are 
+still reasonable modifications to make if implemented in 
+a thoughtful and cost-effective manner. Investors need 
+to be mindful of the fees they pay to express these asset 
+class tilts in their portfolio. Many funds are sold on Wall 
+Street with 1%+ expense ratios, likely destroying all the 
+potential alpha these funds may generate.
+We then look at the historical returns compared 
+to the simple strategy of five asset classes. As we see in 
+Exhibit 17, including more asset classes (identified by the 
+“+” symbol in the column heading) improves returns by 
+about 150 basis points, largely because of the tilts. We 
+believe this is enough to warrant increasing the assets 
+in the portfolio.
+e x h i b i t  1 4
+Asset Allocation and QTAA Portfolios, 1972–1981
+e x h i b i t  1 5
+Asset Allocation and QTAA Portfolios, 1972–2016
+ by Alex Ambroz on August 14, 2018http://jpm.iijournals.com/Downloaded from 
+=== page 11 ===
+the JournAl of portfolio MAnAg e Me nt   165
+Multi-Asset speciAl issue 2018
+There are limitless extensions to these studies; for 
+example, an investor could incorporate both the tilts and 
+asset class granularity with the aggressive approach and 
+cash management strategies of the prior two extensions. 
+This exercise is potentially venturing into some data 
+mining, but all three of the deviations are reasonable 
+and pass the common sense test. Exhibit  18 examines 
+some of the combined strategies.
+Will those deviations add value in the future; ask 
+us again in 10 years!
+PRACTICAL CONSIDERATIONS
+There are a few practical considerations an investor 
+must analyze before implementing these models for real-
+world applicability—namely, management fees, taxes, 
+commissions, and slippage.
+Management fees should be identical for both 
+the buy-and-hold and timing models and will vary 
+depending on the instrument used for investing. A fair 
+estimate for these fees using ETFs and no-load mutual 
+funds (obviously the lower the better) would be in the 
+range of 0.03% to 0.70%. Many all-ETF portfolios can 
+be formed for approximately 0.05% to 0.50%.
+Commissions should be a minimal factor because of 
+the low turnover of the models. On average, the investor 
+would be making three to four round-trip trades per 
+year for the portfolio and less than one round-trip trade 
+per asset class per year. Likewise, slippage should be 
+nearly negligible, because an investor can choose from 
+numerous mutual funds (end-of-day pricing means zero 
+slippage) as well as liquid ETFs. And many brokerages 
+offer commission-free trading for some or all the funds 
+on their platform.
+Taxes, on the other hand, are a very real consider-
+ation. Many institutional investors, such as endowments 
+and pension funds, enjoy tax-exempt status. The obvious 
+solution for individuals is to trade the system in a tax-
+deferred account such as an IRA or 401(k). Because of 
+the various capital gains rates for different investors (as 
+well as varying tax rates across time and the impact of 
+dividends), it is difficult to estimate the hit an investor 
+would suffer from trading this system in a taxable account. 
+Most investors rebalance their holdings periodically and 
+introduce some turnover into the portfolio even if they 
+apply a strategic buy-and-hold methodology.
+The system results in a high number of short-term 
+capital losses and a large percentage of long-term capital 
+gains.
+CONCLUSION
+The purpose of the original article was to eval -
+uate a simple-to-follow method for managing risk 
+in a single asset class and, by extension, a portfolio 
+of assets. Utilizing a monthly system since 1972, an 
+e x h i b i t  1 6
+Additional Asset Classes
+e x h i b i t  1 7
+Asset Allocation and Timing Returns, 1972–2016
+e x h i b i t  1 8
+Asset Allocation and Timing Returns, 1972–2016
+ by Alex Ambroz on August 14, 2018http://jpm.iijournals.com/Downloaded from 
+=== page 12 ===
+166   A QuAn tit At ive ApproAc h  to tAc tic Al Asset AllocAt ion  revisited  10 YeAr s  lAt er  Multi-Asset speciAl issue 2018
+investor would have been able to increase risk-adjusted 
+returns by diversifying portfolio assets and employing a 
+market-timing solution. In addition, the investor would 
+have been able to sidestep many of the protracted bear 
+markets in various asset classes. Avoiding these massive 
+losses would have resulted in equity-like returns with 
+bond-like volatility and drawdowns. Investors looking 
+to tailor their portfolios may consider using alternate 
+cash strategies, more assets in the portfolio, and alterna -
+tive weighting schemes to find a portfolio that is right 
+for them.
+As we look back and reflect, we find that QTAA 
+has performed as expected out of sample, which is to 
+say it performed well. Given this, it’s tempting to give 
+ourselves a pat on the back. However, what if QTAA had 
+performed poorly? Then likely no one would be reading 
+this article, because it would never have become popular 
+in the first place. So despite the great out-of-sample per-
+formance, is it fair to judge our timing strategy in such 
+short a time? Probably not. The value of such a model 
+is better evaluated over the course of multiple decades 
+rather than years (and certainly not quarters). And this 
+might be especially important given where we stand 
+today, looking forward to what could be in store for the 
+markets over the next decade.
+Although investors have benefitted from strong 
+equity markets since the global financial crisis, the 
+opportunity set for domestic investments is quite poor. 
+Valuations for U.S. stocks using the 10-year Shiller cycli-
+cally adjusted price/earnings (CAPE) have risen above a 
+value of 30, which puts them well above the long-term 
+average of around 17. Such a reading suggests that future 
+returns could underperform historical long-term aver -
+ages. Even the father of indexing, John Bogle, recently 
+suggested that U.S. stocks may return about 4% in the 
+coming decade. Are we to expect any help from bonds? 
+Perhaps the opposite is what we should expect: U.S. 
+government bond yields have declined to all-time low 
+levels of around 2.3%. Looking forward, we expect 
+future total bond returns to approximate their starting 
+yield. Given this, investors are presented with the fol -
+lowing opportunity set (assuming 2% inflation going 
+forward and rounding to make it simple): U.S. stocks, 
+4% nominal, 2% real; U.S. Bonds, 2% nominal, 0% real.
+Will U.S. equities significantly underperform 
+their long-term averages? What direction will U.S. 
+bond yields go? Will alternate global asset classes 
+prove to be better places for your investment capital? 
+No one can answer these questions with complete accu-
+racy. Given that, it’s crucial to invest thoughtfully and 
+deliberately.
+Most importantly, every investor should have a 
+plan and process for investing in any environment, 
+regardless of how improbable or unfathomable that 
+may be. Are you prepared for all the possible outcomes, 
+such as declines of 50% in an asset class or portfolio? 
+Are you prepared not only for currency devaluations 
+but also for massive rallies in stocks or bonds? Can 
+you fathom a world with interest rates at 0% as well 
+as at 10%?
+The beauty of the simplistic timing model doc-
+umented in this article is that it’s dynamic, therein 
+enabling us to answer “yes” to the questions above. 
+Whether you deem it appropriate or not for your own 
+investing style, the broader point remains: Do you have 
+a plan or process that has prepared you for tomorrow’s 
+market, in whatever condition you may find it?
+a p p e n d i x
+DATA SOURCES
+We used Global Financial Data for the data in this 
+article. However, there are many free sources of data avail -
+able online for the asset classes included in this article.
+• S&P 500 Index —a capitalization-weighted index of 
+500 stocks that is designed to mirror the performance 
+of the U.S. economy. Global Financial Data provided 
+the total return series and constructed the results pre-
+1971. Data from 1900 to 1971 use the S&P Composite 
+Price Index and dividend yields supplied by the Cowles 
+Commission and from S&P itself.
+• MSCI EAFE Index (Europe, Australasia, Far East)—a 
+free float–adjusted market capitalization index that is 
+designed to measure the equity market performance 
+of developed markets, excluding the United States and 
+Canada.
+• U.S. Government 10-Year Bonds— a total return 
+series.
+• Goldman Sachs Commodity Index (GSCI)—a 
+diversified basket of commodity futures that is unle -
+vered and long only. This total return series is provided 
+by Goldman Sachs.
+• National Association of Real Estate Investment 
+Trusts (NAREIT)—a total return index that reflects 
+the performance of publicly traded REITs.
+ by Alex Ambroz on August 14, 2018http://jpm.iijournals.com/Downloaded from 
+=== page 13 ===
+the JournAl of portfolio MAnAg e Me nt   167
+Multi-Asset speciAl issue 2018
+ENDNOTE
+1For a lengthy examination of bubbles, see Faber [2011].
+REFERENCES
+Dimson, M., P. Marsh, and M. Staunton. Triumph of the Opti-
+mists: 101 Years of Global Investment Returns . Princeton, NJ:  
+Princeton University Press, 2002.
+Faber, M. “A Quantitative Approach to Tactical Asset Alloca-
+tion.” The Journal of Wealth Management, Vol. 9, No. 4 (2007), 
+pp. 69-79.
+——. “Relative Strength Strategies for Investing.” Unpub -
+lished paper, April 1, 2010.
+——. “Learning to Love Investment Bubbles: What If Sir 
+Isaac Newton had been a Trend follower?” Cambria—Quan-
+titative Research, Issue 4, September 2011.
+——. “A Quantitative Approach to Tactical Asset Allocation.” 
+White paper, February 1, 2013, SSRN 962461.
+To order reprints of this article, please contact David Rowe at 
+drowe@iijournals.com  or 212-224-3045.
+ by Alex Ambroz on August 14, 2018http://jpm.iijournals.com/Downloaded from 

@@ -1,0 +1,77 @@
+{
+  "placebo_features": true,
+  "H2": {
+    "eligible": 1124,
+    "eligible_primary": 582,
+    "h1": 1066,
+    "h1_primary": 542,
+    "h1_primary_meetings": 20,
+    "h5": 354,
+    "h5_primary": 161,
+    "h5_primary_meetings": 20,
+    "h15": 139,
+    "h15_primary": 62,
+    "h15_primary_meetings": 20,
+    "meetings_eligible": 44,
+    "meetings_eligible_primary": 20
+  },
+  "H3": {
+    "eligible": 1137,
+    "eligible_primary": 591,
+    "h1": 1073,
+    "h1_primary": 548,
+    "h1_primary_meetings": 20,
+    "h5": 357,
+    "h5_primary": 163,
+    "h5_primary_meetings": 20,
+    "h15": 140,
+    "h15_primary": 62,
+    "h15_primary_meetings": 20,
+    "meetings_eligible": 44,
+    "meetings_eligible_primary": 20
+  },
+  "H2D": {
+    "eligible": 1124,
+    "eligible_primary": 582,
+    "h1": 1066,
+    "h1_primary": 542,
+    "h1_primary_meetings": 20,
+    "h5": 354,
+    "h5_primary": 161,
+    "h5_primary_meetings": 20,
+    "h15": 139,
+    "h15_primary": 62,
+    "h15_primary_meetings": 20,
+    "meetings_eligible": 44,
+    "meetings_eligible_primary": 20
+  },
+  "H2V": {
+    "eligible": 1034,
+    "eligible_primary": 571,
+    "h1": 991,
+    "h1_primary": 538,
+    "h1_primary_meetings": 20,
+    "h5": 332,
+    "h5_primary": 161,
+    "h5_primary_meetings": 20,
+    "h15": 129,
+    "h15_primary": 61,
+    "h15_primary_meetings": 20,
+    "meetings_eligible": 41,
+    "meetings_eligible_primary": 20
+  },
+  "H4": {
+    "eligible": 1101,
+    "eligible_primary": 582,
+    "h1": 1043,
+    "h1_primary": 542,
+    "h1_primary_meetings": 20,
+    "meetings_eligible": 43
+  },
+  "known_at_qa": {
+    "voice_media_end_le_E_all": true,
+    "voice_tau_minus_pkg_known_at_s_median": 23.8338605,
+    "face_tau_minus_pkg_known_at_s_median": 22.4369999995,
+    "note": "package known_at (greeting anchor + 30 s) recorded as comparison only; fills use tau_k_upper"
+  }
+}

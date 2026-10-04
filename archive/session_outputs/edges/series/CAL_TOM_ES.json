@@ -1,0 +1,25 @@
+{
+  "candidate": "CAL_TOM_ES",
+  "rule": "Long ES16 from the close of T-2 to the close of T+3 (return days T-1..T+3), flat otherwise",
+  "literature": "Lakonishok & Smidt (1988, RFS; DJIA 1897-1986); McConnell & Xu (2008, FAJ; CRSP 1926-2005); Ariel (1987, JFE)",
+  "instrument": "ES16",
+  "columns": {
+    "net_1x": "daily excess return over T-bill, net of realistic one-way cost 0.75 bp per unit notional (+ engine roll round trip)",
+    "net_2x": "same at 2x costs",
+    "gross": "no costs"
+  },
+  "scaling": "L = min(5, 0.10 / (sigma_hat * sqrt(f_hat))) inside windows, fixed per window from the decision date two sessions before the first return day; sigma_hat = sqrt(252*EWMA_com60(r^2)) of the instrument's daily excess returns; f_hat = share of trailing 252 sessions in the rule's windows",
+  "execution": "engine.simulate exec=next_close (weight held over day t decided at close t-2); calendar offsets on the planned NYSE calendar",
+  "is_window": [
+    "2010-09-29",
+    "2024-10-02"
+  ],
+  "later_window": [
+    "2024-10-03",
+    "2026-10-02"
+  ],
+  "spec": "edges/calendar/SPEC.md",
+  "script": "edges/calendar/run_calendar.py",
+  "verdict": "fails",
+  "notes": "No timing alpha vs ES16 (t 0.06). In FF data the effect was strong before 2008, then about zero (2.8 bp/day, t 0.68)."
+}

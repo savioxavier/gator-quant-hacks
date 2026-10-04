@@ -1,0 +1,164 @@
+{
+  "label": "carry_value",
+  "written": "2026-10-03, before any return of these rules was computed by this agent",
+  "conventions": "See notes.md section STD: sizing (EWMA com-60 vol, 0.10/sigma risk units, book at 10% ex-ante vol with trailing 252-session covariance, scale cap 4), month-end decisions with engine exec=next_close unless stated, near/far legs from edges/carry/contracts.parquet, COT point-in-time rule (usable from the first NYSE session after release_at), cost map from the task (spreads pay both legs).",
+  "candidates": [
+    {
+      "id": "carry_value_comm_curve_spread",
+      "name": "Commodity curve carry spread: long deferred, short front contract",
+      "family": "commodity term structure / calendar spread",
+      "primary_variant": "V1"
+    },
+    {
+      "id": "carry_value_comm_bm_spread",
+      "name": "Basis-momentum spreading returns (curve-neutral, Boons-Porras Prado)",
+      "family": "commodity term structure / basis-momentum",
+      "primary_variant": "V1"
+    },
+    {
+      "id": "carry_value_comm_ts_mom_double_sort",
+      "name": "Term-structure x momentum double sort (Fuertes-Miffre-Rallis 2010)",
+      "family": "commodity carry + momentum",
+      "primary_variant": "V1 (R=12)"
+    },
+    {
+      "id": "carry_value_comm_value_ma",
+      "name": "Commodity-only value: deviation from 1-5 year moving averages",
+      "family": "commodity value / long-term reversal",
+      "primary_variant": "V1"
+    },
+    {
+      "id": "carry_value_comm_hedging_pressure",
+      "name": "Hedging pressure double sort (Basu-Miffre 2013), CFTC legacy COT",
+      "family": "positioning / hedging pressure",
+      "primary_variant": "V1 (R=52 weeks)"
+    },
+    {
+      "id": "carry_value_cot_speculative_pressure",
+      "name": "Speculative pressure everywhere (Fan-Fernandez-Perez-Fuertes-Miffre 2020)",
+      "family": "positioning / speculative pressure",
+      "primary_variant": "V1 (COM+FX+EQ)"
+    },
+    {
+      "id": "carry_value_cot_liquidity_provision",
+      "name": "Weekly hedger position-change contrarian (Kang-Rouwenhorst-Tang 2020)",
+      "family": "positioning / short-term liquidity provision",
+      "primary_variant": "V1 (10-session hold)"
+    },
+    {
+      "id": "carry_value_cot_open_interest_growth",
+      "name": "Aggregate commodity open-interest growth timing (Hong-Yogo 2012)",
+      "family": "positioning / open interest",
+      "primary_variant": "V1"
+    },
+    {
+      "id": "carry_value_eia_crude_inventory",
+      "name": "Crude oil inventory vs 5-year seasonal norm (EIA weekly) on CL",
+      "family": "inventory / theory of storage",
+      "primary_variant": "V1"
+    },
+    {
+      "id": "carry_value_eia_natgas_storage",
+      "name": "Natural gas storage vs 5-year seasonal norm (EIA weekly) on NG",
+      "family": "inventory / theory of storage",
+      "primary_variant": "V1"
+    },
+    {
+      "id": "carry_value_crush_spread_mr",
+      "name": "Soybean board-crush mean reversion (Simon 1999)",
+      "family": "inter-commodity spread value",
+      "primary_variant": "V1 (k=1.0)"
+    },
+    {
+      "id": "carry_value_crack_spread_mr",
+      "name": "3:2:1 crack spread mean reversion (Girma-Paulson 1999)",
+      "family": "inter-commodity spread value",
+      "primary_variant": "V1 (k=1.0)"
+    },
+    {
+      "id": "carry_value_fx_dollar_carry",
+      "name": "Dollar carry trade (Lustig-Roussanov-Verdelhan 2014)",
+      "family": "FX carry (time-series, basket)",
+      "primary_variant": "V1"
+    },
+    {
+      "id": "carry_value_fx_ppp_value",
+      "name": "FX real-exchange-rate value (Asness-Moskowitz-Pedersen; Menkhoff et al. 2017)",
+      "family": "FX value",
+      "primary_variant": "V1"
+    },
+    {
+      "id": "carry_value_fx_rate_change",
+      "name": "FX yield-curve predictors: change in rate-level differential (Ang-Chen 2010)",
+      "family": "FX term structure",
+      "primary_variant": "V1 (Change)"
+    },
+    {
+      "id": "carry_value_tsy_curve_carry_par",
+      "name": "Treasury curve carry and roll-down from the par curve (KMPV; Beekhuizen et al.)",
+      "family": "bond carry / roll-down",
+      "primary_variant": "V1"
+    },
+    {
+      "id": "carry_value_tsy_bab_curve",
+      "name": "Betting-against-beta along the Treasury futures curve (Frazzini-Pedersen 2014)",
+      "family": "bond curve / low risk",
+      "primary_variant": "V1"
+    },
+    {
+      "id": "carry_value_tsy_term_spread_timing",
+      "name": "Duration timing by term spread (Campbell-Shiller / Fama-Bliss)",
+      "family": "bond term premium timing",
+      "primary_variant": "V1"
+    },
+    {
+      "id": "carry_value_tsy_cochrane_piazzesi",
+      "name": "Cochrane-Piazzesi forward-rate factor duration timing",
+      "family": "bond term premium timing",
+      "primary_variant": "V1"
+    },
+    {
+      "id": "carry_value_tsy_slope_mr_2s10s",
+      "name": "2s10s slope mean reversion, vol-neutral ZT/ZN",
+      "family": "yield-curve relative value",
+      "primary_variant": "V1"
+    },
+    {
+      "id": "carry_value_tsy_butterfly_mr",
+      "name": "2s5s10s butterfly mean reversion with ZT/ZF/ZN",
+      "family": "yield-curve relative value",
+      "primary_variant": "V1"
+    },
+    {
+      "id": "carry_value_eq_dy_timing_ct",
+      "name": "Dividend-yield equity timing with Campbell-Thompson restrictions on ES",
+      "family": "equity value timing",
+      "primary_variant": "V1 (log D/P)"
+    },
+    {
+      "id": "carry_value_eq_country_dy_value",
+      "name": "Country ETF dividend-yield value",
+      "family": "equity index value (cross-country)",
+      "primary_variant": "V1"
+    },
+    {
+      "id": "carry_value_eq_country_reversal",
+      "name": "Country ETF 3-year winner-loser reversal (Richards 1997)",
+      "family": "equity index long-term reversal",
+      "primary_variant": "V1"
+    },
+    {
+      "id": "carry_value_kmpv_carry_everywhere",
+      "name": "KMPV futures carry everywhere (already computed, verified)",
+      "family": "multi-asset carry",
+      "primary_variant": "XS_global_C1_M"
+    },
+    {
+      "id": "carry_value_amp_value_everywhere",
+      "name": "AMP value everywhere / 5-year reversal (already computed, verified)",
+      "family": "multi-asset value",
+      "primary_variant": "VAL_ALL"
+    }
+  ],
+  "full_records": "The complete records (exact_rule, sources, evidence, data, adaptation, reuse) are in candidates_full.json"
+}

@@ -1,0 +1,12 @@
+backtests/results/presser_h1/h1primary_trades.csv {'rows': 3093, 'on_tick_grid': 3093, 'equal_to_a_1m_bar_level': 3093}
+events.csv zt 1350-1420 {'rows': 70, 'on_tick_grid': 70, 'equal_to_a_1m_bar_level': 70}
+events.csv zf 1350-1420 {'rows': 72, 'on_tick_grid': 72, 'equal_to_a_1m_bar_level': 72}
+events.csv zn 1350-1420 {'rows': 72, 'on_tick_grid': 72, 'equal_to_a_1m_bar_level': 72}
+events.csv es 1350-1420 {'rows': 71, 'on_tick_grid': 71, 'equal_to_a_1m_bar_level': 71}
+return + tick move in: backtest_snapshot/presser_bt/backtest/results/benchr_trades.csv (tracked)
+return + tick move in: backtest_snapshot/presser_bt/backtest/results/h1answer_trades.csv (tracked)
+return + tick move in: backtest_snapshot/presser_bt/backtest/results/h1primary_trades.csv (tracked)
+return + tick move in: backtest_snapshot/presser_bt/events/events.csv (tracked)
+return + tick move in: backtests/presser/events/events.csv (tracked)
+return + tick move in: backtests/results/presser_h1/h1primary_trades.csv (tracked)
+h1primary_trades: reconstructed entry == open of own entry bar: 3093 of 3093

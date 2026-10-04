@@ -1,0 +1,20 @@
+### 01 Introduction.html
+Carry trade is very common in the foreign exchange market.
+ The strategy systematically sells low-interest rate currencies and buys high-interest rates currencies. The “carry” of an asset is the opportunity cost of holding that asset. Carry trade strategy holds one currency relative to another in order to capture the spread between the rates. We can think of this strategy as borrowing money from one country with a lower interest rate and investing it in another country with a higher interest rate.
+### 02 Method.html
+Importing Custom Data 
+ The central bank interest rate data is from Quandl. For the trading universe, we choose 9 currencies
+ whose central bank interest rate data is available in Quandl. The method to import the custom data is
+ AddData(type, symbol, resoltuion, timeZone, fillDataForward) . As the custom file has it's unique
+ colume name, we need to create a class to specify the colume name of interest rate.
+from QuantConnect.Python import PythonQuandl
+class QuandlRate(PythonQuandl):
+ def __init__(self):
+ self.ValueColumnName = 'Value'
+ We save the interest rate symbol and the correspondent forex asset symbol into a dictionary.
+ Monthly Rebalance Trading 
+ Next step we sort the forex symbol by the value of interest rate. The algorithm goes long the currency with the highest interest rates and goes short the currency with the lowest interest rate. The strategy is rebalanced monthly. The schedule event method is used to fire the rebalance event at the first trading day each month.
+### 03 Algorithm.html
+
+### 04 Source.html
+Quantpedia - FX Carry Trade

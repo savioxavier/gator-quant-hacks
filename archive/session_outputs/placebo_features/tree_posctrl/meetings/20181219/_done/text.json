@@ -1,0 +1,14 @@
+{
+  "stage": "text",
+  "presser_id": "20181219",
+  "status": "ok",
+  "outputs": [
+    "text/text_sentences.parquet"
+  ],
+  "notes": {
+    "primary": "chrono_wf"
+  },
+  "run_id": "PLACEBO",
+  "placebo": "PLACEBO: synthetic tree, not package output",
+  "finished_utc": "2026-10-03T23:43:49+00:00"
+}
