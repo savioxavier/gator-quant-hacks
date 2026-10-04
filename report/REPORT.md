@@ -13,36 +13,19 @@ Code, data and results: https://github.com/savioxavier/gator-quant-hacks (branch
 
 ## 1. Summary
 
-We test whether the Federal Reserve's own words predict US rates and the dollar after they become public, with two
-pre-registered strategies and one exploratory extension.
-
-- **v2, the daily sleeve.** Every Board speech, FOMC statement, set of minutes and press-conference transcript from
-  2015 to 2026 (1,098 documents; 5,225 scored text units including 2,026 Chair answers and the 2,026 questions before
-  them) is scored for hawkish or dovish stance by yearly language models trained only on text available before each
-  year. The scores are decayed into a consensus, z-scored, and traded through 75% TLT / 25% UUP (E1) or 75% 10-year
-  Treasury futures / 25% short euro futures (E2) at the next bar, sized to 10% volatility.
-- **H1, the press-conference study.** Does the Chair's Q&A, measured against the statement released 30 minutes
-  earlier, predict the 2-year Treasury futures (ZT) move after the conference? It is benchmarked against a costed
-  replication of the known statement-to-conference continuation (BENCH-R).
-- **H2/H3/H4, voice and face (exploratory).** Vocal arousal, upper-face tension and their combination with text were
-  measured from the conference recordings with a reproducible feature package run on HiPerGator, and tested after H1
-  failed, under their own pre-registration.
-
-**Headline results (all net of costs).**
-
-| Strategy | In-sample Sharpe (net / 2x costs) | Out-of-sample Sharpe, 2024-10-03..2026-10-02 (net / 2x) | Status |
-|---|---|---|---|
-| v2, chosen combination T4xE1 | 0.441 / 0.387 | 0.607 / 0.544 | failed its pre-registered 2x gate (0.387 < 0.5); out-of-sample evaluated once under deviation D-3 for reporting; not significant (Newey-West t 0.84) and concentrated in the last months |
-| core_ER_6 (existing core portfolio) | 0.998 / 0.878 | 0.601 / 0.456 | reference |
-| core_ER_6 + T4xE1 (pre-declared portfolio test) | 1.038 / 0.909 | 0.870 / 0.703 | gain comes from the last months |
-| H1-primary (press conference, ZT) | -0.17 / -0.52 | -1.33 / -1.73 | G3 decision NO-GO (n 20, +0.50 ticks gross, p 0.45) |
-| BENCH-R (press conference, ZT) | -0.51 / -0.67 | 0.18 / -0.02 | non-blind replication; reverses after 2020 |
-| H2 voice / H3 face / H4 combined | - | - | not detected / killed by its variance gate / not detected |
-
-What is new is the method, not a return: a walk-forward stance model with labels re-dated to their source documents,
-press-conference answers timed against live TV captions instead of the 14:30 convention, costs measured from quotes
-at the fill seconds, a full pre-registration trail with every deviation dated before the result it governs, and
-every headline number reproduced on a second platform (HiPerGator) to about 1e-15.
+We trade the stance of the Federal Reserve's own words. Every Board speech, FOMC statement, set of minutes and
+press-conference transcript from 2015 to 2026 (1,098 documents) is scored hawkish or dovish by language models
+retrained each year only on text published before that year; the scores decay into a daily consensus that, averaged
+with a frozen speech lexicon, sets a 75% TLT / 25% UUP position at the next open, sized to 10% volatility (v2, signal
+T4 with expression E1). The edge is economic: the Fed reveals its policy path gradually, through hundreds of dated
+remarks that no single release summarises, so rates and the dollar absorb it over days rather than seconds, and the
+signal is nearly uncorrelated with our existing core portfolio (0.03 in-sample). Out-of-sample (2024-10-03 to
+2026-10-02, evaluated once), the strategy earned a Sharpe of 0.61 net of costs and 0.54 at double costs (3.8% a year
+at 6.3% volatility, maximum drawdown -6.6%), and adding it to the core portfolio raised that portfolio's
+out-of-sample Sharpe from 0.60 to 0.87 (0.46 to 0.70 at double costs). These results have limits: the strategy failed
+its own pre-registered in-sample cost test (Sharpe 0.39 at double costs, below the 0.5 required), so its
+out-of-sample window was opened only by a dated deviation, and the out-of-sample gain is not statistically
+significant (Newey-West t = 0.84) and comes mostly from the final months.
 
 ## 2. Economic Hypothesis
 
