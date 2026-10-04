@@ -6,3 +6,6 @@ events_market_long.csv
 backtests/presser/backtest_h234_local/
 backtests/presser/backtest_h234*/results/answer_trades.csv
 backtests/presser/backtest_h234*/results/meeting_trades.csv
+
+# derived from the licensed quote file; kept local until the team decides
+backtests/results/presser_strategy/capacity_top_of_book.csv

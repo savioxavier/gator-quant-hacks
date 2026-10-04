@@ -1,0 +1,49 @@
+{
+ "purpose": "strategy-level presentation of pre-registered press-conference trades (v2 deviation D-3, last section)",
+ "inputs": {
+  "backtests/results/presser_h1/h1primary_trades.csv": "b8236dcdc2581ba38a825304aa70657c4039e461e1c4096591ac19e17c7142a5",
+  "backtests/results/presser_h1/key_results.json": "ff7c40cf6f630cb85864e9b852b4be460e05016ed715e1ee982d2d9a59d4d86f",
+  "backtests/results/presser_h1/summary_long.csv": "570296a514d519432c94f7ab0ca8f462c47ef7411ac14a2215462f7f788a77ed",
+  "backtests/presser/backtest/positions/meetings_positions.csv": "cb4165df0b00d1fba43f3892ce8d39a9f636237dbdf263e00d06dd26c39886f7",
+  "backtests/presser/backtest/positions/manifest_sha256.txt": "1db0b32d84d4672e5fa1a10a4c28a40960c96593ac080588decb847cc2ac7cf5",
+  "backtests/presser/ADDENDUM.md": "1921b2ca1dc6e646b95ee1d1bbc3e3ef7f6a864c06cd724956df7c6569de2dc4",
+  "preregistration/v2_DEVIATION_D3_OOS.md": "97585d3ca3e7f5764d16e24787486c51ca298dd95ca57ad82d27e1ba30af1c69",
+  "backtests/results/presser_h1/tables/benchr_per_meeting_ZT.csv": "5f27fe7fe6a1c5e0cc350df709f31758fc766f8baa6e3c2c6eab6f6c90eb920c",
+  "backtests/results/presser_h1/tables/benchr_per_meeting_ZF.csv": "d29a397e886ba253fad6b63fd1eda3ce4d8c2dfcd725713953b1708c82dc59a9",
+  "backtests/results/presser_h1/tables/benchr_per_meeting_ZN.csv": "3bf23caff5bd888a95e423e447623b73535401252863eea35142e34aa919b8e5",
+  "backtests/results/presser_h1/tables/benchr_per_meeting_ES.csv": "614518c1bf8961ca3b0a2fe8c5eac9136a53553dd5717ee2d7d39a54d8949d44"
+ },
+ "free_source": {
+  "<GQH_DATA_DIR>/index_daily.parquet (Yahoo ^GSPC)": "b871e9863928da6dc0d43636f9573d0182f6604d10c9a2899b5f2bce88497597"
+ },
+ "capital_usd": 10000000.0,
+ "target_is_ann_vol": 0.1,
+ "annualisation_days": 252,
+ "fee_usd_per_side": 2.0,
+ "is_end": "2024-10-02",
+ "oos": [
+  "2024-10-03",
+  "2026-10-02"
+ ],
+ "first_trade": {
+  "BENCH-R": "2016-03-16",
+  "H1-primary": "2018-03-21"
+ },
+ "N_contracts": {
+  "BENCH-R|ES": 265,
+  "BENCH-R|ZF": 1827,
+  "BENCH-R|ZN": 1413,
+  "BENCH-R|ZT": 1916,
+  "H1-primary|ES": 343,
+  "H1-primary|ZF": 4033,
+  "H1-primary|ZN": 3072,
+  "H1-primary|ZT": 4788
+ },
+ "cost_labels": {
+  "gross": "gross (trade prints, no cost)",
+  "net1x": "net 1x: measured half-spread at each fill + $2/side fee (ZF: 2 ticks/side + fee, no ZF quotes)",
+  "net2x": "net 2x: twice the net 1x cost",
+  "fixed1x": "fixed-tick 1x: 2 ticks/side + $2/side fee (ADDENDUM C2+F)",
+  "fixed2x": "fixed-tick 2x: 4 ticks/side + $4/side fee"
+ }
+}

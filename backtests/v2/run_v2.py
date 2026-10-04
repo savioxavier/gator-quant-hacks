@@ -17,6 +17,9 @@ Environment (no machine-specific defaults):
   V2_OUT_DIR    output folder for `run` (default backtests/results/v2, which holds the decision record)
   V2_PREREG     the pre-registration file (default <repo>/preregistration/HYPOTHESIS_v2.md)
   BACKTEST_RERUN_DIR  folder for check/smoke outputs (default backtests/rerun)
+  V2_OOS_DEVIATION  deviation D-3 only: preregistration/v2_DEVIATION_D3_OOS.md (sha256 pinned below) lets stage_oos
+                run ONCE beside the failed-rule record, into backtests/results/v2_oos/run (via run_v2_chrono.py);
+                `run` mode stays refused
 Run with the gqh-flow-clock root as working directory:
   GQH_DATA_DIR=<data cache> PYTHONIOENCODING=utf-8 <python> <this file> <mode>
 Never sets GQH_OOS_UNLOCK, never calls engine.run_backtest/log_trial, never writes to gqh-flow-clock.
@@ -56,6 +59,16 @@ OUT_RUN = Path(os.environ.get("V2_OUT_DIR") or (BTS / "results" / "v2"))
 RERUN = Path(os.environ.get("BACKTEST_RERUN_DIR") or (BTS / "rerun"))
 LOCK_DIR = BTS / "results" / "v2"                       # the committed decision record of the one-shot OOS
 LOCK_FILES = ("oos_chosen.json", "oos_not_evaluated.json")
+D3_DEVIATION = TEAM_REPO / "preregistration" / "v2_DEVIATION_D3_OOS.md"
+D3_SHA = "97585d3ca3e7f5764d16e24787486c51ca298dd95ca57ad82d27e1ba30af1c69"  # D-3: OOS once for reporting, rule failed
+D3_OUT = BTS / "results" / "v2_oos" / "run"             # the only output folder of the D-3 evaluation
+
+
+def d3_unlocked() -> bool:
+    """Deviation D-3: V2_OOS_DEVIATION names the D-3 file and that file has the pinned sha256."""
+    p = os.environ.get("V2_OOS_DEVIATION")
+    return bool(p) and Path(p).resolve() == D3_DEVIATION.resolve() and D3_DEVIATION.is_file() \
+        and hashlib.sha256(D3_DEVIATION.read_bytes()).hexdigest() == D3_SHA
 
 
 def oos_lock_records(*dirs) -> list:
@@ -70,8 +83,11 @@ def oos_lock_records(*dirs) -> list:
     return found
 
 
-def refuse_if_locked(*dirs) -> None:
+def refuse_if_locked(*dirs, d3: bool = False) -> None:
     rec = oos_lock_records(*dirs)
+    if d3 and d3_unlocked():
+        # D-3 lifts only the committed failed-rule record; any other record (a D-3 run included) still refuses
+        rec = [r for r in oos_lock_records(*dirs, D3_OUT) if r != (LOCK_DIR / "oos_not_evaluated.json").resolve()]
     if rec:
         raise SystemExit("v2 one-shot out-of-sample lock: a decision record already exists ("
                          + ", ".join(str(r) for r in rec) + "). The v2 run is complete and is not re-run; "
@@ -401,7 +417,10 @@ def pipeline_is(mode: str, out: Path) -> dict:
 
 def stage_oos(res: dict, out: Path):
     """Evaluate the chosen combination ONCE on 2024-10-03..2026-10-02 (engine period FWD)."""
-    refuse_if_locked(out)                                # never a second out-of-sample evaluation
+    d3 = d3_unlocked()
+    if d3 and Path(out).resolve() != D3_OUT.resolve():
+        raise SystemExit(f"refusing: the D-3 out-of-sample evaluation writes only to {D3_OUT}")
+    refuse_if_locked(out, d3=d3)                         # never a second out-of-sample evaluation
     chosen = res["chosen"]
     t, e = chosen[:2], chosen[3:]
     docs = load_docs("run")
@@ -415,6 +434,9 @@ def stage_oos(res: dict, out: Path):
     st = stats_row(sim, OOS)
     rec = {"chosen": chosen, "window": OOS, "evaluated_once_utc": pd.Timestamp.now("UTC").isoformat(),
            "is_consistency_max_abs_diff": diff, **st}
+    if d3:
+        rec["authorised_by"] = (f"deviation D-3 ({D3_DEVIATION.name}, sha256 {D3_SHA}): reported once although the "
+                                "decision rule failed; the failed verdict stands")
     jdump(rec, out / "oos_chosen.json")                  # written before anything else is computed on OOS
     sim.to_parquet(out / f"daily_{chosen}_full.parquet")
     # portfolio OOS
@@ -422,9 +444,16 @@ def stage_oos(res: dict, out: Path):
     base, aug, pinfo = portfolio(sim, cbp, OOS[1], chosen)
     pd.DataFrame([{"portfolio": "core_ER_6", "window": "oos", **port_stats(base["ret"], OOS)},
                   {"portfolio": f"core_ER_6+{chosen}", "window": "oos", **port_stats(aug["ret"], OOS)}]).to_csv(out / "portfolio_oos.csv", index=False)
+    jdump(pinfo, out / "portfolio_info_oos.json")
+    fed = f"FED_{chosen}"
+    pd.DataFrame({**{f"core_ER_6|{c}": base["ret"][c] for c in base["ret"]}, "core_ER_6|overlay_turnover": base["ov_to"],
+                  **{f"core_ER_6+{chosen}|{c}": aug["ret"][c] for c in aug["ret"]},
+                  f"core_ER_6+{chosen}|overlay_turnover": aug["ov_to"], f"core_ER_6+{chosen}|m_{fed}": aug["m"][fed]}
+                 ).to_parquet(out / "daily_portfolio_full.parquet")
     # per-chair OOS (Variant A computed only after the chosen combination's OOS record is on disk)
     wa, _ = combo_weights(sig["Z"]["T0f"], "E1", ohlc, res["fomc"])
     sim_va = simulate(wa, "E1", ohlc, rf)
+    sim_va.to_parquet(out / "daily_VariantA_frozen_T0fxE1_full.parquet")
     pd.DataFrame(chair_rows({chosen: sim, "VariantA_frozen(T0fxE1)": sim_va}, chair_windows(OOS[0], OOS[1]))).to_csv(out / "by_chair_oos.csv", index=False)
     return rec
 
