@@ -79,4 +79,5 @@ These files are deliberately not in `docs/`:
 | `results_2/*/` (`metrics.md`, `SPEC.md`, `ATTRIBUTION.md`, `TURNOVER_CAPACITY.md`) | written by the results_2 scripts. `attribution.py` checks the hash of `SPEC.md` |
 | `backtest_snapshot/`, `archive/`, `strategies/01/` | frozen history |
 | `hpg/fedpress_pkg/` (README, REVIEW, docs/) | the feature package's own manual |
+| `massive-8k/` (README, WRITEUP) | the separate Massive 8-K options challenge; its notes sit beside its notebook |
 | `backtests/README.md`, `backtests/v2/README.md`, `nlp/README.md` | one-line pointers to the guides here, kept because script messages name these paths |

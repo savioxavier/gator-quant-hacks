@@ -63,6 +63,7 @@ Every number above was reproduced on HiPerGator. Sources:
 ├── hpg/                      HiPerGator Slurm jobs; fedpress_pkg/ is the voice, face and speech feature package
 ├── data/                     public data: Fed text corpus, press-conference transcripts and captions, local feature tables
 ├── strategies/01/            the original strategy 01 hypothesis and its independent review (historical)
+├── massive-8k/               the separate Massive 8-K options challenge (notebook and write-up); not part of the Fed study
 ├── backtest_snapshot/        frozen code, inputs and outputs behind the 2026-10-03 results (provenance record)
 └── archive/                  collected session outputs and earlier work (historical, not maintained)
 ```
@@ -73,7 +74,8 @@ one of four kinds:
 - files written by the scripts next to their results: the READMEs, `metrics.md` and `tables.md` under
   `backtests/results/` and `results_2/`;
 - frozen history: `backtest_snapshot/`, `archive/`, `strategies/01/`;
-- the feature package's own manual in `hpg/fedpress_pkg/`.
+- the feature package's own manual in `hpg/fedpress_pkg/`;
+- the separate Massive 8-K challenge in `massive-8k/`, whose README and write-up sit beside its notebook.
 
 `backtests/README.md`, `backtests/v2/README.md` and `nlp/README.md` are one-line pointers, kept because the scripts'
 messages mention those paths.
@@ -213,6 +215,7 @@ reveal price levels. What is published is returns, tick moves, spreads in ticks,
 | [docs/results/strategy-results.md](docs/results/strategy-results.md) | every strategy result with its source file |
 | [docs/results/reviewer-gap-coverage.md](docs/results/reviewer-gap-coverage.md) | how each external-review point was resolved |
 | [preregistration/PREREG_LOG.md](preregistration/PREREG_LOG.md) | timeline of every pre-registration, amendment and deviation |
+| [massive-8k/README.md](massive-8k/README.md) | the separate Massive 8-K options challenge (notebook and write-up). Not part of the Fed study |
 
 ## Ground rules this repository keeps
 
