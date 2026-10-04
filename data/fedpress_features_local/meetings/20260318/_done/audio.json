@@ -1,0 +1,52 @@
+{
+  "stage": "audio",
+  "presser_id": "20260318",
+  "status": "ok",
+  "outputs": [
+    "audio/audio_16k.wav",
+    "audio/audio.json"
+  ],
+  "outputs_detail": [
+    {
+      "path": "audio/audio_16k.wav",
+      "bytes": 92661860,
+      "mtime": 1791071149.0068884,
+      "sha256": "3b156c28d9445d73abafb5a5393e7d3247faa80e7bbdefcde34175cf4e7b605b"
+    },
+    {
+      "path": "audio/audio.json",
+      "bytes": 1202,
+      "mtime": 1791071168.119401,
+      "sha256": "39c0caa2294805c72c3a453ac84a34c036fa6c0c5369fb6cd6f0849959df8636"
+    }
+  ],
+  "rows": {},
+  "models": {},
+  "notes": {
+    "input_codec": "aac",
+    "input_bitrate": 125000,
+    "input_sample_rate": 48000,
+    "duration_s": 2895.681,
+    "duration_gap_s": -0.042,
+    "integrated_lufs": -32.37,
+    "peak_dbfs": -3.45,
+    "rms_dbfs": -32.43,
+    "clipped_frac": 0.0
+  },
+  "stage_fingerprint": "96ab4e642160",
+  "config_hash": "2a1f2206f6f9",
+  "overrides": [
+    "compute.gpu_type=local5090",
+    "asr.batch_size=4",
+    "voice.batch_size=4",
+    "diarize.ecapa.batch_size=16",
+    "face.batch_size=8",
+    "paths.cache=C:\\fedpress\\cache"
+  ],
+  "code_version": "0.1.0+src.df22a2d52e78",
+  "run_id": "20261003T194547-BLADEMASTER",
+  "started_utc": "2026-10-03T23:45:47+00:00",
+  "finished_utc": "2026-10-03T23:46:08+00:00",
+  "elapsed_s": 20.926,
+  "host": "BLADEMASTER"
+}

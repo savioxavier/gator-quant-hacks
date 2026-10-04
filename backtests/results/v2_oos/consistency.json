@@ -1,0 +1,7 @@
+{
+  "strategies_is_vs_committed_windows_all_max_abs_diff": 9.410874857174178e-17,
+  "portfolio_is_vs_committed_portfolio_csv_max_abs_diff": 1.1102230246251565e-16,
+  "run_is_consistency_max_abs_diff (oos_chosen.json)": 0.0,
+  "oos_vs_oos_chosen_json_max_abs_diff": 0.0,
+  "portfolio_oos_vs_portfolio_oos_csv_max_abs_diff": 0.0
+}

@@ -1,0 +1,61 @@
+{
+  "stage": "frames",
+  "presser_id": "20240320",
+  "status": "ok",
+  "outputs": [
+    "frames/frames_1fps.parquet",
+    "frames/frames_1fps.zip",
+    "frames/frames_meta.json"
+  ],
+  "outputs_detail": [
+    {
+      "path": "frames/frames_1fps.parquet",
+      "bytes": 27206,
+      "mtime": 1791071944.938634,
+      "sha256": "742305064dfbaeb1ce03f761b4a89887cdf207b3f0e26f5f63072e9f7002994e"
+    },
+    {
+      "path": "frames/frames_1fps.zip",
+      "bytes": 293550583,
+      "mtime": 1791071944.9006202,
+      "sha256": null
+    },
+    {
+      "path": "frames/frames_meta.json",
+      "bytes": 719,
+      "mtime": 1791071944.9406345,
+      "sha256": "6218c9b1ecf9373c9db1652bb2d1491e6fe772ae67b6134832c3c1b5c453d4c9"
+    }
+  ],
+  "rows": {
+    "frames_index": 2879
+  },
+  "models": {},
+  "notes": {
+    "fps": 1.0,
+    "store": "zip",
+    "n_frames": 2879,
+    "width": 960,
+    "height": 540,
+    "src_width": 960,
+    "src_height": 540,
+    "duration_s": 2878.67,
+    "decode_s": 30.02,
+    "max_seconds": null
+  },
+  "stage_fingerprint": "e2595add2151",
+  "config_hash": "911ef7fb0565",
+  "overrides": [
+    "compute.gpu_type=local5090",
+    "asr.batch_size=4",
+    "voice.batch_size=4",
+    "diarize.ecapa.batch_size=16",
+    "face.batch_size=8"
+  ],
+  "code_version": "0.1.0+src.df22a2d52e78",
+  "run_id": "20261003T195833-BLADEMASTER",
+  "started_utc": "2026-10-03T23:58:33+00:00",
+  "finished_utc": "2026-10-03T23:59:04+00:00",
+  "elapsed_s": 31.38,
+  "host": "BLADEMASTER"
+}

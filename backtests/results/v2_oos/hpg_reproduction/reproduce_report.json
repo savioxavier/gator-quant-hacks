@@ -1,0 +1,476 @@
+{
+  "verdict": "PASS",
+  "what": "reproduction of the committed v2 in-sample run and its one out-of-sample evaluation under deviation D-3; recomputed, not evaluated; no decision record written; nothing chosen",
+  "headline": {
+    "combo": "T4xE1",
+    "in_sample_sharpe": {
+      "selection": {
+        "net1x": {
+          "reproduced": 0.1537304026896468,
+          "committed": 0.1537304026896468
+        },
+        "net2x": {
+          "reproduced": 0.0532859271269235,
+          "committed": 0.0532859271269235
+        }
+      },
+      "validation": {
+        "net1x": {
+          "reproduced": 0.6868265090540633,
+          "committed": 0.6868265090540633
+        },
+        "net2x": {
+          "reproduced": 0.663974303823573,
+          "committed": 0.663974303823573
+        }
+      },
+      "full_is": {
+        "net1x": {
+          "reproduced": 0.4408710210559237,
+          "committed": 0.4408710210559237
+        },
+        "net2x": {
+          "reproduced": 0.3871721245116583,
+          "committed": 0.3871721245116583
+        }
+      }
+    },
+    "oos_window": [
+      "2024-10-03",
+      "2026-10-02"
+    ],
+    "oos": {
+      "sharpe_net1x": {
+        "reproduced": 0.6073365581248797,
+        "committed": 0.6073365581248797
+      },
+      "sharpe_net2x": {
+        "reproduced": 0.5435449927490899,
+        "committed": 0.5435449927490899
+      },
+      "sharpe_gross": {
+        "reproduced": 0.6865896933635945,
+        "committed": 0.6865896933635945
+      },
+      "ann_excess_arith": {
+        "reproduced": 0.03824334967367566,
+        "committed": 0.03824334967367566
+      },
+      "vol": {
+        "reproduced": 0.06296895709975048,
+        "committed": 0.06296895709975048
+      },
+      "max_dd_excess": {
+        "reproduced": -0.06647745134678906,
+        "committed": -0.06647745134678906
+      }
+    },
+    "portfolio_oos_sharpe": {
+      "core_ER_6": {
+        "net1x": {
+          "reproduced": 0.6007088961711929,
+          "committed": 0.600708896171193
+        },
+        "net2x": {
+          "reproduced": 0.4556214425383668,
+          "committed": 0.4556214425383669
+        }
+      },
+      "core_ER_6+T4xE1": {
+        "net1x": {
+          "reproduced": 0.8700514723079583,
+          "committed": 0.8700514723079581
+        },
+        "net2x": {
+          "reproduced": 0.7025224644259817,
+          "committed": 0.7025224644259817
+        }
+      }
+    }
+  },
+  "reproduced_utc": "2026-10-04T02:44:51.610416+00:00",
+  "committed_d3_record": {
+    "path": "backtests/results/v2_oos/run/oos_chosen.json",
+    "sha256": "6bb971b046258e9ca6f18e49e226758cf968ab87f0a81a58a5ce1ab3b822afd6",
+    "chosen": "T4xE1",
+    "window": [
+      "2024-10-03",
+      "2026-10-02"
+    ],
+    "evaluated_once_utc": "2026-10-04T01:22:57.194710+00:00"
+  },
+  "committed_rule_record": {
+    "path": "backtests/results/v2/oos_not_evaluated.json",
+    "sha256": "0974509405a771badc12d6176f32ea93cf97986d65954e45d4f0788d5b5a32bf",
+    "oos_evaluated": false,
+    "reason": "decision rule failed (validation net Sharpe <= 0 or full-IS 2x Sharpe <= 0.5)"
+  },
+  "doc_scores_sha256": "0e0c1ca7c0fd5ed0b229db2ae745039c383e8e50f64ba524ad3c688d59873ba0",
+  "prereg_sha256": "464f8a5bad37e6466ccde42e8941fa1836323600324792d4d53dcc0c50eb8a2e",
+  "windows": {
+    "selection": [
+      "2016-01-04",
+      "2020-12-31"
+    ],
+    "validation": [
+      "2021-01-01",
+      "2024-10-02"
+    ],
+    "full_is": [
+      "2016-01-04",
+      "2024-10-02"
+    ],
+    "oos": [
+      "2024-10-03",
+      "2026-10-02"
+    ]
+  },
+  "tolerance": {
+    "rtol": 1e-09,
+    "atol": 1e-12,
+    "rule": "backtests/tools/compare_results.py"
+  },
+  "output_dir": "/blue/ai-workshop/hd.nguyen/gator-quant-hacks/backtests/rerun/v2_reproduce",
+  "oos_recomputed": true,
+  "comparisons": [
+    {
+      "label": "in-sample",
+      "committed": "backtests/results/v2",
+      "n_files": 7,
+      "n_agree": 7,
+      "max_abs_diff": 4.440892098500626e-16,
+      "files": [
+        {
+          "committed": "backtests/results/v2/by_chair_is.csv",
+          "reproduced": "by_chair_is.csv",
+          "agree": true,
+          "max_abs_diff": 4.440892098500626e-16,
+          "diffs": []
+        },
+        {
+          "committed": "backtests/results/v2/portfolio.csv",
+          "reproduced": "portfolio.csv",
+          "agree": true,
+          "max_abs_diff": 4.440892098500626e-16,
+          "diffs": []
+        },
+        {
+          "committed": "backtests/results/v2/portfolio_info.json",
+          "reproduced": "portfolio_info.json",
+          "agree": true,
+          "max_abs_diff": 5.204170427930421e-18,
+          "diffs": []
+        },
+        {
+          "committed": "backtests/results/v2/selection.csv",
+          "reproduced": "selection.csv",
+          "agree": true,
+          "max_abs_diff": 0.0,
+          "diffs": []
+        },
+        {
+          "committed": "backtests/results/v2/sens_scheduled_only_is.csv",
+          "reproduced": "sens_scheduled_only_is.csv",
+          "agree": true,
+          "max_abs_diff": 0.0,
+          "diffs": []
+        },
+        {
+          "committed": "backtests/results/v2/summary_is.json",
+          "reproduced": "summary_is.json",
+          "agree": true,
+          "max_abs_diff": 1.3877787807814457e-17,
+          "diffs": []
+        },
+        {
+          "committed": "backtests/results/v2/windows_all.csv",
+          "reproduced": "windows_all.csv",
+          "agree": true,
+          "max_abs_diff": 4.440892098500626e-16,
+          "diffs": []
+        }
+      ]
+    },
+    {
+      "label": "failed-rule record",
+      "committed": "backtests/results/v2",
+      "n_files": 1,
+      "n_agree": 1,
+      "max_abs_diff": 0.0,
+      "files": [
+        {
+          "committed": "backtests/results/v2/oos_not_evaluated.json",
+          "reproduced": "oos_not_evaluated_reproduced.json",
+          "agree": true,
+          "max_abs_diff": 0.0,
+          "diffs": []
+        }
+      ]
+    },
+    {
+      "label": "out-of-sample run (D-3)",
+      "committed": "backtests/results/v2_oos/run",
+      "n_files": 18,
+      "n_agree": 18,
+      "max_abs_diff": 5.93275428784068e-16,
+      "files": [
+        {
+          "committed": "backtests/results/v2_oos/run/by_chair_is.csv",
+          "reproduced": "by_chair_is.csv",
+          "agree": true,
+          "max_abs_diff": 4.440892098500626e-16,
+          "diffs": []
+        },
+        {
+          "committed": "backtests/results/v2_oos/run/by_chair_oos.csv",
+          "reproduced": "by_chair_oos.csv",
+          "agree": true,
+          "max_abs_diff": 1.1102230246251565e-16,
+          "diffs": []
+        },
+        {
+          "committed": "backtests/results/v2_oos/run/daily_T4xE1_full.parquet",
+          "reproduced": "daily_T4xE1_full.parquet",
+          "agree": true,
+          "max_abs_diff": 0.0,
+          "diffs": []
+        },
+        {
+          "committed": "backtests/results/v2_oos/run/daily_T4xE1_is.parquet",
+          "reproduced": "daily_T4xE1_is.parquet",
+          "agree": true,
+          "max_abs_diff": 0.0,
+          "diffs": []
+        },
+        {
+          "committed": "backtests/results/v2_oos/run/daily_VariantA_frozen_T0fxE1_full.parquet",
+          "reproduced": "daily_VariantA_frozen_T0fxE1_full.parquet",
+          "agree": true,
+          "max_abs_diff": 0.0,
+          "diffs": []
+        },
+        {
+          "committed": "backtests/results/v2_oos/run/daily_excess_all_combos_is.parquet",
+          "reproduced": "daily_excess_all_combos_is.parquet",
+          "agree": true,
+          "max_abs_diff": 0.0,
+          "diffs": []
+        },
+        {
+          "committed": "backtests/results/v2_oos/run/daily_portfolio_full.parquet",
+          "reproduced": "daily_portfolio_full.parquet",
+          "agree": true,
+          "max_abs_diff": 5.93275428784068e-16,
+          "diffs": []
+        },
+        {
+          "committed": "backtests/results/v2_oos/run/oos_chosen.json",
+          "reproduced": "oos_reproduced.json",
+          "agree": true,
+          "max_abs_diff": 0.0,
+          "diffs": []
+        },
+        {
+          "committed": "backtests/results/v2_oos/run/portfolio.csv",
+          "reproduced": "portfolio.csv",
+          "agree": true,
+          "max_abs_diff": 4.440892098500626e-16,
+          "diffs": []
+        },
+        {
+          "committed": "backtests/results/v2_oos/run/portfolio_info.json",
+          "reproduced": "portfolio_info.json",
+          "agree": true,
+          "max_abs_diff": 5.204170427930421e-18,
+          "diffs": []
+        },
+        {
+          "committed": "backtests/results/v2_oos/run/portfolio_info_oos.json",
+          "reproduced": "portfolio_info_oos.json",
+          "agree": true,
+          "max_abs_diff": 5.204170427930421e-18,
+          "diffs": []
+        },
+        {
+          "committed": "backtests/results/v2_oos/run/portfolio_oos.csv",
+          "reproduced": "portfolio_oos.csv",
+          "agree": true,
+          "max_abs_diff": 2.220446049250313e-16,
+          "diffs": []
+        },
+        {
+          "committed": "backtests/results/v2_oos/run/selection.csv",
+          "reproduced": "selection.csv",
+          "agree": true,
+          "max_abs_diff": 0.0,
+          "diffs": []
+        },
+        {
+          "committed": "backtests/results/v2_oos/run/sens_scheduled_only_is.csv",
+          "reproduced": "sens_scheduled_only_is.csv",
+          "agree": true,
+          "max_abs_diff": 0.0,
+          "diffs": []
+        },
+        {
+          "committed": "backtests/results/v2_oos/run/sens_scheduled_only_oos.csv",
+          "reproduced": "sens_scheduled_only_oos.csv",
+          "agree": true,
+          "max_abs_diff": 0.0,
+          "diffs": []
+        },
+        {
+          "committed": "backtests/results/v2_oos/run/signals_entry_session.parquet",
+          "reproduced": "signals_entry_session.parquet",
+          "agree": true,
+          "max_abs_diff": 0.0,
+          "diffs": []
+        },
+        {
+          "committed": "backtests/results/v2_oos/run/summary_is.json",
+          "reproduced": "summary_is.json",
+          "agree": true,
+          "max_abs_diff": 1.3877787807814457e-17,
+          "diffs": []
+        },
+        {
+          "committed": "backtests/results/v2_oos/run/windows_all.csv",
+          "reproduced": "windows_all.csv",
+          "agree": true,
+          "max_abs_diff": 4.440892098500626e-16,
+          "diffs": []
+        }
+      ]
+    },
+    {
+      "label": "out-of-sample report (D-3)",
+      "committed": "backtests/results/v2_oos",
+      "n_files": 2,
+      "n_agree": 2,
+      "max_abs_diff": 1.7763568394002505e-15,
+      "files": [
+        {
+          "committed": "backtests/results/v2_oos/metrics.csv",
+          "reproduced": "metrics.csv",
+          "agree": true,
+          "max_abs_diff": 1.7763568394002505e-15,
+          "diffs": []
+        },
+        {
+          "committed": "backtests/results/v2_oos/daily_returns.parquet",
+          "reproduced": "daily_returns.parquet",
+          "agree": true,
+          "max_abs_diff": 6.938893903907228e-18,
+          "diffs": []
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "code_and_inputs_vs_run_log": {
+    "backtests/v2/run_v2.py": {
+      "run_log": "3102317b9e1f9576bfb1b7b0fe05f9011022f4838f8e155995ecae0711558802",
+      "now": "8bbf613faa8b64277528c1a8189814080b0c22ae4645d00944a4c3a786a10254",
+      "same": false
+    },
+    "backtests/v2/run_v2_chrono.py": {
+      "run_log": "6c215d275a78148840c7a6482855ab9ce07d5aa36a4637d456d7ae996989d137",
+      "now": "504a7ea4cbd82eb30291806d4ee2e723040e50920c26d1ba25ea40ddab74ffb9",
+      "same": false
+    },
+    "backtests/v2/v2lib.py": {
+      "run_log": "bfd9bae4b58263be836ff32d4d9d8342788aedc77e2764a47478b21a75149cf6",
+      "now": "bfd9bae4b58263be836ff32d4d9d8342788aedc77e2764a47478b21a75149cf6",
+      "same": true
+    },
+    "backtests/wire/wirelib.py": {
+      "run_log": "93881859af9de384d74add1c68632b526ca69f0f868e42e2c548f9cdb1d8f5fc",
+      "now": "93881859af9de384d74add1c68632b526ca69f0f868e42e2c548f9cdb1d8f5fc",
+      "same": true
+    },
+    "backtests/v2/report_v2_oos.py": {
+      "run_log": "299bf7e0242fa82bda0992c8fe7af061ce46eb5c66459a6646724a400c10ceeb",
+      "now": "299bf7e0242fa82bda0992c8fe7af061ce46eb5c66459a6646724a400c10ceeb",
+      "same": true
+    },
+    "backtests/v2/score/doc_scores.parquet": {
+      "run_log": "0e0c1ca7c0fd5ed0b229db2ae745039c383e8e50f64ba524ad3c688d59873ba0",
+      "now": "0e0c1ca7c0fd5ed0b229db2ae745039c383e8e50f64ba524ad3c688d59873ba0",
+      "same": true
+    },
+    "<v2 work root>/fedspeak_v2/corpus/fomc_dates.csv": {
+      "run_log": "41072c60695a0938f30107376c110da7758066d646513f4e12be07d7ecbf175c",
+      "now": "41072c60695a0938f30107376c110da7758066d646513f4e12be07d7ecbf175c",
+      "same": true
+    },
+    "<v2 work root>/fedspeak_v2/corpus/fomc_dates_variantA_style.csv": {
+      "run_log": "5670a1e765ee7b0f1402558f350fe9deee8ee7cb86412b4a9154a906433e8ffb",
+      "now": "5670a1e765ee7b0f1402558f350fe9deee8ee7cb86412b4a9154a906433e8ffb",
+      "same": true
+    },
+    "<v2 work root>/savio_gqh/strategies/01/data/processed/fomc_dates.csv": {
+      "run_log": "5555f7f41d95db6680421f03dc86bdeadb2c6b1f24ee01e0207d1924daac9b6a",
+      "now": "5555f7f41d95db6680421f03dc86bdeadb2c6b1f24ee01e0207d1924daac9b6a",
+      "same": true
+    },
+    "<v2 work root>/savio_gqh/strategies/01/trials/log.csv": {
+      "run_log": "2a17a241f0647435b0312375c6d8d2910bfc683630fe59e9952274bd56aae5b9",
+      "now": "2a17a241f0647435b0312375c6d8d2910bfc683630fe59e9952274bd56aae5b9",
+      "same": true
+    },
+    "<v2 work root>/fedspeak/extend/speech_scores_2011_2026.csv": {
+      "run_log": "523b8594756cbb1f5e07dee3405ff69166bc07d822cc54a753b611f5a0200e8a",
+      "now": "523b8594756cbb1f5e07dee3405ff69166bc07d822cc54a753b611f5a0200e8a",
+      "same": true
+    },
+    "<v2 work root>/edges/combine/combine.py": {
+      "run_log": "5150cb8a7d0bbb463ee6ba9f4a82f3205101578bf417f988cd304175d92f42e7",
+      "now": "5150cb8a7d0bbb463ee6ba9f4a82f3205101578bf417f988cd304175d92f42e7",
+      "same": true
+    },
+    "<v2 work root>/edges/series/PORT_core_ER_6.parquet": {
+      "run_log": "9bfd6882d3361d5fa81a49ea5d4a170296a510cd43fe3e2f99ca3ba275237816",
+      "now": "9bfd6882d3361d5fa81a49ea5d4a170296a510cd43fe3e2f99ca3ba275237816",
+      "same": true
+    },
+    "etf_daily.parquet": {
+      "run_log": "7086babddd0e22b1538e3f7cf79340e5923c4256456cdca9b3e3c54874a0712b",
+      "now": "7086babddd0e22b1538e3f7cf79340e5923c4256456cdca9b3e3c54874a0712b",
+      "same": true
+    },
+    "futures_daily.parquet": {
+      "run_log": "71db580de202e9288788f16257e73154fdc6407073ffdacd0f83478c676eb17d",
+      "now": "71db580de202e9288788f16257e73154fdc6407073ffdacd0f83478c676eb17d",
+      "same": true
+    },
+    "futures_1600.parquet": {
+      "run_log": "aef98c9982406dc7cc0c5d552a4f6b03121ab41df20f96c4ac202d0fe6d28ebc",
+      "now": "aef98c9982406dc7cc0c5d552a4f6b03121ab41df20f96c4ac202d0fe6d28ebc",
+      "same": true
+    },
+    "fred_daily.parquet": {
+      "run_log": "8efeca56f3f1950642237ab826ee0d745e9d60ece978289fb50f0ba75cf8b02d",
+      "now": "8efeca56f3f1950642237ab826ee0d745e9d60ece978289fb50f0ba75cf8b02d",
+      "same": true
+    },
+    "rf_daily.parquet": {
+      "run_log": "03877682a85f32cce9cf8a1764aa01d51491fd77e051487501189d1b8a8bc515",
+      "now": "03877682a85f32cce9cf8a1764aa01d51491fd77e051487501189d1b8a8bc515",
+      "same": true
+    },
+    "gqh-flow-clock src/engine.py": {
+      "run_log": "74ac9fdb27243e228a9069f1edc7fb37d0bfbd16afdb8a728fe7d9ae14b785e6",
+      "now": "74ac9fdb27243e228a9069f1edc7fb37d0bfbd16afdb8a728fe7d9ae14b785e6",
+      "same": true
+    }
+  },
+  "run_log_note": "the code sha256 in RUN_LOG.md are those of the files committed at 6a61ef9 (the D-3 run: 1c8c9e1 plus its unlock); run_v2.py and run_v2_chrono.py differ from them because --reproduce was added afterwards",
+  "chosen": {
+    "committed": "T4xE1",
+    "reproduced_selection": "T4xE1"
+  },
+  "decision_rule_passed": {
+    "committed": false,
+    "reproduced": false
+  }
+}

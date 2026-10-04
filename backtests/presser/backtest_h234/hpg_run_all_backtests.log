@@ -1,0 +1,40 @@
+backtests: /blue/ai-workshop/hd.nguyen/gator-quant-hacks/backtests
+re-run outputs: /blue/ai-workshop/hd.nguyen/gator-quant-hacks/backtests/rerun
+
+== chrono inputs
+-> chrono: skipped (CHRONO_ROOT not set; the committed frozen inputs are used)
+
+== Fed communication v2
+v2: REFUSED to re-run: one-shot out-of-sample lock.
+    Decision record: /blue/ai-workshop/hd.nguyen/gator-quant-hacks/backtests/results/v2/oos_not_evaluated.json
+    {
+      "oos_evaluated": false,
+      "reason": "decision rule failed (validation net Sharpe <= 0 or full-IS 2x Sharpe <= 0.5)"
+    }
+    The pre-registered rule failed (full in-sample Sharpe at 2x costs 0.387 <= 0.5), so the out-of-sample
+    window was never evaluated and never will be. Committed results: results/v2/, results/summary.md.
+    runner: v2 one-shot OOS lock: decision record /blue/ai-workshop/hd.nguyen/gator-quant-hacks/backtests/results/v2/oos_not_evaluated.json exists (same doc_scores sha256); the v2 run is complete and was not re-run. Nothing recomputed.
+-> v2: refused (one-shot OOS lock; decision record oos_not_evaluated.json exists: rule FAILED, OOS not evaluated)
+
+== press-conference suite (BENCH-R, H1-primary, H1-Q, H1-answer, lexicon control)
+ "wb_p_two": 0.3899,
+ "designated_side": "one(>0)"
+}
+[H1 results] 13 files agree, 0 differ, 0 missing in the re-run
+[per-meeting tables] 8 files agree, 0 differ, 0 missing in the re-run
+[frozen H1 positions] 13 files agree, 0 differ, 0 missing in the re-run
+-> presser: re-run reproduces the committed results (G3 NO-GO unchanged); outputs in /blue/ai-workshop/hd.nguyen/gator-quant-hacks/backtests/rerun/presser_h1
+
+== exploratory H2/H3/H4 (voice, face, combined)
+  "t": 2.0805009434514243,
+  "p_one": 0.03360529005376689,
+  "oos_r2_C_vs_T": 0.12462632862560175
+ }
+}
+-> h234: completed (exploratory, post-NO-GO; cannot rescue G3; no trading claim); outputs in /blue/ai-workshop/hd.nguyen/gator-quant-hacks/backtests/presser/backtest_h234
+
+== summary
+  chrono: skipped (CHRONO_ROOT not set; the committed frozen inputs are used)
+  v2: refused (one-shot OOS lock; decision record oos_not_evaluated.json exists: rule FAILED, OOS not evaluated)
+  presser: re-run reproduces the committed results (G3 NO-GO unchanged); outputs in /blue/ai-workshop/hd.nguyen/gator-quant-hacks/backtests/rerun/presser_h1
+  h234: completed (exploratory, post-NO-GO; cannot rescue G3; no trading claim); outputs in /blue/ai-workshop/hd.nguyen/gator-quant-hacks/backtests/presser/backtest_h234

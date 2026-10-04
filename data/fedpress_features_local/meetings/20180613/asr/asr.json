@@ -1,0 +1,42 @@
+{
+  "model_key": "whisper_turbo_ct2",
+  "repo": "mobiuslabsgmbh/faster-whisper-large-v3-turbo",
+  "revision": "0a363e9161cbc7ed1431c9597a8ceaf0c4f78fcf",
+  "path": "C:\\fedpress\\cache\\huggingface\\hub\\models--mobiuslabsgmbh--faster-whisper-large-v3-turbo\\snapshots\\0a363e9161cbc7ed1431c9597a8ceaf0c4f78fcf",
+  "device": "cuda",
+  "compute_type": "float16",
+  "batch_size": 4,
+  "language": "en",
+  "beam_size": 5,
+  "word_timestamps": true,
+  "vad_filter": true,
+  "detected_language": "en",
+  "audio_s": 3142.09,
+  "load_s": 1.78,
+  "decode_s": 14.2,
+  "rtf": 0.0045,
+  "n_words": 8630,
+  "n_segments": 110,
+  "versions": {
+    "faster_whisper": "1.2.1",
+    "ctranslate2": "4.8.2"
+  },
+  "gpu": {
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "cc": "12.0",
+    "vram_gb": 34.2,
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8",
+    "arch_list": [
+      "sm_61",
+      "sm_70",
+      "sm_75",
+      "sm_80",
+      "sm_86",
+      "sm_90",
+      "sm_100",
+      "sm_120"
+    ]
+  },
+  "created_utc": "2026-10-04T00:40:19+00:00"
+}

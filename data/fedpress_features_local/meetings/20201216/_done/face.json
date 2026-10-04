@@ -1,0 +1,94 @@
+{
+  "stage": "face",
+  "presser_id": "20201216",
+  "status": "ok",
+  "outputs": [
+    "face/face_frames.parquet",
+    "face/face_turns.parquet",
+    "face/enroll.json"
+  ],
+  "outputs_detail": [
+    {
+      "path": "face/face_frames.parquet",
+      "bytes": 1089099,
+      "mtime": 1791073716.9852386,
+      "sha256": "6d8905d0f71f609468ce9da67abfb1fa93de2601211cc8cd1fee519ea273c35f"
+    },
+    {
+      "path": "face/face_turns.parquet",
+      "bytes": 78270,
+      "mtime": 1791073716.9972558,
+      "sha256": "edaf75455ed61f7f06a39c2197b0d95cb8a6558aba21d6bdcd0d0b7841670b46"
+    },
+    {
+      "path": "face/enroll.json",
+      "bytes": 2407,
+      "mtime": 1791073716.9982555,
+      "sha256": "28c3a1934b87f3beeb2f6113bd19233519a46a6ce9ecb490af380bf89a651036"
+    }
+  ],
+  "rows": {
+    "face_frames": 2102,
+    "face_turns": 149
+  },
+  "models": {
+    "mediapipe_face_landmarker": "64184e229b263107bc2b804c6625db1341ff2bb731874b0bcc2fe6544e0bc9ff",
+    "sface_opencv": "0ba9fbfa01b5270c96627c4ef784da859931e02f04419c829e83484087c34e79",
+    "emotiefflib_enet_b0_8_va_mtl": "emotiefflib==1.1.1"
+  },
+  "notes": {
+    "fps": 1.0,
+    "source": "zip",
+    "frames_enrol": 180,
+    "frames_feature": 2102,
+    "enroll_ok": true,
+    "identity_method": "sface",
+    "identity_threshold": 0.363,
+    "enroll_self_cos_median": 0.9551974534988403,
+    "identity_ok_frac": 0.9923882017126546,
+    "gated_frac": 0.9923882017126546,
+    "n_answers": 21,
+    "max_seconds": null,
+    "elapsed_s": 71.35,
+    "frames_per_s": 31.98,
+    "feature_loop_s": 62.87,
+    "timings_s": {
+      "detect": 15.97,
+      "identity": 32.73,
+      "emotiefflib": 13.24
+    },
+    "decode": []
+  },
+  "stage_fingerprint": "107b8fb6feb9",
+  "config_hash": "d98baf794bb9",
+  "overrides": [
+    "compute.gpu_type=local5090",
+    "asr.batch_size=4",
+    "voice.batch_size=4",
+    "diarize.ecapa.batch_size=16",
+    "face.batch_size=8"
+  ],
+  "code_version": "0.1.0+src.df22a2d52e78",
+  "run_id": "20261003T202718-BLADEMASTER",
+  "started_utc": "2026-10-04T00:27:18+00:00",
+  "finished_utc": "2026-10-04T00:28:37+00:00",
+  "elapsed_s": 78.435,
+  "host": "BLADEMASTER",
+  "device": {
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "cc": "12.0",
+    "vram_gb": 34.2,
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8",
+    "arch_list": [
+      "sm_61",
+      "sm_70",
+      "sm_75",
+      "sm_80",
+      "sm_86",
+      "sm_90",
+      "sm_100",
+      "sm_120"
+    ]
+  }
+}
